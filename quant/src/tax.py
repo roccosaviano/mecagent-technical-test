@@ -183,7 +183,7 @@ def simulate_pac(gross_ret, regime, in_market=None, div_yield=None,
     units = 0.0                   # quote possedute (regimi non-ETF: quote sintetiche)
     nav = 100.0                   # NAV di una quota
     basis = 0.0                   # costo fiscale complessivo (regimi non-ETF)
-    entry_value = None            # valore della posizione all'apertura del trade corrente
+    in_pos = False                # la strategia e' attualmente investita
     carry_loss = 0.0              # minusvalenze riportate
     year_gain = 0.0               # plusvalenze nette realizzate nell'anno corrente
     cur_year = idx[0].year
@@ -231,8 +231,6 @@ def simulate_pac(gross_ret, regime, in_market=None, div_yield=None,
                                 next_dd=t + pd.DateOffset(years=DEEMED_DISPOSAL_Y)))
             else:
                 basis += invested
-                if pos > 0 and entry_value is None:
-                    entry_value = units * nav
 
         # --- rendimento del periodo. La parte NON investita non sta ferma: e'
         #     liquidita' che rende il tasso risk-free al netto della DIRT 33%.
@@ -271,22 +269,24 @@ def simulate_pac(gross_ret, regime, in_market=None, div_yield=None,
             year_gain += realized
             basis += realized          # la parte venduta e riacquistata alza il costo
             n_trades += 1
-            if entry_value is not None:
-                entry_value += realized   # non ricontare lo stesso utile all'uscita
         elif rf_i > 0 and etf:
             # un ETF UCITS non realizza nulla ribilanciando AL SUO INTERNO: il
             # ribilanciamento avviene dentro il fondo, fuori dal perimetro fiscale.
             pass
 
-        # --- realizzo: la strategia esce dalla posizione
-        if not etf and entry_value is not None and pos == 0:
+        # --- realizzo: la strategia esce dalla posizione.
+        # La plusvalenza si misura contro il COSTO FISCALE cumulato (basis), non
+        # contro il valore del portafoglio al momento dell'ingresso: fra i due
+        # istanti sono arrivati altri versamenti, che sono capitale e non utile.
+        # Misurarla contro il valore d'ingresso tassa anche i versamenti.
+        if not etf and in_pos and pos == 0:
             cur_value = units * nav
-            pnl = cur_value - entry_value
-            year_gain += pnl
+            year_gain += cur_value - basis
+            basis = cur_value      # realizzato tutto: il nuovo costo e' il valore corrente
             n_trades += 1
-            entry_value = None
-        elif not etf and pos > 0 and entry_value is None:
-            entry_value = units * nav
+            in_pos = False
+        elif not etf and pos > 0:
+            in_pos = True
 
         # --- deemed disposal ETF: ogni lotto al suo ottavo anniversario
         if etf:
@@ -323,9 +323,8 @@ def simulate_pac(gross_ret, regime, in_market=None, div_yield=None,
         n_trades += 1
     else:
         cur_value = final_value
-        if entry_value is not None:
-            year_gain += cur_value - entry_value
-            n_trades += 1
+        year_gain += cur_value - basis     # base = versamenti + utili gia' tassati
+        n_trades += 1
         taxable = max(0.0, year_gain - carry_loss)
         taxable = max(0.0, taxable - exempt)
         due = taxable * rate

@@ -57,14 +57,14 @@ periodo        top-1 %   top-10 %      HHI    D(0,5)
 
 --- Break-even fiscale del ribilanciamento ------------------------
      p    ribilanc.  extra lordo  costo transaz.  costo fiscale  extra netto
-  0.25      mensile       -0.01%           0.03%         +0.79%       -0.79%
-  0.25  trimestrale       +0.01%           0.02%         +0.57%       -0.57%
-  0.25      annuale       +0.14%           0.01%         +0.24%       -0.24%
-  0.50      mensile       -0.03%           0.03%         +0.82%       -0.82%
-  0.50  trimestrale       -0.03%           0.01%         +0.58%       -0.58%
-  0.50      annuale       +0.08%           0.01%         +0.25%       -0.25%
-  0.75      mensile       -0.04%           0.04%         +0.81%       -0.81%
-  0.75  trimestrale       -0.03%           0.01%         +0.54%       -0.54%
-  0.75      annuale       +0.06%           0.01%         +0.21%       -0.21%
+  0.25      mensile       -0.01%           0.03%         +0.76%       -0.76%
+  0.25  trimestrale       +0.01%           0.02%         +0.55%       -0.55%
+  0.25      annuale       +0.14%           0.01%         +0.23%       -0.23%
+  0.50      mensile       -0.03%           0.03%         +0.78%       -0.78%
+  0.50  trimestrale       -0.03%           0.01%         +0.55%       -0.55%
+  0.50      annuale       +0.08%           0.01%         +0.24%       -0.24%
+  0.75      mensile       -0.04%           0.04%         +0.77%       -0.77%
+  0.75  trimestrale       -0.03%           0.01%         +0.52%       -0.52%
+  0.75      annuale       +0.06%           0.01%         +0.20%       -0.20%
   'extra netto' = IRR del PAC diversity-weighted meno IRR del PAC
   cap-weighted, entrambi con CGT 33% sulle plusvalenze realizzate.
