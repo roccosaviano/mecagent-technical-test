@@ -1,0 +1,126 @@
+{
+ "named": [
+  {
+   "name": "Bet Against Beta",
+   "year": 2014,
+   "ref": "Frazzini & Pedersen, JFE 111:1-25, 2014",
+   "impl": "richiede leva sulla gamba a beta basso: il rendimento AQR non addebita alcun costo di finanziamento retail",
+   "pre_ann": 8.246174301397218,
+   "pre_t": 6.567697879844929,
+   "post_ann": 5.0291490576212965,
+   "post_t": 2.0196963534320513,
+   "post_sharpe": 0.575103282855659,
+   "decay": 39.01233622033473,
+   "n_post": 148
+  },
+  {
+   "name": "Accruals",
+   "year": 1996,
+   "ref": "Sloan, The Accounting Review, 1996",
+   "impl": "richiede bilanci trimestrali e lo short su small cap illiquide",
+   "pre_ann": 6.873198654349006,
+   "pre_t": 7.038181290294012,
+   "post_ann": 1.1684505143385937,
+   "post_t": 0.9960483215445517,
+   "post_sharpe": 0.18496152990990036,
+   "decay": 82.99990189285073,
+   "n_post": 348
+  },
+  {
+   "name": "Short interest",
+   "year": 2001,
+   "ref": "Dechow et al., JFE, 2001",
+   "impl": "la gamba short e' proprio sui titoli piu' cari da prendere a prestito: il costo del prestito titoli mangia il premio",
+   "pre_ann": 8.628791436431115,
+   "pre_t": 5.259729297710463,
+   "post_ann": 11.86373986242778,
+   "post_t": 4.100272880974983,
+   "post_sharpe": 0.8369646970466874,
+   "decay": -37.490168233045694,
+   "n_post": 288
+  },
+  {
+   "name": "Short interest / IO",
+   "year": 2005,
+   "ref": "Asquith, Pathak & Ritter, JFE, 2005",
+   "impl": "stessa criticita' del precedente, su un sottoinsieme ancora piu' stretto e meno liquido",
+   "pre_ann": 24.777703598340768,
+   "pre_t": 2.9881409619149064,
+   "post_ann": 69.78227031349206,
+   "post_t": 3.3135461220811093,
+   "post_sharpe": 0.7409314375554177,
+   "decay": -181.633324236573,
+   "n_post": 240
+  }
+ ],
+ "impl": [
+  {
+   "name": "Bet Against Beta",
+   "turnover": 2.0,
+   "tc": 0.3,
+   "borrow": 2.5,
+   "fin": 1.29,
+   "net": 0.9391490576212966
+  },
+  {
+   "name": "Accruals",
+   "turnover": 2.0,
+   "tc": 0.3,
+   "borrow": 2.5,
+   "fin": 0.0,
+   "net": -1.6315494856614063
+  },
+  {
+   "name": "Short interest",
+   "turnover": 6.0,
+   "tc": 0.9000000000000001,
+   "borrow": 2.5,
+   "fin": 0.0,
+   "net": 8.46373986242778
+  },
+  {
+   "name": "Short interest / IO",
+   "turnover": 6.0,
+   "tc": 0.9000000000000001,
+   "borrow": 2.5,
+   "fin": 0.0,
+   "net": 66.38227031349206
+  }
+ ],
+ "quality": {
+  "Bet Against Beta": {
+   "vol": 8.744775429987461,
+   "sharpe": 0.575103282855659,
+   "worst": -9.640140009853464,
+   "best": 10.523156066799052,
+   "mean_median": 2.046007488532841
+  },
+  "Accruals": {
+   "vol": 6.317262378332276,
+   "sharpe": 0.18496152990990036,
+   "worst": -6.348688046146771,
+   "best": 6.526018774614941,
+   "mean_median": 1.0309992130636942
+  },
+  "Short interest": {
+   "vol": 14.17471956020386,
+   "sharpe": 0.8369646970466874,
+   "worst": -15.5885480663913,
+   "best": 16.2425347468126,
+   "mean_median": 0.7377394192087312
+  },
+  "Short interest / IO": {
+   "vol": 94.181818689901,
+   "sharpe": 0.7409314375554177,
+   "worst": -67.8063,
+   "best": 321.296975,
+   "mean_median": 1.270173825286559
+  }
+ },
+ "mp_n": 205,
+ "mp_mean_decay": 50.35860107684928,
+ "mp_median_decay": 58.18280354052653,
+ "mp_pre": 7.359094331129702,
+ "mp_post": 4.046339469092644,
+ "mp_share_negative": 0.15609756097560976
+}

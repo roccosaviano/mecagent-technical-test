@@ -1,0 +1,70 @@
+--- Gruppo D: 49 settori, 1990-01-31 -> 2026-05-31 (437 mesi)
+
+--- 12. Equal-weight contro cap-weight (proxy dei 49 settori) -----
+portafoglio                 CAGR lordo     vol  turnover/anno
+cap-weight (nessun ribil.)      11.39%   15.1%             0%
+equal-weight, mensile           11.42%   15.9%            20%
+equal-weight, annuale           11.62%   15.8%             6%
+
+--- 11. Diversity-weighted: p x frequenza di ribilanciamento ------
+     p    ribilanc.  CAGR lordo  vs cap-w  turnover/anno     vol
+  0.25      mensile      11.38%    -0.01%            20%   15.4%
+  0.25  trimestrale      11.39%    +0.01%            10%   15.4%
+  0.25      annuale      11.53%    +0.14%             5%   15.3%
+  0.50      mensile      11.35%    -0.03%            22%   15.2%
+  0.50  trimestrale      11.36%    -0.03%             9%   15.1%
+  0.50      annuale      11.47%    +0.08%             4%   15.1%
+  0.75      mensile      11.34%    -0.04%            24%   15.1%
+  0.75  trimestrale      11.36%    -0.03%             9%   15.1%
+  0.75      annuale      11.45%    +0.06%             4%   15.0%
+
+--- 13. Scomposizione dell'extra-rendimento (identita' di Fernholz) 
+     p   log(V_pi/V_mu)   deriva diversita   (1-p)*Int gamma*   residuo
+  0.25         -0.0031           -0.3038           +0.3352   -0.0345
+  0.50         -0.0110           -0.2029           +0.2032   -0.0113
+  0.75         -0.0141           -0.1002           +0.0949   -0.0088
+  gamma* medio annuo (p=0,50): 1.12%/anno
+  Il residuo non e' zero perche' l'identita' vale in tempo continuo,
+  mentre qui i dati sono mensili e i costi di transazione sono dentro V_pi.
+
+--- Diversita' del mercato nel tempo ------------------------------
+periodo        top-1 %   top-10 %      HHI    D(0,5)
+1990-1999         9.3      60.3      467    35.476
+2000-2009        11.7      65.3      546    33.342
+2010-2014         9.1      62.7      492    34.742
+2015-2019        11.8      65.2      554    33.371
+2020-2026        17.9      68.5      764    30.749
+
+--- Ipotesi da falsificare ----------------------------------------
+  Correlazione fra variazione mensile di diversita' e sovraperformance
+  del diversity-weighted (p=0,50): +0.114
+  Sotto-periodi, extra-rendimento annuo del DW p=0,50 vs cap-weight:
+    1990-1999:  -1.51%/anno   diversita' in calo
+    2000-2009:  +2.42%/anno   diversita' in salita
+    2010-2014:  +0.08%/anno   diversita' in calo
+    2015-2025:  -1.22%/anno   diversita' in calo
+  Peggior sotto-periodo: 1990-1999 con -1.51%/anno
+
+--- Orizzonte garantito dal teorema T > 2 log(n)/(eps*delta*p) ----
+  n = 49   log(n) = 3.892
+  delta = autovalore minimo della covarianza annualizzata = 0.00305
+  eps   = 1 - max quota osservata = 1 - 0.2130 = 0.7870
+  p = 0.25  ->  T >       12,968 anni
+  p = 0.50  ->  T >        6,484 anni
+  p = 0.75  ->  T >        4,323 anni
+  Il teorema e' vero. L'orizzonte su cui garantisce l'arbitraggio relativo
+  non ha alcun rapporto con un orizzonte di investimento umano.
+
+--- Break-even fiscale del ribilanciamento ------------------------
+     p    ribilanc.  extra lordo  costo transaz.  costo fiscale  extra netto
+  0.25      mensile       -0.01%           0.03%         +0.79%       -0.79%
+  0.25  trimestrale       +0.01%           0.02%         +0.57%       -0.57%
+  0.25      annuale       +0.14%           0.01%         +0.24%       -0.24%
+  0.50      mensile       -0.03%           0.03%         +0.82%       -0.82%
+  0.50  trimestrale       -0.03%           0.01%         +0.58%       -0.58%
+  0.50      annuale       +0.08%           0.01%         +0.25%       -0.25%
+  0.75      mensile       -0.04%           0.04%         +0.81%       -0.81%
+  0.75  trimestrale       -0.03%           0.01%         +0.54%       -0.54%
+  0.75      annuale       +0.06%           0.01%         +0.21%       -0.21%
+  'extra netto' = IRR del PAC diversity-weighted meno IRR del PAC
+  cap-weighted, entrambi con CGT 33% sulle plusvalenze realizzate.

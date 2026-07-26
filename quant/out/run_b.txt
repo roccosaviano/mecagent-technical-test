@@ -1,0 +1,33 @@
+--- Gruppo B: premio lordo prima e dopo la pubblicazione ----------
+Anomalia               pubbl.  pre %/anno      t  post %/anno      t  decadim.  mesi post
+--------------------------------------------------------------------------------------------
+Bet Against Beta         2014       8.25%   6.57        5.03%   2.02       39%        148
+Accruals                 1996       6.87%   7.04        1.17%   1.00       83%        348
+Short interest           2001       8.63%   5.26       11.86%   4.10      -37%        288
+Short interest / IO      2005      24.78%   2.99       69.78%   3.31     -182%        240
+
+--- Verifica McLean-Pontiff su tutte le anomalie replicate --------
+  Anomalie con premio pre-pubblicazione positivo e storia sufficiente: 205
+  Premio medio  PRE  :   7.36%/anno
+  Premio medio  POST :   4.05%/anno
+  Decadimento medio  :   50.4%   mediano: 58.2%
+  Atteso McLean-Pontiff (2016): ~50%
+  Quota di anomalie con premio post-pubblicazione negativo: 16%
+
+--- Prima dei costi: la serie e' investibile? ---------------------
+Anomalia                vol/anno  Sharpe  peggior m.  miglior m.  media/mediana
+-------------------------------------------------------------------------------
+Bet Against Beta            8.7%    0.58       -9.6%       10.5%            2.0
+Accruals                    6.3%    0.18       -6.3%        6.5%            1.0
+Short interest             14.2%    0.84      -15.6%       16.2%            0.7
+Short interest / IO        94.2%    0.74      -67.8%      321.3%            1.3
+  Un rapporto media/mediana molto sopra 1 vuol dire che il premio sta
+  in pochi mesi estremi su titoli minuscoli, non in un edge ripetibile.
+
+--- Implementabilita': cosa resta dopo i costi reali --------------
+Anomalia                post lordo  transaz.  prestito  finanz.    netto
+------------------------------------------------------------------------
+Bet Against Beta             5.03%     0.30%     2.50%    1.29%    0.94%
+Accruals                     1.17%     0.30%     2.50%    0.00%   -1.63%
+Short interest              11.86%     0.90%     2.50%    0.00%    8.46%
+Short interest / IO         69.78%     0.90%     2.50%    0.00%   66.38%

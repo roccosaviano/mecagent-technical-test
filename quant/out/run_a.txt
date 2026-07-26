@@ -1,0 +1,34 @@
+
+--- Test di falsificazione del look-ahead -------------------------
+  Segnale che conosce il rendimento di domani  : CAGR      131.1%  Sharpe 7.92
+  Stesso segnale ritardato di un giorno        : CAGR        5.8%  Sharpe 0.55
+  Esito: OK, il controllo distingue i due casi
+
+--- Gruppo A su indice total return mercato USA (Ken French) ------
+  Campione   1926-07-01 -> 2026-05-29  (26253 sedute)
+  IN-SAMPLE  1926-07-01 -> 1974-05-03
+  OUT-SAMPLE 1974-05-06 -> 2026-05-29
+  Combinazioni di parametri provate: 36 (RSI2 mean-reversion=12, Down-streak reversal=6, Donchian breakout=9, Trend + stop sigma (sostituto ATR)=9)
+
+  Buy&hold OOS (lordo imposte): CAGR 12.03%  Sharpe 0.75  DD -54.6%
+
+Strategia                           parametri                       IS cagr  OOS cagr  OOS Sh   OOS DD  op/anno   %mkt
+----------------------------------------------------------------------------------------------------------------------
+RSI2 mean-reversion                 {'trend': 100, 'entry': 5, 'exit': 5}   -0.90%     0.93%    0.27   -27.2%      3.6     5%
+Down-streak reversal                {'trend': 200, 'days': 4}        -0.34%    -0.17%   -0.04   -28.8%      3.8     3%
+Donchian breakout                   {'inn': 20, 'out': 20}            9.24%     7.32%    0.71   -34.8%      4.1    64%
+Trend + stop sigma (sostituto ATR)  {'trend': 50, 'mult': 3}          9.94%     7.40%    0.69   -45.6%      8.4    71%
+
+--- Robustezza: stessi parametri su 49 settori (finestra OOS) -----
+  RSI2 mean-reversion                  batte il B&H in  0/49 settori   mediana extra-CAGR -11.51%
+  Down-streak reversal                 batte il B&H in  0/49 settori   mediana extra-CAGR -12.16%
+  Donchian breakout                    batte il B&H in  8/49 settori   mediana extra-CAGR -3.26%
+  Trend + stop sigma (sostituto ATR)   batte il B&H in  8/49 settori   mediana extra-CAGR -2.47%
+
+--- Robustezza: sottoperiodi di 20 anni sull'indice ---------------
+  Strategia                              1930-49   1950-69   1970-89   1990-09   2010-26
+  RSI2 mean-reversion                      -3.84    -14.88    -12.06     -6.55    -12.78
+  Down-streak reversal                     -3.28    -14.04    -13.24     -7.47    -14.21
+  Donchian breakout                        +4.48     -1.25     -1.65     -3.57     -7.85
+  Trend + stop sigma (sostituto ATR)       +3.66     -1.09     +0.83     -5.45     -6.67
+  (valori = extra-CAGR annuo rispetto al buy&hold nello stesso periodo)

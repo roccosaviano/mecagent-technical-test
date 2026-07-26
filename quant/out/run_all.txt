@@ -1,0 +1,61 @@
+
+PAC 500 EUR/mese, 1990-01 -> 2023-12 (versato 204,000 EUR)
+
+                                                         IRR  vs bench vs proprio    montante   max DD  Sharpe  op/an    imposte
+================================================================================================================================
+Trend following 10 mesi, leva 2x                      11.82%    +3.70%     +3.70%   2,334,978   -38.3%    0.77    0.6    945,229
+Trend following 10 mesi, leva 1.5x                     9.53%    +1.42%     +1.42%   1,386,289   -28.6%    0.81    0.6    538,570
+D. Equal-weight 49 settori, ribil. annuale             8.85%    +0.74%     +0.39%   1,183,350   -52.4%    0.59    1.0    507,187
+D. Diversity-weighted p=0.25, ribil. annuale           8.70%    +0.59%     +0.24%   1,144,638   -51.4%    0.59    1.0    500,479
+D. Diversity-weighted p=0.50, ribil. annuale           8.58%    +0.47%     +0.11%   1,114,132   -50.8%    0.59    1.0    495,113
+D. Cap-weight 49 settori [bench gruppo D]              8.47%    +0.36%     +0.00%   1,086,393   -50.2%    0.58    0.0    534,218
+D. Diversity-weighted p=0.75, ribil. annuale           8.47%    +0.35%     -0.00%   1,085,981   -50.3%    0.59    1.0    487,805
+Buy&hold indice CRSP giornaliero [bench gruppo A]      8.33%    +0.22%     +0.00%   1,067,513   -54.6%    0.49    0.0    524,918
+D. Diversity-weighted p=0.25, ribil. mensile           8.25%    +0.14%     -0.21%   1,036,491   -51.8%    0.58   12.0    397,846
+D. Diversity-weighted p=0.50, ribil. mensile           8.14%    +0.02%     -0.33%   1,010,258   -51.1%    0.58   12.0    387,802
+Buy&hold indice, CGT 33% all'uscita  [BENCHMARK]       8.11%    +0.00%     +0.00%   1,011,938   -49.0%    0.65    0.0    497,546
+D. Diversity-weighted p=0.75, ribil. mensile           8.03%    -0.08%     -0.44%     987,113   -50.6%    0.58   12.0    378,434
+Trend following 10 mesi, leva 1x                       7.12%    -1.00%     -1.00%     814,956   -19.0%    0.88    0.6    296,781
+Buy&hold azioni dirette, dividendi tassati 52%/anno    7.02%    -1.09%     -1.09%     798,257   -50.8%    0.48    0.0    491,927
+Buy&hold ETF UCITS, exit tax 38% + deemed disposal     6.39%    -1.72%     -1.72%     697,784   -49.0%    0.65    0.0    404,329
+B. Short interest (RF + premio netto costi)            5.88%    -2.23%     -2.23%     626,983   -28.7%    0.53   12.0    211,499
+A. Donchian breakout {'inn': 20, 'out': 20}            2.93%    -5.18%     -5.40%     347,364   -32.4%    0.27    4.2     86,546
+B. Bet Against Beta (RF + premio netto costi)          2.77%    -5.34%     -5.34%     336,051   -54.2%    0.34   12.0    120,432
+A. Trend + stop sigma (sostituto ATR) {'trend': 50,    2.16%    -5.96%     -6.17%     299,906   -44.4%    0.19    8.4     83,184
+A. RSI2 mean-reversion {'trend': 100, 'entry': 5, '    1.93%    -6.18%     -6.40%     287,576   -10.1%    0.10    3.4     17,890
+A. Down-streak reversal {'trend': 200, 'days': 4}      1.14%    -6.97%     -7.19%     249,054    -9.1%   -0.20    3.4      3,523
+B. Accruals (RF + premio netto costi)                 -2.16%   -10.27%    -10.27%     144,158   -41.1%   -0.12   12.0     56,046
+================================================================================================================================
+  'vs bench'  = contro il buy&hold Shiller (benchmark unico dichiarato)
+  'vs proprio'= contro il buy&hold DELLO STESSO universo. E' la colonna
+                onesta: neutralizza la differenza fra S&P composite,
+                indice CRSP e paniere dei 49 settori.
+
+Battono il buy&hold del proprio universo: 5
+  Trend following 10 mesi, leva 2x                              +3.70 punti
+  Trend following 10 mesi, leva 1.5x                            +1.42 punti
+  D. Equal-weight 49 settori, ribil. annuale                    +0.39 punti
+  D. Diversity-weighted p=0.25, ribil. annuale                  +0.24 punti
+  D. Diversity-weighted p=0.50, ribil. annuale                  +0.11 punti
+
+--- Robustezza di chi batte: costi doppi e sottoperiodi -----------
+                                                   base  costi x2  1990-2006  2007-2023
+---------------------------------------------------------------------------------------
+Trend following 10 mesi, leva 2x                 +3.70%    +3.63%    +4.25%    +3.86%
+Trend following 10 mesi, leva 1.5x               +1.42%    +1.34%    +2.29%    +1.04%
+D. Equal-weight 49 settori, ribil. annuale       +0.39%    +0.35%    +1.89%    -0.26%
+D. Diversity-weighted p=0.25, ribil. annuale     +0.24%    +0.22%    +1.47%    -0.26%
+D. Diversity-weighted p=0.50, ribil. annuale     +0.11%    +0.11%    +1.02%    -0.12%
+  (valori = punti di IRR sopra il buy&hold del proprio universo)
+
+--- Gate sulla leva: funziona a 1x? -------------------------------
+  Trend following a 1x: IRR 7.12%, -1.00 punti contro il benchmark
+  Sharpe 1x 0.88 contro benchmark 0.65, DD -19.0% contro -49.0%
+  A 1x rende MENO del buy&hold ma con Sharpe e drawdown migliori: la leva
+  qui non moltiplica un extra-rendimento, ricompra beta che la strategia
+  aveva tolto stando fuori dal mercato.
+
+Scenario riqualificazione come attivita' commerciale (52%):
+  B. Short interest (RF + premio netto costi)                   a 52%: IRR 4.38%
+  B. Bet Against Beta (RF + premio netto costi)                 a 52%: IRR 1.31%
+  B. Accruals (RF + premio netto costi)                         a 52%: IRR -4.07%

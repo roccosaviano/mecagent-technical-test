@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# dati scaricati dal progetto quant (rigenerabili con quant/fetch_data.sh)
+quant/data/

@@ -1,0 +1,14 @@
+Finestra Shiller: 1990-01-31 -> 2023-12-31  (408 mesi)
+Rendimento totale lordo annuo :  10.14%
+Solo prezzo, lordo annuo      :   8.02%
+Dividend yield medio annuo    :   2.12%
+
+                                                                IRR netta   atteso   delta   max DD    montante
+BENCHMARK indice buy&hold, CGT 33% solo all'uscita                  8.11%    8.21%   -0.10   -49.0%   1,011,938  OK
+ETF UCITS buy&hold, exit tax + deemed disposal 8 anni               6.39%    6.76%   -0.37   -49.0%     697,784  OK
+
+DD atteso azioni: -47%   versato totale: 204,000 EUR
+Imposte pagate  benchmark     497,546   ETF     404,329
+
+Variante realistica azioni diritte (dividendi esteri tassati 52% ogni anno):
+  IRR netta 7.02%  -> il prelievo annuo sui dividendi costa 1.09 punti l'anno
