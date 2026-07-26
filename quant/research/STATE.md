@@ -29,7 +29,7 @@ l'holdout è bruciato e qualunque risultato su quella finestra è in-sample.
 | Giri completati | 9 (tutte le ipotesi in coda eseguite) |
 | Configurazioni provate (cumulate) | **117 a registro + ~2.580 valutazioni interne al walk-forward** |
 | Soglia SR0 (giro 02) | 0,962 annualizzato |
-| Candidati promossi | **2** (H5, H4) — in verifica, holdout non ancora aperto |
+| Candidati promossi | **2** (H5, H4) — verifiche superate, holdout ANCORA SIGILLATO |
 | Holdout | **sigillato, mai aperto** |
 
 ## Dati disponibili
@@ -71,9 +71,19 @@ Sostituisce lo split unico, che aveva il disallineamento di regime descritto sot
 | H5 momentum settoriale | +2,93% | **+1,89%** | **262%/anno** |
 | H4 tilt low-vol | +0,73% | +0,42% | 7%/anno |
 
-H5 sopravvive anche allo scenario di riqualificazione, ma con 262% di turnover
-annuo quella e' l'aliquota da assumere, non un caso limite. Restano da chiudere:
-sensibilita' a un mese di ritardo sul segnale e costi doppi.
+**Verifiche chiuse, tutte superate da H5:**
+
+| Prova | vs B&H (CGT 33%) | vs B&H (52%) |
+|---|---:|---:|
+| caso base | +2,93% | +1,89% |
+| segnale ritardato di 1 mese | +2,35% | +1,31% |
+| segnale ritardato di 2 mesi | +2,16% | +1,14% |
+| costi di transazione doppi (0,30%) | +2,61% | +1,62% |
+
+Il degrado con il ritardo e' graduale, non un crollo: il margine non dipende da
+un timing al limite. E' anche il profilo atteso del momentum, che decade con il
+lag ma non svanisce. Con 262% di turnover annuo l'aliquota da assumere e' il 52%,
+non il 33%: il numero di riferimento per H5 e' **+1,89 punti**, non +2,93.
 
 **Holdout ancora sigillato.** Va aperto su UN SOLO candidato, dopo le verifiche.
 
