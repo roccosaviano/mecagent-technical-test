@@ -1,0 +1,44 @@
+Asset caricati: 7  (BTCUSDT, ETHUSDT, SOLUSDT, XRPUSDT, DOGEUSDT, LTCUSDT, ADAUSDT)
+Costi: 0.20% round-trip (crypto, piu' alti dell'azionario)
+
+asset       buy&hold  |  migliore variante VWAP
+--------------------------------------------------------------------------
+BTCUSDT        34.1%  |  trimestre  long-short       81.5%  (+47.4 vs B&H, Sharpe 1.23)
+ETHUSDT        23.4%  |  trimestre  long-short       74.3%  (+50.9 vs B&H, Sharpe 1.09)
+SOLUSDT        75.0%  |  trimestre  long-only       140.7%  (+65.7 vs B&H, Sharpe 1.44)
+XRPUSDT        -7.9%  |  settimana  long-only        33.7%  (+41.6 vs B&H, Sharpe 0.74)
+DOGEUSDT       58.3%  |  trimestre  long-only        96.6%  (+38.2 vs B&H, Sharpe 0.95)
+LTCUSDT       -17.1%  |  mese       long-only         5.8%  (+22.9 vs B&H, Sharpe 0.40)
+ADAUSDT        -0.4%  |  trimestre  long-short       66.7%  (+67.0 vs B&H, Sharpe 1.01)
+
+--- Aggregato per modo e ancoraggio (mediana sui 7 asset) ---
+ancoraggio    modo            CAGR med.  vs B&H med.  Sharpe med.  op/anno med.
+mese          long-only           51.8%       +28.9%         0.94            60
+mese          long-short          35.1%        +1.0%         0.79            60
+mese          short-only         -17.7%       -33.4%         0.01            60
+settimana     long-only           38.1%       +15.6%         0.85           115
+settimana     long-short         -13.4%       -19.5%         0.53           115
+settimana     short-only         -24.8%       -40.3%        -0.17           115
+trimestre     long-only           73.4%       +40.5%         1.01            34
+trimestre     long-short          66.7%       +16.7%         1.01            34
+trimestre     short-only         -17.8%       -22.9%         0.06            34
+
+--- Quante varianti battono il buy&hold del proprio asset ---
+  long-only      19/21   Sharpe mediano +0.94
+  short-only      1/21   Sharpe mediano +0.01
+  long-short     10/21   Sharpe mediano +0.62
+
+--- Portafoglio equipesato sui 7 asset ---
+ancoraggio    modo                CAGR   Sharpe       DD
+—             buy&hold           63.8%     1.03   -81.0%
+settimana     long-only          43.8%     0.98   -63.2%
+settimana     short-only        -34.3%    -0.60   -92.9%
+settimana     long-short         -1.4%     0.29   -73.7%
+mese          long-only          73.6%     1.40   -56.7%
+mese          short-only        -21.8%    -0.23   -80.4%
+mese          long-short         42.1%     0.87   -60.8%
+trimestre     long-only          90.3%     1.53   -41.8%
+trimestre     short-only        -11.7%    -0.02   -75.6%
+trimestre     long-short         75.2%     1.21   -51.9%
+
+Tentativi cumulati a registro: 509

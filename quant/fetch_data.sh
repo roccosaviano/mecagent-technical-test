@@ -37,3 +37,6 @@ for spec in "QQQ 1day" "AAPL 1day" "QQQ 1h" "QQQ 15min"; do
 done
 curl -sSL -o fred_NASDAQCOM.csv "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM"
 curl -sSL -o fred_NASDAQ100.csv "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQ100"
+
+# --- crypto OHLCV multi-asset (OKX, senza chiave)
+python3 "$(dirname "$0")/src/research/fetch_crypto.py" 2>/dev/null || true

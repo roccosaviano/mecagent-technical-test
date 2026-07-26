@@ -1,0 +1,56 @@
+7 asset, finestra comune 2020-09-29 -> 2026-07-26 (2127 giorni)
+
+==============================================================================
+1. IL SEGNALE E' IL VWAP O E' SOLO UN FILTRO DI TREND?
+==============================================================================
+   Confronto il VWAP trimestrale con medie mobili semplici di
+   lunghezza confrontabile, sullo stesso portafoglio equipesato.
+
+segnale                       CAGR   Sharpe       DD
+buy&hold                     63.8%     1.03   -81.0%
+VWAP trimestrale             90.3%     1.53   -41.8%
+VWAP mensile                 73.6%     1.40   -56.7%
+media mobile 20g             68.4%     1.33   -51.5%
+media mobile 50g             81.7%     1.43   -42.5%
+media mobile 100g            70.2%     1.28   -60.8%
+media mobile 200g            65.6%     1.21   -53.0%
+
+   Correlazione fra i rendimenti giornalieri dei segnali:
+                   VWAP trimestrale  media mobile 50g  media mobile 100g
+VWAP trimestrale              1.000             0.935              0.894
+media mobile 50g              0.935             1.000              0.935
+media mobile 100g             0.894             0.935              1.000
+
+==============================================================================
+2. COSA RESTA DOPO LE IMPOSTE IRLANDESI
+==============================================================================
+segnale                   op/anno   IRR 33%   IRR 52%  vs B&H 33%  vs B&H 52%
+buy&hold                        0     18.6%     14.1%       +0.0%       +0.0%
+VWAP trimestrale              135     42.2%     33.8%      +23.6%      +19.7%
+VWAP mensile                  193     23.3%     13.1%       +4.6%       -1.0%
+media mobile 100g              85     26.2%     20.9%       +7.5%       +6.8%
+
+==============================================================================
+3. QUANTO PESA LA SOPRAVVIVENZA
+==============================================================================
+   Il campione contiene solo cripto vive nel 2026. Non posso
+   ricostruire le morte, ma posso misurare quanto il risultato
+   dipende dai vincitori: rimuovo un asset per volta.
+
+escluso        B&H CAGR  VWAP-Q CAGR  differenza
+nessuno           63.8%        90.3%      +26.5%
+BTCUSDT           66.2%        91.1%      +24.9%
+ETHUSDT           67.0%        93.1%      +26.2%
+SOLUSDT           53.8%        75.4%      +21.6%
+XRPUSDT           63.5%        91.8%      +28.3%
+DOGEUSDT          46.6%        71.9%      +25.2%
+LTCUSDT           73.6%       111.2%      +37.6%
+ADAUSDT           70.5%        92.8%      +22.4%
+
+==============================================================================
+Deflated Sharpe del VWAP trimestrale su 509 tentativi cumulati:
+  Sharpe osservato 1.528 annualizzato
+  soglia H0        1.586
+  DSR              0.443  -> NON promuovibile
+
+Tentativi cumulati: 516
