@@ -8,3 +8,76 @@ H2 — trend following multi-asset (Century momentum)  premio lordo 3.54%/anno
   differenza                   -0.40%    -0.06
   turnover medio 0%/anno, imposte pagate 1,916,939 EUR contro 2,236,206 del buy&hold
   DSR 0.603 (SR0 0.230 ann., N=911, var_sr griglia)  ->  respinta
+
+==========================================================================
+H4 — tilt difensivo settoriale (low-vol, long-only)
+  finestra OOS 1947-01-31 -> 2009-12-31 (756 mesi), 378 valutazioni interne
+                                  IRR   Sharpe       DD
+  strategia                    10.42%     0.58   -46.2%
+  buy&hold                      9.69%     0.47   -50.3%
+  differenza                   +0.73%    +0.11
+  turnover medio 7%/anno, imposte pagate 11,690,447 EUR contro 10,616,491 del buy&hold
+  DSR 0.999 (SR0 0.160 ann., N=490, var_sr griglia)  ->  PROMUOVIBILE
+
+==========================================================================
+H5 — momentum settoriale cross-sectional
+  finestra OOS 1947-01-31 -> 2009-12-31 (756 mesi), 378 valutazioni interne
+                                  IRR   Sharpe       DD
+  strategia                    12.64%     0.67   -60.8%
+  buy&hold                      9.69%     0.47   -50.3%
+  differenza                   +2.95%    +0.20
+  turnover medio 259%/anno, imposte pagate 40,122,118 EUR contro 10,616,491 del buy&hold
+  DSR 1.000 (SR0 0.204 ann., N=496, var_sr griglia)  ->  PROMUOVIBILE
+
+==========================================================================
+H6 — stop loss / take profit su chiusure mensili  ATTENZIONE: stop su base mensile, non intraday
+  finestra OOS 1960-01-31 -> 2009-12-31 (600 mesi), 600 valutazioni interne
+                                  IRR   Sharpe       DD
+  strategia                     8.31%     0.29   -50.3%
+  buy&hold                      8.85%     0.33   -50.3%
+  differenza                   -0.55%    -0.04
+  turnover medio 6%/anno, imposte pagate 1,812,164 EUR contro 2,236,206 del buy&hold
+  DSR 0.635 (SR0 0.244 ann., N=719, var_sr griglia)  ->  respinta
+
+==========================================================================
+H7 — leva con margin call ESMA modellata  leva scelta piu' spesso: 2.0x
+  finestra OOS 1960-01-31 -> 2009-12-31 (600 mesi), 250 valutazioni interne
+                                  IRR   Sharpe       DD
+  strategia                     4.68%     0.14   -95.1%
+  buy&hold                      8.85%     0.33   -50.3%
+  differenza                   -4.18%    -0.19
+  turnover medio 0%/anno, imposte pagate 422,385 EUR contro 2,236,206 del buy&hold
+  DSR 0.467 (SR0 0.154 ann., N=371, var_sr griglia)  ->  respinta
+
+==========================================================================
+H8 — diversificazione geografica, rotazione minima  storia dal 1990: campione corto
+  finestra OOS 1996-01-31 -> 2009-12-31 (168 mesi), 84 valutazioni interne
+                                  IRR   Sharpe       DD
+  strategia                     2.14%     0.25   -56.6%
+  buy&hold                      2.30%     0.26   -50.3%
+  differenza                   -0.16%    -0.01
+  turnover medio 0%/anno, imposte pagate 6,142 EUR contro 6,699 del buy&hold
+  DSR 0.084 (SR0 0.633 ann., N=206, var_sr griglia)  ->  respinta
+
+==========================================================================
+H9 — combinazione inverse-vol multi-asset
+  finestra OOS 1995-01-31 -> 2009-12-31 (180 mesi), 90 valutazioni interne
+                                  IRR   Sharpe       DD
+  strategia                    -3.97%    -2.48   -39.2%
+  buy&hold                      2.87%     0.36   -50.3%
+  differenza                   -6.85%    -2.84
+  turnover medio 4%/anno, imposte pagate 0 EUR contro 10,264 del buy&hold
+  DSR 0.000 (SR0 1.620 ann., N=213, var_sr griglia)  ->  respinta
+
+==========================================================================
+RIEPILOGO
+ip.  strategia                                      vs B&H     DSR         esito
+H5   momentum settoriale cross-sectional            +2.95%   1.000  PROMUOVIBILE
+H4   tilt difensivo settoriale (low-vol, long-on    +0.73%   0.999  PROMUOVIBILE
+H8   diversificazione geografica, rotazione mini    -0.16%   0.084      respinta
+H2   trend following multi-asset (Century moment    -0.40%   0.603      respinta
+H6   stop loss / take profit su chiusure mensili    -0.55%   0.635      respinta
+H7   leva con margin call ESMA modellata            -4.18%   0.467      respinta
+H9   combinazione inverse-vol multi-asset           -6.85%   0.000      respinta
+
+Promuovibili: 2   tentativi cumulati a registro: 123

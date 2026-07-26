@@ -28,4 +28,4 @@ AccrualsBM                  9.14%  2.99    EW    0.20            4.0
   Un rapporto media/mediana molto sopra 1 = il premio sta in pochi mesi
   estremi. Colonna 'peso' EW = non eseguibile con 500 EUR/mese.
 
-Tentativi registrati in questo giro: 201   cumulati: 318
+Tentativi registrati in questo giro: 201   cumulati: 324
