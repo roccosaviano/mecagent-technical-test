@@ -1,0 +1,74 @@
+====================================================================================
+1. IL PREMIO AL RISCHIO DI VOLATILITA' ESISTE DAVVERO?
+====================================================================================
+   Confronto il VIX (volatilita' implicita a 30 giorni) con la
+   volatilita' REALIZZATA nei 21 giorni successivi.
+
+   osservazioni                      9,144
+   implicita media                  19.46%
+   realizzata media                 15.47%
+   premio medio                      3.99 punti (t = 56.5)
+   quota di giorni con premio>0      84.4%
+     1990-1999:  +6.23 punti, positivo il 93% dei giorni
+     2000-2009:  +3.04 punti, positivo il 80% dei giorni
+     2010-2019:  +3.22 punti, positivo il 82% dei giorni
+     2020-2026:  +3.15 punti, positivo il 81% dei giorni
+
+   Il premio c'e', e' grande e non decade. E' il fatto piu' solido
+   incontrato in tutto lo studio. Ora: si puo' incassare?
+
+====================================================================================
+2. LE DUE STRATEGIE CANONICHE, INDICI UFFICIALI CBOE
+====================================================================================
+
+   PUT — vendita put cash-secured
+   finestra 2007-01-04 -> 2025-12-31 (4779 sedute)
+                              CAGR  Sharpe       DD    skew  curtosi  peggior mese
+   PUT                       7.01%    0.55   -37.1%   -0.70     37.0        -17.7%
+   indice (confronto)       10.93%    0.62   -54.6%   -0.26     14.0        -17.2%
+
+   BXM — covered call (long indice + call venduta)
+   finestra 2003-01-03 -> 2025-12-31 (5783 sedute)
+                              CAGR  Sharpe       DD    skew  curtosi  peggior mese
+   BXM                       6.52%    0.53   -40.1%   -0.82     36.6        -15.0%
+   indice (confronto)       11.54%    0.67   -54.6%   -0.26     14.6        -17.2%
+
+====================================================================================
+3. NETTO DI FISCALITA' IRLANDESE
+====================================================================================
+   Le strategie in opzioni ruotano per costruzione: BXM e PUT
+   scrivono una nuova opzione OGNI MESE alla scadenza. Sono dodici
+   realizzi l'anno, il che porta dritti allo scenario 52%.
+
+   strategia                        IRR 33%   IRR 52%    vs B&H
+   PUT (2007-2025)                    6.47%     5.36%    -4.69%
+     buy&hold stessa finestra        11.16%         —    +0.00%
+   BXM (2003-2025)                    5.36%     4.46%    -4.94%
+     buy&hold stessa finestra        10.29%         —    +0.00%
+
+====================================================================================
+4. LA FORMA DEL RISCHIO, CHE LO SHARPE NON MOSTRA
+====================================================================================
+   PUT: skew -0.70 contro -0.26 dell'indice · 1° percentile -2.89% · 11 giorni sotto -5%
+   BXM: skew -0.82 contro -0.26 dell'indice · 1° percentile -2.74% · 11 giorni sotto -5%
+
+   Vendere volatilita' produce molti guadagni piccoli e poche
+   perdite grandi. Su un PAC ventennale non e' un dettaglio: e' la
+   differenza fra tenere la posizione e chiuderla nel momento peggiore.
+
+====================================================================================
+5. STOCK PICKING: COSA E' GIA' STATO TESTATO
+====================================================================================
+   Anomalie di selezione titoli passate al setaccio al giro 10: 201
+   Sopravvissute a t>2, value-weighted, quantile>=10%, netto costi: 2
+     GP                Novy-Marx                   2013  netto 9.03%/anno, t=2.80
+     CPVolSpread       Bali and Hovakimian         2009  netto 2.39%/anno, t=3.08
+
+   Il filtro che decide non e' la significativita' ma la
+   COSTRUZIONE: 22 anomalie su 201 sono value-weighted. Le altre
+   pesano allo stesso modo una societa' da 20 milioni e Apple, e
+   con 500 EUR/mese non sono eseguibili su nessuna delle due gambe.
+
+   DSR di PUT su 690 tentativi: 0.573  (batte il B&H: NO)
+
+Tentativi cumulati a registro: 690

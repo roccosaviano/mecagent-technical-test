@@ -40,3 +40,9 @@ curl -sSL -o fred_NASDAQ100.csv "https://fred.stlouisfed.org/graph/fredgraph.csv
 
 # --- crypto OHLCV multi-asset (OKX, senza chiave)
 python3 "$(dirname "$0")/src/research/fetch_crypto.py" 2>/dev/null || true
+
+# --- indici CBOE delle strategie in opzioni + VIX
+for f in BXM PUT VIX; do
+  curl -sSL -o "cboe_$f.csv" "https://cdn.cboe.com/api/global/us_indices/daily_prices/${f}_History.csv"
+done
+curl -sSL -o fred_VIXCLS.csv "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS"
