@@ -1,0 +1,51 @@
+7 cripto, 2020-09-29 -> 2026-07-26 (2127 giorni)
+
+==================================================================================
+1. QUANTO VALE LA TRAPPOLA: SMOOTHED CONTRO FILTRATO
+==================================================================================
+  SMOOTHED (guarda avanti — sbagliato)        CAGR    53.1%  Sharpe  1.05
+  FILTRATO (solo passato — corretto)          CAGR    47.8%  Sharpe  0.99
+  buy&hold                                    CAGR    63.7%  Sharpe  1.03
+  Se si usa la versione smoothed, il risultato e' un artefatto.
+
+==================================================================================
+2. IL SISTEMA: HMM SCEGLIE LA GAMBA, DONCHIAN LA ESEGUE
+==================================================================================
+Model is not converging.  Current: 3797.145303322655 is not greater than 3797.5399684455733. Delta is -0.3946651229184681
+Model is not converging.  Current: 5709.774320389816 is not greater than 5709.809983614742. Delta is -0.035663224925883696
+Model is not converging.  Current: 9617.522407079548 is not greater than 9617.533867910968. Delta is -0.011460831419753958
+  Copertura del segnale HMM: 78% delle date (il primo anno serve a stimare)
+  Quota di tempo in regime ribassista (P>0,5): 74%
+
+sistema                                      CAGR  Sharpe       DD  turn/an
+----------------------------------------------------------------------------
+Donchian long, sempre acceso                12.6%    0.48   -61.8%    13.2x
+Donchian long, sempre acceso, bande 25%     12.6%    0.48   -61.8%    13.2x
+Donchian short, sempre acceso              -15.1%   -0.04   -88.2%    16.0x
+HMM: long in rialzo, short in ribasso      -13.6%    0.03   -76.3%    19.1x
+HMM: long in rialzo, flat in ribasso         5.0%    0.31   -42.4%     4.5x
+HMM: long solo se molto convinto             2.5%    0.25   -41.1%     4.5x
+HMM long/short, bande 25%                  -13.6%    0.03   -76.3%    19.1x
+HMM long/flat, bande 25%                     5.0%    0.31   -42.4%     4.5x
+buy&hold equipesato                         -6.6%    0.21   -71.4%     0.0x
+
+==================================================================================
+3. NETTO DI IMPOSTE IRLANDESI
+==================================================================================
+sistema                                    IRR 33%   IRR 52%    vs B&H
+buy&hold equipesato                           2.9%         —      0.0%
+Donchian long, sempre acceso                  1.9%     -4.3%     -1.0%
+Donchian long, sempre acceso, bande 25%       1.9%     -4.3%     -1.0%
+Donchian short, sempre acceso                -7.7%     -7.8%    -10.6%
+HMM: long in rialzo, short in ribasso         3.1%      1.8%      0.2%
+HMM: long in rialzo, flat in ribasso          2.4%     -1.2%     -0.5%
+HMM: long solo se molto convinto             -0.3%     -3.2%     -3.2%
+HMM long/short, bande 25%                     3.1%      1.8%      0.2%
+HMM long/flat, bande 25%                      2.4%     -1.2%     -0.5%
+
+==================================================================================
+Migliore: HMM: long in rialzo, short in ribasso  (+0.2 punti al 33%, 1.8% al 52%)
+DSR su 681 tentativi: 0.097  (Sharpe 0.033 contro soglia 0.638)
+  -> NON promuovibile
+
+Tentativi cumulati a registro: 657
