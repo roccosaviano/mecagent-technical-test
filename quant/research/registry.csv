@@ -656,3 +656,18 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 24,H25 HMM regime + due gambe,HMM: long solo se molto convinto,2021-2026,0.24622398938244877,-0.32176948530802196,2.891256113170522,-3.213025598478544,1668,turn=4.5x
 24,H25 HMM regime + due gambe,"HMM long/short, bande 25%",2021-2026,0.033165700797263574,3.0673710265790235,2.891256113170522,0.17611491340850138,1668,turn=19.1x
 24,H25 HMM regime + due gambe,"HMM long/flat, bande 25%",2021-2026,0.30594951026239153,2.3641166882839375,2.891256113170522,-0.5271394248865846,1668,turn=4.5x
+25,H26 vol-targeting su ampiezza,Indice CRSP 1926-2026|vol realizzata 20g,varie,0.6174251280517266,8.254980467466112,,-2.227752146061146,26253,"lev=1.44,turn=6.4x"
+25,H26 vol-targeting su ampiezza,Indice CRSP 1926-2026|vol realizzata 60g,varie,0.6376847534562397,8.602064500200028,,-1.8806681133272303,26253,"lev=1.39,turn=1.8x"
+25,H26 vol-targeting su ampiezza,Indice CRSP 1926-2026|EWMA RiskMetrics,varie,0.6308030035704827,7.996980130659493,,-2.485752482867765,26253,"lev=1.39,turn=4.7x"
+25,H26 vol-targeting su ampiezza,Indice CRSP 1926-2026|catena di Markov k=2,varie,0.1324726450589706,1.271789077603297,,-9.210943535923962,26253,"lev=1.33,turn=65.7x"
+25,H26 vol-targeting su ampiezza,Indice CRSP 1926-2026|catena di Markov k=3,varie,0.20784625262771156,1.6277824822821765,,-8.854950131245081,26253,"lev=1.34,turn=57.0x"
+25,H26 vol-targeting su ampiezza,QQQ 2006-2026|vol realizzata 20g,varie,0.8614164852599944,16.13167587085239,,1.3943561339760429,4999,"lev=1.34,turn=7.2x"
+25,H26 vol-targeting su ampiezza,QQQ 2006-2026|vol realizzata 60g,varie,0.7795933049979629,14.831607928967994,,0.0942881920916463,4999,"lev=1.26,turn=2.3x"
+25,H26 vol-targeting su ampiezza,QQQ 2006-2026|EWMA RiskMetrics,varie,0.8543643870742272,14.808074703569446,,0.070754966693098,4999,"lev=1.28,turn=5.4x"
+25,H26 vol-targeting su ampiezza,QQQ 2006-2026|catena di Markov k=2,varie,0.443561480447326,7.658483030215319,,-7.078836706661029,4999,"lev=1.25,turn=52.7x"
+25,H26 vol-targeting su ampiezza,QQQ 2006-2026|catena di Markov k=3,varie,0.5744927316831954,9.879119207489886,,-4.858200529386462,4999,"lev=1.21,turn=29.7x"
+25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|vol realizzata 20g,varie,0.7311771890431006,-8.507076014198775,,-27.136493893691807,2126,"lev=1.24,turn=11.6x"
+25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|vol realizzata 60g,varie,0.7508493298049338,0.5166186791261551,,-18.11279920036688,2126,"lev=1.14,turn=2.6x"
+25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|EWMA RiskMetrics,varie,0.7379549883234116,-5.72393224596298,,-24.353350125456014,2126,"lev=1.18,turn=9.2x"
+25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|catena di Markov k=2,varie,0.7832329390192665,-18.486865094749245,,-37.11628297424228,2126,"lev=1.04,turn=52.1x"
+25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|catena di Markov k=3,varie,1.0545437922973773,10.21807809705059,,-8.411339782442443,2126,"lev=0.95,turn=1.1x"
