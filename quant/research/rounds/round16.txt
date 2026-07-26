@@ -1,0 +1,67 @@
+
+============================================================================================
+QQQ giornaliero 2006-09-07 -> 2026-07-24 (5000 barre)
+  buy&hold: CAGR 15.60%  Sharpe 0.77  DD -53.6%
+
+ancoraggio      segnale                      CAGR   vs B&H  Sharpe       DD   op/an   %mkt
+------------------------------------------------------------------------------------------
+settimana       long sopra VWAP            -3.45%  -19.05%   -0.16   -68.5%    44.7    60%
+settimana       long sotto VWAP             4.69%  -10.92%    0.36   -23.9%    44.6    40%
+settimana       breakout +1 dev.std        -2.87%  -18.48%   -0.31   -53.2%    25.0    16%
+settimana       rientro -1 dev.std         -0.84%  -16.44%   -0.03   -36.0%    18.4    11%
+due settimane   long sopra VWAP            -0.86%  -16.47%    0.01   -57.8%    35.4    62%
+due settimane   long sotto VWAP             4.86%  -10.74%    0.36   -26.0%    35.4    38%
+due settimane   breakout +1 dev.std        -0.47%  -16.08%   -0.02   -38.1%    18.6    19%
+due settimane   rientro -1 dev.std          1.66%  -13.94%    0.20   -31.4%    14.6    11%
+mese            long sopra VWAP             3.38%  -12.22%    0.31   -51.7%    24.4    64%
+mese            long sotto VWAP             3.95%  -11.66%    0.31   -33.4%    24.4    36%
+mese            breakout +1 dev.std         0.98%  -14.62%    0.17   -20.4%    14.6    23%
+mese            rientro -1 dev.std          4.26%  -11.35%    0.40   -21.1%    10.5    11%
+trimestre       long sopra VWAP             7.17%   -8.44%    0.56   -40.2%    14.6    69%
+trimestre       long sotto VWAP             3.26%  -12.34%    0.27   -37.3%    14.6    31%
+trimestre       breakout +1 dev.std         0.19%  -15.42%    0.07   -32.7%    11.6    34%
+trimestre       rientro -1 dev.std          3.85%  -11.76%    0.35   -20.1%     6.7    11%
+
+============================================================================================
+AAPL giornaliero 2006-09-07 -> 2026-07-24 (5000 barre)
+  buy&hold: CAGR 27.70%  Sharpe 0.94  DD -60.9%
+
+ancoraggio      segnale                      CAGR   vs B&H  Sharpe       DD   op/an   %mkt
+------------------------------------------------------------------------------------------
+settimana       long sopra VWAP             4.00%  -23.71%    0.29   -61.6%    44.7    56%
+settimana       long sotto VWAP             7.35%  -20.35%    0.43   -40.8%    44.7    44%
+settimana       breakout +1 dev.std         6.31%  -21.40%    0.58   -40.6%    22.3    15%
+settimana       rientro -1 dev.std          1.34%  -26.36%    0.16   -44.4%    17.5    11%
+due settimane   long sopra VWAP            12.29%  -15.41%    0.67   -48.5%    33.1    57%
+due settimane   long sotto VWAP             2.99%  -24.71%    0.24   -57.8%    33.1    42%
+due settimane   breakout +1 dev.std         2.75%  -24.95%    0.30   -25.8%    17.9    17%
+due settimane   rientro -1 dev.std          2.31%  -25.40%    0.23   -38.3%    14.3    12%
+mese            long sopra VWAP            17.41%  -10.30%    0.88   -39.7%    23.5    61%
+mese            long sotto VWAP             1.38%  -26.32%    0.18   -58.0%    23.5    39%
+mese            breakout +1 dev.std         4.93%  -22.78%    0.48   -21.8%    13.4    20%
+mese            rientro -1 dev.std          4.32%  -23.39%    0.34   -38.3%    10.2    12%
+trimestre       long sopra VWAP            18.61%   -9.09%    0.91   -39.7%    13.3    65%
+trimestre       long sotto VWAP             3.48%  -24.22%    0.26   -54.8%    13.2    35%
+trimestre       breakout +1 dev.std         8.73%  -18.97%    0.71   -35.3%     8.0    29%
+trimestre       rientro -1 dev.std          3.03%  -24.68%    0.27   -42.5%     5.6    11%
+
+============================================================================================
+Varianti testate: 32   che battono il buy&hold: 0
+
+Le cinque migliori:
+sym   ancoraggio      segnale                    vs B&H  Sharpe   op/an
+QQQ   trimestre       long sopra VWAP            -8.44%    0.56    14.6
+AAPL  trimestre       long sopra VWAP            -9.09%    0.91    13.3
+AAPL  mese            long sopra VWAP           -10.30%    0.88    23.5
+QQQ   due settimane   long sotto VWAP           -10.74%    0.36    35.4
+QQQ   settimana       long sotto VWAP           -10.92%    0.36    44.6
+
+Confronto con l'intraday del giro 15 (stesso segnale, stesso ETF):
+  ancoraggio settimana        44.7 op/anno  vs B&H  -19.05%
+  ancoraggio due settimane    35.4 op/anno  vs B&H  -16.47%
+  ancoraggio mese             24.4 op/anno  vs B&H  -12.22%
+  ancoraggio trimestre        14.6 op/anno  vs B&H   -8.44%
+  ancoraggio seduta (1h)      237.1 op/anno  vs B&H  -47.81%
+  ancoraggio seduta (15min)   495.3 op/anno  vs B&H  -71.74%
+
+Tentativi cumulati a registro: 423
