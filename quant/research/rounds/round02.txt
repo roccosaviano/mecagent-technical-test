@@ -5,25 +5,25 @@ Correlazione overlay/azionario  TRAIN -0.08   TEST -0.20
 Overlay lordo: TRAIN 3.42%/anno   TEST 3.28%/anno   (drag retail applicato: 7.5%/anno)
 
 Configurazioni in griglia: 60
-Migliore su TRAIN: overlay 0%, ribil. 12m, leva 2.0x  -> IRR 11.36% contro buy&hold 10.22%
+Migliore su TRAIN: overlay 0%, ribil. 12m, leva 2.0x  -> IRR 11.36% contro buy&hold 10.23%
 
-TEST — buy&hold azionario: IRR 3.10%  Sharpe 0.36  DD -50.3%
+TEST — buy&hold azionario: IRR 5.07%  Sharpe 0.36  DD -50.3%
 
 config (overlay, ribil, leva)      IRR    vs BH  Sharpe       DD
-(0.0, 12, 1.0)                   3.10%   +0.00%    0.36   -50.3%
-(0.0, 60, 1.0)                   3.10%   +0.00%    0.36   -50.3%
-(0.1, 60, 1.0)                   3.09%   -0.01%    0.34   -47.1%
-(0.1, 12, 1.0)                   3.03%   -0.07%    0.34   -46.7%
-(0.1, 60, 1.25)                  2.83%   -0.26%    0.30   -56.1%
-(0.1, 12, 1.25)                  2.76%   -0.34%    0.29   -55.7%
+(0.0, 12, 1.0)                   5.07%   +0.00%    0.36   -50.3%
+(0.0, 60, 1.0)                   5.07%   +0.00%    0.36   -50.3%
+(0.0, 12, 1.25)                  4.80%   -0.27%    0.32   -59.6%
+(0.0, 60, 1.25)                  4.80%   -0.27%    0.32   -59.6%
+(0.1, 60, 1.0)                   4.47%   -0.60%    0.34   -47.1%
+(0.1, 12, 1.0)                   4.47%   -0.60%    0.34   -46.7%
 
 Configurazione scelta su TRAIN, misurata su TEST:
-  (0.0, 12, 2.0)  IRR 0.45%  (-2.65 vs buy&hold)  Sharpe 0.26  DD -84.1%
+  (0.0, 12, 2.0)  IRR 3.08%  (-1.99 vs buy&hold)  Sharpe 0.26  DD -84.1%
 
 Deflated Sharpe su 110 tentativi cumulati:
   Sharpe annualizzato : 0.263   soglia H0 SR0: 0.962
   DSR                 : 0.001   NON promuovibile (serve > 0,95)
 
 Se l'overlay e' accessibile solo via fondo UCITS (caso realistico):
-  IRR 2.03%  contro 0.45% in regime CGT  ->  +1.58 punti
-  contro il buy&hold azionario: -1.07 punti
+  IRR 2.03%  contro 3.08% in regime CGT  ->  -1.05 punti
+  contro il buy&hold azionario: -3.04 punti

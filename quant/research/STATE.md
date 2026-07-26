@@ -54,11 +54,11 @@ dichiarare quando li proverò.
 | 02 | H3 core azionario + overlay multi-stile 6 classi (AQR Century) | −2,65 punti IRR | **0,001** | **RESPINTA** |
 | 03 | H2 trend following multi-asset (Century momentum) | −0,41 | 0,351 | RESPINTA |
 | 04 | H4 tilt difensivo settoriale low-vol, long-only | **+0,73** | **0,989** | **candidato** |
-| 05 | H5 momentum settoriale cross-sectional | **+2,93** | **0,998** | **candidato** |
-| 06 | H6 stop loss / take profit su chiusure mensili | −0,56 | 0,442 | RESPINTA |
-| 07 | H7 leva con margin call ESMA modellata | −4,40 | 0,141 | RESPINTA |
-| 08 | H8 diversificazione geografica, rotazione minima | −0,24 | 0,163 | RESPINTA |
-| 09 | H9 combinazione inverse-vol multi-asset | −8,62 | 0,000 | RESPINTA |
+| 05 | H5 momentum settoriale cross-sectional | **+2,95** | **0,998** | **candidato** |
+| 06 | H6 stop loss / take profit su chiusure mensili | −0,55 | 0,442 | RESPINTA |
+| 07 | H7 leva con margin call ESMA modellata | −4,18 | 0,141 | RESPINTA |
+| 08 | H8 diversificazione geografica, rotazione minima | −0,16 | 0,163 | RESPINTA |
+| 09 | H9 combinazione inverse-vol multi-asset | −6,85 | 0,000 | RESPINTA |
 
 Dal giro 03 in poi la valutazione e' **walk-forward a finestre espandenti**: ogni
 anno Y i parametri sono scelti su tutto cio' che precede Y e applicati durante Y.
@@ -68,10 +68,14 @@ Sostituisce lo split unico, che aveva il disallineamento di regime descritto sot
 
 | | CGT 33% | riqualif. 52% | turnover |
 |---|---:|---:|---:|
-| H5 momentum settoriale | +2,93% | **+1,89%** | **262%/anno** |
-| H4 tilt low-vol | +0,73% | +0,42% | 7%/anno |
+| H5 momentum settoriale | +2,95% | da rimisurare | **262%/anno** |
+| H4 tilt low-vol | +0,73% | da rimisurare | 7%/anno |
 
-**Verifiche chiuse, tutte superate da H5:**
+> **I numeri sotto sono stati rigenerati dopo la correzione della base fiscale**
+> (vedi note metodologiche): il motore tassava i versamenti come plusvalenza.
+> Le verifiche di robustezza sono in corso di riesecuzione.
+
+**Verifiche (valori pre-correzione, in aggiornamento):**
 
 | Prova | vs B&H (CGT 33%) | vs B&H (52%) |
 |---|---:|---:|
@@ -116,6 +120,17 @@ non il 33%: il numero di riferimento per H5 e' **+1,89 punti**, non +2,93.
   Nel giro 02 l'ottimizzatore ha scelto leva 2× su TRAIN e ha prodotto −84% di
   drawdown su TEST. Non è un difetto della strategia, è il mio disegno: da
   affrontare con walk-forward a finestre mobili invece di uno split unico.
+- **Bug nella base fiscale alla liquidazione (il piu' grave trovato finora).**
+  La plusvalenza era calcolata contro il valore del portafoglio al PRIMO
+  versamento (~500 EUR) invece che contro i versamenti cumulati (204.000 EUR):
+  il motore tassava il montante quasi per intero. Segnalato dall'utente, che ha
+  notato che i numeri non tornavano con un CAGR dell'S&P intorno al 10%.
+  Corretto: benchmark 8,11% -> 8,40%, vantaggio del veicolo fiscale contro ETF
+  UCITS da 1,72 a 2,01 punti. Il regime ETF non era interessato (base per lotti).
+- **L'IRR ha uno scarto di convenzione di ~0,05 punti**: XIRR usa act/365 mentre
+  il compounding e' mensile, e i mesi non sono 1/12 di anno esatto. Su un caso
+  analitico all'8% esatto restituisce 8,049%. Si applica identicamente a ogni
+  strategia, quindi i confronti non ne risentono.
 - **Bug trovato nel walk-forward: `realize_frac` non veniva propagato**, quindi
   le strategie erano tassate come un buy&hold e il turnover risultava gratuito.
   Corretto: H5 e' scesa da +6,08 a +2,93 punti, H4 da +1,73 a +0,73. Era il
