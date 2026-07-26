@@ -671,3 +671,17 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|EWMA RiskMetrics,varie,0.7379549883234116,-5.72393224596298,,-24.353350125456014,2126,"lev=1.18,turn=9.2x"
 25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|catena di Markov k=2,varie,0.7832329390192665,-18.486865094749245,,-37.11628297424228,2126,"lev=1.04,turn=52.1x"
 25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|catena di Markov k=3,varie,1.0545437922973773,10.21807809705059,,-8.411339782442443,2126,"lev=0.95,turn=1.1x"
+26,H27 HMM azionario,"indice CRSP giornaliero|long in favorevole, flat altrove",varie,0.6469969913626996,5.847409132704332,,-4.728699782623179,25802,ops=6.7
+26,H27 HMM azionario,"indice CRSP giornaliero|long in favorevole, short altrove",varie,0.1450189137008299,1.327402140692986,,-9.248706774634526,25802,ops=6.7
+26,H27 HMM azionario,indice CRSP giornaliero|long solo se molto convinto,varie,0.6906167742955553,5.998593810085365,,-4.5775151052421466,25802,ops=6.7
+26,H27 HMM azionario,indice CRSP giornaliero|esposizione = 1 - P(avverso),varie,0.6919142630647611,5.6454124056496555,,-4.930696509677856,25802,ops=242.5
+26,H27 HMM azionario,"indice CRSP mensile|long in favorevole, flat altrove",varie,0.6202421539253872,6.847557725537412,,-3.5628071629162683,797,ops=0.4
+26,H27 HMM azionario,"indice CRSP mensile|long in favorevole, short altrove",varie,0.3823757014353506,4.100196563207073,,-6.3101683252466065,797,ops=0.4
+26,H27 HMM azionario,indice CRSP mensile|long solo se molto convinto,varie,0.554014378253941,6.0855123488031095,,-4.32485253965057,797,ops=0.5
+26,H27 HMM azionario,indice CRSP mensile|esposizione = 1 - P(avverso),varie,0.5933266634365701,6.901170669827642,,-3.509194218626038,797,ops=12.0
+26,H27 HMM azionario,"QQQ giornaliero|long in favorevole, flat altrove",varie,1.0059544780458967,11.678548772008801,,-3.7835574531666474,4416,ops=5.5
+26,H27 HMM azionario,"QQQ giornaliero|long in favorevole, short altrove",varie,0.4971007823224801,7.101075928468581,,-8.361030296706868,4416,ops=5.5
+26,H27 HMM azionario,QQQ giornaliero|long solo se molto convinto,varie,0.9391456230719978,10.391025725441244,,-5.0710804997342045,4416,ops=6.0
+26,H27 HMM azionario,QQQ giornaliero|esposizione = 1 - P(avverso),varie,0.9737061730639233,10.984191110351327,,-4.477915114824121,4416,ops=249.9
+26,H28 Kronos cripto,BTCUSDT,2020-2026,-0.015973507110330055,-4.71823850986004,17.997114425416317,-22.715352935276357,900,
+26,H28 Kronos cripto,ETHUSDT,2020-2026,0.32359638015545084,4.823213771692081,-8.284842140292437,13.108055911984518,900,

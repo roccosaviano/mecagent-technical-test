@@ -1,0 +1,151 @@
+
+==================================================================================
+HMM SU indice CRSP giornaliero   26253 osservazioni 1926-07-01 -> 2026-05-29
+==================================================================================
+Model is not converging.  Current: 93936.54872718407 is not greater than 93936.58124555863. Delta is -0.03251837455900386
+Model is not converging.  Current: 105667.32745977216 is not greater than 105667.44949235735. Delta is -0.12203258519002702
+Model is not converging.  Current: 107822.38677685452 is not greater than 107823.03910562073. Delta is -0.6523287662130315
+Model is not converging.  Current: 110072.37570127094 is not greater than 110073.42895504946. Delta is -1.0532537785184104
+Model is not converging.  Current: 112170.30732082756 is not greater than 112171.54986363037. Delta is -1.242542802807293
+Model is not converging.  Current: 118076.94857076494 is not greater than 118078.27056693498. Delta is -1.3219961700378917
+Model is not converging.  Current: 129926.08530408527 is not greater than 129928.80818403952. Delta is -2.7228799542499473
+Model is not converging.  Current: 134064.93641260796 is not greater than 134068.43304382873. Delta is -3.4966312207689043
+Model is not converging.  Current: 138024.1425104983 is not greater than 138027.7935131018. Delta is -3.6510026034957264
+Model is not converging.  Current: 146836.35819180365 is not greater than 146840.65498852354. Delta is -4.296796719892882
+Model is not converging.  Current: 157609.51130069164 is not greater than 157609.80125076158. Delta is -0.2899500699422788
+  copertura 98%   tempo in regime avverso 25%
+
+  sistema                                CAGR  Sharpe       DD   op/an   IRR 33%   vs B&H
+  long in favorevole, flat altrove      6.26%    0.65   -66.5%     6.7     5.85%   -4.73%
+  long in favorevole, short altrove     1.02%    0.15   -90.8%     6.7     1.33%   -9.25%
+  long solo se molto convinto           6.58%    0.69   -64.3%     6.7     6.00%   -4.58%
+  esposizione = 1 - P(avverso)          6.58%    0.69   -64.0%   242.5     5.65%   -4.93%
+  buy&hold                              9.63%    0.62   -84.1%     0.0    10.58%   +0.00%
+
+==================================================================================
+HMM SU indice CRSP mensile   1199 osservazioni 1926-07-31 -> 2026-05-31
+==================================================================================
+Model is not converging.  Current: 2031.8380020110744 is not greater than 2032.4934738642175. Delta is -0.6554718531431263
+Model is not converging.  Current: 2154.6430956340587 is not greater than 2154.872954982174. Delta is -0.2298593481154967
+Model is not converging.  Current: 2218.0573414923983 is not greater than 2218.248213689063. Delta is -0.19087219666471356
+Model is not converging.  Current: 2283.05229737835 is not greater than 2283.2812101550267. Delta is -0.22891277667667964
+Model is not converging.  Current: 2343.025564421295 is not greater than 2343.28308350996. Delta is -0.2575190886650489
+Model is not converging.  Current: 2430.800881922923 is not greater than 2430.934984163609. Delta is -0.1341022406859338
+Model is not converging.  Current: 2501.0701757589 is not greater than 2501.4296079555115. Delta is -0.35943219661157855
+Model is not converging.  Current: 2554.231834287891 is not greater than 2554.6280000713004. Delta is -0.39616578340928754
+Model is not converging.  Current: 2596.0998369033655 is not greater than 2596.120300768128. Delta is -0.020463864762405137
+Model is not converging.  Current: 2689.4366031002837 is not greater than 2689.8766725231953. Delta is -0.44006942291161977
+Model is not converging.  Current: 2754.66790564021 is not greater than 2754.738666724526. Delta is -0.07076108431601824
+Model is not converging.  Current: 2811.4162384923065 is not greater than 2811.754426616423. Delta is -0.3381881241166411
+Model is not converging.  Current: 2865.004762120083 is not greater than 2865.337133042438. Delta is -0.3323709223550395
+Model is not converging.  Current: 2900.7829377542466 is not greater than 2900.7877930849127. Delta is -0.004855330666032387
+Model is not converging.  Current: 2962.7049303512767 is not greater than 2962.7425307149174. Delta is -0.03760036364064945
+Model is not converging.  Current: 3014.124586014106 is not greater than 3014.4557616375596. Delta is -0.33117562345341867
+Model is not converging.  Current: 3077.140072843321 is not greater than 3077.514670099642. Delta is -0.3745972563210671
+Model is not converging.  Current: 3137.752814191473 is not greater than 3137.81618410139. Delta is -0.06336990991667335
+Model is not converging.  Current: 3201.023338310446 is not greater than 3201.1832301397085. Delta is -0.15989182926250578
+Model is not converging.  Current: 3258.744428049448 is not greater than 3258.994000937899. Delta is -0.24957288845098446
+Model is not converging.  Current: 3294.315174575533 is not greater than 3294.5937517735774. Delta is -0.27857719804433145
+Model is not converging.  Current: 3342.2679008625864 is not greater than 3342.64569770964. Delta is -0.37779684705355976
+Model is not converging.  Current: 3407.2574301792206 is not greater than 3407.423690731772. Delta is -0.16626055255119354
+Model is not converging.  Current: 3460.397786410571 is not greater than 3460.678758217541. Delta is -0.2809718069702285
+Model is not converging.  Current: 3515.1680153256248 is not greater than 3515.4863580488422. Delta is -0.3183427232174836
+Model is not converging.  Current: 3580.045773888493 is not greater than 3580.3319978628415. Delta is -0.28622397434855884
+Model is not converging.  Current: 3635.641124641959 is not greater than 3635.706468119603. Delta is -0.06534347764409176
+Model is not converging.  Current: 3696.547869863707 is not greater than 3696.879990428105. Delta is -0.33212056439788284
+Model is not converging.  Current: 3753.174638635903 is not greater than 3753.3558601816653. Delta is -0.1812215457621278
+Model is not converging.  Current: 3809.111031363616 is not greater than 3809.4147246461976. Delta is -0.30369328258166206
+Model is not converging.  Current: 3870.4708406615587 is not greater than 3870.4901061631654. Delta is -0.01926550160669649
+Model is not converging.  Current: 3918.470973534403 is not greater than 3918.6929794264447. Delta is -0.2220058920415795
+Model is not converging.  Current: 3969.1179027140047 is not greater than 3969.4919260219367. Delta is -0.37402330793202054
+Model is not converging.  Current: 4016.307615720287 is not greater than 4016.4447728922446. Delta is -0.13715717195782418
+Model is not converging.  Current: 4052.0711668228905 is not greater than 4052.382758635107. Delta is -0.31159181221664767
+Model is not converging.  Current: 4092.2309780055884 is not greater than 4092.3845871842523. Delta is -0.15360917866382806
+Model is not converging.  Current: 4143.290387304051 is not greater than 4143.458009820603. Delta is -0.1676225165520009
+Model is not converging.  Current: 4204.728289672615 is not greater than 4205.026978981692. Delta is -0.2986893090774174
+Model is not converging.  Current: 4268.733374682889 is not greater than 4268.794976029658. Delta is -0.061601346768838994
+Model is not converging.  Current: 4328.269136799232 is not greater than 4328.349631026803. Delta is -0.08049422757085267
+Model is not converging.  Current: 4572.639063844579 is not greater than 4572.8537879642445. Delta is -0.214724119665334
+Model is not converging.  Current: 4628.492111936937 is not greater than 4628.6839827891545. Delta is -0.1918708522171073
+Model is not converging.  Current: 4690.947620977878 is not greater than 4691.182742297782. Delta is -0.23512131990446505
+Model is not converging.  Current: 4756.341067928409 is not greater than 4756.536343846186. Delta is -0.19527591777750786
+Model is not converging.  Current: 4884.229974446575 is not greater than 4884.23135221351. Delta is -0.0013777669346382027
+Model is not converging.  Current: 4993.7272018579 is not greater than 4993.779711430844. Delta is -0.05250957294447289
+Model is not converging.  Current: 5039.201255794245 is not greater than 5039.34573890977. Delta is -0.14448311552496307
+Model is not converging.  Current: 5079.037225896214 is not greater than 5079.195075894341. Delta is -0.15784999812694878
+Model is not converging.  Current: 5138.629010412801 is not greater than 5138.6875720296875. Delta is -0.05856161688643624
+Model is not converging.  Current: 5180.362591781643 is not greater than 5180.450026741607. Delta is -0.08743495996441197
+Model is not converging.  Current: 5228.682994683061 is not greater than 5228.733882378707. Delta is -0.05088769564554241
+Model is not converging.  Current: 5292.302398990551 is not greater than 5292.369498612166. Delta is -0.06709962161494332
+Model is not converging.  Current: 5358.670439502333 is not greater than 5358.7268475796745. Delta is -0.05640807734198461
+  copertura 66%   tempo in regime avverso 12%
+
+  sistema                                CAGR  Sharpe       DD   op/an   IRR 33%   vs B&H
+  long in favorevole, flat altrove      8.02%    0.62   -49.0%     0.4     6.85%   -3.56%
+  long in favorevole, short altrove     4.84%    0.38   -66.0%     0.4     4.10%   -6.31%
+  long solo se molto convinto           6.95%    0.55   -54.3%     0.5     6.09%   -4.32%
+  esposizione = 1 - P(avverso)          7.48%    0.59   -48.0%    12.0     6.90%   -3.51%
+  buy&hold                             10.72%    0.74   -50.3%     0.0    10.41%   +0.00%
+
+==================================================================================
+HMM SU QQQ giornaliero   4999 osservazioni 2006-09-08 -> 2026-07-24
+==================================================================================
+Model is not converging.  Current: 3839.857384082552 is not greater than 3840.925830803174. Delta is -1.0684467206219779
+Model is not converging.  Current: 7301.154595089141 is not greater than 7301.163088754974. Delta is -0.008493665832247643
+Model is not converging.  Current: 9014.669479739208 is not greater than 9016.286964444187. Delta is -1.6174847049787786
+Model is not converging.  Current: 14718.026422442543 is not greater than 14718.246614100652. Delta is -0.22019165810888808
+Model is not converging.  Current: 16626.688254295303 is not greater than 16627.72568066421. Delta is -1.0374263689082
+Model is not converging.  Current: 18500.234435707942 is not greater than 18500.828965359844. Delta is -0.5945296519021213
+Model is not converging.  Current: 20437.643072324325 is not greater than 20440.680271782814. Delta is -3.03719945848934
+Model is not converging.  Current: 25550.812864367388 is not greater than 25552.858600545842. Delta is -2.045736178453808
+Model is not converging.  Current: 27410.19552458433 is not greater than 27411.094854806244. Delta is -0.8993302219132602
+Model is not converging.  Current: 34338.35991291252 is not greater than 34339.10595613702. Delta is -0.7460432244988624
+  copertura 88%   tempo in regime avverso 20%
+
+  sistema                                CAGR  Sharpe       DD   op/an   IRR 33%   vs B&H
+  long in favorevole, flat altrove     15.03%    1.01   -23.3%     5.5    11.68%   -3.78%
+  long in favorevole, short altrove     8.57%    0.50   -43.6%     5.5     7.10%   -8.36%
+  long solo se molto convinto          13.78%    0.94   -24.5%     6.0    10.39%   -5.07%
+  esposizione = 1 - P(avverso)         14.20%    0.97   -21.9%   249.9    10.98%   -4.48%
+  buy&hold                             19.60%    0.96   -35.6%     0.0    15.46%   +0.00%
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+  BTCUSDT: 180 previsioni, 2024-02-07 -> 2026-07-21
+    60/180 (60s)
+    120/180 (121s)
+    180/180 (182s)
+
+  ETHUSDT: 180 previsioni, 2024-02-07 -> 2026-07-21
+    60/180 (56s)
+    120/180 (112s)
+    180/180 (170s)
+
+==================================================================================
+KRONOS SUL SUO TERRENO DI CASA (cripto)
+==================================================================================
+  simbolo        n   accur.   indip.   chi2 p   RankIC       p  prev.su  real.su
+  BTCUSDT      180    47.8%    49.6%    0.740   -0.112   0.133      43%      53%
+  ETHUSDT      180    53.9%    49.4%    0.276   +0.090   0.231      39%      53%
+  TUTTI        360    50.8%    49.5%    0.671   +0.006   0.903      41%      53%
+
+  'indip.' = accuratezza attesa se le previsioni fossero
+  indipendenti dall'esito. Se coincide con quella osservata,
+  il modello non porta informazione direzionale.
+
+  Backtest del segnale, per simbolo:
+  simbolo        CAGR      B&H       vs  Sharpe       DD
+  BTCUSDT       -4.7%    18.0%   -22.7%   -0.02   -53.1%
+  ETHUSDT        4.8%    -8.3%   +13.1%    0.32   -53.1%
+
+==================================================================================
+SINTESI
+==================================================================================
+HMM sull'azionario: 0/12 configurazioni battono il buy&hold netto imposte
+  migliore: esposizione = 1 - P(avverso) su indice CRSP mensile  -3.51 punti (Sharpe 0.59)
+
+Kronos su cripto: accuratezza 50.8% contro 49.5% attesa sotto indipendenza, chi2 p=0.671
+  battono il buy&hold: 1/2
+
+DSR del migliore su 686 tentativi: 0.999 -> PROMUOVIBILE
+
+Tentativi cumulati a registro: 686
