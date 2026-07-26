@@ -1,0 +1,585 @@
+<title>Registro delle prove — attivo contro passivo, fiscalità irlandese</title>
+
+<style>
+:root{
+  --paper:#E8EBEE; --surface:#F4F6F8; --surface-2:#FDFDFE;
+  --ink:#0C1116; --ink-2:#3B4753; --ink-3:#6B7885; --rule:#C9D1D8;
+  --s1:#0077A8; --s2:#B03A2B; --s3:#6B4EA0; --s4:#BE8A1E;
+  --pos:#0077A8; --neg:#B03A2B; --warn:#BE8A1E;
+  --serif:Georgia,'Iowan Old Style','Times New Roman',serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace;
+  --max:74rem;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#080C10; --surface:#131A21; --surface-2:#1A222B;
+    --ink:#E4EAEF; --ink-2:#AFBCC7; --ink-3:#7B8996; --rule:#2A343E;
+    --s1:#2E93C9; --s2:#C85748; --s3:#8874C4; --s4:#B98A2E;
+    --pos:#2E93C9; --neg:#C85748; --warn:#B98A2E;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#080C10; --surface:#131A21; --surface-2:#1A222B;
+  --ink:#E4EAEF; --ink-2:#AFBCC7; --ink-3:#7B8996; --rule:#2A343E;
+  --s1:#2E93C9; --s2:#C85748; --s3:#8874C4; --s4:#B98A2E;
+  --pos:#2E93C9; --neg:#C85748; --warn:#B98A2E;
+}
+:root[data-theme="light"]{
+  --paper:#E8EBEE; --surface:#F4F6F8; --surface-2:#FDFDFE;
+  --ink:#0C1116; --ink-2:#3B4753; --ink-3:#6B7885; --rule:#C9D1D8;
+  --s1:#0077A8; --s2:#B03A2B; --s3:#6B4EA0; --s4:#BE8A1E;
+  --pos:#0077A8; --neg:#B03A2B; --warn:#BE8A1E;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(1rem,4vw,3rem)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;text-wrap:balance;margin:0}
+a{color:var(--s1)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* masthead */
+.mast{border-bottom:2px solid var(--ink);padding:clamp(2.5rem,7vw,5rem) 0 1.5rem}
+.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:1.25rem}
+.mast h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;letter-spacing:-.015em;
+  max-width:22ch}
+.mast .sub{margin-top:1.1rem;max-width:60ch;color:var(--ink-2);font-size:1.02rem}
+
+/* verdict */
+.verdict{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin:2.5rem 0 0}
+.vc{background:var(--surface);padding:1.1rem 1.2rem}
+.vc .n{font-family:var(--mono);font-size:clamp(1.5rem,3.4vw,2.1rem);
+  font-variant-numeric:tabular-nums;line-height:1.1;letter-spacing:-.02em}
+.vc .l{font-size:.75rem;color:var(--ink-3);margin-top:.35rem;line-height:1.35}
+.vc.hi .n{color:var(--pos)}
+.vc.no .n{color:var(--neg)}
+
+section{padding:3.5rem 0 0}
+.shead{display:flex;align-items:baseline;gap:1rem;border-bottom:1px solid var(--rule);
+  padding-bottom:.6rem;margin-bottom:1.6rem;flex-wrap:wrap}
+.shead h2{font-size:clamp(1.25rem,2.6vw,1.7rem);letter-spacing:-.01em}
+.shead .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);margin-left:auto}
+.lede{max-width:66ch;color:var(--ink-2);margin:0 0 1.5rem}
+.lede strong{color:var(--ink);font-weight:600}
+
+/* tables */
+.tw{overflow-x:auto;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.83rem}
+caption{text-align:left;padding:.7rem .9rem;font-size:.72rem;color:var(--ink-3);
+  font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;
+  border-bottom:1px solid var(--rule);background:var(--surface-2)}
+th{font-weight:600;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-3);text-align:right;padding:.6rem .7rem;border-bottom:1px solid var(--rule);
+  white-space:nowrap}
+th:first-child{text-align:left}
+td{padding:.42rem .7rem;border-bottom:1px solid var(--rule);text-align:right;
+  font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td:first-child{text-align:left;font-family:var(--sans);white-space:normal;min-width:15rem}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:var(--surface-2)}
+tr.bench td{background:color-mix(in srgb,var(--s1) 9%,transparent);font-weight:600}
+tr.bench td:first-child{font-weight:600}
+.up{color:var(--pos)}.dn{color:var(--neg)}
+.pill{display:inline-block;font-family:var(--mono);font-size:.64rem;padding:.1rem .42rem;
+  border:1px solid currentColor;border-radius:2px;letter-spacing:.05em;text-transform:uppercase}
+.pill.r{color:var(--neg)}.pill.c{color:var(--warn)}.pill.b{color:var(--s1)}
+
+/* figures */
+figure{margin:2rem 0 0;border:1px solid var(--rule);background:var(--surface);padding:1.1rem}
+figcaption{font-size:.8rem;color:var(--ink-2);margin-top:.8rem;max-width:70ch}
+figcaption b{color:var(--ink)}
+.ftitle{font-family:var(--serif);font-size:1.05rem;margin-bottom:.15rem}
+.fsub{font-size:.72rem;color:var(--ink-3);font-family:var(--mono);margin-bottom:.9rem}
+.legend{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:.7rem;font-size:.72rem;
+  color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:.35rem}
+.sw{width:11px;height:11px;border-radius:2px;flex:none}
+svg{display:block;width:100%;height:auto;overflow:visible}
+.grid line{stroke:var(--rule);stroke-width:1}
+.axis text{fill:var(--ink-3);font-family:var(--mono);font-size:10px}
+.axis line,.axis path{stroke:var(--rule)}
+.dlabel{fill:var(--ink-2);font-family:var(--mono);font-size:10px}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--paper);
+  padding:.4rem .55rem;border-radius:3px;font-family:var(--mono);font-size:.7rem;
+  line-height:1.45;opacity:0;transition:opacity .1s;z-index:50;white-space:nowrap}
+.hit{cursor:crosshair}
+.hit:focus-visible{outline:2px solid var(--s1);outline-offset:2px}
+
+/* notes */
+.notes{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:1.5rem}
+.note{background:var(--surface);padding:1rem 1.1rem}
+.note h3{font-size:.95rem;margin-bottom:.4rem}
+.note p{margin:0;font-size:.84rem;color:var(--ink-2)}
+.note .k{font-family:var(--mono);color:var(--ink);font-size:.8rem}
+
+footer{margin-top:4rem;border-top:2px solid var(--ink);padding:1.5rem 0 3rem;
+  font-size:.78rem;color:var(--ink-3)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <div class="eyebrow">Registro delle prove · 22 giri · 625 tentativi</div>
+  <h1>Nessuna strategia attiva batte il buy&amp;hold netto di tasse irlandesi</h1>
+  <p class="sub">PAC da 500&nbsp;€/mese, orizzonte 20-30 anni. L'unico vantaggio che
+  sopravvive a tutti i controlli non è una strategia: è la scelta del veicolo fiscale.
+  Tutto ciò che segue è il tentativo, ripetuto 625 volte, di trovare qualcosa di meglio.</p>
+
+  <div class="verdict">
+    <div class="vc hi"><div class="n">+2,01</div><div class="l">punti l'anno dal veicolo fiscale — indice diretto invece di ETF UCITS</div></div>
+    <div class="vc no"><div class="n">0</div><div class="l">strategie promosse su 625 tentativi registrati</div></div>
+    <div class="vc"><div class="n">74/108</div><div class="l">test di struttura di Markov significativi — ma sull'ampiezza, non sul segno</div></div>
+    <div class="vc"><div class="n">sigillato</div><div class="l">holdout 2010-2026, mai aperto</div></div>
+  </div>
+</header>
+
+<section>
+  <div class="shead"><h2>Studio principale</h2><span class="tag">PAC 1990-2023 · netto imposte</span></div>
+  <p class="lede">Il gate di calibrazione riproduce i riferimenti attesi: benchmark
+  <span class="mono">8,40%</span> contro <span class="mono">8,21%</span>, ETF
+  <span class="mono">6,39%</span> contro <span class="mono">6,76%</span>. La colonna
+  <strong>vs B&amp;H</strong> confronta ogni riga col buy&amp;hold dello stesso universo.</p>
+
+  <div class="tw"><table>
+    <caption>Benchmark passivi e trend following · S&amp;P/Shiller</caption>
+    <thead><tr><th>Metodo</th><th>CAGR lordo</th><th>IRR netta</th><th>vs B&amp;H</th><th>Sharpe</th><th>Max DD</th><th>Op/anno</th></tr></thead>
+    <tbody id="t-c"></tbody>
+  </table></div>
+
+  <div class="tw" style="margin-top:1.5rem"><table>
+    <caption>Swing trading giornaliero · parametri ottimizzati su metà campione, misurati sull'altra</caption>
+    <thead><tr><th>Metodo</th><th>CAGR lordo</th><th>IRR netta</th><th>vs B&amp;H</th><th>Sharpe</th><th>Max DD</th><th>Op/anno</th></tr></thead>
+    <tbody id="t-a"></tbody>
+  </table></div>
+
+  <div class="tw" style="margin-top:1.5rem"><table>
+    <caption>Diversity-weighted (teorema di Fernholz) e anomalie pubblicate</caption>
+    <thead><tr><th>Metodo</th><th>CAGR lordo</th><th>IRR netta</th><th>vs B&amp;H</th><th>Sharpe</th><th>Max DD</th><th>Op/anno</th></tr></thead>
+    <tbody id="t-d"></tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="shead"><h2>Ricerca iterativa</h2><span class="tag">walk-forward a finestre espandenti</span></div>
+  <p class="lede">Ogni anno i parametri si scelgono su tutto ciò che precede e si applicano
+  l'anno dopo. Il criterio di promozione non è "batte il benchmark" ma il
+  <strong>Deflated Sharpe Ratio</strong> corretto per il numero cumulato di configurazioni
+  provate: con N tentativi il massimo Sharpe atteso sotto ipotesi nulla cresce come √(2·log N).</p>
+
+  <div class="tw"><table>
+    <caption>Ipotesi H2-H12 · IRR netta contro il buy&amp;hold della stessa finestra</caption>
+    <thead><tr><th>Ipotesi</th><th>Mercato</th><th>Finestra</th><th>IRR</th><th>vs B&amp;H</th><th>Sharpe</th><th>Max DD</th><th>DSR</th><th>Esito</th></tr></thead>
+    <tbody id="t-wf"></tbody>
+  </table></div>
+
+  <figure>
+    <div class="ftitle">La frontiera fra rotazione ed edge</div>
+    <div class="fsub">momentum settoriale con isteresi · ogni punto valutato in walk-forward</div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--s1)"></i>CGT 33% (turnover &lt; 100%/anno)</span>
+      <span><i class="sw" style="background:var(--s2)"></i>riqualificazione 52% (turnover &gt; 100%/anno)</span>
+    </div>
+    <svg id="fig-front" viewBox="0 0 760 320" role="img"
+         aria-label="Extra-rendimento contro turnover annuo: massimo a 60% di rotazione"></svg>
+    <figcaption>Il massimo dell'IRR netta è a <b>60% di turnover annuo</b>, con +2,23 punti.
+    Sopra il 100% l'aliquota da assumere diventa il 52% e il vantaggio si dimezza: ai turnover
+    alti <b>la classificazione fiscale vale più dell'edge della strategia</b>.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <div class="shead"><h2>VWAP</h2><span class="tag">dall'intraday al trimestrale</span></div>
+  <p class="lede">Testato come segnale su QQQ e AAPL, storia completa 2006-2026, quattro
+  ancoraggi e quattro varianti — <strong>0 su 32</strong> battono il buy&amp;hold. Ma il
+  risultato utile non è lo zero: è il gradiente.</p>
+
+  <figure>
+    <div class="ftitle">Il divario è tutto costo di transazione</div>
+    <div class="fsub">QQQ · stesso segnale "long sopra VWAP" · cambia solo l'ancoraggio</div>
+    <svg id="fig-vwap" viewBox="0 0 760 330" role="img"
+         aria-label="Distanza dal buy and hold contro operazioni annue: relazione monotona"></svg>
+    <figcaption>Stesso segnale, sei frequenze. La distanza dal benchmark si chiude in modo
+    <b>monotono</b> al scendere della rotazione, e per estrapolazione a rotazione zero converge
+    sul buy&amp;hold. Il segnale VWAP <b>non contiene alfa</b>: quella che sembrava performance
+    differenziale era interamente il costo.</figcaption>
+  </figure>
+
+  <div class="tw" style="margin-top:1.5rem"><table>
+    <caption>VWAP su cripto · 7 asset OKX 2017-2026 · long, short e long-short</caption>
+    <thead><tr><th>Portafoglio equipesato</th><th>CAGR</th><th>Sharpe</th><th>Max DD</th><th>Nota</th></tr></thead>
+    <tbody id="t-cry"></tbody>
+  </table></div>
+  <p class="lede" style="margin-top:1.2rem">Sulle cripto il VWAP trimestrale long-only
+  <strong>batte il buy&amp;hold di 26,5 punti</strong> e sopravvive alle imposte
+  (+23,6 al 33%, +19,7 al 52%). Poi si guarda la riga della media mobile a 50 giorni:
+  <strong>correlazione 0,935</strong> col VWAP trimestrale. Non è VWAP, è un filtro di trend
+  su una classe di asset con due drawdown dell'80%. E il DSR resta <span class="mono">0,443</span>.</p>
+</section>
+
+<section>
+  <div class="shead"><h2>Kronos</h2><span class="tag">foundation model K-line · 102,3M parametri</span></div>
+  <p class="lede">Pesi scaricati da HuggingFace, eseguito su QQQ giornaliero OHLCV con
+  protocollo senza look-ahead: 700 previsioni, contesto 400 barre, orizzonte 5 sedute.</p>
+
+  <div class="notes">
+    <div class="note"><h3>Accuratezza direzionale</h3>
+      <p><span class="k">40,71%</span> osservato contro <span class="k">41,67%</span> atteso
+      se le previsioni fossero <em>indipendenti</em> dall'esito. Differenza z = −0,51.</p></div>
+    <div class="note"><h3>Test di indipendenza</h3>
+      <p>χ² sulla tabella previsto/realizzato: <span class="k">p = 0,517</span>.
+      Non si rifiuta l'indipendenza.</p></div>
+    <div class="note"><h3>RankIC</h3>
+      <p><span class="k">+0,047</span> con <span class="k">p = 0,216</span>. È la metrica
+      con cui il paper si misura, e qui non è significativa.</p></div>
+    <div class="note"><h3>Polarizzazione</h3>
+      <p>Prevede rialzo il <span class="k">13,6%</span> delle volte su un mercato che sale
+      il <span class="k">61,4%</span>. Il 40,71% è una moneta truccata, non un errore.</p></div>
+  </div>
+
+  <div class="tw" style="margin-top:1.5rem"><table>
+    <caption>Kronos, VWAP e le loro combinazioni · QQQ 2021-2026 · 18 varianti, 0 vincenti</caption>
+    <thead><tr><th>Variante</th><th>CAGR</th><th>vs B&amp;H</th><th>Sharpe</th><th>% in mercato</th></tr></thead>
+    <tbody id="t-kv"></tbody>
+  </table></div>
+</section>
+
+<section>
+  <div class="shead"><h2>Catene di Markov multi-profondità</h2><span class="tag">struttura contro sfruttabilità</span></div>
+  <p class="lede">Discretizzazione in 2, 3 o 5 etichette; profondità 1-3; orizzonti 1-5.
+  Test di indipendenza contro un nulla per permutazione. <strong>74 test significativi su
+  108</strong>, contro 5,4 attesi per caso: la struttura condizionale esiste ed è robusta
+  su tre mercati indipendenti.</p>
+
+  <figure>
+    <div class="ftitle">Dove sta la dipendenza</div>
+    <div class="fsub">indice CRSP 1926-2026 · Cramér's V per componente · L=5 etichette</div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--s1)"></i>dipendenza completa</span>
+      <span><i class="sw" style="background:var(--s4)"></i>solo ampiezza</span>
+      <span><i class="sw" style="background:var(--s2)"></i>solo segno (direzione)</span>
+    </div>
+    <svg id="fig-mk" viewBox="0 0 760 340" role="img"
+         aria-label="Cramér's V per profondità e orizzonte, scomposto in ampiezza e segno"></svg>
+    <figcaption>La dipendenza sta quasi tutta nell'<b>ampiezza</b> (V medio 0,139, 12/12
+    significativi) e non nel <b>segno</b> (V medio 0,044, 4/12). È volatility clustering:
+    il fatto empirico più solido della finanza, e non dice da che parte si muoverà il prezzo.
+    Il segnale "prendo la P maggiore" costruito sulle 36 mappe ha un'accuratezza direzionale
+    del <b>53,84%</b> contro il 54,16% di giorni positivi — sotto la frequenza di base.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <div class="shead"><h2>Perché niente viene promosso</h2><span class="tag">Deflated Sharpe · soglia 0,95</span></div>
+  <figure>
+    <div class="ftitle">Extra-rendimento contro significatività corretta</div>
+    <div class="fsub">ogni punto è un'ipotesi · la soglia sale a ogni tentativo aggiunto al registro</div>
+    <svg id="fig-dsr" viewBox="0 0 760 340" role="img"
+         aria-label="DSR contro extra-rendimento: solo alcune ipotesi superano la soglia 0,95"></svg>
+    <figcaption>Le ipotesi sopra la linea hanno DSR &gt; 0,95. Il problema è che la soglia
+    <b>si alza a ogni giro</b>: SR0 è passato da 0,271 al quarto giro a 1,586 al ventesimo.
+    Il candidato migliore sulle cripto — il più forte di tutto lo studio in valore assoluto —
+    ha Sharpe 1,528 contro una soglia di 1,586, e cade <b>per 0,058</b>.</figcaption>
+  </figure>
+
+  <div class="notes">
+    <div class="note"><h3>Non testabile: dati</h3>
+      <p>Yahoo 429 e Stooq anti-bot per l'intera sessione: niente SPY, IWM, EFA, EEM, GLD, TLT.
+      La demo Twelve Data copre due soli simboli.</p></div>
+    <div class="note"><h3>Non testabile: universo</h3>
+      <p>Diversità a livello di singolo titolo S&amp;P 500 richiede CRSP/Compustat firm-level.
+      Misurata fra 49 settori, quindi <em>sottostima</em> la concentrazione vera.</p></div>
+    <div class="note"><h3>Sopravvivenza</h3>
+      <p>Le 7 cripto sono i superstiti del 2026. Le morte non sono nel campione, né per la
+      strategia né per il benchmark.</p></div>
+    <div class="note"><h3>Bug che hanno cambiato le conclusioni</h3>
+      <p>Base fiscale calcolata sul primo versamento invece che sui contributi cumulati;
+      <span class="k">realize_frac</span> non propagato nel walk-forward; unità del DSR
+      disallineate di √12; margin call non modellata.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="padding:0;max-width:none">
+    Fonti: Ken French Data Library · Robert Shiller · AQR (BAB, Century of Factor Premia, VME, TSMOM) ·
+    Open Source Asset Pricing (Chen &amp; Zimmermann, 212 anomalie) · FRED · Twelve Data · OKX ·
+    NeoQuasar/Kronos-base.<br>
+    Fiscalità modellata: CGT 33% sul realizzato con riporto perdite ed esenzione 1.270&nbsp;€ ·
+    exit tax 38% con deemed disposal a 8 anni · DIRT 33% · dividendi esteri 52% ·
+    scenario riqualificazione 52%. Costi 0,15% round-trip (0,20% su cripto).
+  </div>
+</footer>
+</div>
+
+<div class="tip" id="tip"></div>
+
+<script>
+const D = {
+ c:[["Trend following 10 mesi, leva 2×",14.82,12.78,4.38,0.74,-38.3,0.6],
+    ["Trend following 10 mesi, leva 1,5×",12.44,10.50,2.10,0.77,-28.6,0.6],
+    ["Buy&hold indice, CGT 33% all'uscita",10.14,8.40,0,0.64,-49.0,0,1],
+    ["Trend following 10 mesi, leva 1×",9.87,8.11,-0.30,0.82,-19.0,0.6],
+    ["Buy&hold azioni dirette, dividendi 52%/anno",10.22,7.55,-0.85,0.65,-50.8,0],
+    ["Buy&hold ETF UCITS, exit tax 38% + deemed disposal",10.14,6.39,-2.01,0.64,-49.0,0]],
+ a:[["Buy&hold indice CRSP giornaliero",10.29,8.60,0,0.49,-54.6,0,1],
+    ["Donchian breakout {20,20}",4.78,3.77,-4.84,0.25,-32.4,4.2],
+    ["Trend + stop σ {50,3} — sostituto ATR",4.37,3.20,-5.40,0.21,-44.4,8.4],
+    ["RSI2 mean-reversion {100,5,5}",1.47,1.86,-6.74,-0.28,-10.1,3.4],
+    ["Down-streak reversal {200,4}",0.50,0.99,-7.61,-0.66,-9.1,3.5],
+    ["ATR vero, QQQ, MA200 + stop 4×ATR",10.88,null,-4.73,0.71,-26.7,2.7],
+    ["ATR vero, AAPL, MA100 + stop 4×ATR",20.64,null,-7.06,0.88,-51.2,3.2]],
+ d:[["Equal-weight 49 settori, ribil. annuale",11.23,9.10,0.36,0.59,-52.4,1.0],
+    ["Diversity-weighted p=0,25 annuale",11.11,8.96,0.22,0.59,-51.4,1.0],
+    ["Diversity-weighted p=0,50 annuale",10.98,8.84,0.11,0.59,-50.8,1.0],
+    ["Cap-weight 49 settori (nessun ribilanciamento)",10.68,8.74,0,0.58,-50.2,0,1],
+    ["Diversity-weighted p=0,50 mensile",10.87,8.43,-0.31,0.58,-51.1,12.0],
+    ["Short interest (RF + premio netto costi)",null,6.25,-2.15,0.53,-28.7,12.0],
+    ["Bet Against Beta (RF + premio netto costi)",null,3.48,-4.93,0.34,-54.2,12.0],
+    ["Accruals (RF + premio netto costi)",null,-0.59,-8.99,-0.12,-41.1,12.0]],
+ wf:[["H11c media dei due compositi","misto","1985-2009",9.84,3.30,0.68,-47.3,0.990,"candidato"],
+     ["H11a composito momentum + low-vol","49 settori","1947-2009",12.77,3.08,0.67,-60.2,0.997,"candidato"],
+     ["H5 momentum settoriale cross-sectional","49 settori","1947-2009",12.64,2.95,0.67,-60.8,0.998,"candidato"],
+     ["H11b Gross Profitability long-only","OSAP quintili","1985-2009",8.94,2.40,0.59,-40.6,0.788,"respinta"],
+     ["H12 momentum con isteresi","49 settori","1947-2009",11.07,1.38,0.55,-53.1,0.996,"candidato"],
+     ["H4 tilt difensivo low-vol","49 settori","1947-2009",10.42,0.73,0.58,-46.2,0.989,"candidato"],
+     ["H8 diversificazione geografica","Dev/EM/JP/EU","1996-2009",2.14,-0.16,0.25,-56.6,0.163,"respinta"],
+     ["H2 trend following multi-asset","AQR Century","1960-2009",8.45,-0.40,0.27,-68.1,0.351,"respinta"],
+     ["H6 stop loss / take profit mensili","CRSP","1960-2009",8.31,-0.55,0.29,-50.3,0.442,"respinta"],
+     ["H7 leva con margin call ESMA modellata","CRSP","1960-2009",4.68,-4.18,0.14,-95.1,0.141,"respinta"],
+     ["H9 combinazione inverse-vol","multi-asset","1995-2009",-3.97,-6.85,-2.48,-39.2,0.000,"respinta"],
+     ["H23 ensemble Markov max-P","CRSP","1974-2026",8.35,-2.71,0.71,-53.6,0.867,"respinta"]],
+ cry:[["Buy&hold 7 cripto",63.8,1.03,-81.0,"benchmark",1],
+      ["VWAP trimestrale, long-only",90.3,1.53,-41.8,"+23,6 pt netti al 33%"],
+      ["Media mobile 50 giorni, long-only",81.7,1.43,-42.5,"corr. 0,935 col VWAP-Q"],
+      ["VWAP mensile, long-only",73.6,1.40,-56.7,"+4,6 pt netti al 33%"],
+      ["Media mobile 100 giorni",70.2,1.28,-60.8,"—"],
+      ["Media mobile 20 giorni",68.4,1.33,-51.5,"—"],
+      ["Media mobile 200 giorni",65.6,1.21,-53.0,"—"],
+      ["VWAP trimestrale, long-short",75.2,1.21,-51.9,"lo short toglie valore"],
+      ["VWAP trimestrale, short-only",-11.7,-0.02,-75.6,"1 vittoria su 21"]],
+ kv:[["Buy&hold QQQ",13.66,0,0.67,100,1],
+     ["VWAP trimestrale, da solo",8.22,-5.45,0.58,68],
+     ["Kronos q50 OR VWAP trimestrale",7.98,-5.69,0.46,91],
+     ["Kronos, segno grezzo",6.47,-7.19,0.47,25],
+     ["Kronos q50 media VWAP trimestrale",6.32,-7.34,0.49,91],
+     ["Kronos, quantile mobile 40%",6.01,-7.65,0.39,55],
+     ["Kronos q40 OR VWAP mese",5.77,-7.89,0.37,84],
+     ["Kronos AND VWAP trimestrale",3.73,-9.93,0.39,25],
+     ["Kronos, quantile mobile 70%",0.59,-13.08,0.12,34],
+     ["Kronos AND VWAP settimana",-3.17,-16.83,-0.20,26]],
+ front:[[5,0.87,33],[27,0.92,33],[36,-0.08,33],[37,0.51,33],[60,2.23,33],
+        [61,2.04,33],[89,1.60,33],[94,1.46,33],[146,1.42,52],[305,1.35,52]],
+ vwap:[["15 min",495,-71.74],["1 ora",237,-47.81],["settimana",44.7,-19.05],
+       ["due settimane",35.4,-16.47],["mese",24.4,-12.22],["trimestre",14.6,-8.44]],
+ mk:[["k1 h1",0.0836,0.1084,0.0267],["k1 h2",0.0880,0.1049,0.0088],
+     ["k1 h3",0.0904,0.1004,0.0135],["k1 h5",0.0931,0.0994,0.0175],
+     ["k2 h1",0.1121,0.1449,0.0403],["k2 h2",0.1180,0.1438,0.0359],
+     ["k2 h3",0.1251,0.1394,0.0358],["k2 h5",0.1235,0.1351,0.0400],
+     ["k3 h1",0.1415,0.1755,0.0815],["k3 h2",0.1504,0.1755,0.0749],
+     ["k3 h3",0.1579,0.1752,0.0743],["k3 h5",0.1550,0.1689,0.0749]],
+ dsr:[["H5 momentum settoriale",2.95,0.998],["H11a composito",3.08,0.997],
+      ["H12 isteresi",1.38,0.996],["H11c media",3.30,0.990],["H4 low-vol",0.73,0.989],
+      ["H23 Markov max-P",-2.71,0.867],["H11b GP long-only",2.40,0.788],
+      ["H6 stop/take profit",-0.55,0.442],["VWAP cripto trimestrale",26.5,0.443],
+      ["H2 trend multi-asset",-0.40,0.351],["H8 geografica",-0.16,0.163],
+      ["H7 leva margin call",-4.18,0.141],["H9 inverse-vol",-6.85,0.000]]
+};
+
+const n = (v,d=2)=> v===null||v===undefined ? "—" : v.toFixed(d);
+const sg = v => v===null?"":(v>0?"up":(v<0?"dn":""));
+const sn = (v,d=2)=> v===null?"—":(v>0?"+":"")+v.toFixed(d)
+
+function fillRows(id, rows, cols){
+  const tb=document.getElementById(id); if(!tb) return;
+  tb.innerHTML = rows.map(r=>{
+    const bench = r[r.length-1]===1 && r.length>cols.length;
+    return `<tr class="${bench?'bench':''}">`+cols.map((c,i)=>c(r,i)).join("")+`</tr>`;
+  }).join("");
+}
+const pct=(v,d=2)=>v===null?"—":n(v,d)+"%";
+
+fillRows("t-c",D.c,[r=>`<td>${r[0]}</td>`,r=>`<td>${pct(r[1])}</td>`,
+  r=>`<td>${pct(r[2])}</td>`,r=>`<td class="${sg(r[3])}">${sn(r[3])}</td>`,
+  r=>`<td>${n(r[4])}</td>`,r=>`<td>${pct(r[5],1)}</td>`,r=>`<td>${n(r[6],1)}</td>`]);
+fillRows("t-a",D.a,[r=>`<td>${r[0]}</td>`,r=>`<td>${pct(r[1])}</td>`,
+  r=>`<td>${pct(r[2])}</td>`,r=>`<td class="${sg(r[3])}">${sn(r[3])}</td>`,
+  r=>`<td>${n(r[4])}</td>`,r=>`<td>${pct(r[5],1)}</td>`,r=>`<td>${n(r[6],1)}</td>`]);
+fillRows("t-d",D.d,[r=>`<td>${r[0]}</td>`,r=>`<td>${pct(r[1])}</td>`,
+  r=>`<td>${pct(r[2])}</td>`,r=>`<td class="${sg(r[3])}">${sn(r[3])}</td>`,
+  r=>`<td>${n(r[4])}</td>`,r=>`<td>${pct(r[5],1)}</td>`,r=>`<td>${n(r[6],1)}</td>`]);
+document.getElementById("t-wf").innerHTML = D.wf.map(r=>
+  `<tr><td>${r[0]}</td><td style="font-family:var(--sans);text-align:left">${r[1]}</td>
+   <td>${r[2]}</td><td>${pct(r[3])}</td><td class="${sg(r[4])}">${sn(r[4])}</td>
+   <td>${n(r[5])}</td><td>${pct(r[6],1)}</td><td>${n(r[7],3)}</td>
+   <td><span class="pill ${r[8]==='candidato'?'c':'r'}">${r[8]}</span></td></tr>`).join("");
+document.getElementById("t-cry").innerHTML = D.cry.map(r=>
+  `<tr class="${r[5]===1?'bench':''}"><td>${r[0]}</td><td>${pct(r[1],1)}</td>
+   <td>${n(r[2])}</td><td>${pct(r[3],1)}</td>
+   <td style="font-family:var(--sans);text-align:left;color:var(--ink-3)">${r[4]}</td></tr>`).join("");
+document.getElementById("t-kv").innerHTML = D.kv.map(r=>
+  `<tr class="${r[4]===1&&r[5]===1?'bench':''}"><td>${r[0]}</td><td>${pct(r[1])}</td>
+   <td class="${sg(r[2])}">${sn(r[2])}</td><td>${n(r[3])}</td><td>${r[4]}%</td></tr>`).join("");
+
+/* ---------- charts ---------- */
+const NS="http://www.w3.org/2000/svg";
+const tip=document.getElementById("tip");
+function mk(t,a={}){const e=document.createElementNS(NS,t);
+  for(const k in a) e.setAttribute(k,a[k]); return e;}
+function hover(el,html){
+  const show=ev=>{tip.innerHTML=html;tip.style.opacity=1;
+    tip.style.left=Math.min(ev.clientX+14,innerWidth-tip.offsetWidth-8)+"px";
+    tip.style.top=(ev.clientY-tip.offsetHeight-10)+"px";};
+  el.addEventListener("mousemove",show);
+  el.addEventListener("mouseenter",show);
+  el.addEventListener("mouseleave",()=>tip.style.opacity=0);
+  el.classList.add("hit");
+}
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+/* frontiera: scatter turnover vs excess */
+function drawFront(){
+  const s=document.getElementById("fig-front"); s.innerHTML="";
+  const W=760,H=320,m={t:14,r:20,b:44,l:52};
+  const xs=v=>m.l+(Math.log10(v)-Math.log10(4))/(Math.log10(340)-Math.log10(4))*(W-m.l-m.r);
+  const ys=v=>m.t+(2.6-v)/(2.6-(-0.4))*(H-m.t-m.b);
+  const g=mk("g",{class:"grid"});
+  [-0.4,0,0.6,1.2,1.8,2.4].forEach(v=>{
+    g.appendChild(mk("line",{x1:m.l,x2:W-m.r,y1:ys(v),y2:ys(v)}));
+    const t=mk("text",{x:m.l-8,y:ys(v)+3.5,"text-anchor":"end",class:"dlabel"});
+    t.textContent=(v>0?"+":"")+v.toFixed(1); g.appendChild(t);});
+  s.appendChild(g);
+  const zero=mk("line",{x1:m.l,x2:W-m.r,y1:ys(0),y2:ys(0),
+    stroke:css("--ink-3"),"stroke-width":1.5,"stroke-dasharray":"4 3"});
+  s.appendChild(zero);
+  [5,10,30,60,100,200,300].forEach(v=>{
+    const t=mk("text",{x:xs(v),y:H-m.b+18,"text-anchor":"middle",class:"dlabel"});
+    t.textContent=v+"%"; s.appendChild(t);});
+  const xl=mk("text",{x:(m.l+W-m.r)/2,y:H-6,"text-anchor":"middle",class:"dlabel"});
+  xl.textContent="turnover annuo (scala logaritmica)"; s.appendChild(xl);
+  const yl=mk("text",{x:14,y:m.t+8,class:"dlabel"}); yl.textContent="punti di IRR vs B&H";
+  s.appendChild(yl);
+  D.front.forEach(([x,y,reg])=>{
+    const c=mk("circle",{cx:xs(x),cy:ys(y),r:6.5,
+      fill:reg===33?css("--s1"):css("--s2"),stroke:css("--surface"),"stroke-width":2});
+    hover(c,`turnover <b>${x}%</b><br>vs B&H <b>${(y>0?"+":"")+y.toFixed(2)}</b> pt<br>aliquota ${reg}%`);
+    s.appendChild(c);});
+  const best=D.front.find(d=>d[1]===2.23);
+  const bl=mk("text",{x:xs(best[0]),y:ys(best[1])-13,"text-anchor":"middle",
+    class:"dlabel",fill:css("--ink")}); bl.textContent="massimo +2,23"; s.appendChild(bl);
+}
+
+/* vwap gradient: ops vs excess */
+function drawVwap(){
+  const s=document.getElementById("fig-vwap"); s.innerHTML="";
+  const W=760,H=330,m={t:16,r:120,b:46,l:56};
+  const xs=v=>m.l+(Math.log10(v)-Math.log10(11))/(Math.log10(560)-Math.log10(11))*(W-m.l-m.r);
+  const ys=v=>m.t+(0-v)/(0-(-78))*(H-m.t-m.b);
+  const g=mk("g",{class:"grid"});
+  [0,-20,-40,-60,-78].forEach(v=>{
+    g.appendChild(mk("line",{x1:m.l,x2:W-m.r,y1:ys(v),y2:ys(v)}));
+    const t=mk("text",{x:m.l-8,y:ys(v)+3.5,"text-anchor":"end",class:"dlabel"});
+    t.textContent=v+"%"; g.appendChild(t);});
+  s.appendChild(g);
+  const pts=D.vwap.map(([lbl,o,e])=>[xs(o),ys(e),lbl,o,e]);
+  const path=mk("path",{d:pts.map((p,i)=>(i?"L":"M")+p[0]+","+p[1]).join(" "),
+    fill:"none",stroke:css("--s1"),"stroke-width":2,"stroke-linejoin":"round"});
+  s.appendChild(path);
+  pts.forEach(p=>{
+    const c=mk("circle",{cx:p[0],cy:p[1],r:5.5,fill:css("--s1"),
+      stroke:css("--surface"),"stroke-width":2});
+    hover(c,`<b>${p[2]}</b><br>${p[3]} operazioni/anno<br>vs B&H <b>${p[4].toFixed(2)}%</b>`);
+    s.appendChild(c);
+    const t=mk("text",{x:p[0]+9,y:p[1]-8,class:"dlabel",fill:css("--ink-2")});
+    t.textContent=p[2]; s.appendChild(t);});
+  [15,50,150,500].forEach(v=>{
+    const t=mk("text",{x:xs(v),y:H-m.b+18,"text-anchor":"middle",class:"dlabel"});
+    t.textContent=v; s.appendChild(t);});
+  const xl=mk("text",{x:(m.l+W-m.r)/2,y:H-6,"text-anchor":"middle",class:"dlabel"});
+  xl.textContent="operazioni all'anno (scala logaritmica)"; s.appendChild(xl);
+  const yl=mk("text",{x:12,y:m.t+8,class:"dlabel"});
+  yl.textContent="CAGR vs buy&hold"; s.appendChild(yl);
+  const note=mk("text",{x:W-m.r+12,y:ys(-8.44)+4,class:"dlabel",fill:css("--ink")});
+  note.textContent="→ converge sul B&H"; s.appendChild(note);
+}
+
+/* markov: grouped bars */
+function drawMk(){
+  const s=document.getElementById("fig-mk"); s.innerHTML="";
+  const W=760,H=340,m={t:16,r:16,b:52,l:52};
+  const bw=(W-m.l-m.r)/D.mk.length, ys=v=>m.t+(0.19-v)/0.19*(H-m.t-m.b);
+  const g=mk("g",{class:"grid"});
+  [0,0.05,0.10,0.15,0.19].forEach(v=>{
+    g.appendChild(mk("line",{x1:m.l,x2:W-m.r,y1:ys(v),y2:ys(v)}));
+    const t=mk("text",{x:m.l-8,y:ys(v)+3.5,"text-anchor":"end",class:"dlabel"});
+    t.textContent=v.toFixed(2); g.appendChild(t);});
+  s.appendChild(g);
+  const cols=[css("--s1"),css("--s4"),css("--s2")];
+  const names=["completa","ampiezza","segno"];
+  D.mk.forEach((r,i)=>{
+    const x0=m.l+i*bw+4, w=(bw-14)/3;
+    [r[1],r[2],r[3]].forEach((v,j)=>{
+      const h=Math.max(1,ys(0)-ys(v));
+      const b=mk("rect",{x:x0+j*(w+2),y:ys(v),width:w,height:h,fill:cols[j],rx:2});
+      hover(b,`<b>${r[0]}</b> · ${names[j]}<br>Cramér's V <b>${v.toFixed(4)}</b>`);
+      s.appendChild(b);});
+    const t=mk("text",{x:x0+(bw-14)/2,y:H-m.b+18,"text-anchor":"middle",class:"dlabel"});
+    t.textContent=r[0]; s.appendChild(t);});
+  const yl=mk("text",{x:12,y:m.t+8,class:"dlabel"}); yl.textContent="Cramér's V";
+  s.appendChild(yl);
+  const xl=mk("text",{x:(m.l+W-m.r)/2,y:H-8,"text-anchor":"middle",class:"dlabel"});
+  xl.textContent="profondità k · orizzonte h"; s.appendChild(xl);
+}
+
+/* dsr scatter */
+function drawDsr(){
+  const s=document.getElementById("fig-dsr"); s.innerHTML="";
+  const W=760,H=340,m={t:18,r:150,b:48,l:52};
+  const xs=v=>m.l+(v-(-8))/(28-(-8))*(W-m.l-m.r);
+  const ys=v=>m.t+(1.02-v)/1.06*(H-m.t-m.b);
+  const g=mk("g",{class:"grid"});
+  [0,0.25,0.5,0.75,1.0].forEach(v=>{
+    g.appendChild(mk("line",{x1:m.l,x2:W-m.r,y1:ys(v),y2:ys(v)}));
+    const t=mk("text",{x:m.l-8,y:ys(v)+3.5,"text-anchor":"end",class:"dlabel"});
+    t.textContent=v.toFixed(2); g.appendChild(t);});
+  s.appendChild(g);
+  const thr=mk("line",{x1:m.l,x2:W-m.r,y1:ys(0.95),y2:ys(0.95),
+    stroke:css("--s2"),"stroke-width":2,"stroke-dasharray":"5 3"});
+  s.appendChild(thr);
+  const tl=mk("text",{x:W-m.r+10,y:ys(0.95)+4,class:"dlabel",fill:css("--s2")});
+  tl.textContent="soglia DSR 0,95"; s.appendChild(tl);
+  const zl=mk("line",{x1:xs(0),x2:xs(0),y1:m.t,y2:H-m.b,
+    stroke:css("--ink-3"),"stroke-width":1,"stroke-dasharray":"3 3"}); s.appendChild(zl);
+  D.dsr.forEach(([lbl,ex,dsr])=>{
+    const pass=dsr>0.95;
+    const c=mk("circle",{cx:xs(ex),cy:ys(dsr),r:6,
+      fill:pass?css("--s4"):css("--s3"),stroke:css("--surface"),"stroke-width":2});
+    hover(c,`<b>${lbl}</b><br>vs B&H ${(ex>0?"+":"")+ex.toFixed(2)} pt<br>DSR <b>${dsr.toFixed(3)}</b>`);
+    s.appendChild(c);});
+  [["VWAP cripto",26.5,0.443],["H11c",3.30,0.990],["H9",-6.85,0.000]].forEach(([l,x,y])=>{
+    const t=mk("text",{x:xs(x)+(x>20?-10:10),y:ys(y)-10,class:"dlabel",fill:css("--ink"),
+      "text-anchor":x>20?"end":"start"}); t.textContent=l; s.appendChild(t);});
+  [-8,0,8,16,24].forEach(v=>{
+    const t=mk("text",{x:xs(v),y:H-m.b+18,"text-anchor":"middle",class:"dlabel"});
+    t.textContent=(v>0?"+":"")+v; s.appendChild(t);});
+  const xl=mk("text",{x:(m.l+W-m.r)/2,y:H-8,"text-anchor":"middle",class:"dlabel"});
+  xl.textContent="punti di extra-rendimento contro il buy&hold"; s.appendChild(xl);
+  const yl=mk("text",{x:12,y:m.t+8,class:"dlabel"});
+  yl.textContent="Deflated Sharpe Ratio"; s.appendChild(yl);
+  const lg=mk("text",{x:W-m.r+10,y:m.t+14,class:"dlabel",fill:css("--s4")});
+  lg.textContent="■ sopra soglia"; s.appendChild(lg);
+  const lg2=mk("text",{x:W-m.r+10,y:m.t+30,class:"dlabel",fill:css("--s3")});
+  lg2.textContent="■ sotto soglia"; s.appendChild(lg2);
+}
+
+function drawAll(){drawFront();drawVwap();drawMk();drawDsr();}
+drawAll();
+matchMedia("(prefers-color-scheme:dark)").addEventListener("change",drawAll);
+new MutationObserver(drawAll).observe(document.documentElement,
+  {attributes:true,attributeFilter:["data-theme"]});
+addEventListener("resize",()=>{clearTimeout(window._t);window._t=setTimeout(drawAll,150)});
+</script>
