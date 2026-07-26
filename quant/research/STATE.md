@@ -26,8 +26,8 @@ l'holdout è bruciato e qualunque risultato su quella finestra è in-sample.
 
 | | |
 |---|---|
-| Giri completati | 9 (tutte le ipotesi in coda eseguite) |
-| Configurazioni provate (cumulate) | **117 a registro + ~2.580 valutazioni interne al walk-forward** |
+| Giri completati | 11 |
+| Configurazioni provate (cumulate) | **322 a registro + ~4.000 valutazioni interne al walk-forward** |
 | Soglia SR0 (giro 02) | 0,962 annualizzato |
 | Candidati promossi | **2** (H5, H4) — verifiche superate, holdout ANCORA SIGILLATO |
 | Holdout | **sigillato, mai aperto** |
@@ -59,6 +59,10 @@ dichiarare quando li proverò.
 | 07 | H7 leva con margin call ESMA modellata | −4,18 | 0,141 | RESPINTA |
 | 08 | H8 diversificazione geografica, rotazione minima | −0,16 | 0,163 | RESPINTA |
 | 09 | H9 combinazione inverse-vol multi-asset | −6,85 | 0,000 | RESPINTA |
+| 10 | H10 scansione sistematica di 201 anomalie pubblicate | — | — | 2 sopravvissuti |
+| 11a | C1 punteggio settoriale misto momentum + low-vol | **+3,08** | **0,997** | **candidato** |
+| 11b | C2 Gross Profitability long-only (Novy-Marx 2013) | +2,40 | 0,709 | RESPINTA |
+| 11c | C3 media di C1 e C2 | +3,30 | 0,816 | RESPINTA |
 
 Dal giro 03 in poi la valutazione e' **walk-forward a finestre espandenti**: ogni
 anno Y i parametri sono scelti su tutto cio' che precede Y e applicati durante Y.
@@ -90,6 +94,27 @@ lag ma non svanisce. Con 262% di turnover annuo l'aliquota da assumere e' il 52%
 non il 33%: il numero di riferimento per H5 e' **+1,89 punti**, non +2,93.
 
 **Holdout ancora sigillato.** Va aperto su UN SOLO candidato, dopo le verifiche.
+
+## Giro 10 — cosa sopravvive alla letteratura
+
+201 anomalie pubblicate con almeno 10 anni di storia post-pubblicazione,
+filtrate su quattro criteri:
+
+| Filtro | Passano |
+|---|---:|
+| t-stat post-pubblicazione > 2 | 61 |
+| costruzione value-weighted (eseguibile) | **22** |
+| quantile ≥ 10% (capacita') | 122 |
+| premio netto dei costi retail > 0 | 98 |
+| **tutti e quattro insieme** | **2** |
+
+I due sopravvissuti: **Gross Profitability** (Novy-Marx 2013, netto 9,03%,
+t 2,80) e **CPVolSpread** (Bali-Hovakimian 2009, netto 2,39%, t 3,08).
+
+Il filtro che decide e' la costruzione: **solo 22 anomalie su 201 sono
+value-weighted**. La letteratura e' quasi tutta equal-weighted, cioe' guidata da
+microcap che con 500 EUR/mese non sono eseguibili ne' sul lato lungo ne' su
+quello corto.
 
 ## Coda delle ipotesi (tutte eseguite)
 
@@ -141,6 +166,12 @@ non il 33%: il numero di riferimento per H5 e' **+1,89 punti**, non +2,93.
   ritaglia il solo anno Y; i parametri non vedono comunque il proprio anno.
 - **Bug in H6**: lo stop rientrava nello stesso mese in cui usciva, quindi non
   era uno stop. Aggiunta la regola di rientro sopra la media a 10 mesi.
+- **La composizione non ha aggiunto nulla.** Nel giro 11 il punteggio misto
+  momentum+low-vol sceglie alpha = 1,0, cioe' momentum puro: l'ottimizzatore
+  scarta da solo la componente low-vol. E la media dei due flussi (C3) ha
+  differenza maggiore (+3,30) ma DSR piu' basso (0,816 contro 0,997), perche'
+  raddoppia il turnover a 600%/anno. Combinare due segnali non e' gratis quando
+  ogni rotazione e' un evento tassabile.
 - **I premi AQR non sopravvivono ai costi retail.** L'overlay multi-stile rende
   3,3-3,4%/anno lordo contro un drag di implementazione stimato al 7,5%/anno.
   È negativo prima ancora di iniziare.

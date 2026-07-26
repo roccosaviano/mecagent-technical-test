@@ -1,0 +1,43 @@
+
+==========================================================================
+H11a — C1 punteggio settoriale misto momentum+low-vol  alpha scelto piu' spesso: 1.0
+  finestra OOS 1947-01-31 -> 2009-12-31 (756 mesi), 1260 valutazioni interne
+                                  IRR   Sharpe       DD
+  strategia                    12.77%     0.67   -60.2%
+  buy&hold                      9.69%     0.47   -50.3%
+  differenza                   +3.08%    +0.20
+  turnover medio 170%/anno, imposte pagate 43,236,792 EUR contro 10,616,491 del buy&hold
+  DSR 0.997 (SR0 0.301 ann., N=1580)  ->  PROMUOVIBILE
+
+caricamento portafogli OSAP per Gross Profitability...
+  bucket disponibili: ['01', '02', '03', '04', '05']
+  GP: segno +1, gamba lunga = decile 05, 1951-07-31 -> 2024-12-31 (882 mesi)
+
+==========================================================================
+H11b — C2 Gross Profitability long-only (decile lungo)  Novy-Marx 2013, unico sopravvissuto VW del giro 10
+  finestra OOS 1985-01-31 -> 2009-12-31 (300 mesi), 75 valutazioni interne
+                                  IRR   Sharpe       DD
+  strategia                     8.94%     0.59   -40.6%
+  buy&hold                      6.54%     0.44   -50.3%
+  differenza                   +2.40%    +0.16
+  turnover medio 100%/anno, imposte pagate 116,914 EUR contro 105,915 del buy&hold
+  DSR 0.709 (SR0 0.475 ann., N=396)  ->  respinta
+
+==========================================================================
+H11c — C3 media di C1 e C2  finestra comune 1985-01-31->2009-12-31
+  finestra OOS 1985-01-31 -> 2009-12-31 (300 mesi), 1335 valutazioni interne
+                                  IRR   Sharpe       DD
+  strategia                     9.84%     0.68   -47.3%
+  buy&hold                      6.54%     0.44   -50.3%
+  differenza                   +3.30%    +0.24
+  turnover medio 600%/anno, imposte pagate 195,593 EUR contro 105,915 del buy&hold
+  DSR 0.816 (SR0 0.474 ann., N=1657)  ->  respinta
+
+==========================================================================
+RIEPILOGO GIRO 11
+ip.    strategia                                        vs B&H     DSR         esito
+H11c   C3 media di C1 e C2                              +3.30%   0.816      respinta
+H11a   C1 punteggio settoriale misto momentum+low-vo    +3.08%   0.997  PROMUOVIBILE
+H11b   C2 Gross Profitability long-only (decile lung    +2.40%   0.709      respinta
+
+Tentativi cumulati a registro: 322
