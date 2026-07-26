@@ -1,0 +1,67 @@
+gruppo,metodo,mercato,finestra,cagr,irr,vs,sharpe,dd,ops,dsr,esito,nota
+Benchmark passivi,"Buy&hold indice, CGT 33% all'uscita  [BENCHMARK]",S&P/CRSP,1990-01/2023,10.139391790072505,8.403239930639531,0.0,0.6388063423078226,-49.03888596273548,0.029411764705882353,,,PAC 500/mese netto imposte IE
+Benchmark passivi,"Buy&hold azioni dirette, dividendi 52%/anno",S&P/CRSP,1990-01/2023,10.220407508870789,7.553007195431125,-0.8502327352084063,0.6453595690412435,-50.82485743605729,0.029411764705882353,,,PAC 500/mese netto imposte IE
+Benchmark passivi,"Buy&hold ETF UCITS, exit tax 38% + deemed disposal",S&P/CRSP,1990-01/2023,10.139391790072505,6.389706386303668,-2.0135335443358633,0.6388063423078226,-49.03888596273548,0.029411764705882353,,,PAC 500/mese netto imposte IE
+Benchmark passivi,"Trend following 10 mesi, leva 1x",S&P/CRSP,1990-01/2023,9.872485292754574,8.108137742257462,-0.29510218838206903,0.824720372277813,-18.97738522846518,0.6470588235294118,,,PAC 500/mese netto imposte IE
+Benchmark passivi,"Trend following 10 mesi, leva 1.5x",S&P/CRSP,1990-01/2023,12.441238238129838,10.504290574862049,2.101050644222518,0.7671370315300169,-28.61356818691214,0.6470588235294118,,,PAC 500/mese netto imposte IE
+Benchmark passivi,"Trend following 10 mesi, leva 2x",S&P/CRSP,1990-01/2023,14.815775688300349,12.778296617021317,4.375056686381786,0.7379115518498213,-38.325800807006516,0.6470588235294118,,,PAC 500/mese netto imposte IE
+Swing trading giornaliero,Buy&hold indice CRSP  [bench gruppo A],S&P/CRSP,1990-01/2023,10.285900238978263,8.602941787689977,0.0,0.4896022745985393,-54.56553593385382,0.029422066549912432,,,PAC 500/mese netto imposte IE
+Swing trading giornaliero,A. RSI2 mean-reversion,S&P/CRSP,1990-01/2023,1.472006418567462,1.8594798001008912,-6.743461987589086,-0.2753880488287206,-10.05863559022403,3.3835376532399297,,,PAC 500/mese netto imposte IE
+Swing trading giornaliero,A. Down-streak reversal,S&P/CRSP,1990-01/2023,0.5008831901923028,0.9885772044790482,-7.614364583210929,-0.6586151381633653,-9.13616755116573,3.471803852889667,,,PAC 500/mese netto imposte IE
+Swing trading giornaliero,A. Donchian breakout,S&P/CRSP,1990-01/2023,4.781719135368312,3.766363039526292,-4.836578748163685,0.2488377319921291,-32.40822940275044,4.207355516637477,,,PAC 500/mese netto imposte IE
+Swing trading giornaliero,A. Trend + stop sigma (sostituto ATR),S&P/CRSP,1990-01/2023,4.367672360694108,3.2016339616342857,-5.401307826055691,0.20666726587236708,-44.396346162822866,8.355866900175132,,,PAC 500/mese netto imposte IE
+Diversity-weighted (SPT),Cap-weight 49 settori  [bench gruppo D],S&P/CRSP,1990-01/2023,10.67757233195039,8.737566659669135,0.0,0.5763599694400995,-50.205941021937136,0.029484029484029485,,,PAC 500/mese netto imposte IE
+Diversity-weighted (SPT),"D. Diversity-weighted p=0.25, ribil. annuale",S&P/CRSP,1990-01/2023,11.10700368872899,8.959824140079622,0.22225748041048732,0.5946197244904154,-51.41272251376159,1.0024570024570025,,,PAC 500/mese netto imposte IE
+Diversity-weighted (SPT),"D. Diversity-weighted p=0.25, ribil. mensile",S&P/CRSP,1990-01/2023,10.97220005195323,8.537338450979442,-0.20022820868969227,0.5827242357076915,-51.77872428515573,12.0,,,PAC 500/mese netto imposte IE
+Diversity-weighted (SPT),"D. Diversity-weighted p=0.50, ribil. annuale",S&P/CRSP,1990-01/2023,10.975788982055912,8.844880128093207,0.10731346842407241,0.5939395263882389,-50.75836544521922,1.0024570024570025,,,PAC 500/mese netto imposte IE
+Diversity-weighted (SPT),"D. Diversity-weighted p=0.50, ribil. mensile",S&P/CRSP,1990-01/2023,10.872922095846338,8.428132575938799,-0.309434083730336,0.5839675642019518,-51.11705334101908,12.0,,,PAC 500/mese netto imposte IE
+Diversity-weighted (SPT),"D. Diversity-weighted p=0.75, ribil. annuale",S&P/CRSP,1990-01/2023,10.835454317219861,8.735950687300262,-0.0016159723688726757,0.5888228602646798,-50.30457924057037,1.0024570024570025,,,PAC 500/mese netto imposte IE
+Diversity-weighted (SPT),"D. Diversity-weighted p=0.75, ribil. mensile",S&P/CRSP,1990-01/2023,10.758239267194082,8.329375907722087,-0.408190751947048,0.5804885844572922,-50.61972817837768,12.0,,,PAC 500/mese netto imposte IE
+Diversity-weighted (SPT),"D. Equal-weight 49 settori, ribil. annuale",S&P/CRSP,1990-01/2023,11.23109098795334,9.10129997182125,0.3637333121521156,0.589662337385576,-52.3542530791939,1.0024570024570025,,,PAC 500/mese netto imposte IE
+Ricerca iterativa (walk-forward),H2 trend following multi-asset,AQR Century,1960-2009,,8.45,-0.4,0.27,-68.1,,0.351,respinta,IRR netta PAC
+Ricerca iterativa (walk-forward),H4 tilt difensivo low-vol,49 settori,1947-2009,,10.42,0.73,0.58,-46.2,,0.989,candidato,IRR netta PAC
+Ricerca iterativa (walk-forward),H5 momentum settoriale,49 settori,1947-2009,,12.64,2.95,0.67,-60.8,,0.998,candidato,IRR netta PAC
+Ricerca iterativa (walk-forward),H6 stop loss / take profit mensili,CRSP,1960-2009,,8.31,-0.55,0.29,-50.3,,0.442,respinta,IRR netta PAC
+Ricerca iterativa (walk-forward),H7 leva con margin call ESMA,CRSP,1960-2009,,4.68,-4.18,0.14,-95.1,,0.141,respinta,IRR netta PAC
+Ricerca iterativa (walk-forward),H8 diversificazione geografica,Dev/EM/JP/EU,1996-2009,,2.14,-0.16,0.25,-56.6,,0.163,respinta,IRR netta PAC
+Ricerca iterativa (walk-forward),H9 combinazione inverse-vol,multi-asset,1995-2009,,-3.97,-6.85,-2.48,-39.2,,0.0,respinta,IRR netta PAC
+Ricerca iterativa (walk-forward),H11a composito momentum+low-vol,49 settori,1947-2009,,12.77,3.08,0.67,-60.2,,0.997,candidato,IRR netta PAC
+Ricerca iterativa (walk-forward),H11b Gross Profitability long-only,OSAP quintili,1985-2009,,8.94,2.4,0.59,-40.6,,0.788,respinta,IRR netta PAC
+Ricerca iterativa (walk-forward),H11c media dei due compositi,misto,1985-2009,,9.84,3.3,0.68,-47.3,,0.99,candidato,IRR netta PAC
+Ricerca iterativa (walk-forward),H12 momentum con isteresi,49 settori,1947-2009,,11.07,1.38,0.55,-53.1,,0.996,candidato,IRR netta PAC
+Replica su NASDAQ,Donchian breakout (parametri da CRSP),NASDAQ Comp.,1971-2026,,9.4,-1.03,0.6,-28.2,3.8,,respinta,parametri non riottimizzati
+Replica su NASDAQ,Trend + stop sigma (parametri da CRSP),NASDAQ Comp.,1971-2026,,8.07,-2.37,0.51,-49.8,8.1,,respinta,parametri non riottimizzati
+Replica su NASDAQ,RSI2 (parametri da CRSP),NASDAQ Comp.,1971-2026,,2.6,-7.83,-0.82,-19.9,3.7,,respinta,parametri non riottimizzati
+Replica su NASDAQ,Down-streak (parametri da CRSP),NASDAQ Comp.,1971-2026,,1.88,-8.55,-1.41,-9.8,3.5,,respinta,parametri non riottimizzati
+Replica su NASDAQ,Trend 10 mesi leva 1x,NASDAQ Comp.,1971-2026,,7.92,-2.54,0.37,-44.7,,,respinta,parametri non riottimizzati
+Replica su NASDAQ,Trend 10 mesi leva 2x,NASDAQ Comp.,1971-2026,,9.63,-0.83,0.35,-74.5,,,respinta,parametri non riottimizzati
+ATR vero (OHLCV),MA50 + stop 2xATR,QQQ,2006-2026,6.587384615874403,,-9.017511715497186,0.5109605727308838,-23.12497323525585,9.1728,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA50 + stop 3xATR,QQQ,2006-2026,9.925391925862748,,-5.67950440550884,0.6986381853869764,-29.5157230345215,4.536,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA50 + stop 4xATR,QQQ,2006-2026,10.795604660959434,,-4.809291670412154,0.7342248138688762,-28.31402035878568,2.6712,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA100 + stop 2xATR,QQQ,2006-2026,6.15810378303292,,-9.446792548338667,0.4786611827888681,-28.312220024569925,9.576,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA100 + stop 3xATR,QQQ,2006-2026,7.943874080775015,,-7.661022250596573,0.5689991497599748,-34.89744492608807,4.788,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA100 + stop 4xATR,QQQ,2006-2026,8.77455997024368,,-6.830336361127909,0.596682137170061,-34.478808775652084,2.8224,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA200 + stop 2xATR,QQQ,2006-2026,7.025382013006221,,-8.579514318365367,0.5221197504763374,-28.61224180911366,9.9792,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA200 + stop 3xATR,QQQ,2006-2026,9.723256808058366,,-5.881639523313222,0.6671685479659019,-29.8433220715998,4.788,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA200 + stop 4xATR,QQQ,2006-2026,10.878901164255272,,-4.7259951671163165,0.7104052745523184,-26.72729960094424,2.7216,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA50 + stop 2xATR,AAPL,2006-2026,17.458922388896838,,-10.244172931181136,0.8475797954976368,-38.8424236963893,8.719199999999999,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA50 + stop 3xATR,AAPL,2006-2026,19.749723659975672,,-7.953371660102302,0.9146736987102352,-44.67596130814124,5.1408,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA50 + stop 4xATR,AAPL,2006-2026,19.789584020173013,,-7.913511299904961,0.8891196194655161,-45.7216219217276,3.3768,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA100 + stop 2xATR,AAPL,2006-2026,17.66765822783869,,-10.035437092239285,0.8199522614127802,-38.56758645365092,9.072,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA100 + stop 3xATR,AAPL,2006-2026,19.62466585349172,,-8.078429466586254,0.8694912454607274,-38.93261713665223,5.1912,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA100 + stop 4xATR,AAPL,2006-2026,20.642418401547925,,-7.060676918530049,0.8842139747494775,-51.210156892199606,3.2256,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA200 + stop 2xATR,AAPL,2006-2026,19.44909421718273,,-8.254001102895248,0.8766707856170651,-36.86714745852825,9.1224,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA200 + stop 3xATR,AAPL,2006-2026,19.242359017671152,,-8.460736302406822,0.8589315178554953,-42.90589087656568,4.9392,,respinta,"CAGR lordo imposte, dati Twelve Data"
+ATR vero (OHLCV),MA200 + stop 4xATR,AAPL,2006-2026,18.31639858232439,,-9.386696737753583,0.8197994419658249,-43.441654414730536,3.1752,,respinta,"CAGR lordo imposte, dati Twelve Data"
+VWAP intraday (OHLCV),long sopra VWAP,ora,2023-09-14/2026-07-24,-24.21610923297711,,-47.808346073061536,-1.8598228006445443,-54.489079922765086,237.0816,,respinta,"CAGR lordo imposte, dati Twelve Data"
+VWAP intraday (OHLCV),long sotto VWAP (mean rev.),ora,2023-09-14/2026-07-24,-19.936533526601263,,-43.52877036668569,-1.5565811227087842,-47.45592199725536,237.4344,,respinta,"CAGR lordo imposte, dati Twelve Data"
+VWAP intraday (OHLCV),breakout +1 dev.std,ora,2023-09-14/2026-07-24,-14.962433473642688,,-38.55467031372712,-1.9790297739458256,-39.38843082275015,138.65040000000002,,respinta,"CAGR lordo imposte, dati Twelve Data"
+VWAP intraday (OHLCV),rientro -1 dev.std,ora,2023-09-14/2026-07-24,-10.615494864692243,,-34.20773170477667,-1.1605241001025643,-33.00241942171612,118.5408,,respinta,"CAGR lordo imposte, dati Twelve Data"
+VWAP intraday (OHLCV),long sopra VWAP,minuti,2025-10-15/2026-07-24,-53.64450538746253,,-71.73698848599166,-5.481666120287755,-45.96779875344304,495.3312,,respinta,"CAGR lordo imposte, dati Twelve Data"
+VWAP intraday (OHLCV),long sotto VWAP (mean rev.),minuti,2025-10-15/2026-07-24,-42.27454590422151,,-60.36702900275064,-3.54074236973554,-34.691992734470375,495.3312,,respinta,"CAGR lordo imposte, dati Twelve Data"
+VWAP intraday (OHLCV),breakout +1 dev.std,minuti,2025-10-15/2026-07-24,-41.82448693100598,,-59.91697002953511,-6.355917295847579,-34.09794302421416,382.6368000000001,,respinta,"CAGR lordo imposte, dati Twelve Data"
+VWAP intraday (OHLCV),rientro -1 dev.std,minuti,2025-10-15/2026-07-24,-25.242078614595453,,-43.334561713124586,-2.9221953772729767,-21.30394072218047,297.4608,,respinta,"CAGR lordo imposte, dati Twelve Data"
+Non testabile,Kronos (foundation model K-line),—,—,,,,,,,,non eseguito,"pesi scaricabili, ma serve OHLCV su universo ampio: la demo Twelve Data copre 2 simboli"
+Non testabile,Bet Against Beta implementato davvero,—,—,,,,,,,,non eseguito,richiede leva e prestito titoli su 23 mercati
+Non testabile,Diversita' a livello di singolo titolo S&P 500,—,—,,,,,,,,non eseguito,richiede CRSP/Compustat firm-level
+Non testabile,SPY/IWM/EFA/EEM/GLD/TLT,—,—,,,,,,,,non eseguito,Yahoo 429 e Stooq anti-bot per tutta la sessione
