@@ -116,7 +116,19 @@ value-weighted**. La letteratura e' quasi tutta equal-weighted, cioe' guidata da
 microcap che con 500 EUR/mese non sono eseguibili ne' sul lato lungo ne' su
 quello corto.
 
-## Coda delle ipotesi (tutte eseguite)
+## Coda delle ipotesi
+
+**La coda vive in [`QUEUE.md`](QUEUE.md)**: 20 voci pre-dichiarate su allocazione
+e sizing, mercati non toccati (materie prime, valute, credito, curva dei tassi,
+azionario internazionale, cripto estese), sistemi nuovi (cointegrazione, breadth,
+momentum multi-orizzonte, term structure del VIX, copertura del premio di
+volatilita', multi-strategia su stream davvero scorrelati) e due voci
+metodologiche (dispersione per data di inizio, bootstrap a blocchi).
+
+Ogni voce ha predizione e condizione di falsificazione scritte PRIMA. Il Routine
+notturno ne esegue una per giro e aggiorna la tabella degli esiti.
+
+## Coda vecchia (tutte eseguite)
 
 - [x] **H2** Trend following multi-asset (TSMOM AQR). **Bloccata dai dati**: TSMOM parte dal 1985, il TRAIN si ridurrebbe a 60 mesi. Va rifatta con uno split dedicato o con un proxy a storia lunga (Century "All asset classes Momentum", dal 1926).
 - [x] **H4** Core azionario + tilt difensivo/qualità a rotazione bassissima (il tilt più tax-efficient possibile).
