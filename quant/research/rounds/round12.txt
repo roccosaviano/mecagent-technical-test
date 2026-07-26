@@ -1,0 +1,28 @@
+
+==========================================================================
+H12 — H12 momentum settoriale con isteresi e hold minimo  config scelta piu' spesso: (5, 25, 0, 3)
+  finestra OOS 1947-01-31 -> 2009-12-31 (756 mesi), 1512 valutazioni interne
+                                  IRR   Sharpe       DD
+  strategia                    11.07%     0.55   -53.1%
+  buy&hold                      9.69%     0.47   -50.3%
+  differenza                   +1.38%    +0.08
+  turnover medio 70%/anno, imposte pagate 16,340,900 EUR contro 10,616,491 del buy&hold
+  DSR 0.996 (SR0 0.195 ann., N=1851, var_sr griglia)  ->  PROMUOVIBILE
+
+==========================================================================
+H13/H14 — raccolta minusvalenze ed esenzione annua
+  Paniere: 49 settori equipesati, buy&hold, nessuna selezione.
+  L'unica differenza fra le righe e' la gestione fiscale.
+
+  variante                                      IRR   vs base     imposte     costi
+  buy&hold, nessuna gestione fiscale          8.67%    +0.00%     462,432       153
+  + raccolta minusvalenze (H13)               8.67%    -0.00%     462,402       167
+  + sfruttamento esenzione 1.270 (H14)        8.72%    +0.05%     448,971       153
+  + entrambe                                  8.69%    +0.03%     455,531       183
+
+  La raccolta minusvalenze conta solo se ci SONO minusvalenze da
+  raccogliere: su un paniere che sale per 34 anni le posizioni
+  sott'acqua a fine anno sono poche, e il credito si usa una volta sola.
+
+==========================================================================
+Tentativi cumulati a registro: 343
