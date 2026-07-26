@@ -30,6 +30,8 @@ def walk_forward(build_fn, grid, index, rf, start_year=1960, end_year=2009,
     from tax import simulate_pac, CGT_SHARES
 
     oos, rz_all, picks, n_eval = [], [], [], 0
+    grid_sharpes = []   # Sharpe di OGNI configurazione valutata: e' la dispersione
+                        # che la ricerca genera, cioe' cio' che var_sr deve stimare
     years = [y for y in range(start_year, end_year + 1)]
     for y in years:
         tr_idx = index[index.year < y]
@@ -43,8 +45,9 @@ def walk_forward(build_fn, grid, index, rf, start_year=1960, end_year=2009,
                 continue
             res = simulate_pac(r, CGT_SHARES, rf=rf.reindex(r.index).fillna(0.0),
                                realize_frac=rz)
-            v = res.irr_annual if score == "irr" else lab.summarise(
-                r, rf.reindex(r.index).fillna(0.0))["sharpe"]
+            sm = lab.summarise(r, rf.reindex(r.index).fillna(0.0))
+            grid_sharpes.append(sm["sharpe"])
+            v = res.irr_annual if score == "irr" else sm["sharpe"]
             n_eval += 1
             if not np.isfinite(v):
                 continue
@@ -72,13 +75,17 @@ def walk_forward(build_fn, grid, index, rf, start_year=1960, end_year=2009,
         else:
             rz_all.append(pd.Series(0.0, index=seg.index))
         picks.append((y, bcfg))
+    gs = pd.Series(grid_sharpes, dtype=float).dropna()
+    # in unita' PER PERIODO, coerenti con lo Sharpe usato dentro deflated_sharpe
+    var_sr = float((gs / np.sqrt(12)).var(ddof=1)) if len(gs) > 2 else None
     if not oos:
-        return pd.Series(dtype=float), pd.Series(dtype=float), picks, n_eval
+        return pd.Series(dtype=float), pd.Series(dtype=float), picks, n_eval, var_sr
     return (pd.concat(oos).sort_index(), pd.concat(rz_all).sort_index(),
-            picks, n_eval)
+            picks, n_eval, var_sr)
 
 
-def report(name, hyp_id, oos, realize, bench, rf, n_eval, round_id, extra=""):
+def report(name, hyp_id, oos, realize, bench, rf, n_eval, round_id, extra="",
+           var_sr=None):
     """Confronto contro il buy&hold sulla stessa finestra OOS, piu' DSR."""
     from tax import simulate_pac, CGT_SHARES
 
@@ -100,7 +107,8 @@ def report(name, hyp_id, oos, realize, bench, rf, n_eval, round_id, extra=""):
                    n_obs=len(idx), note=f"n_eval={n_eval}")]
     lab.log_trials(trials)
     n_cum = lab.n_trials_so_far() + n_eval   # le valutazioni interne contano
-    d = lab.deflated_sharpe(oos, n_cum, rf=rfw, round_id=round_id)
+    # var_sr misurata sulla griglia se disponibile, altrimenti ripiego
+    d = lab.deflated_sharpe(oos, n_cum, rf=rfw, round_id=round_id, var_sr=var_sr)
 
     if len(idx) == 0:
         print(f"\n{hyp_id} — {name}: nessun dato OOS, non valutabile")
@@ -118,8 +126,9 @@ def report(name, hyp_id, oos, realize, bench, rf, n_eval, round_id, extra=""):
               f"imposte pagate {res.taxes:,.0f} EUR contro {bh.taxes:,.0f} del buy&hold")
     verdict = "PROMUOVIBILE" if (d["dsr"] > 0.95 and res.irr_annual > bh.irr_annual) \
         else "respinta"
-    print(f"  DSR {d['dsr']:.3f} (SR0 {d['sr0']*np.sqrt(12):.3f} ann., "
-          f"N={n_cum})  ->  {verdict}")
+    src = "griglia" if var_sr is not None else "ripiego"
+    print(f"  DSR {d['dsr']:.3f} (SR0 {d['sr0']*np.sqrt(12):.3f} ann., N={n_cum}, "
+          f"var_sr {src})  ->  {verdict}")
     return dict(name=name, hyp=hyp_id, irr=res.irr_annual, bh=bh.irr_annual,
                 excess=res.irr_annual - bh.irr_annual, sharpe=s["sharpe"],
                 bh_sharpe=sb["sharpe"], dd=res.max_dd, dsr=d["dsr"],

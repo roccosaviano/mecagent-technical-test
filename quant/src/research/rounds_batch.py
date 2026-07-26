@@ -51,10 +51,10 @@ def h2_trend(rf, eq):
 
     grid = [(w, rb, lv) for w in (0.0, 0.15, 0.3, 0.45)
             for rb in (12, 60) for lv in (1.0, 1.5)]
-    oos, rzs, picks, ne = WF.walk_forward(build, grid, df.index, rf)
+    oos, rzs, picks, ne, vsr = WF.walk_forward(build, grid, df.index, rf)
     return WF.report("trend following multi-asset (Century momentum)", "H2",
                      oos, rzs, df["eq"], rf, ne, 3,
-                     extra=f"premio lordo {ov.mean()*1200:.2f}%/anno")
+                     extra=f"premio lordo {ov.mean()*1200:.2f}%/anno", var_sr=vsr)
 
 
 # ---------------------------------------------------------------- H4
@@ -98,9 +98,9 @@ def h4_defensive(rf, eq):
         return s, pd.Series(turns, index=d.index).reindex(s.index)
 
     grid = [(n, rb) for n in (10, 15, 20) for rb in (12, 60)]
-    oos, rzs, picks, ne = WF.walk_forward(build, grid, ind.index, rf, start_year=1935)
+    oos, rzs, picks, ne, vsr = WF.walk_forward(build, grid, ind.index, rf, start_year=1935)
     return WF.report("tilt difensivo settoriale (low-vol, long-only)", "H4",
-                     oos, rzs, eq, rf, ne, 4)
+                     oos, rzs, eq, rf, ne, 4, var_sr=vsr)
 
 
 # ---------------------------------------------------------------- H5
@@ -143,9 +143,9 @@ def h5_momentum(rf, eq):
         return s, pd.Series(turns, index=d.index).reindex(s.index)
 
     grid = [(n, lk, rb) for n in (5, 10) for lk in (12,) for rb in (1, 3, 12)]
-    oos, rzs, picks, ne = WF.walk_forward(build, grid, ind.index, rf, start_year=1935)
+    oos, rzs, picks, ne, vsr = WF.walk_forward(build, grid, ind.index, rf, start_year=1935)
     return WF.report("momentum settoriale cross-sectional", "H5",
-                     oos, rzs, eq, rf, ne, 5)
+                     oos, rzs, eq, rf, ne, 5, var_sr=vsr)
 
 
 # ---------------------------------------------------------------- H6
@@ -193,10 +193,10 @@ def h6_sl_tp(rf, eq):
         return s_, pd.Series(turns, index=r.index)
 
     grid = [(sl, tp) for sl in (None, 0.10, 0.20, 0.30) for tp in (None, 0.25, 0.50)]
-    oos, rzs, picks, ne = WF.walk_forward(build, grid, eq.dropna().index, rf)
+    oos, rzs, picks, ne, vsr = WF.walk_forward(build, grid, eq.dropna().index, rf)
     return WF.report("stop loss / take profit su chiusure mensili", "H6",
                      oos, rzs, eq, rf, ne, 6,
-                     extra="ATTENZIONE: stop su base mensile, non intraday")
+                     extra="ATTENZIONE: stop su base mensile, non intraday", var_sr=vsr)
 
 
 # ---------------------------------------------------------------- H7
@@ -234,13 +234,13 @@ def h7_leverage_margin(rf, eq):
         return s, pd.Series(0.0, index=r.index)
 
     grid = [(lv,) for lv in (1.0, 1.5, 2.0, 3.0, 5.0)]
-    oos, rzs, picks, ne = WF.walk_forward(build, grid, eq.dropna().index, rf)
+    oos, rzs, picks, ne, vsr = WF.walk_forward(build, grid, eq.dropna().index, rf)
     levs = [cfg[0] for _, cfg in picks]
     extra = (f"leva scelta piu' spesso: {max(set(levs), key=levs.count)}x"
              if levs else "nessuna scelta")
     return WF.report("leva con margin call ESMA modellata", "H7",
                      oos, rzs, eq, rf,
-                     ne, 7, extra=extra)
+                     ne, 7, extra=extra, var_sr=vsr)
 
 
 # ---------------------------------------------------------------- H8
@@ -281,11 +281,11 @@ def h8_geographic(rf, eq):
         return r, tn
 
     grid = [(m, rb) for m in ("US", "equal", "tilt") for rb in (12, 120)]
-    oos, rzs, picks, ne = WF.walk_forward(build, grid, df.index, rf, start_year=1996,
+    oos, rzs, picks, ne, vsr = WF.walk_forward(build, grid, df.index, rf, start_year=1996,
                                      min_train_months=60)
     return WF.report("diversificazione geografica, rotazione minima", "H8",
                      oos, rzs, df["US"], rf, ne, 8,
-                     extra="storia dal 1990: campione corto")
+                     extra="storia dal 1990: campione corto", var_sr=vsr)
 
 
 # ---------------------------------------------------------------- H9
@@ -332,9 +332,9 @@ def h9_invvol(rf, eq):
         return s, pd.Series(turns, index=d.index).reindex(s.index)
 
     grid = [(rb, lv) for rb in (12, 60) for lv in (1.0, 1.5, 2.0)]
-    oos, rzs, picks, ne = WF.walk_forward(build, grid, df.index, rf, start_year=1970)
+    oos, rzs, picks, ne, vsr = WF.walk_forward(build, grid, df.index, rf, start_year=1970)
     return WF.report("combinazione inverse-vol multi-asset", "H9", oos, rzs,
-                     df["eq"], rf, ne, 9)
+                     df["eq"], rf, ne, 9, var_sr=vsr)
 
 
 def main():

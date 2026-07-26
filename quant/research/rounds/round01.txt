@@ -23,5 +23,5 @@ Configurazione scelta su TRAIN, misurata su TEST:
 
 Deflated Sharpe su 50 tentativi cumulati:
   Sharpe annualizzato osservato : 0.434
-  soglia attesa sotto H0 (SR0)  : 0.538 annualizzato
-  DSR                           : 0.328   NON promuovibile (serve > 0,95)
+  soglia attesa sotto H0 (SR0)  : 0.155 annualizzato
+  DSR                           : 0.883   NON promuovibile (serve > 0,95)

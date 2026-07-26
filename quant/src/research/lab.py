@@ -112,6 +112,12 @@ def deflated_sharpe(returns, n_trials, var_sr=None, rf=None, round_id=None):
         if round_id is not None and "round" in reg.columns:
             reg = reg[pd.to_numeric(reg["round"], errors="coerce") == round_id]
         s = pd.to_numeric(reg.get("sharpe", pd.Series(dtype=float)), errors="coerce").dropna()
+        # ATTENZIONE ALLE UNITA'. Il registro contiene Sharpe ANNUALIZZATI
+        # (summarise moltiplica per sqrt(12)), mentre qui `sr` e' per periodo.
+        # Vanno riportati alla stessa scala prima di calcolarne la varianza,
+        # altrimenti SR0 risulta gonfiata di sqrt(12) e il test diventa
+        # arbitrariamente severo.
+        s = s / math.sqrt(12)
         var_sr = float(s.var(ddof=1)) if len(s) > 2 else (0.5 / max(T, 1))
     sr0 = expected_max_sharpe(var_sr, max(n_trials, 2))
     denom = 1.0 - g3 * sr + (g4 - 1.0) / 4.0 * sr ** 2

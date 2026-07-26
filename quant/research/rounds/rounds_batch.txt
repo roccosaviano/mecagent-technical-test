@@ -1,0 +1,10 @@
+
+==========================================================================
+H2 — trend following multi-asset (Century momentum)  premio lordo 3.54%/anno
+  finestra OOS 1960-01-31 -> 2009-12-31 (600 mesi), 800 valutazioni interne
+                                  IRR   Sharpe       DD
+  strategia                     8.45%     0.27   -68.1%
+  buy&hold                      8.85%     0.33   -50.3%
+  differenza                   -0.40%    -0.06
+  turnover medio 0%/anno, imposte pagate 1,916,939 EUR contro 2,236,206 del buy&hold
+  DSR 0.603 (SR0 0.230 ann., N=911, var_sr griglia)  ->  respinta

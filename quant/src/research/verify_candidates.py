@@ -27,7 +27,7 @@ def variants(name, build, grid, index, rf, bench, start_year, extra_lag=0,
     old = C.COST_ROUND_TRIP
     C.COST_ROUND_TRIP = old * cost_mult
     try:
-        oos, rzs, picks, ne = WF.walk_forward(build, grid, index, rf,
+        oos, rzs, picks, ne, vsr = WF.walk_forward(build, grid, index, rf,
                                               start_year=start_year)
     finally:
         C.COST_ROUND_TRIP = old

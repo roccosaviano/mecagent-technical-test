@@ -106,7 +106,7 @@ def main():
     # ---------------------------------------------------------------- C1
     grid1 = [(n, rb, a) for n in (5, 10) for rb in (3, 12)
              for a in (0.0, 0.25, 0.5, 0.75, 1.0)]
-    oos, rzs, picks, ne = WF.walk_forward(make_composite(ind, MOM, VOL), grid1,
+    oos, rzs, picks, ne, vsr = WF.walk_forward(make_composite(ind, MOM, VOL), grid1,
                                           ind.index, rf, start_year=1935)
     alphas = [c[2] for _, c in picks]
     r = WF.report("C1 punteggio settoriale misto momentum+low-vol", "H11a",
@@ -132,12 +132,12 @@ def main():
         turn = pd.Series(1.0 / rb, index=d.index)   # quota realizzata per periodo
         return s - turn * C.COST_ROUND_TRIP, turn
 
-    oos2, rz2, picks2, ne2 = WF.walk_forward(build_gp, [(1,), (3,), (12,)],
+    oos2, rz2, picks2, ne2, vsr2 = WF.walk_forward(build_gp, [(1,), (3,), (12,)],
                                              gp_df.index, rf, start_year=1985,
                                              min_train_months=180)
     r2 = WF.report("C2 Gross Profitability long-only (decile lungo)", "H11b",
                    oos2, rz2, eq, rf, ne2, ROUND,
-                   extra="Novy-Marx 2013, unico sopravvissuto VW del giro 10")
+                   extra="Novy-Marx 2013, unico sopravvissuto VW del giro 10", var_sr=vsr2)
     if r2:
         out.append(r2)
 
@@ -149,7 +149,7 @@ def main():
             rzm = pd.Series(0.5, index=common)   # entrambe ruotano
             r3 = WF.report("C3 media di C1 e C2", "H11c", mix, rzm, eq, rf,
                            ne + ne2, ROUND,
-                           extra=f"finestra comune {common[0].date()}->{common[-1].date()}")
+                           extra=f"finestra comune {common[0].date()}->{common[-1].date()}", var_sr=vsr)
             if r3:
                 out.append(r3)
         else:

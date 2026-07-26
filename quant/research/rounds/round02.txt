@@ -21,8 +21,8 @@ Configurazione scelta su TRAIN, misurata su TEST:
   (0.0, 12, 2.0)  IRR 3.08%  (-1.99 vs buy&hold)  Sharpe 0.26  DD -84.1%
 
 Deflated Sharpe su 110 tentativi cumulati:
-  Sharpe annualizzato : 0.263   soglia H0 SR0: 0.962
-  DSR                 : 0.001   NON promuovibile (serve > 0,95)
+  Sharpe annualizzato : 0.263   soglia H0 SR0: 0.278
+  DSR                 : 0.474   NON promuovibile (serve > 0,95)
 
 Se l'overlay e' accessibile solo via fondo UCITS (caso realistico):
   IRR 2.03%  contro 3.08% in regime CGT  ->  -1.05 punti
