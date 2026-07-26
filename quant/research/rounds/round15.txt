@@ -1,0 +1,47 @@
+QQQ giornaliero: 2006-09-07 -> 2026-07-24 (5000 barre, OHLCV reale)
+
+--- ATR vero su QQQ (strategia 4 del gruppo A, finalmente nella sua forma originale) ---
+parametri                      CAGR   vs B&H  Sharpe       DD  op/an   %mkt
+buy&hold                     15.60%   +0.00%    0.77   -53.6%    0.0   100%
+MA50 + stop 2xATR             6.59%   -9.02%    0.51   -23.1%    9.2    73%
+MA50 + stop 3xATR             9.93%   -5.68%    0.70   -29.5%    4.5    77%
+MA50 + stop 4xATR            10.80%   -4.81%    0.73   -28.3%    2.7    80%
+MA100 + stop 2xATR            6.16%   -9.45%    0.48   -28.3%    9.6    74%
+MA100 + stop 3xATR            7.94%   -7.66%    0.57   -34.9%    4.8    78%
+MA100 + stop 4xATR            8.77%   -6.83%    0.60   -34.5%    2.8    80%
+MA200 + stop 2xATR            7.03%   -8.58%    0.52   -28.6%   10.0    75%
+MA200 + stop 3xATR            9.72%   -5.88%    0.67   -29.8%    4.8    78%
+MA200 + stop 4xATR           10.88%   -4.73%    0.71   -26.7%    2.7    80%
+
+--- ATR vero su AAPL (strategia 4 del gruppo A, finalmente nella sua forma originale) ---
+parametri                      CAGR   vs B&H  Sharpe       DD  op/an   %mkt
+buy&hold                     27.70%   +0.00%    0.94   -60.9%    0.0   100%
+MA50 + stop 2xATR            17.46%  -10.24%    0.85   -38.8%    8.7    69%
+MA50 + stop 3xATR            19.75%   -7.95%    0.91   -44.7%    5.1    72%
+MA50 + stop 4xATR            19.79%   -7.91%    0.89   -45.7%    3.4    75%
+MA100 + stop 2xATR           17.67%  -10.04%    0.82   -38.6%    9.1    72%
+MA100 + stop 3xATR           19.62%   -8.08%    0.87   -38.9%    5.2    75%
+MA100 + stop 4xATR           20.64%   -7.06%    0.88   -51.2%    3.2    78%
+MA200 + stop 2xATR           19.45%   -8.25%    0.88   -36.9%    9.1    72%
+MA200 + stop 3xATR           19.24%   -8.46%    0.86   -42.9%    4.9    74%
+MA200 + stop 4xATR           18.32%   -9.39%    0.82   -43.4%    3.2    75%
+
+--- VWAP di seduta su QQQ a 1 ora: 2023-09-14 -> 2026-07-24 (5000 barre) ---
+segnale                            CAGR   vs B&H  Sharpe       DD   op/an   %mkt
+buy&hold (sempre investito)      23.59%   +0.00%    1.17   -23.2%       0   100%
+long sopra VWAP                 -24.22%  -47.81%   -1.86   -54.5%     237    57%
+long sotto VWAP (mean rev.)     -19.94%  -43.53%   -1.56   -47.5%     237    43%
+breakout +1 dev.std             -14.96%  -38.55%   -1.98   -39.4%     139    17%
+rientro -1 dev.std              -10.62%  -34.21%   -1.16   -33.0%     119    14%
+  Operazioni/anno del segnale piu' attivo: 237. A 0,15% round-trip sono 36% di costi annui.
+
+--- VWAP di seduta su QQQ a 15 minuti: 2025-10-15 -> 2026-07-24 (5000 barre) ---
+segnale                            CAGR   vs B&H  Sharpe       DD   op/an   %mkt
+buy&hold (sempre investito)      18.09%   +0.00%    0.92   -12.7%       0   100%
+long sopra VWAP                 -53.64%  -71.74%   -5.48   -46.0%     495    57%
+long sotto VWAP (mean rev.)     -42.27%  -60.37%   -3.54   -34.7%     495    43%
+breakout +1 dev.std             -41.82%  -59.92%   -6.36   -34.1%     383    24%
+rientro -1 dev.std              -25.24%  -43.33%   -2.92   -21.3%     297    17%
+  Operazioni/anno del segnale piu' attivo: 495. A 0,15% round-trip sono 74% di costi annui.
+
+Tentativi cumulati a registro: 378

@@ -1,0 +1,3 @@
+Frontiera rotazione/edge: 10 punti, ciascuno valutato in
+walk-forward senza ottimizzazione (nessuna scelta = nessun tentativo)
+

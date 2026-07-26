@@ -29,3 +29,11 @@ for f in Developed_3_Factors Emerging_5_Factors Europe_3_Factors Japan_3_Factors
   curl -sSL -o "$f.zip" "$FF/${f}_CSV.zip" && unzip -oq "$f.zip" -d "$f"
 done
 curl -sSL -o fred_DGS10.csv "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10"
+
+# --- OHLCV reale (Twelve Data, chiave demo: solo AAPL e QQQ)
+for spec in "QQQ 1day" "AAPL 1day" "QQQ 1h" "QQQ 15min"; do
+  set -- $spec
+  curl -sS "https://api.twelvedata.com/time_series?symbol=$1&interval=$2&apikey=demo&outputsize=5000&format=CSV&delimiter=," -o "td_$1_$2.csv"
+done
+curl -sSL -o fred_NASDAQCOM.csv "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQCOM"
+curl -sSL -o fred_NASDAQ100.csv "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQ100"
