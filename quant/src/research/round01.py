@@ -108,7 +108,7 @@ def main():
     print(f"  {bcfg}  IRR {chosen['irr']:.2f}%  ({chosen['excess']:+.2f} vs buy&hold)"
           f"  Sharpe {chosen['sharpe']:.2f}  DD {chosen['mdd']:.1f}%")
 
-    d = lab.deflated_sharpe(chosen["ret"], n_cum, rf=rf_te)
+    d = lab.deflated_sharpe(chosen["ret"], n_cum, rf=rf_te, round_id=ROUND)
     print(f"\nDeflated Sharpe su {n_cum} tentativi cumulati:")
     print(f"  Sharpe annualizzato osservato : {d['sr_ann']:.3f}")
     print(f"  soglia attesa sotto H0 (SR0)  : {d['sr0']*np.sqrt(12):.3f} annualizzato")

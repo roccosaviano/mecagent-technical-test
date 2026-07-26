@@ -1,1 +1,27 @@
-/tmp/claude-0/-home-user-mecagent-technical-test/1282c159-1b67-5dda-8a70-400c3f3d0cf1/scratchpad/.venv/bin/python: No module named research.round01
+Universo: azionario USA + decennale USA, 1962-02-28 -> 2026-05-31 (772 mesi)
+TRAIN 1962-02-28->1989-12-31 (335 mesi)   TEST 1990-01-31->2009-12-31 (240 mesi)
+Correlazione azioni/obbligazioni  TRAIN +0.26   TEST +0.00
+
+Configurazioni in griglia: 50
+Migliore su TRAIN: azioni 80%, ribil. 12m, leva 1.0x  -> IRR 8.82% contro buy&hold 9.46%
+
+TEST — buy&hold azionario: IRR 3.10%, Sharpe 0.36, DD -50.3%
+
+config (eq, ribil, leva)         IRR    vs BH  Sharpe       DD
+(0.5, 12, 2.0)                 4.65%   +1.55%    0.38   -40.5%
+(0.5, 12, 1.75)                4.59%   +1.50%    0.41   -35.7%
+(0.4, 12, 2.0)                 4.56%   +1.47%    0.39   -30.4%
+(0.6, 12, 1.75)                4.51%   +1.41%    0.39   -44.9%
+(0.6, 12, 2.0)                 4.50%   +1.41%    0.36   -50.3%
+(0.5, 12, 1.5)                 4.50%   +1.40%    0.44   -30.5%
+  ...
+(0.8, 60, 1.75)                3.14%   +0.04%    0.32   -61.1%
+(0.8, 60, 2.0)                 2.81%   -0.29%    0.31   -67.4%
+
+Configurazione scelta su TRAIN, misurata su TEST:
+  (0.8, 12, 1.0)  IRR 3.97%  (+0.87 vs buy&hold)  Sharpe 0.43  DD -38.7%
+
+Deflated Sharpe su 50 tentativi cumulati:
+  Sharpe annualizzato osservato : 0.434
+  soglia attesa sotto H0 (SR0)  : 0.538 annualizzato
+  DSR                           : 0.328   NON promuovibile (serve > 0,95)

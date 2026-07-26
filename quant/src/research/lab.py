@@ -81,7 +81,7 @@ def expected_max_sharpe(var_sr, n_trials):
     return s * ((1.0 - EULER) * a + EULER * b)
 
 
-def deflated_sharpe(returns, n_trials, var_sr=None, rf=None):
+def deflated_sharpe(returns, n_trials, var_sr=None, rf=None, round_id=None):
     """Probabilita' che lo Sharpe osservato non sia il massimo di n_trials
     estrazioni sotto ipotesi nulla. Sopra 0,95 = promuovibile.
 
@@ -103,7 +103,14 @@ def deflated_sharpe(returns, n_trials, var_sr=None, rf=None):
     g3 = float(stats.skew(r))
     g4 = float(stats.kurtosis(r, fisher=False))
     if var_sr is None:
+        # var_sr stima quanta dispersione di Sharpe genera LA RICERCA dentro una
+        # stessa famiglia di strategie. Se la si calcola sul registro intero,
+        # famiglie con profili di rischio diversi (1x contro 2x di leva) la
+        # gonfiano e la soglia diventa severa per un motivo sbagliato. Uso quindi
+        # la varianza entro il giro corrente, tenendo N cumulato.
         reg = load_registry()
+        if round_id is not None and "round" in reg.columns:
+            reg = reg[pd.to_numeric(reg["round"], errors="coerce") == round_id]
         s = pd.to_numeric(reg.get("sharpe", pd.Series(dtype=float)), errors="coerce").dropna()
         var_sr = float(s.var(ddof=1)) if len(s) > 2 else (0.5 / max(T, 1))
     sr0 = expected_max_sharpe(var_sr, max(n_trials, 2))

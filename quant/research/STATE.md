@@ -26,9 +26,9 @@ l'holdout è bruciato e qualunque risultato su quella finestra è in-sample.
 
 | | |
 |---|---|
-| Giri completati | 1 |
-| Configurazioni provate (cumulate) | **50** |
-| Soglia SR0 attesa sotto H0 | 0,538 annualizzato |
+| Giri completati | 2 |
+| Configurazioni provate (cumulate) | **110** |
+| Soglia SR0 (giro 02) | 0,962 annualizzato |
 | Candidati promossi | **0** |
 | Holdout | **sigillato, mai aperto** |
 
@@ -51,11 +51,11 @@ dichiarare quando li proverò.
 | Giro | Ipotesi | Scelto su TRAIN → TEST | DSR | Esito |
 |---|---|---|---|---|
 | 01 | H1 multi-asset azioni+obbligazioni, bassa rotazione, leva | +0,87 punti IRR | **0,328** | **RESPINTA** |
+| 02 | H3 core azionario + overlay multi-stile 6 classi (AQR Century) | −2,65 punti IRR | **0,001** | **RESPINTA** |
 
 ## Coda delle ipotesi
 
-- [ ] **H2** Trend following multi-asset (TSMOM AQR) come overlay sul core azionario. Turnover alto → verificare se la fiscalità lo uccide.
-- [ ] **H3** Composito multi-stile su 6 classi di asset (Century) a rotazione minima, con leva calibrata sulla vol azionaria.
+- [ ] **H2** Trend following multi-asset (TSMOM AQR). **Bloccata dai dati**: TSMOM parte dal 1985, il TRAIN si ridurrebbe a 60 mesi. Va rifatta con uno split dedicato o con un proxy a storia lunga (Century "All asset classes Momentum", dal 1926).
 - [ ] **H4** Core azionario + tilt difensivo/qualità a rotazione bassissima (il tilt più tax-efficient possibile).
 - [ ] **H5** Momentum a 12 mesi cross-asset su N mercati (tactical asset allocation).
 - [ ] **H6** Stop loss e take profit su chiusure mensili applicati al miglior candidato dei giri precedenti, con e senza.
@@ -73,3 +73,15 @@ dichiarare quando li proverò.
   ~0,33 × (utile realizzato). Le strategie a bassa rotazione partono avvantaggiate.
 - Convenzione Sharpe: **sempre su rendimenti in eccesso**, sia in `summarise`
   sia nel DSR. Mischiare le due convenzioni gonfiava il DSR (0,796 → 0,328).
+- `var_sr` del DSR va calcolata **entro la famiglia di strategie del giro**, non
+  sul registro intero: famiglie con profili di rischio diversi (1× contro 2× di
+  leva) hanno Sharpe centrati diversamente e la varianza aggregata (0,0210 contro
+  0,0047 e 0,0117 entro giro) gonfia SR0 per il motivo sbagliato. N resta cumulato.
+- **Lo split TRAIN/TEST ha un disallineamento di regime.** TRAIN 1926-1989 premia
+  la leva (lunghi mercati toro), TEST 1990-2009 la punisce (due crolli del 50%).
+  Nel giro 02 l'ottimizzatore ha scelto leva 2× su TRAIN e ha prodotto −84% di
+  drawdown su TEST. Non è un difetto della strategia, è il mio disegno: da
+  affrontare con walk-forward a finestre mobili invece di uno split unico.
+- **I premi AQR non sopravvivono ai costi retail.** L'overlay multi-stile rende
+  3,3-3,4%/anno lordo contro un drag di implementazione stimato al 7,5%/anno.
+  È negativo prima ancora di iniziare.
