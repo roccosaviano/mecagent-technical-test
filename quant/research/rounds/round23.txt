@@ -1,0 +1,40 @@
+7 asset, 2017-10-10 -> 2026-07-26
+Finestra con tutti e 7 gli asset: 2020-09-29 -> 2026-07-26 (2127 giorni)
+
+famiglia                    modo                 CAGR  Sharpe       DD  turn/an  valut.
+----------------------------------------------------------------------------------------
+trend temporale             long-only           28.9%    0.70   -78.3%    65.1x      24
+trend temporale             long/short          10.7%    0.47   -59.2%    32.8x      24
+momentum cross-sectional    long-only           51.9%    0.86   -85.1%    43.0x      36
+momentum cross-sectional    long/short          21.1%    0.74   -42.1%    39.6x      36
+breakout Donchian           long-only          106.9%    1.35   -68.2%    18.6x      36
+breakout Donchian           long/short          41.5%    0.87   -60.7%    11.4x      36
+mean reversion RSI2         long-only           36.9%    0.69   -48.0%    25.7x      36
+mean reversion RSI2         long/short          15.0%    0.43   -50.4%    27.9x      36
+buy&hold equipesato         —                   51.2%    0.93   -81.0%     0.0x       0
+
+--- Combinazione delle quattro famiglie (pesi uguali) ---
+modo                 CAGR  Sharpe       DD  turn/an
+long-only           68.8%    1.15   -60.8%    38.1x
+long/short          31.9%    0.93   -37.8%    27.9x
+
+--- Netto di imposte irlandesi (le cripto sono asset ai fini CGT) ---
+strategia                            IRR 33%   IRR 52%   vs B&H 33%
+buy&hold equipesato                     5.8%         —         0.0%
+trend temporale L                     -14.7%    -18.7%       -20.5%
+trend temporale L/S                   -11.1%    -12.8%       -16.9%
+momentum cross-section L              -10.5%    -16.7%       -16.3%
+momentum cross-section L/S             -4.5%     -7.2%       -10.3%
+breakout Donchian L                    33.5%     23.7%        27.7%
+breakout Donchian L/S                  13.4%     10.8%         7.6%
+mean reversion RSI2 L                  -5.1%     -6.7%       -10.9%
+mean reversion RSI2 L/S               -10.2%    -11.4%       -16.0%
+COMBINAZIONE L                          5.2%     -0.5%        -0.6%
+COMBINAZIONE L/S                        1.1%     -1.0%        -4.7%
+
+--- Deflated Sharpe del migliore (breakout Donchian, long) ---
+  tentativi: 625 a registro + 264 valutazioni interne = 889
+  Sharpe osservato 1.349  soglia H0 0.916
+  DSR 0.880  -> NON promuovibile
+
+Tentativi cumulati a registro: 633
