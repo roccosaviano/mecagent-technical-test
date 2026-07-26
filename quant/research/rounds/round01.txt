@@ -1,0 +1,1 @@
+/tmp/claude-0/-home-user-mecagent-technical-test/1282c159-1b67-5dda-8a70-400c3f3d0cf1/scratchpad/.venv/bin/python: No module named research.round01
