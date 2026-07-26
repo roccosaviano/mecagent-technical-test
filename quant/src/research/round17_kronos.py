@@ -36,10 +36,10 @@ from research import lab
 from research.round15 import load, evaluate
 
 ROUND = 17
-LOOKBACK = 256          # contesto ridotto: l attenzione costa O(L^2)
+LOOKBACK = 400          # contesto pieno: ora il carico e libero
 HORIZON = 5             # orizzonte di previsione in sedute
 STRIDE = 5              # ogni quante sedute si riprevede
-N_PRED = 250            # 250 previsioni, circa 5 anni a passo 5
+N_PRED = 700            # campione piu ampio per il test direzionale
 
 
 def main():

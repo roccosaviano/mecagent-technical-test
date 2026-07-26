@@ -4,3 +4,27 @@ Kronos-base caricato: 102.3M parametri
 Previsioni da fare: 250, contesto 256 barre, orizzonte 5 sedute, passo 5
 Finestra coperta: 2021-07-27 -> 2026-07-14
 
+  50/250  (49s, stimati 246s totali)
+  100/250  (98s, stimati 244s totali)
+  150/250  (148s, stimati 246s totali)
+  200/250  (196s, stimati 245s totali)
+  250/250  (244s, stimati 244s totali)
+
+Previsioni completate: 250 in 244s
+
+--- Il modello prevede la direzione? ---
+  tasso di correttezza direzionale : 46.80%  (n=250, atteso 50%, z=-1.01)
+  significativo al 5%              : NO
+  correlazione previsto/realizzato : +0.0855
+  RankIC (Spearman)                : +0.0670
+  quota di previsioni rialziste    : 24.8%
+  quota di realizzati rialzisti    : 58.8%
+
+--- Backtest sul segnale di Kronos ---
+  finestra 2021-07-27 -> 2026-07-20 (1250 sedute)
+                             CAGR   Sharpe       DD   op/an   %mkt
+  Kronos long/flat          6.47%     0.47   -18.1%     2.2    25%
+  buy&hold                 13.66%     0.67   -35.6%     0.0   100%
+  differenza               -7.19%    -0.21
+
+Tentativi cumulati a registro: 426

@@ -1,0 +1,6 @@
+QQQ 2006-09-07 -> 2026-07-24  (5000 barre)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Kronos-base caricato: 102.3M parametri
+Previsioni da fare: 700, contesto 400 barre, orizzonte 5 sedute, passo 5
+Finestra coperta: 2012-08-14 -> 2026-07-13
+
