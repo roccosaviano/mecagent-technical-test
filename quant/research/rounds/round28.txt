@@ -1,0 +1,41 @@
+Universo: azionario USA + decennale (il 'difensivo')
+Finestra: 2006-11-01 -> 2026-05-29 (4923 sedute)
+
+====================================================================================
+A. COME SI PRESENTA — parametri su tutto il campione, zero costi,
+   zero imposte, una curva sola
+====================================================================================
+   regimi popolati: 9/9
+                             moltiplicatore     CAGR       DD  Sharpe
+   Strategia                          11.2x   13.16%   -27.7%    1.02
+   S&P 500 buy&hold                    8.2x   11.36%   -54.6%    0.64
+
+   Su 100 investiti: strategia 1,119, indice 818
+   (la slide dichiara 1.817 contro 308)
+
+====================================================================================
+B. COME VA VERIFICATO — walk-forward, costi, imposte
+====================================================================================
+   fuori campione 2009-01-02 -> 2026-05-29 (4378 sedute, 140 regimi stimati)
+                             moltiplicatore     CAGR       DD  Sharpe
+   Strategia                           2.4x    5.09%   -27.2%    0.57
+   S&P 500 buy&hold                   11.8x   15.25%   -34.2%    0.86
+
+   turnover 12.0 volte l'anno
+   PAC netto imposte            IRR 33%   IRR 52%    vs B&H
+   Strategia                      3.96%     3.19%    -8.27%
+   S&P 500 buy&hold              12.22%         —    +0.00%
+
+====================================================================================
+C. DA DOVE VIENE IL DIVARIO FRA (A) E (B)
+====================================================================================
+   come si presenta (in-sample, 0 costi, 0 imposte)       13.16%
+   + costi di transazione                                 12.38%  (-0.78)
+   + parametri stimati solo sul passato                    5.09%  (-7.30)
+   + fiscalita' irlandese (IRR del PAC)                    3.96%  (-1.13)
+   buy&hold, stessa misura                                12.22%
+
+   DSR su 830 tentativi: 0.322  (batte il B&H netto imposte: NO)
+   -> NON promuovibile
+
+Tentativi cumulati a registro: 691
