@@ -1,0 +1,12 @@
+==============================================================================
+VERIFICA DEI CANDIDATI PROMOSSI
+==============================================================================
+
+1. Scenario fiscale e costi  (differenza di IRR contro il buy&hold)
+                                       CGT 33%   riqualif. 52%   turnover
+H5 momentum settoriale                  +2.93%          +1.89%       262%
+H4 tilt low-vol                         +0.73%          +0.42%         7%
+
+2. H5 con un mese di ritardo in piu' sul segnale
+                                       CGT 33%   riqualif. 52%
+  lag +0 mesi                           +2.93%          +1.89%

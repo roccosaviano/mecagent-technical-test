@@ -109,3 +109,10 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=60,lev=1.5",TEST,0.03935657979305591,-1.641695878788982,3.0958800552663286,-4.737575934055311,240,
 2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=60,lev=1.75",TEST,0.0042929748978156506,-2.3993245444907987,3.0958800552663286,-5.495204599757127,240,
 2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=60,lev=2.0",TEST,-0.022004728773614434,-3.138506057223611,3.0958800552663286,-6.23438611248994,240,
+3,H2,walkforward:trend following multi-asset (Century momentum),WF-OOS,0.2675036274027973,8.3833498887151,8.795934292592863,-0.4125844038777622,600,n_eval=800
+4,H4,"walkforward:tilt difensivo settoriale (low-vol, long-only)",WF-OOS,0.5770850733823755,10.407243607850415,9.677826094724326,0.7294175131260889,756,n_eval=378
+5,H5,walkforward:momentum settoriale cross-sectional,WF-OOS,0.6629166733485418,12.61045579413706,9.677826094724326,2.9326296994127343,756,n_eval=378
+6,H6,walkforward:stop loss / take profit su chiusure mensili,WF-OOS,0.2944237139534668,8.235674916432378,8.795934292592863,-0.5602593761604844,600,n_eval=600
+7,H7,walkforward:leva con margin call ESMA modellata,WF-OOS,0.14164672916454446,4.400471322865271,8.795934292592863,-4.395462969727592,600,n_eval=250
+8,H8,"walkforward:diversificazione geografica, rotazione minima",WF-OOS,0.24973321215487895,-2.636643708662766,-2.3987154794937195,-0.23792822916904655,168,n_eval=84
+9,H9,walkforward:combinazione inverse-vol multi-asset,WF-OOS,-2.479956506841085,-9.789069552635116,-1.171259118184185,-8.61781043445093,180,n_eval=90

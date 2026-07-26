@@ -26,10 +26,10 @@ l'holdout è bruciato e qualunque risultato su quella finestra è in-sample.
 
 | | |
 |---|---|
-| Giri completati | 2 |
-| Configurazioni provate (cumulate) | **110** |
+| Giri completati | 9 (tutte le ipotesi in coda eseguite) |
+| Configurazioni provate (cumulate) | **117 a registro + ~2.580 valutazioni interne al walk-forward** |
 | Soglia SR0 (giro 02) | 0,962 annualizzato |
-| Candidati promossi | **0** |
+| Candidati promossi | **2** (H5, H4) — in verifica, holdout non ancora aperto |
 | Holdout | **sigillato, mai aperto** |
 
 ## Dati disponibili
@@ -52,16 +52,40 @@ dichiarare quando li proverò.
 |---|---|---|---|---|
 | 01 | H1 multi-asset azioni+obbligazioni, bassa rotazione, leva | +0,87 punti IRR | **0,328** | **RESPINTA** |
 | 02 | H3 core azionario + overlay multi-stile 6 classi (AQR Century) | −2,65 punti IRR | **0,001** | **RESPINTA** |
+| 03 | H2 trend following multi-asset (Century momentum) | −0,41 | 0,351 | RESPINTA |
+| 04 | H4 tilt difensivo settoriale low-vol, long-only | **+0,73** | **0,989** | **candidato** |
+| 05 | H5 momentum settoriale cross-sectional | **+2,93** | **0,998** | **candidato** |
+| 06 | H6 stop loss / take profit su chiusure mensili | −0,56 | 0,442 | RESPINTA |
+| 07 | H7 leva con margin call ESMA modellata | −4,40 | 0,141 | RESPINTA |
+| 08 | H8 diversificazione geografica, rotazione minima | −0,24 | 0,163 | RESPINTA |
+| 09 | H9 combinazione inverse-vol multi-asset | −8,62 | 0,000 | RESPINTA |
 
-## Coda delle ipotesi
+Dal giro 03 in poi la valutazione e' **walk-forward a finestre espandenti**: ogni
+anno Y i parametri sono scelti su tutto cio' che precede Y e applicati durante Y.
+Sostituisce lo split unico, che aveva il disallineamento di regime descritto sotto.
 
-- [ ] **H2** Trend following multi-asset (TSMOM AQR). **Bloccata dai dati**: TSMOM parte dal 1985, il TRAIN si ridurrebbe a 60 mesi. Va rifatta con uno split dedicato o con un proxy a storia lunga (Century "All asset classes Momentum", dal 1926).
-- [ ] **H4** Core azionario + tilt difensivo/qualità a rotazione bassissima (il tilt più tax-efficient possibile).
-- [ ] **H5** Momentum a 12 mesi cross-asset su N mercati (tactical asset allocation).
-- [ ] **H6** Stop loss e take profit su chiusure mensili applicati al miglior candidato dei giri precedenti, con e senza.
-- [ ] **H7** Ottimizzazione della leva sul candidato migliore, con vincolo di margine ESMA (5:1 azioni singole, 20:1 indici) e verifica di margin call.
-- [ ] **H8** Diversificazione geografica pura (Developed/Emerging/Japan/Europe) buy&hold, zero rotazione — il candidato strutturalmente più tax-efficient.
-- [ ] **H9** Combinazione dei migliori stream non correlati fra loro, pesati inverse-vol, ribilanciamento annuale.
+## Verifiche sui candidati (in corso)
+
+| | CGT 33% | riqualif. 52% | turnover |
+|---|---:|---:|---:|
+| H5 momentum settoriale | +2,93% | **+1,89%** | **262%/anno** |
+| H4 tilt low-vol | +0,73% | +0,42% | 7%/anno |
+
+H5 sopravvive anche allo scenario di riqualificazione, ma con 262% di turnover
+annuo quella e' l'aliquota da assumere, non un caso limite. Restano da chiudere:
+sensibilita' a un mese di ritardo sul segnale e costi doppi.
+
+**Holdout ancora sigillato.** Va aperto su UN SOLO candidato, dopo le verifiche.
+
+## Coda delle ipotesi (tutte eseguite)
+
+- [x] **H2** Trend following multi-asset (TSMOM AQR). **Bloccata dai dati**: TSMOM parte dal 1985, il TRAIN si ridurrebbe a 60 mesi. Va rifatta con uno split dedicato o con un proxy a storia lunga (Century "All asset classes Momentum", dal 1926).
+- [x] **H4** Core azionario + tilt difensivo/qualità a rotazione bassissima (il tilt più tax-efficient possibile).
+- [x] **H5** Momentum a 12 mesi cross-asset su N mercati (tactical asset allocation).
+- [x] **H6** Stop loss e take profit su chiusure mensili applicati al miglior candidato dei giri precedenti, con e senza.
+- [x] **H7** Ottimizzazione della leva sul candidato migliore, con vincolo di margine ESMA (5:1 azioni singole, 20:1 indici) e verifica di margin call.
+- [x] **H8** Diversificazione geografica pura (Developed/Emerging/Japan/Europe) buy&hold, zero rotazione — il candidato strutturalmente più tax-efficient.
+- [x] **H9** Combinazione dei migliori stream non correlati fra loro, pesati inverse-vol, ribilanciamento annuale.
 
 ## Note metodologiche accumulate
 
@@ -82,6 +106,16 @@ dichiarare quando li proverò.
   Nel giro 02 l'ottimizzatore ha scelto leva 2× su TRAIN e ha prodotto −84% di
   drawdown su TEST. Non è un difetto della strategia, è il mio disegno: da
   affrontare con walk-forward a finestre mobili invece di uno split unico.
+- **Bug trovato nel walk-forward: `realize_frac` non veniva propagato**, quindi
+  le strategie erano tassate come un buy&hold e il turnover risultava gratuito.
+  Corretto: H5 e' scesa da +6,08 a +2,93 punti, H4 da +1,73 a +0,73. Era il
+  vincolo dominante dell'intero studio, e mancava.
+- **Bug nel `build_fn` applicato ai soli 12 mesi dell'anno Y**: le strategie
+  hanno bisogno di storia per scaldare gli indicatori e restituivano `None`.
+  Ora la configurazione scelta gira sull'intera storia fino a fine Y e si
+  ritaglia il solo anno Y; i parametri non vedono comunque il proprio anno.
+- **Bug in H6**: lo stop rientrava nello stesso mese in cui usciva, quindi non
+  era uno stop. Aggiunta la regola di rientro sopra la media a 10 mesi.
 - **I premi AQR non sopravvivono ai costi retail.** L'overlay multi-stile rende
   3,3-3,4%/anno lordo contro un drag di implementazione stimato al 7,5%/anno.
   È negativo prima ancora di iniziare.
