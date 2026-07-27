@@ -571,3 +571,26 @@ operazioni senza migliorare l'aspettativa per operazione. Cioè: la parte che
 funziona è quella che tutti considerano banale.
 *Falsificata se*: l'aspettativa per operazione del sistema completo supera quella
 del solo filtro di tendenza di oltre il 50%.
+
+**E6 — Stress sui LEAPS: quanto regge il +1,34?**
+Il giro 49 ha falsificato E5: una call deep ITM a 12 mesi finanzia al 2,95% annuo
+contro il 5,90% del CFD, non ha margin call, un solo rollo l'anno la tiene al 33%,
+e batte il buy&hold di **+1,34 punti**. Non l'ho promossa per quattro motivi, e il
+più serio è che **la direzione dell'errore del prezzatore è ottimistica e non l'ho
+potuta quantificare**: per la covered call avevo BXY e BXMD reali, per il deep ITM
+non esiste un indice di riferimento. Prima di dire che c'è qualcosa, va misurato
+quanto margine di errore regge.
+Tre stress, tutti sulla configurazione migliore (moneyness 80%, leve 1,0-1,5×):
+(i) **implicita più alta**: k da 0,85 (tarato) a 0,95, 1,05, 1,15 — le call deep
+ITM in realtà trattano sopra l'ATM per parità dallo skew delle put;
+(ii) **rincaro secco del premio d'ingresso** dallo 0% al 40%, che modella spread
+denaro-lettera ed esecuzione su uno strumento poco liquido;
+(iii) **finestre mobili di 20 anni**, per vedere se il vantaggio è una proprietà o
+un pezzo di storia.
+*Predizione*: il vantaggio sparisce con un rincaro del premio **sotto il 15%** e
+con k sotto **1,00**; sulle finestre mobili vince in **meno della metà** dei casi.
+Cioè: +1,34 punti è dentro l'incertezza del modello, e la voce va chiusa.
+*Falsificata se*: il vantaggio sopravvive a un rincaro del **30%** del premio **E**
+vince in più della metà delle finestre mobili. In quel caso, e solo in quel caso,
+i LEAPS diventano il primo candidato vero del progetto e vanno portati alle
+verifiche di robustezza complete.
