@@ -248,6 +248,24 @@ Registro a **1.026 tentativi** cumulati.
   netta contro il cap-weighted, con 0,31 rotazioni l'anno. HRP guadagna 0,28 punti
   di CAGR lordo e ne restituisce 1,4 netti: il conto fiscale del ribilanciamento
   supera il guadagno di un metodo che non prova nemmeno a prevedere i rendimenti.
+- **Il vantaggio del veicolo era sovrastimato una seconda volta: i DIVIDENDI.**
+  Nei confronti CGT contro ETF ho sempre passato al motore la serie **total
+  return** senza `div_yield`, il che equivale a far accumulare i dividendi
+  esentasse **anche a chi detiene le azioni direttamente**. È vero per un fondo ad
+  accumulazione, è falso per un detentore diretto, che in Irlanda paga ~52% sui
+  dividendi **ogni anno**. Rimisurato con un dividend yield realistico:
+
+  | dividend yield | vantaggio 1990-2023 | vantaggio 1990-2026 |
+  |---:|---:|---:|
+  | 0,0% (quello che avevo usato) | +1,23 | +1,49 |
+  | 1,5% | +0,56 | +0,79 |
+  | **2,0%** | **+0,34** | **+0,56** |
+  | 2,5% | +0,13 | +0,33 |
+
+  Con il rendimento da dividendo storico dell'S&P (~2%), il vantaggio reale delle
+  azioni diritte sull'ETF UCITS è **fra +0,3 e +0,6 punti**, non 2,15 come avevo
+  riportato all'inizio né 1,23 dopo la prima correzione. È ancora positivo, ma è
+  un ordine di grandezza diverso: non è più la voce dominante del progetto.
 - **BUG GRAVE nel regime ETF, trovato al giro 53.** `pay_from_portfolio` riduceva
   le `units` globali ma **non i lotti ETF**: la somma dei lotti restava gonfia e
   ogni deemed disposal successivo tassava quote inesistenti. Su 57 anni azzerava il
