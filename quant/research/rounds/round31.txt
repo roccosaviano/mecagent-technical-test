@@ -1,0 +1,28 @@
+49 settori, 1969-07-31 -> 2026-05-31 (683 mesi)
+Stima su 60 mesi mobili, ribilanciamento annuale, costi 0.15% round-trip
+
+metodo                         CAGR  Sharpe       DD  turn/an  stab.pesi   IRR 33%
+hrp                          11.26%    0.78   -46.6%    0.31x      0.283     9.45%
+invvar                       11.26%    0.76   -49.2%    0.23x      0.109     9.65%
+equal                        11.57%    0.74   -51.5%    0.23x      0.017     9.89%
+indice cap-weighted          10.98%    0.74   -50.3%    0.00x      0.000    10.88%
+
+====================================================================================
+VERDETTO SU A2
+====================================================================================
+   Predizione: HRP batte l'equal-weight in Sharpe ma non in IRR netta.
+   FALSIFICATA se IRR netta > equal-weight di almeno 0,5 punti.
+
+   Sharpe   HRP 0.780 contro equal-weight 0.737  -> SI
+   IRR netta HRP 9.45% contro equal-weight 9.89%  -> differenza -0.44 punti
+   Stabilita' dei pesi (movimento medio a ogni ribilanciamento):
+     HRP 0.283 · inverse-variance 0.109 · equal-weight 0.017
+     (piu' basso = pesi piu' stabili. E' la proprieta' per cui HRP
+      e' stato proposto, e va misurata anche se non paga)
+
+   -> ipotesi A2 CONFERMATA
+
+   Per riferimento, HRP contro l'indice cap-weighted: -1.43 punti
+   DSR di HRP su 52 ipotesi pre-dichiarate: 1.000  -> NON promuovibile
+
+Tentativi cumulati a registro: 702

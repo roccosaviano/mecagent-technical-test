@@ -24,7 +24,7 @@ materie prime. Ribilanciamento annuale.
 puro, perché il decennale rende meno e il ribilanciamento è tassato.
 *Falsificata se*: IRR netta > buy&hold azionario.
 
-**A2 — Hierarchical Risk Parity (López de Prado 2016)**
+**A2 — Hierarchical Risk Parity (López de Prado 2016)** ✔ eseguita (giro 31)
 Clustering gerarchico della matrice di correlazione, allocazione ricorsiva.
 Sui 49 settori, ribilanciamento annuale.
 *Predizione*: batte l'equal-weight in Sharpe ma non l'IRR netta; il vantaggio
@@ -173,6 +173,7 @@ distribuzione nulla.
 | H31 combinazione dei promossi | 29 | **confermata** — corr 0,944, la combinazione non aggiunge |
 | H32 turn-of-month | 29 | **confermata** — effetto reale (t=7,04), decaduto del 60%, strategia a −7,26 |
 | A1 risk parity fra classi | 30 | **confermata** — ERC Sharpe 0,92 contro 0,87 del 60/40, ma IRR netta 7,08% contro 10,48% dell'azionario. Nessuna delle 4 allocazioni batte. Oro e materie prime **non testabili** |
+| A2 hierarchical risk parity | 31 | **confermata** — Sharpe 0,78 contro 0,74 dell'equal-weight, ma IRR netta 9,45% contro 9,89% (−0,44) e −1,43 contro il cap-weighted. In più HRP risulta **meno stabile** di inverse-variance (0,283 contro 0,109): la tesi del paper è contro il min-variance, che è A3 |
 
 
 ---
@@ -189,6 +190,10 @@ distribuzione nulla.
   un prezzo: chi compra petrolio paga il roll, storicamente la componente
   dominante del rendimento. Usarlo sovrastimerebbe la classe.
 - **Cripto: ora 8 asset** (aggiunto LINK, dal 2018). Rilevante per B6.
+- **L'ambiente Python non sopravvive al riavvio del container**, i dati in
+  `quant/data/` sì (sono versionati). Al giro 31 numpy/pandas/scipy erano spariti.
+  Rimedio: `pip install numpy pandas scipy xlrd openpyxl statsmodels` prima di
+  eseguire, senza riscaricare niente.
 
 ---
 
@@ -202,3 +207,14 @@ Scomporre l'IRR persa in (a) minor rendimento atteso della sleeve difensiva e
 (b) imposte sul ribilanciamento.
 *Predizione*: oltre il 90% della perdita viene da (a), non da (b).
 *Falsificata se*: la componente fiscale supera il 25%.
+
+**A7 — La tesi vera di HRP: stabilità contro il min-variance**
+Il giro 31 ha misurato che HRP è **meno** stabile dell'inverse-variance (0,283
+contro 0,109 di movimento medio dei pesi). Ma la rivendicazione del paper è contro
+il **min-variance di Markowitz**, che inverte la covarianza ed è instabile per
+costruzione con 49 asset e 60 mesi di storia. Quel confronto non l'ho eseguito
+perché il min-variance è A3. Da fare **dopo** A3, riusando i pesi già calcolati lì.
+*Predizione*: HRP risulta 3-10 volte più stabile del min-variance, cioè la tesi del
+paper regge sul suo bersaglio dichiarato — e resta comunque irrilevante per l'IRR
+netta, perché entrambi perdono contro il cap-weighted.
+*Falsificata se*: HRP non è più stabile del min-variance.

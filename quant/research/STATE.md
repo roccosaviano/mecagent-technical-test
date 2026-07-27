@@ -128,6 +128,17 @@ metodologiche (dispersione per data di inizio, bootstrap a blocchi).
 Ogni voce ha predizione e condizione di falsificazione scritte PRIMA. Il Routine
 notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 
+**Esiti della coda finora** (dettaglio in `QUEUE.md`, mini-report in `rounds/`):
+
+| Giro | Voce | Esito | Numero chiave |
+|---|---|---|---|
+| 29 | H31 combinazione dei promossi | confermata | corr 0,944 |
+| 29 | H32 turn-of-month | confermata | t=7,04, strategia −7,26 |
+| 30 | A1 risk parity fra classi | confermata | ERC 7,08% contro 10,48% |
+| 31 | A2 hierarchical risk parity | confermata | HRP 9,45% contro 9,89% equal-weight |
+
+Nessuna promozione dalla coda. Registro a **702 tentativi** cumulati.
+
 ## Coda vecchia (tutte eseguite)
 
 - [x] **H2** Trend following multi-asset (TSMOM AQR). **Bloccata dai dati**: TSMOM parte dal 1985, il TRAIN si ridurrebbe a 60 mesi. Va rifatta con uno split dedicato o con un proxy a storia lunga (Century "All asset classes Momentum", dal 1926).
@@ -184,6 +195,18 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
   differenza maggiore (+3,30) ma DSR piu' basso (0,816 contro 0,997), perche'
   raddoppia il turnover a 600%/anno. Combinare due segnali non e' gratis quando
   ogni rotazione e' un evento tassabile.
+- **Il metodo di allocazione non salva niente a composizione fissa.** Il giro 30
+  aveva mostrato che con turnover quasi nullo la perdita viene dalla composizione
+  (il decennale rende meno dell'azionario). Il giro 31 tiene la composizione fissa
+  — quattro portafogli di soli 49 settori USA — e perde comunque 1,43 punti di IRR
+  netta contro il cap-weighted, con 0,31 rotazioni l'anno. HRP guadagna 0,28 punti
+  di CAGR lordo e ne restituisce 1,4 netti: il conto fiscale del ribilanciamento
+  supera il guadagno di un metodo che non prova nemmeno a prevedere i rendimenti.
+- **HRP è meno stabile di inverse-variance**, non più (0,283 contro 0,109 di
+  movimento medio dei pesi per ribilanciamento). Il clustering a legame singolo
+  riorganizza l'albero in modo discreto quando le correlazioni si muovono di poco.
+  La tesi del paper è però contro il **min-variance**, non contro il metodo
+  diagonale: confronto rimandato ad A7, dopo A3.
 - **I premi AQR non sopravvivono ai costi retail.** L'overlay multi-stile rende
   3,3-3,4%/anno lordo contro un drag di implementazione stimato al 7,5%/anno.
   È negativo prima ancora di iniziare.
