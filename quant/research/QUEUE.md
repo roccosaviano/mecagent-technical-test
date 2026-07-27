@@ -11,7 +11,7 @@ aggiunta alza la soglia per tutte).
 
 **STATO: la coda dichiarata è esaurita.** A1-A5, B1-B6, C1-C6, D1-D2 sono tutte
 eseguite (giri 30-43). Restano solo le voci nate durante l'esecuzione e non ancora
-eseguite: **A14, D3, D4**. Il gruppo E (opzioni) è stato
+eseguite: **A15, D4, D5**. Il gruppo E (opzioni) è stato
 aggiunto ed eseguito ai giri 48-49.
 
 **Vincolo che ha ucciso quasi tutto finora**: ogni realizzo paga 33%, e sopra
@@ -222,6 +222,8 @@ distribuzione nulla.
 | F3 sistema EMA giornaliero | 51 | **confermata** — batte il buy&hold su **1 asset su 10**, e quell'uno è LTC il cui B&H è −17%. Predizione sbagliata sul verso del lordo: il sistema **muore sul lordo** (0,75% contro 15,55% su QQQ), non sulle imposte |
 | **F4 sistema EMA intraday** | 51 | **FALSIFICATA** — l'orario (1,12%) supera il giornaliero (0,30%). Ma le finestre sono **20 / 2,9 / 0,8 anni**: Twelve Data dà 5.000 barre e basta, quindi il confronto di CAGR fra righe misura il periodo, non il timeframe. Il meccanismo previsto si vede: **7,1 → 33,6 → 133,4** operazioni/anno, e a 15 minuti −18,65% contro +20,30% |
 | F5 ablazione del sistema EMA | 51 | **confermata con margine enorme** — il **solo filtro di tendenza** ha aspettativa per operazione **13,321%** contro **0,564%** del sistema completo: rapporto **0,04**, cioè il sistema completo cattura un ventiquattresimo. Ingressi tattici e piano di uscita fanno entrare tardi e uscire presto |
+| **D3 finestre di lunghezza fissa** | 59 | **confermata** — ampiezza **5,81-10,19 punti** su finestre decennali contro i **0,56** di D1: **18×**. La sovrapposizione media fra campioni passa da **85,5%** (D1) a **13,9%**. Sbagliata solo la clausola sul segno (30,4% invece di ≥33,3% per C1). Risultato collaterale decisivo: **allungando l'orizzonte tutti e tre peggiorano** — H5 da 67,4% a 38,9% di vittorie, C1 da 30,4% a **0/36**. Le 4 peggiori finestre di H5 contengono tutte il 2008 |
+| **LIMITE del motore fiscale, misurato** | 59 | il motore tiene **un solo costo fiscale aggregato** e realizza pro quota, mentre nella realtà si vendono posizioni specifiche e vendere un perdente cristallizza una minusvalenza. Effetto misurato su un motore per posizione scritto apposta: **da +0,10 a +0,41 punti di IRR a favore delle strategie che ruotano** (+0,29 al 52% sul top-5). Controllo a 1 asset: identico a 6 decimali. **Nessun verdetto del progetto cambia**: il divario più stretto mai registrato è 1,14 punti |
 
 
 ---
@@ -664,3 +666,24 @@ libertà in due, non perché il meccanismo sia sbagliato.
 *Falsificata se*: il peso analitico non è monotono, oppure il suo rapporto
 ultimi/primi tre anni sta sotto 4 — nel qual caso il rischio di sequenza non
 spiega il livello dell'IRR di un PAC e va cercato un altro meccanismo.
+
+**D5 — La quota di vittorie per finestra è un indicatore ingannevole**
+Nata al giro 59. H5 vince **31 finestre decennali su 46 (67,4%)** e ha
+extra-rendimento medio **+0,16%**, cioè praticamente zero: mediana +0,54%, media
++0,16%, e la differenza sta tutta in quattro finestre che contengono il 2008
+(−5,78%, −5,69%, −3,61%, −3,24%). Se il disaccordo fra "vince spesso" e "rende in
+media" è sistematico, allora **ogni tabella di questo progetto che riporta una
+quota di vittorie sta sovrastimando le strategie che ruotano**, e vanno rilette
+tutte — F1 (regioni top-1, +0,30), E6 (17/17 finestre), H1 (73% dei decenni).
+Da misurare su TUTTI i candidati mai valutati nel progetto: quota di vittorie su
+finestre decennali, media, mediana, e lo scarto mediana − media.
+*Predizione*: lo scarto mediana − media è **positivo per almeno l'80%** dei
+candidati (cioè la coda sinistra domina ovunque, non solo per H5), e **almeno un
+terzo** dei candidati che vincono oltre metà delle finestre ha media ≤ 0. Il
+meccanismo è che una strategia tassata sul realizzato incassa il premio in tanti
+piccoli pezzi e restituisce il capitale in un colpo solo, senza recuperare
+l'imposta già pagata.
+*Falsificata se*: lo scarto mediana − media è positivo per meno del **60%** dei
+candidati, oppure nessun candidato con quota di vittorie sopra il 50% ha media
+negativa — nel qual caso H5 è un caso isolato e le quote di vittorie restano
+leggibili così come sono.

@@ -179,13 +179,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 51 | F3 sistema EMA giornaliero | confermata | batte il B&H su 1/10 asset, muore sul lordo |
 | 51 | **F4 sistema EMA intraday** | **falsificata** | ma finestre 20 / 2,9 / 0,8 anni, non confrontabili |
 | 51 | F5 ablazione del sistema EMA | confermata | il solo trend filter vale **24 volte** il sistema completo |
+| 59 | **D3 finestre di lunghezza fissa** | confermata | ampiezza **10,19** punti contro i **0,56** di D1: **18×** |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 35 voci eseguite nei giri 30-52:
-**27 confermate, 7 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Restano in coda: **A14, D3, D4**.
+(rotazione concentrata e sistema EMA, giri 50-51). 36 voci eseguite nei giri 30-59:
+**28 confermate, 7 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Restano in coda: **A15, D4, D5**.
 
-Registro a **1.035 tentativi** cumulati.
+Registro a **1.041 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -443,3 +444,53 @@ Registro a **1.035 tentativi** cumulati.
 - **I premi AQR non sopravvivono ai costi retail.** L'overlay multi-stile rende
   3,3-3,4%/anno lordo contro un drag di implementazione stimato al 7,5%/anno.
   È negativo prima ancora di iniziare.
+- **La stabilità misurata al giro 43 non esisteva: era il disegno del test.**
+  D1 faceva partire il campione in 20 anni diversi con la fine sempre al 2026, e
+  due suoi campioni condividono in media **l'85,5% degli anni** (massimo 98,1%).
+  Su finestre mobili di lunghezza fissa la sovrapposizione scende al **13,9%**, e
+  l'ampiezza dell'extra-rendimento passa da **0,56 a 10,19 punti — diciotto
+  volte**. Regola generale che ne esce: *quando si misura la dispersione di una
+  statistica su sottocampioni, la prima cosa da calcolare è la sovrapposizione fra
+  i sottocampioni*, prima di qualunque risultato. Una dispersione bassa fra
+  campioni che si sovrappongono al 90% non dice nulla.
+- **Allungare l'orizzonte peggiora i candidati invece di migliorarli.** Da finestre
+  di 10 anni a finestre di 20, la quota di vittorie di H5 scende da 67,4% a 38,9%,
+  quella di H4 da 43,5% a 30,6%, e C1 passa da 30,4% a **0 su 36**. È l'opposto di
+  quel che fa un premio vero, che con l'orizzonte emerge dal rumore. Il motivo è
+  che il costo fiscale si accumula deterministicamente ogni anno mentre il
+  vantaggio lordo non si accumula affatto: il tempo lavora per l'erario.
+- **H5 vince due finestre decennali su tre e rende zero.** 31/46 vittorie, mediana
+  +0,54%, media **+0,16%**. Tutta la differenza sta in quattro finestre, e sono le
+  quattro che contengono il **2008** (−5,78%, −5,69%, −3,61%, −3,24%). È la firma
+  di una posizione short-volatility, non di un premio. Da qui la voce D5: se il
+  disaccordo fra "vince spesso" e "rende in media" è generale, ogni quota di
+  vittorie riportata in questo progetto va riletta.
+- **Limite del motore fiscale, misurato e delimitato (non un bug).** `tax.py` tiene
+  **un solo costo fiscale aggregato** per il portafoglio e, quando la strategia
+  ruota, realizza una quota *proporzionale* della plusvalenza aggregata. Nella
+  realtà si vendono posizioni specifiche, e vendere un perdente cristallizza una
+  **minusvalenza** anche mentre il portafoglio nel complesso è in utile. Ho scritto
+  un motore per posizione (`val[]`/`bas[]` separati, vendite riconosciute
+  singolarmente) identico in tutto il resto — stessi flussi, stessi costi, stessa
+  regola di fine anno — e ho confrontato:
+
+  | strategia (49 settori, 1990-2026) | IRR aggregata | IRR per posizione | delta |
+  |---|---:|---:|---:|
+  | momentum top-1 mensile | 9,31% | 9,31% | +0,00 |
+  | momentum top-3 mensile | 12,66% | 12,81% | +0,15 |
+  | momentum top-10 mensile | 9,99% | 10,16% | +0,17 |
+  | momentum top-25 mensile | 9,16% | 9,40% | +0,24 |
+  | top-5 mensile, aliquota 52% | 8,23% | 8,52% | **+0,29** |
+  | top-25 mensile, aliquota 52% | 6,73% | 7,14% | **+0,41** |
+  | equal-weight ribilanciato | 8,83% | 8,78% | **−0,05** |
+
+  Controlli: con **un solo asset** i due motori coincidono a sei decimali, e col
+  **top-1** coincidono esattamente (una posizione alla volta *è* il portafoglio) —
+  quindi il delta misura l'effetto, non un bug. Il verso è quello atteso: la
+  contabilità aggregata **penalizza** chi ruota (fino a +0,41 punti) e **favorisce**
+  chi ribilancia verso pesi fissi (−0,05), perché quest'ultimo vende i vincitori.
+  **Nessun verdetto del progetto cambia**: il divario più stretto mai registrato è
+  1,14 punti (F2, top-5 annuale contro equal-weight statico), e la correzione lì
+  vale +0,10 al 33% e +0,15 al 52%. Resta come limite dichiarato, non corretto:
+  riscrivere `tax.py` per posizione cambierebbe di ±0,4 punti conclusioni che
+  stanno tutte oltre 1 punto dal confine.
