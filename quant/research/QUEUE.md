@@ -409,3 +409,85 @@ piano aiutano il montante), a differenza del divario dove hanno segni opposti.
 significativamente più grande di quello sul divario — nel qual caso la mia
 spiegazione del giro 47 è sbagliata quanto quella del giro 46 e il meccanismo va
 cercato altrove.
+
+---
+
+## E. Opzioni — comprare e vendere
+
+Finora le opzioni sono entrate solo come **indici CBOE già confezionati** (BXM, PUT,
+CNDR, CLL, PPUT ai giri 27 e 42). Non ho mai prezzato un'opzione: non ho catene di
+strike, quindi non ho mai potuto scegliere scadenza, moneyness o struttura.
+
+**Cosa posso costruire.** Black-Scholes con il **VIX come volatilità implicita**,
+sul percorso dell'indice azionario (Ken French daily, 1926→) e con il risk-free da
+DFF. Il VIX parte dal 1990: **36 anni, ~430 scadenze mensili**.
+
+**Il limite, dichiarato prima di qualunque numero: non ho lo skew.** Il VIX è un
+tasso di variance swap a 30 giorni, uno solo; usarlo per ogni strike equivale a
+ipotizzare volatilità piatta, mentre sull'S&P le put OTM trattano *sopra* il VIX e
+le call OTM *sotto*. Le direzioni dell'errore sono note e opposte:
+
+| struttura | effetto della vol piatta |
+|---|---|
+| vendere put OTM | premio incassato **sottostimato** → risultato **conservativo** |
+| comprare put OTM | costo **sottostimato** → risultato **ottimistico** |
+| vendere call OTM | premio **sovrastimato** → risultato **ottimistico** |
+| deep ITM (LEAPS) | costo **sottostimato** → risultato **ottimistico** |
+
+Ogni voce sotto va letta con la sua direzione di errore accanto.
+
+**E0 — Cancello di calibrazione (non è un'ipotesi, è la condizione per fidarsi)**
+Prima di qualunque test, il simulatore deve **riprodurre gli indici CBOE reali**:
+un buy-write ATM mensile simulato contro **BXM**, e una put cash-secured ATM
+mensile simulata contro **PUT**, sulla finestra comune.
+*Condizione*: scarto di CAGR entro **1,5 punti** e correlazione dei rendimenti
+mensili sopra **0,90** per entrambi. Se il cancello non si apre, tutte le voci E
+sono dichiarate **non affidabili** e riportate come tali, non cancellate.
+
+**E1 — Il premio al rischio di varianza, misurato**
+VIX contro volatilità realizzata dei 21 giorni successivi, 1990-2026. Non è una
+strategia: è il meccanismo che decide il segno di tutto il resto del gruppo E.
+*Predizione*: il VIX supera la volatilità realizzata successiva in oltre il **75%**
+dei mesi, con scarto medio di **3-4 punti di volatilità**. È il motivo per cui
+vendere opzioni ha rendimento atteso lordo positivo e comprarle negativo.
+*Falsificata se*: la quota sta sotto il 60%, oppure lo scarto medio è negativo.
+
+**E2 — Comprare opzioni sistematicamente**
+Long call e long put a 30 giorni, ATM e 5% OTM, rollate ogni mese.
+*Predizione*: **ogni** configurazione ha IRR netta negativa; le put perdono più
+delle call, perché al premio di varianza si somma la deriva positiva del
+sottostante. La perdita annua è dell'ordine del premio di varianza moltiplicato
+per l'esposizione vega.
+*Falsificata se*: una qualunque configurazione long ha IRR netta positiva.
+*Direzione dell'errore*: ottimistica sulle put OTM (costo sottostimato).
+
+**E3 — Vendere put cash-secured contro il buy&hold azionario**
+Put ATM e 5% OTM mensili, interamente collateralizzate in liquidità (nessuna leva).
+*Predizione*: Sharpe **lordo superiore** al buy&hold azionario, come mostra
+l'indice PUT del CBOE, ma **IRR netta inferiore**: ogni scadenza è un realizzo,
+quindi 12 eventi fiscali l'anno contro un unico realizzo differito di 34 anni del
+buy&hold. Il differimento vale più del premio.
+*Falsificata se*: IRR netta > buy&hold azionario.
+*Direzione dell'errore*: conservativa (premio sottostimato sulle put OTM).
+
+**E4 — Covered call su un PAC azionario**
+Call vendute mensilmente a moneyness 0%, +2%, +5% sul portafoglio azionario.
+*Predizione*: più la call è OTM, più piccoli sono **sia** la riduzione di
+volatilità **sia** il costo in IRR; nessuna configurazione batte il buy&hold; la
+versione ATM perde di più, perché tronca il rialzo proprio nei mesi che fanno il
+rendimento di lungo periodo.
+*Falsificata se*: una qualunque configurazione batte il buy&hold netto imposte.
+*Direzione dell'errore*: ottimistica (premio delle call OTM sovrastimato).
+
+**E5 — LEAPS come leva a buon mercato**
+Il giro 35 (A8) ha mostrato che la leva via CFD a benchmark+3% distrugge il
+vantaggio di Sharpe che doveva monetizzare, e che a 1,5× scatta la chiusura
+forzata. Una call deep ITM a 12 mesi incorpora un finanziamento vicino al
+risk-free, **non ha margin call** e ha perdita massima pari al premio. Da testare a
+moneyness 80% e 90%, rollata annualmente.
+*Predizione*: il finanziamento incorporato è effettivamente più a buon mercato di
+rf+3%, ma il rollo annuale realizza la plusvalenza **ogni anno** al 33%, contro il
+differimento trentennale del buy&hold, e questo drag fiscale supera il risparmio di
+finanziamento. IRR netta sotto il buy&hold.
+*Falsificata se*: IRR netta ≥ buy&hold azionario.
+*Direzione dell'errore*: ottimistica (costo del deep ITM sottostimato).
