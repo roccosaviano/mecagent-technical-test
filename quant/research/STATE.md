@@ -160,11 +160,13 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 42 | C6 quattro pilastri | confermata | Sharpe 0,76 contro 0,95 del miglior singolo |
 | 43 | **D1 data di partenza** | **falsificata** | ampiezza 0,56 punti, per difetto della specifica |
 | 43 | **D2 bootstrap a blocchi** | **falsificata** | H5 al 100° percentile, +3,82% lordo / −1,20% netto |
+| 44 | A6 scomposizione della perdita | confermata | quota fiscale 15,3%, composizione 84-92% |
 
-**La coda dichiarata è esaurita.** 19 voci eseguite nei giri 30-43: **17 confermate,
-2 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+**La coda dichiarata è esaurita.** 20 voci eseguite nei giri 30-44: **18 confermate,
+2 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione. Restano in coda
+solo voci nate durante l'esecuzione: **A11, D3, D4**.
 
-Registro a **854 tentativi** cumulati.
+Registro a **858 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -229,6 +231,13 @@ Registro a **854 tentativi** cumulati.
   netta contro il cap-weighted, con 0,31 rotazioni l'anno. HRP guadagna 0,28 punti
   di CAGR lordo e ne restituisce 1,4 netti: il conto fiscale del ribilanciamento
   supera il guadagno di un metodo che non prova nemmeno a prevedere i rendimenti.
+- **Le allocazioni multi-classe perdono per la composizione, non per il fisco.**
+  Il giro 44 scompone il divario con l'attribuzione di Shapley su tutti e sei gli
+  ordinamenti dei tre fattori — l'ordine sequenziale avrebbe potuto spostare il
+  contributo fiscale fra lo 0% e il 31%, cioè decidere l'esito. Risultato:
+  composizione 84-92%, imposte 8-15%, **costi di transazione 0,3%**. E la
+  controprova che non dipende da nessuna convenzione: con imposte ZERO sul
+  ribilanciamento l'allocazione resta 1,8-3,3 punti sotto l'azionario.
 - **La frase che riassume tutto il progetto** viene dal giro 43. Il bootstrap a
   blocchi mette il momentum settoriale al **100° percentile** della distribuzione
   nulla: +3,82% annuo lordo, oltre il 99° percentile, il premio è statisticamente

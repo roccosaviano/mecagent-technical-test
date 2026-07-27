@@ -11,7 +11,7 @@ aggiunta alza la soglia per tutte).
 
 **STATO: la coda dichiarata è esaurita.** A1-A5, B1-B6, C1-C6, D1-D2 sono tutte
 eseguite (giri 30-43). Restano solo le voci nate durante l'esecuzione e non ancora
-eseguite: **A6, A7-A10 fatte, B7 fatta, D3, D4**.
+eseguite: **A11, D3, D4**.
 
 **Vincolo che ha ucciso quasi tutto finora**: ogni realizzo paga 33%, e sopra
 ~100 operazioni l'anno diventa 52%. Le ipotesi sotto sono ordinate mettendo
@@ -200,6 +200,7 @@ distribuzione nulla.
 | C6 quattro pilastri CTA | 42 | **confermata** sul test, **sbagliata sulla seconda clausola**: correlazione media 0,189 come previsto, ma lo Sharpe combinato è **0,76 contro 0,95** del miglior singolo |
 | **D1 data di partenza** | 43 | **FALSIFICATA** — ampiezza 0,56 punti contro i 3 previsti. Ma per **difetto della specifica**: 20 date di partenza con fine fissa condividono 33-52 anni su 52. Vedi D3. Risultato collaterale importante: contro l'equal-weight dello stesso universo i 3 candidati sono negativi in **60 casi su 60** |
 | **D2 bootstrap a blocchi** | 43 | **FALSIFICATA** — H5 al **100° percentile** del nullo (+3,82% lordo contro 99° a 2,49%). Ma il nullo non tiene conto della selezione, e la stessa strategia fa **−1,20% netto**. Il premio è reale, l'investitore perde comunque |
+| A6 scomposizione della perdita | 44 | **confermata** — quota fiscale massima **15,3%**, sotto il 25% che falsificava. Ma la clausola "oltre il 90%" regge solo per l'inverse-vol (91,9%): le altre stanno all'84-88%. I costi di transazione valgono lo **0,3%** del divario. Controprova: con imposte ZERO sul ribilanciamento l'allocazione resta sotto di 1,8-3,3 punti |
 
 
 ---
