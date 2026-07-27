@@ -161,12 +161,13 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 43 | **D1 data di partenza** | **falsificata** | ampiezza 0,56 punti, per difetto della specifica |
 | 43 | **D2 bootstrap a blocchi** | **falsificata** | H5 al 100° percentile, +3,82% lordo / −1,20% netto |
 | 44 | A6 scomposizione della perdita | confermata | quota fiscale 15,3%, composizione 84-92% |
+| 45 | A11 alpha di pareggio della sleeve | confermata | servirebbero 6,5-7,0 punti l'anno in più |
 
-**La coda dichiarata è esaurita.** 20 voci eseguite nei giri 30-44: **18 confermate,
+**La coda dichiarata è esaurita.** 21 voci eseguite nei giri 30-45: **19 confermate,
 2 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione. Restano in coda
-solo voci nate durante l'esecuzione: **A11, D3, D4**.
+solo voci nate durante l'esecuzione: **A12, D3, D4**.
 
-Registro a **858 tentativi** cumulati.
+Registro a **862 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -231,6 +232,12 @@ Registro a **858 tentativi** cumulati.
   netta contro il cap-weighted, con 0,31 rotazioni l'anno. HRP guadagna 0,28 punti
   di CAGR lordo e ne restituisce 1,4 netti: il conto fiscale del ribilanciamento
   supera il guadagno di un metodo che non prova nemmeno a prevedere i rendimenti.
+- **E non è colpa del proxy obbligazionario.** Il giro 45 misura lo scarto invece
+  di citarlo: una ricostruzione con convessità e rolldown rende **1,58 punti** più
+  di quella semplice (avevo assunto 0,3-0,8 — stima sbagliata, per difetto). Ma per
+  pareggiare servirebbero **6,5-7,0 punti**, cioè un decennale al 12,5-13% annuo
+  per 64 anni. Usando direttamente la ricostruzione migliorata — che a 7,58% annuo
+  è probabilmente già troppo generosa — l'allocazione resta 2,4-3,4 punti sotto.
 - **Le allocazioni multi-classe perdono per la composizione, non per il fisco.**
   Il giro 44 scompone il divario con l'attribuzione di Shapley su tutti e sei gli
   ordinamenti dei tre fattori — l'ordine sequenziale avrebbe potuto spostare il

@@ -857,3 +857,7 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 44,A6 scomposizione della perdita,invvol,1962-02-28/2026-05-31,,6.517220473617213,10.479381558594463,-3.96216108497725,772,"comp=91.9%,costi=0.3%,imposte=7.9%"
 44,A6 scomposizione della perdita,6040,1962-02-28/2026-05-31,,7.835325168726823,10.479381558594463,-2.6440563898676404,772,"comp=84.3%,costi=0.4%,imposte=15.3%"
 44,A6 scomposizione della perdita,equal,1962-02-28/2026-05-31,,7.3570724808230015,10.479381558594463,-3.1223090777714617,772,"comp=87.6%,costi=0.3%,imposte=12.1%"
+45,A11 alpha di pareggio sleeve obbligazionaria,erc,1962-02-28/2026-05-31,,6.853034737308272,10.479637771592618,-3.6266030342843454,772,"alpha=6.52%,proxygap=1.58%,migliorata=8.11%"
+45,A11 alpha di pareggio sleeve obbligazionaria,invvol,1962-02-28/2026-05-31,,6.517220473617213,10.479637771592618,-3.9624172979754047,772,"alpha=6.69%,proxygap=1.58%,migliorata=7.50%"
+45,A11 alpha di pareggio sleeve obbligazionaria,6040,1962-02-28/2026-05-31,,7.835325168726823,10.479637771592618,-2.644312602865795,772,"alpha=6.96%,proxygap=1.58%,migliorata=8.55%"
+45,A11 alpha di pareggio sleeve obbligazionaria,equal,1962-02-28/2026-05-31,,7.3570724808230015,10.479637771592618,-3.122565290769616,772,"alpha=6.62%,proxygap=1.58%,migliorata=8.15%"

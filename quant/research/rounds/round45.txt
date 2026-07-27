@@ -1,0 +1,48 @@
+A11 — di quanto dovrebbe rendere di piu' la sleeve obbligazionaria
+Finestra 1962-02-28 -> 2026-05-31 (772 mesi)
+
+========================================================================================
+(2) LO SCARTO DEL PROXY, misurato invece che citato
+========================================================================================
+   ricostruzione semplice    (y/12 - D·dy)               6.00% annuo
+   ricostruzione migliorata  (+ convessita' + rolldown)   7.58% annuo
+   -> SCARTO DEL PROXY: +1.58 punti l'anno
+      di cui convessita' da sola: +0.59 punti,
+      il resto e' rolldown (+0.98).
+   Volatilita' annua: semplice 10.1% · migliorata 10.2%
+   Correlazione fra le due: 0.9990
+
+========================================================================================
+(1) IL PAREGGIO: alpha necessario per eguagliare l'azionario
+========================================================================================
+   IRR azionario 100%: 10.48%
+
+   allocazione      IRR base   divario   alpha di pareggio   multiplo dello scarto
+   -------------------------------------------------------------------------------
+   erc                 6.85%     3.63         6.52% annuo                    4.1x
+   invvol              6.52%     3.96         6.69% annuo                    4.3x
+   6040                7.84%     2.64         6.96% annuo                    4.4x
+   equal               7.36%     3.12         6.62% annuo                    4.2x
+
+   CONTROPROVA: e se uso direttamente la ricostruzione migliorata?
+     erc          8.11% contro 10.94% dell'azionario  -> -2.83 punti (ancora sotto)
+     invvol       7.50% contro 10.94% dell'azionario  -> -3.44 punti (ancora sotto)
+     6040         8.55% contro 10.94% dell'azionario  -> -2.39 punti (ancora sotto)
+     equal        8.15% contro 10.94% dell'azionario  -> -2.79 punti (ancora sotto)
+
+========================================================================================
+VERDETTO SU A11
+========================================================================================
+   Predizione: il pareggio richiede oltre 3 punti l'anno per ERC e
+   inverse-vol, da 4 a 10 volte lo scarto del proxy.
+   FALSIFICATA se l'alpha richiesto sta sotto 1 punto per almeno una
+   delle quattro allocazioni.
+
+   erc        alpha di pareggio 6.52% -> sopra i 3 punti previsti
+   invvol     alpha di pareggio 6.69% -> sopra i 3 punti previsti
+   Alpha minimo fra le quattro: 6.52% (erc)
+   -> ipotesi A11 CONFERMATA
+
+   Multiplo dello scarto misurato: da 4.1x a 4.4x (previsto 4-10x)
+
+Tentativi cumulati a registro: 862

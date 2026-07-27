@@ -11,7 +11,7 @@ aggiunta alza la soglia per tutte).
 
 **STATO: la coda dichiarata è esaurita.** A1-A5, B1-B6, C1-C6, D1-D2 sono tutte
 eseguite (giri 30-43). Restano solo le voci nate durante l'esecuzione e non ancora
-eseguite: **A11, D3, D4**.
+eseguite: **A12, D3, D4**.
 
 **Vincolo che ha ucciso quasi tutto finora**: ogni realizzo paga 33%, e sopra
 ~100 operazioni l'anno diventa 52%. Le ipotesi sotto sono ordinate mettendo
@@ -201,6 +201,7 @@ distribuzione nulla.
 | **D1 data di partenza** | 43 | **FALSIFICATA** — ampiezza 0,56 punti contro i 3 previsti. Ma per **difetto della specifica**: 20 date di partenza con fine fissa condividono 33-52 anni su 52. Vedi D3. Risultato collaterale importante: contro l'equal-weight dello stesso universo i 3 candidati sono negativi in **60 casi su 60** |
 | **D2 bootstrap a blocchi** | 43 | **FALSIFICATA** — H5 al **100° percentile** del nullo (+3,82% lordo contro 99° a 2,49%). Ma il nullo non tiene conto della selezione, e la stessa strategia fa **−1,20% netto**. Il premio è reale, l'investitore perde comunque |
 | A6 scomposizione della perdita | 44 | **confermata** — quota fiscale massima **15,3%**, sotto il 25% che falsificava. Ma la clausola "oltre il 90%" regge solo per l'inverse-vol (91,9%): le altre stanno all'84-88%. I costi di transazione valgono lo **0,3%** del divario. Controprova: con imposte ZERO sul ribilanciamento l'allocazione resta sotto di 1,8-3,3 punti |
+| A11 alpha di pareggio della sleeve | 45 | **confermata** — il decennale dovrebbe rendere **6,5-7,0 punti l'anno in più** (cioè 12,5-13% annuo per 64 anni) perché l'allocazione pareggi. Lo scarto del proxy **misurato** è 1,58 punti, non 0,3-0,8 come avevo assunto: il multiplo è 4,1-4,4×, sul bordo inferiore della banda prevista. Controprova: con la ricostruzione migliorata l'allocazione resta **−2,4/−3,4 punti** |
 
 
 ---
@@ -336,7 +337,7 @@ benchmark (~2-3 punti) spiega **più della metà** del margine apparente. Cioè 
 tutto quel che sembrava alfa era il premio di equal-weighting.
 *Falsificata se*: la differenza fra i benchmark spiega meno di un terzo del margine.
 
-**A11 — Di quanto dovrebbe rendere di più la sleeve difensiva per pareggiare?**
+**A11 — Di quanto dovrebbe rendere di più la sleeve difensiva per pareggiare?** ✔ eseguita (giro 45)
 Il giro 44 attribuisce l'84-92% della perdita delle allocazioni multi-classe alla
 **composizione**, e la controprova mostra che anche con imposte zero sul
 ribilanciamento restano 1,8-3,3 punti sotto l'azionario. Ma il decennale usato è
@@ -352,3 +353,19 @@ del proxy. Il difetto di ricostruzione quindi **non** spiega il divario, e la
 conclusione del giro 44 regge anche con un indice obbligazionario vero.
 *Falsificata se*: il rendimento aggiuntivo richiesto sta sotto 1 punto l'anno per
 almeno una delle quattro allocazioni, cioè dentro l'incertezza del proxy.
+
+**A12 — In quante finestre di 20 anni l'allocazione multi-classe avrebbe vinto?**
+I giri 44 e 45 concludono che il multi-classe perde 2,4-3,9 punti contro l'azionario
+puro, ma su **una sola finestra**: 1962-2026, che contiene il più lungo mercato toro
+obbligazionario della storia *e* un premio azionario altissimo. Una media su 64 anni
+non dice a un investitore cosa rischia in trent'anni. Da misurare su **finestre
+mobili di 20 anni, passo 1 anno**, con la ricostruzione migliorata del giro 45: in
+quale frazione delle finestre ERC, inverse-vol, 60/40 ed equal-weight battono
+l'azionario netto imposte, e quanto valgono il migliore e il peggiore caso.
+*Predizione*: il multi-classe vince in una minoranza di finestre — fra il 15% e il
+35% — e sono tutte e sole quelle centrate sui due mercati orso lunghi (1969-1982 e
+2000-2012). L'ampiezza fra la finestra migliore e la peggiore supera **6 punti**,
+cioè è più grande del divario medio, e quindi la conclusione "l'azionario puro
+vince" è vera in media e falsa in una finestra su quattro.
+*Falsificata se*: il multi-classe vince in più della metà delle finestre, oppure in
+nessuna.
