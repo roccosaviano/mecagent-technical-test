@@ -31,7 +31,7 @@ Sui 49 settori, ribilanciamento annuale.
 documentato di HRP è sulla stabilità dei pesi, non sul rendimento.
 *Falsificata se*: IRR netta > equal-weight annuale di almeno 0,5 punti.
 
-**A3 — Minimum variance e maximum diversification**
+**A3 — Minimum variance e maximum diversification** ✔ eseguita (giro 32)
 Due portafogli ottimizzati sui 49 settori, vincolo long-only, annuale.
 *Predizione*: minimum variance riduce il drawdown di oltre 10 punti e perde
 2-4 punti di CAGR; nessuno dei due batte l'IRR netta del cap-weight.
@@ -174,6 +174,7 @@ distribuzione nulla.
 | H32 turn-of-month | 29 | **confermata** — effetto reale (t=7,04), decaduto del 60%, strategia a −7,26 |
 | A1 risk parity fra classi | 30 | **confermata** — ERC Sharpe 0,92 contro 0,87 del 60/40, ma IRR netta 7,08% contro 10,48% dell'azionario. Nessuna delle 4 allocazioni batte. Oro e materie prime **non testabili** |
 | A2 hierarchical risk parity | 31 | **confermata** — Sharpe 0,78 contro 0,74 dell'equal-weight, ma IRR netta 9,45% contro 9,89% (−0,44) e −1,43 contro il cap-weighted. In più HRP risulta **meno stabile** di inverse-variance (0,283 contro 0,109): la tesi del paper è contro il min-variance, che è A3 |
+| A3 min-variance / max-diversification | 32 | **confermata** sul test — min-var 8,22% e max-div 9,34% contro 10,88% del cap-weight. Ma **entrambe le clausole descrittive della predizione erano sbagliate**: il DD scende di 4,2 punti (non >10) e il CAGR ceduto è 1,08 (non 2-4). Il min-var tiene l'84% in 5 settori, 7,5 posizioni effettive |
 
 
 ---
@@ -218,3 +219,22 @@ perché il min-variance è A3. Da fare **dopo** A3, riusando i pesi già calcola
 paper regge sul suo bersaglio dichiarato — e resta comunque irrilevante per l'IRR
 netta, perché entrambi perdono contro il cap-weighted.
 *Falsificata se*: HRP non è più stabile del min-variance.
+
+**A8 — Monetizzare lo Sharpe: min-variance portato in leva a pari volatilità**
+Il giro 32 ha trovato il caso più pulito finora di uno Sharpe migliore che non
+serve a niente: min-variance 0,78 contro 0,74 del cap-weight, e IRR netta 2,65
+punti sotto. Il ponte fra le due cose è la leva — servirebbe 15,8/13,2 = **1,20×**
+per pareggiare la volatilità. Da testare esplicitamente con il finanziamento a
+benchmark+3% e il margine ESMA già modellati al giro 07, invece di lasciarlo a un
+conto a mente.
+*Predizione*: la leva 1,20× recupera parte del divario ma non lo chiude — il costo
+di finanziamento (rf medio 4,45% + 3% = 7,45% sul 20% preso a prestito) più le
+imposte sul ribilanciamento più frequente lasciano il risultato sotto il
+cap-weight di almeno 1 punto. Il vantaggio di Sharpe del min-variance è troppo
+piccolo (0,04) per sopravvivere a uno spread di finanziamento del 3%.
+*Falsificata se*: IRR netta ≥ cap-weight.
+*Nota di soglia*: perché la leva paghi serve che il rendimento in eccesso del
+min-variance per unità di leva superi lo spread. Con 9,90% di CAGR e 7,45% di
+costo marginale il margine lordo sul 20% preso a prestito è ~0,49 punti l'anno,
+e il turnover del ribilanciamento in leva ne consuma una parte. È un test stretto,
+ed è il motivo per cui va misurato invece che assunto.

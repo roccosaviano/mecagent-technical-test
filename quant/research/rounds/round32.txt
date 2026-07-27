@@ -1,0 +1,46 @@
+49 settori, 1969-07-31 -> 2026-05-31 (683 mesi)
+Ottimizzazione su 60 mesi mobili precedenti, ribilanciamento annuale, costi 0.15% round-trip
+Long-only, somma 1, SLSQP. Nessun parametro selezionato.
+
+metodo                   CAGR     vol  Sharpe       DD  turn/an    top5  N eff   IRR 33%
+----------------------------------------------------------------------------------------
+minvar                  9.90%   13.2%    0.78   -46.2%    0.37x  84.3%    7.5     8.22%
+maxdiv                 11.30%   16.2%    0.75   -47.8%    0.50x  74.9%    9.7     9.34%
+equal                  11.57%   16.9%    0.74   -51.5%    0.23x  10.7%   48.6     9.89%
+minvar_shrunk (diagn.)   10.07%   13.2%    0.80   -46.3%    0.37x  80.5%    8.2     8.36%
+cap-weighted           10.98%   15.8%    0.74   -50.3%    0.00x                  10.88%
+
+========================================================================================
+VERDETTO SU A3
+========================================================================================
+   Predizione: min-variance taglia il DD di oltre 10 punti e perde
+   2-4 punti di CAGR; nessuno dei due batte l'IRR netta del cap-weight.
+   FALSIFICATA se uno dei due supera il cap-weight netto imposte.
+
+   (a) drawdown  min-var -46.2% contro cap-weight -50.3%  -> +4.2 punti (NON taglia 10 punti)
+   (b) CAGR      min-var 9.90% contro cap-weight 10.98%  -> perde +1.08 punti (FUORI dalla banda 2-4)
+   (c) IRR netta min-var 8.22%  max-div 9.34%  contro cap-weight 10.88%
+       -> min-var -2.65 · max-div -1.53
+
+   -> ipotesi A3 CONFERMATA  (il test e' (c); (a) e (b) sono la descrizione del meccanismo)
+
+   Condizionamento della covarianza campionaria (mediana sui ribilanciamenti): 18569
+   Concentrazione: min-var tiene il 84% in 5 settori, 7.5 posizioni effettive su 49
+                   max-div 75% / 9.7, equal-weight 11% / 48.6
+
+   DIAGNOSTICA fuori specifica — min-variance con shrinkage di
+   Ledoit-Wolf (intensita' media 0.11): IRR netta 8.36%, +0.14 contro il min-var
+   campionario. Serve a separare 'il metodo non paga' da 'la stima
+   e' rumore'. Non entra nel verdetto.
+
+   Turnover e aliquota: il piu' alto e' 0.50 volte l'anno, sotto la soglia
+   del 100% che farebbe scattare la riqualificazione. Lo scenario
+   52% resta comunque calcolato: min-var 7.18%, max-div 8.10%.
+
+   MISURATO PER A7 (verdetto rimandato, si esegue una voce per
+   giro): movimento medio dei pesi per ribilanciamento — min-var 0.473, max-div 0.523.
+
+   DSR del migliore (maxdiv) su 53 ipotesi pre-dichiarate: 1.000
+   -> NON promuovibile
+
+Tentativi cumulati a registro: 706

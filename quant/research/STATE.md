@@ -136,8 +136,9 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 29 | H32 turn-of-month | confermata | t=7,04, strategia −7,26 |
 | 30 | A1 risk parity fra classi | confermata | ERC 7,08% contro 10,48% |
 | 31 | A2 hierarchical risk parity | confermata | HRP 9,45% contro 9,89% equal-weight |
+| 32 | A3 min-variance / max-diversification | confermata | min-var 8,22%, max-div 9,34%, cap-weight 10,88% |
 
-Nessuna promozione dalla coda. Registro a **702 tentativi** cumulati.
+Nessuna promozione dalla coda. Registro a **706 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -202,6 +203,24 @@ Nessuna promozione dalla coda. Registro a **702 tentativi** cumulati.
   netta contro il cap-weighted, con 0,31 rotazioni l'anno. HRP guadagna 0,28 punti
   di CAGR lordo e ne restituisce 1,4 netti: il conto fiscale del ribilanciamento
   supera il guadagno di un metodo che non prova nemmeno a prevedere i rendimenti.
+- **Lo Sharpe non è la funzione obiettivo di chi versa €500 al mese.** Il giro 32
+  è il caso più pulito: il minimum variance fa esattamente quello che l'anomalia
+  low-volatility promette — Sharpe 0,78 contro 0,74, volatilità 13,2% contro
+  15,8% — e resta 2,65 punti sotto di IRR netta. Un PAC non può monetizzare uno
+  Sharpe migliore senza leva, e la leva costa benchmark+3% (giro 07: −4,18 punti
+  con il margine ESMA). La funzione obiettivo è il montante netto, che segue il
+  rendimento composto, non il rendimento per unità di rischio. Aggiunta A8 per
+  misurare esplicitamente la leva 1,20× invece di lasciarlo a un conto a mente.
+- **Il drawdown non è un fenomeno di volatilità, è un fenomeno di correlazione.**
+  Avevo previsto che il min-variance tagliasse oltre 10 punti di drawdown: ne ha
+  tagliati 4,2, a fronte di 2,6 punti di volatilità in meno. Un ottimizzatore che
+  minimizza la varianza su 60 mesi di storia normale non ha informazione sulle
+  code, e nel 2008 i settori difensivi sono scesi con tutto il resto.
+- **"Minimum variance su 49 settori" è in realtà una scommessa su 7 settori.**
+  L'84% del portafoglio sta in cinque posizioni, 7,5 posizioni effettive su 49,
+  con numero condizionale mediano della covarianza a 18.569. Lo shrinkage di
+  Ledoit-Wolf recupera solo +0,14 punti: la sconfitta **non** è errore di stima,
+  è il metodo. È una diagnostica che vale la pena rifare su ogni ottimizzatore.
 - **HRP è meno stabile di inverse-variance**, non più (0,283 contro 0,109 di
   movimento medio dei pesi per ribilanciamento). Il clustering a legame singolo
   riorganizza l'albero in modo discreto quando le correlazioni si muovono di poco.
