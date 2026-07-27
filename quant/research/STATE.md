@@ -143,7 +143,6 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 35 | A8 min-variance in leva 1,20× | confermata | 8,64% contro 10,88%, Sharpe 0,78→0,69 |
 | 36 | A9 Kelly contro frazione fissa | confermata | la frazione fissa vince 4/4 |
 | 36 | A10 curva del prezzo del drawdown | confermata | minimo interno, ma a 40% e 20%, non 30-35% |
-
 | 37 | B1 materie prime | confermata | trend 3,75% netto contro 9,90% |
 | 37 | B2 valute | confermata dopo bug | Sharpe 0,25, skew −0,12 |
 | 38 | B3 credito HY | **senza esito** | serie ICE limitata a 35 mesi |
