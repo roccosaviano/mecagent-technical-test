@@ -1,0 +1,94 @@
+A13 — il rischio di sequenza, misurato invece che dedotto
+Finestre di 20 anni, passo 1. Trienni di bordo: primi e ultimi 3 anni.
+
+============================================================================================
+IL MECCANISMO, verificato senza regressione
+============================================================================================
+   Con versamenti costanti per 20 anni, la quota di capitale-anni
+   esposta al mercato in ciascun anno del piano:
+     primi 3 anni:    2.9%
+     ultimi 3 anni:  27.1%
+     rapporto ultimi/primi: 9.50x
+   E' il meccanismo proposto, e non dipende da nessun dato di mercato:
+   e' aritmetica del piano di accumulo.
+
+============================================================================================
+RICOSTRUZIONE SEMPLICE — finestra estesa 1962-2026
+============================================================================================
+   45 finestre, da 1962-1981 a 2006-2025
+
+   alloc         vinte    quota   b(ultimi 3)   b(primi 3)   rapporto  R2 solo ultimi  R2 entrambi
+   --------------------------------------------------------------------------------------------
+   erc           14/45     31.1%        -0.116        0.071       1.65          0.299        0.390
+   invvol         6/45     13.3%        -0.102        0.054       1.89          0.305        0.377
+   6040           6/45     13.3%        -0.067        0.025       2.71          0.325        0.365
+   equal          6/45     13.3%        -0.077        0.033       2.36          0.302        0.350
+
+   (b = variazione del divario, in punti di IRR, per ogni punto di
+    rendimento azionario annuo in piu' nel triennio indicato)
+
+============================================================================================
+RICOSTRUZIONE MIGLIORATA — la finestra del giro 46 1976-2026
+============================================================================================
+   31 finestre, da 1976-1995 a 2006-2025
+
+   alloc         vinte    quota   b(ultimi 3)   b(primi 3)   rapporto  R2 solo ultimi  R2 entrambi
+   --------------------------------------------------------------------------------------------
+   erc           15/31     48.4%        -0.114        0.094       1.21          0.280        0.397
+   invvol        12/31     38.7%        -0.105        0.083       1.26          0.300        0.417
+   6040          13/31     41.9%        -0.071        0.040       1.78          0.334        0.404
+   equal         11/31     35.5%        -0.081        0.053       1.53          0.310        0.396
+
+   (b = variazione del divario, in punti di IRR, per ogni punto di
+    rendimento azionario annuo in piu' nel triennio indicato)
+
+============================================================================================
+LE 14 FINESTRE RECUPERATE DALLA FINESTRA ESTESA
+============================================================================================
+     inizio   fine      ERC   azion.   divario  ult.3 anni
+       1962   1981    3.15%    6.09%    -2.94%      16.76%
+       1963   1982    5.02%    6.95%    -1.92%      16.12%
+       1964   1983    5.32%    7.87%    -2.55%      12.92%
+       1965   1984    5.60%    7.63%    -2.03%      15.62%
+       1966   1985    7.36%    9.25%    -1.89%      19.06%
+       1967   1986    8.16%    9.83%    -1.67%      17.04%
+       1968   1987    7.61%    9.42%    -1.81%      16.21%
+       1969   1988    7.97%   10.17%    -2.21%      11.77%
+       1970   1989    8.97%   11.57%    -2.60%      15.62%
+       1971   1990    8.55%   10.41%    -1.87%      12.63%
+       1972   1991    9.61%   12.06%    -2.45%      17.75%
+       1973   1992    9.80%   12.19%    -2.39%      11.62%
+       1974   1993   10.12%   12.33%    -2.21%      18.05%
+       1975   1994    9.02%   11.34%    -2.32%       6.81%
+
+   Vinte dal multi-classe: 0/14
+
+============================================================================================
+VERDETTO SU A13
+============================================================================================
+   Predizione: b(ultimi 3) negativo, modulo almeno 4 volte b(primi 3),
+   e da solo spiega oltre meta' della varianza. Sulla finestra estesa la
+   quota di vittorie sale sopra il 50%.
+   FALSIFICATA se il rapporto e' sotto 2, o se b(ultimi 3) e' positivo.
+
+   estesa   erc        b(ult)= -0.116 (negativo)  rapporto  1.65 (SOTTO 2)
+   estesa   invvol     b(ult)= -0.102 (negativo)  rapporto  1.89 (SOTTO 2)
+   estesa   6040       b(ult)= -0.067 (negativo)  rapporto  2.71 (>=2)
+   estesa   equal      b(ult)= -0.077 (negativo)  rapporto  2.36 (>=2)
+   giro 46  erc        b(ult)= -0.114 (negativo)  rapporto  1.21 (SOTTO 2)
+   giro 46  invvol     b(ult)= -0.105 (negativo)  rapporto  1.26 (SOTTO 2)
+   giro 46  6040       b(ult)= -0.071 (negativo)  rapporto  1.78 (SOTTO 2)
+   giro 46  equal      b(ult)= -0.081 (negativo)  rapporto  1.53 (SOTTO 2)
+
+   -> ipotesi A13 FALSIFICATA
+
+   Le clausole descrittive, separatamente:
+   (a) rapporto almeno 4: NO (osservato 1.21 - 2.71)
+   (b) R2 dei soli ultimi 3 anni oltre 0,5: NO (osservato 0.280 - 0.334)
+   (c) quota di vittorie sopra il 50% sulla finestra estesa: NO (osservato 13.3% - 31.1%)
+
+   NOTA. Le finestre si sovrappongono fino a 19 anni su 20: nessun
+   p-value, nessun errore standard. I coefficienti descrivono la forma
+   dei dati, non provano una relazione. Nessun candidato esce da qui.
+
+Tentativi cumulati a registro: 874

@@ -11,7 +11,7 @@ aggiunta alza la soglia per tutte).
 
 **STATO: la coda dichiarata è esaurita.** A1-A5, B1-B6, C1-C6, D1-D2 sono tutte
 eseguite (giri 30-43). Restano solo le voci nate durante l'esecuzione e non ancora
-eseguite: **A13, D3, D4**.
+eseguite: **A14, D3, D4**.
 
 **Vincolo che ha ucciso quasi tutto finora**: ogni realizzo paga 33%, e sopra
 ~100 operazioni l'anno diventa 52%. Le ipotesi sotto sono ordinate mettendo
@@ -203,6 +203,7 @@ distribuzione nulla.
 | A6 scomposizione della perdita | 44 | **confermata** — quota fiscale massima **15,3%**, sotto il 25% che falsificava. Ma la clausola "oltre il 90%" regge solo per l'inverse-vol (91,9%): le altre stanno all'84-88%. I costi di transazione valgono lo **0,3%** del divario. Controprova: con imposte ZERO sul ribilanciamento l'allocazione resta sotto di 1,8-3,3 punti |
 | A11 alpha di pareggio della sleeve | 45 | **confermata** — il decennale dovrebbe rendere **6,5-7,0 punti l'anno in più** (cioè 12,5-13% annuo per 64 anni) perché l'allocazione pareggi. Lo scarto del proxy **misurato** è 1,58 punti, non 0,3-0,8 come avevo assunto: il multiplo è 4,1-4,4×, sul bordo inferiore della banda prevista. Controprova: con la ricostruzione migliorata l'allocazione resta **−2,4/−3,4 punti** |
 | A12 finestre mobili di 20 anni | 46 | **confermata** sul test (quote 35,5-48,4%, nessuna oltre metà né a zero) e **tutte e tre le clausole descrittive sbagliate**: l'ERC vince **48,4%** delle volte, non 15-35%; le vittorie non sono centrate sui mercati orso; l'ampiezza scende a 5,50 per il 60/40. Divario medio ERC **−0,37 punti**, non 3,63. Il criterio vero è **quando la finestra finisce**, non dove è centrata |
+| **A13 rischio di sequenza** | 47 | **FALSIFICATA** — il segno è giusto (b(ultimi 3) negativo in 8 casi su 8) ma il rapporto è **1,21-2,71**, non ≥4, e cinque su otto stanno sotto 2. R² 0,28-0,33 invece di >0,5. Sulla finestra estesa la quota di vittorie **scende** a 13,3-31,1% invece di salire sopra il 50%: le 14 finestre recuperate perdono **0 su 14**. Il peso aritmetico del capitale è 9,5:1, ma sul **divario** fra allocazioni si cancella in buona parte |
 
 
 ---
@@ -371,7 +372,7 @@ vince" è vera in media e falsa in una finestra su quattro.
 *Falsificata se*: il multi-classe vince in più della metà delle finestre, oppure in
 nessuna.
 
-**A13 — Per un PAC conta la fine, non il centro: il rischio di sequenza**
+**A13 — Per un PAC conta la fine, non il centro: il rischio di sequenza** ✔ eseguita (giro 47)
 Il giro 46 ha trovato che le finestre in cui il multi-classe batte l'azionario sono
 **tutte e sole quelle che finiscono fra il 2002 e il 2016**, non quelle centrate sui
 mercati orso come avevo previsto. Il meccanismo proposto è il **rischio di sequenza**:
@@ -390,3 +391,21 @@ multi-classe sale sopra il 50%, perché si aggiungono le finestre che finiscono 
 1974-1982.
 *Falsificata se*: i due coefficienti hanno modulo comparabile (rapporto sotto 2), o
 se il segno di quello sugli ultimi 3 anni è positivo.
+
+**A14 — Rischio di sequenza sul LIVELLO, non sul divario**
+Il giro 47 ha falsificato A13 e ha mostrato dove sbagliavo: il peso del capitale in
+un PAC ventennale è **9,5:1** fra ultimi e primi tre anni (aritmetica pura), ma il
+rapporto fra i coefficienti sul **divario** fra due allocazioni è solo 1,2-2,7:1.
+Le due affermazioni sono diverse e le avevo confuse: il divario è la differenza fra
+due montanti che percorrono lo stesso sentiero di prezzi, quindi il peso del
+capitale si cancella in buona parte. Da rifare la stessa regressione sul **livello**
+dell'IRR di ciascun PAC (azionario puro e ogni allocazione, separatamente), invece
+che sulla differenza.
+*Predizione*: sul livello il rapporto |b(ultimi 3)| / |b(primi 3)| sale sopra **6**
+e l'R² dei soli ultimi tre anni supera **0,6**, avvicinandosi al 9,5:1 aritmetico;
+entrambi i coefficienti sono **positivi** (buoni rendimenti a qualunque punto del
+piano aiutano il montante), a differenza del divario dove hanno segni opposti.
+*Falsificata se*: il rapporto sul livello resta sotto 4, cioè non è
+significativamente più grande di quello sul divario — nel qual caso la mia
+spiegazione del giro 47 è sbagliata quanto quella del giro 46 e il meccanismo va
+cercato altrove.

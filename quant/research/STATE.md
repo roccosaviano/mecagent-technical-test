@@ -162,12 +162,13 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 44 | A6 scomposizione della perdita | confermata | quota fiscale 15,3%, composizione 84-92% |
 | 45 | A11 alpha di pareggio della sleeve | confermata | servirebbero 6,5-7,0 punti l'anno in più |
 | 46 | A12 finestre mobili di 20 anni | confermata | ERC vince 48,4% delle finestre, divario medio −0,37 |
+| 47 | **A13 rischio di sequenza** | **falsificata** | rapporto 1,2-2,7 invece di ≥4; 0/14 finestre recuperate |
 
-**La coda dichiarata è esaurita.** 22 voci eseguite nei giri 30-46: **20 confermate,
-2 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione. Restano in coda
-solo voci nate durante l'esecuzione: **A13, D3, D4**.
+**La coda dichiarata è esaurita.** 23 voci eseguite nei giri 30-47: **20 confermate,
+3 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione. Restano in coda
+solo voci nate durante l'esecuzione: **A14, D3, D4**.
 
-Registro a **866 tentativi** cumulati.
+Registro a **874 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -232,6 +233,23 @@ Registro a **866 tentativi** cumulati.
   netta contro il cap-weighted, con 0,31 rotazioni l'anno. HRP guadagna 0,28 punti
   di CAGR lordo e ne restituisce 1,4 netti: il conto fiscale del ribilanciamento
   supera il guadagno di un metodo che non prova nemmeno a prevedere i rendimenti.
+- **Il rischio di sequenza spiega il MONTANTE, non quale allocazione vince.** Il
+  giro 47 separa due cose che avevo confuso. Il peso del capitale in un PAC
+  ventennale è **9,5:1** fra ultimi e primi tre anni — aritmetica pura, nessun dato
+  di mercato. Ma il rapporto fra i coefficienti sul **divario** fra due allocazioni
+  è solo **1,2-2,7:1**, con R² 0,28-0,33. Il divario è la differenza fra due
+  montanti che percorrono lo **stesso** sentiero di prezzi: il peso del capitale
+  agisce su entrambi e si cancella. E b(primi 3) è **positivo**, non trascurabile —
+  i due estremi del piano contano in versi opposti.
+- **Su 45 finestre di 20 anni il multi-classe perde quasi sempre.** Estendendo al
+  1962 (giro 47) l'ERC vince 14 volte su 45 e le altre tre allocazioni 6 su 45: il
+  quadro è più duro di quanto sembrasse al giro 46, che vedeva solo il 1976-2026.
+  Le 14 finestre recuperate perdono **tutte e quattordici**.
+- **Ho nominato due volte di fila un periodo che il disegno non può produrre.** Al
+  giro 46 "finestre centrate sul 1969-1982" quando nessuna finestra poteva averci
+  il punto medio; al giro 47 "finestre che finiscono nel 1974-1982" quando con
+  finestre di 20 anni dal 1962 la fine più vecchia è il 1981. **Prima di scrivere
+  una condizione, verificare che il disegno del test possa generarla.**
 - **Su vent'anni il divario quasi sparisce, e per un PAC conta la FINE.** Il giro
   46 rifà il confronto su 32 finestre mobili di 20 anni, ognuna un PAC completo:
   l'ERC vince nel **48,4%** dei casi e il divario medio scende da 3,63 punti
