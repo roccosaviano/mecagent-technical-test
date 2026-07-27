@@ -861,3 +861,7 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 45,A11 alpha di pareggio sleeve obbligazionaria,invvol,1962-02-28/2026-05-31,,6.517220473617213,10.479637771592618,-3.9624172979754047,772,"alpha=6.69%,proxygap=1.58%,migliorata=7.50%"
 45,A11 alpha di pareggio sleeve obbligazionaria,6040,1962-02-28/2026-05-31,,7.835325168726823,10.479637771592618,-2.644312602865795,772,"alpha=6.96%,proxygap=1.58%,migliorata=8.55%"
 45,A11 alpha di pareggio sleeve obbligazionaria,equal,1962-02-28/2026-05-31,,7.3570724808230015,10.479637771592618,-3.122565290769616,772,"alpha=6.62%,proxygap=1.58%,migliorata=8.15%"
+46,A12 finestre mobili di 20 anni,erc,1976-2007,,,,-0.36529788472701386,31,"vinte=15/31,span=10.01"
+46,A12 finestre mobili di 20 anni,invvol,1976-2007,,,,-1.0026238315089904,31,"vinte=12/31,span=9.19"
+46,A12 finestre mobili di 20 anni,6040,1976-2007,,,,-0.476343152840563,31,"vinte=13/31,span=5.50"
+46,A12 finestre mobili di 20 anni,equal,1976-2007,,,,-0.6925578970917197,31,"vinte=11/31,span=6.77"

@@ -161,12 +161,13 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 43 | **D2 bootstrap a blocchi** | **falsificata** | H5 al 100° percentile, +3,82% lordo / −1,20% netto |
 | 44 | A6 scomposizione della perdita | confermata | quota fiscale 15,3%, composizione 84-92% |
 | 45 | A11 alpha di pareggio della sleeve | confermata | servirebbero 6,5-7,0 punti l'anno in più |
+| 46 | A12 finestre mobili di 20 anni | confermata | ERC vince 48,4% delle finestre, divario medio −0,37 |
 
-**La coda dichiarata è esaurita.** 21 voci eseguite nei giri 30-45: **19 confermate,
+**La coda dichiarata è esaurita.** 22 voci eseguite nei giri 30-46: **20 confermate,
 2 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione. Restano in coda
-solo voci nate durante l'esecuzione: **A12, D3, D4**.
+solo voci nate durante l'esecuzione: **A13, D3, D4**.
 
-Registro a **862 tentativi** cumulati.
+Registro a **866 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -231,6 +232,21 @@ Registro a **862 tentativi** cumulati.
   netta contro il cap-weighted, con 0,31 rotazioni l'anno. HRP guadagna 0,28 punti
   di CAGR lordo e ne restituisce 1,4 netti: il conto fiscale del ribilanciamento
   supera il guadagno di un metodo che non prova nemmeno a prevedere i rendimenti.
+- **Su vent'anni il divario quasi sparisce, e per un PAC conta la FINE.** Il giro
+  46 rifà il confronto su 32 finestre mobili di 20 anni, ognuna un PAC completo:
+  l'ERC vince nel **48,4%** dei casi e il divario medio scende da 3,63 punti
+  (sull'intera storia) a **0,37**. E le finestre vinte sono tutte e sole quelle che
+  **finiscono** fra il 2002 e il 2016, non quelle centrate sui mercati orso. È
+  rischio di sequenza: dopo vent'anni di versamenti il capitale è al massimo,
+  quindi gli ultimi anni pesano su una somma enorme e i primi su quasi niente.
+  Chiudere nel 2009 significa valutare subito dopo un −50%; chiudere nel 2025
+  significa valutare dopo quindici anni di rialzo. Aggiunta A13 per misurarlo.
+- **Le predizioni sbagliano quasi sempre sui NUMERI, quasi mai sul verso.** Su 22
+  voci eseguite, il test di falsificazione è passato 20 volte, ma le clausole
+  descrittive (soglie, quote, ampiezze) si sono rivelate sbagliate in almeno sei
+  giri — A3, A10, B6, C6, A6, A12. La direzione era giusta, la calibrazione no.
+  È l'argomento più forte per scrivere condizioni di falsificazione binarie invece
+  che a soglia numerica: le prime hanno retto, le seconde no.
 - **E non è colpa del proxy obbligazionario.** Il giro 45 misura lo scarto invece
   di citarlo: una ricostruzione con convessità e rolldown rende **1,58 punti** più
   di quella semplice (avevo assunto 0,3-0,8 — stima sbagliata, per difetto). Ma per

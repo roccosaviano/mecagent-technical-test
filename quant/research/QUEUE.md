@@ -11,7 +11,7 @@ aggiunta alza la soglia per tutte).
 
 **STATO: la coda dichiarata è esaurita.** A1-A5, B1-B6, C1-C6, D1-D2 sono tutte
 eseguite (giri 30-43). Restano solo le voci nate durante l'esecuzione e non ancora
-eseguite: **A12, D3, D4**.
+eseguite: **A13, D3, D4**.
 
 **Vincolo che ha ucciso quasi tutto finora**: ogni realizzo paga 33%, e sopra
 ~100 operazioni l'anno diventa 52%. Le ipotesi sotto sono ordinate mettendo
@@ -202,6 +202,7 @@ distribuzione nulla.
 | **D2 bootstrap a blocchi** | 43 | **FALSIFICATA** — H5 al **100° percentile** del nullo (+3,82% lordo contro 99° a 2,49%). Ma il nullo non tiene conto della selezione, e la stessa strategia fa **−1,20% netto**. Il premio è reale, l'investitore perde comunque |
 | A6 scomposizione della perdita | 44 | **confermata** — quota fiscale massima **15,3%**, sotto il 25% che falsificava. Ma la clausola "oltre il 90%" regge solo per l'inverse-vol (91,9%): le altre stanno all'84-88%. I costi di transazione valgono lo **0,3%** del divario. Controprova: con imposte ZERO sul ribilanciamento l'allocazione resta sotto di 1,8-3,3 punti |
 | A11 alpha di pareggio della sleeve | 45 | **confermata** — il decennale dovrebbe rendere **6,5-7,0 punti l'anno in più** (cioè 12,5-13% annuo per 64 anni) perché l'allocazione pareggi. Lo scarto del proxy **misurato** è 1,58 punti, non 0,3-0,8 come avevo assunto: il multiplo è 4,1-4,4×, sul bordo inferiore della banda prevista. Controprova: con la ricostruzione migliorata l'allocazione resta **−2,4/−3,4 punti** |
+| A12 finestre mobili di 20 anni | 46 | **confermata** sul test (quote 35,5-48,4%, nessuna oltre metà né a zero) e **tutte e tre le clausole descrittive sbagliate**: l'ERC vince **48,4%** delle volte, non 15-35%; le vittorie non sono centrate sui mercati orso; l'ampiezza scende a 5,50 per il 60/40. Divario medio ERC **−0,37 punti**, non 3,63. Il criterio vero è **quando la finestra finisce**, non dove è centrata |
 
 
 ---
@@ -354,7 +355,7 @@ conclusione del giro 44 regge anche con un indice obbligazionario vero.
 *Falsificata se*: il rendimento aggiuntivo richiesto sta sotto 1 punto l'anno per
 almeno una delle quattro allocazioni, cioè dentro l'incertezza del proxy.
 
-**A12 — In quante finestre di 20 anni l'allocazione multi-classe avrebbe vinto?**
+**A12 — In quante finestre di 20 anni l'allocazione multi-classe avrebbe vinto?** ✔ eseguita (giro 46)
 I giri 44 e 45 concludono che il multi-classe perde 2,4-3,9 punti contro l'azionario
 puro, ma su **una sola finestra**: 1962-2026, che contiene il più lungo mercato toro
 obbligazionario della storia *e* un premio azionario altissimo. Una media su 64 anni
@@ -369,3 +370,23 @@ cioè è più grande del divario medio, e quindi la conclusione "l'azionario pur
 vince" è vera in media e falsa in una finestra su quattro.
 *Falsificata se*: il multi-classe vince in più della metà delle finestre, oppure in
 nessuna.
+
+**A13 — Per un PAC conta la fine, non il centro: il rischio di sequenza**
+Il giro 46 ha trovato che le finestre in cui il multi-classe batte l'azionario sono
+**tutte e sole quelle che finiscono fra il 2002 e il 2016**, non quelle centrate sui
+mercati orso come avevo previsto. Il meccanismo proposto è il **rischio di sequenza**:
+dopo vent'anni di versamenti il capitale è al massimo, quindi i rendimenti degli
+ultimi anni pesano su una somma enorme e quelli dei primi su quasi niente. Da
+misurare direttamente invece di dedurlo: (i) regressione del divario di ogni
+finestra sul rendimento azionario degli **ultimi 3 anni** della finestra contro
+quello dei **primi 3**; (ii) la stessa cosa con la ricostruzione obbligazionaria
+**semplice**, che copre 1962-2026 e recupera le 12 finestre perse per la mancanza
+del DGS2, incluse quelle centrate sul mercato orso 1969-1982 che il giro 46 non ha
+potuto testare.
+*Predizione*: il coefficiente sugli ultimi 3 anni è negativo, di modulo almeno
+**4 volte** quello sui primi 3, e da solo spiega oltre metà della varianza del
+divario fra finestre. Sulla finestra estesa 1962-2026 la quota di vittorie del
+multi-classe sale sopra il 50%, perché si aggiungono le finestre che finiscono nel
+1974-1982.
+*Falsificata se*: i due coefficienti hanno modulo comparabile (rapporto sotto 2), o
+se il segno di quello sugli ultimi 3 anni è positivo.
