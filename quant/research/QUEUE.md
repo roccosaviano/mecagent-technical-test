@@ -498,3 +498,71 @@ differimento trentennale del buy&hold, e questo drag fiscale supera il risparmio
 finanziamento. IRR netta sotto il buy&hold.
 *Falsificata se*: IRR netta ≥ buy&hold azionario.
 *Direzione dell'errore*: ottimistica (costo del deep ITM sottostimato).
+
+---
+
+## F. Rotazione concentrata e il sistema EMA 9/21/50/200
+
+Due richieste distinte. La prima: **prendere il migliore** invece di un paniere —
+rotazione settoriale top-1 sulla base del periodo precedente, su mercati e
+frequenze diverse. La seconda: il sistema a quattro EMA di uso comune fra i
+trader, con le sue regole di ingresso e di uscita, applicato a mercati e
+**timeframe** diversi.
+
+**Il sistema EMA, come lo implemento** (dalle regole dell'immagine, verbatim):
+ingresso solo se prezzo sopra EMA200 **e** EMA21 sopra EMA50; il prezzo deve
+ritracciare verso la EMA21; il volume deve **calare** durante il ritracciamento;
+si compra su candela rialzista vicino alla EMA21. Uscita: stop iniziale sotto il
+minimo del ritracciamento, presa di profitto parziale (metà) a 1:2 rischio/rendimento,
+stop a pareggio sul resto, trailing sulla EMA21, uscita totale su chiusura sotto
+la EMA50. Le regole non specificano lo stop iniziale: lo fisso al minimo delle
+ultime 10 barre e lo dichiaro.
+
+**F1 — Rotazione top-1 sul migliore del periodo precedente**
+49 settori USA, 5 regioni, 8 cripto. Ribilanciamento annuale, trimestrale e
+mensile, con lookback pari al periodo precedente.
+*Predizione*: il top-1 è **peggiore** del top-10 già testato (H5) e peggiore
+dell'equal-weight del proprio universo, perché concentrare aggiunge varianza senza
+aggiungere rendimento atteso — il segnale non è abbastanza forte da giustificare
+una posizione sola. La versione annuale è la meno peggio perché è la meno tassata.
+*Falsificata se*: una qualunque configurazione top-1 batte l'equal-weight del
+proprio universo netto di imposte.
+
+**F2 — La curva del numero di posizioni e della frequenza**
+Griglia completa: 1, 3, 5, 10, 25 posizioni × ribilanciamento mensile,
+trimestrale, annuale, sui 49 settori. Misura il compromesso fra concentrazione e
+rotazione invece di provarne due punti.
+*Predizione*: l'IRR netta è **monotona crescente** nel numero di posizioni e
+**decrescente** nella frequenza di ribilanciamento; la cella migliore è quella più
+diversificata e meno frequente, cioè quella più vicina al buy&hold. Il massimo
+della griglia non batte l'equal-weight statico.
+*Falsificata se*: il massimo della griglia sta a meno di 5 posizioni, oppure batte
+l'equal-weight statico.
+
+**F3 — Il sistema EMA 9/21/50/200 su base giornaliera**
+QQQ e AAPL (Twelve Data, OHLCV) e le 8 cripto OKX. Serve OHLCV vero: volume per il
+filtro sul ritracciamento, massimi e minimi per stop e target.
+*Predizione*: lordo positivo sugli asset in tendenza (cripto, QQQ), perché è un
+sistema di trend following e quello è il periodo giusto; ma 20-60 operazioni
+l'anno portano l'aliquota al 52%, e netto di costi e imposte finisce **sotto il
+buy&hold su ogni asset**.
+*Falsificata se*: l'IRR netta batte il buy&hold su almeno metà degli asset.
+
+**F4 — Lo stesso sistema su timeframe intraday**
+QQQ a 1 ora e a 15 minuti, contro la versione giornaliera.
+*Predizione*: accorciando il timeframe il vantaggio lordo per operazione si
+restringe verso il costo mentre il numero di operazioni esplode; il risultato netto
+è **monotonicamente peggiore** passando da giornaliero a orario a 15 minuti.
+*Falsificata se*: un timeframe intraday batte la versione giornaliera netto di
+costi e imposte.
+
+**F5 — Quale pezzo del sistema fa il lavoro?**
+Ablazione: (a) sistema completo, (b) senza il filtro sul volume, (c) senza il
+requisito di ritracciamento, (d) solo il filtro di tendenza (prezzo sopra EMA200 e
+EMA21 sopra EMA50, dentro o fuori), (e) buy&hold.
+*Predizione*: il **solo filtro di tendenza** cattura almeno l'80% del vantaggio
+lordo del sistema completo; ritracciamento e volume riducono il numero di
+operazioni senza migliorare l'aspettativa per operazione. Cioè: la parte che
+funziona è quella che tutti considerano banale.
+*Falsificata se*: l'aspettativa per operazione del sistema completo supera quella
+del solo filtro di tendenza di oltre il 50%.
