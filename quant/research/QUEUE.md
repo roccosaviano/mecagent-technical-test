@@ -627,3 +627,22 @@ segnale. Ma il veicolo che lo rende possibile in Irlanda è un ETF UCITS, che co
 cap-weighted-diretto, e lì il momentum **perde**.
 *Falsificata se*: momentum in ETF UCITS batte il cap-weighted detenuto direttamente
 in regime CGT.
+
+---
+
+## H. Il buco dichiarato: azionario globale contro solo USA
+
+**H1 — All-world contro S&P 500**
+Tutto il progetto usa l'azionario USA. Al giro 39 gli USA hanno battuto ogni forma
+di diversificazione geografica di 3 punti nel 1990-2026 — ma è lo stesso senno di
+poi di cui diffido per tutto il resto, e per un investitore europeo il default
+onesto è globale. Confronto su dati reali (VT, ACWI, URTH contro SPY) e sul proxy
+lungo di Ken French (Developed contro USA), regime ETF UCITS, PAC €750/mese.
+*Predizione*: sulle finestre disponibili l'S&P batte il globale di **1,5-3 punti**,
+perché il globale è ~60% USA più il resto che ha reso meno; ma la differenza è
+**interamente attribuibile alla sovraperformance USA del periodo**, non a un
+vantaggio strutturale, e su finestre mobili la quota di vittorie dell'S&P sta
+**sotto il 90%** — cioè esistono finestre in cui il globale vince.
+*Falsificata se*: il globale batte l'S&P sulla finestra principale, oppure l'S&P
+vince in **tutte** le finestre mobili (nel qual caso la sovraperformance USA non è
+un caso di periodo ma qualcosa di più sistematico).
