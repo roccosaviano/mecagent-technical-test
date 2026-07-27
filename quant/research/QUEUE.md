@@ -595,3 +595,32 @@ Cioè: +1,34 punti è dentro l'incertezza del modello, e la voce va chiusa.
 vince in più della metà delle finestre mobili. In quel caso, e solo in quel caso,
 i LEAPS diventano il primo candidato vero del progetto e vanno portati alle
 verifiche di robustezza complete.
+
+---
+
+## G. Filtri e indice momentum come VEICOLO
+
+**G1 — I filtri di tendenza su un PAC azionario, misurati insieme**
+Filtro a media mobile 10 mesi, 200 giorni, e il solo filtro di tendenza del giro 51
+(sopra EMA200 e EMA21>EMA50), sull'indice cap-weighted. Non su cripto e non su
+asset scelti: sul benchmark che l'investitore userebbe davvero.
+*Predizione*: tutti riducono volatilità e drawdown e tutti perdono IRR netta,
+perché ogni uscita è un realizzo e il rientro avviene più in alto. Il migliore
+perde meno di 2 punti, il peggiore più di 4.
+*Falsificata se*: un filtro batte il buy&hold netto imposte.
+
+**G2 — L'indice momentum come VEICOLO, non come strategia**
+La domanda vera: al giro 50 il momentum settoriale perdeva perché **io** ruotavo e
+**io** pagavo il 33-52% a ogni rotazione. Ma se la stessa rotazione avviene
+**dentro un fondo**, per chi detiene le quote non è un evento fiscale: si paga solo
+alla vendita. È la differenza fra fare la strategia e comprare l'indice che la fa.
+Confronto 2×2: momentum settoriale top-10 mensile contro cap-weighted, ciascuno in
+regime **CGT diretto** e in regime **ETF UCITS** (exit tax 38% + deemed disposal).
+I costi di transazione restano, li paga il fondo.
+*Predizione*: incartato in un fondo il momentum **batte** il cap-weighted a parità
+di regime, perché il vincolo che lo uccideva era il realizzo del detentore e non il
+segnale. Ma il veicolo che lo rende possibile in Irlanda è un ETF UCITS, che costa
+**2,15 punti** (giro sul veicolo): il confronto che conta è momentum-in-ETF contro
+cap-weighted-diretto, e lì il momentum **perde**.
+*Falsificata se*: momentum in ETF UCITS batte il cap-weighted detenuto direttamente
+in regime CGT.
