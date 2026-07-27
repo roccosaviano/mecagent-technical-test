@@ -152,9 +152,19 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 39 | B5 azionario internazionale | confermata | DSR 0,864 |
 | 39 | B6 cripto esteso | confermata | DSR 0,904, Sharpe [0,22 – 1,56] |
 
-**Gruppo A chiuso: 10 su 10 confermate. Gruppo B: 6 confermate, 1 senza esito.**
+| 40 | C1 cointegrazione | confermata | 5,4% persiste fuori campione, p = 0,476 |
+| 40 | C2 breadth | confermata | correlazione 0,830 col filtro di trend |
+| 41 | C3 momentum multi-orizzonte | confermata | ogni composito peggio su entrambi i criteri |
+| 41 | C4 term structure VIX | confermata | direzione p = 0,535, volatilità ρ = +0,42 |
+| 42 | C5 premio coperto | confermata | −5,91 punti, coda non accorciata |
+| 42 | C6 quattro pilastri | confermata | Sharpe 0,76 contro 0,95 del miglior singolo |
+| 43 | **D1 data di partenza** | **falsificata** | ampiezza 0,56 punti, per difetto della specifica |
+| 43 | **D2 bootstrap a blocchi** | **falsificata** | H5 al 100° percentile, +3,82% lordo / −1,20% netto |
 
-Nessuna promozione dalla coda. Registro a **808 tentativi** cumulati.
+**La coda dichiarata è esaurita.** 19 voci eseguite nei giri 30-43: **17 confermate,
+2 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+
+Registro a **854 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -219,6 +229,23 @@ Nessuna promozione dalla coda. Registro a **808 tentativi** cumulati.
   netta contro il cap-weighted, con 0,31 rotazioni l'anno. HRP guadagna 0,28 punti
   di CAGR lordo e ne restituisce 1,4 netti: il conto fiscale del ribilanciamento
   supera il guadagno di un metodo che non prova nemmeno a prevedere i rendimenti.
+- **La frase che riassume tutto il progetto** viene dal giro 43. Il bootstrap a
+  blocchi mette il momentum settoriale al **100° percentile** della distribuzione
+  nulla: +3,82% annuo lordo, oltre il 99° percentile, il premio è statisticamente
+  reale. La stessa strategia sullo stesso benchmark fa **−1,20% di IRR netta**.
+  262% di rotazione l'anno al 52% costa più di cinque punti. **Il premio esiste e
+  l'investitore perde comunque.**
+- **La scelta del benchmark vale più di qualunque parametro.** Contro il PAC
+  cap-weighted H5 valeva +2,95 punti; contro l'equal-weight dello **stesso
+  universo** su cui sceglie, è negativo in 60 casi su 60 (20 date di partenza × 3
+  candidati). Aggiunta D4 per misurare quanto del margine apparente era solo il
+  premio dell'equal-weighting.
+- **Una condizione di falsificazione può falsificarsi da sola.** D1 chiedeva la
+  dispersione su 20 date di partenza con fine fissa: quei 20 campioni condividono
+  33-52 anni su 52, quindi la dispersione è piccola per costruzione (0,56 punti).
+  La falsificazione è vera sulla lettera e vuota nella sostanza. Aggiunta D3 con
+  finestre di lunghezza fissa. **Scrivere la predizione prima non basta: bisogna
+  anche che il test possa davvero fallire.**
 - **Un bug da fill_value che ha prodotto una falsificazione falsa.** Al giro 37
   `sret.add(carry, fill_value=0.0)` sommava il carry anche dove il CAMBIO non
   esisteva ancora, fabbricando un euro senza rischio di cambio dal 1994 al 1999.

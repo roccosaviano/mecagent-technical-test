@@ -1,0 +1,42 @@
+============================================================================================
+D1 — dispersione dovuta alla sola data di partenza
+============================================================================================
+   Benchmark: equal-weight dei 49 settori (stesso universo)
+   20 date di partenza, da 1974 a 1993, fine sempre 2026
+
+   candidato                     media      min      max   ampiezza   dev.std  volte>0
+   -------------------------------------------------------------------------
+   H5 momentum settoriale       -1.20%   -1.41%   -1.04%      0.36%     0.14%     0/20
+   H4 tilt low-vol              -2.85%   -2.91%   -2.74%      0.17%     0.05%     0/20
+   C1 punteggio misto           -2.54%   -2.88%   -2.32%      0.56%     0.17%     0/20
+
+   Predizione: la dispersione supera 3 punti ed e' piu' grande
+   dell'extra-rendimento stesso. FALSIFICATA se sotto 1 punto.
+   Ampiezza massima 0.56 punti · deviazione standard massima 0.17 punti
+   Extra-rendimento medio piu' grande in valore assoluto: 2.85 punti
+   La dispersione e' piu' piccola dell'extra-rendimento
+   -> ipotesi D1 FALSIFICATA
+
+============================================================================================
+D2 — bootstrap a blocchi contro la distribuzione nulla
+============================================================================================
+   Candidato migliore per extra-rendimento medio: H5 momentum settoriale
+   Bootstrap stazionario di Politis-Romano, blocchi di media 12 mesi, 5000 risimulazioni
+
+   candidato                   extra ann.  percentile   95° nullo   99° nullo
+   --------------------------------------------------------------------------
+   H5 momentum settoriale           3.82%      100.0%       1.81%       2.49%
+   H4 tilt low-vol                 -1.53%        7.7%       1.67%       2.38%
+   C1 punteggio misto               0.05%       51.3%       1.54%       2.13%
+
+   Predizione: il candidato migliore cade DENTRO il 95esimo
+   percentile. FALSIFICATA se sta oltre il 99esimo.
+   H5 momentum settoriale: percentile 100.0
+   -> ipotesi D2 FALSIFICATA  (dentro il 99esimo ma FUORI dal 95esimo: la predizione sbaglia il livello)
+
+   Il bootstrap misura una cosa che il DSR non misura: quanto
+   dell'extra-rendimento sopravvive quando si preserva
+   l'autocorrelazione della serie ma si distrugge il legame fra
+   segnale e rendimento futuro.
+
+Tentativi cumulati a registro: 854

@@ -1,0 +1,56 @@
+============================================================================================
+C5 — premio di volatilita' nudo contro premio coperto
+============================================================================================
+   Finestra comune 2009-02-28 -> 2025-12-31 (203 mesi)
+   Approssimazione dichiarata: CNDR (ali comprate) al posto dello
+   spread verticale su misura, che richiederebbe catene di opzioni.
+
+label                                  cagr      vol   sharpe     skew       dd      irr
+----------------------------------------------------------------------------------------
+PUT — premio NUDO                     9.40%    9.98%     0.95    -1.02  -20.68%    6.44%
+BXM — buy-write                       8.43%   10.24%     0.84    -0.97  -22.22%    5.77%
+CNDR — premio COPERTO                 0.57%    6.59%     0.12    -1.50  -18.96%    0.53%
+CLL — collar 95/110                   8.34%   11.98%     0.73    -1.39  -22.10%    7.69%
+PPUT — sola copertura                11.28%   11.76%     0.97    -0.37  -20.81%    8.88%
+azionario (benchmark)                15.52%   15.25%     1.03    -0.37  -24.84%   11.76%
+
+   Condizione: FALSIFICATA se il premio COPERTO ha IRR netta
+   superiore al PUT non coperto.
+     PUT nudo    IRR 6.44%  skew -1.02  DD -20.7%
+     CNDR coperto IRR 0.53%  skew -1.50  DD -19.0%
+     differenza -5.91 punti
+   -> ipotesi C5 CONFERMATA
+
+   La copertura ha tagliato la coda? skew da -1.02 a -1.50, drawdown da -20.7% a -19.0%
+   Costo della sola assicurazione (PPUT contro azionario): -4.24 punti di CAGR l'anno
+
+============================================================================================
+C6 — i quattro pilastri dei CTA insieme
+============================================================================================
+   Finestra comune 2009-02-28 -> 2025-12-31 (203 mesi)
+
+   Correlazioni:
+                        trend azionario  momentum materie prime  carry valutario  premio volatilita'
+trend azionario                    1.00                    0.23            -0.04                0.61
+momentum materie prime             0.23                    1.00             0.07                0.18
+carry valutario                   -0.04                    0.07             1.00                0.08
+premio volatilita'                 0.61                    0.18             0.08                1.00
+
+   Correlazione media a coppie: 0.189 (SOTTO 0,2 come previsto)
+
+label                                  cagr      vol   sharpe       dd     turn      irr    irr52
+-------------------------------------------------------------------------------------------------
+solo trend azionario                 10.45%   11.23%     0.94  -17.84%     1.60    8.04%    6.59%
+solo momentum materie prime           0.44%   18.80%     0.12  -50.64%     2.36    0.43%   -0.37%
+solo carry valutario                 -0.75%   10.62%    -0.02  -49.59%     0.24    1.37%    0.97%
+solo premio volatilita'               9.40%    9.98%     0.95  -20.68%     0.00    6.44%    4.99%
+4 pilastri equal-weight               5.34%    8.03%     0.69  -15.15%     1.11    4.77%    3.86%
+4 pilastri inverse-vol                5.63%    7.56%     0.76  -14.72%     0.99    4.90%    3.83%
+azionario buy&hold (bench)           15.52%   15.25%     1.03  -24.84%     0.00   11.76%    9.61%
+
+   Sharpe del combinato sopra ogni singolo? NO  (combinato 0.76 contro il miglior singolo 0.95)
+   Qualche combinazione batte il buy&hold netto imposte? NO
+   -> ipotesi C6 CONFERMATA
+   DSR del miglior combinato su N=57: 0.901
+
+Tentativi cumulati a registro: 848

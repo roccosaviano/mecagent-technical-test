@@ -1,0 +1,58 @@
+============================================================================================
+C3 — momentum a orizzonti multipli
+============================================================================================
+   49 settori, 1969-07-31 -> 2026-05-31
+   Ogni punteggio usa solo il passato: rank su [t-lb, t-1], applicato in t+1
+
+
+label                                  cagr      vol   sharpe       dd     turn      irr    irr52
+-------------------------------------------------------------------------------------------------
+49 settori equal-weight (bench)      11.15%   17.20%     0.70  -52.63%     0.00   11.16%   10.40%
+solo 12-2 (riferimento)              15.16%   18.49%     0.86  -58.32%     2.68   11.67%   10.04%
+solo 1m                               9.76%   18.02%     0.61  -55.64%     9.08    8.08%    6.95%
+solo 3m                              10.98%   17.96%     0.67  -55.12%     6.44    9.29%    8.01%
+solo 6m                              11.97%   18.18%     0.72  -55.50%     4.06    9.81%    8.46%
+composito 1+3+6+12                   12.75%   17.58%     0.78  -53.86%     5.71    9.89%    8.49%
+composito 6+12                       14.04%   18.12%     0.82  -57.33%     3.45   10.87%    9.34%
+12-2 con reversione a 1m             14.16%   18.14%     0.82  -50.71%     7.49   10.90%    9.36%
+
+   Condizione: FALSIFICATA se un composito ha Sharpe maggiore del
+   solo 12-2 CON turnover non superiore.
+   Riferimento 12-2: Sharpe 0.862, turnover 2.68x
+     composito 1+3+6+12         Sharpe 0.776 (-) · turnover 5.71x (>) -> no
+     composito 6+12             Sharpe 0.821 (-) · turnover 3.45x (>) -> no
+     12-2 con reversione a 1m   Sharpe 0.825 (-) · turnover 7.49x (>) -> no
+   -> ipotesi C3 CONFERMATA
+   Turnover massimo 9.08x l'anno: sopra il 100%, l'aliquota di
+   riferimento e' il 52%. Nessuna configurazione batte comunque il
+   benchmark: migliore 10.04% contro 11.16%
+
+============================================================================================
+C4 — term structure del VIX
+============================================================================================
+   VIX/VIX3M 2010-01-04 -> 2025-12-31 (4024 giorni)
+   ATTENZIONE: questa finestra sta dentro l'holdout 2010-2026.
+   Non lo brucia — C4 non promuove candidati, la sua condizione e'
+   sull'accuratezza direzionale — ma nessun candidato esce da qui.
+
+   (a) DIREZIONE
+       frequenza di base dei giorni positivi: 54.760%
+       in contango (VIX < VIX3M):             54.702% su 3711 giorni (92% del campione)
+       in backwardation (VIX >= VIX3M):       55.449% su 312 giorni (8% del campione)
+       test binomiale contro la frequenza di base: p = 0.535
+   (b) VOLATILITA'
+       correlazione di Spearman fra VIX/VIX3M e la volatilita'
+       realizzata dei 21 giorni SUCCESSIVI: +0.421 (p = 8.87e-172)
+
+   -> ipotesi C4 CONFERMATA
+   (confermata = il segnale cronometra la volatilita' ma non la
+    direzione, cioe' |rho| grande su (b) e p non significativo su (a))
+
+label                                  cagr      vol   sharpe       dd     turn      irr    irr52
+-------------------------------------------------------------------------------------------------
+azionario buy&hold (finestra C4)     14.06%   14.91%     0.96  -24.84%     0.00   11.56%    9.37%
+fuori in backwardation               12.57%   12.85%     0.99  -26.85%     1.81    9.32%    7.87%
+   (riportato per completezza, NON promuovibile: finestra dentro
+    l'holdout)
+
+Tentativi cumulati a registro: 835

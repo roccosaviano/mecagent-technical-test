@@ -6,8 +6,12 @@ l'esito qualunque sia. Nessuna voce viene riscritta dopo aver visto i dati: se
 un'ipotesi va rivista, si aggiunge una voce nuova che dichiara perché.
 
 Contabilità dei tentativi: `N` = dimensione della griglia se c'è selezione,
-altrimenti la famiglia delle ipotesi pre-dichiarate (attualmente ~32 e in
-crescita con questa coda — ogni voce aggiunta alza la soglia per tutte).
+altrimenti la famiglia delle ipotesi pre-dichiarate (attualmente 59 — ogni voce
+aggiunta alza la soglia per tutte).
+
+**STATO: la coda dichiarata è esaurita.** A1-A5, B1-B6, C1-C6, D1-D2 sono tutte
+eseguite (giri 30-43). Restano solo le voci nate durante l'esecuzione e non ancora
+eseguite: **A6, A7-A10 fatte, B7 fatta, D3, D4**.
 
 **Vincolo che ha ucciso quasi tutto finora**: ogni realizzo paga 33%, e sopra
 ~100 operazioni l'anno diventa 52%. Le ipotesi sotto sono ordinate mettendo
@@ -102,7 +106,7 @@ non migliora perché la finestra resta di sei anni.
 
 ## C. Sistemi non ancora provati
 
-**C1 — Pairs trading / cointegrazione sui 49 settori**
+**C1 — Pairs trading / cointegrazione sui 49 settori** ✔ eseguita (giro 40)
 Test di Engle-Granger su tutte le coppie, trading dello spread sulle coppie
 cointegrate nel periodo di stima.
 *Predizione*: molte coppie risultano cointegrate in-sample per puro caso
@@ -111,34 +115,34 @@ persiste fuori campione.
 *Falsificata se*: la quota di coppie che restano cointegrate fuori campione
 supera significativamente il 5%.
 
-**C2 — Breadth / partecipazione come segnale di mercato**
+**C2 — Breadth / partecipazione come segnale di mercato** ✔ eseguita (giro 40)
 Quota di settori sopra la propria media a 200 giorni come indicatore di
 salute del mercato.
 *Predizione*: correlato al trend dell'indice stesso oltre 0,8, quindi non
 aggiunge informazione a un semplice filtro di trend.
 *Falsificata se*: correlazione col filtro di trend sotto 0,6 E migliora l'IRR.
 
-**C3 — Momentum a orizzonti multipli combinato (1, 3, 6, 12 mesi)**
+**C3 — Momentum a orizzonti multipli combinato (1, 3, 6, 12 mesi)** ✔ eseguita (giro 41)
 Punteggio composito invece del solo 12-2.
 *Predizione*: il 12-2 domina; aggiungere orizzonti brevi introduce reversione
 e alza il turnover senza alzare lo Sharpe.
 *Falsificata se*: Sharpe > del solo 12-2 con turnover non superiore.
 
-**C4 — Volatilità come asset: term structure del VIX**
+**C4 — Volatilità come asset: term structure del VIX** ✔ eseguita (giro 41)
 VIX contro VIX a 3 mesi (contango/backwardation) come segnale di rischio.
 *Predizione*: il segnale funziona per cronometrare la volatilità, non la
 direzione — stesso esito del giro 22.
 *Falsificata se*: produce un segnale direzionale con accuratezza sopra la
 frequenza di base in modo significativo.
 
-**C5 — Overlay di copertura sul premio di volatilità**
+**C5 — Overlay di copertura sul premio di volatilità** ✔ eseguita (giro 42)
 Vendere put e comprare put più lontane (put spread) per tagliare la coda che
 uccide BXM e PUT. Approssimato dai dati CBOE disponibili.
 *Predizione*: la copertura costa più della coda che evita, perché il premio
 delle put lontane è proporzionalmente più caro (volatility smile).
 *Falsificata se*: IRR netta superiore a PUT non coperto.
 
-**C6 — Multi-strategia su stream davvero non correlati**
+**C6 — Multi-strategia su stream davvero non correlati** ✔ eseguita (giro 42)
 Combinare: trend azionario, carry valutario, momentum materie prime, premio
 di volatilità. Sono i quattro pilastri dei CTA.
 *Predizione*: correlazione media sotto 0,2, Sharpe combinato sopra ogni
@@ -149,7 +153,7 @@ singolo, e IRR netta comunque sotto il buy&hold per la rotazione aggregata.
 
 ## D. Metodologiche
 
-**D1 — Quanto vale la finestra di partenza**
+**D1 — Quanto vale la finestra di partenza** ✔ eseguita (giro 43)
 Rieseguire i tre candidati promossi facendo partire il campione in 20 anni
 diversi, per misurare la dispersione del risultato dovuta alla sola data di
 inizio.
@@ -157,7 +161,7 @@ inizio.
 grande dell'extra-rendimento stesso.
 *Falsificata se*: dispersione sotto 1 punto.
 
-**D2 — Bootstrap a blocchi dei candidati**
+**D2 — Bootstrap a blocchi dei candidati** ✔ eseguita (giro 43)
 Rendimenti risimulati a blocchi per costruire la distribuzione nulla
 dell'extra-rendimento, invece di affidarsi al solo DSR.
 *Predizione*: il candidato migliore cade dentro il 95° percentile della
@@ -188,6 +192,14 @@ distribuzione nulla.
 | B5 azionario internazionale | 39 | **confermata** — nessuna variante batte nemmeno l'equal-weight fra regioni (5,05% contro 6,74%), DSR 0,864 |
 | B6 cripto universo esteso | 39 | **confermata** sul test (DSR 0,904), **sbagliata sulla prima clausola**: il CAGR del buy&hold sale invece di scendere (55,3% contro 22,6%), perché allargare ai simboli oggi quotati **aumenta** la sopravvivenza. Intervallo dello Sharpe [0,22 – 1,56] |
 | B7 credito Baa−Aaa (sostituta di B3) | 38 | **confermata** — 8,48% walk-forward contro 10,56% del buy&hold, e perde in **ogni** configurazione della griglia. Divario in-sample/walk-forward 0,39 punti, non ≥1 come previsto |
+| C1 cointegrazione | 40 | **confermata** — 130/1176 cointegrate in-sample (11,1% contro 5% atteso) ma solo **5,4% persiste** fuori campione, p = 0,476. Spread trading a −0,65% |
+| C2 breadth | 40 | **confermata** — correlazione **0,830** col filtro di trend. Porta il DD da −83,7% a −29,3% e costa 4 punti |
+| C3 momentum multi-orizzonte | 41 | **confermata** — **ogni** composito ha Sharpe più basso E turnover più alto del solo 12-2. Il solo 1m ha 9,08 rotazioni l'anno |
+| C4 term structure VIX | 41 | **confermata** — direzione p = 0,535 (nessun potere), volatilità ρ = **+0,421** (p ≈ 10⁻¹⁷²). Finestra dentro l'holdout, dichiarata, nessun candidato ne esce |
+| C5 premio di volatilità coperto | 42 | **confermata** — il coperto perde **5,91 punti** e **non accorcia la coda** (skew da −1,02 a −1,50). La sola assicurazione costa 4,24 punti di CAGR |
+| C6 quattro pilastri CTA | 42 | **confermata** sul test, **sbagliata sulla seconda clausola**: correlazione media 0,189 come previsto, ma lo Sharpe combinato è **0,76 contro 0,95** del miglior singolo |
+| **D1 data di partenza** | 43 | **FALSIFICATA** — ampiezza 0,56 punti contro i 3 previsti. Ma per **difetto della specifica**: 20 date di partenza con fine fissa condividono 33-52 anni su 52. Vedi D3. Risultato collaterale importante: contro l'equal-weight dello stesso universo i 3 candidati sono negativi in **60 casi su 60** |
+| **D2 bootstrap a blocchi** | 43 | **FALSIFICATA** — H5 al **100° percentile** del nullo (+3,82% lordo contro 99° a 2,49%). Ma il nullo non tiene conto della selezione, e la stessa strategia fa **−1,20% netto**. Il premio è reale, l'investitore perde comunque |
 
 
 ---
@@ -293,3 +305,32 @@ il calo. La versione walk-forward resterà sotto il buy&hold netto imposte, e il
 divario fra il miglior parametro in-sample e quello preso walk-forward sarà di
 almeno 1 punto.
 *Falsificata se*: la versione walk-forward batte il buy&hold netto imposte.
+
+**D3 — Dispersione su finestre di lunghezza fissa, non su date di partenza**
+Nata perché **D1 è stata falsificata per un difetto della sua stessa specifica**.
+"Far partire il campione in 20 anni diversi" con la fine sempre al 2026 produce 20
+campioni che condividono 33-52 anni su 52: la dispersione misurata (0,17-0,56
+punti) è piccola per costruzione, non perché il risultato sia stabile. Il test che
+risponde davvero alla domanda usa **finestre mobili di lunghezza fissa** (10 e 20
+anni, passo 1 anno), che si sovrappongono molto meno e coprono regimi diversi.
+*Predizione*: su finestre di 10 anni la dispersione dell'extra-rendimento supera 4
+punti e il segno cambia in almeno un terzo delle finestre; su finestre di 20 anni
+la dispersione resta sopra 2 punti. Cioè: quello che D1 non ha visto c'era, ed era
+nascosto dalla sovrapposizione dei campioni.
+*Falsificata se*: la dispersione su finestre di 10 anni resta sotto 2 punti.
+
+**D4 — Il benchmark giusto cambia il verdetto?**
+Il giro 43 ha usato come benchmark l'**equal-weight dei 49 settori**, cioè lo stesso
+universo su cui la strategia sceglie, e i tre candidati risultano negativi in 20
+date di partenza su 20 — mentre contro il PAC cap-weighted H5 risultava +2,95.
+Le due cose non sono in contraddizione (equal-weight e cap-weight rendono diverso),
+ma la scelta del benchmark vale più di qualunque parametro provato finora.
+Da misurare esplicitamente: gli stessi tre candidati contro tre benchmark diversi
+— cap-weighted, equal-weight dello stesso universo, e equal-weight ribilanciato
+annualmente — riportando quanto del margine è selezione di titoli e quanto è
+semplicemente il premio dell'equal-weighting.
+*Predizione*: contro il cap-weighted i candidati sembrano positivi, contro
+l'equal-weight dello stesso universo diventano negativi, e la differenza fra i due
+benchmark (~2-3 punti) spiega **più della metà** del margine apparente. Cioè quasi
+tutto quel che sembrava alfa era il premio di equal-weighting.
+*Falsificata se*: la differenza fra i benchmark spiega meno di un terzo del margine.
