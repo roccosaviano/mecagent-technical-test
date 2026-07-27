@@ -163,12 +163,18 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 45 | A11 alpha di pareggio della sleeve | confermata | servirebbero 6,5-7,0 punti l'anno in più |
 | 46 | A12 finestre mobili di 20 anni | confermata | ERC vince 48,4% delle finestre, divario medio −0,37 |
 | 47 | **A13 rischio di sequenza** | **falsificata** | rapporto 1,2-2,7 invece di ≥4; 0/14 finestre recuperate |
+| 48 | E0 cancello opzioni | **aperto** | terzo venerdì + IV = 0,85 × VIX, residui ±0,7 |
+| 48 | E1 premio di varianza | confermata | 83,0% dei mesi, +3,91 punti, 0/4 decenni negativi |
+| 49 | **E2 comprare opzioni** | **falsificata** | condizione mal posta: testava un portafoglio, non l'opzione |
+| 49 | E3 vendere put cash-secured | confermata | Sharpe 0,77 > 0,71, IRR −4,98, skew fino a −12,57 |
+| 49 | E4 covered call | confermata | col simulatore +0,98, con gli indici reali −2,92 |
+| 49 | **E5 LEAPS come leva** | **falsificata** | +1,34 ma DSR 0,000 e drawdown −62,5% |
 
-**La coda dichiarata è esaurita.** 23 voci eseguite nei giri 30-47: **20 confermate,
-3 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione. Restano in coda
-solo voci nate durante l'esecuzione: **A14, D3, D4**.
+**La coda dichiarata è esaurita**, più il gruppo E (opzioni) aggiunto ed eseguito
+ai giri 48-49. 29 voci eseguite nei giri 30-49: **23 confermate, 5 falsificate,
+1 senza esito per dati (B3)**. Nessuna promozione. Restano in coda: **A14, D3, D4**.
 
-Registro a **874 tentativi** cumulati.
+Registro a **912 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -233,6 +239,20 @@ Registro a **874 tentativi** cumulati.
   netta contro il cap-weighted, con 0,31 rotazioni l'anno. HRP guadagna 0,28 punti
   di CAGR lordo e ne restituisce 1,4 netti: il conto fiscale del ribilanciamento
   supera il guadagno di un metodo che non prova nemmeno a prevedere i rendimenti.
+- **Il premio al rischio di varianza è il fenomeno più solido di tutto il progetto,
+  e non è incassabile.** Il VIX supera la volatilità realizzata successiva nell'**83%
+  dei mesi** dal 1990, con scarto medio di 3,91 punti e **zero decenni negativi su
+  quattro**. È molto più robusto di qualunque anomalia azionaria trovata. E per
+  raccoglierlo servono **12 realizzi l'anno**, cioè esattamente il vincolo che ha
+  ucciso tutto il resto: vendere put cash-secured ha Sharpe 0,77 contro 0,71 del
+  buy&hold e IRR netta **4,98 punti sotto**.
+- **Un simulatore va tarato su strumenti reali prima di credergli, e a volte va
+  buttato.** Al giro 49 la covered call OTM simulata batteva il benchmark di +0,98
+  con DSR 0,997 — la prima promozione apparente in 49 giri. Il confronto con BXM,
+  BXY e BXMD reali ha mostrato che l'inflazione da volatilità piatta è
+  **+0,55 / +1,51 / +2,56**, crescente con la moneyness: il margine stava dentro
+  l'errore. Rifatto con gli indici reali: **−2,92**. La direzione dell'errore era
+  pre-dichiarata in coda, ed è stata la ragione per cui l'ho cercata.
 - **Il rischio di sequenza spiega il MONTANTE, non quale allocazione vince.** Il
   giro 47 separa due cose che avevo confuso. Il peso del capitale in un PAC
   ventennale è **9,5:1** fra ultimi e primi tre anni — aritmetica pura, nessun dato

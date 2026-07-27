@@ -11,7 +11,8 @@ aggiunta alza la soglia per tutte).
 
 **STATO: la coda dichiarata è esaurita.** A1-A5, B1-B6, C1-C6, D1-D2 sono tutte
 eseguite (giri 30-43). Restano solo le voci nate durante l'esecuzione e non ancora
-eseguite: **A14, D3, D4**.
+eseguite: **A14, D3, D4**. Il gruppo E (opzioni) è stato
+aggiunto ed eseguito ai giri 48-49.
 
 **Vincolo che ha ucciso quasi tutto finora**: ogni realizzo paga 33%, e sopra
 ~100 operazioni l'anno diventa 52%. Le ipotesi sotto sono ordinate mettendo
@@ -204,6 +205,12 @@ distribuzione nulla.
 | A11 alpha di pareggio della sleeve | 45 | **confermata** — il decennale dovrebbe rendere **6,5-7,0 punti l'anno in più** (cioè 12,5-13% annuo per 64 anni) perché l'allocazione pareggi. Lo scarto del proxy **misurato** è 1,58 punti, non 0,3-0,8 come avevo assunto: il multiplo è 4,1-4,4×, sul bordo inferiore della banda prevista. Controprova: con la ricostruzione migliorata l'allocazione resta **−2,4/−3,4 punti** |
 | A12 finestre mobili di 20 anni | 46 | **confermata** sul test (quote 35,5-48,4%, nessuna oltre metà né a zero) e **tutte e tre le clausole descrittive sbagliate**: l'ERC vince **48,4%** delle volte, non 15-35%; le vittorie non sono centrate sui mercati orso; l'ampiezza scende a 5,50 per il 60/40. Divario medio ERC **−0,37 punti**, non 3,63. Il criterio vero è **quando la finestra finisce**, non dove è centrata |
 | **A13 rischio di sequenza** | 47 | **FALSIFICATA** — il segno è giusto (b(ultimi 3) negativo in 8 casi su 8) ma il rapporto è **1,21-2,71**, non ≥4, e cinque su otto stanno sotto 2. R² 0,28-0,33 invece di >0,5. Sulla finestra estesa la quota di vittorie **scende** a 13,3-31,1% invece di salire sopra il 50%: le 14 finestre recuperate perdono **0 su 14**. Il peso aritmetico del capitale è 9,5:1, ma sul **divario** fra allocazioni si cancella in buona parte |
+| E0 cancello di calibrazione | 48 | **aperto** dopo due correzioni: scadenze al **terzo venerdì** (la correlazione passa da 0,850 a 0,975) e **IV = 0,85 × VIX**. Residui BXM +0,55 / PUT −0,72, **segni opposti**, che è la firma dello skew |
+| E1 premio al rischio di varianza | 48 | **confermata** — VIX sopra la realizzata nell'**83,0%** dei mesi, scarto medio **+3,91** punti, **0 decenni su 4** con premio negativo. Entrambe le clausole descrittive centrate, unica volta in tutta la coda |
+| **E2 comprare opzioni** | 49 | **FALSIFICATA** — 3 configurazioni su 4 hanno IRR positiva. Ma la condizione era **mal posta**: ho testato *cassa + opzione*, che per parità put-call è una posizione azionaria protetta, non una scommessa sulla volatilità. Nessuna si avvicina al benchmark |
+| E3 vendere put cash-secured | 49 | **confermata** — Sharpe lordo 0,77 contro 0,71 come previsto, IRR netta **−4,98** punti (12 realizzi/anno → 52%). Skew da **−4,15 a −12,57**: più il premio sembra sicuro, più la coda è mostruosa |
+| E4 covered call | 49 | **confermata**, ma solo dopo aver buttato il simulatore: col modello la +5% sembrava **+0,98 con DSR 0,997**, la prima promozione apparente in 49 giri. Contro gli indici CBOE reali l'inflazione da skew è **+0,55/+1,51/+2,56** crescente con la moneyness. Coi dati reali: **−2,92** |
+| **E5 LEAPS come leva** | 49 | **FALSIFICATA** — 10,98% contro 9,64%, **+1,34**. Il finanziamento incorporato è **2,95%** contro il 5,90% del CFD. Ma DSR **0,000**, drawdown **−62,5%** contro −47,2%, direzione dell'errore ottimistica e non quantificabile senza un indice reale. Avevo sopravvalutato il drag fiscale del rollo annuale |
 
 
 ---
@@ -436,7 +443,7 @@ le call OTM *sotto*. Le direzioni dell'errore sono note e opposte:
 
 Ogni voce sotto va letta con la sua direzione di errore accanto.
 
-**E0 — Cancello di calibrazione (non è un'ipotesi, è la condizione per fidarsi)**
+**E0 — Cancello di calibrazione (non è un'ipotesi, è la condizione per fidarsi)** ✔ eseguita (giro 48)
 Prima di qualunque test, il simulatore deve **riprodurre gli indici CBOE reali**:
 un buy-write ATM mensile simulato contro **BXM**, e una put cash-secured ATM
 mensile simulata contro **PUT**, sulla finestra comune.
@@ -444,7 +451,7 @@ mensile simulata contro **PUT**, sulla finestra comune.
 mensili sopra **0,90** per entrambi. Se il cancello non si apre, tutte le voci E
 sono dichiarate **non affidabili** e riportate come tali, non cancellate.
 
-**E1 — Il premio al rischio di varianza, misurato**
+**E1 — Il premio al rischio di varianza, misurato** ✔ eseguita (giro 48)
 VIX contro volatilità realizzata dei 21 giorni successivi, 1990-2026. Non è una
 strategia: è il meccanismo che decide il segno di tutto il resto del gruppo E.
 *Predizione*: il VIX supera la volatilità realizzata successiva in oltre il **75%**
@@ -452,7 +459,7 @@ dei mesi, con scarto medio di **3-4 punti di volatilità**. È il motivo per cui
 vendere opzioni ha rendimento atteso lordo positivo e comprarle negativo.
 *Falsificata se*: la quota sta sotto il 60%, oppure lo scarto medio è negativo.
 
-**E2 — Comprare opzioni sistematicamente**
+**E2 — Comprare opzioni sistematicamente** ✔ eseguita (giro 49)
 Long call e long put a 30 giorni, ATM e 5% OTM, rollate ogni mese.
 *Predizione*: **ogni** configurazione ha IRR netta negativa; le put perdono più
 delle call, perché al premio di varianza si somma la deriva positiva del
@@ -461,7 +468,7 @@ per l'esposizione vega.
 *Falsificata se*: una qualunque configurazione long ha IRR netta positiva.
 *Direzione dell'errore*: ottimistica sulle put OTM (costo sottostimato).
 
-**E3 — Vendere put cash-secured contro il buy&hold azionario**
+**E3 — Vendere put cash-secured contro il buy&hold azionario** ✔ eseguita (giro 49)
 Put ATM e 5% OTM mensili, interamente collateralizzate in liquidità (nessuna leva).
 *Predizione*: Sharpe **lordo superiore** al buy&hold azionario, come mostra
 l'indice PUT del CBOE, ma **IRR netta inferiore**: ogni scadenza è un realizzo,
@@ -470,7 +477,7 @@ buy&hold. Il differimento vale più del premio.
 *Falsificata se*: IRR netta > buy&hold azionario.
 *Direzione dell'errore*: conservativa (premio sottostimato sulle put OTM).
 
-**E4 — Covered call su un PAC azionario**
+**E4 — Covered call su un PAC azionario** ✔ eseguita (giro 49)
 Call vendute mensilmente a moneyness 0%, +2%, +5% sul portafoglio azionario.
 *Predizione*: più la call è OTM, più piccoli sono **sia** la riduzione di
 volatilità **sia** il costo in IRR; nessuna configurazione batte il buy&hold; la
@@ -479,7 +486,7 @@ rendimento di lungo periodo.
 *Falsificata se*: una qualunque configurazione batte il buy&hold netto imposte.
 *Direzione dell'errore*: ottimistica (premio delle call OTM sovrastimato).
 
-**E5 — LEAPS come leva a buon mercato**
+**E5 — LEAPS come leva a buon mercato** ✔ eseguita (giro 49)
 Il giro 35 (A8) ha mostrato che la leva via CFD a benchmark+3% distrugge il
 vantaggio di Sharpe che doveva monetizzare, e che a 1,5× scatta la chiusura
 forzata. Una call deep ITM a 12 mesi incorpora un finanziamento vicino al

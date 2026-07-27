@@ -1,0 +1,69 @@
+Dati 1990-01-02 -> 2026-05-29 (9169 giorni)
+Dividend yield assunto costante: 2.0% annuo
+
+============================================================================================
+E0 — CANCELLO DI CALIBRAZIONE
+============================================================================================
+   Il simulatore deve riprodurre due strategie realmente quotate.
+   Se non ci riesce, i numeri di E2-E5 non valgono niente.
+
+   TENTATIVO 1 — scadenze a fine mese, VIX grezzo come implicita
+   BXM  (275 scadenze, 2003-02-28 -> 2025-12-31)
+     CAGR reale   6.62%  simulato  13.66%   scarto +7.04 (FUORI 1.5)
+     correlazione 0.8498 (SOTTO 0.9)   -> NON PASSA
+   PUT  (227 scadenze, 2007-02-28 -> 2025-12-31)
+     CAGR reale   6.92%  simulato  12.57%   scarto +5.65 (FUORI 1.5)
+     correlazione 0.8619 (SOTTO 0.9)   -> NON PASSA
+   -> CHIUSO
+
+   TENTATIVO 2 — scadenze al TERZO VENERDI', VIX grezzo
+   (BXM e PUT scadono il terzo venerdi'; confrontarli con una
+    simulazione a fine mese sfalsa le finestre di payoff di una
+    settimana, ed e' un errore mio, non un limite dei dati)
+   BXM  (273 scadenze, 2003-02-21 -> 2025-12-19)
+     CAGR reale   6.26%  simulato  11.02%   scarto +4.76 (FUORI 1.5)
+     correlazione 0.9741 (sopra 0.9)   -> NON PASSA
+   PUT  (227 scadenze, 2007-02-16 -> 2025-12-19)
+     CAGR reale   6.92%  simulato  10.57%   scarto +3.65 (FUORI 1.5)
+     correlazione 0.9780 (sopra 0.9)   -> NON PASSA
+   -> CHIUSO
+
+   TARATURA — il VIX non e' l'implicita ATM
+   Il VIX e' un tasso di variance swap: pesa tutti gli strike, e lo
+   skew dell'S&P lo spinge sopra l'implicita at-the-money. Cerco UN
+   solo fattore di scala k con IV = k x VIX, scelto per minimizzare
+   lo scarto massimo di CAGR sui DUE indici reali insieme.
+   E' un parametro tarato, uno, dichiarato: non e' tarato per far
+   funzionare una strategia, e' tarato per riprodurre due strategie
+   realmente quotate.
+
+        k   scarto BXM   scarto PUT   peggiore
+     0.70       -3.52        -4.93       4.93
+     0.80       -0.82        -2.14       2.14
+     0.85       +0.55        -0.72       0.72  <-- scelto
+
+   IV = 0.85 x VIX  (implicita ATM sotto il VIX di 15%, coerente con il premio del variance swap)
+
+   BXM  (273 scadenze, 2003-02-21 -> 2025-12-19)
+     CAGR reale   6.26%  simulato   6.81%   scarto +0.55 (entro 1.5)
+     correlazione 0.9753 (sopra 0.9)   -> PASSA
+   PUT  (227 scadenze, 2007-02-16 -> 2025-12-19)
+     CAGR reale   6.92%  simulato   6.20%   scarto -0.72 (entro 1.5)
+     correlazione 0.9779 (sopra 0.9)   -> PASSA
+
+   -> CANCELLO APERTO
+   Il simulatore riproduce strategie realmente quotate: i numeri
+   di E2-E5 hanno lo stesso status degli altri giri, con due
+   avvertenze — il limite dello skew dichiarato in coda, e il
+   fattore k = 0.85 che e' UN parametro tarato sui dati.
+
+   Residui alla taratura: BXM +0.55, PUT -0.72 punti.
+   I segni sono OPPOSTI, ed e' esattamente cio' che ci si aspetta se
+   un solo fattore piatto non puo' catturare lo skew: le call vanno
+   prezzate piu' a buon mercato delle put. Conferma la direzione degli
+   errori dichiarata in coda — vendita di call ottimistica, vendita di
+   put conservativa — e ne da' la misura, meno di un punto per parte.
+
+============================================================================================
+E1 — IL PREMIO AL RISCHIO DI VARIANZA
+============================================================================================
