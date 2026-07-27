@@ -137,8 +137,9 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 30 | A1 risk parity fra classi | confermata | ERC 7,08% contro 10,48% |
 | 31 | A2 hierarchical risk parity | confermata | HRP 9,45% contro 9,89% equal-weight |
 | 32 | A3 min-variance / max-diversification | confermata | min-var 8,22%, max-div 9,34%, cap-weight 10,88% |
+| 33 | A4 Kelly frazionario + de-risking | confermata | DD migliora 12/12, IRR migliora 0/12 |
 
-Nessuna promozione dalla coda. Registro a **706 tentativi** cumulati.
+Nessuna promozione dalla coda. Registro a **722 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -203,6 +204,23 @@ Nessuna promozione dalla coda. Registro a **706 tentativi** cumulati.
   netta contro il cap-weighted, con 0,31 rotazioni l'anno. HRP guadagna 0,28 punti
   di CAGR lordo e ne restituisce 1,4 netti: il conto fiscale del ribilanciamento
   supera il guadagno di un metodo che non prova nemmeno a prevedere i rendimenti.
+- **Tre giri di fila, tre metodi diversi, lo stesso muro.** HRP (31), min-variance
+  (32) e Kelly con de-risking (33) migliorano tutti lo Sharpe del PAC azionario —
+  il migliore in assoluto è 0,73 contro 0,63 del buy&hold — e perdono tutti fra
+  0,4 e 5,5 punti di IRR netta. Non è un caso ripetuto tre volte: è la stessa
+  identità vista da tre direzioni. Migliorare il rischio senza leva a buon mercato
+  significa ridurre l'esposizione, e ridurre l'esposizione a un asset con premio
+  positivo costa montante.
+- **Il de-risking sul drawdown è ordinato, non rumoroso.** 12 casi su 12 migliorano
+  il drawdown, 0 su 12 migliorano l'IRR, e il costo è monotono nella soglia: al 10%
+  costa 1,0-1,7 punti, al 30% ne costa 0,3-0,5 per 12-14 punti di drawdown in meno.
+  Sull'indice dal 1926 il buy&hold ha un drawdown massimo del −83,7%: portarlo a
+  −57% per 0,40 punti l'anno è una decisione di preferenza, non di ottimizzazione,
+  e va presentata come tale a chi deve versare per trent'anni senza smettere.
+- **La stima di Kelly su 60 mesi è pro-ciclica.** μ misurato all'indietro è basso
+  proprio dopo i crolli, cioè quando i rendimenti attesi sono più alti: il sizing
+  taglia l'esposizione nel momento sbagliato. Costa più del de-risking (3,1-5,5
+  punti contro 0,3-1,7).
 - **Lo Sharpe non è la funzione obiettivo di chi versa €500 al mese.** Il giro 32
   è il caso più pulito: il minimum variance fa esattamente quello che l'anomalia
   low-volatility promette — Sharpe 0,78 contro 0,74, volatilità 13,2% contro

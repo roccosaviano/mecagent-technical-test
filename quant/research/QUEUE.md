@@ -37,7 +37,7 @@ Due portafogli ottimizzati sui 49 settori, vincolo long-only, annuale.
 2-4 punti di CAGR; nessuno dei due batte l'IRR netta del cap-weight.
 *Falsificata se*: uno dei due supera il cap-weight netto imposte.
 
-**A4 — Kelly frazionario e de-risking sul drawdown**
+**A4 — Kelly frazionario e de-risking sul drawdown** ✔ eseguita (giro 33)
 Esposizione = f × Kelly stimato sul passato, con f in {0,25 · 0,5}; variante
 che taglia l'esposizione quando il drawdown corrente supera una soglia.
 *Predizione*: il de-risking sul drawdown peggiora l'IRR (vende sui minimi) pur
@@ -175,6 +175,7 @@ distribuzione nulla.
 | A1 risk parity fra classi | 30 | **confermata** — ERC Sharpe 0,92 contro 0,87 del 60/40, ma IRR netta 7,08% contro 10,48% dell'azionario. Nessuna delle 4 allocazioni batte. Oro e materie prime **non testabili** |
 | A2 hierarchical risk parity | 31 | **confermata** — Sharpe 0,78 contro 0,74 dell'equal-weight, ma IRR netta 9,45% contro 9,89% (−0,44) e −1,43 contro il cap-weighted. In più HRP risulta **meno stabile** di inverse-variance (0,283 contro 0,109): la tesi del paper è contro il min-variance, che è A3 |
 | A3 min-variance / max-diversification | 32 | **confermata** sul test — min-var 8,22% e max-div 9,34% contro 10,88% del cap-weight. Ma **entrambe le clausole descrittive della predizione erano sbagliate**: il DD scende di 4,2 punti (non >10) e il CAGR ceduto è 1,08 (non 2-4). Il min-var tiene l'84% in 5 settori, 7,5 posizioni effettive |
+| A4 Kelly frazionario + de-risking | 33 | **confermata** — il de-risking migliora il DD in **12 casi su 12** e l'IRR in **0 su 12**. Costa 0,3-1,7 punti e taglia 0,2-20,9 punti di drawdown, monotono nella soglia. Il sizing di Kelly costa più del de-risking (3,1-5,5 punti): μ su 60 mesi è pro-ciclico |
 
 
 ---
@@ -238,3 +239,29 @@ min-variance per unità di leva superi lo spread. Con 9,90% di CAGR e 7,45% di
 costo marginale il margine lordo sul 20% preso a prestito è ~0,49 punti l'anno,
 e il turnover del ribilanciamento in leva ne consuma una parte. È un test stretto,
 ed è il motivo per cui va misurato invece che assunto.
+
+**A9 — Kelly aggiunge qualcosa a una frazione fissa?**
+Il giro 33 mostra che il cap a 1,0 morde il 37-68% del tempo e che l'esposizione
+media di quarto-Kelly è 0,66-0,70. Quindi quarto-Kelly potrebbe essere, in
+pratica, "stai investito al 67% e basta", con in più il rumore della stima e la
+rotazione tassabile che ne deriva. Confronto diretto: esposizione **costante** pari
+alla media realizzata di ogni configurazione Kelly, contro la configurazione Kelly
+stessa, stesso sottostante e stessa finestra.
+*Predizione*: la frazione fissa batte Kelly in IRR netta in almeno 3 casi su 4,
+perché ha lo stesso profilo di esposizione media senza pagare la rotazione, e
+perché μ stimato su 60 mesi è pro-ciclico (basso proprio dopo i crolli, cioè quando
+i rendimenti attesi sono alti).
+*Falsificata se*: Kelly batte la frazione fissa in almeno metà dei casi.
+
+**A10 — Il prezzo dell'assicurazione sul drawdown, come curva**
+Il giro 33 dà tre punti isolati (soglie 10/20/30%) e mostra un gradiente monotono:
+a 30% si pagano 0,4 punti di IRR per 14 di drawdown, a 10% se ne pagano 1,0-1,7
+per 20. Da tracciare come curva completa, soglie dal 5% al 50% a passi di 5, su
+entrambi i sottostanti, misurando **punti di IRR ceduti per punto di drawdown
+evitato**. Non è un tentativo di battere il benchmark: è la quantificazione di un
+trade-off che l'investitore deve poter decidere.
+*Predizione*: il rapporto costo/beneficio è peggiore alle soglie basse e migliora
+monotonamente fino a circa il 30-35%, oltre il quale la soglia scatta troppo di
+rado per proteggere. Esiste quindi un minimo interno, intorno al 30%.
+*Falsificata se*: il rapporto è piatto (nessun minimo interno distinguibile) o
+monotono su tutto l'intervallo.

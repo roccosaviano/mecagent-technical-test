@@ -1,0 +1,73 @@
+A4 — Kelly frazionario e de-risking sul drawdown
+Stima di Kelly su 60 mesi mobili PRECEDENTI, esposizione tagliata a 1,0 (niente leva).
+De-risking: esposizione dimezzata finche' il drawdown corrente supera la soglia.
+Liquidita' non investita al risk-free netto DIRT 33%. Costi 0.15% round-trip.
+
+============================================================================================
+indice cap-weighted   1926-07-31 -> 2026-05-31 (1199 mesi)
+============================================================================================
+   configurazione             espos.med     CAGR  Sharpe       DD  turn/an   IRR 33%   vs B&H
+   ------------------------------------------------------------------------------------------
+   0.25 Kelly (costante)           0.66    7.45%    0.66   -65.0%    0.40x     6.62%   -3.94
+   0.25 Kelly + DD>10%             0.55    6.80%    0.71   -45.8%    0.46x     5.60%   -4.96
+   0.25 Kelly + DD>20%             0.59    7.30%    0.72   -45.8%    0.44x     6.14%   -4.42
+   0.25 Kelly + DD>30%             0.60    7.13%    0.68   -53.1%    0.41x     6.18%   -4.38
+   0.5 Kelly (costante)            0.76    8.15%    0.64   -71.1%    0.35x     7.44%   -3.12
+   0.5 Kelly + DD>10%              0.62    7.60%    0.73   -50.2%    0.44x     6.39%   -4.17
+   0.5 Kelly + DD>20%              0.66    7.77%    0.71   -50.2%    0.46x     6.61%   -3.95
+   0.5 Kelly + DD>30%              0.68    7.89%    0.69   -56.9%    0.36x     7.04%   -3.52
+   buy & hold (espos. 1,0)         1.00   10.38%    0.63   -83.7%    0.00x    10.56%   +0.00
+
+============================================================================================
+equal-weight 49 settori   1969-07-31 -> 2026-05-31 (683 mesi)
+============================================================================================
+   configurazione             espos.med     CAGR  Sharpe       DD  turn/an   IRR 33%   vs B&H
+   ------------------------------------------------------------------------------------------
+   0.25 Kelly (costante)           0.70    6.43%    0.55   -38.8%    0.54x     5.68%   -5.48
+   0.25 Kelly + DD>10%             0.58    5.67%    0.58   -28.1%    0.71x     4.67%   -6.50
+   0.25 Kelly + DD>20%             0.64    5.91%    0.54   -32.9%    0.69x     5.15%   -6.01
+   0.25 Kelly + DD>30%             0.67    5.96%    0.53   -38.6%    0.63x     5.15%   -6.01
+   0.5 Kelly (costante)            0.84    8.37%    0.62   -39.4%    0.38x     7.49%   -3.67
+   0.5 Kelly + DD>10%              0.70    7.03%    0.63   -29.1%    0.78x     5.75%   -5.41
+   0.5 Kelly + DD>20%              0.79    7.76%    0.61   -32.9%    0.46x     6.83%   -4.33
+   0.5 Kelly + DD>30%              0.82    8.07%    0.61   -38.8%    0.38x     7.17%   -3.99
+   buy & hold (espos. 1,0)         1.00   11.15%    0.70   -52.6%    0.00x    11.16%   +0.00
+
+============================================================================================
+VERDETTO SU A4
+============================================================================================
+   Predizione: il de-risking sul drawdown PEGGIORA l'IRR (vende sui
+   minimi) pur migliorando il DD massimo.
+   FALSIFICATA se l'IRR netta migliora rispetto all'esposizione costante.
+
+   indice cap-weighted     0.25K DD>10%   IRR -1.02 · DD +19.2 punti
+   indice cap-weighted     0.25K DD>20%   IRR -0.48 · DD +19.2 punti
+   indice cap-weighted     0.25K DD>30%   IRR -0.44 · DD +11.9 punti
+   indice cap-weighted     0.5K DD>10%   IRR -1.05 · DD +20.9 punti
+   indice cap-weighted     0.5K DD>20%   IRR -0.83 · DD +20.9 punti
+   indice cap-weighted     0.5K DD>30%   IRR -0.40 · DD +14.2 punti
+   equal-weight 49 settor  0.25K DD>10%   IRR -1.01 · DD +10.7 punti
+   equal-weight 49 settor  0.25K DD>20%   IRR -0.53 · DD +6.0 punti
+   equal-weight 49 settor  0.25K DD>30%   IRR -0.53 · DD +0.2 punti
+   equal-weight 49 settor  0.5K DD>10%   IRR -1.74 · DD +10.3 punti
+   equal-weight 49 settor  0.5K DD>20%   IRR -0.66 · DD +6.5 punti
+   equal-weight 49 settor  0.5K DD>30%   IRR -0.32 · DD +0.5 punti
+
+   Il de-risking migliora il DD in 12/12 casi
+   Il de-risking migliora l'IRR in 0/12 casi
+   -> ipotesi A4 CONFERMATA
+
+   La componente KELLY, separata dal de-risking:
+     indice cap-weighted     0.25 Kelly costante: esposizione media 0.66, cap attivo il 46% del tempo, IRR 6.62% contro B&H 10.56% (-3.94)
+     indice cap-weighted     0.5 Kelly costante: esposizione media 0.76, cap attivo il 64% del tempo, IRR 7.44% contro B&H 10.56% (-3.12)
+     equal-weight 49 settor  0.25 Kelly costante: esposizione media 0.70, cap attivo il 37% del tempo, IRR 5.68% contro B&H 11.16% (-5.48)
+     equal-weight 49 settor  0.5 Kelly costante: esposizione media 0.84, cap attivo il 68% del tempo, IRR 7.49% contro B&H 11.16% (-3.67)
+
+   Migliore della griglia: 0.5 Kelly costante su indice cap-weighted  (-3.12 punti)
+   DSR su N=54 (famiglia pre-dichiarata; la sola griglia sarebbe N=8): 1.000
+   -> NON promuovibile
+
+   Turnover massimo della griglia: 0.78 volte l'anno (sotto la soglia del 100%). Scenario 52% comunque calcolato:
+     migliore configurazione al 52%: 6.68%
+
+Tentativi cumulati a registro: 722
