@@ -1,0 +1,27 @@
+PAC di EUR 750/mese · 2016-07-31 -> 2026-07-31
+Regime: ETF UCITS (exit tax 38%, deemed disposal a 8 anni)
+
+   CAPITALE VERSATO: EUR 90,000  (121 versamenti da 750)
+
+   strumento                          lordo    imposte       NETTO    guadagno x versato     IRR
+   ---------------------------------------------------------------------------------------------
+   S&P 500 (SPY)                    201,492     40,392     161,100      71,100     1.79x  11.37%
+   S&P 500 Momentum (SPMO)          280,538     68,901     211,637     121,637     2.35x  16.54%
+   MSCI USA Momentum (MTUM)         212,275     44,753     167,522      77,522     1.86x  12.12%
+   Berkshire (BRK.B)                173,535     30,239     143,296      53,296     1.59x   9.13%
+
+   strumento                        CAGR  volatilita  max drawdown
+   S&P 500 (SPY)                  14.93%       15.3%        -23.9%
+   S&P 500 Momentum (SPMO)        19.74%       17.8%        -21.3%
+   MSCI USA Momentum (MTUM)       15.92%       18.0%        -30.2%
+   Berkshire (BRK.B)              13.14%       18.1%        -24.3%
+
+   CONTRO L'S&P 500:
+     S&P 500 Momentum (SPMO)         +50,537 EUR    +5.17 punti di IRR
+     MSCI USA Momentum (MTUM)         +6,422 EUR    +0.74 punti di IRR
+     Berkshire (BRK.B)               -17,804 EUR    -2.24 punti di IRR
+
+   Per riferimento, quanto conta il versamento (stesso S&P 500):
+     EUR 500/mese -> versati   60,000  netto   107,400  guadagno    47,400
+     EUR 750/mese -> versati   90,000  netto   161,100  guadagno    71,100
+     EUR 1000/mese -> versati  120,000  netto   214,800  guadagno    94,800
