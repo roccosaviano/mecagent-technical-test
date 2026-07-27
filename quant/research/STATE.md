@@ -180,13 +180,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 51 | **F4 sistema EMA intraday** | **falsificata** | ma finestre 20 / 2,9 / 0,8 anni, non confrontabili |
 | 51 | F5 ablazione del sistema EMA | confermata | il solo trend filter vale **24 volte** il sistema completo |
 | 59 | **D3 finestre di lunghezza fissa** | confermata | ampiezza **10,19** punti contro i **0,56** di D1: **18×** |
+| 60 | **D4 scelta del benchmark** | confermata | il premio di equal-weighting spiega **263-398%** del margine di H5 |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 36 voci eseguite nei giri 30-59:
-**28 confermate, 7 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Restano in coda: **A15, D4, D5**.
+(rotazione concentrata e sistema EMA, giri 50-51). 37 voci eseguite nei giri 30-60:
+**29 confermate, 7 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Restano in coda: **A15, D5, D6**.
 
-Registro a **1.041 tentativi** cumulati.
+Registro a **1.073 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
