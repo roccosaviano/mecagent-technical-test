@@ -212,6 +212,7 @@ distribuzione nulla.
 | E4 covered call | 49 | **confermata**, ma solo dopo aver buttato il simulatore: col modello la +5% sembrava **+0,98 con DSR 0,997**, la prima promozione apparente in 49 giri. Contro gli indici CBOE reali l'inflazione da skew è **+0,55/+1,51/+2,56** crescente con la moneyness. Coi dati reali: **−2,92** |
 | **E5 LEAPS come leva** | 49 | **FALSIFICATA** — 10,98% contro 9,64%, **+1,34**. Il finanziamento incorporato è **2,95%** contro il 5,90% del CFD. Ma DSR **0,000**, drawdown **−62,5%** contro −47,2%, direzione dell'errore ottimistica e non quantificabile senza un indice reale. Avevo sopravvalutato il drag fiscale del rollo annuale |
 | E6 stress sui LEAPS | 52 | **confermata** — muore a un **rincaro del 10%** del premio d'ingresso (2 punti di nozionale, cioè lo spread normale di un'opzione lunga poco liquida). Ma regge a tutto il resto: implicita fino a **k = 1,15** e **17 finestre su 17** di 20 anni con il caso peggiore ancora positivo. Due clausole della predizione su tre erano sbagliate. Il vantaggio esiste ed è stabile nel tempo: sta dentro il costo di transazione dello strumento |
+| H1 globale contro USA | 57 | **confermata** — S&P **+1,89** punti sui dati reali (SPY contro VT/ACWI/URTH, 2011-2026) e **+1,61** sul proxy lungo 1990-2026, cioè **+€567.187** su un PAC trentennale. Ma su 26 finestre decennali l'USA vince solo il **73%**, e le 7 finestre perse partono **tutte fra il 1995 e il 2001**. Il globale non riduce nemmeno il rischio: stessa volatilità, drawdown peggiore |
 | G1 filtri di tendenza | 53 | **confermata** — nessuno batte il buy&hold. Il migliore perde **2,51** punti (EMA200+EMA21>EMA50, e vince perché ruota 0,19×/anno contro 1,3-2,2 degli altri), il peggiore 4,50. In cambio 18-40 punti di drawdown |
 | **G2 momentum come veicolo** | 53 | **FALSIFICATA** — momentum in ETF UCITS **11,64%** contro cap-weight diretto in CGT **10,88%**: **+0,77**. Il risultato model-free è però un altro: a parità esatta di lordo, spostare la rotazione **dentro il fondo** vale **+2,77 punti**. Non promosso: il lordo (4,18 punti di premio) è più generoso degli indici momentum reali, manca il TER, e i parametri furono scelti al giro 05 |
 | **BUG nel motore fiscale** | 53 | i lotti ETF non venivano ridotti quando si liquidavano quote per pagare le imposte: su 57 anni e 7 cicli di deemed disposal il portafoglio si azzerava. Corretto pro rata. **Il vantaggio del veicolo scende da +2,15 a +1,23** su 1990-2023 (+2,12 su 1969-2026: cresce con l'orizzonte) |
@@ -632,7 +633,7 @@ in regime CGT.
 
 ## H. Il buco dichiarato: azionario globale contro solo USA
 
-**H1 — All-world contro S&P 500**
+**H1 — All-world contro S&P 500** ✔ eseguita (giro 57)
 Tutto il progetto usa l'azionario USA. Al giro 39 gli USA hanno battuto ogni forma
 di diversificazione geografica di 3 punti nel 1990-2026 — ma è lo stesso senno di
 poi di cui diffido per tutto il resto, e per un investitore europeo il default

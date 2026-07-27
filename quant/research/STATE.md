@@ -172,6 +172,7 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 52 | E6 stress sui LEAPS | confermata | muore a +10% di rincaro, ma 17/17 finestre e k fino a 1,15 |
 | 53 | G1 filtri di tendenza | confermata | il migliore perde 2,51 punti, il peggiore 4,50 |
 | 53 | **G2 momentum come veicolo** | **falsificata** | +0,77 in ETF UCITS, ma +2,77 solo dallo spostare la rotazione nel fondo |
+| 57 | H1 globale contro USA | confermata | S&P +1,89 sui dati reali, ma vince solo il 73% delle finestre decennali |
 | 50 | **F1 rotazione top-1** | **falsificata** | 1 cella su 9, +0,30 su un benchmark debole |
 | 50 | F2 griglia posizioni × frequenza | confermata | max top-5 annuale 10,02% contro 11,16% statico |
 | 51 | F3 sistema EMA giornaliero | confermata | batte il B&H su 1/10 asset, muore sul lordo |
@@ -183,7 +184,7 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 **27 confermate, 7 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
 Restano in coda: **A14, D3, D4**.
 
-Registro a **1.026 tentativi** cumulati.
+Registro a **1.030 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 

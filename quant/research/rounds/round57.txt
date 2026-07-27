@@ -1,0 +1,42 @@
+DATI REALI · PAC EUR 750/mese · regime ETF UCITS
+Finestra comune 2011-09-30 -> 2026-07-31 (179 mesi, EUR 134,250 versati)
+
+   strumento                 CAGR    vol       DD      IRR    montante     vs S&P
+   ------------------------------------------------------------------------------
+   S&P 500 (SPY)           14.88%  14.2%   -23.9%   10.75%     314,842         +0
+   All-World (VT)          11.03%  14.4%   -25.5%    8.35%     258,251    -56,591
+   MSCI ACWI (ACWI)        11.06%  14.2%   -25.7%    8.39%     259,175    -55,667
+   MSCI World (URTH)       11.52%  13.9%   -25.5%    8.85%     253,577    -61,265
+
+   Divario S&P contro il MIGLIORE dei globali: +1.89 punti
+
+====================================================================================
+PROXY LUNGO: French Developed contro USA, dal 1990
+====================================================================================
+   431 mesi, 1990-07-31 -> 2026-05-31
+   USA      CAGR 11.16%  IRR  8.21%  montante  1,823,896
+   Developed CAGR  8.58%  IRR  6.60%  montante  1,256,710
+   -> USA +1.61 punti, EUR +567,187
+
+====================================================================================
+FINESTRE MOBILI DI 10 ANNI (proxy lungo)
+====================================================================================
+   26 finestre, dal 1991 al 2016
+   L'USA vince in 19/26 (73%)
+   Differenza media +1.37 · peggiore -2.66 (1998) · migliore +4.02 (1991)
+   Finestre in cui il GLOBALE vince: partenze 1995, 1996, 1997, 1998, 1999, 2000, 2001
+
+====================================================================================
+VERDETTO SU H1
+====================================================================================
+   Predizione: S&P batte il globale di 1,5-3 punti, e la quota di
+   vittorie dell'S&P su finestre mobili sta SOTTO il 90%.
+   FALSIFICATA se il globale batte l'S&P sulla finestra principale,
+   oppure se l'S&P vince in TUTTE le finestre mobili.
+
+   (a) divario sulla finestra reale: +1.89 punti (dentro la banda 1,5-3)
+   (b) quota di vittorie USA su finestre mobili: 73% (sotto il 90%)
+
+   -> ipotesi H1 CONFERMATA
+
+Tentativi cumulati a registro: 1030
