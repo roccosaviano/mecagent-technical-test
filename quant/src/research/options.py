@@ -140,7 +140,8 @@ def monthly_index(s):
     return out
 
 
-def leaps_mtm(d, q, moneyness=0.80, iv_scale=1.0, leverage=1.0, tenor=12):
+def leaps_mtm(d, q, moneyness=0.80, iv_scale=1.0, leverage=1.0, tenor=12,
+              prem_mult=1.0):
     """Call lunga a `tenor` mesi, rollata a scadenza, VALUTATA OGNI MESE.
 
     Serve perche' una posizione annuale osservata solo a scadenza produce una
@@ -161,7 +162,9 @@ def leaps_mtm(d, q, moneyness=0.80, iv_scale=1.0, leverage=1.0, tenor=12):
         r0 = float(d["rf"].loc[a])
         T0 = (b - a).days / 365.25
         prem0 = float(bs(S0, K, T0, r0, float(d["vix"].loc[a]) * iv_scale, q, "c")) / S0
-        cost = prem0 * leverage
+        # prem_mult modella spread denaro-lettera ed esecuzione: si PAGA di piu'
+        # all'ingresso senza che cambi il valore di mercato successivo
+        cost = prem0 * prem_mult * leverage
         cash = 1.0 - cost
         days = d.loc[a:b]
         mensili = days.resample("ME").last().dropna()

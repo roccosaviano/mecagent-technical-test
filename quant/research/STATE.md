@@ -169,18 +169,19 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 49 | E3 vendere put cash-secured | confermata | Sharpe 0,77 > 0,71, IRR −4,98, skew fino a −12,57 |
 | 49 | E4 covered call | confermata | col simulatore +0,98, con gli indici reali −2,92 |
 | 49 | **E5 LEAPS come leva** | **falsificata** | +1,34 ma DSR 0,000 e drawdown −62,5% |
+| 52 | E6 stress sui LEAPS | confermata | muore a +10% di rincaro, ma 17/17 finestre e k fino a 1,15 |
 | 50 | **F1 rotazione top-1** | **falsificata** | 1 cella su 9, +0,30 su un benchmark debole |
 | 50 | F2 griglia posizioni × frequenza | confermata | max top-5 annuale 10,02% contro 11,16% statico |
 | 51 | F3 sistema EMA giornaliero | confermata | batte il B&H su 1/10 asset, muore sul lordo |
 | 51 | **F4 sistema EMA intraday** | **falsificata** | ma finestre 20 / 2,9 / 0,8 anni, non confrontabili |
 | 51 | F5 ablazione del sistema EMA | confermata | il solo trend filter vale **24 volte** il sistema completo |
 
-**La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 34 voci eseguite nei giri 30-51:
-**26 confermate, 7 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+**La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
+(rotazione concentrata e sistema EMA, giri 50-51). 35 voci eseguite nei giri 30-52:
+**27 confermate, 7 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
 Restano in coda: **A14, D3, D4**.
 
-Registro a **969 tentativi** cumulati.
+Registro a **1.002 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -245,6 +246,14 @@ Registro a **969 tentativi** cumulati.
   netta contro il cap-weighted, con 0,31 rotazioni l'anno. HRP guadagna 0,28 punti
   di CAGR lordo e ne restituisce 1,4 netti: il conto fiscale del ribilanciamento
   supera il guadagno di un metodo che non prova nemmeno a prevedere i rendimenti.
+- **Una voce è morta per una ragione nuova, e vale la pena distinguerla.** I LEAPS
+  (giri 49 e 52) hanno un vantaggio di +1,34 punti che **non** è fragile al periodo
+  (17 finestre di 20 anni su 17, peggior caso +0,42%) né al livello di volatilità
+  implicita (regge fino a IV = 1,15 × VIX). Muore a un **rincaro del 10% del premio
+  d'ingresso**, cioè 2 punti di nozionale: lo spread normale di un'opzione lunga
+  deep ITM poco scambiata. Tutte le altre 51 voci sono morte perché il vantaggio non
+  c'era, o era selezione, o lo mangiavano le imposte. Questa muore dentro il **costo
+  di transazione dello strumento**, e la soglia è misurata: 2 punti di nozionale.
 - **Concentrare sul migliore è la scelta peggiore della griglia.** Il giro 50
   misura 15 celle (1, 3, 5, 10, 25 posizioni × mensile, trimestrale, annuale) sui
   49 settori: il massimo è **top-5 annuale a 10,02%**, contro **11,16%**

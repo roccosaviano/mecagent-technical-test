@@ -211,6 +211,7 @@ distribuzione nulla.
 | E3 vendere put cash-secured | 49 | **confermata** — Sharpe lordo 0,77 contro 0,71 come previsto, IRR netta **−4,98** punti (12 realizzi/anno → 52%). Skew da **−4,15 a −12,57**: più il premio sembra sicuro, più la coda è mostruosa |
 | E4 covered call | 49 | **confermata**, ma solo dopo aver buttato il simulatore: col modello la +5% sembrava **+0,98 con DSR 0,997**, la prima promozione apparente in 49 giri. Contro gli indici CBOE reali l'inflazione da skew è **+0,55/+1,51/+2,56** crescente con la moneyness. Coi dati reali: **−2,92** |
 | **E5 LEAPS come leva** | 49 | **FALSIFICATA** — 10,98% contro 9,64%, **+1,34**. Il finanziamento incorporato è **2,95%** contro il 5,90% del CFD. Ma DSR **0,000**, drawdown **−62,5%** contro −47,2%, direzione dell'errore ottimistica e non quantificabile senza un indice reale. Avevo sopravvalutato il drag fiscale del rollo annuale |
+| E6 stress sui LEAPS | 52 | **confermata** — muore a un **rincaro del 10%** del premio d'ingresso (2 punti di nozionale, cioè lo spread normale di un'opzione lunga poco liquida). Ma regge a tutto il resto: implicita fino a **k = 1,15** e **17 finestre su 17** di 20 anni con il caso peggiore ancora positivo. Due clausole della predizione su tre erano sbagliate. Il vantaggio esiste ed è stabile nel tempo: sta dentro il costo di transazione dello strumento |
 | **F1 rotazione top-1** | 50 | **FALSIFICATA da 1 cella su 9** — regioni top-1 mensile +0,30, ma su 4 asset con 894% di rotazione, e perde 3 punti contro il buy&hold USA. Le altre 8 celle perdono da 1,4 a 81 punti; sui 49 settori −6,5/−6,8 a ogni frequenza; cripto top-1 annuale **−96,3% di drawdown** |
 | F2 griglia posizioni × frequenza | 50 | **confermata** — massimo a **top-5 annuale, 10,02%** contro 11,16% dell'equal-weight statico. Nessuna delle 15 celle lo batte. Da 1 a 5 posizioni valgono **+5,5 punti di IRR e +27 di drawdown**. Le clausole di monotonia erano sbagliate: la relazione è a campana |
 | F3 sistema EMA giornaliero | 51 | **confermata** — batte il buy&hold su **1 asset su 10**, e quell'uno è LTC il cui B&H è −17%. Predizione sbagliata sul verso del lordo: il sistema **muore sul lordo** (0,75% contro 15,55% su QQQ), non sulle imposte |
@@ -572,7 +573,7 @@ funziona è quella che tutti considerano banale.
 *Falsificata se*: l'aspettativa per operazione del sistema completo supera quella
 del solo filtro di tendenza di oltre il 50%.
 
-**E6 — Stress sui LEAPS: quanto regge il +1,34?**
+**E6 — Stress sui LEAPS: quanto regge il +1,34?** ✔ eseguita (giro 52)
 Il giro 49 ha falsificato E5: una call deep ITM a 12 mesi finanzia al 2,95% annuo
 contro il 5,90% del CFD, non ha margin call, un solo rollo l'anno la tiene al 33%,
 e batte il buy&hold di **+1,34 punti**. Non l'ho promossa per quattro motivi, e il

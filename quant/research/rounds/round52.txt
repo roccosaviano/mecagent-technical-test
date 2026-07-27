@@ -1,0 +1,62 @@
+Finestra 1990-02-28 -> 2026-05-31
+Benchmark PAC azionario: IRR netta 9.64%
+
+========================================================================================
+(i) IMPLICITA PIU' ALTA — k = IV/VIX
+========================================================================================
+   Le call deep ITM trattano sopra l'ATM per parita' dallo skew delle
+   put. k = 0,85 e' il valore tarato su BXM e PUT, che sono ATM.
+
+        k     leva 1.0x     leva 1.2x     leva 1.5x
+   ------------------------------------------------
+     0.85        8.37%         9.47%        10.98%*
+     0.95        8.14%         9.19%        10.63%*
+     1.05        7.88%         8.87%        10.22%*
+     1.15        7.59%         8.52%         9.77%*
+   (* batte il benchmark, 9.64%)
+
+   A leva 1,5x il vantaggio sparisce da k = mai, entro 1,15
+
+========================================================================================
+(ii) RINCARO DEL PREMIO D'INGRESSO
+========================================================================================
+   Spread denaro-lettera ed esecuzione su uno strumento poco liquido:
+   si paga di piu' all'ingresso, il valore di mercato non cambia.
+
+     rincaro     leva 1.0x     leva 1.2x     leva 1.5x
+   ---------------------------------------------------
+          0%        8.37%         9.47%        10.98%*
+          5%        7.61%         8.55%         9.81%*
+         10%        6.85%         7.61%         8.64% 
+         15%        6.07%         6.69%         7.49% 
+         20%        5.30%         5.78%         6.37% 
+         30%        3.79%         4.01%         4.26% 
+         40%        2.35%         2.31%         2.20% 
+
+   A leva 1,5x il vantaggio sparisce con un rincaro del 10%
+
+========================================================================================
+(iii) FINESTRE MOBILI DI 20 ANNI
+========================================================================================
+     leva  finestre   vinte    quota    media  peggiore  migliore
+   ----------------------------------------------------
+     1.0x        17       7    41.2%   -0.09%    -0.92%    +0.49%
+     1.2x        17      17   100.0%   +0.84%    +0.42%    +1.38%
+     1.5x        17      17   100.0%   +2.10%    +0.61%    +3.31%
+
+========================================================================================
+VERDETTO SU E6
+========================================================================================
+   Predizione: sparisce con rincaro sotto il 15% e con k sotto 1,00;
+   vince in meno della meta' delle finestre mobili.
+   FALSIFICATA se sopravvive a un rincaro del 30% E vince in piu'
+   della meta' delle finestre.
+
+   Sopravvive a un rincaro del 30%? NO
+   Vince in piu' della meta' delle finestre? SI, a leva 1.2x, 1.5x
+   -> ipotesi E6 CONFERMATA
+
+   La voce si chiude: il +1,34 del giro 49 sta dentro l'incertezza
+   del modello. I LEAPS NON sono un candidato.
+
+Tentativi cumulati a registro: 1002
