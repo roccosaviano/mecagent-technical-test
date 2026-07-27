@@ -1,0 +1,88 @@
+F1 — rotazione sul migliore del periodo precedente
+
+================================================================================================
+49 settori USA   1969-07-31 -> 2026-05-31   49 asset, 683 mesi
+================================================================================================
+label                                  cagr      vol   sharpe       dd     turn      irr    irr52
+-------------------------------------------------------------------------------------------------
+49 settori USA: equal-weight         11.15%   17.20%     0.70  -52.63%     0.00   11.16%   10.40%
+49 settori USA: top-1 mensile         5.15%   30.96%     0.32  -74.08%    11.20    5.29%    4.64%
+49 settori USA: top-1 trimestrale     4.17%   32.83%     0.29  -91.22%     3.72    5.10%    4.39%
+49 settori USA: top-1 annuale         6.02%   31.65%     0.35  -83.86%     0.94    4.53%    3.81%
+   49 settori USA: top-1 mensile      IRR di rif.   4.64% (aliquota 52%) contro 11.16% -> -6.52
+   49 settori USA: top-1 trimestrale  IRR di rif.   4.39% (aliquota 52%) contro 11.16% -> -6.77
+   49 settori USA: top-1 annuale      IRR di rif.   4.53% (aliquota 33%) contro 11.16% -> -6.63
+   Migliore frequenza: top-1 mensile
+
+================================================================================================
+regioni   1990-07-31 -> 2026-05-31   4 asset, 431 mesi
+================================================================================================
+label                                  cagr      vol   sharpe       dd     turn      irr    irr52
+-------------------------------------------------------------------------------------------------
+regioni: equal-weight                 7.49%   16.45%     0.52  -55.99%     0.00    6.45%    5.40%
+regioni: top-1 mensile                9.21%   17.28%     0.60  -42.29%     8.94    7.87%    6.75%
+regioni: top-1 trimestrale            5.81%   18.15%     0.40  -57.26%     3.01    4.77%    4.08%
+regioni: top-1 annuale                6.79%   18.55%     0.45  -61.20%     0.76    5.01%    4.23%
+   regioni: top-1 mensile             IRR di rif.   6.75% (aliquota 52%) contro 6.45% -> +0.30
+   regioni: top-1 trimestrale         IRR di rif.   4.08% (aliquota 52%) contro 6.45% -> -2.36
+   regioni: top-1 annuale             IRR di rif.   5.01% (aliquota 33%) contro 6.45% -> -1.43
+   Migliore frequenza: top-1 mensile
+
+================================================================================================
+8 cripto   2018-02-28 -> 2026-07-31   8 asset, 102 mesi
+================================================================================================
+label                                  cagr      vol   sharpe       dd     turn      irr    irr52
+-------------------------------------------------------------------------------------------------
+8 cripto: equal-weight               46.62%  105.36%     0.75  -76.65%     0.00   47.17%   40.48%
+8 cripto: top-1 mensile              19.26%  141.51%     0.60  -90.13%    10.16   15.64%    9.22%
+8 cripto: top-1 trimestrale          30.63%  213.00%     0.57  -93.34%     3.46   34.51%   23.05%
+8 cripto: top-1 annuale               0.10%  199.28%     0.41  -96.25%     0.99  -33.82%  -33.82%
+   8 cripto: top-1 mensile            IRR di rif.   9.22% (aliquota 52%) contro 47.17% -> -37.96
+   8 cripto: top-1 trimestrale        IRR di rif.  23.05% (aliquota 52%) contro 47.17% -> -24.12
+   8 cripto: top-1 annuale            IRR di rif. -33.82% (aliquota 33%) contro 47.17% -> -80.99
+   Migliore frequenza: top-1 trimestrale
+
+================================================================================================
+VERDETTO SU F1
+================================================================================================
+   Predizione: il top-1 e' peggiore dell'equal-weight del proprio
+   universo; l'annuale e' la meno peggio.
+   FALSIFICATA se una qualunque configurazione top-1 batte l'equal-weight.
+
+   Configurazioni top-1 che battono il proprio equal-weight: 1/9
+   -> ipotesi F1 FALSIFICATA
+
+================================================================================================
+F2 — LA GRIGLIA: NUMERO DI POSIZIONI x FREQUENZA
+================================================================================================
+   49 settori, 1969-07-31 -> 2026-05-31
+   Riferimento: equal-weight statico, IRR netta 11.16%
+
+   IRR NETTA DI RIFERIMENTO (33% o 52% secondo la rotazione)
+   posizioni          mensile   trimestrale       annuale
+   ------------------------------------------------------
+   1                   4.64%*        4.39%*         4.53%
+   3                   5.88%*        5.65%*         9.12%
+   5                   6.59%*        7.26%*        10.02%
+   10                  7.06%*        8.06%*         8.91%
+   25                  7.43%*        8.09%*         9.47%
+   (* = oltre 100% di rotazione l'anno, valutata al 52%)
+
+   Massimo della griglia: top-5 annuale -> 10.02%  contro 11.16% dell'equal-weight statico
+   Monotona crescente nel numero di posizioni? NO
+   Monotona crescente allungando il ribilanciamento? NO
+
+   FALSIFICATA se il massimo sta sotto 5 posizioni o batte
+   l'equal-weight statico.
+   -> ipotesi F2 CONFERMATA
+
+   Il costo della concentrazione, a parita' di frequenza annuale:
+     top-1   CAGR   6.02%  Sharpe  0.35  DD   -83.9%  rotazione 0.94x  IRR   4.53%
+     top-3   CAGR  12.15%  Sharpe  0.61  DD   -64.1%  rotazione 0.86x  IRR   9.12%
+     top-5   CAGR  12.72%  Sharpe  0.67  DD   -56.7%  rotazione 0.83x  IRR  10.02%
+     top-10  CAGR  11.27%  Sharpe  0.66  DD   -59.9%  rotazione 0.76x  IRR   8.91%
+     top-25  CAGR  11.49%  Sharpe  0.72  DD   -50.9%  rotazione 0.48x  IRR   9.47%
+
+   DSR del migliore su N=71: 0.999 -> NON promuovibile
+
+Tentativi cumulati a registro: 955

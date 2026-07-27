@@ -1,0 +1,59 @@
+====================================================================================================
+F3 — IL SISTEMA COMPLETO SU BASE GIORNALIERA
+====================================================================================================
+   Ordine dentro la barra: SEMPRE PRIMA IL PEGGIO. Se una barra tocca
+   sia lo stop sia il target, conta lo stop.
+
+   asset     anni  oper.  op/anno  CAGR sist  CAGR B&H  IRR sist  IRR B&H   delta
+   ------------------------------------------------------------------------------
+   QQQ       19.9    141      7.1      0.75%    15.55%     0.26%   14.80%  -14.55
+   AAPL      19.9    117      5.9      3.41%    27.59%     1.57%   23.19%  -21.62
+   ADA        8.0     39      4.9     -0.11%    -0.29%    -4.55%    1.95%   -6.49
+   BTC        8.8     65      7.4     13.92%    34.04%     4.61%   25.71%  -21.10
+   DOGE       7.0     40      5.7      9.34%    58.13%     3.84%   45.70%  -41.86
+   ETH        8.8     84      9.6      3.37%    23.55%     2.24%   22.58%  -20.34
+   LINK       8.5     63      7.4      9.29%    26.12%    -2.90%   28.91%  -31.81
+   LTC        8.5     59      6.9      1.61%   -17.05%    -0.75%  -10.85%  +10.09
+   SOL        5.8     30      5.2     -4.59%    74.07%    -1.53%   41.20%  -42.74
+   XRP        8.5     46      5.4      2.59%    -7.80%     0.28%   14.38%  -14.10
+
+   Batte il buy&hold su 1/10 asset
+   -> ipotesi F3 CONFERMATA
+
+====================================================================================================
+F4 — LO STESSO SISTEMA SU TIMEFRAME INTRADAY (QQQ)
+====================================================================================================
+   timeframe        barre   anni  oper.  op/anno      CAGR      B&H  IRR sist  IRR B&H
+   -----------------------------------------------------------------------------------
+   giornaliero       5000   19.9    141      7.1     0.75%   15.55%     0.30%   14.80%
+   1 ora             5000    2.9     96     33.6     0.62%   22.89%     1.12%   17.78%
+   15 minuti         5000    0.8    103    133.4   -16.67%   16.55%   -18.65%   20.30%
+
+   ATTENZIONE alle finestre: 20 anni sul giornaliero, 2,9 sull'orario,
+   0,8 sui 15 minuti. Twelve Data ne da' 5.000 barre e basta, quindi i
+   tre timeframe NON coprono lo stesso periodo e il confronto di CAGR
+   fra righe e' indicativo. Il numero di operazioni l'anno invece e'
+   confrontabile, ed e' quello che decide.
+
+   Un timeframe intraday batte il giornaliero? SI
+   -> ipotesi F4 FALSIFICATA
+
+====================================================================================================
+F5 — ABLAZIONE: QUALE PEZZO FA IL LAVORO
+====================================================================================================
+   variante                    oper./anno  CAGR medio  aspettativa/oper.  IRR media
+   --------------------------------------------------------------------------------
+   sistema completo                   6.5       3.96%             0.564%      0.31%
+   senza filtro volume               11.6      14.11%             1.098%      3.66%
+   senza ritracciamento              17.5      23.42%             1.377%     10.90%
+   solo filtro di tendenza            3.5      45.13%            13.321%     27.16%
+
+   Il solo filtro di tendenza cattura il 1140% del CAGR lordo
+   del sistema completo (previsto: almeno l'80%)
+   Aspettativa per operazione: completo 0.564% contro tendenza 13.321%  -> rapporto 0.04
+   FALSIFICATA se il rapporto supera 1,50
+   -> ipotesi F5 CONFERMATA
+
+   DSR del migliore (EMA BTC) su N=71: 0.593
+
+Tentativi cumulati a registro: 969

@@ -211,6 +211,11 @@ distribuzione nulla.
 | E3 vendere put cash-secured | 49 | **confermata** — Sharpe lordo 0,77 contro 0,71 come previsto, IRR netta **−4,98** punti (12 realizzi/anno → 52%). Skew da **−4,15 a −12,57**: più il premio sembra sicuro, più la coda è mostruosa |
 | E4 covered call | 49 | **confermata**, ma solo dopo aver buttato il simulatore: col modello la +5% sembrava **+0,98 con DSR 0,997**, la prima promozione apparente in 49 giri. Contro gli indici CBOE reali l'inflazione da skew è **+0,55/+1,51/+2,56** crescente con la moneyness. Coi dati reali: **−2,92** |
 | **E5 LEAPS come leva** | 49 | **FALSIFICATA** — 10,98% contro 9,64%, **+1,34**. Il finanziamento incorporato è **2,95%** contro il 5,90% del CFD. Ma DSR **0,000**, drawdown **−62,5%** contro −47,2%, direzione dell'errore ottimistica e non quantificabile senza un indice reale. Avevo sopravvalutato il drag fiscale del rollo annuale |
+| **F1 rotazione top-1** | 50 | **FALSIFICATA da 1 cella su 9** — regioni top-1 mensile +0,30, ma su 4 asset con 894% di rotazione, e perde 3 punti contro il buy&hold USA. Le altre 8 celle perdono da 1,4 a 81 punti; sui 49 settori −6,5/−6,8 a ogni frequenza; cripto top-1 annuale **−96,3% di drawdown** |
+| F2 griglia posizioni × frequenza | 50 | **confermata** — massimo a **top-5 annuale, 10,02%** contro 11,16% dell'equal-weight statico. Nessuna delle 15 celle lo batte. Da 1 a 5 posizioni valgono **+5,5 punti di IRR e +27 di drawdown**. Le clausole di monotonia erano sbagliate: la relazione è a campana |
+| F3 sistema EMA giornaliero | 51 | **confermata** — batte il buy&hold su **1 asset su 10**, e quell'uno è LTC il cui B&H è −17%. Predizione sbagliata sul verso del lordo: il sistema **muore sul lordo** (0,75% contro 15,55% su QQQ), non sulle imposte |
+| **F4 sistema EMA intraday** | 51 | **FALSIFICATA** — l'orario (1,12%) supera il giornaliero (0,30%). Ma le finestre sono **20 / 2,9 / 0,8 anni**: Twelve Data dà 5.000 barre e basta, quindi il confronto di CAGR fra righe misura il periodo, non il timeframe. Il meccanismo previsto si vede: **7,1 → 33,6 → 133,4** operazioni/anno, e a 15 minuti −18,65% contro +20,30% |
+| F5 ablazione del sistema EMA | 51 | **confermata con margine enorme** — il **solo filtro di tendenza** ha aspettativa per operazione **13,321%** contro **0,564%** del sistema completo: rapporto **0,04**, cioè il sistema completo cattura un ventiquattresimo. Ingressi tattici e piano di uscita fanno entrare tardi e uscire presto |
 
 
 ---
@@ -518,7 +523,7 @@ stop a pareggio sul resto, trailing sulla EMA21, uscita totale su chiusura sotto
 la EMA50. Le regole non specificano lo stop iniziale: lo fisso al minimo delle
 ultime 10 barre e lo dichiaro.
 
-**F1 — Rotazione top-1 sul migliore del periodo precedente**
+**F1 — Rotazione top-1 sul migliore del periodo precedente** ✔ eseguita (giro 50)
 49 settori USA, 5 regioni, 8 cripto. Ribilanciamento annuale, trimestrale e
 mensile, con lookback pari al periodo precedente.
 *Predizione*: il top-1 è **peggiore** del top-10 già testato (H5) e peggiore
@@ -528,7 +533,7 @@ una posizione sola. La versione annuale è la meno peggio perché è la meno tas
 *Falsificata se*: una qualunque configurazione top-1 batte l'equal-weight del
 proprio universo netto di imposte.
 
-**F2 — La curva del numero di posizioni e della frequenza**
+**F2 — La curva del numero di posizioni e della frequenza** ✔ eseguita (giro 50)
 Griglia completa: 1, 3, 5, 10, 25 posizioni × ribilanciamento mensile,
 trimestrale, annuale, sui 49 settori. Misura il compromesso fra concentrazione e
 rotazione invece di provarne due punti.
@@ -539,7 +544,7 @@ della griglia non batte l'equal-weight statico.
 *Falsificata se*: il massimo della griglia sta a meno di 5 posizioni, oppure batte
 l'equal-weight statico.
 
-**F3 — Il sistema EMA 9/21/50/200 su base giornaliera**
+**F3 — Il sistema EMA 9/21/50/200 su base giornaliera** ✔ eseguita (giro 51)
 QQQ e AAPL (Twelve Data, OHLCV) e le 8 cripto OKX. Serve OHLCV vero: volume per il
 filtro sul ritracciamento, massimi e minimi per stop e target.
 *Predizione*: lordo positivo sugli asset in tendenza (cripto, QQQ), perché è un
@@ -548,7 +553,7 @@ l'anno portano l'aliquota al 52%, e netto di costi e imposte finisce **sotto il
 buy&hold su ogni asset**.
 *Falsificata se*: l'IRR netta batte il buy&hold su almeno metà degli asset.
 
-**F4 — Lo stesso sistema su timeframe intraday**
+**F4 — Lo stesso sistema su timeframe intraday** ✔ eseguita (giro 51)
 QQQ a 1 ora e a 15 minuti, contro la versione giornaliera.
 *Predizione*: accorciando il timeframe il vantaggio lordo per operazione si
 restringe verso il costo mentre il numero di operazioni esplode; il risultato netto
@@ -556,7 +561,7 @@ restringe verso il costo mentre il numero di operazioni esplode; il risultato ne
 *Falsificata se*: un timeframe intraday batte la versione giornaliera netto di
 costi e imposte.
 
-**F5 — Quale pezzo del sistema fa il lavoro?**
+**F5 — Quale pezzo del sistema fa il lavoro?** ✔ eseguita (giro 51)
 Ablazione: (a) sistema completo, (b) senza il filtro sul volume, (c) senza il
 requisito di ritracciamento, (d) solo il filtro di tendenza (prezzo sopra EMA200 e
 EMA21 sopra EMA50, dentro o fuori), (e) buy&hold.
