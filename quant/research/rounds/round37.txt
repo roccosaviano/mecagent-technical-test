@@ -1,0 +1,47 @@
+============================================================================================
+B1 — materie prime: trend following sul WTI
+============================================================================================
+   WTI spot 1986-02-28 -> 2026-07-31 (486 mesi)
+   ATTENZIONE: prezzo spot, senza roll. I numeri sono un limite
+   SUPERIORE del rendimento davvero ottenibile.
+
+label                                  cagr      vol   sharpe       dd     turn      irr    irr52
+-------------------------------------------------------------------------------------------------
+WTI buy&hold                          3.76%   37.88%     0.28  -86.26%     0.00    3.34%    2.66%
+azionario (benchmark)                11.52%   15.61%     0.78  -50.31%     0.00    9.90%    8.82%
+WTI trend MA6                         4.79%   24.81%     0.31  -49.23%     2.72    2.59%    1.95%
+WTI trend MA10                        4.52%   24.76%     0.30  -59.12%     1.98    2.56%    2.07%
+WTI trend MA12                        5.31%   24.33%     0.33  -50.42%     1.73    3.75%    3.09%
+WTI momentum 6m                       3.30%   24.95%     0.25  -67.23%     2.00    3.29%    2.77%
+WTI momentum 12m                      3.77%   23.51%     0.28  -54.54%     1.65    2.05%    1.62%
+
+   Il trend following funziona LORDO sul WTI? SI  (miglior CAGR trend 5.31% contro 3.76% del buy&hold)
+   Qualche configurazione batte l'azionario netto imposte? NO
+   -> ipotesi B1 CONFERMATA
+   Carry sul future: NON TESTABILE, non ho la curva dei futures.
+
+============================================================================================
+B2 — valute: carry e momentum
+============================================================================================
+   Le tre valute dichiarate: EUR, JPY, CNY
+   Finestra comune 1999-02-28 -> 2026-07-31 (330 mesi)
+   CNY: senza tasso interbancario confrontabile, entra solo nel
+   momentum. E' anche una valuta amministrata, dove il carry non e'
+   un premio di rischio ma una scelta di politica monetaria.
+
+
+label                                  cagr      vol   sharpe     skew       dd     turn      irr
+-------------------------------------------------------------------------------------------------
+carry EUR/JPY long-short             -0.47%   10.62%     0.01    -0.66  -59.59%     0.18    0.37%
+momentum 12m long-short               2.02%    9.69%     0.25    -0.12  -42.11%     3.27    2.13%
+3 valute equal-weight long           -0.54%    5.52%    -0.07     0.01  -37.64%     0.00   -1.49%
+carry +GBP (robustezza)               1.17%   10.18%     0.17    -1.02  -53.99%     0.45    1.67%
+
+   Condizione di falsificazione: Sharpe > 0,5 CON skew > -0,5.
+     carry EUR/JPY long-short     Sharpe  0.01 · skew  -0.66  -> no
+     momentum 12m long-short      Sharpe  0.25 · skew  -0.12  -> no
+     3 valute equal-weight long   Sharpe -0.07 · skew   0.01  -> no
+     carry +GBP (robustezza)      Sharpe  0.17 · skew  -1.02  -> no
+   -> ipotesi B2 CONFERMATA
+
+Tentativi cumulati a registro: 784

@@ -56,27 +56,27 @@ alta rotazione.
 
 ## B. Mercati non ancora toccati
 
-**B1 — Materie prime (petrolio WTI, FRED DCOILWTICO dal 1986)**
+**B1 — Materie prime (petrolio WTI, FRED DCOILWTICO dal 1986)** ✔ eseguita (giro 37)
 Trend following e carry sul future proxy.
 *Predizione*: il trend following su materie prime funziona lordo (è il caso
 canonico dei CTA) e muore sui costi più le imposte, come sull'azionario.
 *Falsificata se*: IRR netta > buy&hold azionario.
 
-**B2 — Valute (DEXUSEU, DEXJPUS, DEXCHUS) — carry e momentum**
+**B2 — Valute (DEXUSEU, DEXJPUS, DEXCHUS) — carry e momentum** ✔ eseguita (giro 37)
 Carry = differenziale tassi (DGS2 contro tasso estero implicito), momentum a
 12 mesi. Long/short fra tre cambi.
 *Predizione*: il carry ha premio positivo ma skew fortemente negativa, e le
 tre valute non bastano a diversificare il rischio di crash.
 *Falsificata se*: Sharpe > 0,5 con skew > -0,5 dopo costi.
 
-**B3 — Credito (spread high yield BAMLH0A0HYM2)**
+**B3 — Credito (spread high yield BAMLH0A0HYM2)** ✖ NON TESTABILE (giro 38)
 Segnale macro: allargamento dello spread come indicatore di rischio per
 l'azionario. Esci dall'azionario quando lo spread sale oltre N deviazioni.
 *Predizione*: segnale con potere in-sample, ma il ritardo di pubblicazione e
 la reazione già incorporata nei prezzi lo rendono inutile out-of-sample.
 *Falsificata se*: batte il buy&hold netto imposte fuori campione.
 
-**B4 — Curva dei tassi (T10Y2Y) come segnale di regime azionario**
+**B4 — Curva dei tassi (T10Y2Y) come segnale di regime azionario** ✔ eseguita (giro 38)
 L'inversione della curva precede le recessioni. Riduzione dell'esposizione
 azionaria quando la curva si inverte.
 *Predizione*: il segnale è corretto ma troppo lento — l'anticipo mediano
@@ -84,13 +84,13 @@ dell'inversione è 12-18 mesi, e uscire con quell'anticipo costa più di quanto
 protegga.
 *Falsificata se*: IRR netta > buy&hold.
 
-**B5 — Azionario internazionale (French Developed, Emerging, Japan, Europe)**
+**B5 — Azionario internazionale (French Developed, Emerging, Japan, Europe)** ✔ eseguita (giro 39)
 Momentum cross-sectional fra regioni, ribilanciamento annuale.
 *Predizione*: funziona come il momentum settoriale (stesso meccanismo) e
 muore come lui sulle imposte, con in più il fatto che la storia parte dal 1990.
 *Falsificata se*: DSR > 0,95 con IRR netta positiva.
 
-**B6 — Cripto: universo esteso oltre i 7 attuali**
+**B6 — Cripto: universo esteso oltre i 7 attuali** ✔ eseguita (giro 39)
 Aggiungere le maggiori per capitalizzazione disponibili su OKX, e includere
 esplicitamente asset con storia parziale per attenuare la sopravvivenza.
 *Predizione*: allargando l'universo il CAGR del buy&hold scende (i nuovi sono
@@ -181,6 +181,13 @@ distribuzione nulla.
 | A8 min-variance in leva 1,20× | 35 | **confermata** — 8,64% contro 10,88% (−2,24). La leva **distrugge lo Sharpe** che doveva monetizzare: 0,78 → 0,69. Nessuna leva sotto 3,00× pareggia; a 1,50× scatta il margin call (equity 2,3%) |
 | A9 Kelly contro frazione fissa | 36 | **confermata, 4 casi su 4** — la frazione fissa vince sempre. Kelly non aggiunge informazione, aggiunge rotazione tassabile |
 | A10 curva del prezzo del drawdown | 36 | **confermata** sull'esistenza del minimo interno, **sbagliata sulla posizione**: 40% sul cap-weighted, 20% sull'equal-weight, non 30-35%. La soglia efficiente dipende dal sottostante |
+| B1 materie prime | 37 | **confermata** — trend following funziona lordo (5,31% contro 3,76% del buy&hold WTI) e muore netto: 3,75% contro 9,90% dell'azionario. Numeri comunque un **limite superiore**, il WTI spot ignora il roll |
+| B2 valute carry e momentum | 37 | **confermata dopo la correzione di un bug** — alla prima esecuzione risultava falsificata (Sharpe 0,58, skew +1,81), ma `fill_value=0` fabbricava un EUR senza rischio di cambio prima del 1999. Corretto: Sharpe 0,25, skew −0,12, nessuna variante passa |
+| B3 credito HY | 38 | **senza esito — non testabile**. `BAMLH0A0HYM2` si scarica solo per 3 anni (licenza ICE): 35 mesi contro i 30 anni necessari |
+| B4 curva dei tassi | 38 | **confermata** — **12 inversioni su 13** seguite da un calo oltre il 15%, anticipo mediano 13 mesi, e la strategia perde 1,2-2,6 punti. Un segnale che ha ragione quasi sempre e costa comunque |
+| B5 azionario internazionale | 39 | **confermata** — nessuna variante batte nemmeno l'equal-weight fra regioni (5,05% contro 6,74%), DSR 0,864 |
+| B6 cripto universo esteso | 39 | **confermata** sul test (DSR 0,904), **sbagliata sulla prima clausola**: il CAGR del buy&hold sale invece di scendere (55,3% contro 22,6%), perché allargare ai simboli oggi quotati **aumenta** la sopravvivenza. Intervallo dello Sharpe [0,22 – 1,56] |
+| B7 credito Baa−Aaa (sostituta di B3) | 38 | **confermata** — 8,48% walk-forward contro 10,56% del buy&hold, e perde in **ogni** configurazione della griglia. Divario in-sample/walk-forward 0,39 punti, non ≥1 come previsto |
 
 
 ---
@@ -270,3 +277,19 @@ monotonamente fino a circa il 30-35%, oltre il quale la soglia scatta troppo di
 rado per proteggere. Esiste quindi un minimo interno, intorno al 30%.
 *Falsificata se*: il rapporto è piatto (nessun minimo interno distinguibile) o
 monotono su tutto l'intervallo.
+
+**B7 — Credito con una serie a storia lunga: spread Baa−Aaa di Moody's (1919→)** ✔ eseguita (giro 38)
+Nata perché B3 è risultata **non testabile sulla serie dichiarata**: le serie ICE
+BofA (`BAMLH0A0HYM2`) sono scaricabili solo per gli ultimi 3 anni, licenza ICE.
+Lo spread Baa−Aaa è il *default spread* classico della letteratura (Fama-French
+1989) e ha 107 anni di storia. Stessa meccanica di B3: si esce dall'azionario
+quando lo z-score dello spread supera una soglia, z-score su finestra mobile,
+segnale ritardato di un mese, soglia scelta walk-forward.
+*Predizione*: lo spread di default ha potere predittivo documentato sui rendimenti
+azionari futuri, ma è un segnale **di lungo periodo e a bassa frequenza** — dice
+che i rendimenti attesi sono alti quando lo spread è largo, cioè dopo i crolli.
+Usarlo come segnale di uscita fa quindi l'opposto di quel che dovrebbe: vende dopo
+il calo. La versione walk-forward resterà sotto il buy&hold netto imposte, e il
+divario fra il miglior parametro in-sample e quello preso walk-forward sarà di
+almeno 1 punto.
+*Falsificata se*: la versione walk-forward batte il buy&hold netto imposte.

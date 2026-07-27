@@ -144,9 +144,17 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 36 | A9 Kelly contro frazione fissa | confermata | la frazione fissa vince 4/4 |
 | 36 | A10 curva del prezzo del drawdown | confermata | minimo interno, ma a 40% e 20%, non 30-35% |
 
-**Gruppo A chiuso: 10 voci su 10 confermate, nessuna promozione.**
+| 37 | B1 materie prime | confermata | trend 3,75% netto contro 9,90% |
+| 37 | B2 valute | confermata dopo bug | Sharpe 0,25, skew −0,12 |
+| 38 | B3 credito HY | **senza esito** | serie ICE limitata a 35 mesi |
+| 38 | B7 credito Baa−Aaa (sostituta) | confermata | 8,48% contro 10,56% |
+| 38 | B4 curva dei tassi | confermata | 12 inversioni su 13, e perde 1,2-2,6 punti |
+| 39 | B5 azionario internazionale | confermata | DSR 0,864 |
+| 39 | B6 cripto esteso | confermata | DSR 0,904, Sharpe [0,22 – 1,56] |
 
-Nessuna promozione dalla coda. Registro a **733 tentativi** cumulati.
+**Gruppo A chiuso: 10 su 10 confermate. Gruppo B: 6 confermate, 1 senza esito.**
+
+Nessuna promozione dalla coda. Registro a **808 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -211,6 +219,18 @@ Nessuna promozione dalla coda. Registro a **733 tentativi** cumulati.
   netta contro il cap-weighted, con 0,31 rotazioni l'anno. HRP guadagna 0,28 punti
   di CAGR lordo e ne restituisce 1,4 netti: il conto fiscale del ribilanciamento
   supera il guadagno di un metodo che non prova nemmeno a prevedere i rendimenti.
+- **Un bug da fill_value che ha prodotto una falsificazione falsa.** Al giro 37
+  `sret.add(carry, fill_value=0.0)` sommava il carry anche dove il CAMBIO non
+  esisteva ancora, fabbricando un euro senza rischio di cambio dal 1994 al 1999.
+  B2 risultava falsificata con Sharpe 0,58 e skew +1,81; corretta, Sharpe 0,25 e
+  skew −0,12. Trovato inseguendo un problema diverso, non perché il numero
+  sembrasse strano. Regola che ne esce: **`fill_value` su un allineamento fra
+  serie di lunghezza diversa va sempre giustificato per colonna**, perché riempie
+  anche dove il dato non manca ma NON ESISTE.
+- **Un segnale può avere ragione e costare comunque.** La curva dei tassi (giro
+  38) azzecca 12 inversioni su 13 con anticipo mediano di 13 mesi, e perde 1,2-2,6
+  punti l'anno: avere ragione con un anno di anticipo significa stare fuori per un
+  anno di rialzi. Il drawdown massimo non migliora di un decimo di punto.
 - **Tre giri di fila, tre metodi diversi, lo stesso muro.** HRP (31), min-variance
   (32) e Kelly con de-risking (33) migliorano tutti lo Sharpe del PAC azionario —
   il migliore in assoluto è 0,73 contro 0,63 del buy&hold — e perdono tutti fra

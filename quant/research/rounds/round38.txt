@@ -1,0 +1,53 @@
+============================================================================================
+B3 — credito: lo spread high yield come segnale sull'azionario
+============================================================================================
+   NON TESTABILE sulla serie dichiarata: BAMLH0A0HYM2 scarica
+   solo 37 mesi. Le serie ICE BofA su FRED sono limitate
+   agli ultimi 3 anni per licenza, e non esiste un endpoint
+   alternativo che dia la storia dal 1996.
+   B3 resta SENZA ESITO. Al suo posto eseguo B7, pre-registrata
+   in coda PRIMA di girare, sullo spread Baa-Aaa di Moody's che
+   ha storia dal 1919 ed e' il default spread della letteratura.
+   Spread HY 1926-07-31 -> 2026-05-31 (1199 mesi)
+   Segnale ritardato di 1 mese oltre la costruzione.
+
+   Griglia IN-SAMPLE (quello che SEMBRA, non quello che si prende):
+     finestra 36m soglia 1.0   IRR   6.96%  esposizione media 0.76  turnover 0.73x
+     finestra 36m soglia 1.5   IRR   7.31%  esposizione media 0.83  turnover 0.61x
+     finestra 36m soglia 2.0   IRR   8.22%  esposizione media 0.87  turnover 0.45x
+     finestra 60m soglia 1.0   IRR   6.94%  esposizione media 0.77  turnover 0.63x
+     finestra 60m soglia 1.5   IRR   8.32%  esposizione media 0.84  turnover 0.53x
+     finestra 60m soglia 2.0   IRR   8.87%  esposizione media 0.88  turnover 0.29x
+   Walk-forward: la configurazione scelta cambia 6 volte in 95 anni
+
+label                                  cagr      vol   sharpe       dd     turn      irr    irr52
+-------------------------------------------------------------------------------------------------
+azionario buy&hold                   10.38%   18.35%     0.63  -83.65%     0.00   10.56%   10.15%
+B7 spread Baa-Aaa WALK-FORWARD        9.35%   16.72%     0.62  -81.38%     0.37    8.48%    7.57%
+
+   Migliore IN-SAMPLE: B7 spread Baa-Aaa in-sample w60 z2.0 -> 8.87% (-1.69 contro B&H)
+   Preso WALK-FORWARD: 8.48% (-2.08 contro B&H)
+   Il divario fra i due e' il costo di non conoscere il futuro: 0.39 punti
+   -> ipotesi B7 CONFERMATA
+
+============================================================================================
+B4 — curva dei tassi: l'inversione come segnale di regime
+============================================================================================
+   T10Y2Y 1976-06-30 -> 2026-05-31 (600 mesi)
+   Inversioni nel campione: 13. Di queste, 12 seguite da un calo oltre il 15% entro 36 mesi.
+   Anticipo mediano dell'inversione sul calo: 13 mesi (previsto 12-18)
+
+label                                  cagr      vol   sharpe       dd     turn      irr    irr52
+-------------------------------------------------------------------------------------------------
+azionario buy&hold                   12.18%   15.44%     0.83  -50.31%     0.00   10.94%   10.06%
+curva invertita -> 0% (lag 1m)       11.88%   14.15%     0.87  -50.31%     0.54    9.26%    8.09%
+curva invertita -> 0% (lag 3m)       10.70%   14.30%     0.79  -50.31%     0.54    8.35%    7.29%
+curva invertita -> 50% (lag 1m)      12.08%   14.48%     0.86  -50.31%     0.28    9.71%    8.53%
+curva invertita -> 50% (lag 3m)      11.49%   14.58%     0.82  -50.31%     0.28    9.22%    8.06%
+
+   Qualche variante batte il buy&hold netto imposte? NO
+   -> ipotesi B4 CONFERMATA
+
+   DSR del migliore complessivo (curva invertita -> 50% (lag 1m)) su N=56: 0.000
+
+Tentativi cumulati a registro: 797
