@@ -1,0 +1,52 @@
+==============================================================================================
+CONTROLLO: i numeri dello screenshot su 5 anni
+==============================================================================================
+   strumento                         5 anni   nota
+   Berkshire (BRK.B)                  78.1%
+   S&P 500 (SPY)                      81.4%
+   S&P 500 Momentum (SPMO)           155.5%
+
+   Nello screenshot: BRK.B +78,2% · .INX +69,8% · SP500MUN +154,1%
+   Il mio SPY e' TOTAL RETURN, .INX no: la differenza fra i due e'
+   quanto valgono i dividendi dell'S&P in cinque anni.
+
+==============================================================================================
+PAC DI EUR 750/MESE PER 5 ANNI  (2021-07-31 -> 2026-07-31)
+==============================================================================================
+   strumento                       CAGR    vol       DD  Sharpe  IRR ETF    montante   imposte
+   -------------------------------------------------------------------------------------------
+   S&P 500 (SPY)                 12.65%  15.9%   -23.9%    0.83   12.04%     60,324     9,422
+   S&P 500 Momentum (SPMO)       20.63%  20.6%   -21.3%    1.02   20.85%     74,408    18,099
+   MSCI USA Momentum (MTUM)      13.09%  20.6%   -30.2%    0.70   15.66%     65,788    12,825
+   Berkshire (BRK.B)             12.24%  18.9%   -24.3%    0.71    7.47%     54,013     5,681
+
+   Versato: EUR 45,000
+   S&P 500 Momentum (SPMO)      contro S&P 500:  +8.81 punti, EUR +14,084
+   MSCI USA Momentum (MTUM)     contro S&P 500:  +3.62 punti, EUR +5,464
+   Berkshire (BRK.B)            contro S&P 500:  -4.57 punti, EUR -6,311
+
+==============================================================================================
+PAC DI EUR 750/MESE PER 10 ANNI  (2016-07-31 -> 2026-07-31)
+==============================================================================================
+   strumento                       CAGR    vol       DD  Sharpe  IRR ETF    montante   imposte
+   -------------------------------------------------------------------------------------------
+   S&P 500 (SPY)                 14.93%  15.3%   -23.9%    0.99   11.37%    161,100    40,392
+   S&P 500 Momentum (SPMO)       19.74%  17.8%   -21.3%    1.10   16.54%    211,637    68,901
+   MSCI USA Momentum (MTUM)      15.92%  18.0%   -30.2%    0.91   12.12%    167,522    44,753
+   Berkshire (BRK.B)             13.14%  18.1%   -24.3%    0.78    9.13%    143,296    30,239
+
+   Versato: EUR 90,000
+   S&P 500 Momentum (SPMO)      contro S&P 500:  +5.17 punti, EUR +50,537
+   MSCI USA Momentum (MTUM)     contro S&P 500:  +0.74 punti, EUR +6,422
+   Berkshire (BRK.B)            contro S&P 500:  -2.24 punti, EUR -17,804
+
+==============================================================================================
+OGNI FINESTRA DI 5 ANNI DA QUANDO SPMO ESISTE
+==============================================================================================
+   69 finestre mensili sovrapposte, dal 2015-11-30 al 2021-07-31
+   Il momentum vince in 47/69 (68%)
+   Differenza media +2.41 punti · mediana +1.33
+   Peggiore -3.12 (dal 2018-07-31) · migliore +12.12 (dal 2021-06-30)
+
+   Le finestre si sovrappongono di 59 mesi su 60: sono circa DUE
+   osservazioni indipendenti, non 69. Descrittive, non un test.
