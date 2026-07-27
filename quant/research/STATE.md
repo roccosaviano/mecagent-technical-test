@@ -173,6 +173,7 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 53 | G1 filtri di tendenza | confermata | il migliore perde 2,51 punti, il peggiore 4,50 |
 | 53 | **G2 momentum come veicolo** | **falsificata** | +0,77 in ETF UCITS, ma +2,77 solo dallo spostare la rotazione nel fondo |
 | 57 | H1 globale contro USA | confermata | S&P +1,89 sui dati reali, ma vince solo il 73% delle finestre decennali |
+| 58 | **A14 sequenza sul livello** | **falsificata** | rapporto 0,55-48,51, R² max 0,210 |
 | 50 | **F1 rotazione top-1** | **falsificata** | 1 cella su 9, +0,30 su un benchmark debole |
 | 50 | F2 griglia posizioni × frequenza | confermata | max top-5 annuale 10,02% contro 11,16% statico |
 | 51 | F3 sistema EMA giornaliero | confermata | batte il B&H su 1/10 asset, muore sul lordo |
@@ -184,7 +185,7 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 **27 confermate, 7 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
 Restano in coda: **A14, D3, D4**.
 
-Registro a **1.030 tentativi** cumulati.
+Registro a **1.035 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -315,6 +316,16 @@ Registro a **1.030 tentativi** cumulati.
   **+0,55 / +1,51 / +2,56**, crescente con la moneyness: il margine stava dentro
   l'errore. Rifatto con gli indici reali: **−2,92**. La direzione dell'errore era
   pre-dichiarata in coda, ed è stata la ragione per cui l'ho cercata.
+- **Tre tentativi falliti di spiegare quali finestre favoriscono cosa, e ho
+  smesso.** Giro 46: "sono centrate sui mercati orso", sbagliata. Giro 47: "e'
+  rischio di sequenza, sul divario", falsificata. Giro 58: "e' rischio di sequenza,
+  sul livello", falsificata con un rapporto che oscilla fra 0,55 e 48,51 e R2
+  massimo 0,210. **La regressione su due rendimenti di bordo non e' lo strumento**,
+  e una quarta specifica sarebbe cercare quella che funziona invece della
+  spiegazione vera. Sostituita da A15, che calcola analiticamente il peso di
+  ciascun anno invece di stimarlo. L'unica cosa solida che resta: sul PAC azionario
+  b(ultimi 3) = +0,137 e b(primi 3) = **−0,034**, cioe' un piano di accumulo
+  preferisce **partenza brutta e finale buono**.
 - **Il rischio di sequenza spiega il MONTANTE, non quale allocazione vince.** Il
   giro 47 separa due cose che avevo confuso. Il peso del capitale in un PAC
   ventennale è **9,5:1** fra ultimi e primi tre anni — aritmetica pura, nessun dato

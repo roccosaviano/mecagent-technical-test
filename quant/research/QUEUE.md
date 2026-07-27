@@ -213,6 +213,7 @@ distribuzione nulla.
 | **E5 LEAPS come leva** | 49 | **FALSIFICATA** — 10,98% contro 9,64%, **+1,34**. Il finanziamento incorporato è **2,95%** contro il 5,90% del CFD. Ma DSR **0,000**, drawdown **−62,5%** contro −47,2%, direzione dell'errore ottimistica e non quantificabile senza un indice reale. Avevo sopravvalutato il drag fiscale del rollo annuale |
 | E6 stress sui LEAPS | 52 | **confermata** — muore a un **rincaro del 10%** del premio d'ingresso (2 punti di nozionale, cioè lo spread normale di un'opzione lunga poco liquida). Ma regge a tutto il resto: implicita fino a **k = 1,15** e **17 finestre su 17** di 20 anni con il caso peggiore ancora positivo. Due clausole della predizione su tre erano sbagliate. Il vantaggio esiste ed è stabile nel tempo: sta dentro il costo di transazione dello strumento |
 | H1 globale contro USA | 57 | **confermata** — S&P **+1,89** punti sui dati reali (SPY contro VT/ACWI/URTH, 2011-2026) e **+1,61** sul proxy lungo 1990-2026, cioè **+€567.187** su un PAC trentennale. Ma su 26 finestre decennali l'USA vince solo il **73%**, e le 7 finestre perse partono **tutte fra il 1995 e il 2001**. Il globale non riduce nemmeno il rischio: stessa volatilità, drawdown peggiore |
+| **A14 sequenza sul livello** | 58 | **FALSIFICATA** — rapporto da **0,55 a 48,51**, minimo ben sotto 4, e R² fra 0,002 e 0,210 contro lo 0,6 previsto. Vero solo il verso sul PAC azionario: b(ultimi 3) **+0,137** e b(primi 3) **−0,034**, cioè un PAC preferisce partenza brutta e finale buono. **Terzo tentativo fallito di spiegare quali finestre favoriscono cosa** (46, 47, 58): linea chiusa, sostituita da A15 che calcola invece di stimare |
 | G1 filtri di tendenza | 53 | **confermata** — nessuno batte il buy&hold. Il migliore perde **2,51** punti (EMA200+EMA21>EMA50, e vince perché ruota 0,19×/anno contro 1,3-2,2 degli altri), il peggiore 4,50. In cambio 18-40 punti di drawdown |
 | **G2 momentum come veicolo** | 53 | **FALSIFICATA** — momentum in ETF UCITS **11,64%** contro cap-weight diretto in CGT **10,88%**: **+0,77**. Il risultato model-free è però un altro: a parità esatta di lordo, spostare la rotazione **dentro il fondo** vale **+2,77 punti**. Non promosso: il lordo (4,18 punti di premio) è più generoso degli indici momentum reali, manca il TER, e i parametri furono scelti al giro 05 |
 | **BUG nel motore fiscale** | 53 | i lotti ETF non venivano ridotti quando si liquidavano quote per pagare le imposte: su 57 anni e 7 cicli di deemed disposal il portafoglio si azzerava. Corretto pro rata. **Il vantaggio del veicolo scende da +2,15 a +1,23** su 1990-2023 (+2,12 su 1969-2026: cresce con l'orizzonte) |
@@ -409,7 +410,7 @@ multi-classe sale sopra il 50%, perché si aggiungono le finestre che finiscono 
 *Falsificata se*: i due coefficienti hanno modulo comparabile (rapporto sotto 2), o
 se il segno di quello sugli ultimi 3 anni è positivo.
 
-**A14 — Rischio di sequenza sul LIVELLO, non sul divario**
+**A14 — Rischio di sequenza sul LIVELLO, non sul divario** ✔ eseguita (giro 58)
 Il giro 47 ha falsificato A13 e ha mostrato dove sbagliavo: il peso del capitale in
 un PAC ventennale è **9,5:1** fra ultimi e primi tre anni (aritmetica pura), ma il
 rapporto fra i coefficienti sul **divario** fra due allocazioni è solo 1,2-2,7:1.
@@ -647,3 +648,19 @@ vantaggio strutturale, e su finestre mobili la quota di vittorie dell'S&P sta
 *Falsificata se*: il globale batte l'S&P sulla finestra principale, oppure l'S&P
 vince in **tutte** le finestre mobili (nel qual caso la sovraperformance USA non è
 un caso di periodo ma qualcosa di più sistematico).
+
+**A15 — Il peso di ciascun anno, calcolato invece che stimato**
+Tre tentativi di spiegare con una regressione quali finestre favoriscono cosa
+(giri 46, 47, 58) sono tutti falliti. Provarne un quarto significherebbe cercare la
+specifica che funziona invece della spiegazione vera. Quindi: **niente regressione**.
+Il montante di un PAC è la somma esatta dei versamenti capitalizzati, quindi la
+sensibilità dell'IRR al rendimento di ciascun anno **si scrive**, non si stima.
+Da calcolare analiticamente il vettore dei pesi ∂IRR/∂r_k per k = 1..20, e
+confrontarlo con i coefficienti di regressione dei giri 47 e 58.
+*Predizione*: il peso analitico è monotono crescente in k e il rapporto fra
+l'ultimo e il primo triennio si avvicina al 9,5:1 aritmetico entro il 20%. La
+regressione lo mancava perché due variabili di bordo comprimono venti gradi di
+libertà in due, non perché il meccanismo sia sbagliato.
+*Falsificata se*: il peso analitico non è monotono, oppure il suo rapporto
+ultimi/primi tre anni sta sotto 4 — nel qual caso il rischio di sequenza non
+spiega il livello dell'IRR di un PAC e va cercato un altro meccanismo.

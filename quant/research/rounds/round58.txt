@@ -1,0 +1,37 @@
+A14 — rischio di sequenza sul LIVELLO dell'IRR
+45 finestre di 20 anni, 1962-2025
+Peso aritmetico del capitale, ultimi 3 anni contro primi 3: 9.50:1
+
+   PAC                  b(ultimi 3)   b(primi 3)   rapporto   R2 ultimi  R2 entrambi
+   ---------------------------------------------------------------------------------
+   azionario 100%             0.137       -0.034       4.05       0.210        0.223
+   erc                        0.020        0.037       0.55       0.002        0.027
+   invvol                     0.035        0.020       1.76       0.014        0.020
+   6040                       0.069       -0.009       7.78       0.088        0.090
+   equal                      0.060       -0.001      48.51       0.065        0.065
+
+   Per confronto, il giro 47 sul DIVARIO fra allocazioni:
+     erc        b(ult)= -0.116  b(pri)=  0.071  rapporto  1.65
+     invvol     b(ult)= -0.102  b(pri)=  0.054  rapporto  1.89
+     6040       b(ult)= -0.067  b(pri)=  0.025  rapporto  2.71
+     equal      b(ult)= -0.077  b(pri)=  0.033  rapporto  2.36
+
+====================================================================================
+VERDETTO SU A14
+====================================================================================
+   Predizione: sul livello il rapporto sale sopra 6, l'R2 dei soli
+   ultimi tre supera 0,6, ed entrambi i coefficienti sono positivi.
+   FALSIFICATA se il rapporto sul livello resta sotto 4.
+
+   Rapporto sul livello: da 0.55 a 48.51
+   R2 dei soli ultimi 3: da 0.002 a 0.210
+   Coefficienti entrambi positivi in 2/5 PAC
+
+   -> ipotesi A14 FALSIFICATA
+
+   Clausole descrittive:
+   (a) rapporto sopra 6: NO (minimo 0.55)
+   (b) R2 sopra 0,6: NO
+   (c) rapporto vicino al 9,5:1 aritmetico: scarto 3.03
+
+Tentativi cumulati a registro: 1035

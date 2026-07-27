@@ -1029,3 +1029,8 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 57,H1 globale contro USA,All-World (VT),2011-09-30/2026-07-31,,8.350952399496988,10.745977378216438,-2.3950249787194497,179,
 57,H1 globale contro USA,MSCI ACWI (ACWI),2011-09-30/2026-07-31,,8.394525113186601,10.745977378216438,-2.3514522650298364,179,
 57,H1 globale contro USA,MSCI World (URTH),2011-09-30/2026-07-31,,8.854614306298059,10.745977378216438,-1.891363071918379,179,
+58,A14 sequenza sul livello,azionario 100%,finestre di 20 anni,,,,,45,"b_last=0.137,ratio=4.05,r2=0.210"
+58,A14 sequenza sul livello,erc,finestre di 20 anni,,,,,45,"b_last=0.020,ratio=0.55,r2=0.002"
+58,A14 sequenza sul livello,invvol,finestre di 20 anni,,,,,45,"b_last=0.035,ratio=1.76,r2=0.014"
+58,A14 sequenza sul livello,6040,finestre di 20 anni,,,,,45,"b_last=0.069,ratio=7.78,r2=0.088"
+58,A14 sequenza sul livello,equal,finestre di 20 anni,,,,,45,"b_last=0.060,ratio=48.51,r2=0.065"
