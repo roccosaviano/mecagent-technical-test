@@ -853,3 +853,7 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 43,D2 bootstrap a blocchi,H5 momentum settoriale,intera,,,,3.8189524008725018,5000,percentile=100.0
 43,D2 bootstrap a blocchi,H4 tilt low-vol,intera,,,,-1.5331530164042193,5000,percentile=7.7
 43,D2 bootstrap a blocchi,C1 punteggio misto,intera,,,,0.054442839667478087,5000,percentile=51.3
+44,A6 scomposizione della perdita,erc,1962-02-28/2026-05-31,,6.853034737308272,10.479381558594463,-3.626346821286191,772,"comp=89.9%,costi=0.3%,imposte=9.8%"
+44,A6 scomposizione della perdita,invvol,1962-02-28/2026-05-31,,6.517220473617213,10.479381558594463,-3.96216108497725,772,"comp=91.9%,costi=0.3%,imposte=7.9%"
+44,A6 scomposizione della perdita,6040,1962-02-28/2026-05-31,,7.835325168726823,10.479381558594463,-2.6440563898676404,772,"comp=84.3%,costi=0.4%,imposte=15.3%"
+44,A6 scomposizione della perdita,equal,1962-02-28/2026-05-31,,7.3570724808230015,10.479381558594463,-3.1223090777714617,772,"comp=87.6%,costi=0.3%,imposte=12.1%"

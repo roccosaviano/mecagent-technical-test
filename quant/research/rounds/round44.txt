@@ -1,0 +1,91 @@
+A6 — scomposizione della perdita delle allocazioni multi-classe
+Finestra 1962-02-28 -> 2026-05-31 (772 mesi), azionario + decennale
+Oro e materie prime restano NON TESTABILI (giro 30); il PAXG che li'
+faceva da proxy non e' piu' nei dati scaricati. Dichiarato, non sostituito.
+Attribuzione di Shapley su tutti i 6 ordinamenti dei tre fattori.
+
+========================================================================================
+ERC   turnover 0.16 volte l'anno
+========================================================================================
+   IRR azionario 100%        10.48%
+   IRR allocazione piena      6.85%
+   divario totale             3.63 punti
+
+   fattore           contributo    quota     min-max per ordinamento
+   ---------------------------------------------------------------
+   composizione          3.258%    89.9%         2.889 / 3.626
+   costi                 0.012%     0.3%         0.000 / 0.026
+   imposte               0.356%     9.8%         0.000 / 0.715
+   somma                 3.626%   100.0%
+========================================================================================
+INVVOL   turnover 0.14 volte l'anno
+========================================================================================
+   IRR azionario 100%        10.48%
+   IRR allocazione piena      6.52%
+   divario totale             3.96 punti
+
+   fattore           contributo    quota     min-max per ordinamento
+   ---------------------------------------------------------------
+   composizione          3.640%    91.9%         3.316 / 3.962
+   costi                 0.010%     0.3%         0.000 / 0.022
+   imposte               0.312%     7.9%         0.000 / 0.627
+   somma                 3.962%   100.0%
+========================================================================================
+6040   turnover 0.13 volte l'anno
+========================================================================================
+   IRR azionario 100%        10.48%
+   IRR allocazione piena      7.84%
+   divario totale             2.64 punti
+
+   fattore           contributo    quota     min-max per ordinamento
+   ---------------------------------------------------------------
+   composizione          2.229%    84.3%         1.814 / 2.644
+   costi                 0.010%     0.4%         0.000 / 0.021
+   imposte               0.405%    15.3%         0.000 / 0.812
+   somma                 2.644%   100.0%
+========================================================================================
+EQUAL   turnover 0.13 volte l'anno
+========================================================================================
+   IRR azionario 100%        10.48%
+   IRR allocazione piena      7.36%
+   divario totale             3.12 punti
+
+   fattore           contributo    quota     min-max per ordinamento
+   ---------------------------------------------------------------
+   composizione          2.735%    87.6%         2.346 / 3.122
+   costi                 0.010%     0.3%         0.000 / 0.022
+   imposte               0.378%    12.1%         0.000 / 0.757
+   somma                 3.122%   100.0%
+
+========================================================================================
+VERDETTO SU A6
+========================================================================================
+   Predizione: oltre il 90% della perdita viene da (a) la composizione.
+   FALSIFICATA se la componente fiscale supera il 25%.
+
+   allocazione   composizione     costi   imposte    fiscale > 25%?
+   ----------------------------------------------------------------
+   erc                  89.9%      0.3%      9.8%                no
+   invvol               91.9%      0.3%      7.9%                no
+   6040                 84.3%      0.4%     15.3%                no
+   equal                87.6%      0.3%     12.1%                no
+
+   Quota fiscale massima fra le quattro allocazioni: 15.3%
+   Quota della composizione, minima fra le quattro: 84.3%
+   -> ipotesi A6 CONFERMATA
+
+   L'ordine di attribuzione avrebbe potuto spostare il contributo
+   fiscale di al massimo 0.812 punti fra il primo e l'ultimo
+   ordinamento. Con l'attribuzione di Shapley questa scelta non c'e':
+   ogni fattore prende il suo contributo marginale medio.
+
+   CONTROPROVA. Se le imposte sul ribilanciamento fossero ZERO,
+   l'allocazione batterebbe l'azionario?
+     erc        senza imposte sul ribilanciamento   7.56% contro 10.48% dell'azionario -> NO (-2.92)
+     invvol     senza imposte sul ribilanciamento   7.14% contro 10.48% dell'azionario -> NO (-3.34)
+     6040       senza imposte sul ribilanciamento   8.64% contro 10.48% dell'azionario -> NO (-1.83)
+     equal      senza imposte sul ribilanciamento   8.11% contro 10.48% dell'azionario -> NO (-2.37)
+   E' la verifica che conta: anche azzerando del tutto la componente
+   fiscale, l'allocazione resta sotto. Il problema non e' l'imposta.
+
+Tentativi cumulati a registro: 858

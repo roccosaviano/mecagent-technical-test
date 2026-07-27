@@ -334,3 +334,20 @@ l'equal-weight dello stesso universo diventano negativi, e la differenza fra i d
 benchmark (~2-3 punti) spiega **più della metà** del margine apparente. Cioè quasi
 tutto quel che sembrava alfa era il premio di equal-weighting.
 *Falsificata se*: la differenza fra i benchmark spiega meno di un terzo del margine.
+
+**A11 — Di quanto dovrebbe rendere di più la sleeve difensiva per pareggiare?**
+Il giro 44 attribuisce l'84-92% della perdita delle allocazioni multi-classe alla
+**composizione**, e la controprova mostra che anche con imposte zero sul
+ribilanciamento restano 1,8-3,3 punti sotto l'azionario. Ma il decennale usato è
+una **ricostruzione a duration costante da DGS10**, che sottostima convessità e
+rolldown: parte del divario potrebbe essere un difetto del proxy, non un fatto.
+Da calcolare al contrario: quanti punti di rendimento annuo in più dovrebbe avere
+la sleeve obbligazionaria perché ogni allocazione pareggi l'azionario netto
+imposte, e confrontare quel numero con lo scarto plausibile fra un indice
+obbligazionario vero e questa ricostruzione (in letteratura 0,3-0,8 punti l'anno).
+*Predizione*: il pareggio richiede oltre 3 punti l'anno in più sulla sleeve
+obbligazionaria per ERC e inverse-vol, cioè da 4 a 10 volte lo scarto plausibile
+del proxy. Il difetto di ricostruzione quindi **non** spiega il divario, e la
+conclusione del giro 44 regge anche con un indice obbligazionario vero.
+*Falsificata se*: il rendimento aggiuntivo richiesto sta sotto 1 punto l'anno per
+almeno una delle quattro allocazioni, cioè dentro l'incertezza del proxy.
