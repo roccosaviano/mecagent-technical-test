@@ -17,7 +17,7 @@ per prime quelle a **bassa rotazione**, che è dove resta spazio.
 
 ## A. Allocazione e sizing (bassa rotazione, priorità alta)
 
-**A1 — Risk parity fra classi di asset**
+**A1 — Risk parity fra classi di asset** ✔ eseguita (giro 30)
 Pesi inversi al contributo di rischio su azionario, decennale, oro-proxy,
 materie prime. Ribilanciamento annuale.
 *Predizione*: Sharpe superiore al 60/40 ma IRR netta inferiore all'azionario
@@ -172,3 +172,33 @@ distribuzione nulla.
 |---|---|---|
 | H31 combinazione dei promossi | 29 | **confermata** — corr 0,944, la combinazione non aggiunge |
 | H32 turn-of-month | 29 | **confermata** — effetto reale (t=7,04), decaduto del 60%, strategia a −7,26 |
+| A1 risk parity fra classi | 30 | **confermata** — ERC Sharpe 0,92 contro 0,87 del 60/40, ma IRR netta 7,08% contro 10,48% dell'azionario. Nessuna delle 4 allocazioni batte. Oro e materie prime **non testabili** |
+
+
+---
+
+## Note sui dati emerse durante l'esecuzione
+
+- **Oro: nessuna serie investibile ottenibile.** FRED ha ritirato le serie LBMA
+  (`GOLDAMGBD228NLBM` e `GOLDPMGBD228NLBM` danno 404) e offre solo indici di
+  prezzo alla produzione, che non sono comprabili. L'oro tokenizzato PAXG su
+  OKX ha 286 candele, troppo poche. Le voci che assumono una sleeve d'oro
+  vanno eseguite senza, dichiarandolo.
+- **Materie prime: idem.** Serve un indice total return che replichi il
+  rolling dei futures (GSCI, Bloomberg Commodity). Il petrolio spot di FRED e'
+  un prezzo: chi compra petrolio paga il roll, storicamente la componente
+  dominante del rendimento. Usarlo sovrastimerebbe la classe.
+- **Cripto: ora 8 asset** (aggiunto LINK, dal 2018). Rilevante per B6.
+
+---
+
+## Voci aggiunte durante l'esecuzione
+
+**A6 — Il ribilanciamento e' l'unico costo, o serve anche il premio?**
+Il giro 30 mostra che ogni allocazione multi-classe perde contro l'azionario
+puro netto imposte, ma con turnover bassissimo (0,13-0,17 volte l'anno). Se il
+costo non e' la rotazione, e' la composizione: il decennale rende meno.
+Scomporre l'IRR persa in (a) minor rendimento atteso della sleeve difensiva e
+(b) imposte sul ribilanciamento.
+*Predizione*: oltre il 90% della perdita viene da (a), non da (b).
+*Falsificata se*: la componente fiscale supera il 25%.

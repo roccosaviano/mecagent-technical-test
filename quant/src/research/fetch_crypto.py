@@ -14,7 +14,11 @@ import pandas as pd
 
 DATA = Path(__file__).resolve().parents[2] / "data"
 SYMBOLS = ["BTC-USDT", "ETH-USDT", "SOL-USDT", "XRP-USDT", "DOGE-USDT",
-           "LTC-USDT", "ADA-USDT", "LINK-USDT"]
+           "LTC-USDT", "ADA-USDT", "LINK-USDT",
+           # oro tokenizzato: l'unico proxy investibile dell'oro che riesco a
+           # ottenere. Storia corta e rischio di controparte dell'emittente,
+           # ma e' un asset comprabile, a differenza degli indici FRED.
+           "PAXG-USDT"]
 BASE = "https://www.okx.com/api/v5/market/history-candles"
 
 

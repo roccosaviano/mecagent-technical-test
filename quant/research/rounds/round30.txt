@@ -1,0 +1,34 @@
+
+====================================================================================
+FINESTRA LUNGA — azionario + decennale   1962-02-28 -> 2026-05-31 (772 mesi, 2 classi)
+====================================================================================
+   classi: azionario, decennale
+
+   metodo                     CAGR  Sharpe       DD  turn/an   IRR 33%  vs azion.
+   erc                       8.07%    0.92   -19.7%    0.17x     7.08%     -3.40%
+   invvol                    7.50%    0.87   -19.7%    0.14x     6.52%     -3.96%
+   6040                      8.89%    0.87   -30.3%    0.13x     7.84%     -2.64%
+   equal                     8.41%    0.90   -25.8%    0.13x     7.36%     -3.12%
+   azionario 100%           10.72%    0.74   -50.3%    0.00x    10.48%     +0.00%
+
+   (oro/cripto non disponibili, salto la finestra corta)
+
+====================================================================================
+VERDETTO SU A1
+====================================================================================
+   Predizione: Sharpe risk parity > 60/40, ma IRR netta < azionario.
+   Osservato (finestra lunga):
+     Sharpe ERC 0.92 contro 60/40 0.87  -> SI
+     IRR netta ERC 7.08% contro azionario 10.48%  -> INFERIORE
+
+   Qualche configurazione batte l'azionario netto imposte? NO
+   -> ipotesi A1 CONFERMATA
+
+   Migliore: 6040 su FINESTRA LUNGA — azionario +  -2.64 punti
+   DSR su 52 ipotesi pre-dichiarate: 1.000  -> NON promuovibile
+
+   NON TESTATO: materie prime. Serve un indice total return che
+   replichi il rolling dei futures; il petrolio spot di FRED e' un
+   prezzo, e usarlo sovrastimerebbe il rendimento della classe.
+
+Tentativi cumulati a registro: 699
