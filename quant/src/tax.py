@@ -192,12 +192,23 @@ def simulate_pac(gross_ret, regime, in_market=None, div_yield=None,
     values, navs, cashflows = [], [], []
 
     def pay_from_portfolio(amount):
-        """Preleva imposte liquidando quote al NAV corrente."""
+        """Preleva imposte liquidando quote al NAV corrente.
+
+        Le quote vendute escono PRO RATA da tutti i lotti: se si riducono solo
+        le `units` globali e non i lotti, la somma dei lotti resta gonfia e ogni
+        deemed disposal successivo calcola la plusvalenza su quote che non
+        esistono piu'. Su 8 anni l'errore e' tollerabile, su 57 anni e sette
+        cicli di deemed disposal azzera il portafoglio.
+        """
         nonlocal units
-        if amount <= 0 or nav <= 0:
+        if amount <= 0 or nav <= 0 or units <= 0:
             return 0.0
         sold = min(units, amount / nav)
+        frac = sold / units
         units -= sold
+        for lot in lots:
+            lot.basis -= lot.basis * frac
+            lot.units -= lot.units * frac
         return sold * nav
 
     for i, t in enumerate(idx):

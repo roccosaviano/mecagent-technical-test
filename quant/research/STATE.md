@@ -170,6 +170,8 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 49 | E4 covered call | confermata | col simulatore +0,98, con gli indici reali −2,92 |
 | 49 | **E5 LEAPS come leva** | **falsificata** | +1,34 ma DSR 0,000 e drawdown −62,5% |
 | 52 | E6 stress sui LEAPS | confermata | muore a +10% di rincaro, ma 17/17 finestre e k fino a 1,15 |
+| 53 | G1 filtri di tendenza | confermata | il migliore perde 2,51 punti, il peggiore 4,50 |
+| 53 | **G2 momentum come veicolo** | **falsificata** | +0,77 in ETF UCITS, ma +2,77 solo dallo spostare la rotazione nel fondo |
 | 50 | **F1 rotazione top-1** | **falsificata** | 1 cella su 9, +0,30 su un benchmark debole |
 | 50 | F2 griglia posizioni × frequenza | confermata | max top-5 annuale 10,02% contro 11,16% statico |
 | 51 | F3 sistema EMA giornaliero | confermata | batte il B&H su 1/10 asset, muore sul lordo |
@@ -181,7 +183,7 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 **27 confermate, 7 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
 Restano in coda: **A14, D3, D4**.
 
-Registro a **1.002 tentativi** cumulati.
+Registro a **1.026 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -246,6 +248,18 @@ Registro a **1.002 tentativi** cumulati.
   netta contro il cap-weighted, con 0,31 rotazioni l'anno. HRP guadagna 0,28 punti
   di CAGR lordo e ne restituisce 1,4 netti: il conto fiscale del ribilanciamento
   supera il guadagno di un metodo che non prova nemmeno a prevedere i rendimenti.
+- **BUG GRAVE nel regime ETF, trovato al giro 53.** `pay_from_portfolio` riduceva
+  le `units` globali ma **non i lotti ETF**: la somma dei lotti restava gonfia e
+  ogni deemed disposal successivo tassava quote inesistenti. Su 57 anni azzerava il
+  portafoglio (3,48 M di imposte su 344.500 versati). C'era già una pezza al solo
+  realizzo finale — avevo notato la deriva e corretto il punto sbagliato. Corretto
+  riducendo i lotti pro rata. **Il vantaggio del veicolo scende da +2,15 a +1,23
+  punti** su 1990-2023, e cresce con l'orizzonte (+2,12 su 1969-2026).
+- **Chi realizza la plusvalenza vale più della strategia.** A parità ESATTA di
+  rendimento lordo, spostare la rotazione del momentum settoriale **dentro un
+  fondo** invece di farla in conto proprio vale **+2,77 punti di IRR** (giro 53).
+  È il numero più grande prodotto da una singola scelta in tutto il progetto, e non
+  richiede di prevedere niente: richiede solo di non essere tu a premere i bottoni.
 - **Una voce è morta per una ragione nuova, e vale la pena distinguerla.** I LEAPS
   (giri 49 e 52) hanno un vantaggio di +1,34 punti che **non** è fragile al periodo
   (17 finestre di 20 anni su 17, peggior caso +0,42%) né al livello di volatilità

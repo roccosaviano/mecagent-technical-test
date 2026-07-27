@@ -1,0 +1,53 @@
+============================================================================================
+G1 — I FILTRI DI TENDENZA SU UN PAC AZIONARIO
+============================================================================================
+label                                  cagr      vol   sharpe       dd     turn      irr    irr52
+-------------------------------------------------------------------------------------------------
+buy&hold (nessun filtro)             10.38%   18.35%     0.63  -83.65%     0.00   10.56%   10.15%
+media mobile 6 mesi                   9.10%   12.78%     0.75  -46.57%     2.17    6.98%    6.06%
+media mobile 10 mesi                  9.44%   12.48%     0.79  -43.89%     1.47    7.42%    6.47%
+media mobile 12 mesi                  9.58%   12.55%     0.80  -46.26%     1.31    7.62%    6.64%
+EMA200 + EMA21>EMA50                  8.53%   14.76%     0.63  -65.06%     0.19    8.05%    7.17%
+media 200 giorni                      9.32%   12.42%     0.78  -52.84%     1.47    7.43%    6.48%
+
+   filtro                      vs buy&hold   DD evitato
+   media mobile 6 mesi              -4.50       +37.1
+   media mobile 10 mesi             -4.10       +39.8
+   media mobile 12 mesi             -3.92       +37.4
+   EMA200 + EMA21>EMA50             -2.51       +18.6
+   media 200 giorni                 -4.08       +30.8
+
+   Il migliore perde 2.51 punti, il peggiore 4.50
+   -> ipotesi G1 CONFERMATA
+
+============================================================================================
+G2 — L'INDICE MOMENTUM COME VEICOLO
+============================================================================================
+   Finestra 1969-07-31 -> 2026-05-31 (683 mesi)
+   Momentum settoriale top-10 mensile, rotazione 2.68x l'anno
+   I costi di transazione (0,15%) sono gia' dentro il rendimento lordo:
+   li paga il fondo. Cambia solo CHI realizza la plusvalenza.
+
+   configurazione                               CAGR   IRR netta
+   -------------------------------------------------------------
+   momentum, rotazione MIA (giro 50)          15.16%      11.67%
+   momentum DENTRO un fondo, CGT              15.16%      14.44%
+   momentum DENTRO un fondo, ETF UCITS        15.16%      11.64%
+   cap-weighted diretto, CGT                  10.98%      10.88%
+   cap-weighted via ETF UCITS                 10.98%       8.74%
+   equal-weight dentro un fondo, CGT          11.15%      11.16%
+
+   (a) A PARITA' DI REGIME, il momentum in un fondo batte il cap-weight?
+       in CGT diretto  +3.57 punti
+       in ETF UCITS    +2.91 punti
+   (b) Quanto vale spostare la rotazione dentro il fondo?
+       stesso identico rendimento lordo: +2.77 punti di IRR
+   (c) IL CONFRONTO CHE CONTA per un residente irlandese:
+       momentum in ETF UCITS 11.64% contro cap-weight diretto in CGT 10.88%
+       -> +0.77 punti
+
+   -> ipotesi G2 FALSIFICATA
+
+   Migliore in assoluto: momentum DENTRO un fondo, CGT (14.44%)
+
+Tentativi cumulati a registro: 1026

@@ -212,6 +212,9 @@ distribuzione nulla.
 | E4 covered call | 49 | **confermata**, ma solo dopo aver buttato il simulatore: col modello la +5% sembrava **+0,98 con DSR 0,997**, la prima promozione apparente in 49 giri. Contro gli indici CBOE reali l'inflazione da skew è **+0,55/+1,51/+2,56** crescente con la moneyness. Coi dati reali: **−2,92** |
 | **E5 LEAPS come leva** | 49 | **FALSIFICATA** — 10,98% contro 9,64%, **+1,34**. Il finanziamento incorporato è **2,95%** contro il 5,90% del CFD. Ma DSR **0,000**, drawdown **−62,5%** contro −47,2%, direzione dell'errore ottimistica e non quantificabile senza un indice reale. Avevo sopravvalutato il drag fiscale del rollo annuale |
 | E6 stress sui LEAPS | 52 | **confermata** — muore a un **rincaro del 10%** del premio d'ingresso (2 punti di nozionale, cioè lo spread normale di un'opzione lunga poco liquida). Ma regge a tutto il resto: implicita fino a **k = 1,15** e **17 finestre su 17** di 20 anni con il caso peggiore ancora positivo. Due clausole della predizione su tre erano sbagliate. Il vantaggio esiste ed è stabile nel tempo: sta dentro il costo di transazione dello strumento |
+| G1 filtri di tendenza | 53 | **confermata** — nessuno batte il buy&hold. Il migliore perde **2,51** punti (EMA200+EMA21>EMA50, e vince perché ruota 0,19×/anno contro 1,3-2,2 degli altri), il peggiore 4,50. In cambio 18-40 punti di drawdown |
+| **G2 momentum come veicolo** | 53 | **FALSIFICATA** — momentum in ETF UCITS **11,64%** contro cap-weight diretto in CGT **10,88%**: **+0,77**. Il risultato model-free è però un altro: a parità esatta di lordo, spostare la rotazione **dentro il fondo** vale **+2,77 punti**. Non promosso: il lordo (4,18 punti di premio) è più generoso degli indici momentum reali, manca il TER, e i parametri furono scelti al giro 05 |
+| **BUG nel motore fiscale** | 53 | i lotti ETF non venivano ridotti quando si liquidavano quote per pagare le imposte: su 57 anni e 7 cicli di deemed disposal il portafoglio si azzerava. Corretto pro rata. **Il vantaggio del veicolo scende da +2,15 a +1,23** su 1990-2023 (+2,12 su 1969-2026: cresce con l'orizzonte) |
 | **F1 rotazione top-1** | 50 | **FALSIFICATA da 1 cella su 9** — regioni top-1 mensile +0,30, ma su 4 asset con 894% di rotazione, e perde 3 punti contro il buy&hold USA. Le altre 8 celle perdono da 1,4 a 81 punti; sui 49 settori −6,5/−6,8 a ogni frequenza; cripto top-1 annuale **−96,3% di drawdown** |
 | F2 griglia posizioni × frequenza | 50 | **confermata** — massimo a **top-5 annuale, 10,02%** contro 11,16% dell'equal-weight statico. Nessuna delle 15 celle lo batte. Da 1 a 5 posizioni valgono **+5,5 punti di IRR e +27 di drawdown**. Le clausole di monotonia erano sbagliate: la relazione è a campana |
 | F3 sistema EMA giornaliero | 51 | **confermata** — batte il buy&hold su **1 asset su 10**, e quell'uno è LTC il cui B&H è −17%. Predizione sbagliata sul verso del lordo: il sistema **muore sul lordo** (0,75% contro 15,55% su QQQ), non sulle imposte |
@@ -600,7 +603,7 @@ verifiche di robustezza complete.
 
 ## G. Filtri e indice momentum come VEICOLO
 
-**G1 — I filtri di tendenza su un PAC azionario, misurati insieme**
+**G1 — I filtri di tendenza su un PAC azionario, misurati insieme** ✔ eseguita (giro 53)
 Filtro a media mobile 10 mesi, 200 giorni, e il solo filtro di tendenza del giro 51
 (sopra EMA200 e EMA21>EMA50), sull'indice cap-weighted. Non su cripto e non su
 asset scelti: sul benchmark che l'investitore userebbe davvero.
@@ -609,7 +612,7 @@ perché ogni uscita è un realizzo e il rientro avviene più in alto. Il miglior
 perde meno di 2 punti, il peggiore più di 4.
 *Falsificata se*: un filtro batte il buy&hold netto imposte.
 
-**G2 — L'indice momentum come VEICOLO, non come strategia**
+**G2 — L'indice momentum come VEICOLO, non come strategia** ✔ eseguita (giro 53)
 La domanda vera: al giro 50 il momentum settoriale perdeva perché **io** ruotavo e
 **io** pagavo il 33-52% a ogni rotazione. Ma se la stessa rotazione avviene
 **dentro un fondo**, per chi detiene le quote non è un evento fiscale: si paga solo
