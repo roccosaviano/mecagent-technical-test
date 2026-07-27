@@ -226,7 +226,7 @@ distribuzione nulla.
 
 ## Voci aggiunte durante l'esecuzione
 
-**A6 — Il ribilanciamento e' l'unico costo, o serve anche il premio?**
+**A6 — Il ribilanciamento e' l'unico costo, o serve anche il premio?** ✔ eseguita (giro 44)
 Il giro 30 mostra che ogni allocazione multi-classe perde contro l'azionario
 puro netto imposte, ma con turnover bassissimo (0,13-0,17 volte l'anno). Se il
 costo non e' la rotazione, e' la composizione: il decennale rende meno.
