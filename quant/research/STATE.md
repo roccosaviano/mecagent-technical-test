@@ -138,8 +138,15 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 31 | A2 hierarchical risk parity | confermata | HRP 9,45% contro 9,89% equal-weight |
 | 32 | A3 min-variance / max-diversification | confermata | min-var 8,22%, max-div 9,34%, cap-weight 10,88% |
 | 33 | A4 Kelly frazionario + de-risking | confermata | DD migliora 12/12, IRR migliora 0/12 |
+| 34 | A5 ERC fra 4 stream scorrelati | confermata | Sharpe 1,19 contro 0,69, IRR 5,64% contro 9,88% |
+| 35 | A7 stabilità HRP contro min-variance | confermata nel verso | fattore 1,67, non 3-10 |
+| 35 | A8 min-variance in leva 1,20× | confermata | 8,64% contro 10,88%, Sharpe 0,78→0,69 |
+| 36 | A9 Kelly contro frazione fissa | confermata | la frazione fissa vince 4/4 |
+| 36 | A10 curva del prezzo del drawdown | confermata | minimo interno, ma a 40% e 20%, non 30-35% |
 
-Nessuna promozione dalla coda. Registro a **722 tentativi** cumulati.
+**Gruppo A chiuso: 10 voci su 10 confermate, nessuna promozione.**
+
+Nessuna promozione dalla coda. Registro a **733 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 

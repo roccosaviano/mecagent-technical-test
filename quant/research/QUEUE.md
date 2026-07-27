@@ -44,7 +44,7 @@ che taglia l'esposizione quando il drawdown corrente supera una soglia.
 migliorando il DD massimo.
 *Falsificata se*: l'IRR netta migliora rispetto all'esposizione costante.
 
-**A5 — Equal risk contribution fra i 4 stream non correlati migliori**
+**A5 — Equal risk contribution fra i 4 stream non correlati migliori** ✔ eseguita (giro 34)
 Selezionati per correlazione, non per rendimento, così la scelta non guarda
 il risultato.
 *Predizione*: correlazione media sotto 0,3 raggiungibile, ma l'IRR netta resta
@@ -176,6 +176,11 @@ distribuzione nulla.
 | A2 hierarchical risk parity | 31 | **confermata** — Sharpe 0,78 contro 0,74 dell'equal-weight, ma IRR netta 9,45% contro 9,89% (−0,44) e −1,43 contro il cap-weighted. In più HRP risulta **meno stabile** di inverse-variance (0,283 contro 0,109): la tesi del paper è contro il min-variance, che è A3 |
 | A3 min-variance / max-diversification | 32 | **confermata** sul test — min-var 8,22% e max-div 9,34% contro 10,88% del cap-weight. Ma **entrambe le clausole descrittive della predizione erano sbagliate**: il DD scende di 4,2 punti (non >10) e il CAGR ceduto è 1,08 (non 2-4). Il min-var tiene l'84% in 5 settori, 7,5 posizioni effettive |
 | A4 Kelly frazionario + de-risking | 33 | **confermata** — il de-risking migliora il DD in **12 casi su 12** e l'IRR in **0 su 12**. Costa 0,3-1,7 punti e taglia 0,2-20,9 punti di drawdown, monotono nella soglia. Il sizing di Kelly costa più del de-risking (3,1-5,5 punti): μ su 60 mesi è pro-ciclico |
+| A5 ERC fra 4 stream scorrelati | 34 | **confermata** — correlazione media 0,024 raggiunta, Sharpe **1,19** contro 0,69 e DD −11,7% contro −50,3%, ma IRR netta 5,64% contro 9,88%. Lo Sharpe più alto della ricerca, −4,24 punti |
+| A7 stabilità HRP contro min-variance | 35 | **confermata nel verso, sbagliata nella misura** — HRP 0,283 contro min-var 0,473, fattore **1,67** e non 3-10. HRP resta meno stabile di inverse-variance |
+| A8 min-variance in leva 1,20× | 35 | **confermata** — 8,64% contro 10,88% (−2,24). La leva **distrugge lo Sharpe** che doveva monetizzare: 0,78 → 0,69. Nessuna leva sotto 3,00× pareggia; a 1,50× scatta il margin call (equity 2,3%) |
+| A9 Kelly contro frazione fissa | 36 | **confermata, 4 casi su 4** — la frazione fissa vince sempre. Kelly non aggiunge informazione, aggiunge rotazione tassabile |
+| A10 curva del prezzo del drawdown | 36 | **confermata** sull'esistenza del minimo interno, **sbagliata sulla posizione**: 40% sul cap-weighted, 20% sull'equal-weight, non 30-35%. La soglia efficiente dipende dal sottostante |
 
 
 ---
@@ -210,7 +215,7 @@ Scomporre l'IRR persa in (a) minor rendimento atteso della sleeve difensiva e
 *Predizione*: oltre il 90% della perdita viene da (a), non da (b).
 *Falsificata se*: la componente fiscale supera il 25%.
 
-**A7 — La tesi vera di HRP: stabilità contro il min-variance**
+**A7 — La tesi vera di HRP: stabilità contro il min-variance** ✔ eseguita (giro 35)
 Il giro 31 ha misurato che HRP è **meno** stabile dell'inverse-variance (0,283
 contro 0,109 di movimento medio dei pesi). Ma la rivendicazione del paper è contro
 il **min-variance di Markowitz**, che inverte la covarianza ed è instabile per
@@ -221,7 +226,7 @@ paper regge sul suo bersaglio dichiarato — e resta comunque irrilevante per l'
 netta, perché entrambi perdono contro il cap-weighted.
 *Falsificata se*: HRP non è più stabile del min-variance.
 
-**A8 — Monetizzare lo Sharpe: min-variance portato in leva a pari volatilità**
+**A8 — Monetizzare lo Sharpe: min-variance portato in leva a pari volatilità** ✔ eseguita (giro 35)
 Il giro 32 ha trovato il caso più pulito finora di uno Sharpe migliore che non
 serve a niente: min-variance 0,78 contro 0,74 del cap-weight, e IRR netta 2,65
 punti sotto. Il ponte fra le due cose è la leva — servirebbe 15,8/13,2 = **1,20×**
@@ -240,7 +245,7 @@ costo marginale il margine lordo sul 20% preso a prestito è ~0,49 punti l'anno,
 e il turnover del ribilanciamento in leva ne consuma una parte. È un test stretto,
 ed è il motivo per cui va misurato invece che assunto.
 
-**A9 — Kelly aggiunge qualcosa a una frazione fissa?**
+**A9 — Kelly aggiunge qualcosa a una frazione fissa?** ✔ eseguita (giro 36)
 Il giro 33 mostra che il cap a 1,0 morde il 37-68% del tempo e che l'esposizione
 media di quarto-Kelly è 0,66-0,70. Quindi quarto-Kelly potrebbe essere, in
 pratica, "stai investito al 67% e basta", con in più il rumore della stima e la
@@ -253,7 +258,7 @@ perché μ stimato su 60 mesi è pro-ciclico (basso proprio dopo i crolli, cioè
 i rendimenti attesi sono alti).
 *Falsificata se*: Kelly batte la frazione fissa in almeno metà dei casi.
 
-**A10 — Il prezzo dell'assicurazione sul drawdown, come curva**
+**A10 — Il prezzo dell'assicurazione sul drawdown, come curva** ✔ eseguita (giro 36)
 Il giro 33 dà tre punti isolati (soglie 10/20/30%) e mostra un gradiente monotono:
 a 30% si pagano 0,4 punti di IRR per 14 di drawdown, a 10% se ne pagano 1,0-1,7
 per 20. Da tracciare come curva completa, soglie dal 5% al 50% a passi di 5, su

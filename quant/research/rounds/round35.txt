@@ -1,0 +1,54 @@
+49 settori, 1969-07-31 -> 2026-05-31 (683 mesi)
+
+========================================================================================
+A7 — stabilita' dei pesi: HRP contro il suo bersaglio
+========================================================================================
+   metodo                  movimento medio dei pesi per ribilanciamento
+   equal                                                          0.017
+   invvar                                                         0.109
+   hrp                                                            0.283
+   maxdiv                                                         0.523
+   minvar                                                         0.473
+
+   Predizione: HRP 3-10 volte piu' stabile del min-variance.
+   Osservato: min-var 0.473 / HRP 0.283 = 1.67 volte
+   -> ipotesi A7 CONFERMATA nel verso, ma il fattore e' 1.67, non 3-10
+
+   Nota: l'equal-weight (0.017) e' il piu' stabile per
+   identita', non per merito — riazzera a 1/N a ogni ribilanciamento.
+   Il confronto informativo e' HRP contro gli ottimizzatori.
+
+========================================================================================
+A8 — min-variance in leva a pari volatilita'
+========================================================================================
+   Volatilita' min-var 13.2% · cap-weight 15.8%
+   Leva per pareggiare: 1.20x   (la voce ne dichiara 1,20)
+   Finanziamento: risk-free + 3% annuo
+
+
+label                                  cagr      vol   sharpe       dd     turn      irr    irr52
+-------------------------------------------------------------------------------------------------
+min-var leva 1.00x                    9.90%   13.24%     0.78  -46.15%     0.37    8.22%    7.18%
+min-var leva 1.20x                   10.13%   15.88%     0.69  -54.94%     0.37    8.64%    7.57%
+min-var leva 1.20x                   10.13%   15.83%     0.69  -54.76%     0.37    8.63%    7.56%
+min-var leva 1.50x                   10.32%   19.86%     0.60  -65.89%     0.37    9.15%    8.06%
+cap-weighted (benchmark)             10.98%   15.83%     0.74  -50.31%     0.00   10.88%   10.11%
+
+   Rapporto di equity al drawdown peggiore, per livello di leva.
+   La chiusura forzata ESMA scatta sotto il 50% del margine iniziale:
+     min-var leva 1.20x        63.0%   regge, nessuna chiusura forzata
+     min-var leva 1.20x        63.8%   regge, nessuna chiusura forzata
+     min-var leva 1.50x         2.3%   margin call: la posizione viene chiusa sui minimi
+   A 1,2x il margine iniziale e' l'83% del valore e regge. A 1,5x no:
+   il drawdown del min-variance in leva arriva dove il broker chiude.
+
+   Predizione: la leva 1,20x lascia il risultato sotto il cap-weight
+   di almeno 1 punto. FALSIFICATA se IRR netta >= cap-weight.
+   Osservato: 8.64% contro 10.88% -> -2.24 punti
+   -> ipotesi A8 CONFERMATA
+
+   Leva necessaria per pareggiare il cap-weight: nessuna sotto 3,00x
+
+   DSR del migliore su N=56: 1.000 -> NON promuovibile
+
+Tentativi cumulati a registro: 746

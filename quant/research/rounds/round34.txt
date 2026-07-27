@@ -1,0 +1,45 @@
+A5 — equal risk contribution fra i 4 stream meno correlati
+Selezione per CORRELAZIONE, mai per rendimento.
+
+Libreria: 7 flussi — azionario, decennale, momentum settoriale, low-vol settoriale, trend sull'indice, premio volatilita' BXM, gross profitability
+Finestra comune: 2002-04-30 -> 2024-12-31 (273 mesi)
+
+Matrice di correlazione:
+                        azionario  decennale  momentum settoriale  low-vol settoriale  trend sull'indice  premio volatilita' BXM  gross profitability
+azionario                    1.00      -0.15                 0.86                0.90               0.66                    0.88                -0.04
+decennale                   -0.15       1.00                -0.15               -0.07              -0.17                   -0.19                 0.04
+momentum settoriale          0.86      -0.15                 1.00                0.81               0.58                    0.77                -0.11
+low-vol settoriale           0.90      -0.07                 0.81                1.00               0.60                    0.84                 0.02
+trend sull'indice            0.66      -0.17                 0.58                0.60               1.00                    0.52                 0.00
+premio volatilita' BXM       0.88      -0.19                 0.77                0.84               0.52                    1.00                -0.05
+gross profitability         -0.04       0.04                -0.11                0.02               0.00                   -0.05                 1.00
+
+Quartetto meno correlato: decennale, trend sull'indice, premio volatilita' BXM, gross profitability
+Correlazione media a coppie: 0.024  -> SOTTO 0,30 come previsto
+
+label                                  cagr      vol   sharpe       dd     turn      irr    irr52
+-------------------------------------------------------------------------------------------------
+azionario puro (benchmark)            9.86%   15.45%     0.69  -50.31%     0.00    9.88%    8.21%
+4 stream — erc                        6.37%    6.13%     1.04  -14.27%     0.68    5.39%    4.41%
+4 stream — equal                      6.58%    5.51%     1.19  -11.66%     0.35    5.64%    4.63%
+4 stream — invvol                     5.65%    5.30%     1.07  -13.05%     0.37    4.63%    3.72%
+
+========================================================================================
+VERDETTO SU A5
+========================================================================================
+   Predizione: correlazione media sotto 0,3 raggiungibile, ma IRR
+   netta sotto il buy&hold. FALSIFICATA se IRR netta > buy&hold.
+
+   (a) correlazione media 0.024 -> raggiunta
+   (b) 4 stream — erc           IRR di riferimento 5.39% (aliquota 33%) contro benchmark 9.88% -> -4.49
+   (b) 4 stream — equal         IRR di riferimento 5.64% (aliquota 33%) contro benchmark 9.88% -> -4.24
+   (b) 4 stream — invvol        IRR di riferimento 4.63% (aliquota 33%) contro benchmark 9.88% -> -5.25
+
+   -> ipotesi A5 CONFERMATA
+   DSR del migliore su N=56: 0.999 -> NON promuovibile
+
+   ESCLUSE dalla selezione: le cripto. Entrerebbero di certo per
+   correlazione quasi nulla, ma taglierebbero la finestra comune a
+   sei anni. La finestra corta e' gia' il problema di B6.
+
+Tentativi cumulati a registro: 778

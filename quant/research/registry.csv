@@ -3,113 +3,113 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.4,rebal=12,lev=1.25",TEST,0.508413834492607,5.9876249882772274,5.069104165641418,0.9185208226358093,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.4,rebal=12,lev=1.5",TEST,0.4577618649391402,6.097874710217964,5.069104165641418,1.0287705445765454,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.4,rebal=12,lev=1.75",TEST,0.4215818866866638,6.179924083599728,5.069104165641418,1.1108199179583096,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.4,rebal=12,lev=2.0",TEST,0.39444690299730645,6.2340018749732415,5.069104165641418,1.1648977093318233,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.4,rebal=12,lev=2.0",TEST,0.3944469029973064,6.2340018749732415,5.069104165641418,1.1648977093318231,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.4,rebal=60,lev=1.0",TEST,0.5633859849370639,5.473644338859826,5.069104165641418,0.4045401732184075,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.4,rebal=60,lev=1.25",TEST,0.4890417703098601,5.559428707669772,5.069104165641418,0.49032454202835396,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.4,rebal=60,lev=1.25",TEST,0.4890417703098601,5.559428707669772,5.069104165641418,0.4903245420283539,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.4,rebal=60,lev=1.5",TEST,0.4394789605583908,5.620673098549123,5.069104165641418,0.5515689329077045,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.4,rebal=60,lev=1.75",TEST,0.4040769535930556,5.655885347125225,5.069104165641418,0.5867811814838069,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.4,rebal=60,lev=2.0",TEST,0.3775254483690542,5.663674305769516,5.069104165641418,0.5945701401280976,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=12,lev=1.0",TEST,0.5572634405586698,5.930121126534582,5.069104165641418,0.8610169608931635,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=12,lev=1.25",TEST,0.4880523012524506,6.073469858803484,5.069104165641418,1.0043656931620655,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=12,lev=1.25",TEST,0.4880523012524506,6.073469858803484,5.069104165641418,1.0043656931620657,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=12,lev=1.5",TEST,0.4419115417149712,6.183000462571299,5.069104165641418,1.1138962969298811,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=12,lev=1.75",TEST,0.40895385633105724,6.259935181880347,5.069104165641418,1.1908310162389286,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=12,lev=2.0",TEST,0.384235592293122,6.3030833129785915,5.069104165641418,1.2339791473371733,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=60,lev=1.0",TEST,0.5406544852224004,5.521705022709409,5.069104165641418,0.45260085706799114,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=12,lev=1.75",TEST,0.4089538563310572,6.259935181880347,5.069104165641418,1.1908310162389286,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=12,lev=2.0",TEST,0.384235592293122,6.303083312978592,5.069104165641418,1.2339791473371733,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=60,lev=1.0",TEST,0.5406544852224004,5.521705022709409,5.069104165641418,0.4526008570679911,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=60,lev=1.25",TEST,0.4720152535524595,5.612021794390041,5.069104165641418,0.542917628748623,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=60,lev=1.5",TEST,0.42625576577249896,5.67377433483572,5.069104165641418,0.6046701691943017,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=60,lev=1.5",TEST,0.4262557657724989,5.67377433483572,5.069104165641418,0.6046701691943017,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=60,lev=1.75",TEST,0.3935704173582415,5.70494498115065,5.069104165641418,0.6358408155092317,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=60,lev=2.0",TEST,0.36905640604754825,5.703677069123761,5.069104165641418,0.6345729034823426,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.5,rebal=60,lev=2.0",TEST,0.3690564060475482,5.703677069123761,5.069104165641418,0.6345729034823426,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=12,lev=1.0",TEST,0.518096638956526,5.945916275101354,5.069104165641418,0.8768121094599355,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=12,lev=1.25",TEST,0.45622009592515284,6.071449592418689,5.069104165641418,1.0023454267772705,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=12,lev=1.25",TEST,0.4562200959251528,6.071449592418689,5.069104165641418,1.0023454267772705,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=12,lev=1.5",TEST,0.4149690672375705,6.153257093722334,5.069104165641418,1.0841529280809157,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=12,lev=1.75",TEST,0.38550404674644034,6.1921552751035485,5.069104165641418,1.1230511094621303,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=12,lev=2.0",TEST,0.36340528137809286,6.186098306475296,5.069104165641418,1.116994140833878,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=12,lev=1.75",TEST,0.3855040467464403,6.1921552751035485,5.069104165641418,1.1230511094621305,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=12,lev=2.0",TEST,0.3634052813780928,6.186098306475296,5.069104165641418,1.116994140833878,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=60,lev=1.0",TEST,0.5069578116256938,5.528074606388408,5.069104165641418,0.4589704407469899,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=60,lev=1.25",TEST,0.4447361897974097,5.602649994303624,5.069104165641418,0.5335458286622057,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=60,lev=1.5",TEST,0.4032551085785539,5.640295125322001,5.069104165641418,0.5711909596805826,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=60,lev=1.75",TEST,0.3736257648507995,5.638374897575694,5.069104165641418,0.5692707319342762,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=60,lev=2.0",TEST,0.35140375705498383,5.5945289671263305,5.069104165641418,0.5254248014849123,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=12,lev=1.0",TEST,0.47550727988866376,5.892794455933911,5.069104165641418,0.8236902902924932,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=12,lev=1.25",TEST,0.4205649521833164,5.9744365910742685,5.069104165641418,0.9053324254328503,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.6,rebal=60,lev=2.0",TEST,0.3514037570549838,5.5945289671263305,5.069104165641418,0.5254248014849123,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=12,lev=1.0",TEST,0.4755072798886637,5.892794455933911,5.069104165641418,0.8236902902924932,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=12,lev=1.25",TEST,0.4205649521833164,5.9744365910742685,5.069104165641418,0.9053324254328504,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=12,lev=1.5",TEST,0.3839367337130849,5.997508740979654,5.069104165641418,0.9284045753382362,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=12,lev=1.75",TEST,0.3577737205200624,5.960979683170277,5.069104165641418,0.8918755175288586,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=12,lev=2.0",TEST,0.33815146062529555,5.863180509419353,5.069104165641418,0.7940763437779346,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=60,lev=1.0",TEST,0.4687886746819537,5.4919171053677935,5.069104165641418,0.42281293972637535,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=12,lev=2.0",TEST,0.3381514606252955,5.863180509419353,5.069104165641418,0.7940763437779346,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=60,lev=1.0",TEST,0.4687886746819537,5.4919171053677935,5.069104165641418,0.4228129397263753,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=60,lev=1.25",TEST,0.4129963871126149,5.527808499614633,5.069104165641418,0.4587043339732144,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=60,lev=1.5",TEST,0.37580152873305583,5.513023544505921,5.069104165641418,0.4439193788645026,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=60,lev=1.75",TEST,0.34923377274765655,5.444268432314982,5.069104165641418,0.37516426667356395,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=60,lev=2.0",TEST,0.32930795575860694,5.318740077813045,5.069104165641418,0.24963591217162673,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=60,lev=1.5",TEST,0.3758015287330558,5.513023544505921,5.069104165641418,0.4439193788645026,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=60,lev=1.75",TEST,0.3492337727476565,5.444268432314982,5.069104165641418,0.3751642666735639,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.7,rebal=60,lev=2.0",TEST,0.3293079557586069,5.318740077813045,5.069104165641418,0.2496359121716267,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=12,lev=1.0",TEST,0.4340062034766595,5.75688430404436,5.069104165641418,0.6877801384029416,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=12,lev=1.25",TEST,0.38521294530680056,5.765397523104733,5.069104165641418,0.6962933574633148,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=12,lev=1.25",TEST,0.3852129453068005,5.765397523104733,5.069104165641418,0.6962933574633148,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=12,lev=1.5",TEST,0.3526841065268944,5.693344749301586,5.069104165641418,0.6242405836601677,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=12,lev=1.75",TEST,0.32944922168410445,5.538475444241087,5.069104165641418,0.46937127859966843,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=12,lev=2.0",TEST,0.3120230580520119,5.298380859867476,5.069104165641418,0.22927669422605756,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=60,lev=1.0",TEST,0.4302437282091315,5.410882002200639,5.069104165641418,0.34177783655922056,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=12,lev=1.75",TEST,0.3294492216841044,5.538475444241087,5.069104165641418,0.4693712785996684,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=12,lev=2.0",TEST,0.3120230580520119,5.298380859867476,5.069104165641418,0.2292766942260575,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=60,lev=1.0",TEST,0.4302437282091315,5.410882002200639,5.069104165641418,0.3417778365592205,240,
 1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=60,lev=1.25",TEST,0.3805351751228931,5.380912609893477,5.069104165641418,0.3118084442520592,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=60,lev=1.5",TEST,0.34739613973206734,5.279553297768742,5.069104165641418,0.21044913212732386,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=60,lev=1.75",TEST,0.323725400167192,5.102860775107089,5.069104165641418,0.03375660946567116,240,
-1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=60,lev=2.0",TEST,0.3059723454935354,4.847790504033539,5.069104165641418,-0.22131366160787902,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=12,lev=1.0",TEST,0.35997283601743646,5.069104165641418,5.069104165641418,0.0,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=12,lev=1.25",TEST,0.3210217626882279,4.796666303268986,5.069104165641418,-0.27243786237243217,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=12,lev=1.5",TEST,0.29505438046875543,4.377820884896725,5.069104165641418,-0.6912832807446936,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=12,lev=1.75",TEST,0.27650625031198933,3.8069785100877525,5.069104165641418,-1.2621256555536657,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=12,lev=2.0",TEST,0.2625951526944149,3.0814840749369967,5.069104165641418,-1.9876200907044215,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=60,lev=1.0",TEST,0.35997283601743646,5.069104165641418,5.069104165641418,0.0,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=60,lev=1.25",TEST,0.3210217626882279,4.796666303268986,5.069104165641418,-0.27243786237243217,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=60,lev=1.5",TEST,0.29505438046875543,4.377820884896725,5.069104165641418,-0.6912832807446936,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=60,lev=1.75",TEST,0.27650625031198933,3.8069785100877525,5.069104165641418,-1.2621256555536657,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=60,lev=2.0",TEST,0.2625951526944149,3.0814840749369967,5.069104165641418,-1.9876200907044215,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=60,lev=1.5",TEST,0.3473961397320673,5.279553297768742,5.069104165641418,0.2104491321273238,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=60,lev=1.75",TEST,0.323725400167192,5.102860775107089,5.069104165641418,0.0337566094656711,240,
+1,"H1 multi-asset a bassa rotazione, con e senza leva","eq=0.8,rebal=60,lev=2.0",TEST,0.3059723454935354,4.847790504033539,5.069104165641418,-0.221313661607879,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=12,lev=1.0",TEST,0.3599728360174364,5.069104165641418,5.069104165641418,0.0,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=12,lev=1.25",TEST,0.3210217626882279,4.796666303268986,5.069104165641418,-0.2724378623724321,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=12,lev=1.5",TEST,0.2950543804687554,4.377820884896725,5.069104165641418,-0.6912832807446936,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=12,lev=1.75",TEST,0.2765062503119893,3.806978510087753,5.069104165641418,-1.2621256555536655,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=12,lev=2.0",TEST,0.2625951526944149,3.0814840749369967,5.069104165641418,-1.9876200907044212,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=60,lev=1.0",TEST,0.3599728360174364,5.069104165641418,5.069104165641418,0.0,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=60,lev=1.25",TEST,0.3210217626882279,4.796666303268986,5.069104165641418,-0.2724378623724321,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=60,lev=1.5",TEST,0.2950543804687554,4.377820884896725,5.069104165641418,-0.6912832807446936,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=60,lev=1.75",TEST,0.2765062503119893,3.806978510087753,5.069104165641418,-1.2621256555536655,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.0,rebal=60,lev=2.0",TEST,0.2625951526944149,3.0814840749369967,5.069104165641418,-1.9876200907044212,240,
 2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=12,lev=1.0",TEST,0.3360544570688561,4.4657890847501,5.069104165641418,-0.6033150808913179,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=12,lev=1.25",TEST,0.2925932879283247,3.9671847688252075,5.069104165641418,-1.1019193968162107,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=12,lev=1.5",TEST,0.26361917516797045,3.3677884816575743,5.069104165641418,-1.701315683983844,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=12,lev=1.75",TEST,0.242923380339146,2.6794657659734646,5.069104165641418,-2.3896383996679535,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=12,lev=2.0",TEST,0.22740153421752762,1.6616447507244552,5.069104165641418,-3.4074594149169632,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=12,lev=1.25",TEST,0.2925932879283247,3.967184768825208,5.069104165641418,-1.1019193968162109,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=12,lev=1.5",TEST,0.2636191751679704,3.3677884816575743,5.069104165641418,-1.701315683983844,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=12,lev=1.75",TEST,0.242923380339146,2.6794657659734646,5.069104165641418,-2.389638399667953,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=12,lev=2.0",TEST,0.2274015342175276,1.6616447507244552,5.069104165641418,-3.4074594149169632,240,
 2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=60,lev=1.0",TEST,0.3402642307552341,4.467794482153931,5.069104165641418,-0.6013096834874876,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=60,lev=1.25",TEST,0.2971029800414319,3.969535714304934,5.069104165641418,-1.0995684513364843,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=60,lev=1.25",TEST,0.2971029800414319,3.969535714304934,5.069104165641418,-1.0995684513364845,240,
 2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=60,lev=1.5",TEST,0.2683288128988971,3.376433645348119,5.069104165641418,-1.6926705202932992,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=60,lev=1.75",TEST,0.24777583636851505,2.6498267898531283,5.069104165641418,-2.41927737578829,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=60,lev=2.0",TEST,0.23236110397072846,1.6104971698632204,5.069104165641418,-3.4586069957781977,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=12,lev=1.0",TEST,0.30445783102185514,3.8587010100346433,5.069104165641418,-1.210403155606775,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=12,lev=1.25",TEST,0.25536872933090204,3.244505207381337,5.069104165641418,-1.824598958260081,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=60,lev=1.75",TEST,0.247775836368515,2.6498267898531283,5.069104165641418,-2.41927737578829,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.1,rebal=60,lev=2.0",TEST,0.2323611039707284,1.6104971698632204,5.069104165641418,-3.4586069957781977,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=12,lev=1.0",TEST,0.3044578310218551,3.8587010100346433,5.069104165641418,-1.210403155606775,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=12,lev=1.25",TEST,0.255368729330902,3.244505207381337,5.069104165641418,-1.824598958260081,240,
 2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=12,lev=1.5",TEST,0.2226426615369333,2.560560139266313,5.069104165641418,-2.5085440263751053,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=12,lev=1.75",TEST,0.19926689882695567,1.8521645971712666,5.069104165641418,-3.216939568470152,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=12,lev=2.0",TEST,0.18173507679447234,0.8446389896951231,5.069104165641418,-4.224465175946295,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=60,lev=1.0",TEST,0.31427655182386127,3.8769197954727828,5.069104165641418,-1.1921843701686354,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=60,lev=1.25",TEST,0.2660368446959194,3.2543236536133517,5.069104165641418,-1.8147805120280665,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=60,lev=1.5",TEST,0.23387703994395806,2.578555352414812,5.069104165641418,-2.490548813226606,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=60,lev=1.75",TEST,0.21090575083541438,1.850158122671669,5.069104165641418,-3.2189460429697494,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=60,lev=2.0",TEST,0.19367728400400658,0.7978604919369401,5.069104165641418,-4.271243673704478,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=12,lev=1.0",TEST,0.2618193241854917,3.297722440753116,5.069104165641418,-1.7713817248883021,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=12,lev=1.25",TEST,0.20550387814870333,2.610560391336214,5.069104165641418,-2.458543774305204,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=12,lev=1.75",TEST,0.1992668988269556,1.8521645971712664,5.069104165641418,-3.216939568470152,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=12,lev=2.0",TEST,0.1817350767944723,0.8446389896951231,5.069104165641418,-4.224465175946295,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=60,lev=1.0",TEST,0.3142765518238612,3.876919795472783,5.069104165641418,-1.1921843701686354,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=60,lev=1.25",TEST,0.2660368446959194,3.254323653613352,5.069104165641418,-1.8147805120280665,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=60,lev=1.5",TEST,0.233877039943958,2.578555352414812,5.069104165641418,-2.490548813226606,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=60,lev=1.75",TEST,0.2109057508354143,1.850158122671669,5.069104165641418,-3.2189460429697494,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.2,rebal=60,lev=2.0",TEST,0.1936772840040065,0.7978604919369401,5.069104165641418,-4.271243673704478,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=12,lev=1.0",TEST,0.2618193241854917,3.297722440753116,5.069104165641418,-1.771381724888302,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=12,lev=1.25",TEST,0.2055038781487033,2.610560391336214,5.069104165641418,-2.458543774305204,240,
 2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=12,lev=1.5",TEST,0.1679602474575112,1.87633697751522,5.069104165641418,-3.192767188126198,240,
 2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=12,lev=1.75",TEST,0.1411433683923739,1.021236807614703,5.069104165641418,-4.047867358026715,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=12,lev=2.0",TEST,0.12103070909352091,-0.030651911020552917,5.069104165641418,-5.099756076661971,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=60,lev=1.0",TEST,0.27937032444892085,3.329005841608451,5.069104165641418,-1.7400983240329673,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=12,lev=2.0",TEST,0.1210307090935209,-0.0306519110205529,5.069104165641418,-5.099756076661971,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=60,lev=1.0",TEST,0.2793703244489208,3.329005841608451,5.069104165641418,-1.7400983240329673,240,
 2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=60,lev=1.25",TEST,0.224823864617609,2.6420091494999194,5.069104165641418,-2.427095016141499,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=60,lev=1.5",TEST,0.18845955806340112,1.9274937259862797,5.069104165641418,-3.1416104396551385,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=60,lev=1.75",TEST,0.16248505338182412,0.9989110124541609,5.069104165641418,-4.070193153187257,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=60,lev=2.0",TEST,0.14300417487064132,-0.08203660922912138,5.069104165641418,-5.15114077487054,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=12,lev=1.0",TEST,0.20250373577565792,2.7436135977589657,5.069104165641418,-2.3254905678824525,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=12,lev=1.25",TEST,0.1365688194184073,1.9576697050923137,5.069104165641418,-3.1114344605491047,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=12,lev=1.5",TEST,0.09261220851357348,1.14773613293536,5.069104165641418,-3.9213680327060585,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=12,lev=1.75",TEST,0.061214629295835085,0.11443585505686812,5.069104165641418,-4.95466831058455,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=12,lev=2.0",TEST,0.03766644488253132,-0.9851328897056051,5.069104165641418,-6.0542370553470235,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=60,lev=1.0",TEST,0.23120120114575604,2.788891620003537,5.069104165641418,-2.2802125456378812,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=60,lev=1.25",TEST,0.16853281795347178,2.0080935777573994,5.069104165641418,-3.061010587884019,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=60,lev=1.5",TEST,0.12675389582528243,1.164693311062483,5.069104165641418,-3.904410854578935,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=60,lev=1.75",TEST,0.09691180859086121,0.10984941832812246,5.069104165641418,-4.959254747313295,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=60,lev=1.5",TEST,0.1884595580634011,1.92749372598628,5.069104165641418,-3.1416104396551385,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=60,lev=1.75",TEST,0.1624850533818241,0.9989110124541608,5.069104165641418,-4.070193153187257,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.3,rebal=60,lev=2.0",TEST,0.1430041748706413,-0.0820366092291213,5.069104165641418,-5.15114077487054,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=12,lev=1.0",TEST,0.2025037357756579,2.7436135977589657,5.069104165641418,-2.3254905678824525,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=12,lev=1.25",TEST,0.1365688194184073,1.9576697050923135,5.069104165641418,-3.1114344605491047,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=12,lev=1.5",TEST,0.0926122085135734,1.14773613293536,5.069104165641418,-3.9213680327060585,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=12,lev=1.75",TEST,0.061214629295835,0.1144358550568681,5.069104165641418,-4.95466831058455,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=12,lev=2.0",TEST,0.0376664448825313,-0.9851328897056052,5.069104165641418,-6.054237055347024,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=60,lev=1.0",TEST,0.231201201145756,2.788891620003537,5.069104165641418,-2.280212545637881,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=60,lev=1.25",TEST,0.1685328179534717,2.0080935777573994,5.069104165641418,-3.061010587884019,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=60,lev=1.5",TEST,0.1267538958252824,1.164693311062483,5.069104165641418,-3.904410854578935,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=60,lev=1.75",TEST,0.0969118085908612,0.1098494183281224,5.069104165641418,-4.959254747313295,240,
 2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.4,rebal=60,lev=2.0",TEST,0.0745302431650455,-1.0230170721563898,5.069104165641418,-6.092121237797808,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=12,lev=1.0",TEST,0.11636544194324229,2.1525371514182967,5.069104165641418,-2.9165670142231215,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=12,lev=1.25",TEST,0.03701189557914225,1.2544941969597065,5.069104165641418,-3.8146099686817116,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=12,lev=1.5",TEST,-0.015890468663591034,0.2532649971295765,5.069104165641418,-4.815839168511841,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=12,lev=1.75",TEST,-0.05367787169411476,-0.8718628060016966,5.069104165641418,-5.940966971643115,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=12,lev=1.0",TEST,0.1163654419432422,2.1525371514182967,5.069104165641418,-2.916567014223121,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=12,lev=1.25",TEST,0.0370118955791422,1.2544941969597063,5.069104165641418,-3.814609968681712,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=12,lev=1.5",TEST,-0.015890468663591,0.2532649971295765,5.069104165641418,-4.815839168511841,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=12,lev=1.75",TEST,-0.0536778716941147,-0.8718628060016966,5.069104165641418,-5.940966971643115,240,
 2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=12,lev=2.0",TEST,-0.0820184239670077,-2.045567520247027,5.069104165641418,-7.114671685888445,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=60,lev=1.0",TEST,0.16207919692639658,2.2321275806227865,5.069104165641418,-2.8369765850186317,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=60,lev=1.25",TEST,0.08844562664639226,1.368003230270588,5.069104165641418,-3.70110093537083,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=60,lev=1.5",TEST,0.03935657979305591,0.2980940678614257,5.069104165641418,-4.7710100977799925,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=60,lev=1.75",TEST,0.0042929748978156506,-0.8493733527002622,5.069104165641418,-5.91847751834168,240,
-2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=60,lev=2.0",TEST,-0.022004728773614434,-2.0581367366066514,5.069104165641418,-7.12724090224807,240,
-3,H2,walkforward:trend following multi-asset (Century momentum),WF-OOS,0.2675036274027973,8.450447501921635,8.853582903566107,-0.40313540164447126,600,n_eval=800
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=60,lev=1.0",TEST,0.1620791969263965,2.2321275806227865,5.069104165641418,-2.836976585018632,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=60,lev=1.25",TEST,0.0884456266463922,1.368003230270588,5.069104165641418,-3.70110093537083,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=60,lev=1.5",TEST,0.0393565797930559,0.2980940678614257,5.069104165641418,-4.7710100977799925,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=60,lev=1.75",TEST,0.0042929748978156,-0.8493733527002622,5.069104165641418,-5.91847751834168,240,
+2,H3 core azionario + overlay multi-stile 6 classi di asset (AQR Century),"ov=0.5,rebal=60,lev=2.0",TEST,-0.0220047287736144,-2.0581367366066514,5.069104165641418,-7.12724090224807,240,
+3,H2,walkforward:trend following multi-asset (Century momentum),WF-OOS,0.2675036274027973,8.450447501921635,8.853582903566107,-0.4031354016444712,600,n_eval=800
 4,H4,"walkforward:tilt difensivo settoriale (low-vol, long-only)",WF-OOS,0.5770850733823755,10.415606791225498,9.689746165036755,0.7258606261887426,756,n_eval=378
 13,H13 frontiera rotazione,"(5, 5, 0, 1)",WF-OOS,0.6807894417145554,11.038037223045166,9.689746165036755,1.3482910580084102,756,turn=305%
 13,H13 frontiera rotazione,"(5, 10, 0, 1)",WF-OOS,0.6789719474471071,11.107812814667348,9.689746165036755,1.4180666496305925,756,turn=146%
@@ -118,14 +118,14 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 13,H13 frontiera rotazione,"(5, 25, 6, 3)",WF-OOS,0.5800803401630708,11.731265023637022,9.689746165036755,2.0415188586002664,756,turn=61%
 5,H5,walkforward:momentum settoriale cross-sectional,WF-OOS,0.671065521058151,12.636757813773391,9.689746165036755,2.947011648736636,756,n_eval=378
 6,H6,walkforward:stop loss / take profit su chiusure mensili,WF-OOS,0.2944237139534668,8.306508593856735,8.853582903566107,-0.5470743097093713,600,n_eval=600
-13,H13 frontiera rotazione,"(5, 25, 12, 12)",WF-OOS,0.454969583122675,9.61235195532836,9.689746165036755,-0.07739420970839461,756,turn=36%
-7,H7,walkforward:leva con margin call ESMA modellata,WF-OOS,0.14164672916454446,4.678030078133482,8.853582903566107,-4.175552825432625,600,n_eval=250
-8,H8,"walkforward:diversificazione geografica, rotazione minima",WF-OOS,0.24973321215487895,2.1358656882427085,2.296443639521396,-0.16057795127868735,168,n_eval=84
-9,H9,walkforward:combinazione inverse-vol multi-asset,WF-OOS,-2.479956506841085,-3.9729839726084846,2.87402289210711,-6.847006864715595,180,n_eval=90
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),AM,POST-PUB,0.36163188388958084,3.660712739153116,0.0,3.660712739153116,396,"t=2.08,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),AOP,POST-PUB,0.004872381423831465,-2.9058347354935585,0.0,-2.9058347354935585,324,"t=0.03,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),AbnormalAccruals,POST-PUB,-0.20341323846365647,-4.767221932812348,0.0,-4.767221932812348,288,"t=-1.00,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Accruals,POST-PUB,0.18496152990990036,-1.7815494856614065,0.0,-1.7815494856614065,348,"t=1.00,vw=False"
+13,H13 frontiera rotazione,"(5, 25, 12, 12)",WF-OOS,0.454969583122675,9.61235195532836,9.689746165036755,-0.0773942097083946,756,turn=36%
+7,H7,walkforward:leva con margin call ESMA modellata,WF-OOS,0.1416467291645444,4.678030078133482,8.853582903566107,-4.175552825432625,600,n_eval=250
+8,H8,"walkforward:diversificazione geografica, rotazione minima",WF-OOS,0.2497332121548789,2.1358656882427085,2.296443639521396,-0.1605779512786873,168,n_eval=84
+9,H9,walkforward:combinazione inverse-vol multi-asset,WF-OOS,-2.479956506841085,-3.972983972608485,2.87402289210711,-6.847006864715595,180,n_eval=90
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),AM,POST-PUB,0.3616318838895808,3.660712739153116,0.0,3.660712739153116,396,"t=2.08,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),AOP,POST-PUB,0.0048723814238314,-2.9058347354935585,0.0,-2.9058347354935585,324,"t=0.03,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),AbnormalAccruals,POST-PUB,-0.2034132384636564,-4.767221932812348,0.0,-4.767221932812348,288,"t=-1.00,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Accruals,POST-PUB,0.1849615299099003,-1.7815494856614065,0.0,-1.7815494856614065,348,"t=1.00,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),AccrualsBM,POST-PUB,0.6528560862769286,9.13623505478511,0.0,9.13623505478511,252,"t=2.99,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),AdExp,POST-PUB,0.3511824930997752,1.7105663075902884,0.0,1.7105663075902884,288,"t=1.72,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),AgeIPO,POST-PUB,0.4316564278231747,5.350648586869414,0.0,5.350648586869414,408,"t=2.52,vw=False"
@@ -133,220 +133,215 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),AnalystValue,POST-PUB,0.2019492665648156,0.7432381767413299,0.0,0.7432381767413299,324,"t=1.05,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),AnnouncementReturn,POST-PUB,1.3861025493400412,6.781803216914162,0.0,6.781803216914162,348,"t=7.46,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),AssetGrowth,POST-PUB,0.6065023816542635,4.380248180317919,0.0,4.380248180317919,204,"t=2.50,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BM,POST-PUB,0.4450379888659163,3.8664634124676294,0.0,3.8664634124676294,540,"t=2.99,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BM,POST-PUB,0.4450379888659163,3.866463412467629,0.0,3.866463412467629,540,"t=2.99,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BMdec,POST-PUB,0.6777939042779945,5.069140707435529,0.0,5.069140707435529,396,"t=3.89,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BPEBM,POST-PUB,-0.06194711860668212,-3.3475040514343544,0.0,-3.3475040514343544,216,"t=-0.26,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Beta,POST-PUB,0.09155452559071964,-0.6534862564584882,0.0,-0.6534862564584882,624,"t=0.66,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BetaFP,POST-PUB,-0.15519380118854992,-7.167773046703458,0.0,-7.167773046703458,132,"t=-0.51,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BetaLiquidityPS,POST-PUB,0.04708497825869459,-2.3966807827958627,0.0,-2.3966807827958627,264,"t=0.22,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BPEBM,POST-PUB,-0.0619471186066821,-3.3475040514343544,0.0,-3.3475040514343544,216,"t=-0.26,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Beta,POST-PUB,0.0915545255907196,-0.6534862564584882,0.0,-0.6534862564584882,624,"t=0.66,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BetaFP,POST-PUB,-0.1551938011885499,-7.167773046703458,0.0,-7.167773046703458,132,"t=-0.51,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BetaLiquidityPS,POST-PUB,0.0470849782586945,-2.3966807827958627,0.0,-2.3966807827958627,264,"t=0.22,vw=True"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BetaTailRisk,POST-PUB,0.1514265410904041,-1.038923887003597,0.0,-1.038923887003597,132,"t=0.50,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BidAskSpread,POST-PUB,-0.013427310364463294,-3.320009956313395,0.0,-3.320009956313395,468,"t=-0.08,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BookLeverage,POST-PUB,-0.05503214825290117,-3.8060178552151345,0.0,-3.8060178552151345,396,"t=-0.32,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BrandInvest,POST-PUB,-0.30037526785355234,-8.203271513042985,0.0,-8.203271513042985,132,"t=-1.00,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CF,POST-PUB,0.24008343195606954,1.5006208688519047,0.0,1.5006208688519047,372,"t=1.34,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BidAskSpread,POST-PUB,-0.0134273103644632,-3.320009956313395,0.0,-3.320009956313395,468,"t=-0.08,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BookLeverage,POST-PUB,-0.0550321482529011,-3.8060178552151354,0.0,-3.8060178552151354,396,"t=-0.32,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),BrandInvest,POST-PUB,-0.3003752678535523,-8.203271513042985,0.0,-8.203271513042985,132,"t=-1.00,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CF,POST-PUB,0.2400834319560695,1.5006208688519047,0.0,1.5006208688519047,372,"t=1.34,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CPVolSpread,POST-PUB,0.820557464324139,2.3946882941427,0.0,2.3946882941427,169,"t=3.08,vw=True"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Cash,POST-PUB,-0.07085025473354396,-4.413262327045048,0.0,-4.413262327045048,156,"t=-0.26,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CashProd,POST-PUB,0.2318866774669875,-0.032107107574673055,0.0,-0.032107107574673055,192,"t=0.93,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChAssetTurnover,POST-PUB,0.07231635440573003,-2.639058813793398,0.0,-2.639058813793398,204,"t=0.30,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Cash,POST-PUB,-0.0708502547335439,-4.413262327045048,0.0,-4.413262327045048,156,"t=-0.26,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CashProd,POST-PUB,0.2318866774669875,-0.032107107574673,0.0,-0.032107107574673,192,"t=0.93,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChAssetTurnover,POST-PUB,0.07231635440573,-2.639058813793398,0.0,-2.639058813793398,204,"t=0.30,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChEQ,POST-PUB,0.5494800524549679,2.15323178702075,0.0,2.15323178702075,180,"t=2.13,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChForecastAccrual,POST-PUB,0.2931143724697553,-1.6379668883841152,0.0,-1.6379668883841152,252,"t=1.34,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChInv,POST-PUB,0.48129199904977454,0.2342406498857681,0.0,0.2342406498857681,276,"t=2.31,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChInvIA,POST-PUB,0.3291796779834459,-0.48509285529132695,0.0,-0.48509285529132695,324,"t=1.71,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChInv,POST-PUB,0.4812919990497745,0.2342406498857681,0.0,0.2342406498857681,276,"t=2.31,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChInvIA,POST-PUB,0.3291796779834459,-0.4850928552913269,0.0,-0.4850928552913269,324,"t=1.71,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChNAnalyst,POST-PUB,0.1819281364307578,-1.1282786572524088,0.0,-1.1282786572524088,204,"t=0.75,vw=True"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChNNCOA,POST-PUB,-0.18216055956119168,-3.8134166099734403,0.0,-3.8134166099734403,204,"t=-0.75,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChNNCOA,POST-PUB,-0.1821605595611916,-3.81341660997344,0.0,-3.81341660997344,204,"t=-0.75,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChNWC,POST-PUB,0.0319027749076075,-2.835193228790179,0.0,-2.835193228790179,204,"t=0.13,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChTax,POST-PUB,0.7787341257463756,2.235104643818552,0.0,2.235104643818552,168,"t=2.91,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChangeInRecommendation,POST-PUB,0.632683686990015,0.20194312416410654,0.0,0.20194312416410654,252,"t=2.90,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CitationsRD,POST-PUB,-0.008696880457097881,-3.019760028621333,0.0,-3.019760028621333,144,"t=-0.03,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ChangeInRecommendation,POST-PUB,0.632683686990015,0.2019431241641065,0.0,0.2019431241641065,252,"t=2.90,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CitationsRD,POST-PUB,-0.0086968804570978,-3.019760028621333,0.0,-3.019760028621333,144,"t=-0.03,vw=True"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CompEquIss,POST-PUB,0.5295444549498965,1.0704379331236291,0.0,1.0704379331236291,228,"t=2.31,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CompositeDebtIssuance,POST-PUB,0.5425435511318548,-0.31836205207109636,0.0,-0.31836205207109636,204,"t=2.24,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ConsRecomm,POST-PUB,0.09748675990904596,-1.8785797783899219,0.0,-1.8785797783899219,288,"t=0.48,vw=True"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CoskewACX,POST-PUB,0.29575758763136156,0.6716087197868443,0.0,0.6716087197868443,228,"t=1.29,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Coskewness,POST-PUB,0.2818909590568874,-0.20901825170160437,0.0,-0.20901825170160437,300,"t=1.41,vw=True"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CredRatDG,POST-PUB,0.23645967764134654,0.4028573212633306,0.0,0.4028573212633306,288,"t=1.16,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CompositeDebtIssuance,POST-PUB,0.5425435511318548,-0.3183620520710963,0.0,-0.3183620520710963,204,"t=2.24,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ConsRecomm,POST-PUB,0.0974867599090459,-1.8785797783899216,0.0,-1.8785797783899216,288,"t=0.48,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CoskewACX,POST-PUB,0.2957575876313615,0.6716087197868443,0.0,0.6716087197868443,228,"t=1.29,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Coskewness,POST-PUB,0.2818909590568874,-0.2090182517016043,0.0,-0.2090182517016043,300,"t=1.41,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CredRatDG,POST-PUB,0.2364596776413465,0.4028573212633306,0.0,0.4028573212633306,288,"t=1.16,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),CustomerMomentum,POST-PUB,0.3572106817755576,1.6242729215377203,0.0,1.6242729215377203,204,"t=1.47,vw=True"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DebtIssuance,POST-PUB,0.27718650514701837,-1.2109218384904223,0.0,-1.2109218384904223,312,"t=1.41,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelBreadth,POST-PUB,0.30205033774774714,0.9583807035200249,0.0,0.9583807035200249,276,"t=1.45,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelCOA,POST-PUB,0.2105644435268605,-1.7687437547107603,0.0,-1.7687437547107603,240,"t=0.94,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelCOL,POST-PUB,0.09603967941783365,-2.373108009901985,0.0,-2.373108009901985,240,"t=0.43,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelDRC,POST-PUB,0.242094049171369,-1.2021333145404687,0.0,-1.2021333145404687,144,"t=0.84,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelEqu,POST-PUB,0.2973599726135925,-0.10690210870393635,0.0,-0.10690210870393635,240,"t=1.33,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DebtIssuance,POST-PUB,0.2771865051470183,-1.2109218384904223,0.0,-1.2109218384904223,312,"t=1.41,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelBreadth,POST-PUB,0.3020503377477471,0.9583807035200248,0.0,0.9583807035200248,276,"t=1.45,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelCOA,POST-PUB,0.2105644435268605,-1.7687437547107605,0.0,-1.7687437547107605,240,"t=0.94,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelCOL,POST-PUB,0.0960396794178336,-2.373108009901985,0.0,-2.373108009901985,240,"t=0.43,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelDRC,POST-PUB,0.242094049171369,-1.202133314540469,0.0,-1.202133314540469,144,"t=0.84,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelEqu,POST-PUB,0.2973599726135925,-0.1069021087039363,0.0,-0.1069021087039363,240,"t=1.33,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelFINL,POST-PUB,0.5022659552767275,-0.454707161924238,0.0,-0.454707161924238,240,"t=2.25,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelLTI,POST-PUB,0.3626299513696287,-1.5825329629067038,0.0,-1.5825329629067038,240,"t=1.62,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelNetFin,POST-PUB,0.09837304276441854,-2.416932200824617,0.0,-2.416932200824617,240,"t=0.44,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DivInit,POST-PUB,0.2612851755380417,0.28490640589544824,0.0,0.28490640589544824,360,"t=1.43,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DelNetFin,POST-PUB,0.0983730427644185,-2.416932200824617,0.0,-2.416932200824617,240,"t=0.44,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DivInit,POST-PUB,0.2612851755380417,0.2849064058954482,0.0,0.2849064058954482,360,"t=1.43,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DivOmit,POST-PUB,0.5731872638770855,7.586206342925238,0.0,7.586206342925238,359,"t=3.14,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DivSeason,POST-PUB,0.7527550095151639,-1.6656740963406982,0.0,-1.6656740963406982,144,"t=2.61,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DivYieldST,POST-PUB,1.418318662285553,4.498499602040756,0.0,4.498499602040756,552,"t=9.62,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DolVol,POST-PUB,0.3117215262269986,1.0889699212365471,0.0,1.0889699212365471,324,"t=1.62,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),DownRecomm,POST-PUB,0.6711212420876225,-0.4027006016556265,0.0,-0.4027006016556265,288,"t=3.29,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),EBM,POST-PUB,0.3081113181581463,-1.064223508803067,0.0,-1.064223508803067,216,"t=1.31,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),EP,POST-PUB,0.26901371194051427,-0.27822898080472,0.0,-0.27822898080472,576,"t=1.86,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),EP,POST-PUB,0.2690137119405142,-0.27822898080472,0.0,-0.27822898080472,576,"t=1.86,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),EarnSupBig,POST-PUB,0.491486967775032,2.6960776464558727,0.0,2.6960776464558727,216,"t=2.09,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),EarningsConsistency,POST-PUB,0.5794856985809036,1.763181982955313,0.0,1.763181982955313,192,"t=2.32,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),EarningsForecastDisparity,POST-PUB,0.1824743267541552,-1.2819725763312124,0.0,-1.2819725763312124,168,"t=0.68,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),EarningsStreak,POST-PUB,1.2441906381285481,5.026730395256208,0.0,5.026730395256208,156,"t=4.49,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),EarningsStreak,POST-PUB,1.244190638128548,5.026730395256208,0.0,5.026730395256208,156,"t=4.49,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),EarningsSurprise,POST-PUB,0.7519477092290817,1.7005844462183717,0.0,1.7005844462183717,492,"t=4.81,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),EntMult,POST-PUB,0.20992145359406064,-0.028673739745974647,0.0,-0.028673739745974647,168,"t=0.79,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),EquityDuration,POST-PUB,0.05624241962586529,-2.2796468123459808,0.0,-2.2796468123459808,252,"t=0.26,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),EntMult,POST-PUB,0.2099214535940606,-0.0286737397459746,0.0,-0.0286737397459746,168,"t=0.79,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),EquityDuration,POST-PUB,0.0562424196258652,-2.2796468123459808,0.0,-2.2796468123459808,252,"t=0.26,vw=True"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ExchSwitch,POST-PUB,0.7071185847485558,6.300708636248992,0.0,6.300708636248992,360,"t=3.87,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ExclExp,POST-PUB,0.10016560157421228,-2.4544102814828412,0.0,-2.4544102814828412,264,"t=0.47,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ExclExp,POST-PUB,0.1001656015742122,-2.454410281482841,0.0,-2.454410281482841,264,"t=0.47,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),FEPS,POST-PUB,0.4209422101855789,4.804248000854745,0.0,4.804248000854745,228,"t=1.83,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),FR,POST-PUB,-0.38978719486352736,-8.69956496851622,0.0,-8.69956496851622,228,"t=-1.70,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),FirmAge,POST-PUB,-0.19442220073818076,-4.744759460476866,0.0,-4.744759460476866,492,"t=-1.24,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),FR,POST-PUB,-0.3897871948635273,-8.69956496851622,0.0,-8.69956496851622,228,"t=-1.70,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),FirmAge,POST-PUB,-0.1944222007381807,-4.744759460476866,0.0,-4.744759460476866,492,"t=-1.24,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),FirmAgeMom,POST-PUB,0.5597333753283978,6.337263355400048,0.0,6.337263355400048,228,"t=2.44,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ForecastDispersion,POST-PUB,0.3177738611800751,1.8548844391390702,0.0,1.8548844391390702,276,"t=1.52,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Frontier,POST-PUB,0.49409934020621854,7.922401088904503,0.0,7.922401088904503,192,"t=1.98,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ForecastDispersion,POST-PUB,0.3177738611800751,1.8548844391390704,0.0,1.8548844391390704,276,"t=1.52,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Frontier,POST-PUB,0.4940993402062185,7.922401088904503,0.0,7.922401088904503,192,"t=1.98,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),GP,POST-PUB,0.8097119579408187,9.032058347223057,0.0,9.032058347223057,144,"t=2.80,vw=True"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),GrAdExp,POST-PUB,0.29020407854829877,-0.6975615893660301,0.0,-0.6975615893660301,132,"t=0.96,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),GrLTNOA,POST-PUB,-0.10121794665382096,-3.4398928501773027,0.0,-3.4398928501773027,264,"t=-0.47,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),GrSaleToGrInv,POST-PUB,0.004161752392500401,-2.9281325726243965,0.0,-2.9281325726243965,324,"t=0.02,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),GrAdExp,POST-PUB,0.2902040785482987,-0.6975615893660301,0.0,-0.6975615893660301,132,"t=0.96,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),GrLTNOA,POST-PUB,-0.1012179466538209,-3.4398928501773027,0.0,-3.4398928501773027,264,"t=-0.47,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),GrSaleToGrInv,POST-PUB,0.0041617523925004,-2.9281325726243965,0.0,-2.9281325726243965,324,"t=0.02,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),GrSaleToGrOverhead,POST-PUB,-0.2326812592735382,-4.50982860066659,0.0,-4.50982860066659,324,"t=-1.21,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Herf,POST-PUB,-0.41385386543533426,-6.706282581152928,0.0,-6.706282581152928,228,"t=-1.80,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),HerfAsset,POST-PUB,-0.48588662994886306,-7.441629467754122,0.0,-7.441629467754122,228,"t=-2.12,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Herf,POST-PUB,-0.4138538654353342,-6.706282581152928,0.0,-6.706282581152928,228,"t=-1.80,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),HerfAsset,POST-PUB,-0.485886629948863,-7.441629467754122,0.0,-7.441629467754122,228,"t=-2.12,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),HerfBE,POST-PUB,-0.4549551255512702,-7.021789380182351,0.0,-7.021789380182351,228,"t=-1.98,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),High52,POST-PUB,0.13715477672566365,-0.6505803234077212,0.0,-0.6505803234077212,252,"t=0.63,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),High52,POST-PUB,0.1371547767256636,-0.6505803234077212,0.0,-0.6505803234077212,252,"t=0.63,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IO_ShortInterest,POST-PUB,0.7409314375554177,66.83227031349206,0.0,66.83227031349206,240,"t=3.31,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IdioVol3F,POST-PUB,0.16310037772690966,0.23524070449198176,0.0,0.23524070449198176,228,"t=0.71,vw=True"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IdioVolAHT,POST-PUB,-0.0033859772576956214,-3.0239397559036774,0.0,-3.0239397559036774,264,"t=-0.02,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IdioVol3F,POST-PUB,0.1631003777269096,0.2352407044919817,0.0,0.2352407044919817,228,"t=0.71,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IdioVolAHT,POST-PUB,-0.0033859772576956,-3.0239397559036774,0.0,-3.0239397559036774,264,"t=-0.02,vw=True"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Illiquidity,POST-PUB,0.1693722251557688,-1.7520860354637835,0.0,-1.7520860354637835,276,"t=0.81,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IndIPO,POST-PUB,0.41393979362588545,2.05067284992609,0.0,2.05067284992609,408,"t=2.41,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IndIPO,POST-PUB,0.4139397936258854,2.05067284992609,0.0,2.05067284992609,408,"t=2.41,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IndMom,POST-PUB,0.3698683476823876,2.6052608720406463,0.0,2.6052608720406463,312,"t=1.89,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IndRetBig,POST-PUB,0.5859657230075922,4.287287375699302,0.0,4.287287375699302,216,"t=2.49,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IntMom,POST-PUB,0.3268471723675261,5.583553811093515,0.0,5.583553811093515,156,"t=1.18,vw=True"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IntanBM,POST-PUB,0.1127920271348635,-1.460517183819213,0.0,-1.460517183819213,228,"t=0.49,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IntanCFP,POST-PUB,0.30884715059133067,1.094040898404426,0.0,1.094040898404426,228,"t=1.35,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IntanEP,POST-PUB,0.28958394089152506,0.09875012233072322,0.0,0.09875012233072322,228,"t=1.26,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IntanSP,POST-PUB,0.14313477388553342,-0.6618342419991081,0.0,-0.6618342419991081,228,"t=0.62,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IntanCFP,POST-PUB,0.3088471505913306,1.094040898404426,0.0,1.094040898404426,228,"t=1.35,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IntanEP,POST-PUB,0.289583940891525,0.0987501223307232,0.0,0.0987501223307232,228,"t=1.26,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),IntanSP,POST-PUB,0.1431347738855334,-0.6618342419991081,0.0,-0.6618342419991081,228,"t=0.62,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),InvGrowth,POST-PUB,0.5069465993111423,1.919885964414478,0.0,1.919885964414478,156,"t=1.83,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),InvestPPEInv,POST-PUB,0.4351871138950968,-0.5959202349667465,0.0,-0.5959202349667465,204,"t=1.79,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Investment,POST-PUB,0.05235374080177373,-2.4540842889212495,0.0,-2.4540842889212495,252,"t=0.24,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Investment,POST-PUB,0.0523537408017737,-2.454084288921249,0.0,-2.454084288921249,252,"t=0.24,vw=True"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),LRreversal,POST-PUB,0.2848938103747727,2.0913275617598943,0.0,2.0913275617598943,480,"t=1.80,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Leverage,POST-PUB,0.22199738972360386,1.0926689348348928,0.0,1.0926689348348928,444,"t=1.35,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Leverage,POST-PUB,0.2219973897236038,1.0926689348348928,0.0,1.0926689348348928,444,"t=1.35,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MRreversal,POST-PUB,0.2858446090652096,0.5931561405067476,0.0,0.5931561405067476,480,"t=1.81,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MS,POST-PUB,0.5765790641695357,3.125389689170249,0.0,3.125389689170249,240,"t=2.58,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MaxRet,POST-PUB,0.19558713650050907,1.4955779337424406,0.0,1.4955779337424406,168,"t=0.73,vw=True"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MeanRankRevGrowth,POST-PUB,0.0623270909615607,-2.5376186256513553,0.0,-2.5376186256513553,372,"t=0.35,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Mom12m,POST-PUB,0.33910573113647935,7.336651656087528,0.0,7.336651656087528,384,"t=1.92,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Mom12mOffSeason,POST-PUB,0.36381830409128574,8.08030064294287,0.0,8.08030064294287,204,"t=1.50,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MaxRet,POST-PUB,0.195587136500509,1.4955779337424406,0.0,1.4955779337424406,168,"t=0.73,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MeanRankRevGrowth,POST-PUB,0.0623270909615607,-2.5376186256513558,0.0,-2.5376186256513558,372,"t=0.35,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Mom12m,POST-PUB,0.3391057311364793,7.336651656087528,0.0,7.336651656087528,384,"t=1.92,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Mom12mOffSeason,POST-PUB,0.3638183040912857,8.08030064294287,0.0,8.08030064294287,204,"t=1.50,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Mom6m,POST-PUB,0.4159018511390268,9.062209641588794,0.0,9.062209641588794,384,"t=2.35,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Mom6mJunk,POST-PUB,0.32530411760081207,5.263409445519122,0.0,5.263409445519122,216,"t=1.38,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomOffSeason,POST-PUB,0.23911007289884662,1.7185190839693858,0.0,1.7185190839693858,204,"t=0.99,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Mom6mJunk,POST-PUB,0.325304117600812,5.263409445519122,0.0,5.263409445519122,216,"t=1.38,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomOffSeason,POST-PUB,0.2391100728988466,1.7185190839693858,0.0,1.7185190839693858,204,"t=0.99,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomOffSeason06YrPlus,POST-PUB,0.4724024711362485,2.734214738703759,0.0,2.734214738703759,204,"t=1.95,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomOffSeason11YrPlus,POST-PUB,-0.07775035742934872,-3.734573541844143,0.0,-3.734573541844143,204,"t=-0.32,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomOffSeason11YrPlus,POST-PUB,-0.0777503574293487,-3.734573541844143,0.0,-3.734573541844143,204,"t=-0.32,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomOffSeason16YrPlus,POST-PUB,0.3205712296895642,0.3050369057304927,0.0,0.3050369057304927,204,"t=1.32,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomRev,POST-PUB,0.044264624006149667,-1.9843815233188988,0.0,-1.9843815233188988,228,"t=0.19,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomSeason,POST-PUB,-0.04998941927400053,-3.695320927570985,0.0,-3.695320927570985,204,"t=-0.21,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomSeason06YrPlus,POST-PUB,0.12382895796120207,-1.3783713140614624,0.0,-1.3783713140614624,204,"t=0.51,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomSeason11YrPlus,POST-PUB,0.3291751289370245,0.23559563605279532,0.0,0.23559563605279532,204,"t=1.36,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomRev,POST-PUB,0.0442646240061496,-1.9843815233188988,0.0,-1.9843815233188988,228,"t=0.19,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomSeason,POST-PUB,-0.0499894192740005,-3.695320927570985,0.0,-3.695320927570985,204,"t=-0.21,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomSeason06YrPlus,POST-PUB,0.123828957961202,-1.3783713140614624,0.0,-1.3783713140614624,204,"t=0.51,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomSeason11YrPlus,POST-PUB,0.3291751289370245,0.2355956360527953,0.0,0.2355956360527953,204,"t=1.36,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomSeason16YrPlus,POST-PUB,0.7468608570703739,4.216669285055183,0.0,4.216669285055183,204,"t=3.08,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomSeasonShort,POST-PUB,0.04861469405550795,-2.226768262942703,0.0,-2.226768262942703,204,"t=0.20,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomSeasonShort,POST-PUB,0.0486146940555079,-2.226768262942703,0.0,-2.226768262942703,204,"t=0.20,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),MomVol,POST-PUB,0.4304999906341805,13.32201454045208,0.0,13.32201454045208,300,"t=2.15,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),NOA,POST-PUB,-0.0069366090898797615,-3.0343247352631266,0.0,-3.0343247352631266,252,"t=-0.03,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),NOA,POST-PUB,-0.0069366090898797,-3.034324735263126,0.0,-3.034324735263126,252,"t=-0.03,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),NetDebtFinance,POST-PUB,0.69922355937176,1.760154543460577,0.0,1.760154543460577,228,"t=3.05,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),NetDebtPrice,POST-PUB,0.08947901432226014,-1.3835851149732723,0.0,-1.3835851149732723,216,"t=0.38,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),NetDebtPrice,POST-PUB,0.0894790143222601,-1.3835851149732723,0.0,-1.3835851149732723,216,"t=0.38,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),NetEquityFinance,POST-PUB,0.7116760476058933,8.936333234486263,0.0,8.936333234486263,228,"t=3.10,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),NetPayoutYield,POST-PUB,0.8895370551346601,14.030568156941776,0.0,14.030568156941776,216,"t=3.77,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),NumEarnIncrease,POST-PUB,0.653225790716329,0.6040894114084603,0.0,0.6040894114084603,156,"t=2.36,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),OPLeverage,POST-PUB,0.009497215256493916,-2.8513381749886406,0.0,-2.8513381749886406,168,"t=0.04,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),OPLeverage,POST-PUB,0.0094972152564939,-2.8513381749886406,0.0,-2.8513381749886406,168,"t=0.04,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),OScore,POST-PUB,0.5760763972320458,10.2676850775641,0.0,10.2676850775641,324,"t=2.99,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),OperProf,POST-PUB,0.5478679797376408,2.351120965677926,0.0,2.351120965677926,228,"t=2.39,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),OptionVolume1,POST-PUB,0.17205190298793843,-1.3544310300995575,0.0,-1.3544310300995575,141,"t=0.59,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),OptionVolume1,POST-PUB,0.1720519029879384,-1.3544310300995577,0.0,-1.3544310300995577,141,"t=0.59,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),OptionVolume2,POST-PUB,-0.3731383995211447,-4.924884195084885,0.0,-4.924884195084885,141,"t=-1.28,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),OrderBacklog,POST-PUB,-0.4120125036087402,-6.309169910913226,0.0,-6.309169910913226,264,"t=-1.93,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),OrderBacklogChg,POST-PUB,0.7344680620615626,6.4924332331635854,0.0,6.4924332331635854,216,"t=3.12,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),OrgCap,POST-PUB,0.2776881542072057,-0.6478374426695539,0.0,-0.6478374426695539,144,"t=0.96,vw=True"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),PS,POST-PUB,0.24083424313724391,4.246218728992813,0.0,4.246218728992813,300,"t=1.20,vw=True"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),PayoutYield,POST-PUB,0.19597333184124968,-0.7386739866676462,0.0,-0.7386739866676462,216,"t=0.83,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),PS,POST-PUB,0.2408342431372439,4.246218728992813,0.0,4.246218728992813,300,"t=1.20,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),PayoutYield,POST-PUB,0.1959733318412496,-0.7386739866676462,0.0,-0.7386739866676462,216,"t=0.83,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),PctAcc,POST-PUB,0.3551422961103363,-1.15924281089894,0.0,-1.15924281089894,168,"t=1.33,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),PctTotAcc,POST-PUB,0.783378624379452,1.6341674207851442,0.0,1.6341674207851442,168,"t=2.93,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),PredictedFE,POST-PUB,-0.026260639159316045,-3.329706135501686,0.0,-3.329706135501686,324,"t=-0.14,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Price,POST-PUB,0.1354694303998971,0.43538470047973465,0.0,0.43538470047973465,624,"t=0.98,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),PredictedFE,POST-PUB,-0.026260639159316,-3.329706135501686,0.0,-3.329706135501686,324,"t=-0.14,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Price,POST-PUB,0.1354694303998971,0.4353847004797346,0.0,0.4353847004797346,624,"t=0.98,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),PriceDelayRsq,POST-PUB,-0.2332580391834987,-5.792344173403764,0.0,-5.792344173403764,236,"t=-1.03,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),PriceDelaySlope,POST-PUB,-0.16290450254643624,-4.483511370663457,0.0,-4.483511370663457,236,"t=-0.72,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),PriceDelayTstat,POST-PUB,-0.15675481533295638,-4.418053360460583,0.0,-4.418053360460583,236,"t=-0.70,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),PriceDelaySlope,POST-PUB,-0.1629045025464362,-4.483511370663457,0.0,-4.483511370663457,236,"t=-0.72,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),PriceDelayTstat,POST-PUB,-0.1567548153329563,-4.418053360460583,0.0,-4.418053360460583,236,"t=-0.70,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ProbInformedTrading,POST-PUB,0.2109732222412815,3.8592735924370096,0.0,3.8592735924370096,144,"t=0.73,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RD,POST-PUB,0.1783413349785069,0.6091667523103252,0.0,0.6091667523103252,288,"t=0.87,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RDAbility,POST-PUB,0.2143688110100709,-0.6956335520940105,0.0,-0.6956335520940105,144,"t=0.74,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RDIPO,POST-PUB,0.640497175409607,4.817507049790152,0.0,4.817507049790152,228,"t=2.79,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RDS,POST-PUB,-0.21646957754675727,-4.373290246428974,0.0,-4.373290246428974,168,"t=-0.81,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RDcap,POST-PUB,-0.18152293449990325,-5.435857424662466,0.0,-5.435857424662466,168,"t=-0.68,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RDS,POST-PUB,-0.2164695775467572,-4.373290246428974,0.0,-4.373290246428974,168,"t=-0.81,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RDcap,POST-PUB,-0.1815229344999032,-5.435857424662466,0.0,-5.435857424662466,168,"t=-0.68,vw=True"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),REV6,POST-PUB,0.6390825590150586,4.0261364230265135,0.0,4.0261364230265135,348,"t=3.44,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RIO_Disp,POST-PUB,0.40439709650515937,1.413429018185484,0.0,1.413429018185484,240,"t=1.81,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RIO_Disp,POST-PUB,0.4043970965051593,1.413429018185484,0.0,1.413429018185484,240,"t=1.81,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RIO_MB,POST-PUB,0.0970974716918237,-2.0120063115195617,0.0,-2.0120063115195617,240,"t=0.43,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RIO_Turnover,POST-PUB,0.4401945125931014,2.256649886459476,0.0,2.256649886459476,240,"t=1.97,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RIO_Volatility,POST-PUB,0.7102734275170787,7.760906927352674,0.0,7.760906927352674,240,"t=3.18,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RIVolSpread,POST-PUB,0.15912693290394347,-0.8536836009590267,0.0,-0.8536836009590267,169,"t=0.60,vw=True"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RealizedVol,POST-PUB,0.02697912874199034,-2.3045722570448155,0.0,-2.3045722570448155,228,"t=0.12,vw=True"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Recomm_ShortInterest,POST-PUB,0.30875354194243726,2.189975073218374,0.0,2.189975073218374,168,"t=1.16,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ResidualMomentum,POST-PUB,0.41577210600878833,1.4836280595413847,0.0,1.4836280595413847,168,"t=1.56,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RIVolSpread,POST-PUB,0.1591269329039434,-0.8536836009590267,0.0,-0.8536836009590267,169,"t=0.60,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RealizedVol,POST-PUB,0.0269791287419903,-2.3045722570448155,0.0,-2.3045722570448155,228,"t=0.12,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Recomm_ShortInterest,POST-PUB,0.3087535419424372,2.189975073218374,0.0,2.189975073218374,168,"t=1.16,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ResidualMomentum,POST-PUB,0.4157721060087883,1.4836280595413849,0.0,1.4836280595413849,168,"t=1.56,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ReturnSkew,POST-PUB,0.4676096802212819,0.6415748161441828,0.0,0.6415748161441828,120,"t=1.48,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ReturnSkew3F,POST-PUB,0.39214010478676026,-0.5344941829569176,0.0,-0.5344941829569176,120,"t=1.24,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ReturnSkew3F,POST-PUB,0.3921401047867602,-0.5344941829569176,0.0,-0.5344941829569176,120,"t=1.24,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RevenueSurprise,POST-PUB,0.6781099713560033,1.6226020925341258,0.0,1.6226020925341258,228,"t=2.96,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),RoE,POST-PUB,0.4146836889106066,1.836280798840563,0.0,1.836280798840563,348,"t=2.23,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),SP,POST-PUB,0.6386617483324643,8.107456940627642,0.0,8.107456940627642,348,"t=3.44,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),STreversal,POST-PUB,0.7434369187135801,16.875708178465146,0.0,16.875708178465146,420,"t=4.40,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ShareIss1Y,POST-PUB,0.7451925457349241,8.698321277583148,0.0,8.698321277583148,204,"t=3.07,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ShareIss5Y,POST-PUB,0.7647653287614589,7.253011294594875,0.0,7.253011294594875,228,"t=3.33,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ShareRepurchase,POST-PUB,0.4316413235709855,0.30431379273310766,0.0,0.30431379273310766,360,"t=2.36,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ShareVol,POST-PUB,0.04869965373667175,-2.3805014329876393,0.0,-2.3805014329876393,324,"t=0.25,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ShareRepurchase,POST-PUB,0.4316413235709855,0.3043137927331076,0.0,0.3043137927331076,360,"t=2.36,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ShareVol,POST-PUB,0.0486996537366717,-2.3805014329876397,0.0,-2.3805014329876397,324,"t=0.25,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),ShortInterest,POST-PUB,0.8369646970466874,8.913739862427779,0.0,8.913739862427779,288,"t=4.10,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Size,POST-PUB,0.04412293820732223,-2.4552170384534544,0.0,-2.4552170384534544,528,"t=0.29,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Size,POST-PUB,0.0441229382073222,-2.4552170384534544,0.0,-2.4552170384534544,528,"t=0.29,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),SmileSlope,POST-PUB,1.6904271601786716,7.84241008136049,0.0,7.84241008136049,145,"t=5.88,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Spinoff,POST-PUB,-0.009531809678125076,-3.0651455999398927,0.0,-3.0651455999398927,384,"t=-0.05,vw=True"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),SurpriseRD,POST-PUB,-0.06969565006176157,-3.3202118279959882,0.0,-3.3202118279959882,252,"t=-0.32,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Spinoff,POST-PUB,-0.009531809678125,-3.0651455999398927,0.0,-3.0651455999398927,384,"t=-0.05,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),SurpriseRD,POST-PUB,-0.0696956500617615,-3.320211827995988,0.0,-3.320211827995988,252,"t=-0.32,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),Tax,POST-PUB,0.7089022217846653,1.3646116809459627,0.0,1.3646116809459627,252,"t=3.25,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),TotalAccruals,POST-PUB,-0.05807868460469326,-3.4432361940891547,0.0,-3.4432361940891547,240,"t=-0.26,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),UpRecomm,POST-PUB,0.6162277938626844,-0.43355271155938757,0.0,-0.43355271155938757,288,"t=3.02,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),VarCF,POST-PUB,-0.03354044597767509,-3.654691316092532,0.0,-3.654691316092532,348,"t=-0.18,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),TotalAccruals,POST-PUB,-0.0580786846046932,-3.4432361940891547,0.0,-3.4432361940891547,240,"t=-0.26,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),UpRecomm,POST-PUB,0.6162277938626844,-0.4335527115593875,0.0,-0.4335527115593875,288,"t=3.02,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),VarCF,POST-PUB,-0.033540445977675,-3.654691316092532,0.0,-3.654691316092532,348,"t=-0.18,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),VolMkt,POST-PUB,0.2702123887854587,1.7262183563158944,0.0,1.7262183563158944,348,"t=1.46,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),VolSD,POST-PUB,0.031009201554973463,-2.5229894321917494,0.0,-2.5229894321917494,288,"t=0.15,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),VolSD,POST-PUB,0.0310092015549734,-2.522989432191749,0.0,-2.522989432191749,288,"t=0.15,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),VolumeTrend,POST-PUB,0.9831245810857594,5.413535906645488,0.0,5.413535906645488,348,"t=5.29,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),XFIN,POST-PUB,0.860702863861889,11.95201253019134,0.0,11.95201253019134,228,"t=3.75,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),betaVIX,POST-PUB,0.2174751121623396,-0.4280664929901308,0.0,-0.4280664929901308,228,"t=0.95,vw=True"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),cfp,POST-PUB,0.6804807831325489,8.346103694501654,0.0,8.346103694501654,252,"t=3.12,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),dNoa,POST-PUB,0.3501045125523789,-0.6505826564094046,0.0,-0.6505826564094046,252,"t=1.60,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),fgr5yrLag,POST-PUB,0.0075343400713906855,-2.8059809345607682,0.0,-2.8059809345607682,348,"t=0.04,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),fgr5yrLag,POST-PUB,0.0075343400713906,-2.805980934560768,0.0,-2.805980934560768,348,"t=0.04,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),grcapx,POST-PUB,0.3471591528805695,-0.7448724806648879,0.0,-0.7448724806648879,228,"t=1.51,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),grcapx3y,POST-PUB,0.10851554259475017,-2.1768408758469464,0.0,-2.1768408758469464,228,"t=0.47,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),hire,POST-PUB,0.21357029305894462,-1.10586193455485,0.0,-1.10586193455485,132,"t=0.71,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),iomom_cust,POST-PUB,0.05099499612792932,-2.372191983813844,0.0,-2.372191983813844,180,"t=0.20,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),iomom_supp,POST-PUB,0.03485997369538298,-2.5642544637070737,0.0,-2.5642544637070737,180,"t=0.14,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),realestate,POST-PUB,0.07261665593696834,-2.261918036392694,0.0,-2.261918036392694,180,"t=0.28,vw=True"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),grcapx3y,POST-PUB,0.1085155425947501,-2.1768408758469464,0.0,-2.1768408758469464,228,"t=0.47,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),hire,POST-PUB,0.2135702930589446,-1.10586193455485,0.0,-1.10586193455485,132,"t=0.71,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),iomom_cust,POST-PUB,0.0509949961279293,-2.372191983813844,0.0,-2.372191983813844,180,"t=0.20,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),iomom_supp,POST-PUB,0.0348599736953829,-2.5642544637070737,0.0,-2.5642544637070737,180,"t=0.14,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),realestate,POST-PUB,0.0726166559369683,-2.261918036392694,0.0,-2.261918036392694,180,"t=0.28,vw=True"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),retConglomerate,POST-PUB,0.291844416370463,0.3832432223356457,0.0,0.3832432223356457,156,"t=1.05,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),roaq,POST-PUB,0.7354453636591349,11.280468265695028,0.0,11.280468265695028,180,"t=2.85,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),sfe,POST-PUB,0.42429080843520633,6.905952774072159,0.0,6.905952774072159,288,"t=2.08,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),sfe,POST-PUB,0.4242908084352063,6.905952774072159,0.0,6.905952774072159,288,"t=2.08,vw=False"
 10,H10 scansione sistematica delle anomalie pubblicate (OSAP),sinAlgo,POST-PUB,-0.0591585571829887,-3.65701787153444,0.0,-3.65701787153444,192,"t=-0.24,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),skew1,POST-PUB,0.40262839265120187,-0.4491805317326656,0.0,-0.4491805317326656,157,"t=1.46,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),std_turn,POST-PUB,-0.025772734610131704,-3.652153440453223,0.0,-3.652153440453223,288,"t=-0.13,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),tang,POST-PUB,0.09070806974536026,-1.5475556716043644,0.0,-1.5475556716043644,192,"t=0.36,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),zerotrade12M,POST-PUB,0.09691496214857238,-0.9112893188908617,0.0,-0.9112893188908617,228,"t=0.42,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),zerotrade1M,POST-PUB,0.1534269615924116,0.07965242730380906,0.0,0.07965242730380906,228,"t=0.67,vw=False"
-10,H10 scansione sistematica delle anomalie pubblicate (OSAP),zerotrade6M,POST-PUB,0.1389804909512979,0.029013791629956653,0.0,0.029013791629956653,228,"t=0.61,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),skew1,POST-PUB,0.4026283926512018,-0.4491805317326656,0.0,-0.4491805317326656,157,"t=1.46,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),std_turn,POST-PUB,-0.0257727346101317,-3.652153440453223,0.0,-3.652153440453223,288,"t=-0.13,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),tang,POST-PUB,0.0907080697453602,-1.5475556716043644,0.0,-1.5475556716043644,192,"t=0.36,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),zerotrade12M,POST-PUB,0.0969149621485723,-0.9112893188908616,0.0,-0.9112893188908616,228,"t=0.42,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),zerotrade1M,POST-PUB,0.1534269615924116,0.079652427303809,0.0,0.079652427303809,228,"t=0.67,vw=False"
+10,H10 scansione sistematica delle anomalie pubblicate (OSAP),zerotrade6M,POST-PUB,0.1389804909512979,0.0290137916299566,0.0,0.0290137916299566,228,"t=0.61,vw=False"
 13,H13 frontiera rotazione,"(10, 15, 0, 3)",WF-OOS,0.61984312523088,11.153957505595008,9.689746165036755,1.4642113405582524,756,turn=94%
 13,H13 frontiera rotazione,"(10, 25, 0, 12)",WF-OOS,0.518153397212307,10.196347307553708,9.689746165036755,0.5066011425169528,756,turn=37%
-13,H13 frontiera rotazione,"(10, 30, 12, 12)",WF-OOS,0.5441474457021922,10.60662493238497,9.689746165036755,0.9168787673482139,756,turn=27%
+13,H13 frontiera rotazione,"(10, 30, 12, 12)",WF-OOS,0.5441474457021922,10.60662493238497,9.689746165036755,0.916878767348214,756,turn=27%
 13,H13 frontiera rotazione,"(10, 40, 24, 12)",WF-OOS,0.5490693581768928,10.563589974364954,9.689746165036755,0.8738438093281982,756,turn=5%
 11,H11a,walkforward:C1 punteggio settoriale misto momentum+low-vol,WF-OOS,0.6733220106489598,12.766721731242326,9.689746165036755,3.0769755662055704,756,n_eval=1260
 11,H11b,walkforward:C2 Gross Profitability long-only (decile lungo),WF-OOS,0.5936198404242803,8.936961590863143,6.54046426586756,2.3964973249955834,300,n_eval=75
-11,H11c,walkforward:C3 media di C1 e C2,WF-OOS,0.675813848339721,9.842119306973391,6.54046426586756,3.301655041105831,300,n_eval=1335
+11,H11c,walkforward:C3 media di C1 e C2,WF-OOS,0.675813848339721,9.842119306973393,6.54046426586756,3.301655041105831,300,n_eval=1335
 14,H15 replica NASDAQ,"RSI2 mean-reversion:{'trend': 100, 'entry': 5, 'exit': 5}",NASDAQ,-0.8240803797101204,2.603341749646041,10.436938454865476,-7.833596705219435,13983,parametri da CRSP
 14,H15 replica NASDAQ,"Down-streak reversal:{'trend': 200, 'days': 4}",NASDAQ,-1.4125358493795384,1.884600323133271,10.436938454865476,-8.552338131732206,13983,parametri da CRSP
-14,H15 replica NASDAQ,"Donchian breakout:{'inn': 20, 'out': 20}",NASDAQ,0.5977013326497803,9.4022012817897,10.436938454865476,-1.0347371730757757,13983,parametri da CRSP
-14,H15 replica NASDAQ,"Trend + stop sigma (sostituto ATR):{'trend': 50, 'mult': 3}",NASDAQ,0.5072567164683185,8.070193392562617,10.436938454865476,-2.3667450623028596,13983,parametri da CRSP
-14,H15 replica NASDAQ,trend10m lev=1.0,NASDAQ-M,0.36719804684776364,7.915550575644708,10.457844920147386,-2.542294344502677,665,regola pubblicata
-14,H15 replica NASDAQ,trend10m lev=1.5,NASDAQ-M,0.35393632864580565,9.047473724994864,10.457844920147386,-1.4103711951525213,665,regola pubblicata
-14,H15 replica NASDAQ,trend10m lev=2.0,NASDAQ-M,0.34718649556081044,9.631759306961396,10.457844920147386,-0.8260856131859899,665,regola pubblicata
+14,H15 replica NASDAQ,"Donchian breakout:{'inn': 20, 'out': 20}",NASDAQ,0.5977013326497803,9.4022012817897,10.436938454865476,-1.0347371730757755,13983,parametri da CRSP
+14,H15 replica NASDAQ,"Trend + stop sigma (sostituto ATR):{'trend': 50, 'mult': 3}",NASDAQ,0.5072567164683185,8.070193392562617,10.436938454865476,-2.36674506230286,13983,parametri da CRSP
+14,H15 replica NASDAQ,trend10m lev=1.0,NASDAQ-M,0.3671980468477636,7.915550575644708,10.457844920147386,-2.542294344502677,665,regola pubblicata
+14,H15 replica NASDAQ,trend10m lev=1.5,NASDAQ-M,0.3539363286458056,9.047473724994864,10.457844920147386,-1.4103711951525213,665,regola pubblicata
+14,H15 replica NASDAQ,trend10m lev=2.0,NASDAQ-M,0.3471864955608104,9.631759306961396,10.457844920147386,-0.8260856131859899,665,regola pubblicata
 12,H12,walkforward:H12 momentum settoriale con isteresi e hold minimo,WF-OOS,0.5466188425716687,11.070714703831182,9.689746165036755,1.380968538794427,756,n_eval=1512
 12,H13/H14,"buy&hold, nessuna gestione fiscale",CALIB,,8.667489380943028,8.667489380943028,0.0,408,motore a lotti
-12,H13/H14,+ raccolta minusvalenze (H13),CALIB,,8.667198789964758,8.667489380943028,-0.0002905909782704441,408,motore a lotti
+12,H13/H14,+ raccolta minusvalenze (H13),CALIB,,8.667198789964758,8.667489380943028,-0.0002905909782704,408,motore a lotti
 12,H13/H14,+ sfruttamento esenzione 1.270 (H14),CALIB,,8.720233249180739,8.667489380943028,0.0527438682377106,408,motore a lotti
-12,H13/H14,+ entrambe,CALIB,,8.693738778083397,8.667489380943028,0.026249397140368558,408,motore a lotti
-13,H13 frontiera rotazione,"(5, 5, 0, 1)",WF-OOS,0.6807894417145554,11.038037223045166,9.689746165036755,1.3482910580084102,756,turn=305%
-13,H13 frontiera rotazione,"(5, 5, 0, 1)",WF-OOS,0.6807894417145554,11.038037223045166,9.689746165036755,1.3482910580084102,756,turn=305%
-13,H13 frontiera rotazione,"(5, 10, 0, 1)",WF-OOS,0.6789719474471071,11.107812814667348,9.689746165036755,1.4180666496305925,756,turn=146%
-13,H13 frontiera rotazione,"(5, 15, 0, 3)",WF-OOS,0.5784962607255257,11.290929610869336,9.689746165036755,1.6011834458325804,756,turn=89%
-13,H13 frontiera rotazione,"(5, 10, 0, 1)",WF-OOS,0.6789719474471071,11.107812814667348,9.689746165036755,1.4180666496305925,756,turn=146%
+12,H13/H14,+ entrambe,CALIB,,8.693738778083397,8.667489380943028,0.0262493971403685,408,motore a lotti
 15,H16 ATR vero + VWAP intraday,ATR vero QQQ|MA50 + stop 2xATR,2006-2026,0.5109605727308838,6.587384615874403,,-9.017511715497186,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,ATR vero QQQ|MA50 + stop 3xATR,2006-2026,0.6986381853869764,9.925391925862748,,-5.67950440550884,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,ATR vero QQQ|MA50 + stop 4xATR,2006-2026,0.7342248138688762,10.795604660959434,,-4.809291670412154,5000,OHLCV Twelve Data
@@ -358,158 +353,143 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 15,H16 ATR vero + VWAP intraday,ATR vero QQQ|MA200 + stop 4xATR,2006-2026,0.7104052745523184,10.878901164255272,,-4.7259951671163165,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,ATR vero QQQ|buy&hold,2006-2026,0.7664438516567422,15.604896331371588,,0.0,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,ATR vero AAPL|MA50 + stop 2xATR,2006-2026,0.8475797954976368,17.458922388896838,,-10.244172931181136,5000,OHLCV Twelve Data
-15,H16 ATR vero + VWAP intraday,ATR vero AAPL|MA50 + stop 3xATR,2006-2026,0.9146736987102351,19.749723659975672,,-7.953371660102302,5000,OHLCV Twelve Data
+15,H16 ATR vero + VWAP intraday,ATR vero AAPL|MA50 + stop 3xATR,2006-2026,0.9146736987102352,19.749723659975672,,-7.953371660102302,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,ATR vero AAPL|MA50 + stop 4xATR,2006-2026,0.8891196194655161,19.789584020173013,,-7.913511299904961,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,ATR vero AAPL|MA100 + stop 2xATR,2006-2026,0.8199522614127802,17.66765822783869,,-10.035437092239285,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,ATR vero AAPL|MA100 + stop 3xATR,2006-2026,0.8694912454607274,19.62466585349172,,-8.078429466586254,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,ATR vero AAPL|MA100 + stop 4xATR,2006-2026,0.8842139747494775,20.642418401547925,,-7.060676918530049,5000,OHLCV Twelve Data
-15,H16 ATR vero + VWAP intraday,ATR vero AAPL|MA200 + stop 2xATR,2006-2026,0.8766707856170651,19.449094217182726,,-8.254001102895248,5000,OHLCV Twelve Data
+15,H16 ATR vero + VWAP intraday,ATR vero AAPL|MA200 + stop 2xATR,2006-2026,0.8766707856170651,19.44909421718273,,-8.254001102895248,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,ATR vero AAPL|MA200 + stop 3xATR,2006-2026,0.8589315178554953,19.242359017671152,,-8.460736302406822,5000,OHLCV Twelve Data
-15,H16 ATR vero + VWAP intraday,ATR vero AAPL|MA200 + stop 4xATR,2006-2026,0.8197994419658249,18.31639858232439,,-9.386696737753585,5000,OHLCV Twelve Data
-15,H16 ATR vero + VWAP intraday,ATR vero AAPL|buy&hold,2006-2026,0.9401023630714147,27.703095320077974,,0.0,5000,OHLCV Twelve Data
+15,H16 ATR vero + VWAP intraday,ATR vero AAPL|MA200 + stop 4xATR,2006-2026,0.8197994419658249,18.31639858232439,,-9.386696737753583,5000,OHLCV Twelve Data
+15,H16 ATR vero + VWAP intraday,ATR vero AAPL|buy&hold,2006-2026,0.9401023630714148,27.70309532007797,,0.0,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,VWAP QQQ 1 ora|long sopra VWAP,2023-09-14/2026-07-24,-1.8598228006445443,-24.21610923297711,,-47.808346073061536,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,VWAP QQQ 1 ora|long sotto VWAP (mean rev.),2023-09-14/2026-07-24,-1.5565811227087842,-19.936533526601263,,-43.52877036668569,5000,OHLCV Twelve Data
-15,H16 ATR vero + VWAP intraday,VWAP QQQ 1 ora|breakout +1 dev.std,2023-09-14/2026-07-24,-1.9790297739458256,-14.962433473642688,,-38.554670313727115,5000,OHLCV Twelve Data
+15,H16 ATR vero + VWAP intraday,VWAP QQQ 1 ora|breakout +1 dev.std,2023-09-14/2026-07-24,-1.9790297739458256,-14.962433473642688,,-38.55467031372712,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,VWAP QQQ 1 ora|rientro -1 dev.std,2023-09-14/2026-07-24,-1.1605241001025643,-10.615494864692243,,-34.20773170477667,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,VWAP QQQ 1 ora|buy&hold,2023-09-14/2026-07-24,1.1717933465697394,23.592236840084425,,0.0,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,VWAP QQQ 15 minuti|long sopra VWAP,2025-10-15/2026-07-24,-5.481666120287755,-53.64450538746253,,-71.73698848599166,5000,OHLCV Twelve Data
-15,H16 ATR vero + VWAP intraday,VWAP QQQ 15 minuti|long sotto VWAP (mean rev.),2025-10-15/2026-07-24,-3.5407423697355394,-42.274545904221505,,-60.36702900275064,5000,OHLCV Twelve Data
+15,H16 ATR vero + VWAP intraday,VWAP QQQ 15 minuti|long sotto VWAP (mean rev.),2025-10-15/2026-07-24,-3.54074236973554,-42.27454590422151,,-60.36702900275064,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,VWAP QQQ 15 minuti|breakout +1 dev.std,2025-10-15/2026-07-24,-6.355917295847579,-41.82448693100598,,-59.91697002953511,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,VWAP QQQ 15 minuti|rientro -1 dev.std,2025-10-15/2026-07-24,-2.9221953772729767,-25.242078614595453,,-43.334561713124586,5000,OHLCV Twelve Data
 15,H16 ATR vero + VWAP intraday,VWAP QQQ 15 minuti|buy&hold,2025-10-15/2026-07-24,0.9202732039052778,18.092483098529133,,0.0,5000,OHLCV Twelve Data
-13,H13 frontiera rotazione,"(5, 25, 0, 3)",WF-OOS,0.5929485164900897,11.91796572363164,9.689746165036755,2.228219558594885,756,turn=60%
-13,H13 frontiera rotazione,"(5, 15, 0, 3)",WF-OOS,0.5784962607255257,11.290929610869336,9.689746165036755,1.6011834458325804,756,turn=89%
-13,H13 frontiera rotazione,"(5, 25, 6, 3)",WF-OOS,0.5800803401630708,11.731265023637022,9.689746165036755,2.0415188586002664,756,turn=61%
-13,H13 frontiera rotazione,"(5, 25, 0, 3)",WF-OOS,0.5929485164900897,11.91796572363164,9.689746165036755,2.228219558594885,756,turn=60%
-13,H13 frontiera rotazione,"(5, 25, 12, 12)",WF-OOS,0.454969583122675,9.61235195532836,9.689746165036755,-0.07739420970839461,756,turn=36%
-13,H13 frontiera rotazione,"(5, 25, 6, 3)",WF-OOS,0.5800803401630708,11.731265023637022,9.689746165036755,2.0415188586002664,756,turn=61%
-13,H13 frontiera rotazione,"(5, 25, 12, 12)",WF-OOS,0.454969583122675,9.61235195532836,9.689746165036755,-0.07739420970839461,756,turn=36%
-13,H13 frontiera rotazione,"(10, 15, 0, 3)",WF-OOS,0.61984312523088,11.153957505595008,9.689746165036755,1.4642113405582524,756,turn=94%
-13,H13 frontiera rotazione,"(10, 25, 0, 12)",WF-OOS,0.518153397212307,10.196347307553708,9.689746165036755,0.5066011425169528,756,turn=37%
-13,H13 frontiera rotazione,"(10, 15, 0, 3)",WF-OOS,0.61984312523088,11.153957505595008,9.689746165036755,1.4642113405582524,756,turn=94%
-13,H13 frontiera rotazione,"(10, 30, 12, 12)",WF-OOS,0.5441474457021922,10.60662493238497,9.689746165036755,0.9168787673482139,756,turn=27%
-13,H13 frontiera rotazione,"(10, 40, 24, 12)",WF-OOS,0.5490693581768928,10.563589974364954,9.689746165036755,0.8738438093281982,756,turn=5%
-13,H13 frontiera rotazione,"(10, 25, 0, 12)",WF-OOS,0.518153397212307,10.196347307553708,9.689746165036755,0.5066011425169528,756,turn=37%
-16,H17 VWAP ancorato multi-periodo,QQQ|settimana|long sopra VWAP,2006-2026,-0.16239626759224043,-3.4479491635924564,,-19.052845494964046,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,QQQ|settimana|long sotto VWAP,2006-2026,0.35993064464250846,4.688051032691076,,-10.916845298680512,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,QQQ|settimana|breakout +1 dev.std,2006-2026,-0.3110749820927865,-2.8731692400660314,,-18.478065571437618,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,QQQ|settimana|rientro -1 dev.std,2006-2026,-0.027046019285121244,-0.8378940069655116,,-16.4427903383371,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,QQQ|settimana|long sopra VWAP,2006-2026,-0.1623962675922404,-3.4479491635924564,,-19.052845494964046,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,QQQ|settimana|long sotto VWAP,2006-2026,0.3599306446425084,4.688051032691076,,-10.916845298680512,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,QQQ|settimana|breakout +1 dev.std,2006-2026,-0.3110749820927865,-2.873169240066032,,-18.478065571437615,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,QQQ|settimana|rientro -1 dev.std,2006-2026,-0.0270460192851212,-0.8378940069655116,,-16.4427903383371,5000,OHLCV Twelve Data
 16,H17 VWAP ancorato multi-periodo,QQQ|due settimane|long sopra VWAP,2006-2026,0.0109946803627044,-0.860988717535105,,-16.465885048906692,5000,OHLCV Twelve Data
 16,H17 VWAP ancorato multi-periodo,QQQ|due settimane|long sotto VWAP,2006-2026,0.3646663252941437,4.861302063807882,,-10.743594267563706,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,QQQ|due settimane|breakout +1 dev.std,2006-2026,-0.02472252839797813,-0.47136987880873615,,-16.076266210180325,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,QQQ|due settimane|breakout +1 dev.std,2006-2026,-0.0247225283979781,-0.4713698788087361,,-16.076266210180325,5000,OHLCV Twelve Data
 16,H17 VWAP ancorato multi-periodo,QQQ|due settimane|rientro -1 dev.std,2006-2026,0.2020842580469762,1.6600709552002213,,-13.944825376171366,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,QQQ|mese|long sopra VWAP,2006-2026,0.30757215564730045,3.379942146543491,,-12.224954184828096,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,QQQ|mese|long sotto VWAP,2006-2026,0.311373507261406,3.9481609456595734,,-11.656735385712015,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,QQQ|mese|breakout +1 dev.std,2006-2026,0.16955174185328203,0.9832510679739892,,-14.6216452633976,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,QQQ|mese|rientro -1 dev.std,2006-2026,0.40232609752631565,4.2583935630652325,,-11.346502768306355,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,QQQ|mese|long sopra VWAP,2006-2026,0.3075721556473004,3.379942146543491,,-12.224954184828096,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,QQQ|mese|long sotto VWAP,2006-2026,0.311373507261406,3.948160945659573,,-11.656735385712016,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,QQQ|mese|breakout +1 dev.std,2006-2026,0.169551741853282,0.9832510679739892,,-14.6216452633976,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,QQQ|mese|rientro -1 dev.std,2006-2026,0.4023260975263156,4.2583935630652325,,-11.346502768306356,5000,OHLCV Twelve Data
 16,H17 VWAP ancorato multi-periodo,QQQ|trimestre|long sopra VWAP,2006-2026,0.5634071769155095,7.1665700686532,,-8.438326262718387,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,QQQ|trimestre|long sotto VWAP,2006-2026,0.27290553594096073,3.2602693184584863,,-12.3446270129131,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,QQQ|trimestre|breakout +1 dev.std,2006-2026,0.06505246773280644,0.1894192141135731,,-15.415477117258014,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,QQQ|trimestre|rientro -1 dev.std,2006-2026,0.35417133846539217,3.849190632393684,,-11.755705698977904,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,AAPL|settimana|long sopra VWAP,2006-2026,0.29053175748024795,3.997848250632585,,-23.705247069445388,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,QQQ|trimestre|long sotto VWAP,2006-2026,0.2729055359409607,3.2602693184584863,,-12.3446270129131,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,QQQ|trimestre|breakout +1 dev.std,2006-2026,0.0650524677328064,0.1894192141135731,,-15.415477117258014,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,QQQ|trimestre|rientro -1 dev.std,2006-2026,0.3541713384653921,3.849190632393684,,-11.755705698977904,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,AAPL|settimana|long sopra VWAP,2006-2026,0.2905317574802479,3.997848250632585,,-23.705247069445388,5000,OHLCV Twelve Data
 16,H17 VWAP ancorato multi-periodo,AAPL|settimana|long sotto VWAP,2006-2026,0.4254580912111056,7.3538182890233506,,-20.349277031054623,5000,OHLCV Twelve Data
 16,H17 VWAP ancorato multi-periodo,AAPL|settimana|breakout +1 dev.std,2006-2026,0.5757986318314776,6.306020217404251,,-21.397075102673725,5000,OHLCV Twelve Data
 16,H17 VWAP ancorato multi-periodo,AAPL|settimana|rientro -1 dev.std,2006-2026,0.1640573225997545,1.3385919905203103,,-26.364503329557664,5000,OHLCV Twelve Data
 16,H17 VWAP ancorato multi-periodo,AAPL|due settimane|long sopra VWAP,2006-2026,0.6690046859395158,12.29279412042521,,-15.410301199652764,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,AAPL|due settimane|long sotto VWAP,2006-2026,0.24251124118407702,2.989034934542234,,-24.71406038553574,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,AAPL|due settimane|breakout +1 dev.std,2006-2026,0.3033803105570909,2.7526852559346393,,-24.950410064143334,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,AAPL|due settimane|rientro -1 dev.std,2006-2026,0.22722509715737063,2.3069972876568645,,-25.396098032421108,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,AAPL|mese|long sopra VWAP,2006-2026,0.883859641179386,17.405081761562613,,-10.298013558515361,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,AAPL|due settimane|long sotto VWAP,2006-2026,0.242511241184077,2.989034934542234,,-24.71406038553574,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,AAPL|due settimane|breakout +1 dev.std,2006-2026,0.3033803105570909,2.7526852559346398,,-24.95041006414333,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,AAPL|due settimane|rientro -1 dev.std,2006-2026,0.2272250971573706,2.3069972876568645,,-25.396098032421108,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,AAPL|mese|long sopra VWAP,2006-2026,0.883859641179386,17.405081761562613,,-10.29801355851536,5000,OHLCV Twelve Data
 16,H17 VWAP ancorato multi-periodo,AAPL|mese|long sotto VWAP,2006-2026,0.1761028289859183,1.3794914898310529,,-26.32360383024692,5000,OHLCV Twelve Data
 16,H17 VWAP ancorato multi-periodo,AAPL|mese|breakout +1 dev.std,2006-2026,0.4837839661449962,4.927621712465813,,-22.775473607612163,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,AAPL|mese|rientro -1 dev.std,2006-2026,0.3425318868155173,4.316390723466679,,-23.386704596611295,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,AAPL|trimestre|long sopra VWAP,2006-2026,0.9105642880853415,18.609449709890647,,-9.093645610187327,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,AAPL|trimestre|long sotto VWAP,2006-2026,0.2642401904856996,3.484734375800902,,-24.218360944277073,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,AAPL|mese|rientro -1 dev.std,2006-2026,0.3425318868155173,4.316390723466679,,-23.386704596611292,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,AAPL|trimestre|long sopra VWAP,2006-2026,0.9105642880853416,18.609449709890647,,-9.093645610187329,5000,OHLCV Twelve Data
+16,H17 VWAP ancorato multi-periodo,AAPL|trimestre|long sotto VWAP,2006-2026,0.2642401904856996,3.484734375800902,,-24.218360944277077,5000,OHLCV Twelve Data
 16,H17 VWAP ancorato multi-periodo,AAPL|trimestre|breakout +1 dev.std,2006-2026,0.7133848463160789,8.733101783647633,,-18.96999353643034,5000,OHLCV Twelve Data
-16,H17 VWAP ancorato multi-periodo,AAPL|trimestre|rientro -1 dev.std,2006-2026,0.26783420714308703,3.0268781108290232,,-24.67621720924895,5000,OHLCV Twelve Data
-13,H13 frontiera rotazione,"(10, 30, 12, 12)",WF-OOS,0.5441474457021922,10.60662493238497,9.689746165036755,0.9168787673482139,756,turn=27%
-13,H13 frontiera rotazione,"(10, 40, 24, 12)",WF-OOS,0.5490693581768928,10.563589974364954,9.689746165036755,0.8738438093281982,756,turn=5%
+16,H17 VWAP ancorato multi-periodo,AAPL|trimestre|rientro -1 dev.std,2006-2026,0.267834207143087,3.0268781108290232,,-24.67621720924895,5000,OHLCV Twelve Data
 17,H18 Kronos foundation model,"lookback=256,H=5,stride=5",2021-07-27/2026-07-20,0.4655892039163609,6.474889479592427,13.663160480896352,-7.188271001303924,1250,"hit=0.4680,IC=0.0855,RankIC=0.0670"
 18,H19 Kronos de-polarizzato + VWAP,"Kronos, segno grezzo (previsione > 0)",QQQ,0.4655892039163609,6.474889479592427,13.663160480896352,-7.188271001303924,1250,"polarizzato: 24,8% di previsioni rialziste"
-18,H19 Kronos de-polarizzato + VWAP,"Kronos, quantile mobile 30%",QQQ,0.35271237243982845,5.228466910692853,13.663160480896352,-8.4346935702035,1250,soglia relativa a 60 previsioni
+18,H19 Kronos de-polarizzato + VWAP,"Kronos, quantile mobile 30%",QQQ,0.3527123724398284,5.228466910692853,13.663160480896352,-8.4346935702035,1250,soglia relativa a 60 previsioni
 18,H19 Kronos de-polarizzato + VWAP,"Kronos, quantile mobile 40%",QQQ,0.3948369381182455,6.011977223943021,13.663160480896352,-7.65118325695333,1250,soglia relativa a 60 previsioni
 18,H19 Kronos de-polarizzato + VWAP,"Kronos, quantile mobile 50%",QQQ,0.2674104263685611,3.34707688069642,13.663160480896352,-10.316083600199931,1250,soglia relativa a 60 previsioni
-18,H19 Kronos de-polarizzato + VWAP,"Kronos, quantile mobile 60%",QQQ,0.10906757070472722,0.317974156169365,13.663160480896352,-13.345186324726987,1250,soglia relativa a 60 previsioni
-18,H19 Kronos de-polarizzato + VWAP,"Kronos, quantile mobile 70%",QQQ,0.12025073902965436,0.5853620616466992,13.663160480896352,-13.077798419249653,1250,soglia relativa a 60 previsioni
-18,H19 Kronos de-polarizzato + VWAP,"VWAP settimana, long sopra",QQQ,-0.02357014252152576,-1.523145601336784,13.663160480896352,-15.186306082233136,1250,
-18,H19 Kronos de-polarizzato + VWAP,"VWAP mese, long sopra",QQQ,0.38775927370137353,4.807216792906166,13.663160480896352,-8.855943687990186,1250,
+18,H19 Kronos de-polarizzato + VWAP,"Kronos, quantile mobile 60%",QQQ,0.1090675707047272,0.317974156169365,13.663160480896352,-13.345186324726988,1250,soglia relativa a 60 previsioni
+18,H19 Kronos de-polarizzato + VWAP,"Kronos, quantile mobile 70%",QQQ,0.1202507390296543,0.5853620616466992,13.663160480896352,-13.077798419249651,1250,soglia relativa a 60 previsioni
+18,H19 Kronos de-polarizzato + VWAP,"VWAP settimana, long sopra",QQQ,-0.0235701425215257,-1.523145601336784,13.663160480896352,-15.186306082233136,1250,
+18,H19 Kronos de-polarizzato + VWAP,"VWAP mese, long sopra",QQQ,0.3877592737013735,4.807216792906166,13.663160480896352,-8.855943687990186,1250,
 18,H19 Kronos de-polarizzato + VWAP,"VWAP trimestre, long sopra",QQQ,0.578765414039304,8.216505827944754,13.663160480896352,-5.446654652951597,1250,
 18,H19 Kronos de-polarizzato + VWAP,Kronos q50 AND (entrambi d'accordo) VWAP settimana,QQQ,-0.1958775473562074,-3.171555056394537,13.663160480896352,-16.83471553729089,1250,
 18,H19 Kronos de-polarizzato + VWAP,Kronos q50 OR (basta uno) VWAP settimana,QQQ,0.3456341106665267,5.201519884320671,13.663160480896352,-8.46164059657568,1250,
 18,H19 Kronos de-polarizzato + VWAP,Kronos q50 media (mezza posizione) VWAP settimana,QQQ,0.1606170919240917,1.28987008093846,13.663160480896352,-12.373290399957892,1250,
 18,H19 Kronos de-polarizzato + VWAP,Kronos q50 AND (entrambi d'accordo) VWAP mese,QQQ,0.2720975268004838,2.49740185404137,13.663160480896352,-11.16575862685498,1250,
-18,H19 Kronos de-polarizzato + VWAP,Kronos q50 OR (basta uno) VWAP mese,QQQ,0.36869468380943576,5.771426422235426,13.663160480896352,-7.8917340586609255,1250,
+18,H19 Kronos de-polarizzato + VWAP,Kronos q50 OR (basta uno) VWAP mese,QQQ,0.3686946838094357,5.771426422235426,13.663160480896352,-7.891734058660925,1250,
 18,H19 Kronos de-polarizzato + VWAP,Kronos q50 media (mezza posizione) VWAP mese,QQQ,0.3769330645162785,4.544598648787601,13.663160480896352,-9.11856183210875,1250,
-18,H19 Kronos de-polarizzato + VWAP,Kronos q50 AND (entrambi d'accordo) VWAP trimestre,QQQ,0.3855673159591987,3.732056018230745,13.663160480896352,-9.931104462665607,1250,
-18,H19 Kronos de-polarizzato + VWAP,Kronos q50 OR (basta uno) VWAP trimestre,QQQ,0.45657771023946714,7.977014199195054,13.663160480896352,-5.686146281701298,1250,
+18,H19 Kronos de-polarizzato + VWAP,Kronos q50 AND (entrambi d'accordo) VWAP trimestre,QQQ,0.3855673159591987,3.732056018230745,13.663160480896352,-9.931104462665608,1250,
+18,H19 Kronos de-polarizzato + VWAP,Kronos q50 OR (basta uno) VWAP trimestre,QQQ,0.4565777102394671,7.977014199195054,13.663160480896352,-5.686146281701298,1250,
 18,H19 Kronos de-polarizzato + VWAP,Kronos q50 media (mezza posizione) VWAP trimestre,QQQ,0.490711406296072,6.319257279117618,13.663160480896352,-7.343903201778733,1250,
 18,H19 Kronos de-polarizzato + VWAP,buy&hold QQQ,QQQ,0.6748452825104654,13.663160480896352,13.663160480896352,0.0,1250,benchmark
-17,H18 Kronos foundation model,"lookback=400,H=5,stride=5",2012-08-14/2026-07-17,0.27646079905645454,2.573216831292524,18.33891504590288,-15.765698214610357,3500,"hit=0.4071,IC=0.0525,RankIC=0.0468"
+17,H18 Kronos foundation model,"lookback=400,H=5,stride=5",2012-08-14/2026-07-17,0.2764607990564545,2.573216831292524,18.33891504590288,-15.765698214610357,3500,"hit=0.4071,IC=0.0525,RankIC=0.0468"
 19,H20 VWAP long/short crypto,BTCUSDT|settimana|long-only,2017-2026,0.919043535999675,38.113159291409374,,4.048087718110011,3212,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,BTCUSDT|settimana|short-only,2017-2026,-0.1713849254989935,-17.07655303594401,,-51.14162460924337,3212,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,BTCUSDT|settimana|long-short,2017-2026,0.5339153319714955,14.52347797200546,,-19.541593601293904,3212,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,BTCUSDT|mese|long-only,2017-2026,1.122742057262366,50.795946099613175,,16.730874526313812,3212,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,BTCUSDT|mese|short-only,2017-2026,0.007369769263791869,-10.40526788202023,,-44.47033945531959,3212,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,BTCUSDT|mese|long-short,2017-2026,0.7853992906269819,35.09858037867497,,1.0335088053756039,3212,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,BTCUSDT|mese|short-only,2017-2026,0.0073697692637918,-10.40526788202023,,-44.47033945531959,3212,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,BTCUSDT|mese|long-short,2017-2026,0.7853992906269819,35.09858037867497,,1.033508805375604,3212,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,BTCUSDT|trimestre|long-only,2017-2026,1.4354815432048555,74.51613296428246,,40.4510613909831,3212,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,BTCUSDT|trimestre|short-only,2017-2026,0.3196430676202003,3.998185360697115,,-30.06688621260225,3212,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,BTCUSDT|trimestre|long-short,2017-2026,1.233132225557297,81.49220708618444,,47.42713551288507,3212,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,ETHUSDT|settimana|long-only,2017-2026,0.9455813644471185,46.84875692436557,,23.41247514400369,3212,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,ETHUSDT|settimana|short-only,2017-2026,-0.010374047062844444,-16.8351894780553,,-40.27147125841718,3212,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,ETHUSDT|settimana|long-only,2017-2026,0.9455813644471184,46.84875692436557,,23.41247514400369,3212,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,ETHUSDT|settimana|short-only,2017-2026,-0.0103740470628444,-16.8351894780553,,-40.27147125841718,3212,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,ETHUSDT|settimana|long-short,2017-2026,0.6576898734560778,22.11752220928642,,-1.3187595710754572,3212,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,ETHUSDT|mese|long-only,2017-2026,1.090507454804396,59.611675235784055,,36.17539345542218,3212,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,ETHUSDT|mese|short-only,2017-2026,0.12515197877895845,-9.99377950462944,,-33.43006128499132,3212,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,ETHUSDT|mese|short-only,2017-2026,0.1251519787789584,-9.99377950462944,,-33.43006128499132,3212,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,ETHUSDT|mese|long-short,2017-2026,0.8517567885813616,43.65914628640888,,20.222864506047,3212,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,ETHUSDT|trimestre|long-only,2017-2026,1.2107120548084116,73.40957477603796,,49.973292995676076,3212,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,ETHUSDT|trimestre|short-only,2017-2026,0.3006537753111396,0.5314691282200856,,-22.904812652141793,3212,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,ETHUSDT|trimestre|long-only,2017-2026,1.2107120548084116,73.40957477603796,,49.97329299567608,3212,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,ETHUSDT|trimestre|short-only,2017-2026,0.3006537753111396,0.5314691282200856,,-22.904812652141796,3212,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,ETHUSDT|trimestre|long-short,2017-2026,1.086493096151222,74.32251406482133,,50.88623228445945,3212,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,SOLUSDT|settimana|long-only,2017-2026,0.9635687320453802,60.251850690992285,,-14.78779988583409,2127,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,SOLUSDT|settimana|short-only,2017-2026,-0.4995594630475928,-48.25392371755811,,-123.29357429438448,2127,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,SOLUSDT|settimana|long-short,2017-2026,0.37911150993472187,-17.113390107241557,,-92.15304068406793,2127,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,SOLUSDT|mese|long-only,2017-2026,1.360943720853626,124.20298818304549,,49.163337606219116,2127,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,SOLUSDT|mese|short-only,2017-2026,-0.04714938600709004,-26.437623243288087,,-101.47727382011446,2127,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,SOLUSDT|mese|long-short,2017-2026,0.9881820779245767,64.94279995527314,,-10.09685062155323,2127,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,SOLUSDT|settimana|long-short,2017-2026,0.3791115099347218,-17.113390107241557,,-92.15304068406792,2127,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,SOLUSDT|mese|long-only,2017-2026,1.360943720853626,124.20298818304548,,49.16333760621912,2127,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,SOLUSDT|mese|short-only,2017-2026,-0.04714938600709,-26.437623243288087,,-101.47727382011446,2127,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,SOLUSDT|mese|long-short,2017-2026,0.9881820779245768,64.94279995527314,,-10.09685062155323,2127,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,SOLUSDT|trimestre|long-only,2017-2026,1.4433459863632847,140.70391124049038,,65.66426066366401,2127,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,SOLUSDT|trimestre|short-only,2017-2026,0.055772985308127715,-20.365999376767917,,-95.40564995359429,2127,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,SOLUSDT|trimestre|long-short,2017-2026,1.124318352854583,91.69434875614843,,16.654698179322054,2127,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,SOLUSDT|trimestre|short-only,2017-2026,0.0557729853081277,-20.36599937676792,,-95.40564995359428,2127,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,SOLUSDT|trimestre|long-short,2017-2026,1.124318352854583,91.69434875614844,,16.654698179322054,2127,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,XRPUSDT|settimana|long-only,2017-2026,0.7382628548011856,33.72070339825741,,41.63946846884227,3120,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,XRPUSDT|settimana|short-only,2017-2026,0.14755098871561653,-21.54836338566126,,-13.629598315076407,3120,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,XRPUSDT|settimana|short-only,2017-2026,0.1475509887156165,-21.54836338566126,,-13.629598315076407,3120,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,XRPUSDT|settimana|long-short,2017-2026,0.6206520072815577,4.900510278785752,,12.819275349370606,3120,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,XRPUSDT|mese|long-only,2017-2026,0.5988049090804657,20.985425887503027,,28.90419095808788,3120,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,XRPUSDT|mese|short-only,2017-2026,0.012647600963142887,-28.918343406231095,,-20.99957833564624,3120,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,XRPUSDT|mese|short-only,2017-2026,0.0126476009631428,-28.91834340623109,,-20.99957833564624,3120,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,XRPUSDT|mese|long-short,2017-2026,0.4269134665751404,-14.009145698895576,,-6.090380628310722,3120,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,XRPUSDT|trimestre|long-only,2017-2026,0.6708531004800536,26.86759184981835,,34.78635692040321,3120,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,XRPUSDT|trimestre|short-only,2017-2026,0.06286205297169689,-28.04733261621689,,-20.128567545632038,3120,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,XRPUSDT|trimestre|short-only,2017-2026,0.0628620529716968,-28.04733261621689,,-20.12856754563204,3120,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,XRPUSDT|trimestre|long-short,2017-2026,0.5013119082128956,-8.709952130309095,,-0.7911870597242405,3120,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,DOGEUSDT|settimana|long-only,2017-2026,0.8475747950413649,73.91072243275785,,15.56652489865671,2570,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,DOGEUSDT|settimana|short-only,2017-2026,-0.24217884661605613,-100.0,,-158.34419753410114,2570,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,DOGEUSDT|settimana|short-only,2017-2026,-0.2421788466160561,-100.0,,-158.34419753410114,2570,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,DOGEUSDT|settimana|long-short,2017-2026,0.5815964041230958,-100.0,,-158.34419753410114,2570,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,DOGEUSDT|mese|long-only,2017-2026,0.83184927413634,70.27306380543112,,11.92886627132998,2570,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,DOGEUSDT|mese|short-only,2017-2026,-0.26538125009687935,-100.0,,-158.34419753410114,2570,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,DOGEUSDT|mese|short-only,2017-2026,-0.2653812500968793,-100.0,,-158.34419753410114,2570,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,DOGEUSDT|mese|long-short,2017-2026,0.5577907757199893,-100.0,,-158.34419753410114,2570,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,DOGEUSDT|trimestre|long-only,2017-2026,0.9462621507245333,96.56155358433323,,38.217356050232084,2570,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,DOGEUSDT|trimestre|short-only,2017-2026,-0.04897680273336675,-100.0,,-158.34419753410114,2570,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,DOGEUSDT|trimestre|long-only,2017-2026,0.9462621507245332,96.56155358433324,,38.21735605023208,2570,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,DOGEUSDT|trimestre|short-only,2017-2026,-0.0489768027333667,-100.0,,-158.34419753410114,2570,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,DOGEUSDT|trimestre|long-short,2017-2026,0.7950230673183958,-100.0,,-158.34419753410114,2570,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,LTCUSDT|settimana|long-only,2017-2026,-0.32475269682929714,-32.77346932750245,,-15.72170276743864,3120,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,LTCUSDT|settimana|long-only,2017-2026,-0.3247526968292971,-32.77346932750245,,-15.72170276743864,3120,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,LTCUSDT|settimana|short-only,2017-2026,-0.6485337807272676,-46.81714654461735,,-29.765379984553544,3120,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,LTCUSDT|settimana|long-short,2017-2026,-0.6923369770617154,-64.26278485995363,,-47.211018299889815,3120,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,LTCUSDT|mese|long-only,2017-2026,0.39541128601268266,5.822626052047619,,22.87439261211143,3120,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,LTCUSDT|mese|short-only,2017-2026,0.03649975307417271,-17.658585382778302,,-0.6068188227144944,3120,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,LTCUSDT|mese|long-short,2017-2026,0.29513380008032003,-12.867551181259696,,4.184215378804112,3120,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,LTCUSDT|trimestre|long-only,2017-2026,0.37226408613874484,3.6639495677724288,,20.715716127836238,3120,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,LTCUSDT|trimestre|short-only,2017-2026,0.024751993862110095,-17.763035276881922,,-0.7112687168181147,3120,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,LTCUSDT|mese|long-only,2017-2026,0.3954112860126826,5.822626052047619,,22.87439261211143,3120,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,LTCUSDT|mese|short-only,2017-2026,0.0364997530741727,-17.658585382778302,,-0.6068188227144944,3120,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,LTCUSDT|mese|long-short,2017-2026,0.29513380008032,-12.867551181259696,,4.184215378804112,3120,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,LTCUSDT|trimestre|long-only,2017-2026,0.3722640861387448,3.6639495677724288,,20.71571612783624,3120,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,LTCUSDT|trimestre|short-only,2017-2026,0.02475199386211,-17.763035276881922,,-0.7112687168181147,3120,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,LTCUSDT|trimestre|long-short,2017-2026,0.276939331786697,-14.763943661359946,,2.287822898703862,3120,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,ADAUSDT|settimana|long-only,2017-2026,0.5418266687347453,15.332981792969246,,15.702484519182113,2927,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,ADAUSDT|settimana|short-only,2017-2026,-0.1020696141375871,-24.834139204251247,,-24.46463647803838,2927,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,ADAUSDT|settimana|long-short,2017-2026,0.32215920015109434,-13.351128581878891,,-12.981625855666024,2927,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,ADAUSDT|settimana|long-short,2017-2026,0.3221592001510943,-13.351128581878893,,-12.981625855666024,2927,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,ADAUSDT|mese|long-only,2017-2026,0.9420973846882656,51.848493223612,,52.21799594982487,2927,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,ADAUSDT|mese|short-only,2017-2026,0.3125082737012125,-1.3579642648777757,,-0.9884615386649087,2927,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,ADAUSDT|mese|short-only,2017-2026,0.3125082737012125,-1.3579642648777757,,-0.9884615386649088,2927,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,ADAUSDT|mese|long-short,2017-2026,0.8964640272501471,49.77165373811023,,50.141156464323096,2927,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,ADAUSDT|trimestre|long-only,2017-2026,1.012330351848862,59.5171267163916,,59.886629442604466,2927,"OKX, costi 0,20% RT"
-19,H20 VWAP long/short crypto,ADAUSDT|trimestre|short-only,2017-2026,0.39832999055077234,4.490513076493086,,4.860015802705952,2927,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,ADAUSDT|trimestre|long-only,2017-2026,1.012330351848862,59.5171267163916,,59.88662944260447,2927,"OKX, costi 0,20% RT"
+19,H20 VWAP long/short crypto,ADAUSDT|trimestre|short-only,2017-2026,0.3983299905507723,4.490513076493086,,4.860015802705952,2927,"OKX, costi 0,20% RT"
 19,H20 VWAP long/short crypto,ADAUSDT|trimestre|long-short,2017-2026,1.0103242332971671,66.65762812831733,,67.0271308545302,2927,"OKX, costi 0,20% RT"
 20,H21 controlli sul risultato crypto,buy&hold,2020-2026,1.0310064291355658,63.81986508339064,63.81986508339064,0.0,2127,portafoglio equipesato
-20,H21 controlli sul risultato crypto,VWAP trimestrale,2020-2026,1.5283393847899722,90.27833391349272,63.81986508339064,26.458468830102078,2127,portafoglio equipesato
+20,H21 controlli sul risultato crypto,VWAP trimestrale,2020-2026,1.5283393847899722,90.27833391349272,63.81986508339064,26.45846883010208,2127,portafoglio equipesato
 20,H21 controlli sul risultato crypto,VWAP mensile,2020-2026,1.4035240141870435,73.63011034435478,63.81986508339064,9.810245260964138,2127,portafoglio equipesato
 20,H21 controlli sul risultato crypto,media mobile 20g,2020-2026,1.3252796556076922,68.41895753872367,63.81986508339064,4.599092455333036,2127,portafoglio equipesato
 20,H21 controlli sul risultato crypto,media mobile 50g,2020-2026,1.4275643324186589,81.65377303899983,63.81986508339064,17.83390795560919,2127,portafoglio equipesato
@@ -625,42 +605,31 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 21,H22 ensemble catene di Markov,BTC giornaliero 2017-2026|k3h5L5,struttura,,,,,1400,"V=0.1879,p=0.000"
 22,H23 ensemble Markov max-P,"36 mappe, split meta campione",1974-05-06/2026-05-29,0.7105409924947735,8.350493194378346,11.058800922460785,-2.7083077280824384,13127,hit=0.5384
 23,H24 swing multi-strategia cripto L/S,trend temporale|long,2021-2026,0.7016531926525039,28.867102340049343,51.162561918309166,-22.295459578259823,2033,turn=65.1x
-23,H24 swing multi-strategia cripto L/S,trend temporale|ls,2021-2026,0.47115353491091094,10.654843949646885,51.162561918309166,-40.50771796866228,2033,turn=32.8x
-23,H24 swing multi-strategia cripto L/S,momentum cross-sectional|long,2021-2026,0.8553919811682964,51.890480202933034,51.162561918309166,0.7279182846238683,2033,turn=43.0x
-23,H24 swing multi-strategia cripto L/S,momentum cross-sectional|ls,2021-2026,0.7419089556903895,21.094876086179838,51.162561918309166,-30.067685832129328,2033,turn=39.6x
+23,H24 swing multi-strategia cripto L/S,trend temporale|ls,2021-2026,0.4711535349109109,10.654843949646883,51.162561918309166,-40.50771796866228,2033,turn=32.8x
+23,H24 swing multi-strategia cripto L/S,momentum cross-sectional|long,2021-2026,0.8553919811682964,51.89048020293304,51.162561918309166,0.7279182846238683,2033,turn=43.0x
+23,H24 swing multi-strategia cripto L/S,momentum cross-sectional|ls,2021-2026,0.7419089556903895,21.09487608617984,51.162561918309166,-30.067685832129328,2033,turn=39.6x
 23,H24 swing multi-strategia cripto L/S,breakout Donchian|long,2021-2026,1.3494540100067056,106.944773346105,51.162561918309166,55.78221142779583,2033,turn=18.6x
-23,H24 swing multi-strategia cripto L/S,breakout Donchian|ls,2021-2026,0.8667529515221943,41.4960579404013,51.162561918309166,-9.666503977907865,2033,turn=11.4x
+23,H24 swing multi-strategia cripto L/S,breakout Donchian|ls,2021-2026,0.8667529515221943,41.4960579404013,51.162561918309166,-9.666503977907864,2033,turn=11.4x
 23,H24 swing multi-strategia cripto L/S,mean reversion RSI2|long,2021-2026,0.6917175498660003,36.87546723173487,51.162561918309166,-14.287094686574292,2033,turn=25.7x
-23,H24 swing multi-strategia cripto L/S,mean reversion RSI2|ls,2021-2026,0.43371358628177575,14.999397307278262,51.162561918309166,-36.16316461103091,2033,turn=27.9x
-24,H25 HMM regime + due gambe,"Donchian long, sempre acceso",2021-2026,0.47922240825552803,1.858687711058006,2.891256113170522,-1.032568402112516,1668,turn=13.2x
-24,H25 HMM regime + due gambe,"Donchian long, sempre acceso, bande 25%",2021-2026,0.47922240825552803,1.858687711058006,2.891256113170522,-1.032568402112516,1668,turn=13.2x
-24,H25 HMM regime + due gambe,"Donchian short, sempre acceso",2021-2026,-0.043346755070517114,-7.719792339621401,2.891256113170522,-10.611048452791923,1668,turn=16.0x
+23,H24 swing multi-strategia cripto L/S,mean reversion RSI2|ls,2021-2026,0.4337135862817757,14.999397307278262,51.162561918309166,-36.16316461103091,2033,turn=27.9x
+24,H25 HMM regime + due gambe,"Donchian long, sempre acceso",2021-2026,0.479222408255528,1.858687711058006,2.891256113170522,-1.032568402112516,1668,turn=13.2x
+24,H25 HMM regime + due gambe,"Donchian long, sempre acceso, bande 25%",2021-2026,0.479222408255528,1.858687711058006,2.891256113170522,-1.032568402112516,1668,turn=13.2x
+24,H25 HMM regime + due gambe,"Donchian short, sempre acceso",2021-2026,-0.0433467550705171,-7.719792339621401,2.891256113170522,-10.611048452791923,1668,turn=16.0x
 24,H25 HMM regime + due gambe,"HMM: long in rialzo, short in ribasso",2021-2026,0.3808883304278545,4.458038688712944,2.891256113170522,1.5667825755424216,1668,turn=20.5x
 24,H25 HMM regime + due gambe,"HMM: long in rialzo, flat in ribasso",2021-2026,0.4165080118098403,1.427576826052103,2.891256113170522,-1.4636792871184192,1668,turn=2.8x
 24,H25 HMM regime + due gambe,HMM: long solo se molto convinto,2021-2026,0.2989921054012564,-1.160431481648826,2.891256113170522,-4.051687594819348,1668,turn=2.4x
-24,H25 HMM regime + due gambe,"HMM long/short, bande 25%",2021-2026,nan,-0.03295589024271487,2.891256113170522,-2.924212003413237,1668,turn=0.0x
-24,H25 HMM regime + due gambe,"HMM long/flat, bande 25%",2021-2026,nan,-0.03295589024271487,2.891256113170522,-2.924212003413237,1668,turn=0.0x
-24,H25 HMM regime + due gambe,"Donchian long, sempre acceso",2021-2026,0.47922240825552803,1.858687711058006,2.891256113170522,-1.032568402112516,1668,turn=13.2x
-24,H25 HMM regime + due gambe,"Donchian long, sempre acceso, bande 25%",2021-2026,0.47922240825552803,1.858687711058006,2.891256113170522,-1.032568402112516,1668,turn=13.2x
-24,H25 HMM regime + due gambe,"Donchian short, sempre acceso",2021-2026,-0.043346755070517114,-7.719792339621401,2.891256113170522,-10.611048452791923,1668,turn=16.0x
-24,H25 HMM regime + due gambe,"HMM: long in rialzo, short in ribasso",2021-2026,0.033165700797263574,3.0673710265790235,2.891256113170522,0.17611491340850138,1668,turn=19.1x
-24,H25 HMM regime + due gambe,"HMM: long in rialzo, flat in ribasso",2021-2026,0.30594951026239153,2.3641166882839375,2.891256113170522,-0.5271394248865846,1668,turn=4.5x
-24,H25 HMM regime + due gambe,HMM: long solo se molto convinto,2021-2026,0.24622398938244877,-0.32176948530802196,2.891256113170522,-3.213025598478544,1668,turn=4.5x
-24,H25 HMM regime + due gambe,"HMM long/short, bande 25%",2021-2026,nan,-0.03295589024271487,2.891256113170522,-2.924212003413237,1668,turn=0.0x
-24,H25 HMM regime + due gambe,"HMM long/flat, bande 25%",2021-2026,nan,-0.03295589024271487,2.891256113170522,-2.924212003413237,1668,turn=0.0x
-24,H25 HMM regime + due gambe,"Donchian long, sempre acceso",2021-2026,0.47922240825552803,1.858687711058006,2.891256113170522,-1.032568402112516,1668,turn=13.2x
-24,H25 HMM regime + due gambe,"Donchian long, sempre acceso, bande 25%",2021-2026,0.47922240825552803,1.858687711058006,2.891256113170522,-1.032568402112516,1668,turn=13.2x
-24,H25 HMM regime + due gambe,"Donchian short, sempre acceso",2021-2026,-0.043346755070517114,-7.719792339621401,2.891256113170522,-10.611048452791923,1668,turn=16.0x
-24,H25 HMM regime + due gambe,"HMM: long in rialzo, short in ribasso",2021-2026,0.033165700797263574,3.0673710265790235,2.891256113170522,0.17611491340850138,1668,turn=19.1x
-24,H25 HMM regime + due gambe,"HMM: long in rialzo, flat in ribasso",2021-2026,0.30594951026239153,2.3641166882839375,2.891256113170522,-0.5271394248865846,1668,turn=4.5x
-24,H25 HMM regime + due gambe,HMM: long solo se molto convinto,2021-2026,0.24622398938244877,-0.32176948530802196,2.891256113170522,-3.213025598478544,1668,turn=4.5x
-24,H25 HMM regime + due gambe,"HMM long/short, bande 25%",2021-2026,0.033165700797263574,3.0673710265790235,2.891256113170522,0.17611491340850138,1668,turn=19.1x
-24,H25 HMM regime + due gambe,"HMM long/flat, bande 25%",2021-2026,0.30594951026239153,2.3641166882839375,2.891256113170522,-0.5271394248865846,1668,turn=4.5x
+24,H25 HMM regime + due gambe,"HMM long/short, bande 25%",2021-2026,,-0.0329558902427148,2.891256113170522,-2.924212003413237,1668,turn=0.0x
+24,H25 HMM regime + due gambe,"HMM long/flat, bande 25%",2021-2026,,-0.0329558902427148,2.891256113170522,-2.924212003413237,1668,turn=0.0x
+24,H25 HMM regime + due gambe,"HMM: long in rialzo, short in ribasso",2021-2026,0.0331657007972635,3.0673710265790235,2.891256113170522,0.1761149134085013,1668,turn=19.1x
+24,H25 HMM regime + due gambe,"HMM: long in rialzo, flat in ribasso",2021-2026,0.3059495102623915,2.364116688283937,2.891256113170522,-0.5271394248865846,1668,turn=4.5x
+24,H25 HMM regime + due gambe,HMM: long solo se molto convinto,2021-2026,0.2462239893824487,-0.3217694853080219,2.891256113170522,-3.213025598478544,1668,turn=4.5x
+24,H25 HMM regime + due gambe,"HMM long/short, bande 25%",2021-2026,0.0331657007972635,3.0673710265790235,2.891256113170522,0.1761149134085013,1668,turn=19.1x
+24,H25 HMM regime + due gambe,"HMM long/flat, bande 25%",2021-2026,0.3059495102623915,2.364116688283937,2.891256113170522,-0.5271394248865846,1668,turn=4.5x
 25,H26 vol-targeting su ampiezza,Indice CRSP 1926-2026|vol realizzata 20g,varie,0.6174251280517266,8.254980467466112,,-2.227752146061146,26253,"lev=1.44,turn=6.4x"
-25,H26 vol-targeting su ampiezza,Indice CRSP 1926-2026|vol realizzata 60g,varie,0.6376847534562397,8.602064500200028,,-1.8806681133272303,26253,"lev=1.39,turn=1.8x"
+25,H26 vol-targeting su ampiezza,Indice CRSP 1926-2026|vol realizzata 60g,varie,0.6376847534562397,8.602064500200028,,-1.8806681133272305,26253,"lev=1.39,turn=1.8x"
 25,H26 vol-targeting su ampiezza,Indice CRSP 1926-2026|EWMA RiskMetrics,varie,0.6308030035704827,7.996980130659493,,-2.485752482867765,26253,"lev=1.39,turn=4.7x"
 25,H26 vol-targeting su ampiezza,Indice CRSP 1926-2026|catena di Markov k=2,varie,0.1324726450589706,1.271789077603297,,-9.210943535923962,26253,"lev=1.33,turn=65.7x"
-25,H26 vol-targeting su ampiezza,Indice CRSP 1926-2026|catena di Markov k=3,varie,0.20784625262771156,1.6277824822821765,,-8.854950131245081,26253,"lev=1.34,turn=57.0x"
+25,H26 vol-targeting su ampiezza,Indice CRSP 1926-2026|catena di Markov k=3,varie,0.2078462526277115,1.6277824822821765,,-8.854950131245081,26253,"lev=1.34,turn=57.0x"
 25,H26 vol-targeting su ampiezza,QQQ 2006-2026|vol realizzata 20g,varie,0.8614164852599944,16.13167587085239,,1.3943561339760429,4999,"lev=1.34,turn=7.2x"
 25,H26 vol-targeting su ampiezza,QQQ 2006-2026|vol realizzata 60g,varie,0.7795933049979629,14.831607928967994,,0.0942881920916463,4999,"lev=1.26,turn=2.3x"
 25,H26 vol-targeting su ampiezza,QQQ 2006-2026|EWMA RiskMetrics,varie,0.8543643870742272,14.808074703569446,,0.070754966693098,4999,"lev=1.28,turn=5.4x"
@@ -668,56 +637,98 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 25,H26 vol-targeting su ampiezza,QQQ 2006-2026|catena di Markov k=3,varie,0.5744927316831954,9.879119207489886,,-4.858200529386462,4999,"lev=1.21,turn=29.7x"
 25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|vol realizzata 20g,varie,0.7311771890431006,-8.507076014198775,,-27.136493893691807,2126,"lev=1.24,turn=11.6x"
 25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|vol realizzata 60g,varie,0.7508493298049338,0.5166186791261551,,-18.11279920036688,2126,"lev=1.14,turn=2.6x"
-25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|EWMA RiskMetrics,varie,0.7379549883234116,-5.72393224596298,,-24.353350125456014,2126,"lev=1.18,turn=9.2x"
+25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|EWMA RiskMetrics,varie,0.7379549883234116,-5.72393224596298,,-24.35335012545601,2126,"lev=1.18,turn=9.2x"
 25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|catena di Markov k=2,varie,0.7832329390192665,-18.486865094749245,,-37.11628297424228,2126,"lev=1.04,turn=52.1x"
 25,H26 vol-targeting su ampiezza,7 cripto equipesate 2020-2026|catena di Markov k=3,varie,1.0545437922973773,10.21807809705059,,-8.411339782442443,2126,"lev=0.95,turn=1.1x"
 26,H27 HMM azionario,"indice CRSP giornaliero|long in favorevole, flat altrove",varie,0.6469969913626996,5.847409132704332,,-4.728699782623179,25802,ops=6.7
 26,H27 HMM azionario,"indice CRSP giornaliero|long in favorevole, short altrove",varie,0.1450189137008299,1.327402140692986,,-9.248706774634526,25802,ops=6.7
 26,H27 HMM azionario,indice CRSP giornaliero|long solo se molto convinto,varie,0.6906167742955553,5.998593810085365,,-4.5775151052421466,25802,ops=6.7
-26,H27 HMM azionario,indice CRSP giornaliero|esposizione = 1 - P(avverso),varie,0.6919142630647611,5.6454124056496555,,-4.930696509677856,25802,ops=242.5
+26,H27 HMM azionario,indice CRSP giornaliero|esposizione = 1 - P(avverso),varie,0.6919142630647611,5.645412405649656,,-4.930696509677856,25802,ops=242.5
 26,H27 HMM azionario,"indice CRSP mensile|long in favorevole, flat altrove",varie,0.6202421539253872,6.847557725537412,,-3.5628071629162683,797,ops=0.4
-26,H27 HMM azionario,"indice CRSP mensile|long in favorevole, short altrove",varie,0.3823757014353506,4.100196563207073,,-6.3101683252466065,797,ops=0.4
+26,H27 HMM azionario,"indice CRSP mensile|long in favorevole, short altrove",varie,0.3823757014353506,4.100196563207073,,-6.310168325246607,797,ops=0.4
 26,H27 HMM azionario,indice CRSP mensile|long solo se molto convinto,varie,0.554014378253941,6.0855123488031095,,-4.32485253965057,797,ops=0.5
 26,H27 HMM azionario,indice CRSP mensile|esposizione = 1 - P(avverso),varie,0.5933266634365701,6.901170669827642,,-3.509194218626038,797,ops=12.0
-26,H27 HMM azionario,"QQQ giornaliero|long in favorevole, flat altrove",varie,1.0059544780458967,11.678548772008801,,-3.7835574531666474,4416,ops=5.5
+26,H27 HMM azionario,"QQQ giornaliero|long in favorevole, flat altrove",varie,1.0059544780458969,11.6785487720088,,-3.783557453166648,4416,ops=5.5
 26,H27 HMM azionario,"QQQ giornaliero|long in favorevole, short altrove",varie,0.4971007823224801,7.101075928468581,,-8.361030296706868,4416,ops=5.5
 26,H27 HMM azionario,QQQ giornaliero|long solo se molto convinto,varie,0.9391456230719978,10.391025725441244,,-5.0710804997342045,4416,ops=6.0
-26,H27 HMM azionario,QQQ giornaliero|esposizione = 1 - P(avverso),varie,0.9737061730639233,10.984191110351327,,-4.477915114824121,4416,ops=249.9
-26,H28 Kronos cripto,BTCUSDT,2020-2026,-0.015973507110330055,-4.71823850986004,17.997114425416317,-22.715352935276357,900,
-26,H28 Kronos cripto,ETHUSDT,2020-2026,0.32359638015545084,4.823213771692081,-8.284842140292437,13.108055911984518,900,
-27,H29 opzioni CBOE,PUT,1991-2026,0.7012756060233043,6.766883877906271,10.629449955184523,-3.8625660772782515,4888,"skew=23.88,worst=-17.7%"
-27,H29 opzioni CBOE,BXM,2002-2026,0.49590197255486224,5.454794979057849,10.537838801140758,-5.083043822082909,6082,"skew=-0.71,worst=-15.0%"
+26,H27 HMM azionario,QQQ giornaliero|esposizione = 1 - P(avverso),varie,0.9737061730639232,10.984191110351327,,-4.477915114824121,4416,ops=249.9
+26,H28 Kronos cripto,BTCUSDT,2020-2026,-0.01597350711033,-4.71823850986004,17.997114425416317,-22.71535293527636,900,
+26,H28 Kronos cripto,ETHUSDT,2020-2026,0.3235963801554508,4.823213771692081,-8.284842140292437,13.108055911984518,900,
+27,H29 opzioni CBOE,PUT,1991-2026,0.7012756060233043,6.766883877906271,10.629449955184525,-3.862566077278252,4888,"skew=23.88,worst=-17.7%"
+27,H29 opzioni CBOE,BXM,2002-2026,0.4959019725548622,5.454794979057849,10.537838801140758,-5.083043822082909,6082,"skew=-0.71,worst=-15.0%"
 27,H29 opzioni CBOE,PUT,1991-2026,0.5542175132971957,6.468685319331419,11.159604573898438,-4.690919254567019,4779,"skew=-0.70,worst=-17.7%"
 27,H29 opzioni CBOE,BXM,2002-2026,0.5334250238915573,5.356842578210161,10.29269318900882,-4.935850610798658,5783,"skew=-0.82,worst=-15.0%"
-28,H30 regime detection + convex sizing,"9 regimi, Markowitz vincolato",2009-01-02/2026-05-29,0.5742969079324237,3.9559731901993094,12.221443758885528,-8.265470568686219,4378,"turn=12.0x, regimi=140"
+28,H30 regime detection + convex sizing,"9 regimi, Markowitz vincolato",2009-01-02/2026-05-29,0.5742969079324237,3.955973190199309,12.221443758885528,-8.265470568686219,4378,"turn=12.0x, regimi=140"
 29,H31 combinazione dei promossi,pesi uguali su 3,walk-forward,0.9063851351566898,,,,756,corr=0.944
 29,H32 turn-of-month,Indice CRSP,varie,0.5214595444098441,3.22679742617548,10.482732613527258,-7.255935187351778,26253,t=7.04
-29,H32 turn-of-month,QQQ,varie,0.20797255410203325,-0.0059388051025279715,14.737319736876348,-14.743258541978875,4999,t=0.37
-29,H32 turn-of-month,7 cripto equipesate,varie,0.46469931940270753,-5.645319036048749,18.629417879493033,-24.27473691554178,2126,t=1.02
+29,H32 turn-of-month,QQQ,varie,0.2079725541020332,-0.0059388051025279,14.737319736876348,-14.743258541978877,4999,t=0.37
+29,H32 turn-of-month,7 cripto equipesate,varie,0.4646993194027075,-5.645319036048749,18.629417879493037,-24.27473691554178,2126,t=1.02
 30,A1 risk parity fra classi,FINESTRA LUNGA — azi|erc,varie,0.9222750520343436,7.075456743920452,,-3.4041810276721653,772,turn=0.17x
 30,A1 risk parity fra classi,FINESTRA LUNGA — azi|invvol,varie,0.873299464840072,6.517220473617213,,-3.9624172979754047,772,turn=0.14x
 30,A1 risk parity fra classi,FINESTRA LUNGA — azi|6040,varie,0.8740360545260866,7.835325168726823,,-2.644312602865795,772,turn=0.13x
 30,A1 risk parity fra classi,FINESTRA LUNGA — azi|equal,varie,0.8959109623818917,7.3570724808230015,,-3.122565290769616,772,turn=0.13x
-31,A2 hierarchical risk parity,hrp,1969-07-31/2026-05-31,0.7801573520941293,9.44519099070879,10.875103340007708,-1.4299123492989185,683,"turn=0.31x,stab=0.283"
-31,A2 hierarchical risk parity,invvar,1969-07-31/2026-05-31,0.759544445225505,9.653545003052697,10.875103340007708,-1.2215583369550114,683,"turn=0.23x,stab=0.109"
-31,A2 hierarchical risk parity,equal,1969-07-31/2026-05-31,0.7365303320822093,9.886932148551237,10.875103340007708,-0.9881711914564715,683,"turn=0.23x,stab=0.017"
+31,A2 hierarchical risk parity,hrp,1969-07-31/2026-05-31,0.7801573520941293,9.44519099070879,10.875103340007708,-1.4299123492989183,683,"turn=0.31x,stab=0.283"
+31,A2 hierarchical risk parity,invvar,1969-07-31/2026-05-31,0.759544445225505,9.653545003052695,10.875103340007708,-1.2215583369550114,683,"turn=0.23x,stab=0.109"
+31,A2 hierarchical risk parity,equal,1969-07-31/2026-05-31,0.7365303320822093,9.886932148551235,10.875103340007708,-0.9881711914564716,683,"turn=0.23x,stab=0.017"
 32,A3 min-variance / max-diversification,minvar,1969-07-31/2026-05-31,0.7827563113161283,8.22260314796729,10.875103340007708,-2.652500192040419,683,"turn=0.37x,neff=7.5,stab=0.473"
 32,A3 min-variance / max-diversification,maxdiv,1969-07-31/2026-05-31,0.7452967788160029,9.34095526767336,10.875103340007708,-1.5341480723343484,683,"turn=0.50x,neff=9.7,stab=0.523"
-32,A3 min-variance / max-diversification,equal,1969-07-31/2026-05-31,0.7365303320822093,9.886932148551237,10.875103340007708,-0.9881711914564715,683,"turn=0.23x,neff=48.6,stab=0.017"
+32,A3 min-variance / max-diversification,equal,1969-07-31/2026-05-31,0.7365303320822093,9.886932148551235,10.875103340007708,-0.9881711914564716,683,"turn=0.23x,neff=48.6,stab=0.017"
 32,A3 min-variance / max-diversification,minvar_shrunk,1969-07-31/2026-05-31,0.7964484625025713,8.36290001740982,10.875103340007708,-2.5122033225978893,683,"turn=0.37x,neff=8.2,stab=0.467"
-33,A4 Kelly frazionario + de-risking,indice cap-wei|f=0.25|dd=0.00,varie,0.6552853704983777,6.622543348954518,10.560992243219006,-3.9384488942644884,1199,"espo=0.66,turn=0.40x"
+33,A4 Kelly frazionario + de-risking,indice cap-wei|f=0.25|dd=0.00,varie,0.6552853704983777,6.622543348954518,10.560992243219006,-3.938448894264488,1199,"espo=0.66,turn=0.40x"
 33,A4 Kelly frazionario + de-risking,indice cap-wei|f=0.25|dd=0.10,varie,0.7141853253258077,5.59916477945067,10.560992243219006,-4.961827463768336,1199,"espo=0.55,turn=0.46x"
 33,A4 Kelly frazionario + de-risking,indice cap-wei|f=0.25|dd=0.20,varie,0.7209711879639791,6.141790588218132,10.560992243219006,-4.419201655000874,1199,"espo=0.59,turn=0.44x"
 33,A4 Kelly frazionario + de-risking,indice cap-wei|f=0.25|dd=0.30,varie,0.6811986915852876,6.1776246440877145,10.560992243219006,-4.383367599131292,1199,"espo=0.60,turn=0.41x"
 33,A4 Kelly frazionario + de-risking,indice cap-wei|f=0.5|dd=0.00,varie,0.6413871197753894,7.441575494849062,10.560992243219006,-3.119416748369945,1199,"espo=0.76,turn=0.35x"
 33,A4 Kelly frazionario + de-risking,indice cap-wei|f=0.5|dd=0.10,varie,0.7279024094879429,6.391834593859214,10.560992243219006,-4.169157649359793,1199,"espo=0.62,turn=0.44x"
-33,A4 Kelly frazionario + de-risking,indice cap-wei|f=0.5|dd=0.20,varie,0.7116705822981644,6.607849728342263,10.560992243219006,-3.9531425148767436,1199,"espo=0.66,turn=0.46x"
+33,A4 Kelly frazionario + de-risking,indice cap-wei|f=0.5|dd=0.20,varie,0.7116705822981644,6.607849728342263,10.560992243219006,-3.953142514876744,1199,"espo=0.66,turn=0.46x"
 33,A4 Kelly frazionario + de-risking,indice cap-wei|f=0.5|dd=0.30,varie,0.6918336287296899,7.0371429015416656,10.560992243219006,-3.523849341677341,1199,"espo=0.68,turn=0.36x"
-33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.25|dd=0.00,varie,0.5529155651387103,5.680283612920195,11.163388980153593,-5.4831053672333985,683,"espo=0.70,turn=0.54x"
-33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.25|dd=0.10,varie,0.577868745195587,4.667450107102544,11.163388980153593,-6.495938873051049,683,"espo=0.58,turn=0.71x"
-33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.25|dd=0.20,varie,0.5434124039394574,5.14917950411163,11.163388980153593,-6.014209476041963,683,"espo=0.64,turn=0.69x"
-33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.25|dd=0.30,varie,0.5274750563261545,5.150563154610649,11.163388980153593,-6.0128258255429445,683,"espo=0.67,turn=0.63x"
-33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.5|dd=0.00,varie,0.6241655669382107,7.493318917531888,11.163388980153593,-3.670070062621705,683,"espo=0.84,turn=0.38x"
-33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.5|dd=0.10,varie,0.6321143446679655,5.754002426641297,11.163388980153593,-5.409386553512296,683,"espo=0.70,turn=0.78x"
-33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.5|dd=0.20,varie,0.6122560136782385,6.8328488334293,11.163388980153593,-4.330540146724293,683,"espo=0.79,turn=0.46x"
-33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.5|dd=0.30,varie,0.6114739241821848,7.171796040552186,11.163388980153593,-3.991592939601407,683,"espo=0.82,turn=0.38x"
+33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.25|dd=0.00,varie,0.5529155651387103,5.680283612920195,11.163388980153591,-5.483105367233399,683,"espo=0.70,turn=0.54x"
+33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.25|dd=0.10,varie,0.577868745195587,4.667450107102544,11.163388980153591,-6.495938873051049,683,"espo=0.58,turn=0.71x"
+33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.25|dd=0.20,varie,0.5434124039394574,5.14917950411163,11.163388980153591,-6.014209476041963,683,"espo=0.64,turn=0.69x"
+33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.25|dd=0.30,varie,0.5274750563261545,5.150563154610649,11.163388980153591,-6.0128258255429445,683,"espo=0.67,turn=0.63x"
+33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.5|dd=0.00,varie,0.6241655669382107,7.493318917531888,11.163388980153591,-3.670070062621705,683,"espo=0.84,turn=0.38x"
+33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.5|dd=0.10,varie,0.6321143446679655,5.754002426641297,11.163388980153591,-5.409386553512296,683,"espo=0.70,turn=0.78x"
+33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.5|dd=0.20,varie,0.6122560136782385,6.8328488334293,11.163388980153591,-4.330540146724293,683,"espo=0.79,turn=0.46x"
+33,A4 Kelly frazionario + de-risking,equal-weight 4|f=0.5|dd=0.30,varie,0.6114739241821848,7.171796040552186,11.163388980153591,-3.991592939601407,683,"espo=0.82,turn=0.38x"
+34,A5 ERC fra 4 stream scorrelati,azionario puro (benchmark),2002-04-30/2024-12-31,0.6887828764376871,9.879775069899472,9.879775069899472,0.0,273,turn=0.00x
+34,A5 ERC fra 4 stream scorrelati,4 stream — erc,2002-04-30/2024-12-31,1.041646780346347,5.392695860505715,9.879775069899472,-4.487079209393758,273,turn=0.68x
+34,A5 ERC fra 4 stream scorrelati,4 stream — equal,2002-04-30/2024-12-31,1.18655875281809,5.638996423748127,9.879775069899472,-4.240778646151346,273,turn=0.35x
+34,A5 ERC fra 4 stream scorrelati,4 stream — invvol,2002-04-30/2024-12-31,1.0653647350096471,4.634375374961743,9.879775069899472,-5.24539969493773,273,turn=0.37x
+35,A7 stabilita' pesi HRP vs min-var,hrp,1969-07-31/2026-05-31,,,,,683,stab=0.283
+35,A7 stabilita' pesi HRP vs min-var,invvar,1969-07-31/2026-05-31,,,,,683,stab=0.109
+35,A7 stabilita' pesi HRP vs min-var,equal,1969-07-31/2026-05-31,,,,,683,stab=0.017
+35,A7 stabilita' pesi HRP vs min-var,minvar,1969-07-31/2026-05-31,,,,,683,stab=0.473
+35,A7 stabilita' pesi HRP vs min-var,maxdiv,1969-07-31/2026-05-31,,,,,683,stab=0.523
+35,A8 min-variance in leva,min-var leva 1.00x,1969-07-31/2026-05-31,0.7827563113161283,8.22260314796729,10.875103340007708,-2.652500192040419,683,vol=13.2%
+35,A8 min-variance in leva,min-var leva 1.20x,1969-07-31/2026-05-31,0.6900671906415826,8.635620297486621,10.875103340007708,-2.239483042521087,683,vol=15.9%
+35,A8 min-variance in leva,min-var leva 1.20x,1969-07-31/2026-05-31,0.6917295306343411,8.627190953304819,10.875103340007708,-2.2479123867028896,683,vol=15.8%
+35,A8 min-variance in leva,min-var leva 1.50x,1969-07-31/2026-05-31,0.5972918269403265,9.154948328545236,10.875103340007708,-1.7201550114624735,683,vol=19.9%
+35,A8 min-variance in leva,cap-weighted (benchmark),1969-07-31/2026-05-31,0.7411159073858292,10.875103340007708,10.875103340007708,0.0,683,vol=15.8%
+36,A9 Kelly contro frazione fissa,indice cap-weigh 0.25K dinamico,varie,0.6552853704983777,6.622540477949604,,,1199,turn=0.41x
+36,A9 Kelly contro frazione fissa,indice cap-weigh fissa 0.66,varie,0.6921467958850867,7.904555378135608,,,1199,turn=0.01x
+36,A9 Kelly contro frazione fissa,indice cap-weigh 0.5K dinamico,varie,0.6413871197753894,7.441572330712804,,,1199,turn=0.36x
+36,A9 Kelly contro frazione fissa,indice cap-weigh fissa 0.76,varie,0.6693791902256679,8.699598757841645,,,1199,turn=0.01x
+36,A9 Kelly contro frazione fissa,equal-weight 49 0.25K dinamico,varie,0.5529155651387103,5.680277970439765,,,683,turn=0.56x
+36,A9 Kelly contro frazione fissa,equal-weight 49 fissa 0.70,varie,0.7776207998371617,8.558050431209113,,,683,turn=0.01x
+36,A9 Kelly contro frazione fissa,equal-weight 49 0.5K dinamico,varie,0.6241655669382107,7.493312045034672,,,683,turn=0.40x
+36,A9 Kelly contro frazione fissa,equal-weight 49 fissa 0.84,varie,0.7373253565081396,9.795500736841795,,,683,turn=0.01x
+36,A10 curva prezzo del drawdown,indice cap-weigh DD>5%,varie,0.7571930404913509,5.794223807384899,,,1199,"costo=1.65,beneficio=27.1"
+36,A10 curva prezzo del drawdown,indice cap-weigh DD>10%,varie,0.7279024094879429,6.391831298199952,,,1199,"costo=1.05,beneficio=20.9"
+36,A10 curva prezzo del drawdown,indice cap-weigh DD>15%,varie,0.7308188300626433,6.69429098709838,,,1199,"costo=0.75,beneficio=20.9"
+36,A10 curva prezzo del drawdown,indice cap-weigh DD>20%,varie,0.7116705822981644,6.607846679554285,,,1199,"costo=0.83,beneficio=20.9"
+36,A10 curva prezzo del drawdown,indice cap-weigh DD>25%,varie,0.7083401354961997,6.98707859275226,,,1199,"costo=0.45,beneficio=17.5"
+36,A10 curva prezzo del drawdown,indice cap-weigh DD>30%,varie,0.6918336287296899,7.037140156009794,,,1199,"costo=0.40,beneficio=14.2"
+36,A10 curva prezzo del drawdown,indice cap-weigh DD>35%,varie,0.6711559674630575,6.949293841932319,,,1199,"costo=0.49,beneficio=13.2"
+36,A10 curva prezzo del drawdown,indice cap-weigh DD>40%,varie,0.685760892866461,7.250501597443032,,,1199,"costo=0.19,beneficio=14.1"
+36,A10 curva prezzo del drawdown,indice cap-weigh DD>45%,varie,0.6804359747938075,7.290778370277503,,,1199,"costo=0.15,beneficio=10.8"
+36,A10 curva prezzo del drawdown,indice cap-weigh DD>50%,varie,0.6738341705621657,7.311876296513967,,,1199,"costo=0.13,beneficio=7.4"
+36,A10 curva prezzo del drawdown,equal-weight 49 DD>5%,varie,0.6380405442067565,5.228673711877406,,,683,"costo=2.26,beneficio=10.3"
+36,A10 curva prezzo del drawdown,equal-weight 49 DD>10%,varie,0.6321143446679655,5.7539942190490825,,,683,"costo=1.74,beneficio=10.3"
+36,A10 curva prezzo del drawdown,equal-weight 49 DD>15%,varie,0.5867838363115049,5.823074241404778,,,683,"costo=1.67,beneficio=8.7"
+36,A10 curva prezzo del drawdown,equal-weight 49 DD>20%,varie,0.6122560136782385,6.832842270926564,,,683,"costo=0.66,beneficio=6.5"
+36,A10 curva prezzo del drawdown,equal-weight 49 DD>25%,varie,0.5841202177854776,6.637306185461759,,,683,"costo=0.86,beneficio=0.5"
+36,A10 curva prezzo del drawdown,equal-weight 49 DD>30%,varie,0.6114739241821848,7.171789219429939,,,683,"costo=0.32,beneficio=0.5"
+36,A10 curva prezzo del drawdown,equal-weight 49 DD>35%,varie,0.6190237224546258,7.363140269560942,,,683,"costo=0.13,beneficio=0.4"
+36,A10 curva prezzo del drawdown,equal-weight 49 DD>40%,varie,0.6241655669382107,7.493312045034672,,,683,"costo=0.00,beneficio=0.0"
+36,A10 curva prezzo del drawdown,equal-weight 49 DD>45%,varie,0.6241655669382107,7.493312045034672,,,683,"costo=0.00,beneficio=0.0"
+36,A10 curva prezzo del drawdown,equal-weight 49 DD>50%,varie,0.6241655669382107,7.493312045034672,,,683,"costo=0.00,beneficio=0.0"
