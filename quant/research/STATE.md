@@ -184,13 +184,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 61 | **A15 peso analitico di ciascun anno** | confermata | rapporto **5,91** mediano, non 9,5; monotono in 80/80 |
 | 62 | **D5 quota di vittorie ingannevole** | **falsificata** | scarto positivo per il **28,6%**, e di segno opposto |
 | 63 | **D6 rotazione sottostimata** | **falsificata** | un verdetto si ribalta (+0,16 → −0,07); l'errore ha **due versi** |
+| 64 | **D7 F2 con benchmark corretto** | **falsificata** | il divario si **allarga** a −1,92; DSR 0,9743 su N=15 ma **0,7691** sul cumulato |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 40 voci eseguite nei giri 30-63:
-**30 confermate, 9 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Restano in coda: **D7, D8**.
+(rotazione concentrata e sistema EMA, giri 50-51). 41 voci eseguite nei giri 30-64:
+**30 confermate, 10 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Restano in coda: **D8, D9**.
 
-Registro a **1.175 tentativi** cumulati.
+Registro a **1.190 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -556,3 +557,26 @@ Registro a **1.175 tentativi** cumulati.
   sintomo (11,16% contro 11,16%). Il commento sta ora dentro `round63.ew_drift`.
   Un test che dà **esattamente** lo stesso numero di un altro test è quasi sempre
   lo stesso test.
+- **Correggere la rotazione può spostare una strategia di REGIME FISCALE, e
+  quello non è un aggiustamento, è un gradino.** Il top-5 annuale sui 49 settori
+  aveva rotazione misurata **0,83×/anno** e pagava il 33%; con la rotazione vera
+  ha **1,022×**, scavalca la soglia del 100%/anno e paga il **52%**. Il divario
+  contro il suo benchmark non si chiude — si **allarga da −1,14 a −1,92**. Lo
+  stesso succede al top-3 annuale (1,053×). **Ogni strategia con rotazione
+  nominale fra 0,7× e 1,0× va rimisurata prima di attribuirle un'aliquota**: è la
+  fascia in cui un errore di misura del 20% cambia l'imposta di diciannove punti.
+- **Il "massimo di concentrazione" della griglia F2 era il costo di rotazione non
+  addebitato.** Al giro 50 la griglia annuale aveva un massimo interno a 5
+  posizioni (relazione "a campana"); con la rotazione vera è **monotona
+  crescente**: 4,84 → 7,74 → 8,73 → 8,91 → **9,65** da 1 a 25 posizioni. Non c'è
+  optimum di concentrazione. Più si diversifica, meglio va — e comunque sotto
+  l'equal-weight annuale (10,65%).
+- **Il DSR va letto sul registro cumulato, e la differenza è enorme.** Il top-5
+  annuale ha DSR **0,9743 su N=15** (la griglia) e **0,7691 su N=1.175** (il
+  registro). Il primo numero dice "dentro questa griglia non è il massimo di
+  quindici estrazioni casuali", il secondo dice "dentro questo progetto sì".
+  La regola di promozione di STATE.md usa il secondo — e va ricordato quando una
+  voce della coda lega la propria condizione di falsificazione a "DSR > 0,95"
+  senza specificare N: **un DSR alto su una strategia che perde contro il proprio
+  benchmark non è un candidato**, è la conferma che lo Sharpe non è la funzione
+  obiettivo di un PAC.

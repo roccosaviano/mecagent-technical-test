@@ -1,0 +1,68 @@
+====================================================================================================
+D7 — la griglia di F2 contro benchmark che pagano il ribilanciamento
+====================================================================================================
+   Universo: 49 settori, 1969-2026. Griglia e codice del giro 50, rotazione del giro 63.
+
+   benchmark                              rotaz.     CAGR   IRR 33%   IRR 52%  IRR rif.
+   ------------------------------------------------------------------------------------
+   equal-weight mensile                   0.205x   11.12%     9.81%     8.64%     9.81%
+   equal-weight annuale                   0.071x   11.44%    10.65%     9.60%    10.65%
+   equal-weight GRATUITO (giro 50)        0.000x   11.15%    11.16%    10.40%    11.16%
+
+   IRR netta di riferimento (33% o 52% secondo la rotazione):
+
+   posizioni            mensile     trimestrale         annuale
+   ------------------------------------------------------------
+   1                     5.33%*          6.56%*          4.84% 
+   3                     8.66%*          7.90%*          7.74%*
+   5                     8.82%*          8.51%*          8.73%*
+   10                    8.79%*          8.74%*          8.91% 
+   25                    8.31%*          8.44%*          9.65% 
+   * oltre il 100% di rotazione l'anno -> valutata al 52%
+
+   Rotazione vera di ogni cella (x/anno):
+
+   posizioni            mensile     trimestrale         annuale
+   ------------------------------------------------------------
+   1                    11.218x          3.716x          0.943x
+   3                    10.649x          3.646x          1.053x
+   5                    10.187x          3.512x          1.022x
+   10                    9.115x          3.158x          0.951x
+   25                    5.701x          2.075x          0.656x
+
+   Massimo della griglia: top-25 annuale, 9.65% (rotazione 0.656x)
+
+   confronto                                      divario
+   ------------------------------------------------------
+   top-5 annuale vs EW annuale (vera)              -1.92
+   top-5 annuale vs EW mensile (vera)              -1.08
+   top-5 annuale vs EW GRATUITO (come F2)          -2.43
+   massimo della griglia vs EW annuale (vera)      -1.00
+
+   Per riferimento, F2 al giro 50 registrava: top-5 annuale 10,02% contro 11,16% = -1,14
+
+   DSR del top-5 annuale — c'e' selezione, quindi N e' la griglia:
+     dispersione degli Sharpe dentro la griglia: var_sr = 0.000987
+                                   SR periodo       SR0      DSR
+     top-5 annuale, N=15               0.1329    0.0556   0.9743
+     top-5 annuale, N=1175             0.1329    0.1037   0.7691
+     massimo griglia, N=15             0.1355    0.0556   0.9769
+
+====================================================================================================
+   VERDETTO
+====================================================================================================
+   Predizione: il top-5 annuale supera l'equal-weight annuale correttamente addebitato
+   di 0,5-2 punti, ma il DSR resta sotto 0,95.
+   FALSIFICATA se il top-5 annuale resta SOTTO l'equal-weight annuale, OPPURE il DSR supera 0,95.
+
+   divario top-5 annuale vs EW annuale : -1.92 punti   (previsto +0,5/+2)
+   DSR su N=15                         : 0.9743
+   DSR su N=1175                      : 0.7691
+
+   -> ipotesi D7 FALSIFICATA
+      clausola 'divario fra +0,5 e +2': SBAGLIATA
+      clausola 'DSR sotto 0,95': SBAGLIATA
+
+   Promozioni: ZERO. Holdout ancora sigillato.
+
+Tentativi cumulati a registro: 1190
