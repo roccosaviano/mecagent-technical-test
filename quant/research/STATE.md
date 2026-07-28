@@ -188,13 +188,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 65 | **D8 verdetti dentro la correzione** | **falsificata** | cambia segno il **57,1%**; il calendario del ribilanciamento vale **3,43 punti** |
 | 66 | **D9 vincolo di rotazione** | confermata | **3 celle su 4**, guadagno **+0,64**; nessuna sopra l'EW annuale |
 | 67 | **J1 statistical jump model** | confermata | migliore **−1,63**, long/short perde **21 su 21**; corr MA10 da 0,610 a **0,006** |
+| 68 | **D10 calendario del ribilanciamento** | confermata | ampiezza **3,65%** sul top-5 contro **0,14%** sull'equal-weight |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 44 voci eseguite nei giri 30-67:
-**32 confermate, 11 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Resta in coda: **D10**.
+(rotazione concentrata e sistema EMA, giri 50-51). 45 voci eseguite nei giri 30-68:
+**33 confermate, 11 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+**La coda e' esaurita.**
 
-Registro a **1.248 tentativi** cumulati.
+Registro a **1.296 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -643,3 +644,27 @@ Registro a **1.248 tentativi** cumulati.
   long/short: **dimezzare lo short dimezza il danno**, che è la controprova più
   pulita che il lato corto non contenga informazione — solo il segno sbagliato
   del premio azionario, moltiplicato per il tempo passato fuori dal mercato.
+- **Il grado di libertà del calendario esiste solo per chi seleziona, ed è
+  proporzionale a quanto concentra.** Ampiezza dell'IRR fra il mese di
+  ribilanciamento migliore e il peggiore, 49 settori 1969-2026:
+
+  | strategia | posizioni | ampiezza |
+  |---|---:|---:|
+  | equal-weight annuale | 49 | **0,14%** |
+  | momentum top-25 | 25 | 0,90% |
+  | momentum top-10 | 10 | 2,21% |
+  | momentum top-5 | 5 | **3,65%** |
+
+  Un portafoglio passivo rende lo stesso in tutti e dodici i mesi. Cinque
+  posizioni comprano **3,65 punti di arbitrarietà**. Quello che al giro 65
+  sembrava il vantaggio del top-5 era in buona parte il suo grado di libertà.
+  **Regola operativa**: una strategia annuale va riportata con la **mediana dei
+  dodici mesi**, e tutte e dodici vanno a registro. Il giro 68 lo ha fatto: il
+  registro è cresciuto di 48 tentativi, non di 4.
+- **L'anomalia di fine anno ricompare dal lato del ribilanciamento.** Gennaio e
+  dicembre sono i due mesi migliori per tutte e tre le varianti momentum, e la
+  differenza fra dicembre e luglio vale **~2,3 punti** di IRR sul top-5. È lo
+  stesso effetto che il giro 29 aveva misurato con **t = 7,04** e che la
+  strategia costruita apposta non riusciva a monetizzare (−7,26 punti). Chi
+  sceglie il mese di ribilanciamento guardando i risultati lo sta incassando come
+  se fosse alfa.
