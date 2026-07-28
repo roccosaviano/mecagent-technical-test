@@ -183,13 +183,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 60 | **D4 scelta del benchmark** | confermata | il premio di equal-weighting spiega **263-398%** del margine di H5 |
 | 61 | **A15 peso analitico di ciascun anno** | confermata | rapporto **5,91** mediano, non 9,5; monotono in 80/80 |
 | 62 | **D5 quota di vittorie ingannevole** | **falsificata** | scarto positivo per il **28,6%**, e di segno opposto |
+| 63 | **D6 rotazione sottostimata** | **falsificata** | un verdetto si ribalta (+0,16 → −0,07); l'errore ha **due versi** |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 39 voci eseguite nei giri 30-62:
-**30 confermate, 8 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Restano in coda: **D6, D7**.
+(rotazione concentrata e sistema EMA, giri 50-51). 40 voci eseguite nei giri 30-63:
+**30 confermate, 9 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Restano in coda: **D7, D8**.
 
-Registro a **1.157 tentativi** cumulati.
+Registro a **1.175 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -525,3 +526,33 @@ Registro a **1.157 tentativi** cumulati.
   Nessun risultato del giro sarebbe cambiato di segno, ma i pesi non sarebbero
   stati quello che dicevo. **Ogni derivata analitica del progetto va verificata
   contro una differenza finita prima di essere letta.**
+- **La rotazione si misura fra dove sei e dove vuoi essere, non fra due target
+  né fra due posizioni.** Il progetto ha usato due convenzioni, entrambe
+  sbagliate e in direzioni opposte:
+
+  | | definizione | dove | errore |
+  |---|---|---|---|
+  | (a) target | \|W_tgt,t − W_tgt,t−1\|/2 | `bench.wbacktest` | va a **zero** su pesi costanti |
+  | (b) detenuti | \|W_der,t − W_der,t−1\|/2 | `round31/32.backtest` | conta il **drift** come scambio |
+  | **(c) vera** | \|W_tgt,t − W_der,t\|/2 | — | corretta |
+
+  Il caso che le smaschera entrambe è l'equal-weight **annuale**: rotazione vera
+  **0,071×/anno** contro 0,239× della (a) e 0,251× della (b). Chi ribilancia una
+  volta l'anno compra e vende **solo a gennaio**; negli altri undici mesi non
+  tocca niente, e le due convenzioni sbagliate registrano movimento ogni mese.
+  L'errore vale **0,32 punti di IRR in media**, con un massimo di **1,35 punti**
+  sull'equal-weight mensile — il benchmark più usato del progetto, che per
+  trentatré giri ha ribilanciato gratis.
+- **L'errore non aveva un verso solo, e questo era il punto della voce D6.**
+  Avevo registrato la tesi che favorisse i benchmark statici contro le strategie
+  che ruotano. Misurato: 4 valutazioni su 9 sottostimano, **5 su 9 sovrastimano**.
+  I giri 31 e 32 *penalizzavano* HRP e min-variance addebitando come costo il
+  puro drift dei pesi. Regola: **quando si registra un difetto, la direzione del
+  suo effetto è un'ipotesi da testare, non un corollario ovvio.**
+- **Stesso errore, terza forma, terzo giro di fila.** Al 60 avevo costruito un
+  "equal-weight annuale" tenendo fermi i pesi target a 1/N — che è
+  ribilanciamento mensile travestito — e produceva un benchmark identico a
+  quello mensile. Al 63 ci sono ricascato nella prima stesura, con lo stesso
+  sintomo (11,16% contro 11,16%). Il commento sta ora dentro `round63.ew_drift`.
+  Un test che dà **esattamente** lo stesso numero di un altro test è quasi sempre
+  lo stesso test.

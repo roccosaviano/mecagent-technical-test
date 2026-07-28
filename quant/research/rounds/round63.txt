@@ -1,0 +1,61 @@
+============================================================================================================
+D6 — la rotazione vera delle valutazioni a pesi lenti
+============================================================================================================
+   Universo: 49 settori, 1969-2026. Stima su 60 mesi, ribilanciamento ogni 12.
+
+   portafoglio                        usata  rot. usata  rot. vera      x  IRR usata  IRR vera    delta
+   ----------------------------------------------------------------------------------------------------
+   cap-weight (49 settori)           target      0.199x     0.260x    1.3      9.66%     9.54%   -0.12
+   equal-weight mensile              target      0.000x     0.205x    inf     11.16%     9.81%   -1.35
+   equal-weight annuale              target      0.239x     0.071x    0.3      9.92%    10.65%   +0.73
+   inverse-variance annuale        detenuti      0.289x     0.225x    0.8      9.43%     9.55%   +0.11
+   HRP annuale                     detenuti      0.384x     0.318x    0.8      9.27%     9.33%   +0.07
+   min-variance annuale            detenuti      0.435x     0.379x    0.9      8.13%     8.17%   +0.05
+   max-diversification annuale     detenuti      0.590x     0.496x    0.8      9.24%     9.29%   +0.05
+   low-vol 36m top-25 annuale        target      0.126x     0.269x    2.1      9.82%     9.47%   -0.34
+   momentum 12-2 top-25 annuale      target      0.445x     0.620x    1.4     10.27%    10.18%   -0.09
+
+   Le tre convenzioni a confronto (rotazione annua):
+   portafoglio                     (a) target  (b) detenuti  (c) vera
+   ------------------------------------------------------------------
+   cap-weight (49 settori)             0.199x        0.309x    0.260x
+   equal-weight mensile                0.000x        0.280x    0.205x
+   equal-weight annuale                0.239x        0.251x    0.071x
+   inverse-variance annuale            0.050x        0.289x    0.225x
+   HRP annuale                         0.138x        0.384x    0.318x
+   min-variance annuale                0.232x        0.435x    0.379x
+   max-diversification annuale         0.257x        0.590x    0.496x
+   low-vol 36m top-25 annuale          0.126x        0.325x    0.269x
+   momentum 12-2 top-25 annuale        0.445x        0.686x    0.620x
+
+   I VERDETTI, prima e dopo la correzione:
+   voce        candidato                     benchmark                     gap usato  gap vero  ribalta
+   ----------------------------------------------------------------------------------------------------
+   A2 giro 31  HRP annuale                   equal-weight annuale             -0.66%    -1.32%       no
+   A3 giro 32  min-variance annuale          cap-weight (49 settori)          -1.54%    -1.37%       no
+   A3 giro 32  max-diversification annuale   cap-weight (49 settori)          -0.42%    -0.25%       no
+   A1/A5       inverse-variance annuale      equal-weight annuale             -0.49%    -1.11%       no
+   giro 04     low-vol 36m top-25 annuale    cap-weight (49 settori)           0.16%    -0.07%       SI
+
+============================================================================================================
+   VERDETTO
+============================================================================================================
+   Predizione: almeno 2/3 con rotazione vera oltre il TRIPLO di quella usata, correzione
+   media oltre 0,5 punti, e nessun verdetto ribaltato.
+   FALSIFICATA se la correzione media sta sotto 0,2 punti, OPPURE almeno un verdetto si ribalta.
+
+   rotazione vera > 3x quella usata : 1/9 = 11.1%   (previsto >=66,7%)
+   correzione media                 : 0.32 punti   (previsto >0,5, falsifica sotto 0,2)
+   verdetti ribaltati               : 1   (previsto 0, falsifica se >=1)
+
+   -> ipotesi D6 FALSIFICATA
+      clausola '2/3 oltre il triplo': SBAGLIATA
+      clausola 'correzione media >0,5': SBAGLIATA
+      clausola 'nessun ribaltamento': SBAGLIATA
+
+   La clausola 'un verso solo', dichiarata prima di misurare:
+     valutazioni che SOTTOSTIMANO la rotazione : 4/9
+     valutazioni che la SOVRASTIMANO           : 5/9
+     -> l'errore ha DUE VERSI
+
+Tentativi cumulati a registro: 1175
