@@ -187,13 +187,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 64 | **D7 F2 con benchmark corretto** | **falsificata** | il divario si **allarga** a −1,92; DSR 0,9743 su N=15 ma **0,7691** sul cumulato |
 | 65 | **D8 verdetti dentro la correzione** | **falsificata** | cambia segno il **57,1%**; il calendario del ribilanciamento vale **3,43 punti** |
 | 66 | **D9 vincolo di rotazione** | confermata | **3 celle su 4**, guadagno **+0,64**; nessuna sopra l'EW annuale |
+| 67 | **J1 statistical jump model** | confermata | migliore **−1,63**, long/short perde **21 su 21**; corr MA10 da 0,610 a **0,006** |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 43 voci eseguite nei giri 30-66:
-**31 confermate, 11 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Restano in coda: **D10, J1**.
+(rotazione concentrata e sistema EMA, giri 50-51). 44 voci eseguite nei giri 30-67:
+**32 confermate, 11 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Resta in coda: **D10**.
 
-Registro a **1.227 tentativi** cumulati.
+Registro a **1.248 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -621,3 +622,24 @@ Registro a **1.227 tentativi** cumulati.
   CAGR lordo** contro **19 punti di aliquota** risparmiati. Resta ingegneria
   fiscale, non una strategia: la migliore cella vincolata è ancora **−0,90**
   dall'equal-weight annuale.
+- **Lo statistical jump model non identifica regimi utili: identifica quanto
+  spesso gli si dà retta.** Al crescere della penalità di salto λ la correlazione
+  col filtro a media mobile 10 mesi **crolla da 0,610 a 0,006**, l'esposizione
+  sale dal 59% all'**84,4%**, i salti scendono a **0,06 l'anno** (uno ogni
+  diciassette) e il divario contro il buy&hold si chiude da **−4,77 a −1,63**.
+  Il segnale ha valore marginale **negativo a ogni λ**: l'unica cosa che migliora
+  il risultato è avvicinarsi al buy&hold. Non esiste un λ in cui identificare il
+  regime paghi.
+- **λ è però un modo diretto di comprare l'aliquota.** Fra λ=10 e λ=25 la
+  rotazione passa da 2,74× a 0,88×/anno e il regime fiscale dal **52% al 33%** —
+  la stessa soglia del giro 66. È un controllo molto più maneggevole di un
+  parametro di lisciatura, e vale la pena ricordarselo se un giorno servisse
+  ridurre la rotazione di un candidato vero.
+- **Il lato corto sull'azionario è un puro sottrarre, misurato.** Su 21
+  configurazioni la long/short perde contro la long-only in **21 su 21**; a λ=25 e
+  λ=50 la strategia **perde denaro in valore assoluto** (IRR −0,45% e −2,37%) su
+  ottant'anni. Il costo del solo lato corto arriva a **−7,20 punti**. La variante
+  a leva 0,5 sul corto sta sempre esattamente in mezzo fra long-only e
+  long/short: **dimezzare lo short dimezza il danno**, che è la controprova più
+  pulita che il lato corto non contenga informazione — solo il segno sbagliato
+  del premio azionario, moltiplicato per il tempo passato fuori dal mercato.
