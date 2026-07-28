@@ -847,3 +847,86 @@ che può reggere è la rotazione: sotto **1,0×/anno** grazie a λ, quindi aliqu
 irlandese, **oppure** una variante long/short batte la corrispondente long-only —
 nel qual caso il lato corto aggiunge valore e va capito perché, dato che il segno
 del premio azionario dice il contrario.
+
+---
+
+## K. Quello che il progetto non ha mai misurato
+
+Aggiunte al giro 69, dopo l'esaurimento della coda. Committate **prima** di
+eseguire qualunque cosa: la pre-registrazione vale solo se la predizione è nel
+repository prima dei dati.
+
+**K1 — Il conto in valuta**
+Tutti i sessantotto giri misurano in dollari. Un residente irlandese versa euro,
+incassa euro e paga imposte in euro su plusvalenze in euro. Il cambio EUR/USD ha
+una deriva e una volatilità che non sono mai entrate in un'IRR di questo
+progetto. Serie: DEXUSEU dal 1999, e prima l'euro sintetico dal marco (EXGEUS,
+1971+, convertito a 1,95583 DEM/EUR).
+Da misurare: buy&hold azionario USA, equal-weight annuale dei 49 settori,
+momentum top-10 mensile e momentum top-5 annuale, ciascuno in USD e in EUR, con
+versamenti e imposte in euro.
+*Predizione*: il **livello** dell'IRR si sposta di **0,5-1,5 punti**, la
+volatilità in euro è **2-5 punti più alta** che in dollari, ma il **margine
+strategia-meno-benchmark si sposta di meno di 0,5 punti**, perché il cambio è un
+fattore comune ai due lati e in differenza si cancella quasi tutto. Quasi, non
+del tutto: le imposte si pagano su plusvalenze in euro, quindi chi realizza più
+spesso cristallizza più spesso anche il cambio, e il residuo è proporzionale alla
+rotazione.
+*Falsificata se*: il margine di almeno una coppia si sposta di **oltre 0,5
+punti** — nel qual caso il cambio non è un fattore comune e ogni verdetto del
+progetto va rimisurato in euro — **oppure** la volatilità in euro risulta **più
+bassa** che in dollari, nel qual caso il cambio copre il rischio azionario invece
+di sommarvisi, e va capito perché.
+
+**K2 — Il PAC che si interrompe**
+Ogni simulazione assume 360 versamenti consecutivi. Nella realtà si salta, si
+riduce, si riscatta in anticipo. Il giro 61 ha dato lo strumento esatto per
+rispondere: il peso ∂IRR/∂log(1+R_k) è monotono crescente, quindi saltare
+versamenti **presto** e saltarli **tardi** non costano uguale.
+Da misurare: PAC ventennale con un'interruzione di 24 mesi che comincia all'anno
+k = 1..18, e in parallelo un riscatto anticipato del 30% all'anno k. Riportare la
+perdita di IRR e di montante finale in funzione di k.
+*Predizione*: l'interruzione costa **meno di 0,3 punti di IRR** ovunque — perché
+l'IRR è un tasso, e saltare versamenti riduce il montante ma non il rendimento —
+mentre il **montante** cala di **8-12%** e il calo è **monotono decrescente in k**
+(saltare presto costa di più in montante). Il riscatto anticipato invece colpisce
+l'IRR, e di **oltre 0,5 punti** se avviene nei primi dieci anni.
+*Falsificata se*: l'interruzione sposta l'IRR di oltre 0,5 punti in qualche k —
+nel qual caso l'IRR non è la metrica giusta per un PAC irregolare e serve il
+montante — **oppure** il calo del montante non è monotono in k.
+
+**K3 — Il vantaggio del veicolo, rimisurato con la rotazione vera**
+Il giro 53 aveva trovato **+2,77 punti** dallo spostare la rotazione dentro un
+fondo UCITS invece di farla in conto proprio, poi corretti a **+1,23** dopo il bug
+dei lotti ETF e a **+0,34** dopo aver tassato i dividendi. Non è mai stato
+rimisurato dopo i giri 63-68, che hanno cambiato come si misura la rotazione — e
+questo numero dipende dalla rotazione più di qualunque altro nel progetto, perché
+è *fatto* di rotazione. È anche l'unico risultato del progetto che non è una
+strategia ma una scelta di veicolo, cioè l'unica cosa che potrebbe diventare una
+raccomandazione operativa.
+*Predizione*: con la rotazione vera il vantaggio del veicolo **cresce** rispetto
+al +0,34, e finisce fra **+0,5 e +2,0 punti**, perché la correzione colpisce chi
+ruota in conto proprio e non chi ruota dentro il fondo. Ma resta **sotto i 2,77**
+del giro 53, e **sotto il divario che separa il momentum dall'equal-weight**,
+quindi non salva nessuna strategia: sposta solo dove conviene tenerla.
+*Falsificata se*: il vantaggio risulta **negativo**, oppure **sopra 2,77** — nel
+primo caso il veicolo non conta e il giro 53 era un artefatto, nel secondo la
+correzione della rotazione vale più del bug dei lotti e va rifatta l'intera
+contabilità del gruppo G.
+
+**K4 — La regola per aprire l'holdout, scritta prima di guardare**
+L'holdout 2010-2026 non è mai stato aperto in 68 giri, e il criterio per aprirlo è
+sempre stato descritto a parole ("un solo candidato, alla fine"). Scriverlo dopo
+aver visto un candidato promettente non varrebbe niente. Va scritto **ora**, che
+non c'è nessun candidato: il migliore mai registrato è **+0,33** contro il proprio
+benchmark con DSR **0,9424** (giro 65).
+Da produrre: una regola eseguibile — soglie numeriche su margine, DSR, stabilità
+su finestre mobili e sensibilità al calendario — che decida da sola se un
+candidato merita l'holdout, più il conto di quanti dei 1.296 tentativi registrati
+la passerebbero (previsione: zero).
+*Predizione*: nessuno dei candidati mai registrati passa la regola, e la voce si
+chiude con l'holdout ancora sigillato. La soglia che eliminerà più candidati non
+sarà il DSR ma la **stabilità sul calendario**, il grado di libertà scoperto al
+giro 68.
+*Falsificata se*: almeno un candidato già registrato passa tutte le soglie — nel
+qual caso l'holdout va aperto su quello, una volta sola, e il progetto finisce lì.
