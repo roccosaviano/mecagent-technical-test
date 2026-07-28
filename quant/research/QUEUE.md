@@ -813,3 +813,35 @@ strategie — nel qual caso il calendario non è un parametro libero e il confli
 fra i giri 64 e 65 ha un'altra causa da cercare — **oppure** la mediana dei dodici
 mesi è positiva per almeno una strategia, nel qual caso il vantaggio non dipende
 dalla scelta del mese e va portato al DSR.
+
+**J1 — Statistical jump model per l'identificazione dei regimi, long e long/short**
+Proposta dall'utente al giro 66. Riferimento: Aydınhan, Kolm, Mulvey, Shu,
+*"Identifying patterns in financial markets: extending the statistical jump model
+for regime identification"*, Annals of Operations Research 2024 — estensione
+(assegnazioni continue + selezione sparsa delle feature) dello statistical jump
+model di Bemporad et al. 2018 e Nystrup-Kolm-Lindström 2020. Il modello è un
+clustering **temporalmente regolarizzato**: minimizza la distanza intra-cluster
+**più una penalità λ per ogni cambio di stato**, il che produce regimi molto più
+persistenti di un HMM gaussiano — ed è esattamente la proprietà che in questo
+progetto conta, perché la persistenza è rotazione bassa e la rotazione bassa è
+l'aliquota al 33%.
+Da implementare a mano (nessuna libreria disponibile): assegnazione degli stati
+per programmazione dinamica con penalità di salto, aggiornamento dei centroidi,
+iterato fino a convergenza. Feature dal solo mercato USA giornaliero di Ken
+French (1926-2026), come nel paper: rendimenti EWM a più半-life, deviazione al
+ribasso, rapporti tipo Sortino. **K = 2 stati, λ scelto walk-forward solo sul
+passato.** Tre varianti: (a) long nel regime 1, liquidità nel regime 2; (b) long
+/ short; (c) long / short con la leva a 0,5 sul lato corto.
+*Predizione*: il segnale del jump model correla **oltre 0,7** con un semplice
+filtro a media mobile 10 mesi — cioè è un filtro di tendenza con una procedura di
+stima più raffinata, non un'informazione nuova. La variante **long-only perde
+contro il buy&hold di 1,5-4 punti** netti (stessa fascia di G1, giro 53, dove il
+migliore perdeva 2,51), e la **long/short è peggiore della long-only in tutte e
+tre le varianti**, perché il premio azionario è positivo e stare corti ha
+aspettativa negativa prima ancora dei costi di finanziamento. L'unica clausola
+che può reggere è la rotazione: sotto **1,0×/anno** grazie a λ, quindi aliquota
+33% invece del 52% dei filtri del giro 53.
+*Falsificata se*: la variante long-only **batte il buy&hold** netto di fiscalità
+irlandese, **oppure** una variante long/short batte la corrispondente long-only —
+nel qual caso il lato corto aggiunge valore e va capito perché, dato che il segno
+del premio azionario dice il contrario.
