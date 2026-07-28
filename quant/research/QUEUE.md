@@ -828,7 +828,7 @@ l'aliquota al 33%.
 Da implementare a mano (nessuna libreria disponibile): assegnazione degli stati
 per programmazione dinamica con penalità di salto, aggiornamento dei centroidi,
 iterato fino a convergenza. Feature dal solo mercato USA giornaliero di Ken
-French (1926-2026), come nel paper: rendimenti EWM a più半-life, deviazione al
+French (1926-2026), come nel paper: rendimenti EWM a più emivite, deviazione al
 ribasso, rapporti tipo Sortino. **K = 2 stati, λ scelto walk-forward solo sul
 passato.** Tre varianti: (a) long nel regime 1, liquidità nel regime 2; (b) long
 / short; (c) long / short con la leva a 0,5 sul lato corto.
