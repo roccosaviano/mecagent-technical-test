@@ -1,0 +1,68 @@
+========================================================================================================
+K1 — il conto in valuta: lo stesso PAC misurato in dollari e in euro
+========================================================================================================
+
+   Cambio: euro sintetico dal marco 1971-01-31 → 2001-12-31, poi DEXUSEU.
+   Raccordo: sintetico 1.1591 contro DEXUSEU 1.1371 (+1.93%)
+   Controllo del verso: se l'euro si rafforza, un'attivita' in dollari deve rendere MENO in euro.
+     fx da 1.1417 a 1.1440 (+), rendimento USD 0% → in euro -0.20%
+
+   Finestra comune: 1971-01-31 → 2026-05-31 (665 mesi)
+
+   strategia                       valuta     CAGR     vol   rotaz.  aliq.      IRR
+   --------------------------------------------------------------------------------
+   buy&hold azionario USA             USD   11.37%  15.71%    0.00x    33%   10.93%
+                                      EUR    9.74%  16.82%    0.00x    33%   10.16%
+   equal-weight annuale (gen)         USD   11.96%  16.85%    0.07x    33%   10.71%
+                                      EUR   10.27%  17.60%    0.07x    33%   10.00%
+   momentum top-10 mensile            USD   15.25%  18.31%    2.81x    52%   10.26%
+                                      EUR   13.89%  19.02%    2.82x    52%    9.79%
+   momentum top-5 annuale (gen)       USD   15.26%  20.86%    0.79x    33%   12.67%
+                                      EUR   13.52%  21.32%    0.79x    33%   12.09%
+
+   SPOSTAMENTO DEL LIVELLO (EUR meno USD):
+
+   strategia                        IRR USD   IRR EUR    delta   vol USD   vol EUR  delta vol
+   ------------------------------------------------------------------------------------------
+   buy&hold azionario USA            10.93%    10.16%   -0.77    15.71%    16.82%     +1.10
+   equal-weight annuale (gen)        10.71%    10.00%   -0.72    16.85%    17.60%     +0.75
+   momentum top-10 mensile           10.26%     9.79%   -0.46    18.31%    19.02%     +0.70
+   momentum top-5 annuale (gen)      12.67%    12.09%   -0.57    20.86%    21.32%     +0.46
+
+   SPOSTAMENTO DEL MARGINE contro l'equal-weight annuale:
+
+   coppia                              margine USD  margine EUR  spostamento   rotaz.
+   ----------------------------------------------------------------------------------
+   buy&hold azionario USA                   +0.22%       +0.17%       -0.06    0.00x
+   momentum top-10 mensile                  -0.46%       -0.20%       +0.25    2.81x
+   momentum top-5 annuale (gen)             +1.95%       +2.10%       +0.14    0.79x
+
+========================================================================================================
+   VERDETTO
+========================================================================================================
+   Predizione: il livello si sposta di 0,5-1,5 punti, la volatilita' in euro e' 2-5 punti
+   piu' alta, e il margine si sposta di MENO di 0,5 punti.
+   FALSIFICATA se un margine si sposta di OLTRE 0,5 punti, OPPURE la volatilita' in euro e' piu' bassa.
+
+   spostamento del livello       : da 0.46 a 0.77 punti   (previsto 0,5-1,5)
+   volatilita' EUR meno USD      : da +0.46 a +1.10 punti   (previsto +2/+5; falsifica se negativa)
+   spostamento massimo del margine: 0.25 punti (momentum top-10 mensile, rotazione 2.81x)   (falsifica sopra 0,5)
+
+   -> ipotesi K1 CONFERMATA
+      clausola 'livello 0,5-1,5 punti': SBAGLIATA
+      clausola 'volatilita' +2/+5 punti': SBAGLIATA
+      clausola 'margine sotto 0,5': centrata
+
+   Meccanismo previsto (il residuo cresce con la rotazione):
+     corr(rotazione, |spostamento del margine|) = +0.985
+
+   CONTROLLO — raccordo delle due serie del cambio riscalato perche' combaci:
+
+   strategia                          IRR EUR   IRR EUR raccordato   differenza
+   ----------------------------------------------------------------------------
+   buy&hold azionario USA              10.16%               10.12%       -0.04
+   equal-weight annuale (gen)          10.00%                9.96%       -0.04
+   momentum top-10 mensile              9.79%                9.76%       -0.03
+   momentum top-5 annuale (gen)        12.09%               12.05%       -0.04
+
+Tentativi cumulati a registro: 1312

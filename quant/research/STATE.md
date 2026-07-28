@@ -189,13 +189,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 66 | **D9 vincolo di rotazione** | confermata | **3 celle su 4**, guadagno **+0,64**; nessuna sopra l'EW annuale |
 | 67 | **J1 statistical jump model** | confermata | migliore **−1,63**, long/short perde **21 su 21**; corr MA10 da 0,610 a **0,006** |
 | 68 | **D10 calendario del ribilanciamento** | confermata | ampiezza **3,65%** sul top-5 contro **0,14%** sull'equal-weight |
+| 69 | **K1 conto in valuta** | confermata | margine max **0,25**, livello **−0,46/−0,77** punti in euro |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 45 voci eseguite nei giri 30-68:
-**33 confermate, 11 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-**La coda e' esaurita.**
+(rotazione concentrata e sistema EMA, giri 50-51). 46 voci eseguite nei giri 30-69:
+**34 confermate, 11 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Restano in coda: **K2, K3, K4**.
 
-Registro a **1.296 tentativi** cumulati.
+Registro a **1.312 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -668,3 +669,23 @@ Registro a **1.296 tentativi** cumulati.
   strategia costruita apposta non riusciva a monetizzare (−7,26 punti). Chi
   sceglie il mese di ribilanciamento guardando i risultati lo sta incassando come
   se fosse alfa.
+- **Il conto va fatto in euro, e costa 0,6-0,8 punti l'anno.** Tutti i giri
+  1-68 misurano in dollari; un residente irlandese versa e incassa euro. Sul
+  1971-2026 l'euro (e prima il marco) si è rafforzato, e l'IRR in euro
+  dell'azionario USA è **0,77 punti sotto** quella in dollari — 0,72 per
+  l'equal-weight, 0,46 per il momentum mensile. **Il livello di ogni numero del
+  progetto va abbassato di circa mezzo punto.**
+- **Ma nessun verdetto relativo cambia**: il cambio è un fattore quasi comune, e
+  in differenza resta al massimo **0,25 punti**. Il residuo non è zero e cresce
+  con la rotazione — 0,00× → −0,06, 0,79× → +0,14, 2,81× → +0,25 — perché le
+  imposte si pagano su plusvalenze in euro e chi realizza più spesso cristallizza
+  più spesso anche il cambio. La correlazione è +0,985 **su tre punti soli**:
+  l'ordinamento è quello previsto, la taglia no.
+- **Il cambio non copre: somma.** La volatilità in euro è più alta in tutte e
+  quattro le strategie (+0,46 / +1,10 punti). Meno di quanto avessi previsto
+  (+2/+5), ma il segno esclude che il rischio di cambio compensi quello azionario.
+- **Attenzione ai raccordi fra serie con convenzioni diverse.** EXGEUS è una
+  *media* mensile, DEXUSEU ricampionato è un *fine mese*: al raccordo del 1999 le
+  due differiscono dell'**1,93%**. Riscalando, le IRR si spostano di 0,03-0,04
+  punti in modo uniforme — trascurabile qui, ma è il tipo di discontinuità che va
+  cercata e quantificata ogni volta che si incollano due fonti.
