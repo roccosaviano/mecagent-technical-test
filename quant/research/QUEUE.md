@@ -737,3 +737,26 @@ conclusione no.
 correttamente addebitato — nel qual caso il difetto di `wbacktest` non spostava
 nulla e F2 era giusta per intero — **oppure** il DSR supera 0,95, nel qual caso
 c'è per la prima volta un candidato da portare all'holdout.
+
+**D8 — Quali verdetti "perde contro l'equal-weight" sopravvivono alla correzione**
+Nata al giro 63. La correzione della rotazione vale **0,32 punti in media sui
+candidati**, ma **1,35 punti sul solo equal-weight mensile**, che è il benchmark
+usato dai giri 30-43. L'asimmetria è il punto: correggere sposta il *metro* molto
+più dei *misurati*. Ne segue meccanicamente che **ogni verdetto in cui un
+candidato perdeva contro l'equal-weight mensile per meno di ~1,35 punti è
+sospetto**, e al giro 63 ne ho controllati solo cinque. Il giro 63 ha già mostrato
+che uno dei cinque si ribalta.
+Da rifare: censire in QUEUE.md e nei mini-report **tutti** i verdetti la cui
+formula è "il candidato X perde contro l'equal-weight di meno di 1,35 punti",
+rieseguirli con la rotazione vera su entrambi i lati, e riportare quanti
+cambiano segno.
+*Predizione*: i verdetti col margine sotto 1,35 punti sono **fra 4 e 10**, e ne
+cambia segno **meno di un terzo** — perché correggere alza anche la rotazione dei
+candidati, non solo quella del benchmark, e i due effetti si compensano in buona
+parte. Nessuno dei ribaltati supera comunque il DSR, quindi **il numero di
+promozioni resta zero**.
+*Falsificata se*: cambia segno **più di metà** dei verdetti col margine sotto
+1,35 punti — nel qual caso la correzione non è una nota metodologica ma una
+revisione dei giri 30-43, e vanno rieseguiti tutti — **oppure** un candidato
+ribaltato supera il DSR 0,95 sul registro cumulato, nel qual caso c'è per la
+prima volta qualcosa da portare all'holdout.
