@@ -761,3 +761,28 @@ promozioni resta zero**.
 revisione dei giri 30-43, e vanno rieseguiti tutti — **oppure** un candidato
 ribaltato supera il DSR 0,95 sul registro cumulato, nel qual caso c'è per la
 prima volta qualcosa da portare all'holdout.
+
+**D9 — La fascia di rotazione fra 0,7× e 1,0× è un precipizio, non un pendio**
+Nata al giro 64. Il top-5 annuale passa da 0,83× a 1,022× di rotazione solo
+cambiando *come si misura*, e con quel passaggio l'aliquota salta dal **33% al
+52%**: diciannove punti d'imposta su una differenza di misura del 23%. Nessuna
+strategia dovrebbe avere il proprio risultato deciso da quale lato di una soglia
+cade una statistica misurata con un'incertezza di quell'ordine. La domanda non è
+metodologica: **esiste un modo di stare deliberatamente sotto la soglia che
+paghi?** Una strategia che rinuncia a parte della rotazione per restare al 33%
+può battere la stessa strategia lasciata libera di ruotare al 52%.
+Da misurare: per ciascuna cella della griglia F2 con rotazione vera fra 0,7× e
+1,4×, costruire la variante **vincolata** — stessa selezione, ma i ribilanciamenti
+si fermano quando la rotazione cumulata dell'anno raggiunge 0,95× — e confrontare
+IRR netta della libera (52%) contro la vincolata (33%). Riportare anche quanto
+segnale si perde, cioè il calo di CAGR lordo.
+*Predizione*: la variante vincolata **batte** la libera in **almeno due terzi**
+delle celle nella fascia, e il guadagno medio sta fra **1 e 3 punti** di IRR —
+perché rinunciare all'ultimo 10% di rotazione costa poco di lordo e vale
+diciannove punti di aliquota. Ma **nessuna vincolata batte l'equal-weight
+annuale**, che resta a 10,65%.
+*Falsificata se*: la vincolata batte la libera in **meno di metà** delle celle —
+nel qual caso il segnale perso vale più dell'aliquota risparmiata, e la soglia
+del 100% non è sfruttabile — **oppure** una vincolata **supera l'equal-weight
+annuale**, nel qual caso c'è un candidato vero e va portato al DSR sul registro
+cumulato.
