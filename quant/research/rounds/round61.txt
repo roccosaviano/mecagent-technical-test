@@ -1,0 +1,58 @@
+============================================================================================
+A15 — il peso di ciascun anno di un PAC ventennale, calcolato
+============================================================================================
+
+   1. PERCORSO PIATTO — rendimento identico ogni anno
+
+    rend. annuo      IRR   monotono  ultimi3/primi3  errore vs diff.fin.
+   ---------------------------------------------------------------------
+             2%    2.00%         si          10.27x            3.88e-05
+             4%    4.00%         si           8.88x            3.81e-05
+             6%    6.00%         si           7.79x            3.73e-05
+             8%    8.00%         si           6.91x            3.65e-05
+            10%   10.00%         si           6.20x            3.57e-05
+            12%   12.00%         si           5.61x            3.49e-05
+
+   TRE quantita' diverse che i giri 47 e 58 trattavano come una sola:
+     peso aritmetico puro dei versamenti (18+19+20)/(1+2+3) :   9.50x   <- il 9,5:1
+     capitale ESPOSTO, capitalizzato all'8%                 :  24.72x
+     peso dell'IRR, dIRR/dlog(1+R_k), all'8%                :   6.91x
+   Il capitale esposto negli ultimi tre anni e' 24.7 volte quello dei
+   primi tre, ma l'IRR ne risente solo 6.9 volte tanto: ai
+   rendimenti finali manca il tempo di capitalizzazione. Il 9,5:1 non e'
+   ne' l'uno ne' l'altro — sta in mezzo, e non e' la sensibilita' dell'IRR.
+
+   Profilo completo al 8% (normalizzato a w_20 = 1):
+     a01=0.052  a02=0.144  a03=0.228  a04=0.307
+     a05=0.379  a06=0.446  a07=0.508  a08=0.566
+     a09=0.619  a10=0.669  a11=0.714  a12=0.757
+     a13=0.796  a14=0.832  a15=0.866  a16=0.897
+     a17=0.926  a18=0.952  a19=0.977  a20=1.000
+
+   2. PERCORSI STORICI REALI — finestre ventennali del mercato USA
+
+   80 finestre ventennali, da 1926 a 2025
+   monotono in 80/80 finestre
+   rapporto ultimi3/primi3: mediana 5.91x, min 4.34x, max 16.11x
+
+============================================================================================
+   VERDETTO
+============================================================================================
+   Predizione: peso monotono crescente in k, e rapporto ultimi3/primi3 entro il 20%
+   del 9,5:1 aritmetico (cioe' fra 7.60 e 11.40).
+   FALSIFICATA se il peso non e' monotono, oppure il rapporto sta SOTTO 4.
+
+   monotono ovunque      : SI
+   rapporto              : da 5.61x a 10.27x
+   dentro la banda 7,6-11,4 : NO
+
+   -> ipotesi A15 CONFERMATA
+      clausola 'monotono crescente': centrata
+      clausola 'entro il 20% del 9,5:1': SBAGLIATA
+
+   Confronto con le regressioni dei giri 47 e 58:
+     giro 47 (A13): rapporto stimato 1,21-2,71, R2 0,28-0,33
+     giro 58 (A14): rapporto stimato 0,55-48,51, R2 0,002-0,210
+     giro 61 (A15): rapporto CALCOLATO 5.61-10.27, esatto per costruzione
+
+Tentativi cumulati a registro: 1094

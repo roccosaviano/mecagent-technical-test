@@ -181,13 +181,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 51 | F5 ablazione del sistema EMA | confermata | il solo trend filter vale **24 volte** il sistema completo |
 | 59 | **D3 finestre di lunghezza fissa** | confermata | ampiezza **10,19** punti contro i **0,56** di D1: **18×** |
 | 60 | **D4 scelta del benchmark** | confermata | il premio di equal-weighting spiega **263-398%** del margine di H5 |
+| 61 | **A15 peso analitico di ciascun anno** | confermata | rapporto **5,91** mediano, non 9,5; monotono in 80/80 |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 37 voci eseguite nei giri 30-60:
-**29 confermate, 7 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Restano in coda: **A15, D5, D6**.
+(rotazione concentrata e sistema EMA, giri 50-51). 38 voci eseguite nei giri 30-61:
+**30 confermate, 7 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Restano in coda: **D5, D6**.
 
-Registro a **1.073 tentativi** cumulati.
+Registro a **1.087 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -495,3 +496,31 @@ Registro a **1.073 tentativi** cumulati.
   vale +0,10 al 33% e +0,15 al 52%. Resta come limite dichiarato, non corretto:
   riscrivere `tax.py` per posizione cambierebbe di ±0,4 punti conclusioni che
   stanno tutte oltre 1 punto dal confine.
+- **Il rischio di sequenza in un PAC vale 6-7, non 9,5 — e i giri 47 e 58
+  cercavano un bersaglio che il meccanismo non produce.** La sensibilità
+  dell'IRR al rendimento dell'anno k si scrive invece di stimarla:
+  `∂y/∂log(1+ρ_m) = A_m / (∂Φ/∂y)`, con `A_m` il montante a scadenza dei soli
+  versamenti fino a m. Il profilo è **monotono crescente in 80 finestre storiche
+  su 80**, ma il rapporto ultimi/primi triennio **dipende dal livello dei
+  rendimenti**: 10,27× al 2%, 6,91× all'8%, 5,61× al 12%, mediana storica 5,91×.
+  Il punto: erano **tre quantità diverse** trattate come una sola —
+
+  | quantità | valore |
+  |---|---:|
+  | peso aritmetico puro dei versamenti, (18+19+20)/(1+2+3) | **9,50×** |
+  | capitale esposto, capitalizzato all'8% | **24,72×** |
+  | sensibilità dell'IRR, ∂IRR/∂log(1+R_k), all'8% | **6,91×** |
+
+  Due effetti opposti, nessuno dei due presente nel 9,5: il capitale accumulato
+  **cresce** con k (spinge sopra), il tempo di capitalizzazione residuo **scende**
+  con k (riporta sotto). Un rendimento del ventesimo anno colpisce molto capitale
+  ma non ha più tempo di comporsi. **Regola generale**: prima di regredire per
+  stimare una sensibilità, verificare se si può derivare — e se il valore atteso
+  che si sta cercando è davvero la quantità che il modello produce.
+- **Il controllo a differenze finite ha pagato, di nuovo.** Al giro 61 la prima
+  stesura aggregava i mesi con una somma invece che con una media, e il rapporto
+  analitico/numerico è uscito **0,0833 = 1/12 su tutti e venti gli anni**. Un
+  errore di scala ha questa firma: costante su ogni elemento. Il rumore no.
+  Nessun risultato del giro sarebbe cambiato di segno, ma i pesi non sarebbero
+  stati quello che dicevo. **Ogni derivata analitica del progetto va verificata
+  contro una differenza finita prima di essere letta.**
