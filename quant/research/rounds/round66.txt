@@ -1,0 +1,46 @@
+========================================================================================================
+D9 — restare deliberatamente sotto la soglia del 100% di rotazione
+========================================================================================================
+   Universo: 49 settori, 1969-2026. Griglia del giro 64, budget annuo 0.95x.
+
+   Benchmark: equal-weight annuale, rotazione 0.071x, IRR 10.65%
+
+   Celle con rotazione vera fra 0,7x e 1,4x: 4 su 15
+   top-1 annuale (0.943x), top-3 annuale (1.053x), top-5 annuale (1.022x), top-10 annuale (0.951x)
+
+   cella                rot. libera  aliq.  IRR libera  rot. vinc.  aliq.  IRR vinc.  guadagno  CAGR lordo perso
+   -------------------------------------------------------------------------------------------------------------
+   top-1 annuale             0.943x    33%       4.84%      0.937x    33%      5.66%    +0.82            -0.37
+   top-3 annuale             1.053x    52%       7.74%      0.956x    33%      8.53%    +0.79             0.59
+   top-5 annuale             1.022x    52%       8.73%      0.942x    33%      9.75%    +1.02             0.46
+   top-10 annuale            0.951x    33%       8.91%      0.908x    33%      8.82%    -0.09             0.11
+
+   cella                 IRR vincolata   vs EW annuale
+   ---------------------------------------------------
+   top-1 annuale                 5.66%          -4.99
+   top-3 annuale                 8.53%          -2.12
+   top-5 annuale                 9.75%          -0.90
+   top-10 annuale                8.82%          -1.83
+
+========================================================================================================
+   VERDETTO
+========================================================================================================
+   Predizione: la vincolata batte la libera in almeno DUE TERZI delle celle, guadagno
+   medio fra 1 e 3 punti, e NESSUNA vincolata batte l'equal-weight annuale.
+   FALSIFICATA se la vincolata vince in MENO DI META' delle celle, OPPURE una supera l'EW annuale.
+
+   celle nella fascia               : 4
+   la vincolata batte la libera in  : 3/4 = 75.0%   (previsto >=66,7%, falsifica sotto 50%)
+   guadagno medio                   : +0.64 punti   (previsto +1/+3)
+   vincolate sopra l'EW annuale     : 0   (previsto 0, falsifica se >=1)
+
+   -> ipotesi D9 CONFERMATA
+      clausola 'vince in >=2/3 delle celle': centrata
+      clausola 'guadagno medio fra 1 e 3': SBAGLIATA
+      clausola 'nessuna sopra l'EW annuale': centrata
+
+   Nessuna vincolata supera l'equal-weight annuale: niente DSR da calcolare.
+
+   Promozioni: ZERO se nessuna riga sopra dice PROMUOVIBILE. Holdout ancora sigillato.
+
+Tentativi cumulati a registro: 1227

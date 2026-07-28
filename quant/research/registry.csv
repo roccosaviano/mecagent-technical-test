@@ -1222,3 +1222,7 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 65,D8 verdetti dentro la correzione,momentum top-25 annuale vs EW mensile,1969-2026,,10.178423427731776,9.812797247269007,0.36562618046276896,683,"orig=-0.89,flip=True"
 65,D8 verdetti dentro la correzione,momentum top-25 mensile vs EW mensile,1969-2026,,9.270817073646429,9.812797247269007,-0.5419801736225782,683,"orig=-1.86,flip=False"
 65,D8 verdetti dentro la correzione,filtro di tendenza 10m vs EW mensile,1969-2026,,6.190286435498561,9.812797247269007,-3.6225108117704456,683,"orig=-5.33,flip=False"
+66,D9 vincolo di rotazione,top-1 annuale,1969-2026,,5.662038162590162,10.6524090628993,-4.990370900309139,683,"rot=0.937,guadagno=0.82"
+66,D9 vincolo di rotazione,top-3 annuale,1969-2026,,8.53418318675064,10.6524090628993,-2.11822587614866,683,"rot=0.956,guadagno=0.79"
+66,D9 vincolo di rotazione,top-5 annuale,1969-2026,,9.753565173809681,10.6524090628993,-0.8988438890896191,683,"rot=0.942,guadagno=1.02"
+66,D9 vincolo di rotazione,top-10 annuale,1969-2026,,8.819741113031412,10.6524090628993,-1.8326679498678882,683,"rot=0.908,guadagno=-0.09"

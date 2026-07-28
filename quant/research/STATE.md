@@ -186,13 +186,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 63 | **D6 rotazione sottostimata** | **falsificata** | un verdetto si ribalta (+0,16 → −0,07); l'errore ha **due versi** |
 | 64 | **D7 F2 con benchmark corretto** | **falsificata** | il divario si **allarga** a −1,92; DSR 0,9743 su N=15 ma **0,7691** sul cumulato |
 | 65 | **D8 verdetti dentro la correzione** | **falsificata** | cambia segno il **57,1%**; il calendario del ribilanciamento vale **3,43 punti** |
+| 66 | **D9 vincolo di rotazione** | confermata | **3 celle su 4**, guadagno **+0,64**; nessuna sopra l'EW annuale |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 42 voci eseguite nei giri 30-65:
-**30 confermate, 11 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Restano in coda: **D9, D10**.
+(rotazione concentrata e sistema EMA, giri 50-51). 43 voci eseguite nei giri 30-66:
+**31 confermate, 11 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Restano in coda: **D10, J1**.
 
-Registro a **1.223 tentativi** cumulati.
+Registro a **1.227 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -611,3 +612,12 @@ Registro a **1.223 tentativi** cumulati.
   stimata sulla famiglia del giro, SR0 = 0,0921 e il DSR diventa leggibile.
   **Quando una voce della coda scrive "DSR > 0,95" deve anche dire come si stima
   `var_sr`**, altrimenti la condizione è ambigua per un fattore venti.
+- **La soglia del 100% di rotazione è sfruttabile, e vale meno di un punto.**
+  Vincolando il ribilanciamento a un budget di 0,95×/anno (esecuzione parziale
+  verso il target) le celle di F2 che stavano appena sopra la soglia rientrano al
+  33% e guadagnano: top-3 **+0,79**, top-5 **+1,02**. Ma il controllo è quello che
+  conta: il **top-10, già al 33%, perde −0,09**. Vincolare *di per sé* non giova —
+  giova solo riattraversare la soglia. Costo del vincolo: **0,11-0,59 punti di
+  CAGR lordo** contro **19 punti di aliquota** risparmiati. Resta ingegneria
+  fiscale, non una strategia: la migliore cella vincolata è ancora **−0,90**
+  dall'equal-weight annuale.
