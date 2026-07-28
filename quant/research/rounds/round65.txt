@@ -1,0 +1,78 @@
+==========================================================================================================
+D8 — i verdetti col margine dentro la correzione
+==========================================================================================================
+   Universo: 49 settori, 1969-2026. Soglia del censimento: |margine| < 1.35 punti.
+
+   candidato                     benchmark    giro      margine orig.  margine vero  in censimento  cambia segno
+   -------------------------------------------------------------------------------------------------------------
+   HRP annuale                   EW annuale   31 (A2)          -0.30%        -1.32%             SI            no
+   inverse-variance annuale      EW annuale   31/34             0.27%        -1.11%             SI            SI
+   H5 momentum top-10 mensile    EW mensile   05/43            -0.86%         0.46%             SI            SI
+   C1 punteggio misto top-10     EW mensile   11/43            -2.67%        -1.33%             no             -
+   H4 low-vol 36m top-10         EW mensile   04/43            -2.67%        -1.36%             no             -
+   low-vol 36m top-25 annuale    EW annuale   04               -0.11%        -1.18%             SI            no
+   momentum top-5 annuale        EW mensile   50 (F2)           1.08%         2.35%             SI            no
+   momentum top-10 annuale       EW mensile   50 (F2)          -0.11%         1.17%             SI            SI
+   momentum top-25 annuale       EW mensile   50 (F2)          -0.89%         0.37%             SI            SI
+   momentum top-25 mensile       EW mensile   50 (F2)          -1.86%        -0.54%             no             -
+   filtro di tendenza 10m        EW mensile   G1               -5.33%        -3.62%             no             -
+
+   Perche' cambiano: il salto di aliquota
+
+   candidato                       rot. orig.  rot. vera  aliq. orig.  aliq. vera
+   ------------------------------------------------------------------------------
+   HRP annuale                         0.138x     0.318x          33%         33%
+   inverse-variance annuale            0.050x     0.225x          33%         33%
+   H5 momentum top-10 mensile          2.678x     2.830x          52%         52%
+   low-vol 36m top-25 annuale          0.126x     0.269x          33%         33%
+   momentum top-5 annuale              0.771x     0.962x          33%         33%
+   momentum top-10 annuale             0.719x     0.901x          33%         33%
+   momentum top-25 annuale             0.445x     0.620x          33%         33%
+
+   IL CALENDARIO DEL RIBILANCIAMENTO — stessa strategia, due implementazioni:
+
+   strategia             calendario                   rotaz.  aliq.      IRR  vs EW ann.
+   -------------------------------------------------------------------------------------
+   momentum top-5        gennaio civile               0.962x    33%   12.16%      +1.51
+   momentum top-5        ogni 12 mesi dall'inizio     1.022x    52%    8.73%      -1.92
+   momentum top-10       gennaio civile               0.901x    33%   10.98%      +0.33
+   momentum top-10       ogni 12 mesi dall'inizio     0.951x    33%    8.91%      -1.74
+   momentum top-25       gennaio civile               0.620x    33%   10.18%      -0.47
+   momentum top-25       ogni 12 mesi dall'inizio     0.656x    33%    9.65%      -1.00
+
+   EW annuale di riferimento: 10.65%
+
+   DSR dei ribaltati che diventano POSITIVI (N = 1212, registro cumulato):
+     var_sr dagli 11 candidati di questo giro: 0.000776
+     H5 momentum top-10 mensile    SR 0.1855  SR0(registro) 1.7798 DSR 0.0000  |  SR0(famiglia) 0.0922 DSR 0.9889
+     momentum top-10 annuale       SR 0.1558  SR0(registro) 1.7798 DSR 0.0000  |  SR0(famiglia) 0.0922 DSR 0.9424
+     momentum top-25 annuale       SR 0.1507  SR0(registro) 1.7798 DSR 0.0000  |  SR0(famiglia) 0.0922 DSR 0.9278
+
+==========================================================================================================
+   VERDETTO
+==========================================================================================================
+   Predizione: i verdetti col margine sotto 1.35 punti sono FRA 4 E 10, ne cambia segno
+   MENO DI UN TERZO, e nessun ribaltato supera il DSR.
+   FALSIFICATA se cambia segno PIU' DI META', oppure un ribaltato supera DSR 0,95.
+
+   coppie valutate                  : 11
+   dentro il censimento (|m| < 1.35) : 7   (previsto fra 4 e 10)
+   cambiano segno                   : 4/7 = 57.1%   (previsto <33,3%, falsifica sopra 50%)
+   ribaltati che diventano positivi : 3
+   DSR massimo fra questi           : 0.9889
+
+   -> ipotesi D8 FALSIFICATA
+      clausola 'fra 4 e 10 verdetti': centrata
+      clausola 'meno di un terzo cambia segno': SBAGLIATA
+      clausola 'promozioni zero': SBAGLIATA
+
+   La regola di promozione (STATE.md) richiede DUE condizioni:
+   candidato                       vs EW mensile  vs EW annuale   DSR max  promuovibile
+   ------------------------------------------------------------------------------------
+   H5 momentum top-10 mensile             +0.46%         -0.38%    0.9889            no
+   momentum top-10 annuale                +1.17%         +0.33%    0.9424            no
+   momentum top-25 annuale                +0.37%         -0.47%    0.9278            no
+
+   Promozioni: ZERO. Holdout ancora sigillato.
+
+Tentativi cumulati a registro: 1223

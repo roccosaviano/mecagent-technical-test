@@ -185,13 +185,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 62 | **D5 quota di vittorie ingannevole** | **falsificata** | scarto positivo per il **28,6%**, e di segno opposto |
 | 63 | **D6 rotazione sottostimata** | **falsificata** | un verdetto si ribalta (+0,16 → −0,07); l'errore ha **due versi** |
 | 64 | **D7 F2 con benchmark corretto** | **falsificata** | il divario si **allarga** a −1,92; DSR 0,9743 su N=15 ma **0,7691** sul cumulato |
+| 65 | **D8 verdetti dentro la correzione** | **falsificata** | cambia segno il **57,1%**; il calendario del ribilanciamento vale **3,43 punti** |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 41 voci eseguite nei giri 30-64:
-**30 confermate, 10 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Restano in coda: **D8, D9**.
+(rotazione concentrata e sistema EMA, giri 50-51). 42 voci eseguite nei giri 30-65:
+**30 confermate, 11 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Restano in coda: **D9, D10**.
 
-Registro a **1.190 tentativi** cumulati.
+Registro a **1.223 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -580,3 +581,33 @@ Registro a **1.190 tentativi** cumulati.
   senza specificare N: **un DSR alto su una strategia che perde contro il proprio
   benchmark non è un candidato**, è la conferma che lo Sharpe non è la funzione
   obiettivo di un PAC.
+- **Il calendario del ribilanciamento è un parametro libero che il progetto ha
+  usato per sessantacinque giri senza contarlo.** La stessa strategia — momentum
+  12-2, top-5, ribilanciamento annuale, 49 settori, 1969-2026 — vale **+1,51 o
+  −1,92** contro lo stesso benchmark a seconda che si ribilanci a **gennaio
+  civile** o **ogni 12 mesi a partire dall'inizio del campione**:
+
+  | strategia | calendario | rotaz. | aliquota | IRR | vs EW annuale |
+  |---|---|---:|---:|---:|---:|
+  | top-5 | gennaio | 0,962× | 33% | 12,16% | **+1,51** |
+  | top-5 | ogni 12 mesi | 1,022× | 52% | 8,73% | **−1,92** |
+  | top-10 | gennaio | 0,901× | 33% | 10,98% | +0,33 |
+  | top-10 | ogni 12 mesi | 0,951× | 33% | 8,91% | −1,74 |
+
+  Per il top-5 il salto attraversa anche la soglia fiscale, ma non è solo quello:
+  il top-10 e il top-25 restano al 33% e si spostano comunque di 2,07 e 0,53
+  punti. **Ogni backtest con ribilanciamento periodico ha dodici implementazioni,
+  e sceglierne una dopo aver visto i risultati è selezione non contata.**
+- **La cosa più vicina a un candidato in 65 giri**: momentum 12-2 top-10 annuale
+  a calendario gennaio, **+0,33 punti** contro l'equal-weight annuale
+  correttamente addebitato, DSR **0,9424**. Sotto soglia, non pre-registrato, e
+  il margine sta dentro il rumore misurato al giro 59 (±5-10 punti su finestre
+  decennali). **Non promosso**, ma registrato perché è il massimo che il progetto
+  ha prodotto.
+- **`lab.deflated_sharpe` con `var_sr` di default dà SR0 implausibili.** Stimando
+  la dispersione degli Sharpe sul registro **intero** — che mescola famiglie con
+  profili di rischio diversi — esce SR0 = **1,78 per periodo**, cioè oltre 6
+  annualizzato, e il DSR collassa a 0,0000 per qualunque candidato. Con `var_sr`
+  stimata sulla famiglia del giro, SR0 = 0,0921 e il DSR diventa leggibile.
+  **Quando una voce della coda scrive "DSR > 0,95" deve anche dire come si stima
+  `var_sr`**, altrimenti la condizione è ambigua per un fattore venti.
