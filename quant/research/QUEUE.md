@@ -787,3 +787,28 @@ nel qual caso il segnale perso vale più dell'aliquota risparmiata, e la soglia
 del 100% non è sfruttabile — **oppure** una vincolata **supera l'equal-weight
 annuale**, nel qual caso c'è un candidato vero e va portato al DSR sul registro
 cumulato.
+
+**D10 — Il calendario del ribilanciamento è un parametro libero mai contato**
+Nata al giro 65. La stessa strategia — momentum 12-2, top-5, ribilanciamento
+annuale, 49 settori, 1969-2026 — vale **+1,51 o −1,92** contro lo stesso
+benchmark a seconda che ribilanci a **gennaio civile** o **ogni 12 mesi a partire
+dall'inizio del campione**. Sono **3,43 punti** da una scelta che nessuno dei
+sessantacinque giri ha mai dichiarato né contato nel registro dei tentativi. Per
+il top-5 il salto attraversa anche la soglia fiscale (0,962× contro 1,022×), ma
+non è solo quello: il top-10 e il top-25 restano al 33% e si spostano comunque di
+2,07 e 0,53 punti. **Un backtest con ribilanciamento annuale ha dodici
+implementazioni, e finora ne è stata usata una alla volta senza dirlo.**
+Da misurare: per momentum top-5, top-10, top-25 annuale e per l'equal-weight
+annuale, tutte e **dodici** le date di ribilanciamento (gennaio…dicembre), contro
+l'equal-weight annuale ribilanciato nello stesso mese. Riportare ampiezza,
+mediana e quante configurazioni battono il benchmark.
+*Predizione*: l'ampiezza fra il mese migliore e il peggiore supera **2 punti** di
+IRR per ogni strategia, la **mediana dei dodici è negativa** contro il benchmark
+per tutte, e **meno di un terzo** delle 48 configurazioni batte il proprio
+benchmark. Cioè: il +1,51 di gennaio è il massimo di dodici estrazioni, non un
+risultato — e il registro va aumentato di 48 tentativi, non di 4.
+*Falsificata se*: l'ampiezza resta **sotto 1 punto** per la maggioranza delle
+strategie — nel qual caso il calendario non è un parametro libero e il conflitto
+fra i giri 64 e 65 ha un'altra causa da cercare — **oppure** la mediana dei dodici
+mesi è positiva per almeno una strategia, nel qual caso il vantaggio non dipende
+dalla scelta del mese e va portato al DSR.
