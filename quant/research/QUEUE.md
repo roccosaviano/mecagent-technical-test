@@ -11,7 +11,7 @@ aggiunta alza la soglia per tutte).
 
 **STATO: la coda dichiarata è esaurita.** A1-A5, B1-B6, C1-C6, D1-D2 sono tutte
 eseguite (giri 30-43). Restano solo le voci nate durante l'esecuzione e non ancora
-eseguite: **D5, D6**. Il gruppo E (opzioni) è stato
+eseguite: **D6, D7**. Il gruppo E (opzioni) è stato
 aggiunto ed eseguito ai giri 48-49.
 
 **Vincolo che ha ucciso quasi tutto finora**: ogni realizzo paga 33%, e sopra
@@ -223,6 +223,7 @@ distribuzione nulla.
 | **F4 sistema EMA intraday** | 51 | **FALSIFICATA** — l'orario (1,12%) supera il giornaliero (0,30%). Ma le finestre sono **20 / 2,9 / 0,8 anni**: Twelve Data dà 5.000 barre e basta, quindi il confronto di CAGR fra righe misura il periodo, non il timeframe. Il meccanismo previsto si vede: **7,1 → 33,6 → 133,4** operazioni/anno, e a 15 minuti −18,65% contro +20,30% |
 | F5 ablazione del sistema EMA | 51 | **confermata con margine enorme** — il **solo filtro di tendenza** ha aspettativa per operazione **13,321%** contro **0,564%** del sistema completo: rapporto **0,04**, cioè il sistema completo cattura un ventiquattresimo. Ingressi tattici e piano di uscita fanno entrare tardi e uscire presto |
 | **D3 finestre di lunghezza fissa** | 59 | **confermata** — ampiezza **5,81-10,19 punti** su finestre decennali contro i **0,56** di D1: **18×**. La sovrapposizione media fra campioni passa da **85,5%** (D1) a **13,9%**. Sbagliata solo la clausola sul segno (30,4% invece di ≥33,3% per C1). Risultato collaterale decisivo: **allungando l'orizzonte tutti e tre peggiorano** — H5 da 67,4% a 38,9% di vittorie, C1 da 30,4% a **0/36**. Le 4 peggiori finestre di H5 contengono tutte il 2008 |
+| **D5 quota di vittorie ingannevole** | 62 | **FALSIFICATA** — scarto mediana-media positivo solo per il **28,6%** dei 21 candidati (soglia di falsificazione 60%), e **il segno e' opposto** a quello previsto: domina la coda DESTRA, non la sinistra. Il momentum top-3 vince il 45,7% delle finestre e rende **+1,80%** perche' il massimo e' +14,63%. Un solo caso ingannevole su 21 (low-vol top-10: vince 60,9%, rende −0,59%): **H5 al giro 59 era isolato, le quote di vittorie di F1/E6/H1 NON vanno rilette**. Il fisco non crea code: sposta il livello — corr(rotazione, media) **−0,600**, corr(rotazione, scarto) −0,265 |
 | **A15 peso analitico di ciascun anno** | 61 | **confermata** sul test (monotono in **80/80** finestre storiche, rapporto minimo 5,61 contro la soglia di 4) e **sbagliata sul livello**: il rapporto ultimi/primi triennio va da **10,27 al 2%** a **5,61 al 12%**, mediana storica **5,91** — non il 9,5:1 previsto. Il risultato vero e' che erano **tre quantita' diverse**: aritmetica pura **9,50**, capitale esposto **24,72**, sensibilita' dell'IRR **6,91**. I giri 47 e 58 cercavano un bersaglio che il meccanismo non produce. Errore vs differenze finite **3,5e-05** |
 | **D4 scelta del benchmark** | 60 | **confermata**, e piu' estrema del previsto: il premio di equal-weighting spiega **398%** del margine di H5 (**263%** sulla variante implementabile, **40%** sulla piu' avversa) — la soglia di falsificazione di 1/3 non e' raggiunta in **nessuna** delle tre varianti. Sbagliate due clausole: solo **1 candidato su 3** e' positivo contro il cap-weight, e il premio vale **0,99** punti come portafoglio, non 2-3. **Il contributo della selezione e' −0,61**: il momentum settoriale sceglie peggio del caso dentro lo stesso universo |
 | **DIFETTO in `wbacktest`** | 60 | la rotazione e' calcolata come \|W_t − W_{t−1}\|, che su **pesi costanti fa zero**: l'equal-weight del giro 43 ribilanciava ogni mese **gratis e non tassato**. La rotazione vera e' 0,20×/anno e vale **1,35 punti di IRR** (11,16% → 9,81%). Colpisce ogni valutazione a pesi statici o lenti. Nuova voce D6 per rimisurarle |
@@ -712,3 +713,26 @@ nella direzione in cui erano già.
 *Falsificata se*: la correzione media sta **sotto 0,2 punti** di IRR, oppure
 **almeno un verdetto si ribalta** — nel qual caso non è una nota metodologica ma
 una revisione, e le voci colpite vanno rieseguite una per una.
+
+**D7 — F2 rivalutata contro un equal-weight che paga il suo ribilanciamento**
+Nata al giro 62. Il giro 50 (F2) ha concluso che nessuna delle 15 celle
+posizioni × frequenza batte l'equal-weight statico, col massimo a **top-5 annuale
+10,02% contro 11,16%**: −1,14 punti. Ma quel benchmark è l'equal-weight
+**gratuito** — il giro 60 ha mostrato che `wbacktest` non gli addebita la
+rotazione di 0,20×/anno, che vale **1,35 punti**. Con quella addebitata,
+l'equal-weight mensile vale 9,81% e l'annuale 10,65%, e il divario di F2 si
+chiuderebbe o si invertirebbe. Al giro 62 lo stesso candidato risulta **+2,14
+contro il cap-weight e +1,84 contro l'equal-weight** in media su 46 finestre
+decennali.
+Da rifare: l'intera griglia di F2 (5 concentrazioni × 3 frequenze) contro
+l'equal-weight mensile e annuale **con la rotazione derivata**, riportando IRR
+netta a 33% e 52% e il DSR su N = 15, che è la dimensione della griglia.
+*Predizione*: il top-5 annuale supera l'equal-weight annuale correttamente
+addebitato di **0,5-2 punti**, ma il **DSR resta sotto 0,95** su N=15 e cresce a
+N=1.157 nel registro cumulato, quindi il verdetto di F2 regge come *non
+promosso* pur avendo il segno rovesciato. Cioè: il benchmark era sbagliato, la
+conclusione no.
+*Falsificata se*: il top-5 annuale resta **sotto** l'equal-weight annuale
+correttamente addebitato — nel qual caso il difetto di `wbacktest` non spostava
+nulla e F2 era giusta per intero — **oppure** il DSR supera 0,95, nel qual caso
+c'è per la prima volta un candidato da portare all'holdout.

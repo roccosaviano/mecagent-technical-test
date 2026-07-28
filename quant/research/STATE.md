@@ -182,13 +182,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 59 | **D3 finestre di lunghezza fissa** | confermata | ampiezza **10,19** punti contro i **0,56** di D1: **18×** |
 | 60 | **D4 scelta del benchmark** | confermata | il premio di equal-weighting spiega **263-398%** del margine di H5 |
 | 61 | **A15 peso analitico di ciascun anno** | confermata | rapporto **5,91** mediano, non 9,5; monotono in 80/80 |
+| 62 | **D5 quota di vittorie ingannevole** | **falsificata** | scarto positivo per il **28,6%**, e di segno opposto |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 38 voci eseguite nei giri 30-61:
-**30 confermate, 7 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Restano in coda: **D5, D6**.
+(rotazione concentrata e sistema EMA, giri 50-51). 39 voci eseguite nei giri 30-62:
+**30 confermate, 8 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Restano in coda: **D6, D7**.
 
-Registro a **1.087 tentativi** cumulati.
+Registro a **1.157 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 

@@ -1,0 +1,70 @@
+========================================================================================================
+D5 — quota di vittorie contro rendimento medio, su finestre decennali
+========================================================================================================
+   Universo: 49 settori, 1969-2026. Benchmark: cap-weight dello stesso universo (giro 60).
+   21 candidati, tutti sulla stessa finestra e sullo stesso universo.
+
+   46 finestre decennali, da 1972-1981 a 2017-2026
+
+   candidato                          vince    media   mediana  mediana-media      min      max
+   --------------------------------------------------------------------------------------------
+   momentum 12-2 top-5 annuale        71.7%    2.14%     1.72%         -0.42%   -3.54%   11.61%
+   momentum 12-2 top-10 annuale       69.6%    1.52%     1.37%         -0.16%   -2.42%    7.16%
+   low-vol 36m top-25                 67.4%    0.26%     0.66%          0.40%   -4.61%    2.48%
+   low-vol 36m top-10                 60.9%   -0.59%     0.44%          1.03%   -8.21%    3.40% <<<
+   inverse-volatility (tutti)         56.5%    0.29%     0.23%         -0.07%   -4.95%    2.93%
+   momentum 12-2 top-3                45.7%    1.80%    -0.20%         -2.00%   -4.27%   14.63%
+   momentum 12-2 top-5                45.7%    1.15%    -0.19%         -1.33%   -2.73%   11.22%
+   equal-weight mensile               45.7%    0.30%    -0.11%         -0.41%   -4.93%    3.42%
+   equal-weight annuale               45.7%    0.30%    -0.11%         -0.41%   -4.93%    3.42%
+   filtro di tendenza 10m su EW       45.7%    0.22%    -0.19%         -0.40%   -5.00%    3.31%
+   high-vol 36m top-10                43.5%   -0.11%    -0.68%         -0.58%   -7.53%    6.84%
+   momentum 12-2 top-10               41.3%    0.26%    -0.60%         -0.86%   -3.13%    7.49%
+   low-vol 36m top-5                  34.8%   -1.73%    -0.49%          1.24%  -10.37%    4.34%
+   momentum 12-2 top-25               32.6%   -0.68%    -0.98%         -0.30%   -4.64%    4.71%
+   momentum 12-2 top-1                30.4%   -0.95%    -2.57%         -1.63%  -12.79%   13.66%
+   momentum 1 mese top-10             30.4%   -1.32%    -1.72%         -0.40%   -7.96%    5.65%
+   momentum 6-2 top-10                28.3%   -1.03%    -1.88%         -0.85%   -6.23%    6.23%
+   punteggio misto mom+lowvol         28.3%   -1.05%    -0.71%          0.34%   -5.84%    3.25%
+   momentum 3-2 top-10                23.9%   -2.04%    -1.68%          0.36%   -5.89%    2.35%
+   low-vol 12m top-10                 21.7%   -2.49%    -2.38%          0.11%   -9.10%    1.21%
+   reversione 1 mese top-10            6.5%   -5.91%    -6.33%         -0.42%  -10.70%    0.42%
+
+========================================================================================================
+   VERDETTO
+========================================================================================================
+   Predizione: scarto mediana-media positivo per almeno l'80% dei candidati, E almeno
+   un terzo di quelli che vincono oltre meta' delle finestre ha media <= 0.
+   FALSIFICATA se lo scarto e' positivo per meno del 60%, OPPURE nessun candidato
+   con quota sopra il 50% ha media negativa.
+
+   scarto mediana-media positivo : 6/21 = 28.6%   (previsto >=80%, falsifica sotto 60%)
+   candidati che vincono >50%    : 5/21
+   di questi, con media <= 0     : 1   (20.0%)   (previsto >=33,3%, falsifica se 0)
+   i casi ingannevoli:
+     low-vol 36m top-10               vince 60.9% e rende -0.59% in media
+
+   -> ipotesi D5 FALSIFICATA
+      clausola 'scarto positivo per >=80%': SBAGLIATA
+      clausola 'almeno 1/3 degli ingannevoli': SBAGLIATA
+
+   Il meccanismo previsto era la tassazione sul realizzato. Correlazione fra
+   rotazione e scarto mediana-media, sui 21 candidati:
+     corr(rotazione, scarto) = -0.265
+     corr(rotazione, media)  = -0.600
+
+   CONTROLLO — stessa misura contro l'EQUAL-WEIGHT (benchmark del giro 59):
+     scarto positivo : 8/19 = 42.1%   (contro cap-weight era 28.6%)
+     ingannevoli     : 1/4 che vincono >50%
+     con questo benchmark D5 sarebbe FALSIFICATA
+     -> il segno dello scarto NON dipende dal benchmark
+
+   I cinque che vincono piu' della meta' delle finestre, contro i due benchmark:
+     candidato                         vs cap-w    vs EW
+     momentum 12-2 top-5 annuale          2.14%    1.84%
+     momentum 12-2 top-10 annuale         1.52%    1.23%
+     low-vol 36m top-25                   0.26%   -0.04%
+     low-vol 36m top-10                  -0.59%   -0.89%
+     inverse-volatility (tutti)           0.29%   -0.00%
+
+Tentativi cumulati a registro: 1157
