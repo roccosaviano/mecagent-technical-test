@@ -1,0 +1,54 @@
+====================================================================================================
+L1 — quanto costa ordinare qualche giorno dopo
+====================================================================================================
+   49 settori giornalieri, 1969-07-01 → 2009-12-31 (10223 giorni di borsa).
+   **Holdout 2010-2026 non toccato.** Ritardi: 0, 1, 5, 10, 20 giorni di borsa.
+
+   benchmark equal-weight annuale             0g         1g         5g        10g        20g
+   -----------------------------------------------------------------------------------------
+   IRR netta                              10.09%     10.09%     10.12%     10.13%     10.23%
+   rotazione                              0.071x     0.071x     0.071x     0.072x     0.073x
+
+   momentum 12-2 top-5 mensile                0g         1g         5g        10g        20g
+   -----------------------------------------------------------------------------------------
+   IRR netta                               9.22%      9.44%      8.99%      9.76%     11.09%
+   margine vs EW annuale                  -0.87      -0.65      -1.13      -0.37      +0.86 
+   rotazione                              3.300x     3.283x     3.282x     3.283x     3.284x
+
+   momentum 12-2 top-10 mensile               0g         1g         5g        10g        20g
+   -----------------------------------------------------------------------------------------
+   IRR netta                               9.24%      9.33%      9.15%      8.94%      9.02%
+   margine vs EW annuale                  -0.84      -0.76      -0.97      -1.19      -1.21 
+   rotazione                              2.758x     2.752x     2.754x     2.753x     2.754x
+
+====================================================================================================
+   VERDETTO
+====================================================================================================
+   Predizione: margine monotono decrescente, −0,2/−0,8 ogni 20 giorni, perdita a 1 giorno sotto 0,1,
+   e nessun ritardo rende il margine positivo.
+   FALSIFICATA se il margine non e' monotono, OPPURE un ritardo >= 5 giorni MIGLIORA il margine.
+
+   momentum 12-2 top-5 mensile
+     margine da -0.87 (0g) a +0.86 (20g)   → decadimento -1.72 punti in 20 giorni
+     perdita a 1 giorno solo   : -0.215 punti   (previsto sotto 0,1)
+     monotono decrescente      : NO
+     un ritardo >=5g migliora  : SI
+     qualche ritardo lo rende positivo: SI
+   momentum 12-2 top-10 mensile
+     margine da -0.84 (0g) a -1.21 (20g)   → decadimento +0.36 punti in 20 giorni
+     perdita a 1 giorno solo   : -0.081 punti   (previsto sotto 0,1)
+     monotono decrescente      : NO
+     un ritardo >=5g migliora  : no
+     qualche ritardo lo rende positivo: no
+
+   -> ipotesi L1 FALSIFICATA
+      clausola 'decadimento 0,2-0,8 su 20 giorni': top-5 SBAGLIATA, top-10 centrata
+      clausola 'a 1 giorno sotto 0,1': top-5 SBAGLIATA, top-10 centrata
+      clausola 'nessun ritardo lo rende positivo': top-5 SBAGLIATA, top-10 centrata
+
+   Confronto con il giro 05, che misurava il ritardo in MESI:
+     +2,93 → +2,35 (1 mese) → +2,16 (2 mesi), cioe' −0,58 il primo mese
+     momentum 12-2 top-5 mensile: −-1.72 su 20 giorni di borsa
+     momentum 12-2 top-10 mensile: −0.36 su 20 giorni di borsa
+
+Tentativi cumulati a registro: 1362

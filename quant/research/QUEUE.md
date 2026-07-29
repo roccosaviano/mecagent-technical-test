@@ -11,7 +11,7 @@ aggiunta alza la soglia per tutte).
 
 **STATO: la coda dichiarata è esaurita.** A1-A5, B1-B6, C1-C6, D1-D2 sono tutte
 eseguite (giri 30-43). Restano solo le voci nate durante l'esecuzione e non ancora
-eseguite: **nessuna — la coda e' di nuovo esaurita** (gruppo K completato ai giri 69-72). Il gruppo E (opzioni) è stato
+eseguite: **L2, L3, L4** (gruppo L, aggiunto al giro 73). Il gruppo E (opzioni) è stato
 aggiunto ed eseguito ai giri 48-49.
 
 **Vincolo che ha ucciso quasi tutto finora**: ogni realizzo paga 33%, e sopra
@@ -223,6 +223,7 @@ distribuzione nulla.
 | **F4 sistema EMA intraday** | 51 | **FALSIFICATA** — l'orario (1,12%) supera il giornaliero (0,30%). Ma le finestre sono **20 / 2,9 / 0,8 anni**: Twelve Data dà 5.000 barre e basta, quindi il confronto di CAGR fra righe misura il periodo, non il timeframe. Il meccanismo previsto si vede: **7,1 → 33,6 → 133,4** operazioni/anno, e a 15 minuti −18,65% contro +20,30% |
 | F5 ablazione del sistema EMA | 51 | **confermata con margine enorme** — il **solo filtro di tendenza** ha aspettativa per operazione **13,321%** contro **0,564%** del sistema completo: rapporto **0,04**, cioè il sistema completo cattura un ventiquattresimo. Ingressi tattici e piano di uscita fanno entrare tardi e uscire presto |
 | **D3 finestre di lunghezza fissa** | 59 | **confermata** — ampiezza **5,81-10,19 punti** su finestre decennali contro i **0,56** di D1: **18×**. La sovrapposizione media fra campioni passa da **85,5%** (D1) a **13,9%**. Sbagliata solo la clausola sul segno (30,4% invece di ≥33,3% per C1). Risultato collaterale decisivo: **allungando l'orizzonte tutti e tre peggiorano** — H5 da 67,4% a 38,9% di vittorie, C1 da 30,4% a **0/36**. Le 4 peggiori finestre di H5 contengono tutte il 2008 |
+| **L1 ritardo in giorni** | 73 | **FALSIFICATA su entrambi i rami**: il margine **non e' monotono** e il top-5 ritardato di **20 giorni passa da −0,87 a +0,86**, uno scarto di 1,73 nella direzione opposta. Ma quel +0,86 e' **una cella su dieci** e **non passa il cancello G1** (serve +1,00 come mediana; la mediana dei cinque ritardi e' −0,65): registrato come domanda (voce L4), non come candidato. Quello che regge: **il costo di ordinare il giorno dopo e' 0,08 punti** sul top-10 e 0,22 sul top-5 — il ribilanciamento a mezzanotte non nasconde niente. E l'oscillazione fra un ritardo e l'altro (±0,5) conferma dal lato dei giorni la dispersione che il giro 59 aveva visto dal lato delle finestre |
 | **K4 regola per l'holdout** | 72 | **confermata** — **zero candidati su dodici** passano i quattro cancelli, e l'holdout resta sigillato. Sbagliata la seconda clausola: il cancello piu' selettivo e' **G1 margine (12/12 eliminati)**, non il calendario (7/12) — ma G4 e' poco selettivo solo perche' **cinque candidati mensili lo passano per costruzione**; fra i **sette annuali ne elimina sei**. Nessuno arriva a un punto di margine: il migliore e' **momentum top-5 mensile a +0,56**, che passa G2 (DSR 0,971) e G4 e fallisce G3 per **sette decimi di punto** (66% contro 66,7%). **La regola e' ora in vigore** |
 | **K3 vantaggio del veicolo** | 71 | **FALSIFICATA** — (a) spostare la rotazione dentro il fondo vale **+3,43**, sopra la soglia di 2,77. Ma **non per la rotazione**: scomposto, la correzione della rotazione vale **+0,00** (2,676× → 2,828×, effetto −0,005 punti) e i **+0,66** vengono dai dividendi, che il giro 53 non tassava al detentore diretto. Motivo preciso: chi realizza il 22% al mese ha la base imponibile **gia' azzerata in continuo** — la correzione conta per i portafogli lenti (1,35 punti sull'equal-weight al giro 63) e non per quelli veloci. (b) il vantaggio delle **azioni dirette sull'ETF** e' **+1,09**, dentro i limiti e coerente con la serie registrata (+0,34 su 1990-2023, +0,56 su 1990-2026): cresce con l'orizzonte. **Il wrapper aiuta solo se ruoti**: +0,64 all'ETF sul momentum, +1,09 al diretto sul cap-weight |
 | **K2 PAC interrotto** | 70 | **FALSIFICATA**, su una lettura che ho risolto contro di me: sulla **mediana** delle 64 finestre lo scarto di IRR resta a **0,126** punti, ma su **ogni coppia (k, finestra)** arriva a **1,019** (50 coppie su 1.152 sopra 0,5). Il risultato vero: **l'IRR e' quasi cieca**. Saltare 24 versamenti costa **−8,66% di montante e +0,021 di IRR**; riscattare il 30% costa **−22,51% di montante e −0,016 di IRR**. Sbagliate due clausole: il calo del montante va da **−21,13% a −4,05%** (previsto −8/−12: era la media, non l'intervallo) e il riscatto tocca l'IRR di **−0,072** al massimo, non −0,5. L'effetto sull'IRR **cambia segno al sesto anno**, che e' il profilo del giro 61 visto dal lato dei versamenti |
@@ -999,3 +1000,26 @@ soglie o misure di fragilità.
 *Falsificata se*: nella rilettura emerge un risultato di strategia mai
 contraddetto dai giri successivi e con margine sopra un punto — nel qual caso il
 progetto ha un candidato che non aveva registrato come tale.
+
+**L4 — Il ritardo di venti giorni è davvero uno skip più lungo?**
+Nata al giro 73. Il momentum 12-2 top-5 ritardato di venti giorni di borsa passa
+da **−0,87 a +0,86** contro l'equal-weight annuale. L'ipotesi meccanica è che
+ritardare l'esecuzione di un mese equivalga a **saltare un mese in più**, cioè a
+usare un momentum **12-3** invece del 12-2: se è così, l'effetto deve vedersi
+misurando il 12-3 **direttamente**, senza passare dal ritardo. Se non si vede lì,
+il +0,86 era rumore e va chiuso.
+Da misurare: momentum 12-k top-5 e top-10 mensile per **k = 1, 2, 3, 4, 6**
+(skip crescente) sui 49 settori, contro l'equal-weight annuale con la rotazione
+vera, finestra 1969-2009. Confrontare il 12-3 senza ritardo col 12-2 ritardato di
+venti giorni: se il meccanismo è quello, devono coincidere entro **0,3 punti**.
+*Predizione*: il 12-3 senza ritardo **non riproduce** il +0,86 e resta **sotto lo
+zero**, entro **0,5 punti** dal 12-2 senza ritardo, perché lo skip non è la
+variabile che conta a questa scala. Il profilo del margine in funzione di k è
+**piatto entro ±0,6 punti** su tutti e cinque i valori: nessuno skip è
+sistematicamente migliore. Il +0,86 del giro 73 era il massimo di dieci celle.
+*Falsificata se*: il 12-3 senza ritardo produce un margine **positivo** e **entro
+0,3 punti** dal +0,86 misurato col ritardo — nel qual caso il meccanismo è reale,
+lo skip conta, e va rifatto il gruppo A con lo skip come parametro dichiarato
+invece che fissato a 1 — **oppure** il profilo in k ha un'ampiezza sopra 1,5
+punti, nel qual caso lo skip è un grado di libertà mai contato, come il calendario
+al giro 68.

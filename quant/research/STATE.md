@@ -193,13 +193,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 70 | **K2 PAC interrotto** | **falsificata** | l'IRR e' cieca: −22,51% di montante = **−0,016** di IRR |
 | 71 | **K3 vantaggio del veicolo** | **falsificata** | +3,43 sopra la soglia, ma la rotazione vale **+0,00**: sono i dividendi |
 | 72 | **K4 regola per l'holdout** | confermata | **0 candidati su 12** passano; il cancello che elimina di piu' e' il **margine** |
+| 73 | **L1 ritardo in giorni** | **falsificata** | non monotono; il costo di 1 giorno e' **0,08** punti |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 49 voci eseguite nei giri 30-72:
-**35 confermate, 13 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-**La coda e' di nuovo esaurita.**
+(rotazione concentrata e sistema EMA, giri 50-51). 50 voci eseguite nei giri 30-73:
+**35 confermate, 14 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Restano in coda: **L2, L3, L4**.
 
-Registro a **1.352 tentativi** cumulati.
+Registro a **1.362 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -772,3 +773,21 @@ passano.**
 - **Il più vicino al bersaglio in 72 giri**: momentum 12-2 top-5 mensile passa
   G2 (DSR **0,971**) e G4, e fallisce G3 per **sette decimi di punto percentuale**
   (66% contro 66,7%). Resta comunque a mezzo punto dal margine richiesto.
+- **Il ribilanciamento a mezzanotte non nasconde niente: ordinare il giorno dopo
+  costa 0,08 punti** sul momentum top-10 e 0,22 sul top-5. È la convenzione usata
+  in settantatré giri, ed è la prima volta che viene misurata sui **giorni**
+  invece che sui mesi. Entrambi i valori stanno dentro il rumore e molto sotto i
+  divari con cui il progetto ha respinto le strategie.
+- **Ma il margine a un dato ritardo non è un numero preciso.** Sul top-5 il
+  margine oscilla fra −1,13 e +0,86 al variare del ritardo, **±0,5 punti senza
+  tendenza**. È la stessa cosa che il giro 59 aveva misurato dal lato delle
+  finestre temporali e il giro 68 dal lato del calendario: **la dispersione di
+  questi margini è dello stesso ordine dei margini stessi**, da qualunque lato la
+  si guardi.
+- **Un massimo su dieci celle non è un risultato, ed è ora una regola.** Il top-5
+  ritardato di 20 giorni fa +0,86 contro il −0,87 senza ritardo. Non l'ho
+  registrato come candidato: è il massimo di dieci celle, la **mediana dei cinque
+  ritardi è −0,65**, e non passa il cancello G1 della regola del giro 72, che
+  chiede +1,00 **come mediana**. L'ipotesi meccanica che ne segue — ritardare di
+  venti giorni un segnale 12-2 equivale a usare un 12-3 — va testata
+  **direttamente sul 12-3**, ed è la voce L4.
