@@ -1,0 +1,45 @@
+====================================================================================================
+K3 — il vantaggio del veicolo con la rotazione vera
+====================================================================================================
+   Finestra 1969-07-31 → 2026-05-31 (683 mesi), la stessa del giro 53.
+   Momentum settoriale top-10 mensile. Rotazione che genera il realizzo:
+     convenzione del giro 53 : 2.676x l'anno
+     rotazione VERA          : 2.828x l'anno (+5.7%)
+
+   configurazione                               CAGR   IRR netta
+   -------------------------------------------------------------
+   momentum, rotazione MIA (CGT + div)        12.87%      10.98%
+   momentum DENTRO un fondo, CGT              15.13%      14.42%
+   momentum DENTRO un fondo, ETF UCITS        15.13%      11.62%
+   cap-weight diretto (CGT + div)              8.80%       9.83%
+   cap-weight via ETF UCITS                   10.98%       8.74%
+
+   LE DUE QUANTITA' CHE LA VOCE MESCOLA:
+
+   (a) spostare la rotazione DENTRO il fondo        +3.43 punti   (giro 53: +2,77)
+       scomposizione delle due correzioni:
+         come il giro 53 (nessuna delle due)           +2.77
+         + rotazione vera                              +0.00
+         + dividendi tassati al detentore diretto      +0.66
+   (b) vantaggio del veicolo, AZIONI DIRETTE sull'ETF   +1.09 punti
+       registrato: +0,34 (1990-2023), +0,56 (1990-2026), qui su 1969-2026
+
+   Termine di paragone: equal-weight annuale diretto 9.74%,
+   divario momentum-meno-equal-weight +1.25 punti.
+
+====================================================================================================
+   VERDETTO
+====================================================================================================
+   Predizione: il vantaggio cresce rispetto al +0,34 e finisce fra +0,5 e +2,0 punti,
+   resta sotto i 2,77 del giro 53 e sotto il divario momentum-equal-weight.
+   FALSIFICATA se risulta NEGATIVO, oppure SOPRA 2,77.
+
+   (a) rotazione dentro il fondo        +3.43 punti   FALSIFICA (sopra 2,77)
+   (b) vantaggio del veicolo            +1.09 punti   dentro i limiti
+
+   -> ipotesi K3 FALSIFICATA
+      clausola 'fra +0,5 e +2,0': (a) SBAGLIATA, (b) centrata
+      clausola 'cresce rispetto al +0,34': (b) centrata
+      clausola 'sotto il divario momentum-equal-weight': (a) SBAGLIATA
+
+Tentativi cumulati a registro: 1340

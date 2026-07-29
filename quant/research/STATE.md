@@ -191,13 +191,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 68 | **D10 calendario del ribilanciamento** | confermata | ampiezza **3,65%** sul top-5 contro **0,14%** sull'equal-weight |
 | 69 | **K1 conto in valuta** | confermata | margine max **0,25**, livello **−0,46/−0,77** punti in euro |
 | 70 | **K2 PAC interrotto** | **falsificata** | l'IRR e' cieca: −22,51% di montante = **−0,016** di IRR |
+| 71 | **K3 vantaggio del veicolo** | **falsificata** | +3,43 sopra la soglia, ma la rotazione vale **+0,00**: sono i dividendi |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 47 voci eseguite nei giri 30-70:
-**34 confermate, 12 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Restano in coda: **K3, K4**.
+(rotazione concentrata e sistema EMA, giri 50-51). 48 voci eseguite nei giri 30-71:
+**34 confermate, 13 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Resta in coda: **K4**.
 
-Registro a **1.330 tentativi** cumulati.
+Registro a **1.340 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -710,3 +711,30 @@ Registro a **1.330 tentativi** cumulati.
   è l'IRR che mente, non il montante. **Simmetricamente**: interrompere costa di
   più **presto**, riscattare costa di più **tardi**, perché tardi il 30% è il 30%
   di un portafoglio molto più grande.
+- **La correzione della rotazione conta per i portafogli lenti e non per quelli
+  veloci.** Sul momentum top-10 mensile la rotazione vera passa da **2,676× a
+  2,828×** l'anno e l'effetto sull'IRR è **−0,005 punti**: praticamente zero.
+  Chi realizza il 22% del portafoglio ogni mese ha la base imponibile **già
+  azzerata in continuo**, quindi spostarla al 24% non cambia niente. È il
+  complemento esatto del giro 63, dove la stessa correzione valeva **1,35 punti**
+  sull'equal-weight a 0,20×/anno. **La correzione è grande dove la rotazione è
+  piccola.** La predizione di K3 diceva il contrario ed era sbagliata.
+- **Il wrapper aiuta solo se ruoti**, ed è il risultato operativo più netto del
+  progetto:
+
+  | chi sei | veicolo migliore | margine |
+  |---|---|---:|
+  | ruoti spesso (momentum top-10, 2,8×/anno) | **fondo / ETF UCITS** | **+0,64** |
+  | stai fermo (cap-weight buy&hold) | **azioni dirette** | **+1,09** |
+
+  Due segni opposti che dicono una cosa sola: **l'ETF UCITS compra il diritto di
+  non realizzare e lo paga col deemed disposal**. Chi non realizzerebbe comunque
+  sta comprando un diritto che non usa. Il vantaggio del diretto **cresce con
+  l'orizzonte** (+0,34 su 1990-2023, +0,56 su 1990-2026, **+1,09 su 1969-2026**),
+  perché sono sette cicli di prelievo forzoso al 41/38% contro un solo 33% finale.
+- **Il costo di realizzare, misurato in isolamento, è +3,43 punti** — a parità
+  esatta di rendimento lordo, fra chi ruota in conto proprio e chi lascia ruotare
+  il fondo. Non è un vantaggio disponibile: nessuno lo incassa scegliendo un
+  veicolo, si può solo evitare di perderlo. Di quei 3,43, **+2,77 erano già noti
+  al giro 53**, **+0,66 sono i dividendi** tassati al detentore diretto (giro 56)
+  e **+0,00 è la rotazione**.

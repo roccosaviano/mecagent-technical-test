@@ -1329,3 +1329,13 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 70,K2 PAC interrotto,anno k=16,1926-2009,,0.024501332545527887,,-4.740004514307106,64,riscatto_irr=0.115
 70,K2 PAC interrotto,anno k=17,1926-2009,,0.015270241938604379,,-4.396048869322194,64,riscatto_irr=0.128
 70,K2 PAC interrotto,anno k=18,1926-2009,,0.00876252688342305,,-4.054258490706869,64,riscatto_irr=0.087
+71,K3 vantaggio del veicolo,"momentum, rotazione MIA (CGT + div)",1969-2026,,10.981476176706357,,,683,rotazione vera
+71,K3 vantaggio del veicolo,"momentum DENTRO un fondo, CGT",1969-2026,,14.415092567359444,,,683,rotazione vera
+71,K3 vantaggio del veicolo,"momentum DENTRO un fondo, ETF UCITS",1969-2026,,11.621885779202259,,,683,rotazione vera
+71,K3 vantaggio del veicolo,cap-weight diretto (CGT + div),1969-2026,,9.829768893528984,,,683,rotazione vera
+71,K3 vantaggio del veicolo,cap-weight via ETF UCITS,1969-2026,,8.737826059602206,,,683,rotazione vera
+71,K3 vantaggio del veicolo,"momentum, rotazione MIA (CGT + div)",1969-2026,,10.981476176706357,,,683,rotazione vera
+71,K3 vantaggio del veicolo,"momentum DENTRO un fondo, CGT",1969-2026,,14.415092567359444,,,683,rotazione vera
+71,K3 vantaggio del veicolo,"momentum DENTRO un fondo, ETF UCITS",1969-2026,,11.621885779202259,,,683,rotazione vera
+71,K3 vantaggio del veicolo,cap-weight diretto (CGT + div),1969-2026,,9.829768893528984,,,683,rotazione vera
+71,K3 vantaggio del veicolo,cap-weight via ETF UCITS,1969-2026,,8.737826059602206,,,683,rotazione vera
