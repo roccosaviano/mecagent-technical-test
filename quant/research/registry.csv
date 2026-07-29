@@ -1364,3 +1364,4 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 74,L2 costo retail,momentum top-5 annuale,1969-2009,,1.2977739449641685,0.7665756177002994,0.5311983272638692,486,divario prop -> retail
 74,L2 costo retail,momentum top-5 mensile,1969-2009,,2.4556438828150817,1.7944045657338403,0.6612393170812414,486,divario prop -> retail
 74,L2 costo retail,momentum top-10 mensile,1969-2009,,1.5705754142851305,1.0282875521882922,0.5422878620968383,486,divario prop -> retail
+75,L3 report finale,scan excess>=+1.0,registro,,,,,1365,30 gruppi da esaminare

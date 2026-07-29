@@ -1,494 +1,406 @@
 # Attivo contro passivo, netto di fiscalità irlandese
 
-PAC da €500/mese, finestra 1990-01 → 2023-12 (408 versamenti, €204.000 versati).
-Tutto netto di costi (0,15% round-trip) e imposte irlandesi.
+**Report finale — settantaquattro giri, 1.366 tentativi a registro, holdout mai aperto.**
+
+Domanda: *esiste una strategia attiva che, per un residente fiscale irlandese che
+versa €500 al mese per vent'anni o più, batta un PAC buy&hold netto di costi e
+imposte?*
+
+Risposta: **no**, e questo report dice con quanta forza, con quali limiti, e cosa
+resta di utilizzabile — che non è una strategia.
+
+> Questo documento sostituisce la versione del giro 29, che portava in prima
+> pagina un **+1,72** poi rivelatosi sbagliato per due correzioni successive (vedi
+> *[Tre errori di misura](#tre-errori-di-misura-trovati-e-corretti)*). Il dettaglio
+> giro per giro sta in [`../research/rounds/`](../research/rounds/), le ipotesi
+> pre-registrate in [`../research/QUEUE.md`](../research/QUEUE.md), lo stato del
+> metodo in [`../research/STATE.md`](../research/STATE.md), e ogni singola
+> configurazione valutata in `../research/registry.csv`.
 
 ---
 
-## La risposta
+## Come è stato condotto
 
-**Nessuna strategia attiva basata su un pattern di mercato batte il buy&hold netto
-di tasse.** Le uniche due cose che aggiungono valore non sono strategie: sono la
-scelta del veicolo fiscale (+1,72 punti l'anno) e una riduzione di rischio che va
-poi rilevereggiata (trend following mensile).
+Cinque regole, mai cambiate dopo aver visto un risultato.
 
-Il margine totale disponibile, tolto tutto ciò che non sopravvive alla verifica,
-è di circa **1,7 punti l'anno**, e sta interamente nel *non* comprare un ETF UCITS.
-Su €204.000 versati in 34 anni sono €314.000 di montante finale in più — più di
-quanto produca qualunque strategia testata qui.
+1. **Pre-registrazione.** Ogni ipotesi ha una *predizione* e una *condizione di
+   falsificazione* scritte e committate **prima** dell'esecuzione. Nessuna è stata
+   riscritta dopo i dati: quando una voce si è rivelata mal posta o
+   autocontraddittoria (E2 al giro 49, L2 al giro 74) l'ho dichiarato prima di
+   eseguire e ho misurato la voce così com'era.
+2. **Walk-forward.** Dal giro 03 in poi i parametri di ogni anno *Y* si scelgono
+   solo su ciò che precede *Y*. Nessuna ottimizzazione sull'intero campione.
+3. **Fiscalità irlandese sempre applicata**: CGT 33% al realizzo con esenzione
+   €1.270 e riporto delle minusvalenze; ETF UCITS a exit tax 41/38% con deemed
+   disposal ogni 8 anni e **senza** compensazione delle perdite; DIRT 33% sulla
+   liquidità; dividendi esteri ~52%; e **riqualificazione a 52% sopra ~100% di
+   rotazione annua**.
+4. **Deflated Sharpe** con *N* = dimensione della griglia se c'è selezione,
+   altrimenti la famiglia pre-dichiarata; `var_sr` stimata entro la famiglia del
+   giro. Il registro cumulato è la soglia del progetto.
+5. **Holdout 2010-2026 sigillato.** Mai aperto, in settantaquattro giri.
+
+Ogni esito è registrato, comprese le ipotesi fallite: **35 confermate, 15
+falsificate, 1 senza esito per dati** fra le voci di coda dei giri 30-74, più i
+ventinove giri esplorativi iniziali.
 
 ---
 
-## Quello che non ho potuto testare
+## La risposta, in un paragrafo
 
-Da dichiarare prima dei risultati, perché limita le conclusioni.
+Sulle **1.365 configurazioni** registrate nei settantaquattro giri, la **mediana
+dell'extra-rendimento contro il proprio benchmark è −1,32 punti** e solo il
+**30,3%** è positivo. Nessun candidato
+supera la regola di apertura dell'holdout scritta al giro 72. Il migliore in
+settantaquattro giri — momentum 12-2 top-5 mensile sui 49 settori — arriva a
+**+0,56 punti** contro l'equal-weight annuale dello stesso universo, e per
+arrivarci deve ruotare 2,8 volte l'anno, cioè pagare il 52% invece del 33%.
 
-| Cosa | Stato | Perché |
+Quello che resta di utilizzabile riguarda **il veicolo, il calendario e la
+rotazione**: dove metti i titoli, quanto spesso li tocchi, e chi preme il bottone
+del realizzo. Non quale segnale segui.
+
+---
+
+## La regola per aprire l'holdout — in vigore dal giro 72
+
+Scritta **quando non esisteva nessun candidato che potesse passarla**, per non
+poterla adattare a un candidato. Un candidato merita l'holdout solo se passa
+**tutti e quattro** i cancelli.
+
+| | cancello | soglia |
 |---|---|---|
-| OHLC di SPY, QQQ, IWM, EFA, EEM, GLD, TLT | **non scaricabile** | Yahoo Finance risponde `429 Too Many Requests` in modo persistente; Stooq e stooq.pl rispondono con un muro anti-bot JavaScript; AlphaVantage richiede API key |
-| RSP (equal-weight ETF) per il test 12 | **non scaricabile** | stessa ragione |
-| Strategia 4 con stop a N **ATR** | **non testabile come specificata** | senza High/Low giornalieri l'ATR non è calcolabile. Ho usato uno stop a N deviazioni standard close-to-close, che **non è la stessa strategia** ed è etichettato come sostituto ovunque |
-| Diversità a livello di **singolo titolo** S&P 500 | **non testabile** | serve CRSP/Compustat a livello firm. Ho misurato la diversità fra 49 settori, che **sottostima** la concentrazione vera: dentro "Tecnologia" il peso di una singola società non si vede |
+| **G1** | margine | IRR ≥ benchmark **+1,00 punto**, come **mediana sui dodici calendari** di ribilanciamento |
+| **G2** | Deflated Sharpe | **> 0,95** su *N* = registro cumulato |
+| **G3** | stabilità | extra positivo in **≥ 2/3** delle finestre decennali mobili **E** mediana degli extra **> 0** |
+| **G4** | calendario | margine positivo in **≥ 10 dei 12** mesi di ribilanciamento |
 
-**Sostituzioni fatte, tutte con dati reali e nessuna simulazione:**
+Benchmark: **equal-weight annuale dello stesso universo, con la rotazione vera**.
+Se un candidato passa, l'holdout si apre **una volta sola, su quello solo**, e il
+risultato si registra qualunque sia.
 
-- Gruppo A gira sull'indice total return CRSP giornaliero di Ken French
-  (1926-2026, 26.253 sedute) e sui 49 portafogli settoriali giornalieri. È un
-  campione **più lungo e più pulito** dei 7 ETF richiesti, ma è un solo mercato.
-- Gruppo D usa i 49 settori con capitalizzazioni reali (numero di società ×
-  dimensione media, pubblicati da French mese per mese).
-- Gruppo C usa Shiller `ie_data.xls`, la stessa fonte dei tuoi riferimenti.
+**Applicata ai dodici candidati riproducibili: zero passano.**
 
-Fonti effettivamente usate: Ken French Data Library, Robert Shiller, AQR
-(*Betting Against Beta: Equity Factors, Monthly*), Open Source Asset Pricing
-(Chen & Zimmermann, 212 anomalie replicate). Tutte verificate e riscaricabili
-con `quant/fetch_data.sh`.
+- **G1 elimina 12 su 12.** Nessuno arriva a un punto di margine.
+- G2 ne elimina 10, G3 ne elimina 10, G4 ne elimina 7 (ma **6 su 7** fra i soli
+  candidati annuali: i mensili lo passano per costruzione).
+- Il più vicino al bersaglio: **momentum 12-2 top-5 mensile**, che passa G2 (DSR
+  0,971) e G4 e fallisce G3 per **sette decimi di punto percentuale** (66,0%
+  contro 66,7%) — restando comunque a mezzo punto dal margine richiesto.
+
+L'holdout resta sigillato. Non è prudenza: è che **non c'è niente da testarci**.
 
 ---
 
-## Gate di calibrazione
+## I numeri che contano
 
-Prima di qualunque risultato, ho riprodotto i tuoi due numeri di riferimento.
+Criterio, dichiarato prima di contare: un numero entra qui se **(a)** non è stato
+contraddetto da nessun giro successivo e **(b)** regge una conclusione o una
+raccomandazione. Sono **dodici**. La predizione della voce L3 diceva «meno di
+dieci»: **sbagliata**, e sbagliata per difetto.
 
-| | mio | tuo | delta |
+### Costi e soglie — cosa ti costa muoverti
+
+| # | numero | cosa dice | giro |
+|---|---:|---|---:|
+| 1 | **1,35 punti** | il costo della rotazione vera di un equal-weight annuale (11,16% → 9,81%). Un portafoglio "che non fa niente" deriva coi prezzi e va ricomprato | 60, 63 |
+| 2 | **100%/anno** | la soglia di riqualificazione fiscale è un **gradino**, non un aggiustamento: attraversarla vale ~19 punti di aliquota. Rinunciare all'ultimo 10% di rotazione per restare sotto costa 0,11-0,59 punti di CAGR lordo e ne rende fino a +1,02 netti | 64, 66 |
+| 3 | **3,65% / 0,14%** | l'ampiezza del margine al variare del **mese di ribilanciamento**, su un top-5 e su un equal-weight. Il grado di libertà del calendario esiste solo per chi seleziona, e scala con la concentrazione | 68 |
+| 4 | **+1,09 / +0,64** | il vantaggio del veicolo, **di segno opposto** a seconda di cosa fai: +1,09 alle azioni dirette se stai fermo, +0,64 all'ETF UCITS se ruoti | 71 |
+| 5 | **+3,43 punti** | il costo di realizzare, misurato in isolamento a parità esatta di lordo. Scomposto: **+0,00 la rotazione**, +0,66 i dividendi, il resto il differimento. Non è incassabile: si può solo evitare di perderlo | 53, 71 |
+| 6 | **€7.350/mese** | la rata sotto cui un PAC su 49 posizioni comprate una per una è antieconomico (soglia = *P* × €1,50 / 1%). A €750 il 14,7% del versamento se ne va in commissioni | 74 |
+| 7 | **max 15,3%** | la quota **fiscale** della perdita di un'allocazione multi-asset contro l'azionario puro. L'84-92% è composizione: il decennale rende meno delle azioni, e nessun metodo di allocazione lo ripara | 44, 45 |
+
+### Fragilità — quanto vale un margine misurato
+
+| # | numero | cosa dice | giro |
+|---|---:|---|---:|
+| 8 | **5,81-10,19 punti** | l'ampiezza dei margini su finestre decennali di lunghezza fissa, contro gli 0,56 punti che si vedono spostando solo la data di partenza: **18×**. La dispersione di questi margini è dello stesso ordine dei margini stessi — confermato dal lato del calendario (3,65) e da quello dei giorni di ritardo (±0,5) | 59, 68, 73 |
+| 9 | **263-398%** | quanto del margine del miglior candidato è spiegato dalla **scelta del benchmark**. Il contributo della selezione è **−0,61**: il momentum settoriale sceglie *peggio del caso* dentro lo stesso universo | 60 |
+| 10 | **−22,51% = −0,016** | l'IRR è quasi cieca ai cashflow: riscattare il 30% a metà percorso costa **22,51% di montante** e sposta l'IRR di **sedici millesimi di punto**. Se ti interessa quanto avrai, guarda il montante, non l'IRR | 70 |
+| 11 | **2 su 201** | le anomalie pubblicate che sopravvivono a t>2 post-pubblicazione, costruzione value-weighted, capacità e costi retail. Il filtro che decide non è la significatività: **solo 22 su 201 sono value-weighted**, le altre sono guidate da microcap non eseguibili con €500 al mese | 10 |
+| 12 | **5,91×** | quanto pesa l'ultimo triennio di un PAC ventennale rispetto al primo, calcolato analiticamente (∂IRR/∂r) e non stimato. Tre quantità diverse che tre giri avevano confuso: aritmetica pura 9,50, capitale esposto 24,72, **sensibilità dell'IRR 6,91** | 61 |
+
+**Nessuno dei dodici è un margine di strategia.** Sono sette costi o soglie, cinque
+misure di fragilità o di metodo. Questa metà della predizione L3 è centrata.
+
+---
+
+## Il controllo di falsificazione, fatto dalla macchina
+
+La voce L3 sarebbe stata falsificata se nella rilettura fosse emerso **un
+risultato di strategia mai contraddetto dai giri successivi e con margine sopra un
+punto**. Non l'ho cercato a memoria: ho scandagliato il registro cumulato.
+
+Su 1.365 righe, **213 (15,6%) hanno un extra ≥ +1,00 punto**, raggruppate in
+**30 ipotesi distinte**. Ognuna esaminata:
+
+| famiglia | gruppi | perché non sopravvive |
+|---|---:|---|
+| **cripto** (H20, H21, H24, H28, B6, F1) | 6 | finestre 2017-2026 con sopravvivenza selezionata — allargare l'universo ai simboli **oggi quotati** fa **salire** il buy&hold da 22,6% a 55,3% (giro 39). E il DSR li respinge dove è stato calcolato: 0,443 sul VWAP trimestrale, 0,880 sul Donchian. Il solo con DSR 0,999 (Kronos, giro 26) batte il buy&hold su **1 simbolo su 2** e ha accuratezza direzionale 50,8% contro 49,5% attesa, **χ² p = 0,671** |
+| **anomalie pubblicate** (H10) | 1 | 78 righe sopra un punto, mediana +4,23 — ma sono premi lordi post-pubblicazione. Passano i quattro filtri **2 su 201**, e l'unica testata come strategia (Gross Profitability, giro 11) dà DSR 0,709 |
+| **candidati storici** (H5, H11a/b/c, H12, H13) | 6 | i margini del 2024: +2,95, +3,08, +3,30, +1,38, +2,23. Contraddetti tre volte: contro l'equal-weight **dello stesso universo** sono negativi in **60 casi su 60** (giro 43); il benchmark spiega il 263-398% del margine (giro 60); e tutti e dodici cadono su G1 (giro 72). Il +2,23 di H13 crolla a **+0,75** già solo passando all'aliquota giusta per la sua rotazione, che era misurata con la convenzione difettosa |
+| **opzioni** (E0, E1, E5, E6) | 4 | E1 è un premio reale (VIX sopra la realizzata nell'83,0% dei mesi, +3,91 punti) ma **incassarlo perde**: −4,98 vendendo put, −2,92 con gli indici CBOE reali. E5/E6: il +1,34 dei LEAPS è **stabile nel tempo** (17 finestre su 17) e muore per un'altra ragione — un rincaro del 10% del premio d'ingresso, cioè lo spread normale di un'opzione lunga poco liquida |
+| **veicolo e metodo** (G2, D2, D4, D5, D8, D10, K4, A15, E0) | 9 | non sono margini di strategia: sono il premio di equal-weighting (+0,99 come portafoglio), il costo di realizzare, la sensibilità analitica dell'IRR, l'ampiezza del calendario. Dove *sembrano* margini, sono contraddetti nello stesso giro: il +3,82 del bootstrap è **lordo** e vale −1,20 netto; i +1,85/+1,99 del calendario sono i mesi migliori di dodici, la cui **mediana è −0,46**; il +2,35 del giro 65 è contro l'equal-weight **mensile** e torna negativo contro quello annuale |
+| **multi-asset e regimi** (H1, H25, H26, F3/F4, B5) | 4 | respinti dal DSR nel proprio giro: 0,328 / 0,097 / 0,670 / —. Il +10,09 del sistema EMA è **LTC, il cui buy&hold fa −17%** |
+
+**Nessun gruppo sopravvive. L3 non è falsificata.**
+
+Un dettaglio che vale la pena isolare, perché è il modo tipico in cui questi
+numeri nascono: il **+13,11 di Kronos** (giro 26) fu registrato come
+«PROMUOVIBILE» con DSR 0,999. È ETH; su BTC la stessa strategia fa **−22,7
+punti**. Un massimo su due celle, con un χ² che dice che il segnale non c'è. La
+stessa forma del +0,86 del giro 73 (massimo di dieci celle, mediana −0,65) e del
++1,51 del giro 65 (gennaio, secondo mese migliore su dodici, mediana −0,46).
+
+---
+
+## Tre errori di misura trovati e corretti
+
+Tutti e tre spingevano nella stessa direzione — **far sembrare l'attivo migliore
+di quello che è** — e tutti e tre sono stati trovati dal progetto stesso, non
+dall'esterno.
+
+### 1. La base imponibile alla liquidazione *(il più grave)*
+
+La plusvalenza finale era calcolata contro il valore del portafoglio al **primo
+versamento** (~€500) invece che contro i **versamenti cumulati** (€204.000): il
+motore tassava quasi l'intero montante. Segnalato dall'utente, che aveva notato
+che i numeri non tornavano con un CAGR dell'S&P intorno al 10%.
+**Effetto**: benchmark 8,11% → 8,40%. Il regime ETF non ne era toccato, perché
+tiene la base per lotti.
+
+### 2. I lotti dell'ETF non venivano ridotti *(giro 53)*
+
+Liquidando quote per pagare l'imposta, il motore riduceva le `units` globali ma
+**non i lotti**: la somma dei lotti restava gonfia e ogni deemed disposal
+successivo tassava quote inesistenti. Su 57 anni e sette cicli il portafoglio si
+azzerava — €3,48 M di imposte su €344.500 versati. C'era già una pezza al solo
+realizzo finale: avevo notato la deriva e corretto il punto sbagliato.
+**Effetto**: vantaggio del veicolo da +2,15 a **+1,23** su 1990-2023.
+
+### 3. La rotazione era misurata con la convenzione sbagliata *(giri 60 e 63)*
+
+`wbacktest` calcolava la rotazione come |W*ₜ* − W*ₜ*₋₁| sui **pesi target**, che
+su pesi costanti fa **zero**: l'equal-weight ribilanciava ogni mese *gratis e non
+tassato*. Ma l'errore ha **due versi**, e questa è la parte che non mi aspettavo:
+altre routine usavano |W_detenuti,*ₜ* − W_detenuti,*ₜ*₋₁|, che **sovrastima**
+contando la deriva dei prezzi come scambio.
+
+La rotazione vera è **|W_target,*ₜ* − W_detenuti,*ₜ*| / 2**: quello che
+effettivamente si compra e si vende. Per un equal-weight annuale vale **0,071×**,
+contro lo 0,239× e lo 0,251× delle due convenzioni sbagliate.
+**Effetto**: 1,35 punti sul benchmark principale, e **il 57,1% dei verdetti
+riesaminati cambia segno** (giro 65) — senza però produrre una sola promozione,
+perché contro il benchmark corretto tornano negativi.
+
+### E una quarta correzione, di natura diversa
+
+**I dividendi non erano tassati al detentore diretto** (giro 56). Nei confronti
+CGT-contro-ETF passavo la serie total return senza `div_yield`, il che equivale a
+far accumulare i dividendi esentasse anche a chi tiene le azioni in proprio — vero
+per un fondo ad accumulazione, falso per un residente irlandese che paga ~52%
+ogni anno.
+
+| dividend yield | vantaggio 1990-2023 | vantaggio 1990-2026 |
+|---:|---:|---:|
+| 0,0% (quello che avevo usato) | +1,23 | +1,49 |
+| **2,0% (storico S&P)** | **+0,34** | **+0,56** |
+
+**È qui che muore il +1,72 del report del giro 29.** La catena completa:
++1,72 → +2,01 (base fiscale) → +2,15 → **+1,23** (lotti ETF) → **+0,34**
+(dividendi), sulla stessa finestra 1990-2023. Il numero è ancora positivo e
+**cresce con l'orizzonte** (+0,56 su 1990-2026, **+1,09** su 1969-2026), ma non è
+più la voce dominante del progetto: è un ordine di grandezza diverso da quello che
+avevo scritto in prima pagina.
+
+---
+
+## Cosa è stato provato, e come è morto
+
+Settantaquattro giri, per famiglia. Il dettaglio sta nei mini-report.
+
+| famiglia | provato | esito | il numero |
 |---|---|---|---|
+| **Swing / trading tecnico** | RSI2, down-streak, Donchian, trend+stop, sistemi EMA 9/21/50/200 su 10 asset e 3 timeframe | nessun edge, spesso **negativo già in-sample** | il **solo filtro di tendenza** rende 24 volte il sistema completo: 13,321% contro 0,564% di aspettativa per operazione |
+| **Momentum / rotazione settoriale** | 12-2 e 6-2, top-1/3/5/10/25, mensile/trimestrale/annuale, isteresi, hold minimo, budget di rotazione, ritardo di esecuzione 0-20 giorni | il miglior candidato del progetto, e **non basta** | +0,56 contro l'equal-weight annuale; da 1 a 5 posizioni valgono +5,5 punti di IRR e **+27 di drawdown** |
+| **Allocazione e sizing** | risk parity, HRP, min-variance, max-diversification, Kelly frazionario, de-risking, leva con margin call ESMA | il de-risking migliora il drawdown in **12 casi su 12** e l'IRR in **0 su 12** | lo Sharpe più alto della ricerca (**1,19** contro 0,69) rende **4,24 punti di IRR in meno**. E la leva **distrugge** lo Sharpe che doveva monetizzare (0,78 → 0,69) |
+| **Anomalie pubblicate** | 201 anomalie con ≥10 anni post-pubblicazione (Chen-Zimmermann) | decadimento del 50,4% confermato; **2 sopravvivono ai quattro filtri** | 22 su 201 sono value-weighted |
+| **Mercati nuovi** | materie prime, valute, credito, curva dei tassi, azionario internazionale, cripto | il trend following sulle commodity **funziona lordo e muore netto**: 5,31% contro 3,76% del buy&hold, ma 3,75% contro 9,90% dell'azionario | la curva dei tassi ha ragione **12 volte su 13** con 13 mesi di anticipo — e la strategia perde comunque 1,2-2,6 punti |
+| **Opzioni** | premio di varianza, put cash-secured, covered call, LEAPS come leva | il premio è reale, **incassarlo perde** | vendere put: Sharpe lordo 0,77 > 0,71, IRR netta **−4,98**, skew da −4,15 a **−12,57** |
+| **Regimi** | HMM, catena di Markov, breadth, VIX term structure, **statistical jump model** (Aydınhan-Kolm-Mulvey-Shu 2024) | il jump model perde in **21 configurazioni su 21** sia long sia long/short | **migliora quanto meno lo si ascolta**: a λ=200 cambia stato una volta ogni 17 anni, sta investito l'84,4% del tempo, e il divario si chiude da −4,77 a −1,63. Ciò che si compra con la persistenza è il diritto di stare fermi, e stare fermi al 100% si chiama buy&hold |
+| **Portfolio theory stocastica** | diversity-weighting, identità di Fernholz su 437 mesi | **il teorema è vero e il trade è in perdita**: γ* = 1,12%/anno esiste, la deriva della diversità lo annulla *prima* delle imposte | l'orizzonte su cui il teorema **garantisce** l'arbitraggio relativo è **6.484 anni** per p=0,50 |
+| **Metodo** | dispersione per finestra, bootstrap a blocchi, benchmark, rotazione, calendario, valuta, PAC interrotto, costi retail | quasi ogni giro metodologico ha trovato **un difetto di misura o un grado di libertà mai contato**, non un edge | vedi *[I numeri che contano](#i-numeri-che-contano)* |
+
+---
+
+## Cosa cambia rispetto al report del giro 29
+
+Chi ha letto la versione precedente trova qui tre cose diverse. Le elenco perché
+due di esse erano **raccomandazioni**, e sono state ritirate.
+
+| il giro 29 diceva | oggi | perché |
+|---|---|---|
+| **«Il veicolo vale +1,72 punti l'anno, è il risultato più grande e affidabile del lavoro»** | **+0,34** sulla stessa finestra, +1,09 su 1969-2026 | due correzioni: i lotti ETF (giro 53) e i dividendi non tassati al detentore diretto (giro 56). La raccomandazione **regge nel verso**, non nella taglia — e vale solo per chi sta fermo |
+| **«Il trend following mensile a 10 mesi è l'unica strategia attiva che regge tutti gli stress; a 2× rende +3,70»** | **ritirata** | la leva col margin call ESMA modellato dà **−4,18** (giro 07), e a 1,50× su min-variance il margin call scatta con equity al 2,3% (giro 35). Testati sistematicamente al giro 53, **nessun filtro di tendenza batte il buy&hold**: il migliore perde **2,51** punti — e vince fra i filtri solo perché ruota 0,19×/anno contro 1,3-2,2 degli altri. In cambio di 18-40 punti di drawdown |
+| «Il gruppo D è un teorema vero e un trade in perdita» | **invariata** | γ* = 1,12%/anno esiste, l'identità di Fernholz torna, la deriva della diversità la annulla, le imposte portano il residuo sotto zero |
+
+Il giro 29 aveva anche scritto che il trend following andava «trattato con
+sospetto per tre ragioni che il backtest non cattura». Erano le ragioni giuste, e
+il sospetto era troppo blando: quando i tre punti sono stati misurati invece che
+sospettati, la strategia è caduta.
+
+---
+
+## Quello che il progetto non può dire
+
+Da leggere prima delle raccomandazioni.
+
+- **Un solo mercato, in sostanza.** Il grosso gira sull'universo di Ken French
+  (indice CRSP e 49 portafogli settoriali, 1926-2026). Lungo e pulito, ma è
+  l'azionario USA. Il confronto globale-contro-USA (giro 57) dà +1,89 punti
+  all'S&P sui dati reali 2011-2026 — e l'USA vince solo il **73%** delle finestre
+  decennali, con le sette perse che partono **tutte fra il 1995 e il 2001**.
+- **Il livello dei rendimenti è in dollari.** Convertito in euro (giro 69,
+  DEM sintetico a 1,95583 prima del 1999), l'azionario USA ha reso **0,46-0,77
+  punti l'anno in meno** di quanto scritto ovunque nel progetto. **Nessun verdetto
+  cambia** — il margine si sposta al massimo di 0,25 punti — ma il livello sì.
+- **Niente dati a livello di singolo titolo.** La diversità è misurata **fra 49
+  settori**, il che sottostima la concentrazione vera: dentro "Tecnologia" il peso
+  di una singola società non si vede. Serve CRSP/Compustat firm-level.
+- **Serie bloccate**: OHLC di SPY/QQQ/IWM/EFA/EEM/GLD/TLT non scaricabili (Yahoo
+  429, Stooq anti-bot), quindi nessuno stop in ATR; l'high yield ICE
+  (`BAMLH0A0HYM2`) si scarica solo per 35 mesi contro i 30 anni necessari, e la
+  voce B3 è chiusa **senza esito**.
+- **Il motore fiscale aggrega.** Tiene un solo costo medio e realizza pro quota,
+  mentre nella realtà si vendono posizioni specifiche e vendere un perdente
+  cristallizza una minusvalenza. Misurato con un motore per posizione scritto
+  apposta: **da +0,10 a +0,41 punti a favore delle strategie che ruotano**. Il
+  divario più stretto mai registrato è 1,14 punti, quindi nessun verdetto cambia —
+  ma il numero va sottratto mentalmente da ogni margine di una strategia veloce.
+- **L'holdout 2010-2026 non è mai stato guardato.** Tutto ciò che sta qui è
+  1969-2009 (o la finestra dichiarata voce per voce).
+
+---
+
+## Raccomandazioni operative
+
+Poche, e nessuna riguarda quale segnale seguire.
+
+### 1. Il veicolo, ma nel verso giusto — e non è quello che avevo scritto
+
+| chi sei | veicolo migliore | margine |
+|---|---|---:|
+| **stai fermo** (buy&hold, cap-weight) | **azioni / indice in regime CGT** | **+1,09** |
+| **ruoti spesso** (2,8×/anno) | **fondo o ETF UCITS** | **+0,64** |
+
+Due segni opposti che dicono una cosa sola: **l'ETF UCITS compra il diritto di non
+realizzare, e lo paga col deemed disposal ogni otto anni**. Chi non realizzerebbe
+comunque sta comprando un diritto che non usa. Il vantaggio del diretto **cresce
+con l'orizzonte** (+0,34 su 1990-2023, +1,09 su 1969-2026): sono sette prelievi
+forzosi al 41/38% contro un solo 33% finale.
+
+Il corollario è scomodo ma è il risultato più solido del progetto: **se proprio
+vuoi una strategia che ruota, la cosa che conta di più non è la strategia — è non
+essere tu a premere il bottone del realizzo.** A parità esatta di rendimento
+lordo, spostare la rotazione dentro un fondo vale **+3,43 punti**. Non è un
+vantaggio disponibile — nessuno lo incassa scegliendo un prodotto — ma è la misura
+di quanto costa realizzare in conto proprio.
+
+### 2. Non superare il 100% di rotazione annua. Mai.
+
+Non è una linea morbida: è un **gradino** da 33% a 52%. Un budget di rotazione
+esplicito (ribilanciamento parziale, ~0,95×/anno) fa guadagnare **+0,79 e +1,02
+punti** alle configurazioni che grazie a esso **riattraversano la soglia** — e
+**−0,09** a quella che era già sotto. Vincolare di per sé non giova: giova
+scavalcare la soglia nel verso giusto. Rinunciare all'ultimo 10% di rotazione
+costa 0,11-0,59 punti di CAGR **lordo** e ne rende molti di più netti.
+
+### 3. Se selezioni, il mese in cui ribilanci è una scelta, non un dettaglio
+
+Vale **3,65 punti di ampiezza** su un top-5 e **0,14** su un equal-weight. Il
+grado di libertà esiste solo per chi seleziona, e **scala con la concentrazione**.
+Chi sceglie il mese guardando il passato si sta regalando un parametro libero mai
+contato: al giro 65 il +1,51 di gennaio era il secondo mese migliore su dodici, e
+la mediana dei dodici era **−0,46**.
+
+### 4. Un PAC frammentato in azioni singole non è un prodotto retail
+
+Soglia: *P* × €1,50 / 1%. Su 49 posizioni servono **€7.350 al mese** perché le
+commissioni del versamento restino sotto l'1%; a €750 se ne va il **14,7%**. E
+concentrare il versamento in un ordine solo **non serve** se poi ribilanci: gli
+ordini si spostano, non spariscono (636 → 600 all'anno, IRR identica). Un
+equal-weight diversificato si compra **come fondo** — per le commissioni, prima
+ancora che per le imposte.
+
+### 5. Guarda il montante, non l'IRR
+
+L'IRR è quasi cieca alle irregolarità dei versamenti: saltare 24 rate costa
+**−8,66% di montante** e sposta l'IRR di **+0,021**; riscattare il 30% costa
+**−22,51% di montante** e **−0,016** di IRR. Se la domanda è «quanto avrò», l'IRR
+non è lo strumento — e l'effetto **cambia segno intorno al sesto anno**, il che è
+lo stesso profilo che si vede dal lato analitico (l'ultimo triennio pesa 5,91
+volte il primo).
+
+### 6. E su tutto il resto: non fare niente
+
+Il ribilanciamento è un evento tassabile e, in questo regime, quasi sempre in
+perdita. Vale per il diversity-weighting, per l'equal-weighting e per qualunque
+schema a pesi fissi. Con CGT al 33% e nessun conto fiscalmente protetto, **la
+strategia migliore è quella che non vende** — e il suo avversario, un cap-weight
+che non si ribilancia mai perché i pesi seguono da soli i prezzi, è imbattibile
+per costruzione fiscale.
+
+---
+
+## Appendice A — il gate di calibrazione
+
+Prima di qualunque risultato, i due numeri di riferimento riprodotti.
+
+| | misurato | riferimento | delta |
+|---|---:|---:|---:|
 | Buy&hold indice, CGT 33% all'uscita | 8,11% | 8,21% | −0,10 |
 | ETF UCITS, exit tax + deemed disposal | 6,39% | 6,76% | −0,37 |
 | Max drawdown | −49,0% | −47% | −2,0 |
 
-Per arrivarci ho dovuto risolvere un'ambiguità nella tua specifica: il benchmark
-è definito come *"CGT 33% solo all'uscita"*, ma la tabella fiscale impone anche
-*"dividendi esteri ~52%"*. Sono incompatibili. Con i dividendi tassati ogni anno
-l'IRR scende a **7,02%**, lontano dal tuo 8,21%; senza, dà 8,12%. Ho quindi
-adottato la tua definizione letterale del benchmark (dividendi non tassati) e
-riporto separatamente la variante realistica.
+*(Valori del giro 29, prima della correzione della base fiscale, che porta il
+benchmark a 8,40%.)*
 
-**Il prelievo annuo sui dividendi esteri costa 1,09 punti l'anno.** Se detieni
-azioni USA direttamente da residente irlandese, quello è il tuo numero vero,
-non 8,11%.
+Una **incompatibilità nella specifica**, risolta e dichiarata: il benchmark è
+definito come «CGT 33% solo all'uscita», ma la tabella fiscale impone anche
+«dividendi esteri ~52%». Sono incompatibili — con i dividendi tassati ogni anno
+l'IRR scende a 7,02%. Ho adottato la definizione letterale del benchmark e riporto
+la variante realistica separatamente. **Il prelievo annuo sui dividendi esteri
+costa 1,09 punti l'anno**, ed è lo stesso meccanismo che al giro 56 ha dimezzato
+il vantaggio del veicolo.
 
-Sull'ETF ho usato **38% su tutto il percorso**, non lo scalino storico 41%→38%:
-il tuo orizzonte sta interamente oltre il 2026. Con il 41% storico l'IRR sarebbe
-5,99%.
+Per le opzioni c'è un cancello separato (giro 48), aperto solo dopo due
+correzioni: scadenze al **terzo venerdì** (la correlazione con gli indici CBOE
+reali passa da 0,850 a 0,975) e **IV = 0,85 × VIX**. Residui BXM +0,55 e PUT
+−0,72, di **segno opposto**, che è la firma dello skew — ed è esattamente
+l'errore che al giro 49 faceva sembrare la covered call **+0,98 con DSR 0,997**,
+la prima promozione apparente del progetto. Coi dati reali: **−2,92**.
 
----
+## Appendice B — fonti
 
-## Tabella unica
+Ken French Data Library (indice CRSP giornaliero 1926-2026, 26.253 sedute; 49
+portafogli settoriali giornalieri e mensili con capitalizzazioni reali), Robert
+Shiller (`ie_data.xls`), AQR (*Betting Against Beta*), Open Source Asset Pricing
+(Chen & Zimmermann, 212 anomalie replicate), CBOE (BXM, PUT), FRED (`EXGEUS`,
+`BAMLH0A0HYM2`), Twelve Data (intraday), Binance (cripto).
+Tutte riscaricabili con `quant/fetch_data.sh`.
 
-`vs proprio` è la colonna che conta: confronta ogni riga col buy&hold **dello
-stesso universo**. La colonna `vs bench` confronta col benchmark Shiller e per i
-gruppi A e D contiene anche la differenza fra universi diversi, che non è merito
-della strategia.
+## Appendice C — dove sta il resto
 
-| Strategia | IRR | vs bench | vs proprio | Montante | Max DD | Sharpe | Op/anno | Imposte |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Trend following 10 mesi, leva 2x | 11,82% | +3,70 | +3,70 | 2.334.978 | −38,3% | 0,77 | 0,6 | 945.229 |
-| Trend following 10 mesi, leva 1,5x | 9,53% | +1,42 | +1,42 | 1.386.289 | −28,6% | 0,81 | 0,6 | 538.570 |
-| D. Equal-weight 49 settori, annuale | 8,85% | +0,74 | +0,39 | 1.183.350 | −52,4% | 0,59 | 1,0 | 507.187 |
-| D. Diversity-weighted p=0,25, annuale | 8,70% | +0,59 | +0,24 | 1.144.638 | −51,4% | 0,59 | 1,0 | 500.479 |
-| D. Diversity-weighted p=0,50, annuale | 8,58% | +0,47 | +0,11 | 1.114.132 | −50,8% | 0,59 | 1,0 | 495.113 |
-| *D. Cap-weight 49 settori* `[bench D]` | 8,47% | +0,36 | 0,00 | 1.086.393 | −50,2% | 0,58 | 0,0 | 534.218 |
-| D. Diversity-weighted p=0,75, annuale | 8,47% | +0,35 | −0,00 | 1.085.981 | −50,3% | 0,59 | 1,0 | 487.805 |
-| *Buy&hold indice CRSP* `[bench A]` | 8,33% | +0,22 | 0,00 | 1.067.513 | −54,6% | 0,49 | 0,0 | 524.918 |
-| D. Diversity-weighted p=0,25, mensile | 8,25% | +0,14 | −0,21 | 1.036.491 | −51,8% | 0,58 | 12,0 | 397.846 |
-| D. Diversity-weighted p=0,50, mensile | 8,14% | +0,02 | −0,33 | 1.010.258 | −51,1% | 0,58 | 12,0 | 387.802 |
-| **Buy&hold indice, CGT 33% all'uscita** `[BENCHMARK]` | **8,11%** | 0,00 | 0,00 | **1.011.938** | −49,0% | 0,65 | 0,0 | 497.546 |
-| D. Diversity-weighted p=0,75, mensile | 8,03% | −0,08 | −0,44 | 987.113 | −50,6% | 0,58 | 12,0 | 378.434 |
-| Trend following 10 mesi, leva 1x | 7,12% | −1,00 | −1,00 | 814.956 | **−19,0%** | **0,88** | 0,6 | 296.781 |
-| Buy&hold azioni dirette, dividendi 52%/anno | 7,02% | −1,09 | −1,09 | 798.257 | −50,8% | 0,48 | 0,0 | 491.927 |
-| Buy&hold **ETF UCITS**, exit tax 38% + DD | 6,39% | −1,72 | −1,72 | 697.784 | −49,0% | 0,65 | 0,0 | 404.329 |
-| B. Short interest (RF + premio netto) | 5,88% | −2,23 | −2,23 | 626.983 | −28,7% | 0,53 | 12,0 | 211.499 |
-| A. Donchian breakout {20, 20} | 2,93% | −5,18 | −5,40 | 347.364 | −32,4% | 0,27 | 4,2 | 86.546 |
-| B. Bet Against Beta (RF + premio netto) | 2,77% | −5,34 | −5,34 | 336.051 | −54,2% | 0,34 | 12,0 | 120.432 |
-| A. Trend + stop σ {50, 3} *(sostituto ATR)* | 2,16% | −5,96 | −6,17 | 299.906 | −44,4% | 0,19 | 8,4 | 83.184 |
-| A. RSI2 mean-reversion {100, 5, 5} | 1,93% | −6,18 | −6,40 | 287.576 | −10,1% | 0,10 | 3,4 | 17.890 |
-| A. Down-streak reversal {200, 4} | 1,14% | −6,97 | −7,19 | 249.054 | −9,1% | −0,20 | 3,4 | 3.523 |
-| B. Accruals (RF + premio netto) | −2,16% | −10,27 | −10,27 | 144.158 | −41,1% | −0,12 | 12,0 | 56.046 |
-
-### Ranking per Sharpe
-
-1. **Trend following 1x — 0,88** (unico chiaramente sopra il benchmark)
-2. Trend following 1,5x — 0,81
-3. Trend following 2x — 0,77
-4. Benchmark buy&hold / ETF — 0,65
-5. Diversity-weighted e cap-weight 49 settori — 0,58-0,59
-6. Tutto il gruppo A — 0,10-0,27
-7. Accruals, Down-streak — negativi
-
-Il ranking per Sharpe e quello per IRR dicono cose diverse solo per il trend
-following. Per tutto il resto concordano.
+| cosa | dove |
+|---|---|
+| ipotesi pre-registrate e tabella degli esiti | [`../research/QUEUE.md`](../research/QUEUE.md) |
+| stato del metodo, note accumulate, regola dell'holdout | [`../research/STATE.md`](../research/STATE.md) |
+| mini-report giro per giro | [`../research/rounds/`](../research/rounds/) |
+| ogni configurazione valutata (1.366 righe) | `../research/registry.csv` |
+| codice di ogni giro | `../src/research/` |
 
 ---
 
-## Chi batte il benchmark, e quanto regge
-
-| Strategia | base | costi ×2 | 1990-2006 | 2007-2023 |
-|---|---:|---:|---:|---:|
-| Trend following 2x | +3,70 | +3,63 | +4,25 | +3,86 |
-| Trend following 1,5x | +1,42 | +1,34 | +2,29 | +1,04 |
-| D. Equal-weight annuale | +0,39 | +0,35 | +1,89 | **−0,26** |
-| D. Diversity-weighted p=0,25 annuale | +0,24 | +0,22 | +1,47 | **−0,26** |
-| D. Diversity-weighted p=0,50 annuale | +0,11 | +0,11 | +1,02 | **−0,12** |
-
-**Il gruppo D non sopravvive al cambio di sottoperiodo.** Tutto il suo vantaggio
-viene dal 1990-2006; nel 2007-2023 il segno si inverte. Un margine di 0,1-0,4
-punti che cambia segno a metà campione è rumore, non edge.
-
-**Il trend following regge tutti e tre gli stress.** Ma va giudicato con la tua
-stessa regola.
-
-### Il gate sulla leva, applicato alla lettera
-
-Hai scritto: *"Applica leva solo a ciò che funziona già a 1x."*
-
-A 1x il trend following rende **7,12%, cioè 1,00 punto in MENO del buy&hold.**
-Per la tua regola, il risultato a 2x va scartato.
-
-Però la regola merita una precisazione, perché qui il caso è ambiguo. A 1x la
-strategia ha **Sharpe 0,88 contro 0,65** e **drawdown −19,0% contro −49,0%**.
-Non è che non funzioni: converte rendimento in stabilità. Sta fuori dal mercato
-circa un quarto del tempo, quindi perde rialzi, ma evita i crolli. La leva non
-sta moltiplicando un extra-rendimento inesistente — sta ricomprando il beta che
-la strategia aveva rimosso, su una serie a rischio più basso.
-
-Se accetti quella lettura, il trend following levereggiato è l'unica strategia
-attiva testata che regge. Se applichi la tua regola letteralmente, non ne resta
-nessuna. **Io la tratterei con sospetto per tre ragioni che il backtest non
-cattura:**
-
-1. Il drawdown modellato a 2x è −38,3%. Su CFD a leva 2 su indice, un −38% è una
-   sequenza di margin call, non una riga in un foglio di calcolo. Il modello
-   assume che tu regga la posizione; la meccanica del broker no.
-2. Il costo di finanziamento è ipotizzato a benchmark + 3%. È l'ipotesi che ti
-   sei dato tu, ed è ragionevole, ma il risultato è direttamente proporzionale:
-   +1 punto di spread toglie circa 1 punto di IRR a 2x.
-3. Non c'è split in-sample/out-of-sample. La regola dei 10 mesi è pubblicata
-   (Faber 2007) e non l'ho ottimizzata io, il che è una difesa parziale — ma non
-   equivale a una validazione fuori campione.
-
----
-
-## Gruppo A — swing trading: fallimento su tutta la linea
-
-36 combinazioni di parametri provate (RSI2: 12, down-streak: 6, Donchian: 9,
-trend+stop: 9), ottimizzate **solo** sulla prima metà (1926-1974), validate
-**solo** sulla seconda (1974-2026).
-
-| Strategia | IS CAGR | OOS CAGR | OOS Sharpe | vs B&H OOS |
-|---|---:|---:|---:|---:|
-| Buy&hold | — | **12,03%** | 0,75 | — |
-| Donchian breakout {20,20} | 9,24% | 7,32% | 0,71 | −4,71 |
-| Trend + stop σ {50,3} | 9,94% | 7,40% | 0,69 | −4,63 |
-| RSI2 {100,5,5} | −0,90% | 0,93% | 0,27 | −11,10 |
-| Down-streak {200,4} | −0,34% | −0,17% | −0,04 | −12,20 |
-
-Due delle quattro perdono già **in-sample**, cioè sul campione su cui le ho
-ottimizzate scegliendo il massimo di 12 e 6 combinazioni. Questo non è
-overfitting: è assenza di segnale.
-
-**Robustezza su 49 settori** (stessi parametri, finestra OOS):
-
-| Strategia | settori in cui batte il B&H | mediana extra-CAGR |
-|---|---:|---:|
-| RSI2 | **0 / 49** | −11,51% |
-| Down-streak | **0 / 49** | −12,16% |
-| Donchian | 8 / 49 | −3,26% |
-| Trend + stop σ | 8 / 49 | −2,47% |
-
-**Sottoperiodi ventennali** (extra-CAGR vs buy&hold): l'unico periodo in cui
-qualcosa funziona è il 1930-1949 (Donchian +4,48, trend+stop +3,66). Dal 1950
-in poi tutto negativo, con un peggioramento monotono fino al 2010-2026
-(−6,67 e −7,85).
-
-### Contro la tua soglia di expectancy
-
-Hai calcolato che con 100 operazioni l'anno serve un'expectancy lorda dello
-0,273% per operazione. Queste strategie operano 3-8 volte l'anno, quindi la
-soglia per loro è molto più alta — ogni operazione deve pesare di più:
-
-| Strategia | Op/anno | Expectancy realizzata | Soglia di pareggio |
-|---|---:|---:|---:|
-| RSI2 | 3,6 | 0,262% | **3,181%** |
-| Down-streak | 3,8 | −0,033% | **3,050%** |
-| Donchian | 4,1 | 1,902% | **2,831%** |
-| Trend + stop σ | 8,4 | 0,813% | **1,370%** |
-
-Nessuna arriva neanche vicino. Donchian, la migliore, realizza il 67% di quanto
-le servirebbe. Il divario non è colmabile con costi più bassi: è mancanza di edge.
-
-### Verifica del look-ahead
-
-Il controllo richiesto ha trovato un bug — nel controllo stesso, alla prima
-stesura. Corretto, il risultato è:
-
-- segnale che conosce il rendimento di oggi: **CAGR 131,1%, Sharpe 7,92**
-- stesso segnale ritardato di un giorno: **CAGR 5,8%, Sharpe 0,55**
-
-Il motore distingue i due casi, quindi lo `shift(1)` sta facendo il suo lavoro e
-i risultati sopra non contengono informazione dal futuro.
-
----
-
-## Gruppo B — anomalie: il decadimento è reale e quantificato
-
-Split alla data di pubblicazione, non a metà campione.
-
-| Anomalia | Pubbl. | Pre %/anno | t | Post %/anno | t | Decadimento |
-|---|---:|---:|---:|---:|---:|---:|
-| Bet Against Beta | 2014 | 8,25% | 6,57 | 5,03% | 2,02 | **39%** |
-| Accruals (Sloan) | 1996 | 6,87% | 7,04 | 1,17% | 1,00 | **83%** |
-| Short interest (Dechow) | 2001 | 8,63% | 5,26 | 11,86% | 4,10 | −37% |
-| Short interest / IO | 2005 | 24,78% | 2,99 | 69,78% | 3,31 | −182% |
-
-### Verifica di McLean & Pontiff su tutto l'universo
-
-Su **205 anomalie** replicate con premio pre-pubblicazione positivo e storia
-sufficiente:
-
-- premio medio **pre**-pubblicazione: **7,36%/anno**
-- premio medio **post**-pubblicazione: **4,05%/anno**
-- **decadimento medio: 50,4%** (mediano 58,2%)
-- quota con premio post-pubblicazione negativo: 16%
-
-McLean & Pontiff (2016) riportano ~50%. **Replicato quasi esattamente.** È il
-risultato più solido di tutto questo lavoro, e vale come validazione della
-pipeline oltre che come risultato in sé.
-
-### I due "short interest" che sembrano migliorare non sono investibili
-
-`IO_ShortInterest` ha volatilità **94,2%/anno**, un mese a **+321,3%** e uno a
-−67,8%. Il premio sta in pochi mesi estremi su titoli minuscoli. Non è un edge,
-è un artefatto di costruzione: i portafogli OSAP sono **equal-weighted**, quindi
-una società da 20 milioni pesa quanto Apple. Con €500/mese la gamba short non è
-eseguibile in nessuna delle due.
-
-### Implementabilità: cosa resta dopo i costi veri
-
-| Anomalia | Post lordo | Transaz. | Prestito titoli | Finanz. leva | **Netto** |
-|---|---:|---:|---:|---:|---:|
-| Bet Against Beta | 5,03% | 0,30% | 2,50% | 1,29% | **0,94%** |
-| Accruals | 1,17% | 0,30% | 2,50% | — | **−1,63%** |
-| Short interest | 11,86% | 0,90% | 2,50% | — | **8,46%** |
-
-Ipotesi dichiarate: prestito titoli 5%/anno sul nozionale short (metà del
-portafoglio), che è **prudente** per il decile più shortato — sui titoli
-hard-to-borrow si va ben oltre; BAB levereggiata ~1,4× con spread di
-finanziamento retail del 3%.
-
-Messe nel PAC con CGT 33% sul realizzo mensile, nessuna arriva al benchmark:
-short interest 5,88%, BAB 2,77%, accruals −2,16%. **Nello scenario di
-riqualificazione al 52%** scendono a 4,38%, 1,31% e −4,07%.
-
-Per short interest il break-even sul costo del prestito titoli è intorno al
-**22%/anno** sulla gamba short. Sui titoli più shortati del mercato quel livello
-si raggiunge e si supera regolarmente: il premio esiste sulla carta e viene
-incassato da chi presta i titoli, non da chi li shorta.
-
----
-
-## Gruppo D — il teorema è vero, il trade è in perdita
-
-### La matematica funziona
-
-Ho verificato numericamente l'identità di Fernholz
-
-```
-log( V_π(T) / V_μ(T) ) = log( D_p(μ(T)) / D_p(μ(0)) ) + (1−p) ∫ γ*_π dt
-```
-
-su 437 mesi e 49 settori:
-
-| p | log(V_π/V_μ) | deriva diversità | (1−p)·∫γ* | residuo |
-|---|---:|---:|---:|---:|
-| 0,25 | −0,0031 | −0,3038 | +0,3352 | −0,0345 |
-| 0,50 | −0,0110 | −0,2029 | +0,2032 | −0,0113 |
-| 0,75 | −0,0141 | −0,1002 | +0,0949 | −0,0088 |
-
-L'identità torna. **γ\* = 1,12%/anno per p=0,50**, esattamente nella banda
-0,5-1,5% che avevi previsto.
-
-### Ma la deriva della diversità se lo mangia tutto
-
-Il tasso di crescita in eccesso genera +0,2032 di log-rendimento in 36 anni. La
-perdita di diversità del mercato ne toglie −0,2029. **Il netto è −0,0110: zero,
-con il segno sbagliato.**
-
-Diversità del mercato nel tempo (fra 49 settori):
-
-| Periodo | Top-1 % | Top-10 % | HHI | D(0,5) |
-|---|---:|---:|---:|---:|
-| 1990-1999 | 9,3 | 60,3 | 467 | 35,48 |
-| 2000-2009 | 11,7 | 65,3 | 546 | 33,34 |
-| 2010-2014 | 9,1 | 62,7 | 492 | 34,74 |
-| 2015-2019 | 11,8 | 65,2 | 554 | 33,37 |
-| 2020-2026 | **17,9** | **68,5** | **764** | **30,75** |
-
-Ricordo che questa è concentrazione **fra settori**: quella fra singoli titoli è
-più alta e non l'ho potuta misurare.
-
-### La tua ipotesi: metà confermata, metà falsificata
-
-> *"Nei periodi di diversità calante il diversity-weighted sottoperforma, e il
-> decennio 2015-2025 dovrebbe essere il caso peggiore del campione."*
-
-**Prima parte: confermata.** Correlazione fra variazione mensile di diversità e
-sovraperformance del DW: **+0,114**. Debole ma del segno giusto, e i sottoperiodi
-sono coerenti:
-
-| Periodo | Extra-rendimento DW p=0,50 | Diversità |
-|---|---:|---|
-| 1990-1999 | **−1,51%/anno** | in calo |
-| 2000-2009 | +2,42%/anno | in salita |
-| 2010-2014 | +0,08%/anno | in calo |
-| 2015-2025 | −1,22%/anno | in calo |
-
-**Seconda parte: falsificata.** Il peggior sottoperiodo non è il 2015-2025
-(−1,22%) ma il **1990-1999 (−1,51%)**. La concentrazione è cresciuta molto più
-nell'ultimo decennio, ma il DW ha sofferto di più negli anni '90. La relazione
-diversità→performance esiste come direzione, non come classifica.
-
-### L'orizzonte del teorema
-
-Con i parametri stimati sui dati reali:
-
-- n = 49, log(n) = 3,892
-- δ = autovalore minimo della covarianza annualizzata = **0,00305**
-- ε = 1 − max quota osservata = 1 − 0,2130 = **0,7870**
-
-| p | T garantito |
-|---|---:|
-| 0,25 | **12.968 anni** |
-| 0,50 | **6.484 anni** |
-| 0,75 | **4.323 anni** |
-
-Il teorema è vero e la dimostrazione è corretta. L'orizzonte su cui garantisce
-l'arbitraggio relativo supera il tuo di due o tre ordini di grandezza. **Per una
-decisione di investimento è inutilizzabile.**
-
-### Break-even fiscale del ribilanciamento
-
-La domanda che avevi posto: a quale frequenza γ* supera il costo fiscale?
-
-| p | Ribilanciamento | Extra lordo | Costo transaz. | Costo fiscale | **Extra netto** |
-|---|---|---:|---:|---:|---:|
-| 0,25 | mensile | −0,01% | 0,03% | +0,79% | **−0,79%** |
-| 0,25 | trimestrale | +0,01% | 0,02% | +0,57% | **−0,57%** |
-| 0,25 | annuale | +0,14% | 0,01% | +0,24% | **−0,24%** |
-| 0,50 | mensile | −0,03% | 0,03% | +0,82% | **−0,82%** |
-| 0,50 | trimestrale | −0,03% | 0,01% | +0,58% | **−0,58%** |
-| 0,50 | annuale | +0,08% | 0,01% | +0,25% | **−0,25%** |
-| 0,75 | annuale | +0,06% | 0,01% | +0,21% | **−0,21%** |
-
-**Non esiste una frequenza di ribilanciamento che pareggia.** Nemmeno quella
-annuale, la più economica. Il motivo è quello che avevi anticipato: γ* vale
-1,12%/anno, ma non arriva mai all'investitore perché la deriva della diversità lo
-neutralizza *prima* delle tasse. Quello che resta da tassare è un extra lordo di
-+0,06/+0,14 punti contro un costo fiscale di 0,21/0,25.
-
-Il confronto è contro un cap-weight che **non si ribilancia mai**: i pesi seguono
-da soli i prezzi, quindi non paga né costi né imposte finché non vendi. È quello
-il vero avversario, ed è imbattibile per costruzione fiscale.
-
-Nella tabella principale il DW annuale appare a +0,11/+0,24 sul suo benchmark:
-la differenza rispetto a questi numeri è che lì il cap-weight paga CGT alla
-liquidazione finale del PAC. Il segno cambia col dettaglio della modellazione,
-il che è di per sé la prova che il margine è dentro il rumore.
-
----
-
-## Edge statistici contro edge strutturali
-
-Hai chiesto di separarli. La separazione è netta e sbilanciata.
-
-### Edge statistici (gruppi A e B): contributo **zero**
-
-Non sopravvive nulla.
-
-- Gruppo A: −5,40 / −7,19 punti contro il proprio benchmark, 0-8 settori su 49,
-  negativo in 4 sottoperiodi su 5, expectancy per operazione tra un terzo e due
-  terzi di quella necessaria.
-- Gruppo B: decadimento post-pubblicazione del 50,4% confermato su 205 anomalie.
-  Ciò che resta viene consumato da prestito titoli e finanziamento. La migliore
-  arriva a −2,23 punti dal benchmark.
-
-### Edge strutturali: contributo **+1,72 punti l'anno**, tutto dal veicolo fiscale
-
-| Fonte | Valore | Natura |
-|---|---:|---|
-| **Azioni/indice diretto invece di ETF UCITS** | **+1,72 punti/anno** | regola fiscale, non decade |
-| Evitare il prelievo annuo sui dividendi esteri | +1,09 punti/anno | regola fiscale |
-| Diversity-weighted (gruppo D) | **0,00** | teorema vero, annullato da ipotesi venute meno + tasse |
-| Trend following levereggiato | +1,42/+3,70 | riduzione di rischio rilevereggiata, **non** un'identità matematica |
-
-**Il gruppo D è l'esempio più pulito di edge strutturale che non paga.** Il
-teorema non è stato falsificato: γ* esiste, vale 1,12%/anno, e l'identità di
-Fernholz torna nei dati. Sono venute meno le *ipotesi*: il mercato ha perso
-diversità in modo monotono, e la deriva dei pesi ha assorbito esattamente il
-guadagno da ribilanciamento. Poi il 33% sul realizzo ha portato il residuo sotto
-zero. Vero, dimostrato, e in perdita.
-
-Il trend following **non appartiene a questa categoria**, anche se sopravvive ai
-test. Non deriva da un'identità né da una regola fiscale: dipende dal fatto che i
-mercati abbiano continuato a produrre trend persistenti. È un edge statistico che
-finora non è decaduto, non una legge.
-
----
-
-## Fallimenti ed errori trovati
-
-Per trasparenza sul processo, non solo sui risultati.
-
-**Dati:** quattro fonti di prezzi bloccate (Yahoo, Stooq ×2, AlphaVantage). Il
-Gruppo A è stato eseguito su un universo sostitutivo, l'ATR non è stato testato,
-la diversità a livello di titolo non è stata misurata.
-
-**Bug trovati e corretti durante il lavoro:**
-
-1. **Il test di look-ahead era sbagliato.** Il segnale "baro" leggeva `ret[t+1]`
-   ma veniva moltiplicato per `ret[t]`, quindi era disallineato: il segnale
-   "onesto" risultava quello con la preveggenza. Il test ha fatto esattamente il
-   lavoro per cui esisteva, trovando un errore nella propria costruzione.
-2. **Il cap-weight veniva ribilanciato ogni mese**, addebitandogli 26%/anno di
-   turnover e imposte che non sostiene. Un portafoglio di mercato non richiede
-   trading: i pesi seguono i prezzi. Correggendolo, il Gruppo D è passato da
-   apparentemente positivo a negativo su tutte le frequenze.
-3. **La liquidità non investita non rendeva nulla**, penalizzando le strategie
-   poco esposte. Ora frutta il risk-free al netto della DIRT 33%. Il Gruppo A ne
-   ha guadagnato circa 1 punto — restando comunque a −5/−7.
-4. **L'IRR non convergeva** (bisezione senza bracketing valido, produceva valori
-   dell'ordine di 10¹⁴). Riscritta in spazio logaritmico con XIRR datato.
-5. **Warm-up degli indicatori perso** all'inizio della finestra out-of-sample:
-   i segnali vanno calcolati sulla serie intera e poi affettati.
-
-**Ambiguità nella specifica:** benchmark "CGT solo all'uscita" contro tabella
-"dividendi 52%" — incompatibili, risolta a favore della definizione letterale
-del benchmark, con la variante riportata separatamente.
-
-**Cosa non ho fatto:** nessuno split in-sample/out-of-sample sul trend following
-mensile del Gruppo C (era specificato come benchmark, non come strategia da
-ottimizzare). Nessuna modellazione di margin call, gap overnight o
-ricomposizione dell'indice. Nessun test su mercati non-USA.
-
----
-
-## Conclusione operativa
-
-Su €500/mese e 20-30 anni:
-
-1. **Il veicolo conta più di qualunque strategia.** Indice o azioni in regime CGT
-   invece di ETF UCITS vale +1,72 punti l'anno, non decade, non richiede di
-   azzeccare nulla. È il risultato più grande e più affidabile del lavoro.
-   Verifica con un consulente fiscale come accedervi in pratica: molti broker
-   retail offrono principalmente UCITS proprio perché è il prodotto standard UE.
-2. **Il ribilanciamento è un evento tassabile e, nel tuo regime, quasi sempre in
-   perdita.** Vale per il diversity-weighting, per l'equal-weighting e per
-   qualunque schema a pesi fissi. Con CGT al 33% e nessun conto fiscalmente
-   protetto, la strategia migliore è quella che non vende.
-3. **Lo swing trading su questo campione non ha edge.** Non è una questione di
-   parametri o di costi: l'expectancy per operazione è un terzo di quella
-   necessaria, e due strategie su quattro perdono già in-sample.
-4. **Se vuoi comunque una componente attiva**, l'unica che ha superato tutti gli
-   stress è il trend following mensile a 10 mesi — ma a 1x rende meno del
-   buy&hold, e per la tua stessa regola questo lo squalifica. Se decidi di usarlo
-   levereggiato, sappi che stai scommettendo sulla persistenza dei trend e sulla
-   tua capacità di reggere un −38% a leva 2 senza essere liquidato.
+*Holdout 2010-2026: **sigillato**. Nessun candidato lo ha meritato in
+settantaquattro giri.*

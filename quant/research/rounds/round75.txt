@@ -1,0 +1,62 @@
+====================================================================================================
+L3 — controllo di falsificazione sul registro cumulato
+====================================================================================================
+   righe a registro: 1365   giri: 1-74
+   righe con excess >= +1.00 punti: **213** (15.6% del registro)
+
+    giro  ipotesi                                        righe     max  mediana  finestra
+   ------------------------------------------------------------------------------------------------
+      19  H20 VWAP long/short crypto                        30  +67.03   +26.16  2017-2026
+      10  H10 scansione sistematica delle anomalie pub      78  +66.83    +4.23  POST-PUB
+      23  H24 swing multi-strategia cripto L/S               1  +55.78   +55.78  2021-2026
+      50  F1 rotazione top-1                                 2  +36.01   +23.95  varie
+      20  H21 controlli sul risultato crypto                 6  +26.46    +8.10  2020-2026
+      26  H28 Kronos cripto                                  1  +13.11   +13.11  2020-2026
+      61  A15 peso analitico dIRR/dr_k                      21  +10.27    +6.91  20 anni
+      51  F3/F4 sistema EMA                                  1  +10.09   +10.09  varie
+      48  E0 cancello di calibrazione opzioni                2   +7.04    +6.35  finestra comune CBOE
+      48  E1 premio al rischio di varianza                   4   +6.23    +3.24  1990s
+      39  B6 cripto universo esteso                          1   +4.70    +4.70  varie
+      43  D2 bootstrap a blocchi                             1   +3.82    +3.82  intera
+      53  G2 momentum come veicolo                           2   +3.57    +3.57  1969-07-31/2026-05-31
+      11  H11c                                               1   +3.30    +3.30  WF-OOS
+      11  H11a                                               1   +3.08    +3.08  WF-OOS
+       5  H5                                                 1   +2.95    +2.95  WF-OOS
+      39  B5 azionario internazionale                        1   +2.94    +2.94  varie
+      11  H11b                                               1   +2.40    +2.40  WF-OOS
+      65  D8 verdetti dentro la correzione                   6   +2.35    +1.76  1969-2026
+      13  H13 frontiera rotazione                            6   +2.23    +1.53  WF-OOS
+      62  D5 quota di vittorie contro media                 12   +2.14    +1.66  1969-2026
+      68  D10 calendario del ribilanciamento                 4   +1.99    +1.52  1969-2026
+      24  H25 HMM regime + due gambe                         1   +1.57    +1.57  2021-2026
+      60  D4 scelta del benchmark                            9   +1.50    +1.50  1969-2026
+      72  K4 regola per l'holdout                            3   +1.43    +1.25  1969-2009
+      25  H26 vol-targeting su ampiezza                      1   +1.39    +1.39  varie
+      12  H12                                                1   +1.38    +1.38  WF-OOS
+      49  E5 opzioni                                         2   +1.34    +1.34  1990-02-16/2026-05-15
+      52  E6 stress sui LEAPS                                2   +1.34    +1.34  1990-2026
+       1  H1 multi-asset a bassa rotazione, con e senz      11   +1.23    +1.11  TEST
+
+   ipotesi distinte con almeno una riga sopra +1.00: **30**
+   di queste, con la MEDIANA del gruppo sopra +1.00: **30**
+   di queste, sostenute da UNA SOLA riga: **13**
+
+   distribuzione di excess su tutto il registro
+             -oo .. -3    423   35.7%
+              -3 .. -1    240   20.2%
+              -1 .. +0    164   13.8%
+              +0 .. +1    146   12.3%
+              +1 .. +3     97    8.2%
+            +3 ..  +oo    116    9.8%
+               mediana  -1.32
+        quota positiva   30.3%
+
+====================================================================================================
+   ESITO DEL CONTROLLO
+====================================================================================================
+   La predizione dice: nessun numero superstite e' un margine di
+   strategia. Il controllo automatico produce la lista esaustiva dei
+   30 gruppi da esaminare a mano nel report. La falsificazione
+   scatta solo se UNO di essi non e' contraddetto dai giri successivi.
+
+Tentativi cumulati a registro: 1366

@@ -195,13 +195,16 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 72 | **K4 regola per l'holdout** | confermata | **0 candidati su 12** passano; il cancello che elimina di piu' e' il **margine** |
 | 73 | **L1 ritardo in giorni** | **falsificata** | non monotono; il costo di 1 giorno e' **0,08** punti |
 | 74 | **L2 costo retail** | **falsificata** | il divario si allarga **a favore** del momentum (+0,53): la commissione fissa colpisce il benchmark a 49 posizioni |
+| 75 | **L3 report finale** | confermata | **0 su 30** gruppi sopra +1,00 sopravvive alla rilettura; ma i numeri superstiti sono **dodici**, non «meno di dieci» |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 51 voci eseguite nei giri 30-74:
-**35 confermate, 15 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Restano in coda: **L3, L4**.
+(rotazione concentrata e sistema EMA, giri 50-51). 52 voci eseguite nei giri 30-75:
+**36 confermate, 15 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Resta in coda: **L4**, l'ultima.
 
-Registro a **1.365 tentativi** cumulati.
+Registro a **1.366 tentativi** cumulati.
+Il report finale è **[`../reports/REPORT.md`](../reports/REPORT.md)**, riscritto
+al giro 75 (era fermo al giro 29).
 
 ## Coda vecchia (tutte eseguite)
 
@@ -818,3 +821,35 @@ passano.**
   si spostano dal versamento al ribilanciamento, che ri-tocca comunque tutte e 49
   le posizioni. Concentrare il versamento aiuta solo se il portafoglio è già
   concentrato (top-5 mensile: 133 → 86 ordini/anno).
+- **Nessun risultato di strategia sopra un punto sopravvive alla rilettura del
+  registro**, e la verifica è automatica, non a memoria (giro 75). Delle 1.365
+  righe registrate, **213 (15,6%) hanno extra ≥ +1,00**, in **30 ipotesi
+  distinte**: cripto (sopravvivenza selezionata: allargare l'universo **alza** il
+  buy&hold da 22,6% a 55,3%; DSR 0,443 e 0,880), anomalie pubblicate (premi
+  lordi, 2 su 201 passano i filtri), candidati storici (negativi in **60/60**
+  contro l'equal-weight dello stesso universo, **12/12** eliminati da G1), opzioni
+  (il premio esiste, incassarlo perde −4,98/−2,92), e nove gruppi che **non sono
+  margini di strategia**. Mediana dell'extra su tutto il registro: **−1,32**;
+  quota positiva **30,3%**; sotto −1,00 sta il **55,9%**.
+- **I numeri del progetto che reggono sono dodici**, non meno di dieci come avevo
+  previsto: sette costi o soglie (rotazione vera 1,35 · soglia del 100% come
+  gradino · calendario 3,65 contro 0,14 · veicolo +1,09/+0,64 · costo di
+  realizzare +3,43 · soglia retail €7.350 · quota fiscale massima 15,3%) e cinque
+  misure di fragilità o metodo (ampiezza decennale 5,81-10,19 · il benchmark
+  spiega il 263-398% · l'IRR cieca a −22,51% di montante · 2 anomalie su 201 · il
+  peso analitico 5,91×). **Nessuno di essi è un margine di strategia**, e questa
+  metà della predizione è centrata.
+- **La stessa forma di artefatto è comparsa tre volte, e tre volte è stata
+  riconosciuta solo perché la regola era scritta prima**: il +13,11 di Kronos
+  (giro 26, DSR 0,999, ma è ETH e su BTC fa −22,7, χ² p = 0,671), il +1,51 di
+  gennaio (giro 65, mediana dei dodici mesi −0,46), il +0,86 del ritardo a venti
+  giorni (giro 73, massimo di dieci celle, mediana −0,65). **Un massimo su N celle
+  non è un risultato.**
+- **Due raccomandazioni del giro 29 sono ritirate, non aggiornate** (giro 75). Il
+  **+1,72 del veicolo** è oggi **+0,34** sulla stessa finestra 1990-2023 — catena
+  +1,72 → +2,01 (base fiscale) → +2,15 → +1,23 (lotti ETF) → +0,34 (dividendi),
+  un fattore cinque in quattro misurazioni successive dello stesso oggetto. E il
+  **trend following levereggiato** cade due volte: con il margin call ESMA
+  modellato dà **−4,18** (giro 07), e testato sistematicamente al giro 53
+  **nessun filtro di tendenza batte il buy&hold** (il migliore perde 2,51 punti,
+  e vince fra i filtri solo perché ruota 0,19×/anno).
