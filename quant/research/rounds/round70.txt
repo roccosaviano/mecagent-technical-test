@@ -1,0 +1,54 @@
+====================================================================================================
+K2 — il PAC che si interrompe, e quello che si riscatta in anticipo
+====================================================================================================
+   64 finestre ventennali del mercato USA, 1926-2009. Holdout NON toccato.
+   Interruzione di 24 mesi, riscatto del 30%.
+
+   PAC di riferimento: IRR mediana 10.00%, montante mediano €359,260 su €120,000 versati
+
+    anno k |          INTERRUZIONE 24 mesi          |          RISCATTO 30%         
+           |  d IRR (mediana)   d montante  versato |  d IRR (mediana)    d montante
+   ----------------------------------------------------------------------------------------
+         1 |          -0.096      -21.13%      90% |          -0.000        -0.27%
+         2 |          -0.126      -19.09%      90% |          -0.004        -3.38%
+         3 |          -0.086      -16.90%      90% |          -0.006        -6.57%
+         4 |          -0.026      -15.24%      90% |          -0.006        -9.17%
+         5 |          -0.022      -13.93%      90% |          -0.027       -11.86%
+         6 |          +0.012      -12.42%      90% |          -0.052       -14.29%
+         7 |          +0.023      -11.16%      90% |          -0.072       -17.16%
+         8 |          +0.036      -10.03%      90% |          -0.053       -19.53%
+         9 |          +0.044       -9.01%      90% |          -0.038       -21.56%
+        10 |          +0.034       -8.31%      90% |          -0.024       -23.47%
+        11 |          +0.037       -7.47%      90% |          -0.037       -25.17%
+        12 |          +0.032       -6.69%      90% |          -0.062       -26.89%
+        13 |          +0.019       -6.13%      90% |          -0.008       -28.23%
+        14 |          +0.023       -5.53%      90% |          -0.044       -29.54%
+        15 |          +0.029       -5.07%      90% |          +0.028       -31.09%
+        16 |          +0.025       -4.74%      90% |          +0.115       -32.21%
+        17 |          +0.015       -4.40%      90% |          +0.128       -33.33%
+        18 |          +0.009       -4.05%      90% |          +0.087       -34.21%
+
+====================================================================================================
+   VERDETTO
+====================================================================================================
+   Predizione: l'interruzione costa MENO di 0,3 punti di IRR ovunque, il montante cala del
+   8-12% in modo MONOTONO in k, e il riscatto colpisce l'IRR di OLTRE 0,5 punti nei primi dieci anni.
+   FALSIFICATA se l'interruzione sposta l'IRR di oltre 0,5 punti in qualche k, OPPURE il calo
+   del montante non e' monotono in k.
+
+   interruzione, |d IRR| mediano max : 0.126 punti   (previsto <0,3)
+   interruzione, |d IRR| su OGNI finestra: 1.019 punti   (falsifica sopra 0,5)
+   interruzione, calo del montante   : da -21.13% a -4.05%   (previsto −8/−12%)
+   calo monotono in k                : SI   (falsifica se NO)
+   riscatto, d IRR nei primi 10 anni : da -0.072 a -0.000   (previsto oltre −0,5)
+
+   -> ipotesi K2 FALSIFICATA
+      clausola 'interruzione sotto 0,3 punti': centrata
+      clausola 'montante −8/−12%': SBAGLIATA
+      clausola 'riscatto oltre −0,5 nei primi 10 anni': SBAGLIATA
+
+   Il confronto che la voce cercava:
+     saltare 24 versamenti (10% del capitale) costa -8.66% di montante e +0.021 di IRR
+     riscattare il 30% costa -22.51% di montante e -0.016 di IRR
+
+Tentativi cumulati a registro: 1330

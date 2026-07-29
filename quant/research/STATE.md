@@ -190,13 +190,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 67 | **J1 statistical jump model** | confermata | migliore **−1,63**, long/short perde **21 su 21**; corr MA10 da 0,610 a **0,006** |
 | 68 | **D10 calendario del ribilanciamento** | confermata | ampiezza **3,65%** sul top-5 contro **0,14%** sull'equal-weight |
 | 69 | **K1 conto in valuta** | confermata | margine max **0,25**, livello **−0,46/−0,77** punti in euro |
+| 70 | **K2 PAC interrotto** | **falsificata** | l'IRR e' cieca: −22,51% di montante = **−0,016** di IRR |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 46 voci eseguite nei giri 30-69:
-**34 confermate, 11 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Restano in coda: **K2, K3, K4**.
+(rotazione concentrata e sistema EMA, giri 50-51). 47 voci eseguite nei giri 30-70:
+**34 confermate, 12 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Restano in coda: **K3, K4**.
 
-Registro a **1.312 tentativi** cumulati.
+Registro a **1.330 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -689,3 +690,23 @@ Registro a **1.312 tentativi** cumulati.
   due differiscono dell'**1,93%**. Riscalando, le IRR si spostano di 0,03-0,04
   punti in modo uniforme — trascurabile qui, ma è il tipo di discontinuità che va
   cercata e quantificata ogni volta che si incollano due fonti.
+- **L'IRR è quasi cieca a un PAC irregolare: serve il montante.** Su 64 finestre
+  ventennali, saltare **24 versamenti** (il 10% del capitale) costa **−8,66% di
+  montante** e **+0,021 di IRR**; riscattare il **30%** del portafoglio costa
+  **−22,51% di montante** e **−0,016 di IRR**. Un evento che porta via un quinto
+  del risultato finale sposta il tasso di sedici millesimi di punto. Il motivo è
+  che l'IRR misura quanto rende ogni euro versato, non quanti euro si versa.
+  **Regola**: quando due PAC hanno flussi diversi, riportare il montante. Fra le
+  voci già eseguite nessuna è colpita — confrontano tutte PAC a flussi identici.
+- **Il costo di interrompere dipende da quando, per un fattore cinque.** Il calo
+  del montante va da **−21,13%** (interruzione al primo anno) a **−4,05%**
+  (al diciottesimo), monotono. Avevo previsto 8-12%: quello è il *valore medio*,
+  non l'intervallo. Gli euro saltati presto si sarebbero composti per vent'anni.
+- **L'effetto sull'IRR cambia segno al sesto anno**, ed è il profilo del giro 61
+  visto dal lato dei versamenti. L'IRR è una media dei rendimenti per euro
+  pesata per il tempo che ogni euro resta investito: togliere i versamenti
+  **tardivi alza la media**, perché elimina gli euro che si compongono meno.
+  Quindi sospendere tardi fa *salire* l'IRR mentre il montante cala comunque —
+  è l'IRR che mente, non il montante. **Simmetricamente**: interrompere costa di
+  più **presto**, riscattare costa di più **tardi**, perché tardi il 30% è il 30%
+  di un portafoglio molto più grande.
