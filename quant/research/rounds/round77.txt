@@ -1,0 +1,74 @@
+========================================================================================================
+M1 — il momentum 12-3 top-5 mensile contro i quattro cancelli
+========================================================================================================
+   49 settori giornalieri, 1969-2009 (10223 giorni di borsa). **Holdout 2010-2026 non toccato.**
+   Soglie del giro 72: G1 >= 1.00 come MEDIANA sui dodici calendari del benchmark,
+   G2 DSR > 0.95, G3 >= 66.7% finestre decennali E mediana > 0, G4 >= 10/12.
+
+   candidato: momentum 12-3 top-5 mensile   IRR 11.27%   rotazione 3.284x   aliquota 52%
+
+   (a) G1 — il margine contro l'equal-weight annuale, calendario per calendario
+   ----------------------------------------------------------------------------------------
+       gen    feb    mar    apr    mag    giu    lug    ago    set    ott    nov    dic
+   bench  10.09  10.23  10.23  10.16  10.11  10.23  10.08  10.06  10.08  10.09  10.04  10.10
+     +1.18  +1.04  +1.04  +1.11  +1.17  +1.04  +1.19  +1.21  +1.19  +1.18  +1.23  +1.17
+
+   mediana del margine sui dodici calendari :   +1.18   (gennaio da solo: +1.18)
+   ampiezza del BENCHMARK sui dodici calendari:    0.19   (giro 68 su equal-weight: 0,14)
+   calendari con margine positivo             :      12/12
+   calendario mediano usato per G3            :     ott
+
+   (b) G3 — 29 finestre decennali mobili (1972-1981 … 2000-2009)
+   ----------------------------------------------------------------------------------------
+       1972    1973    1974    1975    1976    1977    1978    1979    1980
+      +3.98   +2.87   +0.92   +0.88   +1.20   +1.28   +2.23   +0.41   +0.22
+       1981    1982    1983    1984    1985    1986    1987    1988    1989
+      +1.66   +1.39   +2.57   +3.30   +2.05   +2.24   +1.53   +0.74   +1.34
+       1990    1991    1992    1993    1994    1995    1996    1997    1998
+      +4.42   +2.29   +3.91   +6.53   +3.72   +3.14   +4.20   +3.11   +3.51
+       1999    2000
+      -1.23   -3.39
+
+   quota di finestre positive :  93.1%   (soglia 66.7%)
+   mediana degli extra        :  +2.23   (soglia > 0)
+   peggiore / migliore        : -3.39 / +6.53
+
+   (c) G2 — DSR con var_sr su una famiglia che contiene anche lo skip (5x4 = 20 celle)
+   ----------------------------------------------------------------------------------------
+   margine per skip          k=1      k=2      k=3      k=4      k=6
+   top-3                   +1.51    -1.50    -0.06    +0.33    -2.28
+   top-5                   +0.65    -0.87    +1.18    -0.39    -2.76
+   top-10                  -0.23    -0.85    -0.93    -1.05    -2.02
+   top-25                  -1.22    -1.19    -1.70    -1.88    -1.92
+   ampiezza dell'intera famiglia: 4.27 punti   (il massimo e' +1.51)
+
+   var_sr stimata su                         SR0/periodo      DSR
+   famiglia di 20 celle (questo giro)             0.0608   0.9907
+   famiglia di 10 celle (giro 76)                 0.0669   0.9870
+   registro intero (non credibile)                1.7631   0.0000
+   N cumulato = 1378   Sharpe annualizzato del candidato 0.608
+
+========================================================================================================
+   I QUATTRO CANCELLI
+========================================================================================================
+   G1 margine            PASSA     mediana +1.18 contro soglia +1.00
+   G2 deflated Sharpe    PASSA     DSR 0.9907 contro soglia 0.95
+   G3 stabilita'         PASSA     quota 93.1% contro 66.7%, mediana +2.23 contro 0
+   G4 calendario         PASSA     mensile: passa per costruzione
+
+========================================================================================================
+   VERDETTO
+========================================================================================================
+   Predizione: (a) tiene, mediana sopra +1,00 e a meno di 0,3 da +1,18; (b) G3 FALLISCE con quota
+   sotto i 2/3; (c) il DSR scende ma resta sopra 0,95. Esito atteso: tre cancelli su quattro.
+   FALSIFICATA se passa tutti e quattro, OPPURE se la mediana di G1 scende sotto +1,00.
+
+   (a) mediana +1.18  sopra +1,00: SI   scarto da +1,18: 0.00 (previsto sotto 0,30)
+   (b) G3 PASSA  quota 93.1% (previsto sotto 66.7%)
+   (c) DSR 0.9907  sopra 0,95: SI   (era 0,9870 con 10 celle)
+
+   -> ipotesi M1 FALSIFICATA
+      RAMO 1: il candidato passa tutti e quattro i cancelli.
+      L'holdout va aperto SU QUESTO SOLO, UNA VOLTA SOLA, come ATTO SEPARATO. Non qui.
+
+Tentativi cumulati a registro: 1390

@@ -11,7 +11,9 @@ aggiunta alza la soglia per tutte).
 
 **STATO: la coda dichiarata è esaurita.** A1-A5, B1-B6, C1-C6, D1-D2 sono tutte
 eseguite (giri 30-43). Restano solo le voci nate durante l'esecuzione e non ancora
-eseguite: **M1** (nata al giro 76). Il gruppo L è chiuso: L1 al giro 73, L2 al 74, L3 al 75,
+eseguite: **N1 — l'apertura dell'holdout**, nata al giro 77 e mai vista prima in tutto il
+progetto. M1 è stata eseguita al giro 77 e **il candidato ha passato tutti e quattro i
+cancelli**. Il gruppo L è chiuso: L1 al giro 73, L2 al 74, L3 al 75,
 L4 al 76. Il gruppo E (opzioni) è stato
 aggiunto ed eseguito ai giri 48-49.
 
@@ -224,6 +226,7 @@ distribuzione nulla.
 | **F4 sistema EMA intraday** | 51 | **FALSIFICATA** — l'orario (1,12%) supera il giornaliero (0,30%). Ma le finestre sono **20 / 2,9 / 0,8 anni**: Twelve Data dà 5.000 barre e basta, quindi il confronto di CAGR fra righe misura il periodo, non il timeframe. Il meccanismo previsto si vede: **7,1 → 33,6 → 133,4** operazioni/anno, e a 15 minuti −18,65% contro +20,30% |
 | F5 ablazione del sistema EMA | 51 | **confermata con margine enorme** — il **solo filtro di tendenza** ha aspettativa per operazione **13,321%** contro **0,564%** del sistema completo: rapporto **0,04**, cioè il sistema completo cattura un ventiquattresimo. Ingressi tattici e piano di uscita fanno entrare tardi e uscire presto |
 | **D3 finestre di lunghezza fissa** | 59 | **confermata** — ampiezza **5,81-10,19 punti** su finestre decennali contro i **0,56** di D1: **18×**. La sovrapposizione media fra campioni passa da **85,5%** (D1) a **13,9%**. Sbagliata solo la clausola sul segno (30,4% invece di ≥33,3% per C1). Risultato collaterale decisivo: **allungando l'orizzonte tutti e tre peggiorano** — H5 da 67,4% a 38,9% di vittorie, C1 da 30,4% a **0/36**. Le 4 peggiori finestre di H5 contengono tutte il 2008 |
+| **M1 quattro cancelli** | 77 | **FALSIFICATA sul ramo 1: il candidato passa TUTTI E QUATTRO i cancelli.** Prima volta in settantasette giri. Momentum **12-3 top-5 mensile**, IRR **11,27%**, rotazione 3,284× (aliquota **52%**). **G1**: mediana **+1,18** sui dodici calendari del benchmark, positivo in **12/12** col minimo a +1,04 — il buco della regola trovato al giro 76 era reale ma **non cambiava il verdetto**, e l'ampiezza del benchmark è 0,19, coerente con lo 0,14% del giro 68. **G3**: quota **93,1%** (27 finestre decennali su 29) e mediana **+2,23** — ed è la clausola su cui ero sicuro del contrario, avendo previsto una quota sotto i 2/3. **G2**: DSR **0,9907**, che **sale** invece di scendere allargando la famiglia da 10 a 20 celle. **G4**: per costruzione. Tre dubbi messi a verbale **prima** del risultato: **(i)** difetto di G2 — nella famiglia i margini vanno da −2,76 a +1,51 (**4,27 punti**) e il candidato **non è il massimo** (top-3 k=1 fa +1,51), ma `var_sr` è stimata sugli **Sharpe**, la cui dispersione è minuscola, mentre la selezione è avvenuta sui **margini di IRR netta**: il DSR protegge dalla selezione sbagliata; **(ii)** le due sole finestre negative su 29 sono **le ultime due** (1999-2008 a −1,23 e 2000-2009 a **−3,39**), cioè il candidato peggiora **puntando dritto verso l'holdout**; **(iii)** k=3 è stato scelto **in-sample** al giro 76 come massimo di dieci celle. Holdout **non aperto in questo giro**: la regola dice che è un **atto separato** → voce **N1** |
 | **L4 skip contro ritardo** | 76 | **FALSIFICATA sul ramo (b)**: l'ampiezza del profilo in k è **3,94 punti** sul top-5 e **1,79** sul top-10, entrambe sopra la soglia di 1,50. **Lo skip è un grado di libertà mai contato**, dello stesso ordine del calendario (3,65 al giro 68), e il gruppo A del giro 05 lo aveva fissato a 1 senza dichiararlo. Il ramo (a) **non scatta per due centesimi**: chiedeva un 12-3 positivo *e* entro 0,30 dal +0,86, e il top-5 fa **+1,18**, cioè 0,32 di distanza (sul top-10 la distanza è 0,28 ma il margine è negativo). La clausola diagnostica della voce è però centrata — **0,33 e 0,28** — e il meccanismo è reale perché è quasi un'identità: ritardare di venti giorni **è** usare un segnale calcolato un mese prima. Il 12-2 a 20 giorni **riprodotto in questo giro dà +0,86 esatto**. Ma il profilo del top-5 è **+0,65 / −0,87 / +1,18 / −0,39 / −2,75**: cambia segno tre volte con salti di due punti, cioè **non è la forma di un meccanismo, è la forma del rumore**. **Il 12-3 top-5 mensile passa G1 come misurato (+1,18), G2 (DSR 0,9870) e G4, e G3 non è mai stato misurato** → nuova voce **M1**, non eseguita qui. Trovato anche un **buco nella regola del giro 72**: per una strategia mensile il grado di libertà del calendario ce l'ha il **benchmark**, e sia il giro 72 sia questo hanno usato il solo gennaio |
 | **L3 report finale** | 75 | **confermata sulla clausola che falsifica, sbagliata sul conteggio e sbagliata per difetto**. Controllo automatico sul registro cumulato: **213 righe su 1.365** (15,6%) hanno extra ≥ +1,00, in **30 ipotesi distinte**; esaminate una per una, **nessuna sopravvive** — cripto per sopravvivenza selezionata e DSR (0,443/0,880), anomalie perché sono premi lordi (2 su 201 passano i filtri), candidati storici perché negativi in **60/60** contro l'equal-weight dello stesso universo e **12/12** su G1, opzioni perché il premio esiste ma incassarlo perde (−4,98/−2,92), il resto perché **non sono margini di strategia**. La condizione di falsificazione non scatta. Ma i numeri superstiti sono **dodici**, non «meno di dieci»: sette costi/soglie e cinque misure di fragilità, e nessuno di essi e' un margine di strategia. Prodotto `quant/reports/REPORT.md` riscritto da capo, con la regola dell'holdout, i dodici numeri, i tre errori di misura (+ il quarto, i dividendi) e sei raccomandazioni operative. **Due raccomandazioni del giro 29 sono ritirate**: il +1,72 sul veicolo (catena +1,72 → +2,01 → +2,15 → +1,23 → **+0,34** sulla stessa finestra) e il trend following levereggiato (giro 07 con margin call: −4,18; giro 53: nessun filtro batte il buy&hold, il migliore perde 2,51) |
 | **L2 costo retail** | 74 | **FALSIFICATA sulla clausola principale**: col modello retail (€1,50/ordine + 0,05% di spread) il divario momentum-meno-equal-weight **si allarga a favore del momentum** di **+0,47/+0,66** punti, non a sfavore. La commissione fissa penalizza **il benchmark**, che tocca 49 posizioni (636 ordini/anno) contro le 89 del top-5 annuale, e lo spread retail (0,05%) è **un terzo** del round-trip proporzionale (0,15%), quindi su un patrimonio grande il retail costa **meno** del modello del progetto (top-5 mensile: IRR retail **sopra** la proporzionale, +0,06). **Clausola soglia centrata e con margine 14×: €7.350/mese** su 49 posizioni contro i «sopra €500» previsti. Contraddizione della voce dichiarata **prima** di eseguire: la motivazione («49 commissioni fisse») diceva l'opposto della conclusione, e ha vinto la motivazione. Conseguenza per il progetto: i confronti di 73 giri sono **conservativi nella direzione giusta** — ma il +1,30 non è un vantaggio del momentum, è l'artefatto di far pagare al benchmark 49 azioni singole invece di un fondo. Trovato anche: **versare in un ordine solo non serve** all'equal-weight (636 → 600 ordini, IRR identica) perché il ribilanciamento ri-tocca le 49 posizioni |
@@ -1069,3 +1072,43 @@ registra qualunque sia, e il progetto finisce lì. **Oppure** se (a) cade, cioè
 mediana sui dodici calendari del benchmark scende sotto +1,00: in quel caso il
 +1,18 era il calendario e non la strategia, ed è la terza volta che il progetto
 prende un massimo per un risultato.
+
+## N. L'apertura dell'holdout
+
+**N1 — L'holdout 2010-2026, aperto una volta sola, sul momentum 12-3 top-5 mensile**
+Nata al giro 77. Il candidato ha passato tutti e quattro i cancelli della regola
+del giro 72 — G1 mediana +1,18 su dodici calendari, G2 DSR 0,9907, G3 quota 93,1%
+con mediana +2,23, G4 per costruzione. La regola dice che a questo punto
+**l'holdout si apre su quello solo, una volta sola, e il risultato si registra
+qualunque sia**. Questa voce è quell'atto.
+**Regole dell'apertura, fissate qui e non modificabili dopo:**
+- **un solo candidato**: momentum 12-3 top-5 mensile, 49 settori, motore
+  giornaliero del giro 73, nessun parametro ritoccato;
+- **un solo benchmark**: equal-weight annuale con la rotazione vera, e si riporta
+  la **mediana sui dodici calendari**, non un mese scelto;
+- **una sola finestra**: 2010-01-01 → fine dei dati. Non si scelgono
+  sottoperiodi, non si tolgono anni, non si «esclude il 2020»;
+- **nessuna riottimizzazione**, nemmeno se il risultato è brutto. Se viene voglia
+  di cambiare qualcosa, la voglia si scrive nel report e non si esegue;
+- si riportano insieme **margine, rotazione, aliquota applicata, drawdown** e il
+  **profilo per finestre decennali** dentro l'holdout, perché un numero solo su
+  sedici anni non dice se il vantaggio è stabile.
+*Predizione*, scritta prima di guardare: **il margine sull'holdout è NEGATIVO, fra
+−3 e 0 punti**. Tre ragioni, tutte già a registro: le uniche due finestre
+decennali negative del train sono **le ultime due** (1999-2008 a −1,23, 2000-2009
+a −3,39), cioè il degrado punta verso l'holdout; il giro 59 ha misurato che
+**allungando l'orizzonte tutti i candidati peggiorano** (H5 da 67,4% a 38,9% di
+vittorie, C1 da 30,4% a 0/36); e il giro 76 ha mostrato che lo skip è un
+**parametro libero da 3,94-4,27 punti**, quindi il +1,18 è il massimo di una
+griglia il cui rumore ha la stessa taglia dell'effetto. Prevedo inoltre che la
+**rotazione resti sopra 1,0×** (quindi aliquota 52%) e che il drawdown del
+candidato sia **peggiore** di quello del benchmark, come in tutto il train.
+*Falsificata se*: il margine sull'holdout è **positivo e sopra +1,00 punto** come
+mediana sui dodici calendari — nel qual caso il progetto ha trovato, dopo
+settantasette giri e 1.390 tentativi registrati, **una strategia attiva che batte
+il PAC buy&hold netto di fiscalità irlandese fuori campione**, e la conclusione di
+tutto il lavoro va riscritta. **Oppure** se il margine è positivo ma sotto +1,00:
+in quel caso non c'è né conferma né smentita netta, e va registrato come tale
+invece di essere arrotondato verso la tesi che preferisco.
+**Dopo N1 l'holdout è bruciato**: qualunque cosa dica, non si riapre. Ogni voce
+successiva torna a lavorare solo su 1969-2009.

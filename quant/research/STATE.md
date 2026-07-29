@@ -197,14 +197,17 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 74 | **L2 costo retail** | **falsificata** | il divario si allarga **a favore** del momentum (+0,53): la commissione fissa colpisce il benchmark a 49 posizioni |
 | 75 | **L3 report finale** | confermata | **0 su 30** gruppi sopra +1,00 sopravvive alla rilettura; ma i numeri superstiti sono **dodici**, non «meno di dieci» |
 | 76 | **L4 skip contro ritardo** | **falsificata** | ampiezza in k **3,94** punti: lo skip è un grado di libertà mai contato. E il 12-3 top-5 mensile passa **3 cancelli su 4** |
+| 77 | **M1 quattro cancelli** | **falsificata (ramo 1)** | **il candidato passa 4 su 4**: G1 +1,18 su 12 calendari, G2 0,9907, G3 **93,1%**, G4 per costruzione |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 53 voci eseguite nei giri 30-76:
-**36 confermate, 16 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Resta in coda: **M1**, nata al giro 76 — la verifica del primo candidato che sia
-mai arrivato ai cancelli.
+(rotazione concentrata e sistema EMA, giri 50-51). 54 voci eseguite nei giri 30-77:
+**36 confermate, 17 falsificate, 1 senza esito per dati (B3)**.
+**Per la prima volta in settantasette giri esiste una promozione**: il momentum
+12-3 top-5 mensile ha passato tutti e quattro i cancelli al giro 77.
+Resta in coda: **N1 — l'apertura dell'holdout**, pre-registrata al giro 77 con la
+predizione scritta prima di guardare.
 
-Registro a **1.378 tentativi** cumulati.
+Registro a **1.390 tentativi** cumulati.
 Il report finale è **[`../reports/REPORT.md`](../reports/REPORT.md)**, riscritto
 al giro 75 (era fermo al giro 29).
 
@@ -767,6 +770,15 @@ sottoprodotto di un giro.
 **Applicata ai dodici candidati riproducibili sui 49 settori (1969-2009): zero
 passano.**
 
+> **AGGIORNAMENTO DEL GIRO 77 — la regola è stata passata.** Un tredicesimo
+> candidato, che al giro 72 non esisteva perché lo **skip** non era ancora un
+> parametro dichiarato, passa tutti e quattro i cancelli: **momentum 12-3 top-5
+> mensile**, G1 **+1,18** (mediana su 12 calendari), G2 **0,9907**, G3 **93,1%**
+> con mediana +2,23, G4 per costruzione. L'apertura dell'holdout è un **atto
+> separato** ed è pre-registrata come voce **N1**, con la predizione — margine
+> **negativo, fra −3 e 0** — scritta prima di guardare. **Dopo N1 l'holdout è
+> bruciato**: qualunque cosa dica, non si riapre.
+
 - **G1 elimina 12/12.** Nessuno arriva a un punto di margine sull'equal-weight
   annuale. Il migliore è **momentum top-5 mensile a +0,56**, e per arrivarci
   serve una rotazione di 2,8×/anno, cioè l'aliquota al 52%.
@@ -883,3 +895,30 @@ passano.**
   10 celle). Le tre letture del DSR: **0,9870** con la `var_sr` della regola,
   0,9984 con N=10, **0,0000** col registro intero (SR0 1,7631 per periodo, oltre 6
   annualizzato: non credibile, come al giro 65).
+- **La regola del giro 72 è stata passata** (giro 77). Il momentum **12-3 top-5
+  mensile** passa **tutti e quattro** i cancelli: G1 mediana **+1,18** sui dodici
+  calendari del benchmark (positivo in **12/12**, minimo +1,04), G2 **DSR 0,9907**,
+  G3 quota **93,1%** su 29 finestre decennali con mediana **+2,23**, G4 per
+  costruzione. IRR 11,27% contro 10,09% del benchmark, rotazione 3,284×, aliquota
+  **52%**: paga il regime peggiore e vince lo stesso. La regola era stata scritta
+  quando nessun candidato poteva passarla, proprio per non poterla adattare dopo.
+- **Il buco di G1 trovato al giro 76 era reale ma non cambiava il verdetto.** La
+  mediana sui dodici calendari del benchmark è +1,18, identica a gennaio, e
+  l'ampiezza del benchmark è **0,19** punti — coerente con lo 0,14% che il giro 68
+  aveva misurato per un equal-weight. Il grado di libertà del calendario appartiene
+  a chi seleziona, non al benchmark.
+- **DIFETTO DI G2, scoperto applicandolo** (giro 77). Nella famiglia di venti celle
+  (5 skip × 4 taglie) i margini vanno da **−2,76 a +1,51**, cioè **4,27 punti di
+  ampiezza**, e il candidato **non è nemmeno il massimo** (top-3 con k=1 fa +1,51).
+  Ma la `var_sr` del Deflated Sharpe è stimata sulla dispersione degli **Sharpe**,
+  che è minuscola (SR0 0,0608), mentre la selezione è avvenuta sui **margini di IRR
+  netta**. **Il DSR sta proteggendo dalla selezione sbagliata**: fra Sharpe e IRR
+  di un PAC ci sono in mezzo il motore fiscale, la soglia del 100% e la forma dei
+  cashflow. Non riscrivo G2 adesso — sarebbe il peccato che il progetto ha evitato
+  per settantasette giri — ma il difetto vale indipendentemente da come andrà
+  l'holdout.
+- **Il candidato peggiora esattamente dove comincia l'holdout.** Le uniche due
+  finestre decennali negative su ventinove sono **le ultime due**: 1999-2008 a
+  **−1,23** e 2000-2009 a **−3,39**, dopo cinque finestre consecutive sopra +3.
+  L'holdout comincia nel 2010. È lo stesso profilo che il giro 59 aveva trovato su
+  H5 (le quattro peggiori finestre contenevano tutte il 2008).

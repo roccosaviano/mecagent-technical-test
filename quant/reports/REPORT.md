@@ -100,20 +100,44 @@ Misurando lo **skip** del momentum come parametro esplicito (giro 76), il
 con **DSR 0,9870**. Passa **G1 come misurato, G2 e G4**. **G3 non è mai stato
 misurato**, e G1 è misurato contro un benchmark su **un solo calendario**.
 
-Non è una promozione, e l'holdout resta chiuso:
+La verifica completa è stata pre-registrata come voce **M1**, con predizione
+scritta prima: *G1 tiene, G3 fallisce*.
 
-- il **+1,18 è il massimo di dieci celle**, e il profilo del margine al variare
-  dello skip è **+0,65 / −0,87 / +1,18 / −0,39 / −2,75** — cambia segno tre volte
-  con salti di due punti. Non è la forma di un meccanismo;
-- lo stesso giro ha scoperto che **lo skip vale 3,94 punti di ampiezza**, cioè è
-  un grado di libertà mai contato, dello stesso ordine del calendario (3,65);
-- la regola dice che l'apertura dell'holdout è un **atto separato**, non il
-  sottoprodotto di un giro, e un cancello non misurato non è un cancello passato.
+### Addendum del giro 77 — la regola è stata passata
 
-La verifica completa è pre-registrata come voce **M1** in
-[`../research/QUEUE.md`](../research/QUEUE.md), con predizione scritta prima:
-**G1 tiene, G3 fallisce**. Se invece passasse tutti e quattro, l'holdout va aperto
-su quello solo, una volta sola, e il risultato si registra qualunque sia.
+**G3 non è fallito. Il candidato passa tutti e quattro i cancelli.**
+
+| | cancello | soglia | misurato |
+|---|---|---|---|
+| **G1** | margine | ≥ +1,00, mediana su 12 calendari | **+1,18** (positivo in 12/12, minimo +1,04) |
+| **G2** | Deflated Sharpe | > 0,95 | **0,9907** |
+| **G3** | stabilità | ≥ 66,7% finestre **e** mediana > 0 | **93,1%** (27 finestre su 29), mediana **+2,23** |
+| **G4** | calendario | ≥ 10/12 | mensile, per costruzione |
+
+Momentum **12-3 top-5 mensile**: IRR **11,27%** contro **10,09%** del benchmark,
+rotazione 3,284×/anno, quindi **aliquota 52%** — paga il regime peggiore e vince
+lo stesso. La predizione di M1 diceva *tre cancelli su quattro* e sbagliava
+proprio sul cancello di cui ero più sicuro.
+
+**L'holdout non è ancora aperto**: la regola dice che l'apertura è un **atto
+separato**, ed è pre-registrata come voce **N1** con la predizione — margine
+**negativo, fra −3 e 0 punti** — scritta prima di guardare. Tre dubbi messi a
+verbale *prima* del risultato, perché dopo non varrebbero niente:
+
+1. **Difetto di G2.** Nella famiglia di venti celle i margini vanno da −2,76 a
+   **+1,51** (4,27 punti di ampiezza) e il candidato **non è il massimo**. Ma la
+   `var_sr` del DSR è stimata sulla dispersione degli **Sharpe**, minuscola, mentre
+   la selezione è avvenuta sui **margini di IRR netta**: il DSR sta proteggendo
+   dalla selezione sbagliata. La regola non si riscrive adesso — il difetto si
+   registra.
+2. **Il candidato peggiora dove comincia l'holdout.** Le uniche due finestre
+   decennali negative su ventinove sono **le ultime due** (1999-2008 a −1,23,
+   2000-2009 a **−3,39**), dopo cinque consecutive sopra +3.
+3. **Lo skip k=3 è stato scelto in-sample**, come massimo di dieci celle.
+
+**Fino all'esito di N1, la conclusione di questo report resta quella scritta
+sopra.** Se N1 dovesse falsificare — margine positivo e sopra +1,00 fuori
+campione — va riscritta, e il report lo dirà.
 
 ---
 
