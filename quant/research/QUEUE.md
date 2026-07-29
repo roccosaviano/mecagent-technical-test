@@ -934,3 +934,68 @@ sarà il DSR ma la **stabilità sul calendario**, il grado di libertà scoperto 
 giro 68.
 *Falsificata se*: almeno un candidato già registrato passa tutte le soglie — nel
 qual caso l'holdout va aperto su quello, una volta sola, e il progetto finisce lì.
+
+---
+
+## L. Il divario fra il modello e chi versa davvero
+
+Aggiunte al giro 73, dopo il secondo esaurimento della coda. Committate **prima**
+di eseguire qualunque cosa.
+
+**L1 — Il costo di essere in ritardo, misurato in giorni**
+Ogni segnale del progetto è applicato il mese successivo, come se il
+ribilanciamento avvenisse a mezzanotte del 31. Un investitore reale vede i dati
+con giorni di ritardo, ordina a mercato aperto e ottiene un prezzo diverso. Il
+giro 05 aveva misurato il degrado con ritardi di **uno e due mesi** (+2,93 →
++2,35 → +2,16), ma mai sui **giorni**, che è la scala a cui il ritardo esiste
+davvero.
+Da misurare: momentum 12-2 top-5 e top-10 mensile sui 49 settori con dati
+**giornalieri**, ribilanciando a fine mese **+ 0, 1, 5, 10, 20 giorni di
+borsa**, contro l'equal-weight annuale con la rotazione vera. Finestra
+1969-2009: l'holdout resta sigillato.
+*Predizione*: il margine **decade in modo monotono** col ritardo, di **0,2-0,8
+punti ogni 20 giorni** — cioè in linea con i −0,58 al mese del giro 05. A **un
+solo giorno** la perdita sta **sotto 0,1 punti**, quindi il risultato del progetto
+non dipende dal ribilanciamento a mezzanotte. E **nessun ritardo rende il margine
+positivo**: il momentum non diventa buono aspettando.
+*Falsificata se*: il margine **non è monotono** decrescente nel ritardo, **oppure**
+un ritardo di 5 giorni o più **migliora** il margine — nel qual caso il segnale
+sta catturando reversione di brevissimo periodo e non momentum, e va riletto il
+gruppo A per intero.
+
+**L2 — Il costo come lo paga un broker retail europeo**
+Tutto il progetto usa **0,15% round-trip proporzionale**. Un broker retail europeo
+non funziona così: commissione **fissa** per ordine (€1-3 su Degiro/IBKR), più
+spread denaro-lettera sull'ETF, più eventualmente un minimo. Su un versamento da
+€750 una commissione fissa da €2 è lo **0,27%** — quasi il doppio del modello — e
+su un ribilanciamento che tocca dieci posizioni sono dieci commissioni.
+Da misurare: rifare l'equal-weight annuale, il momentum top-5 e top-10 con un
+modello di costo **fisso + proporzionale** (€1,50 per ordine + 0,05% di spread),
+contando **un ordine per posizione toccata**, e confrontare con il modello
+proporzionale del progetto. Riportare anche la soglia di versamento sotto cui un
+PAC mensile diventa antieconomico.
+*Predizione*: il modello proporzionale **sottostima** il costo per le strategie
+concentrate e lo **sovrastima** per l'equal-weight, perché 49 posizioni da €15
+l'una pagano 49 commissioni fisse. L'effetto netto **allarga** il divario
+momentum-meno-equal-weight di **0,3-1,0 punti** a sfavore del momentum, e la
+soglia di antieconomicità per un PAC su 49 posizioni sta **sopra i €500/mese**.
+*Falsificata se*: il divario si **restringe** invece di allargarsi — nel qual caso
+la commissione fissa penalizza più il benchmark che il candidato e tutti i
+confronti del progetto sono conservativi nella direzione sbagliata.
+
+**L3 — Il report finale**
+`quant/reports/REPORT.md` è fermo al giro 29 e porta ancora il **+1,72**
+pre-correzione. Quarantatré giri di risultati non esistono in forma consultabile,
+e la conclusione del progetto — *nessuna strategia attiva batte il PAC buy&hold
+netto di fiscalità irlandese* — non è scritta da nessuna parte in modo leggibile
+da chi non ha seguito i giri.
+Da produrre: un report che riporti la regola dell'holdout (giro 72), i sei-otto
+numeri che contano, i tre errori di misura trovati e corretti (base fiscale, lotti
+ETF, rotazione), e le raccomandazioni operative che il progetto **può**
+sostenere — che sono poche e riguardano il veicolo, non la strategia.
+*Predizione*: i numeri che sopravvivono a una rilettura completa sono **meno di
+dieci**, e **nessuno** di essi è un margine di strategia: sono tutti costi,
+soglie o misure di fragilità.
+*Falsificata se*: nella rilettura emerge un risultato di strategia mai
+contraddetto dai giri successivi e con margine sopra un punto — nel qual caso il
+progetto ha un candidato che non aveva registrato come tale.
