@@ -1,0 +1,50 @@
+====================================================================================================
+L4 — lo skip contro il ritardo: il 12-3 riproduce il +0,86 del giro 73?
+====================================================================================================
+   49 settori giornalieri, 1969-07-01 → 2009-12-31 (10223 giorni di borsa).
+   **Holdout 2010-2026 non toccato.** Motore giornaliero del giro 73, skip k = 1, 2, 3, 4, 6.
+
+   benchmark equal-weight annuale (ritardo 0): IRR 10.09%   rotazione 0.071x
+
+   momentum 12-k **top-5** mensile, nessun ritardo
+   ------------------------------------------------------------------------------
+   skip k                             1         2         3         4         6
+   IRR netta                     10.74%     9.22%    11.27%     9.70%     7.34%
+   margine vs EW annuale         +0.65     -0.87     +1.18     -0.39     -2.75 
+   rotazione                     3.302x    3.300x    3.284x    3.274x    3.251x
+   ampiezza del profilo           3.94 punti   (scarto max dalla media +2.32)
+
+   momentum 12-k **top-10** mensile, nessun ritardo
+   ------------------------------------------------------------------------------
+   skip k                             1         2         3         4         6
+   IRR netta                      9.86%     9.24%     9.16%     9.04%     8.07%
+   margine vs EW annuale         -0.22     -0.84     -0.92     -1.05     -2.02 
+   rotazione                     2.759x    2.758x    2.754x    2.746x    2.737x
+   ampiezza del profilo           1.79 punti   (scarto max dalla media +1.01)
+
+   IL CONFRONTO CHE DECIDE: 12-3 senza ritardo contro 12-2 ritardato di 20 giorni
+   --------------------------------------------------------------------------------------------
+   top-5   12-2 a 0g   -0.87   12-2 a 20g   +0.86   12-3 a 0g   +1.18   |12-3 − 12-2@20g| =  0.33
+   top-10  12-2 a 0g   -0.84   12-2 a 20g   -1.21   12-3 a 0g   -0.92   |12-3 − 12-2@20g| =  0.28
+
+   cella migliore del profilo: top-5 k=3 a +1.18   DSR 0.9870 su N=1366 (var_sr 0.000400 sulla famiglia del giro)
+
+====================================================================================================
+   VERDETTO
+====================================================================================================
+   Predizione: il 12-3 senza ritardo NON riproduce il +0.86, resta SOTTO ZERO, entro 0,5 dal 12-2,
+   e il profilo in k e' piatto entro +-0,6 punti.
+   FALSIFICATA se il 12-3 e' POSITIVO e entro 0.30 dal +0.86, OPPURE se l'ampiezza in k supera 1.50.
+
+   top-5   12-3 = +1.18   positivo: SI    entro 0.30 dal +0.86: no    → ramo (a) non scatta
+          scarto dal 12-2 senza ritardo: 2.05  (previsto entro 0,50)
+   top-10  12-3 = -0.92   positivo: no    entro 0.30 dal +0.86: no    → ramo (a) non scatta
+          scarto dal 12-2 senza ritardo: 0.08  (previsto entro 0,50)
+   top-5   ampiezza in k = 3.94  (soglia 1.50 → ramo (b) SCATTA)   scarto max dalla media 2.32 (previsto entro 0,60)
+   top-10  ampiezza in k = 1.79  (soglia 1.50 → ramo (b) SCATTA)   scarto max dalla media 1.01 (previsto entro 0,60)
+
+   -> ipotesi L4 FALSIFICATA
+      ramo (a) il meccanismo dello skip e' reale : non scattato
+      ramo (b) lo skip e' un grado di liberta'   : SCATTATO
+
+Tentativi cumulati a registro: 1378

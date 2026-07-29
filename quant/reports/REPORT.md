@@ -90,6 +90,31 @@ risultato si registra qualunque sia.
 
 L'holdout resta sigillato. Non è prudenza: è che **non c'è niente da testarci**.
 
+### Addendum del giro 76 — la prima cella che arriva ai cancelli
+
+*Scritto un giro dopo il resto del report, e messo qui invece che riscrivere le
+righe sopra, perché il verso in cui una conclusione si muove è informazione.*
+
+Misurando lo **skip** del momentum come parametro esplicito (giro 76), il
+**momentum 12-3 top-5 mensile** dà **+1,18 punti** contro l'equal-weight annuale,
+con **DSR 0,9870**. Passa **G1 come misurato, G2 e G4**. **G3 non è mai stato
+misurato**, e G1 è misurato contro un benchmark su **un solo calendario**.
+
+Non è una promozione, e l'holdout resta chiuso:
+
+- il **+1,18 è il massimo di dieci celle**, e il profilo del margine al variare
+  dello skip è **+0,65 / −0,87 / +1,18 / −0,39 / −2,75** — cambia segno tre volte
+  con salti di due punti. Non è la forma di un meccanismo;
+- lo stesso giro ha scoperto che **lo skip vale 3,94 punti di ampiezza**, cioè è
+  un grado di libertà mai contato, dello stesso ordine del calendario (3,65);
+- la regola dice che l'apertura dell'holdout è un **atto separato**, non il
+  sottoprodotto di un giro, e un cancello non misurato non è un cancello passato.
+
+La verifica completa è pre-registrata come voce **M1** in
+[`../research/QUEUE.md`](../research/QUEUE.md), con predizione scritta prima:
+**G1 tiene, G3 fallisce**. Se invece passasse tutti e quattro, l'holdout va aperto
+su quello solo, una volta sola, e il risultato si registra qualunque sia.
+
 ---
 
 ## I numeri che contano

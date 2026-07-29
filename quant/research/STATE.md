@@ -196,13 +196,15 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 73 | **L1 ritardo in giorni** | **falsificata** | non monotono; il costo di 1 giorno e' **0,08** punti |
 | 74 | **L2 costo retail** | **falsificata** | il divario si allarga **a favore** del momentum (+0,53): la commissione fissa colpisce il benchmark a 49 posizioni |
 | 75 | **L3 report finale** | confermata | **0 su 30** gruppi sopra +1,00 sopravvive alla rilettura; ma i numeri superstiti sono **dodici**, non «meno di dieci» |
+| 76 | **L4 skip contro ritardo** | **falsificata** | ampiezza in k **3,94** punti: lo skip è un grado di libertà mai contato. E il 12-3 top-5 mensile passa **3 cancelli su 4** |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 52 voci eseguite nei giri 30-75:
-**36 confermate, 15 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Resta in coda: **L4**, l'ultima.
+(rotazione concentrata e sistema EMA, giri 50-51). 53 voci eseguite nei giri 30-76:
+**36 confermate, 16 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Resta in coda: **M1**, nata al giro 76 — la verifica del primo candidato che sia
+mai arrivato ai cancelli.
 
-Registro a **1.366 tentativi** cumulati.
+Registro a **1.378 tentativi** cumulati.
 Il report finale è **[`../reports/REPORT.md`](../reports/REPORT.md)**, riscritto
 al giro 75 (era fermo al giro 29).
 
@@ -853,3 +855,31 @@ passano.**
   modellato dà **−4,18** (giro 07), e testato sistematicamente al giro 53
   **nessun filtro di tendenza batte il buy&hold** (il migliore perde 2,51 punti,
   e vince fra i filtri solo perché ruota 0,19×/anno).
+- **Lo skip del momentum è un parametro libero mai dichiarato, e vale 3,94 punti**
+  (giro 76). Il profilo del margine del top-5 mensile al variare dello skip k è
+  **+0,65 / −0,87 / +1,18 / −0,39 / −2,75** per k = 1, 2, 3, 4, 6: cambia segno
+  tre volte con salti di due punti. È **lo stesso ordine di grandezza del
+  calendario** (3,65 al giro 68), e il gruppo A del giro 05 lo aveva fissato a 1
+  senza contarlo. Moltiplicati fra loro, skip e calendario rendono lo spazio di
+  ricerca vero del momentum settoriale **un ordine di grandezza più grande** di
+  quello che il registro ha contato.
+- **Ritardare l'esecuzione di venti giorni è quasi un'identità con lo skip di un
+  mese in più**, non una scoperta: 12-2 ritardato di 20 giorni e 12-3 senza
+  ritardo distano **0,33** (top-5) e **0,28** (top-10). Il +0,86 del giro 73 non
+  era rumore da chiudere — **era lo skip**. Ma il profilo dello skip è a sua volta
+  rumore, e le due cose non si annullano.
+- **Un buco nella regola del giro 72, trovato applicandola** (giro 76). G1 chiede
+  la mediana del margine sui **dodici calendari di ribilanciamento**, ma una
+  strategia **mensile** non ha quel grado di libertà: ce l'ha il suo **benchmark
+  annuale**. Sia il giro 72 sia il giro 76 hanno usato il **solo gennaio**. La
+  mediana va presa sui dodici calendari del benchmark, ed è la voce M1.
+- **Per la prima volta in settantasei giri esiste una cella che passa tre cancelli
+  su quattro**: momentum **12-3 top-5 mensile**, margine **+1,18** (G1 come
+  misurato), **DSR 0,9870** (G2, con la `var_sr` che la regola prescrive), G4 per
+  costruzione. **G3 non è mai stato misurato.** Non è una promozione e non apre
+  l'holdout — la regola dice che l'apertura è un **atto separato** — ed è il
+  massimo di dieci celle, la quarta volta che il progetto incontra questa forma
+  (Kronos +13,11 su 2 simboli, gennaio +1,51 su 12 calendari, il ritardo +0,86 su
+  10 celle). Le tre letture del DSR: **0,9870** con la `var_sr` della regola,
+  0,9984 con N=10, **0,0000** col registro intero (SR0 1,7631 per periodo, oltre 6
+  annualizzato: non credibile, come al giro 65).
