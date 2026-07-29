@@ -192,13 +192,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 69 | **K1 conto in valuta** | confermata | margine max **0,25**, livello **−0,46/−0,77** punti in euro |
 | 70 | **K2 PAC interrotto** | **falsificata** | l'IRR e' cieca: −22,51% di montante = **−0,016** di IRR |
 | 71 | **K3 vantaggio del veicolo** | **falsificata** | +3,43 sopra la soglia, ma la rotazione vale **+0,00**: sono i dividendi |
+| 72 | **K4 regola per l'holdout** | confermata | **0 candidati su 12** passano; il cancello che elimina di piu' e' il **margine** |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 48 voci eseguite nei giri 30-71:
-**34 confermate, 13 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Resta in coda: **K4**.
+(rotazione concentrata e sistema EMA, giri 50-51). 49 voci eseguite nei giri 30-72:
+**35 confermate, 13 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+**La coda e' di nuovo esaurita.**
 
-Registro a **1.340 tentativi** cumulati.
+Registro a **1.352 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -738,3 +739,36 @@ Registro a **1.340 tentativi** cumulati.
   veicolo, si può solo evitare di perderlo. Di quei 3,43, **+2,77 erano già noti
   al giro 53**, **+0,66 sono i dividendi** tassati al detentore diretto (giro 56)
   e **+0,00 è la rotazione**.
+
+## La regola per aprire l'holdout — IN VIGORE dal giro 72
+
+Scritta al giro 72, quando non esisteva nessun candidato che potesse passarla.
+Un candidato merita l'holdout **solo se passa tutti e quattro i cancelli**.
+
+| | cancello | soglia |
+|---|---|---|
+| **G1** | margine | IRR ≥ benchmark **+1,00 punto**, come **mediana sui dodici calendari** di ribilanciamento |
+| **G2** | Deflated Sharpe | **> 0,95** su N = registro **cumulato**, `var_sr` stimata sulla famiglia del giro |
+| **G3** | stabilità | extra positivo in **≥ 2/3** delle finestre decennali mobili **E** mediana degli extra **> 0** |
+| **G4** | calendario | margine positivo in **≥ 10 dei 12** mesi di ribilanciamento (le strategie mensili lo passano per costruzione) |
+
+Benchmark: **equal-weight annuale** dello stesso universo, con la rotazione vera.
+Se un candidato passa, l'holdout si apre **una volta sola, su quello solo**, e il
+risultato si registra qualunque sia. L'apertura è un **atto separato**, non un
+sottoprodotto di un giro.
+
+**Applicata ai dodici candidati riproducibili sui 49 settori (1969-2009): zero
+passano.**
+
+- **G1 elimina 12/12.** Nessuno arriva a un punto di margine sull'equal-weight
+  annuale. Il migliore è **momentum top-5 mensile a +0,56**, e per arrivarci
+  serve una rotazione di 2,8×/anno, cioè l'aliquota al 52%.
+- G2 elimina 10/12, G3 elimina 10/12, **G4 elimina 7/12**.
+- **La predizione che il calendario fosse il cancello più selettivo è sbagliata**,
+  e la ragione è che cinque candidati su dodici sono mensili e lo passano per
+  costruzione. Ristretto ai **sette annuali**, G4 ne elimina **sei su sette**.
+  Entrambe le letture vanno tenute: quella richiesta dalla predizione è falsa,
+  quella condizionata è vera, e la seconda non salva la prima.
+- **Il più vicino al bersaglio in 72 giri**: momentum 12-2 top-5 mensile passa
+  G2 (DSR **0,971**) e G4, e fallisce G3 per **sette decimi di punto percentuale**
+  (66% contro 66,7%). Resta comunque a mezzo punto dal margine richiesto.

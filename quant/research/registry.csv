@@ -1339,3 +1339,15 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 71,K3 vantaggio del veicolo,"momentum DENTRO un fondo, ETF UCITS",1969-2026,,11.621885779202259,,,683,rotazione vera
 71,K3 vantaggio del veicolo,cap-weight diretto (CGT + div),1969-2026,,9.829768893528984,,,683,rotazione vera
 71,K3 vantaggio del veicolo,cap-weight via ETF UCITS,1969-2026,,8.737826059602206,,,683,rotazione vera
+72,K4 regola per l'holdout,momentum 12-2 top-5 annuale,1969-2009,,-0.20350805293928786,,0.6667409704636764,29,"dsr=0.823,cal=5"
+72,K4 regola per l'holdout,momentum 12-2 top-10 annuale,1969-2009,,-0.07240079882596717,,1.1878286165784289,29,"dsr=0.818,cal=5"
+72,K4 regola per l'holdout,momentum 12-2 top-25 annuale,1969-2009,,-0.3532670344290052,,0.9043084197396798,29,"dsr=0.799,cal=1"
+72,K4 regola per l'holdout,momentum 6-2 top-10 annuale,1969-2009,,0.13384307473859725,,1.2523105411427693,29,"dsr=0.836,cal=9"
+72,K4 regola per l'holdout,low-vol 36m top-10 annuale,1969-2009,,-1.124014054180841,,-0.14818657048455997,29,"dsr=0.701,cal=0"
+72,K4 regola per l'holdout,low-vol 36m top-25 annuale,1969-2009,,-0.6101944017490766,,0.3631233978588586,29,"dsr=0.737,cal=0"
+72,K4 regola per l'holdout,punteggio misto top-10 annuale,1969-2009,,-0.5518473302683224,,0.5803242710272372,29,"dsr=0.837,cal=3"
+72,K4 regola per l'holdout,momentum 12-2 top-5 mensile,1969-2009,,0.5560658079658474,,1.4259535739239162,29,"dsr=0.971,cal=12"
+72,K4 regola per l'holdout,H5 momentum top-10 mensile,1969-2009,,-0.24237456722949524,,0.9419086831670747,29,"dsr=0.968,cal=12"
+72,K4 regola per l'holdout,momentum 12-2 top-25 mensile,1969-2009,,-1.289348583288083,,-0.8485402539444742,29,"dsr=0.936,cal=12"
+72,K4 regola per l'holdout,H4 low-vol 36m top-10 mensile,1969-2009,,-1.558156647645406,,-1.611825029227738,29,"dsr=0.753,cal=12"
+72,K4 regola per l'holdout,C1 punteggio misto top-10 mensile,1969-2009,,-1.7498979417035265,,-1.0751922262851785,29,"dsr=0.879,cal=12"
