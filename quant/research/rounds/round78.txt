@@ -1,0 +1,67 @@
+========================================================================================================
+N1 — APERTURA DELL'HOLDOUT. Momentum 12-3 top-5 mensile, 49 settori.
+========================================================================================================
+   Serie completa 1969-07-01 → 2026-05-29.   Holdout: 2010-01-01 → fine dei dati.
+   Una volta sola. Nessuna riottimizzazione. Il risultato si registra qualunque sia.
+
+   ==================================================================================================
+   IL MARGINE SULL'HOLDOUT 2010-2026, calendario per calendario
+   ==================================================================================================
+       gen    feb    mar    apr    mag    giu    lug    ago    set    ott    nov    dic
+     10.83  10.71  10.90  10.93  10.92  10.85  10.76  10.79  10.82  10.91  10.82  10.85
+     -0.94  -0.82  -1.01  -1.04  -1.03  -0.96  -0.86  -0.90  -0.93  -1.02  -0.92  -0.96
+
+   candidato IRR netta        :     9.89%   (aliquota 52%)
+   benchmark, mediana dei 12  :    10.84%
+   **MARGINE, MEDIANA DEI 12**:    -0.95 punti   (positivo in 0/12 calendari, min -1.04 max -0.82)
+
+                                  candidato     benchmark   (calendario mediano: gen)
+   ----------------------------------------------------------
+   rotazione /anno                     3.80          0.06
+   aliquota applicata                 52.00         33.00
+   CAGR lordo                         13.65         13.34
+   volatilita'                        21.07         16.07
+   Sharpe                              0.72          0.86
+   max drawdown                      -31.38        -25.50
+   IRR netta 33%                      11.73         10.83
+   IRR netta 52%                       9.89          8.74
+
+   FINESTRE DECENNALI DENTRO L'HOLDOUT
+   ----------------------------------------------------------
+       2010    2011    2012    2013    2014    2015    2016    2017
+      -2.43   -1.79   -3.49   +1.44   -0.03   -0.28   +0.51   +0.22
+   quota positiva 37.5%   mediana -0.16   (nel train: 93,1% e +2,23)
+
+   FINESTRE QUINQUENNALI DENTRO L'HOLDOUT (diagnostica, non un criterio)
+   ----------------------------------------------------------
+       2010    2011    2012    2013    2014    2015    2016    2017    2018    2019    2020    2021    2022
+      -2.59   -0.33   -1.97   -3.56   -4.18   -2.86   -1.72   -4.64   +4.37   +0.96   +0.09   +1.29   -0.78
+
+   ==================================================================================================
+   TRAIN CONTRO HOLDOUT
+   ==================================================================================================
+                                  train 1969-2009 holdout 2010-2026
+   ----------------------------------------------------------------
+   IRR del candidato                       11.27%             9.89%
+   margine (mediana 12 cal.)               +1.18             -0.95 
+   rotazione                               3.284x            3.804x
+   aliquota                                   52%               52%
+   max drawdown                           -59.40%           -31.38%
+
+========================================================================================================
+   VERDETTO
+========================================================================================================
+   Predizione: margine NEGATIVO fra -3 e 0; rotazione sopra 1,0x (aliquota 52%); drawdown
+   del candidato PEGGIORE del benchmark.
+   FALSIFICATA se il margine e' POSITIVO E SOPRA +1,00, oppure positivo ma sotto +1,00 (esito
+   intermedio, da registrare come tale).
+
+   margine mediano            :   -0.95   negativo: SI   dentro [-3, 0]: SI
+   rotazione sopra 1,0x       : SI (3.804x, aliquota 52%)
+   drawdown peggiore del bench: SI (-31.38% contro -25.50%)
+
+   -> ipotesi N1 CONFERMATA
+
+   L'HOLDOUT E' ORA BRUCIATO. Non si riapre.
+
+Tentativi cumulati a registro: 1402

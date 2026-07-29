@@ -30,7 +30,7 @@ l'holdout è bruciato e qualunque risultato su quella finestra è in-sample.
 | Configurazioni provate (cumulate) | **322 a registro + ~4.000 valutazioni interne al walk-forward** |
 | Soglia SR0 (giro 02) | 0,962 annualizzato |
 | Candidati promossi | **2** (H5, H4) — verifiche superate, holdout ANCORA SIGILLATO |
-| Holdout | **sigillato, mai aperto** |
+| Holdout | **APERTO AL GIRO 78 e BRUCIATO.** Una volta sola, sul momentum 12-3 top-5 mensile: margine **−0,95**, negativo in 12 calendari su 12. Non si riapre |
 
 ## Dati disponibili
 
@@ -198,16 +198,18 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 75 | **L3 report finale** | confermata | **0 su 30** gruppi sopra +1,00 sopravvive alla rilettura; ma i numeri superstiti sono **dodici**, non «meno di dieci» |
 | 76 | **L4 skip contro ritardo** | **falsificata** | ampiezza in k **3,94** punti: lo skip è un grado di libertà mai contato. E il 12-3 top-5 mensile passa **3 cancelli su 4** |
 | 77 | **M1 quattro cancelli** | **falsificata (ramo 1)** | **il candidato passa 4 su 4**: G1 +1,18 su 12 calendari, G2 0,9907, G3 **93,1%**, G4 per costruzione |
+| 78 | **N1 APERTURA DELL'HOLDOUT** | confermata, **3 clausole su 3** | **il candidato perde −0,95 fuori campione, in 12 calendari su 12.** Holdout **bruciato** |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 54 voci eseguite nei giri 30-77:
-**36 confermate, 17 falsificate, 1 senza esito per dati (B3)**.
-**Per la prima volta in settantasette giri esiste una promozione**: il momentum
-12-3 top-5 mensile ha passato tutti e quattro i cancelli al giro 77.
-Resta in coda: **N1 — l'apertura dell'holdout**, pre-registrata al giro 77 con la
-predizione scritta prima di guardare.
+(rotazione concentrata e sistema EMA, giri 50-51). 55 voci eseguite nei giri 30-78:
+**37 confermate, 17 falsificate, 1 senza esito per dati (B3)**.
+**Il progetto ha avuto una promozione e l'ha vista fallire fuori campione**: il
+momentum 12-3 top-5 mensile ha passato tutti e quattro i cancelli al giro 77 e ha
+perso **−0,95** sull'holdout al giro 78.
+In coda: **O1, O2, O3** — l'autopsia dei cancelli, nata al giro 78. Non ci sono
+piu' voci su strategie nuove, perche' non c'e' piu' un campione per validarle.
 
-Registro a **1.390 tentativi** cumulati.
+Registro a **1.402 tentativi** cumulati.
 Il report finale è **[`../reports/REPORT.md`](../reports/REPORT.md)**, riscritto
 al giro 75 (era fermo al giro 29).
 
@@ -769,6 +771,28 @@ sottoprodotto di un giro.
 
 **Applicata ai dodici candidati riproducibili sui 49 settori (1969-2009): zero
 passano.**
+
+> **ESITO FINALE, GIRO 78 — la regola è stata passata, l'holdout è stato aperto,
+> il candidato ha perso.** Margine **−0,95** su 2010-2026, **negativo in 12
+> calendari su 12** (banda −1,04 … −0,82). Rotazione 3,804× (52%), drawdown
+> −31,38% contro −25,50%. Il premio **lordo** è sopravvissuto (CAGR 13,65% contro
+> 13,34%), l'investitore no. E il controfattuale: **anche al 33% il candidato
+> avrebbe fatto +0,90, sotto il suo stesso cancello di +1,00**. **L'holdout è ora
+> bruciato e non si riapre.**
+>
+> **Il cancello che è crollato è G3**, cioè quello che in campione era il più
+> forte: **93,1% di finestre decennali positive nel train contro 37,5%
+> nell'holdout**, mediana da +2,23 a −0,16. Un cancello che passa al 93% dentro e
+> al 37% fuori non misurava la stabilità: misurava il campione. Le 29 finestre del
+> train si sovrappongono in media all'85,5% (misurato al giro 43 su D1 e mai
+> applicato ai cancelli), quindi «27 successi su 29» è lo stesso pezzo di storia
+> contato 27 volte. È la voce **O3**.
+>
+> Lo scarto train→holdout è **2,13 punti**, dello stesso ordine dei gradi di
+> libertà già misurati uno per uno: **3,94** lo skip (giro 76), **3,65** il
+> calendario su un top-5 (giro 68), **5,81-10,19** la finestra temporale (giro
+> 59). **Il candidato non è stato smentito da un evento raro: è rientrato nella
+> dispersione che il progetto aveva già misurato tre volte.**
 
 > **AGGIORNAMENTO DEL GIRO 77 — la regola è stata passata.** Un tredicesimo
 > candidato, che al giro 72 non esisteva perché lo **skip** non era ancora un

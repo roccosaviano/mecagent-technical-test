@@ -11,10 +11,13 @@ aggiunta alza la soglia per tutte).
 
 **STATO: la coda dichiarata è esaurita.** A1-A5, B1-B6, C1-C6, D1-D2 sono tutte
 eseguite (giri 30-43). Restano solo le voci nate durante l'esecuzione e non ancora
-eseguite: **N1 — l'apertura dell'holdout**, nata al giro 77 e mai vista prima in tutto il
-progetto. M1 è stata eseguita al giro 77 e **il candidato ha passato tutti e quattro i
-cancelli**. Il gruppo L è chiuso: L1 al giro 73, L2 al 74, L3 al 75,
-L4 al 76. Il gruppo E (opzioni) è stato
+eseguite: **O1, O2, O3**, nate al giro 78 dopo l'apertura dell'holdout.
+**L'HOLDOUT È STATO APERTO AL GIRO 78 ed è ora BRUCIATO**: il candidato che aveva
+passato tutti e quattro i cancelli ha perso **−0,95** fuori campione, in 12 calendari
+su 12. Da qui in poi ogni voce lavora **solo su 1969-2009**, e non esiste più un
+campione di riserva: è il motivo per cui il gruppo O guarda ai **cancelli** invece che
+a strategie nuove. Il gruppo L è chiuso: L1 al giro 73, L2 al 74, L3 al 75,
+L4 al 76; M1 al 77; N1 al 78. Il gruppo E (opzioni) è stato
 aggiunto ed eseguito ai giri 48-49.
 
 **Vincolo che ha ucciso quasi tutto finora**: ogni realizzo paga 33%, e sopra
@@ -226,6 +229,7 @@ distribuzione nulla.
 | **F4 sistema EMA intraday** | 51 | **FALSIFICATA** — l'orario (1,12%) supera il giornaliero (0,30%). Ma le finestre sono **20 / 2,9 / 0,8 anni**: Twelve Data dà 5.000 barre e basta, quindi il confronto di CAGR fra righe misura il periodo, non il timeframe. Il meccanismo previsto si vede: **7,1 → 33,6 → 133,4** operazioni/anno, e a 15 minuti −18,65% contro +20,30% |
 | F5 ablazione del sistema EMA | 51 | **confermata con margine enorme** — il **solo filtro di tendenza** ha aspettativa per operazione **13,321%** contro **0,564%** del sistema completo: rapporto **0,04**, cioè il sistema completo cattura un ventiquattresimo. Ingressi tattici e piano di uscita fanno entrare tardi e uscire presto |
 | **D3 finestre di lunghezza fissa** | 59 | **confermata** — ampiezza **5,81-10,19 punti** su finestre decennali contro i **0,56** di D1: **18×**. La sovrapposizione media fra campioni passa da **85,5%** (D1) a **13,9%**. Sbagliata solo la clausola sul segno (30,4% invece di ≥33,3% per C1). Risultato collaterale decisivo: **allungando l'orizzonte tutti e tre peggiorano** — H5 da 67,4% a 38,9% di vittorie, C1 da 30,4% a **0/36**. Le 4 peggiori finestre di H5 contengono tutte il 2008 |
+| **N1 APERTURA DELL'HOLDOUT** | 78 | **confermata, tre clausole su tre.** L'holdout 2010-2026 è stato aperto **una volta sola**, sul momentum 12-3 top-5 mensile, e **il candidato ha perso**: margine **−0,95** come mediana sui dodici calendari, **negativo in 12/12** in una banda strettissima (−1,04 … −0,82). Rotazione **3,804×** (aliquota 52%, come previsto), drawdown **−31,38% contro −25,50%** del benchmark (peggiore, come previsto). **Il premio lordo è sopravvissuto, l'investitore no**: CAGR lordo **13,65% contro 13,34%**, cioè +0,31. E il controfattuale che chiude il progetto: **anche pagando il 33% invece del 52% il candidato avrebbe fatto +0,90 — sotto il suo stesso cancello di +1,00**. **G3, il cancello più forte in campione, è quello che crolla**: 93,1% di finestre decennali positive nel train contro **37,5%** nell'holdout, mediana da +2,23 a −0,16 — un cancello che passa al 93% dentro e al 37% fuori non misurava la stabilità, misurava il campione, perché le 29 finestre del train si sovrappongono quasi tutte (è il difetto di D1 applicato a un cancello). Lo scarto train→holdout è **2,13 punti**, dello stesso ordine dei gradi di libertà già misurati (skip 3,94, calendario 3,65, finestra 5,81-10,19): il candidato **non è stato smentito da un evento raro, è rientrato nella dispersione nota**. **Holdout ora BRUCIATO** |
 | **M1 quattro cancelli** | 77 | **FALSIFICATA sul ramo 1: il candidato passa TUTTI E QUATTRO i cancelli.** Prima volta in settantasette giri. Momentum **12-3 top-5 mensile**, IRR **11,27%**, rotazione 3,284× (aliquota **52%**). **G1**: mediana **+1,18** sui dodici calendari del benchmark, positivo in **12/12** col minimo a +1,04 — il buco della regola trovato al giro 76 era reale ma **non cambiava il verdetto**, e l'ampiezza del benchmark è 0,19, coerente con lo 0,14% del giro 68. **G3**: quota **93,1%** (27 finestre decennali su 29) e mediana **+2,23** — ed è la clausola su cui ero sicuro del contrario, avendo previsto una quota sotto i 2/3. **G2**: DSR **0,9907**, che **sale** invece di scendere allargando la famiglia da 10 a 20 celle. **G4**: per costruzione. Tre dubbi messi a verbale **prima** del risultato: **(i)** difetto di G2 — nella famiglia i margini vanno da −2,76 a +1,51 (**4,27 punti**) e il candidato **non è il massimo** (top-3 k=1 fa +1,51), ma `var_sr` è stimata sugli **Sharpe**, la cui dispersione è minuscola, mentre la selezione è avvenuta sui **margini di IRR netta**: il DSR protegge dalla selezione sbagliata; **(ii)** le due sole finestre negative su 29 sono **le ultime due** (1999-2008 a −1,23 e 2000-2009 a **−3,39**), cioè il candidato peggiora **puntando dritto verso l'holdout**; **(iii)** k=3 è stato scelto **in-sample** al giro 76 come massimo di dieci celle. Holdout **non aperto in questo giro**: la regola dice che è un **atto separato** → voce **N1** |
 | **L4 skip contro ritardo** | 76 | **FALSIFICATA sul ramo (b)**: l'ampiezza del profilo in k è **3,94 punti** sul top-5 e **1,79** sul top-10, entrambe sopra la soglia di 1,50. **Lo skip è un grado di libertà mai contato**, dello stesso ordine del calendario (3,65 al giro 68), e il gruppo A del giro 05 lo aveva fissato a 1 senza dichiararlo. Il ramo (a) **non scatta per due centesimi**: chiedeva un 12-3 positivo *e* entro 0,30 dal +0,86, e il top-5 fa **+1,18**, cioè 0,32 di distanza (sul top-10 la distanza è 0,28 ma il margine è negativo). La clausola diagnostica della voce è però centrata — **0,33 e 0,28** — e il meccanismo è reale perché è quasi un'identità: ritardare di venti giorni **è** usare un segnale calcolato un mese prima. Il 12-2 a 20 giorni **riprodotto in questo giro dà +0,86 esatto**. Ma il profilo del top-5 è **+0,65 / −0,87 / +1,18 / −0,39 / −2,75**: cambia segno tre volte con salti di due punti, cioè **non è la forma di un meccanismo, è la forma del rumore**. **Il 12-3 top-5 mensile passa G1 come misurato (+1,18), G2 (DSR 0,9870) e G4, e G3 non è mai stato misurato** → nuova voce **M1**, non eseguita qui. Trovato anche un **buco nella regola del giro 72**: per una strategia mensile il grado di libertà del calendario ce l'ha il **benchmark**, e sia il giro 72 sia questo hanno usato il solo gennaio |
 | **L3 report finale** | 75 | **confermata sulla clausola che falsifica, sbagliata sul conteggio e sbagliata per difetto**. Controllo automatico sul registro cumulato: **213 righe su 1.365** (15,6%) hanno extra ≥ +1,00, in **30 ipotesi distinte**; esaminate una per una, **nessuna sopravvive** — cripto per sopravvivenza selezionata e DSR (0,443/0,880), anomalie perché sono premi lordi (2 su 201 passano i filtri), candidati storici perché negativi in **60/60** contro l'equal-weight dello stesso universo e **12/12** su G1, opzioni perché il premio esiste ma incassarlo perde (−4,98/−2,92), il resto perché **non sono margini di strategia**. La condizione di falsificazione non scatta. Ma i numeri superstiti sono **dodici**, non «meno di dieci»: sette costi/soglie e cinque misure di fragilità, e nessuno di essi e' un margine di strategia. Prodotto `quant/reports/REPORT.md` riscritto da capo, con la regola dell'holdout, i dodici numeri, i tre errori di misura (+ il quarto, i dividendi) e sei raccomandazioni operative. **Due raccomandazioni del giro 29 sono ritirate**: il +1,72 sul veicolo (catena +1,72 → +2,01 → +2,15 → +1,23 → **+0,34** sulla stessa finestra) e il trend following levereggiato (giro 07 con margin call: −4,18; giro 53: nessun filtro batte il buy&hold, il migliore perde 2,51) |
@@ -1112,3 +1116,70 @@ in quel caso non c'è né conferma né smentita netta, e va registrato come tale
 invece di essere arrotondato verso la tesi che preferisco.
 **Dopo N1 l'holdout è bruciato**: qualunque cosa dica, non si riapre. Ogni voce
 successiva torna a lavorare solo su 1969-2009.
+
+## O. Autopsia dei cancelli — dopo che l'holdout è bruciato
+
+Il giro 78 ha consumato l'unico campione di riserva. Da qui in avanti non si
+possono più validare strategie: si può solo capire **perché la regola ha lasciato
+passare un candidato che poi ha perso**. Le tre voci sotto lavorano tutte su
+1969-2009, e il loro oggetto sono i cancelli, non i segnali.
+
+**O1 — Il difetto di G2: deflatare sul margine, non sullo Sharpe**
+Messo a verbale al giro 77 **prima** di conoscere l'esito dell'holdout, e
+diventato al giro 78 la spiegazione di come un candidato con **DSR 0,9907** possa
+perdere **−0,95** fuori campione. La `var_sr` del Deflated Sharpe è stimata sulla
+dispersione degli **Sharpe** della famiglia, che nel giro 77 era minuscola (SR0
+0,0608), mentre la selezione era avvenuta sui **margini di IRR netta**, che nella
+stessa famiglia variavano di **4,27 punti**. Fra Sharpe e IRR di un PAC ci sono in
+mezzo il motore fiscale, la soglia del 100% e la forma dei cashflow.
+Da costruire: la versione **margine** della statistica di Bailey-López de Prado —
+soglia di massimo atteso su N estrazioni costruita sulla varianza dei **margini di
+IRR netta** invece che degli Sharpe — e applicarla ai dodici candidati del giro 72
+più le venti celle del giro 77.
+*Predizione*: il cancello sul margine **avrebbe respinto** il 12-3 top-5 mensile,
+perché il massimo atteso di 20 estrazioni con dispersione 4,27 punti sta **sopra
++1,18**. E respinge anche **tutti** gli altri candidati mai registrati, quindi non
+è un cancello costruito su misura per il caso che ha fallito. Il rapporto fra la
+soglia sul margine e quella sullo Sharpe è **superiore a 3**.
+*Falsificata se*: il cancello sul margine avrebbe **lasciato passare** il
+candidato — nel qual caso il fallimento dell'holdout non è spiegato dalla
+selezione e va cercato altrove — **oppure** se respinge così tanto da respingere
+anche l'equal-weight contro il cap-weight, cioè se non discrimina più niente.
+
+**O2 — Da dove vengono i 2,13 punti fra train e holdout**
+Il margine passa da **+1,18** a **−0,95**. Tre cause candidate, mai separate:
+il **premio lordo** che si assottiglia (13,65% contro 13,34% nell'holdout: +0,31 —
+quanto era nel train?), la **rotazione** che sale da 3,284× a 3,804× dentro la
+stessa aliquota, e il **benchmark** che migliora (l'equal-weight annuale rende
+10,84% nell'holdout contro 10,09% nel train).
+Da misurare, sul solo train per la parte stimata e leggendo dall'holdout solo i
+numeri **già stampati al giro 78** (nessuna nuova interrogazione del campione
+bruciato): la scomposizione del divario in (a) alfa lordo, (b) costo della
+rotazione aggiuntiva, (c) livello del benchmark.
+*Predizione*: la componente dominante è **(a) l'alfa lordo**, che vale **oltre la
+metà** dei 2,13 punti; la rotazione aggiuntiva vale **meno di 0,3** punti, perché
+il candidato era già al 52% in entrambi i periodi e mezza rotazione in più su una
+base già tassata al massimo costa poco; il benchmark migliore vale il resto.
+*Falsificata se*: la rotazione aggiuntiva spiega **più di 0,5 punti** — nel qual
+caso il gradino fiscale ha un secondo ordine che il giro 66 non aveva visto —
+**oppure** se il benchmark spiega più dell'alfa, cioè se il candidato non ha
+perso: è stato superato.
+
+**O3 — Le finestre sovrapposte non sono prove indipendenti**
+G3 chiede l'extra positivo in ≥ 2/3 delle finestre decennali **mobili**. Nel train
+il candidato fa **93,1%** (27 su 29), nell'holdout **37,5%**. Ma le ventinove
+finestre del train condividono in media l'85,5% dei dati (misurato al giro 43 su
+D1, e mai applicato ai cancelli): «ventisette successi su ventinove» è lo stesso
+pezzo di storia contato ventisette volte.
+Da misurare: rifare G3 sui dodici candidati del giro 72 e sul 12-3 top-5 con
+finestre decennali **disgiunte** (1970-79, 1980-89, 1990-99, 2000-09: quattro
+prove indipendenti) e con un **bootstrap a blocchi** che tenga conto della
+sovrapposizione, confrontando la quota di vittorie e il suo intervallo di
+confidenza con quelli delle finestre mobili.
+*Predizione*: con finestre disgiunte la quota del 12-3 top-5 **scende sotto i
+2/3**, cioè **G3 sarebbe fallito in campione** se fosse stato misurato su prove
+indipendenti; e l'intervallo di confidenza della quota su finestre mobili è
+**almeno tre volte più largo** di quanto la numerosità apparente (29) suggerisca.
+*Falsificata se*: la quota su finestre disgiunte resta **sopra i 2/3** — nel qual
+caso la sovrapposizione non era il problema e il crollo dell'holdout va attribuito
+a un cambio di regime, non a un cancello mal costruito.

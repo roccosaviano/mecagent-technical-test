@@ -1,13 +1,17 @@
 # Attivo contro passivo, netto di fiscalità irlandese
 
-**Report finale — settantaquattro giri, 1.366 tentativi a registro, holdout mai aperto.**
+**Report finale — settantotto giri, 1.402 tentativi a registro, holdout aperto una
+volta sola al giro 78 e ora bruciato.**
 
 Domanda: *esiste una strategia attiva che, per un residente fiscale irlandese che
 versa €500 al mese per vent'anni o più, batta un PAC buy&hold netto di costi e
 imposte?*
 
-Risposta: **no**, e questo report dice con quanta forza, con quali limiti, e cosa
-resta di utilizzabile — che non è una strategia.
+Risposta: **no**, e dal giro 78 la risposta ha un **test fuori campione** a
+sostenerla: l'unico candidato che abbia mai passato tutti e quattro i cancelli ha
+perso **−0,95 punti** su 2010-2026, in dodici calendari su dodici. Questo report
+dice con quanta forza, con quali limiti, e cosa resta di utilizzabile — che non è
+una strategia.
 
 > Questo documento sostituisce la versione del giro 29, che portava in prima
 > pagina un **+1,72** poi rivelatosi sbagliato per due correzioni successive (vedi
@@ -38,23 +42,31 @@ Cinque regole, mai cambiate dopo aver visto un risultato.
 4. **Deflated Sharpe** con *N* = dimensione della griglia se c'è selezione,
    altrimenti la famiglia pre-dichiarata; `var_sr` stimata entro la famiglia del
    giro. Il registro cumulato è la soglia del progetto.
-5. **Holdout 2010-2026 sigillato.** Mai aperto, in settantaquattro giri.
+5. **Holdout 2010-2026 sigillato** per settantasette giri, **aperto al giro 78**
+   una volta sola, su un candidato solo, con la predizione committata prima —
+   e ora **bruciato**.
 
-Ogni esito è registrato, comprese le ipotesi fallite: **35 confermate, 15
-falsificate, 1 senza esito per dati** fra le voci di coda dei giri 30-74, più i
+Ogni esito è registrato, comprese le ipotesi fallite: **37 confermate, 17
+falsificate, 1 senza esito per dati** fra le voci di coda dei giri 30-78, più i
 ventinove giri esplorativi iniziali.
 
 ---
 
 ## La risposta, in un paragrafo
 
-Sulle **1.365 configurazioni** registrate nei settantaquattro giri, la **mediana
-dell'extra-rendimento contro il proprio benchmark è −1,32 punti** e solo il
-**30,3%** è positivo. Nessun candidato
-supera la regola di apertura dell'holdout scritta al giro 72. Il migliore in
-settantaquattro giri — momentum 12-2 top-5 mensile sui 49 settori — arriva a
-**+0,56 punti** contro l'equal-weight annuale dello stesso universo, e per
-arrivarci deve ruotare 2,8 volte l'anno, cioè pagare il 52% invece del 33%.
+Sulle **1.402 configurazioni** registrate, la **mediana dell'extra-rendimento
+contro il proprio benchmark è −1,32 punti** e solo il **30,3%** è positivo.
+
+**Un solo candidato**, in settantotto giri, ha superato la regola di apertura
+dell'holdout scritta al giro 72 — il momentum **12-3 top-5 mensile**, con +1,18
+punti in campione. L'holdout è stato aperto su di lui, una volta sola, al giro 78:
+**ha perso −0,95 punti**, in dodici calendari su dodici. Il secondo miglior
+candidato mai registrato, il momentum 12-2 top-5 mensile, si ferma a **+0,56** in
+campione e non arriva nemmeno al cancello.
+
+Quel test è la differenza fra questo report e un backtest: la conclusione non è
+«non ho trovato niente», è **«ho trovato una cosa, l'ho messa alla prova su un
+campione mai guardato, e non ha tenuto»**.
 
 Quello che resta di utilizzabile riguarda **il veicolo, il calendario e la
 rotazione**: dove metti i titoli, quanto spesso li tocchi, e chi preme il bottone
@@ -89,6 +101,10 @@ risultato si registra qualunque sia.
   contro 66,7%) — restando comunque a mezzo punto dal margine richiesto.
 
 L'holdout resta sigillato. Non è prudenza: è che **non c'è niente da testarci**.
+
+*(Le righe qui sopra sono il testo del giro 75. Quello che segue le ha superate, e
+lo lascio in coda invece di riscriverle: **il verso in cui una conclusione si
+muove è informazione**, e cancellare il punto di partenza la distruggerebbe.)*
 
 ### Addendum del giro 76 — la prima cella che arriva ai cancelli
 
@@ -135,9 +151,45 @@ verbale *prima* del risultato, perché dopo non varrebbero niente:
    2000-2009 a **−3,39**), dopo cinque consecutive sopra +3.
 3. **Lo skip k=3 è stato scelto in-sample**, come massimo di dieci celle.
 
-**Fino all'esito di N1, la conclusione di questo report resta quella scritta
-sopra.** Se N1 dovesse falsificare — margine positivo e sopra +1,00 fuori
-campione — va riscritta, e il report lo dirà.
+### Addendum del giro 78 — l'holdout è stato aperto, e il candidato ha perso
+
+**Margine −0,95 su 2010-2026, negativo in 12 calendari su 12** (banda −1,04 …
+−0,82). Le tre clausole della predizione di N1, scritte prima di guardare, sono
+centrate tutte e tre.
+
+| | candidato | benchmark |
+|---|---:|---:|
+| IRR netta (aliquota applicabile) | **9,89%** (52%) | **10,84%** (33%) |
+| CAGR **lordo** | **13,65%** | 13,34% |
+| Sharpe | 0,72 | **0,86** |
+| max drawdown | −31,38% | **−25,50%** |
+| rotazione | 3,804× | 0,06× |
+
+**Il premio lordo è sopravvissuto; l'investitore no.** Il segnale batte ancora il
+benchmark di **+0,31 punti** di CAGR lordo fuori campione. Netto di imposte perde
+di quasi un punto.
+
+E il controfattuale, che è la frase più affilata di tutto il lavoro:
+
+> **Anche pagando il 33% invece del 52%, il candidato avrebbe fatto +0,90 — sotto
+> il suo stesso cancello.** Nemmeno in un mondo dove ruotare 3,8 volte l'anno non
+> facesse scattare la riqualificazione a reddito d'impresa, questa strategia
+> sarebbe passata.
+
+**Il cancello che è crollato è G3, cioè quello che in campione era il più forte**:
+93,1% di finestre decennali positive nel train, **37,5%** nell'holdout; mediana da
++2,23 a −0,16. Un cancello che passa al 93% dentro e al 37% fuori non stava
+misurando la stabilità — stava misurando il campione, perché le 29 finestre del
+train si sovrappongono in media all'85,5% e «27 successi su 29» è lo stesso pezzo
+di storia contato 27 volte.
+
+Lo scarto train→holdout è **2,13 punti**, dello stesso ordine dei gradi di libertà
+che il progetto aveva già misurato uno per uno — skip 3,94, calendario 3,65,
+finestra temporale 5,81-10,19. **Il candidato non è stato smentito da un evento
+raro: è rientrato nella dispersione nota.**
+
+**La conclusione del report non cambia, e adesso ha un test fuori campione a
+sostenerla.** L'holdout 2010-2026 è **bruciato** e non si riapre.
 
 ---
 
@@ -451,5 +503,7 @@ Tutte riscaricabili con `quant/fetch_data.sh`.
 
 ---
 
-*Holdout 2010-2026: **sigillato**. Nessun candidato lo ha meritato in
-settantaquattro giri.*
+*Holdout 2010-2026: **aperto una volta sola al giro 78**, sul momentum 12-3 top-5
+mensile — l'unico candidato che in settantotto giri abbia passato tutti e quattro
+i cancelli. Margine **−0,95**, negativo in dodici calendari su dodici. Ora
+**bruciato**: non si riapre.*
