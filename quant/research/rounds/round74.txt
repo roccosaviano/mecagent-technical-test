@@ -1,0 +1,70 @@
+========================================================================================================
+L2 — il costo come lo paga un broker retail europeo
+========================================================================================================
+   49 settori, 1969-07-31 → 2009-12-31. **Holdout non toccato.**
+   Modello del progetto: 0.15% round-trip proporzionale.
+   Modello retail: €1.50 per ordine + 0.05% di spread, un ordine per posizione toccata.
+   Rata €500/mese.
+
+
+   (i) LETTERALE — un ordine per posizione toccata
+
+   strategia                         IRR prop.  IRR retail    delta  ordini/anno  costi retail
+   -------------------------------------------------------------------------------------------
+   equal-weight annuale (49 pos.)       10.02%       9.42%   -0.60         636        17.0% 
+   momentum top-5 annuale               10.79%      10.72%   -0.07          89        19.0% 
+   momentum top-5 mensile               11.82%      11.88%   +0.06         133        94.2% 
+   momentum top-10 mensile              11.05%      10.99%   -0.06         260        67.5% 
+
+   divario momentum-meno-equal-weight        proporzionale    retail   sposta
+   --------------------------------------------------------------------------
+   momentum top-5 annuale                           +0.77     +1.30    +0.53
+   momentum top-5 mensile                           +1.79     +2.46    +0.66
+   momentum top-10 mensile                          +1.03     +1.57    +0.54
+
+   (ii) SENSATA — il versamento in UN ordine solo
+
+   strategia                         IRR prop.  IRR retail    delta  ordini/anno  costi retail
+   -------------------------------------------------------------------------------------------
+   equal-weight annuale (49 pos.)        9.95%       9.42%   -0.54         600        16.1% 
+   momentum top-5 annuale               10.79%      10.72%   -0.07          96        19.2% 
+   momentum top-5 mensile               11.82%      11.92%   +0.10          86        94.0% 
+   momentum top-10 mensile              11.05%      11.08%   +0.03         155        66.3% 
+
+   divario momentum-meno-equal-weight        proporzionale    retail   sposta
+   --------------------------------------------------------------------------
+   momentum top-5 annuale                           +0.83     +1.30    +0.47
+   momentum top-5 mensile                           +1.87     +2.50    +0.63
+   momentum top-10 mensile                          +1.10     +1.66    +0.56
+
+   LA SOGLIA DI ANTIECONOMICITA'
+
+   Un versamento spalmato su P posizioni paga P x €1.50. Perche' i costi
+   del versamento stiano sotto l'1% della rata serve rata >= P x €1.50 / 1%:
+
+    posizioni   commissioni   su €750   rata per stare sotto 1%
+   ------------------------------------------------------------
+            1         1.50€      0.3%                     150€
+            5         7.50€      1.5%                     750€
+           10        15.00€      3.0%                    1500€
+           25        37.50€      7.5%                    3750€
+           49        73.50€     14.7%                    7350€
+
+========================================================================================================
+   VERDETTO
+========================================================================================================
+   Predizione: il divario momentum-meno-equal-weight si ALLARGA di 0,3-1,0 punti A SFAVORE
+   del momentum, e la soglia di antieconomicita' su 49 posizioni sta sopra i €500/mese.
+   FALSIFICATA se il divario si RESTRINGE invece di allargarsi.
+
+   momentum top-5 annuale               +0.77 →   +1.30   SI RESTRINGE (+0.53)
+   momentum top-5 mensile               +1.79 →   +2.46   SI RESTRINGE (+0.66)
+   momentum top-10 mensile              +1.03 →   +1.57   SI RESTRINGE (+0.54)
+
+   soglia su 49 posizioni: €7,350/mese   (previsto: sopra €500)
+
+   -> ipotesi L2 FALSIFICATA
+      clausola 'si allarga a sfavore del momentum': SBAGLIATA
+      clausola 'soglia sopra €500': centrata
+
+Tentativi cumulati a registro: 1365

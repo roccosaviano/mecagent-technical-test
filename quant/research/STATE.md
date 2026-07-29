@@ -194,13 +194,14 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 71 | **K3 vantaggio del veicolo** | **falsificata** | +3,43 sopra la soglia, ma la rotazione vale **+0,00**: sono i dividendi |
 | 72 | **K4 regola per l'holdout** | confermata | **0 candidati su 12** passano; il cancello che elimina di piu' e' il **margine** |
 | 73 | **L1 ritardo in giorni** | **falsificata** | non monotono; il costo di 1 giorno e' **0,08** punti |
+| 74 | **L2 costo retail** | **falsificata** | il divario si allarga **a favore** del momentum (+0,53): la commissione fissa colpisce il benchmark a 49 posizioni |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 50 voci eseguite nei giri 30-73:
-**35 confermate, 14 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
-Restano in coda: **L2, L3, L4**.
+(rotazione concentrata e sistema EMA, giri 50-51). 51 voci eseguite nei giri 30-74:
+**35 confermate, 15 falsificate, 1 senza esito per dati (B3)**. Nessuna promozione.
+Restano in coda: **L3, L4**.
 
-Registro a **1.362 tentativi** cumulati.
+Registro a **1.365 tentativi** cumulati.
 
 ## Coda vecchia (tutte eseguite)
 
@@ -791,3 +792,29 @@ passano.**
   chiede +1,00 **come mediana**. L'ipotesi meccanica che ne segue — ritardare di
   venti giorni un segnale 12-2 equivale a usare un 12-3 — va testata
   **direttamente sul 12-3**, ed è la voce L4.
+- **Il modello di costo del progetto (0,15% round-trip) è conservativo nella
+  direzione giusta, non in quella sbagliata.** Con costi da broker retail vero
+  (€1,50/ordine + 0,05% di spread) il divario momentum-meno-equal-weight si
+  **allarga a favore del momentum** di +0,47/+0,66 punti. Due gambe, che spingono
+  nello stesso verso: la commissione fissa è un costo **per posizione** e il
+  benchmark ne ha 49 (636 ordini/anno contro gli 89 del top-5 annuale), mentre lo
+  spread retail (0,05%) è **un terzo** del round-trip proporzionale, quindi su un
+  patrimonio grande il retail costa **meno** del modello del progetto — il top-5
+  mensile ha IRR retail *superiore* alla proporzionale.
+- **Ma il modello di costo e la scelta del veicolo non sono separabili.** Quel
+  +1,30 non è un vantaggio del momentum: è l'artefatto di far pagare al benchmark
+  un modo di implementarlo che nessuno userebbe. Un equal-weight su 49 settori a
+  €500 al mese in azioni singole brucia il **14,7%** del versamento in
+  commissioni; si compra come **fondo**, dove la commissione fissa è una sola.
+  Confrontare due strategie con lo stesso modello di costo ha senso solo se
+  entrambe si implementano allo stesso modo. Si aggancia al giro 71: chi sta fermo
+  su tante posizioni vuole il fondo **per le commissioni**, non per le imposte.
+- **La soglia di antieconomicità di un PAC frammentato è `P × €1,50 / 1%`**: con
+  P = 49 posizioni serve una rata di **€7.350/mese** perché i costi del versamento
+  restino sotto l'1%. A €750 se ne va il 14,7%; a 5 posizioni la soglia è €750, a
+  10 è €1.500.
+- **Versare in un ordine solo non serve a chi è diversificato.** L'equal-weight
+  passa da 636 a 600 ordini/anno e l'IRR retail resta identica (9,42%): gli ordini
+  si spostano dal versamento al ribilanciamento, che ri-tocca comunque tutte e 49
+  le posizioni. Concentrare il versamento aiuta solo se il portafoglio è già
+  concentrato (top-5 mensile: 133 → 86 ordini/anno).
