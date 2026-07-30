@@ -1,0 +1,55 @@
+========================================================================================================
+O2 — da dove vengono i 2,13 punti fra train e holdout
+========================================================================================================
+   Train 1969-2009, misurato qui. Holdout 2010-2026, **solo numeri copiati dal giro 78**.
+
+                                        train     holdout    variazione
+   --------------------------------------------------------------------
+   CAGR lordo candidato                 17.28       13.65         -3.63
+   CAGR lordo benchmark                 10.78       13.34         +2.56
+   IRR netta candidato                  11.27        9.89         -1.38
+   IRR netta benchmark                  10.09       10.83         +0.74
+   rotazione candidato                   3.28        3.80         +0.52
+   rotazione benchmark                   0.07        0.06         -0.01
+   MARGINE                              +1.18       -0.94         -2.12
+
+========================================================================================================
+   LA SCOMPOSIZIONE
+========================================================================================================
+   componente                             train   holdout   contributo al divario
+   --------------------------------------------------------------------------------
+   alfa lordo (cand − bench)              +6.50     +0.31                   -6.19
+   zavorra del candidato                   6.01      3.76                   +2.25
+   zavorra del benchmark                   0.69      2.51                   +1.82
+   --------------------------------------------------------------------------------
+   TOTALE                                                                   -2.12   (divario vero -2.12)
+
+   Le due meta' dell'alfa — la domanda della clausola di falsificazione:
+   il CANDIDATO cade                      -3.63   punti di CAGR lordo
+   il BENCHMARK sale                      +2.56   punti di CAGR lordo
+   -> il candidato ha PERSO
+
+========================================================================================================
+   IL CONTROFATTUALE SULLA ROTAZIONE (misurato sul solo train)
+========================================================================================================
+   Domanda: quanto sarebbe costato al candidato, NEL TRAIN, ruotare 3.804x invece di 3.284x?
+   rotazione                              3.284x →   3.804x   (fattore 1.1585)
+   IRR netta                              11.27% →   11.16%
+   aliquota                                  52% →      52%   (nessun salto di scaglione)
+   **costo della rotazione aggiuntiva: -0.11 punti**   (previsto sotto 0,30; falsifica sopra 0,50)
+
+========================================================================================================
+   VERDETTO
+========================================================================================================
+   Predizione: (a) l'alfa lordo e' dominante e vale OLTRE LA META' dei 2,13 punti; la rotazione
+   aggiuntiva vale MENO DI 0,30; il benchmark il resto.
+   FALSIFICATA se la rotazione spiega PIU' DI 0,50, oppure se il benchmark spiega piu' dell'alfa.
+
+   alfa lordo oltre la meta'   : SI   (-6.19 su -2.12, cioe' il 291%)
+   rotazione sotto 0,30        : SI   (-0.11)
+   rotazione sopra 0,50 → fals.: no
+   benchmark spiega piu' dell'alfa → fals.: no   (cand -3.63 contro bench +2.56)
+
+   -> ipotesi O2 CONFERMATA
+
+Tentativi cumulati a registro: 1426

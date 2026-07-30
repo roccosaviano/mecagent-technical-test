@@ -1421,3 +1421,7 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 79,O1 cancello sul margine,12-3 top-25,1969-2009,,-1.6955868844750945,2.190837743901973,-3.8864246283770676,10223,soglia N=20 sigma=1.153
 79,O1 cancello sul margine,12-4 top-25,1969-2009,,-1.87881574067924,2.190837743901973,-4.069653484581213,10223,soglia N=20 sigma=1.153
 79,O1 cancello sul margine,12-6 top-25,1969-2009,,-1.9157615087832838,2.190837743901973,-4.106599252685257,10223,soglia N=20 sigma=1.153
+80,O2 scomposizione train-holdout,alfa lordo,1969-2009 vs 2010-2026,,,,-6.190379985472548,10223,scomposizione additiva
+80,O2 scomposizione train-holdout,zavorra candidato,1969-2009 vs 2010-2026,,,,2.2494656885613793,10223,scomposizione additiva
+80,O2 scomposizione train-holdout,zavorra benchmark,1969-2009 vs 2010-2026,,,,1.8172611049808296,10223,scomposizione additiva
+80,O2 scomposizione train-holdout,di cui rotazione,1969-2009 vs 2010-2026,,,,-0.11290665285852519,10223,scomposizione additiva

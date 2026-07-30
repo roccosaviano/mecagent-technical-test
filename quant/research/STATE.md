@@ -200,17 +200,19 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 77 | **M1 quattro cancelli** | **falsificata (ramo 1)** | **il candidato passa 4 su 4**: G1 +1,18 su 12 calendari, G2 0,9907, G3 **93,1%**, G4 per costruzione |
 | 78 | **N1 APERTURA DELL'HOLDOUT** | confermata, **3 clausole su 3** | **il candidato perde −0,95 fuori campione, in 12 calendari su 12.** Holdout **bruciato** |
 | 79 | **O1 cancello sul margine** | confermata, **3 su 3** | soglia **+2,19** contro il +1,18 del candidato: **0 passanti su 32**. Il fallimento dell'holdout **è spiegato dalla selezione** |
+| 80 | **O2 scomposizione train-holdout** | confermata | **alfa lordo da +6,50 a +0,31**: −6,19, cioè il **291%** del divario. Rotazione aggiuntiva **−0,11** |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 56 voci eseguite nei giri 30-79:
-**38 confermate, 17 falsificate, 1 senza esito per dati (B3)**.
+(rotazione concentrata e sistema EMA, giri 50-51). 57 voci eseguite nei giri 30-80:
+**39 confermate, 17 falsificate, 1 senza esito per dati (B3)**.
 **Il progetto ha avuto una promozione e l'ha vista fallire fuori campione**: il
 momentum 12-3 top-5 mensile ha passato tutti e quattro i cancelli al giro 77 e ha
 perso **−0,95** sull'holdout al giro 78.
-In coda: **O2, O3, O4** — l'autopsia dei cancelli. Non ci sono piu' voci su
-strategie nuove, perche' non c'e' piu' un campione per validarle.
+In coda: **O3, O4, O5** — l'autopsia dei cancelli e del motore fiscale. Non ci
+sono piu' voci su strategie nuove, perche' non c'e' piu' un campione per
+validarle.
 
-Registro a **1.422 tentativi** cumulati.
+Registro a **1.426 tentativi** cumulati.
 Il report finale è **[`../reports/REPORT.md`](../reports/REPORT.md)**, riscritto
 al giro 75 (era fermo al giro 29).
 
@@ -958,6 +960,29 @@ passano.**
   e il cancello **discrimina ancora**: l'equal-weight contro il cap-weight (+1,50,
   non selezionato, N=1) passa. Non serve invocare un cambio di regime per spiegare
   il −0,95 fuori campione: **è la selezione**.
+- **Nel train il candidato aveva 6,50 punti di alfa lordo e ne consegnava 1,18**
+  (giro 80). Zavorra — tutto ciò che sta fra il CAGR lordo time-weighted e l'IRR
+  netta money-weighted — **6,01 punti** contro **0,69** del benchmark:
+  differenziale **5,32**. Il segnale funzionava, e molto; la macchina fiscale ne
+  prendeva cinque sesti. Fuori campione l'alfa lordo è passato a **+0,31**: non
+  c'era più niente da tassare.
+- **La macchina fiscale è un ammortizzatore simmetrico, e questo falsa la lettura
+  di ogni decadimento.** Fra train e holdout l'alfa lordo crolla di **6,19** punti
+  e il margine netto solo di **2,12**: i due terzi mancanti sono la zavorra che si
+  riduce insieme all'alfa, perché su un vantaggio più piccolo si paga meno imposta.
+  **Chi guarda solo l'IRR vede una strategia indebolita; chi guarda il lordo vede
+  un segnale morto.** Vale per ogni confronto netto del progetto.
+- **Sopra la soglia del 100% la rotazione aggiuntiva è quasi gratis** (giro 80).
+  Portare il candidato da 3,284× a 3,804× nel train costa **0,11 punti** e non
+  cambia scaglione. È il giro 66 visto dal lato opposto — lì il top-10, già al 33%,
+  non guadagnava niente a farsi vincolare. **Il gradino è tutto; ciò che succede
+  sopra e sotto è quasi piatto.**
+- **La zavorra non è un'aliquota**: scala col livello del rendimento lordo, perché
+  una strategia che rende il 17,28% ha in valore assoluto più plusvalenze da
+  realizzare di una che rende il 10,78%. Il differenziale di 5,32 punti mescola la
+  tassa sulla **rotazione** con la tassa sull'**aver guadagnato di più**, e la
+  scomposizione additiva del giro 80 è un'identità contabile, non un'attribuzione
+  causale. Separarle è la voce **O5**.
 - **G1 era tarato sulla cosa sbagliata, e G1 e G2 provavano a fare la stessa
   cosa.** La soglia di +1,00 fu fissata al giro 72 sul **rumore di misura** (0,32
   medio, 1,35 massimo, giro 63). Il riferimento giusto è la **dispersione che la
