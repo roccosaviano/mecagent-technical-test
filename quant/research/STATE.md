@@ -203,18 +203,19 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 80 | **O2 scomposizione train-holdout** | confermata | **alfa lordo da +6,50 a +0,31**: −6,19, cioè il **291%** del divario. Rotazione aggiuntiva **−0,11** |
 | 81 | **O3 finestre disgiunte** | **falsificata**, 2 clausole su 2 | quota disgiunta **75,0%**: G3 passa anche su prove indipendenti. E il rimedio è **10× peggiore** (falsi positivi 3,07% → 31,25%) |
 | 82 | **O4 N effettiva** | confermata | **`N_eff` = 6,00** su 20 celle (corr. media 0,750): soglia da +2,19 a **+1,495**, il candidato resta respinto. I due errori del giro 79 **si elidono a 0,05** |
+| 83 | **O5 tasso di cambio** | confermata | **il salto alla soglia del 100% vale +2,01 punti di alfa richiesto**: da 2,38 a 0,9× a **4,39** a 1,1×. A 3,5× servono **5,27** |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 59 voci eseguite nei giri 30-82:
-**40 confermate, 18 falsificate, 1 senza esito per dati (B3)**.
+(rotazione concentrata e sistema EMA, giri 50-51). 60 voci eseguite nei giri 30-83:
+**41 confermate, 18 falsificate, 1 senza esito per dati (B3)**.
 **Il progetto ha avuto una promozione e l'ha vista fallire fuori campione**: il
 momentum 12-3 top-5 mensile ha passato tutti e quattro i cancelli al giro 77 e ha
 perso **−0,95** sull'holdout al giro 78.
-In coda: **O5, O6, O7** — l'autopsia dei cancelli e del motore fiscale. Non ci
+In coda: **O6, O7, O8** — l'autopsia dei cancelli e del motore fiscale. Non ci
 sono piu' voci su strategie nuove, perche' non c'e' piu' un campione per
 validarle.
 
-Registro a **1.459 tentativi** cumulati.
+Registro a **1.501 tentativi** cumulati.
 Il report finale è **[`../reports/REPORT.md`](../reports/REPORT.md)**, riscritto
 al giro 75 (era fermo al giro 29).
 
@@ -986,6 +987,29 @@ passano.**
   famiglia del calendario (giro 68) e dello skip (giro 76): cambiarlo ribalta **4
   verdetti G3 su 12**. La differenza è che questo non gonfia il margine — gonfia
   il **verdetto di un cancello**.
+- **IL TASSO DI CAMBIO FRA ALFA LORDO E MARGINE NETTO** (giro 83), che e' il
+  numero piu' operativo del progetto. Quanti punti di alfa lordo servono per
+  battere il benchmark di **un punto netto**, in funzione della rotazione:
+
+  | rotazione | 0,2x | 0,5x | 0,9x | **1,1x** | 2,0x | 3,5x | 6,0x |
+  |---|---:|---:|---:|---:|---:|---:|---:|
+  | aliquota | 33% | 33% | 33% | **52%** | 52% | 52% | 52% |
+  | alfa richiesto | 1,57 | **2,04** | **2,38** | **4,39** | 4,85 | **5,27** | 5,78 |
+
+  **Il salto attraverso la soglia del 100% vale +2,01 punti**, cioe' piu' che
+  quadruplicare la rotazione da 0,2x a 0,9x (che ne costa 0,81). **Attraversare il
+  100% quasi raddoppia l'alfa che serve.**
+- **Il conto e' gia' di due a uno anche al 33%.** A 0,5x di rotazione — un
+  ribilanciamento lento e ragionevole — servono **2,04** punti di alfa lordo per
+  consegnarne uno. Non e' il 52% a rendere il gioco duro: il gioco e' duro
+  comunque, e la soglia lo rende proibitivo. E ruotare **senza alcun alfa** costa
+  da −0,51 (0,2x) a −3,40 (6x): e' il prezzo del movimento in se'.
+- **La curva del tasso di cambio e' un LIMITE INFERIORE.** E' costruita su un alfa
+  costante ogni mese; il controllo col giro 80 mostra che il candidato reale
+  (6,50 di alfa a 3,28x) ha reso **+1,18** dove il sintetico darebbe ~**+1,9**.
+  Il sintetico e' ottimista di **circa 0,8 punti**, quasi certamente perche' un
+  alfa volatile realizzato con rotazione alta paga imposte nei momenti sbagliati.
+  Il tasso vero a 3,5x e' piu' vicino a **6,0-6,5** che a 5,27. E' la voce **O8**.
 - **Le celle di una famiglia valgono un terzo di quanto si contano** (giro 82).
   Sulle venti celle skip × taglia del giro 77 la correlazione media delle serie di
   **extra** è **0,750** (sui rendimenti grezzi sarebbe 0,908, ma è la misura

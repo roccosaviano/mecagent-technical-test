@@ -1,0 +1,51 @@
+========================================================================================================
+O5 — quanti punti di alfa lordo servono per farne uno netto
+========================================================================================================
+   Benchmark: equal-weight annuale, rotazione 0.074x, aliquota 33%, IRR 10.09%.
+   Griglia: 7 rotazioni × 6 alfa = 42 celle, tutte pre-dichiarate.
+
+   MARGINE NETTO (punti di IRR) per alfa lordo × rotazione
+   rotaz.      aliq.      a=0      a=1      a=2      a=4      a=6      a=8
+   ------------------------------------------------------------------------
+   0.2x          33%    -0.51    +0.45    +1.42    +3.35    +5.30    +7.27
+   0.5x          33%    -0.89    +0.05    +0.96    +2.77    +4.58    +6.42
+   0.9x          33%    -1.16    -0.25    +0.66    +2.47    +4.25    +6.01
+   1.1x          52%    -2.55    -1.73    -0.92    +0.69    +2.29    +3.87
+   2.0x          52%    -2.81    -2.01    -1.23    +0.34    +1.90    +3.44
+   3.5x          52%    -3.07    -2.29    -1.51    +0.03    +1.55    +3.06
+   6.0x          52%    -3.40    -2.63    -1.86    -0.34    +1.16    +2.65
+
+========================================================================================================
+   LA CURVA DEL TASSO DI CAMBIO
+========================================================================================================
+   rotazione     aliquota    alfa lordo per +1,00 netto    per +1 punto
+   ----------------------------------------------------------------------
+   0.2x               33%                      1.57                    1.57×
+   0.5x               33%                      2.04                    2.04×
+   0.9x               33%                      2.38                    2.38×
+   1.1x               52%                      4.39                    4.39×
+   2.0x               52%                      4.85                    4.85×
+   3.5x               52%                      5.27                    5.27×
+   6.0x               52%                      5.78                    5.78×
+
+   **salto attraverso la soglia del 100%** (0,9× → 1,1×): +2.01 punti di alfa richiesto
+   rapporto fra la richiesta a 3,5× e quella a 0,5×: **2.58×**
+   controllo con il giro 80: il candidato aveva 6,50 di alfa lordo a 3,28× e ha reso +1,18;
+   qui a 3,5× per +1,00 ne servono 5.27.
+
+========================================================================================================
+   VERDETTO
+========================================================================================================
+   Predizione: sotto 1,0× servono MENO DI 2 punti; sopra 1,0× PIU' DI 3; a 3,5× FRA 4 E 6;
+   il salto alla soglia vale ALMENO 1,0 punto.
+   FALSIFICATA se il rapporto 3,5×/0,5× sta SOTTO 2, oppure se il salto vale MENO DI 0,5.
+
+   sotto 1,0× serve meno di 2   : NO   (0.2x 1.57, 0.5x 2.04, 0.9x 2.38)
+   sopra 1,0× servono più di 3  : SI   (1.1x 4.39, 2.0x 4.85, 3.5x 5.27, 6.0x 5.78)
+   a 3,5× fra 4 e 6             : SI   (5.27)
+   salto alla soglia ≥ 1,0      : SI   (+2.01)
+
+   -> ipotesi O5 CONFERMATA
+      (confermata sul ramo che falsifica; clausole descrittive sbagliate: sotto 1,0×)
+
+Tentativi cumulati a registro: 1501
