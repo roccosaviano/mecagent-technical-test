@@ -202,18 +202,19 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 79 | **O1 cancello sul margine** | confermata, **3 su 3** | soglia **+2,19** contro il +1,18 del candidato: **0 passanti su 32**. Il fallimento dell'holdout **è spiegato dalla selezione** |
 | 80 | **O2 scomposizione train-holdout** | confermata | **alfa lordo da +6,50 a +0,31**: −6,19, cioè il **291%** del divario. Rotazione aggiuntiva **−0,11** |
 | 81 | **O3 finestre disgiunte** | **falsificata**, 2 clausole su 2 | quota disgiunta **75,0%**: G3 passa anche su prove indipendenti. E il rimedio è **10× peggiore** (falsi positivi 3,07% → 31,25%) |
+| 82 | **O4 N effettiva** | confermata | **`N_eff` = 6,00** su 20 celle (corr. media 0,750): soglia da +2,19 a **+1,495**, il candidato resta respinto. I due errori del giro 79 **si elidono a 0,05** |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 58 voci eseguite nei giri 30-81:
-**39 confermate, 18 falsificate, 1 senza esito per dati (B3)**.
+(rotazione concentrata e sistema EMA, giri 50-51). 59 voci eseguite nei giri 30-82:
+**40 confermate, 18 falsificate, 1 senza esito per dati (B3)**.
 **Il progetto ha avuto una promozione e l'ha vista fallire fuori campione**: il
 momentum 12-3 top-5 mensile ha passato tutti e quattro i cancelli al giro 77 e ha
 perso **−0,95** sull'holdout al giro 78.
-In coda: **O4, O5, O6** — l'autopsia dei cancelli e del motore fiscale. Non ci
+In coda: **O5, O6, O7** — l'autopsia dei cancelli e del motore fiscale. Non ci
 sono piu' voci su strategie nuove, perche' non c'e' piu' un campione per
 validarle.
 
-Registro a **1.439 tentativi** cumulati.
+Registro a **1.459 tentativi** cumulati.
 Il report finale è **[`../reports/REPORT.md`](../reports/REPORT.md)**, riscritto
 al giro 75 (era fermo al giro 29).
 
@@ -985,6 +986,22 @@ passano.**
   famiglia del calendario (giro 68) e dello skip (giro 76): cambiarlo ribalta **4
   verdetti G3 su 12**. La differenza è che questo non gonfia il margine — gonfia
   il **verdetto di un cancello**.
+- **Le celle di una famiglia valgono un terzo di quanto si contano** (giro 82).
+  Sulle venti celle skip × taglia del giro 77 la correlazione media delle serie di
+  **extra** è **0,750** (sui rendimenti grezzi sarebbe 0,908, ma è la misura
+  sbagliata: il margine è già relativo al benchmark), il primo autovalore spiega
+  il **76%**, e **`N_eff` = 6,00** con Li & Ji. Fattore di riduzione **0,300**.
+- **I due errori dichiarati al giro 79 si elidono quasi esattamente.** Soglia
+  nominale **+2,19**; correggendo solo la correlazione **+1,50**; correggendo solo
+  la griglia **+2,70**; correggendo **entrambe +2,14**. Cinque centesimi dal
+  numero pubblicato allora, per compensazione fortuita. **Il candidato (+1,18) è
+  respinto sotto ogni lettura difendibile.**
+- **La scelta dello stimatore di `N_eff` è il quarto grado di libertà del
+  progetto**, dopo il calendario (68), lo skip (76) e lo schema delle finestre
+  (81). Li & Ji dà 6,00 e Nyholt 9,10 — entrambi respingono — ma il **rapporto di
+  partecipazione** dà 1,68 e **lascerebbe passare il candidato**. Non lo prendo
+  perché misura il numero effettivo di *fattori* e non di *test*, ed è una scelta
+  teorica dichiarata prima di guardare; resta che va contata.
 - **Nel train il candidato aveva 6,50 punti di alfa lordo e ne consegnava 1,18**
   (giro 80). Zavorra — tutto ciò che sta fra il CAGR lordo time-weighted e l'IRR
   netta money-weighted — **6,01 punti** contro **0,69** del benchmark:

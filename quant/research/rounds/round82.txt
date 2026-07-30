@@ -1,0 +1,61 @@
+========================================================================================================
+O4 — la correlazione fra le celle e la N vera della ricerca
+========================================================================================================
+   20 celle, 486 mesi, benchmark equal-weight annuale (calendario mediano).
+   margini da -2.76 a +1.51, sigma 1.15, ampiezza 4.27
+
+   ==================================================================================================
+   (a) IL NUMERO EFFETTIVO DI ESTRAZIONI INDIPENDENTI
+   ==================================================================================================
+
+   serie di EXTRA (la scelta dichiarata)
+      correlazione media fuori diagonale :   0.750   (min +0.479, max +0.944)
+      primo autovalore                   :   15.28   su 20 (spiega il 76%)
+      **N_eff Li & Ji (primario)**       :    6.00
+      N_eff Nyholt                       :    9.10
+      N_eff rapporto di partecipazione   :    1.68
+
+   rendimenti grezzi (sensibilita')
+      correlazione media fuori diagonale :   0.908   (min +0.790, max +0.995)
+      primo autovalore                   :   18.26   su 20 (spiega il 91%)
+      **N_eff Li & Ji (primario)**       :    3.00
+      N_eff Nyholt                       :    4.30
+      N_eff rapporto di partecipazione   :    1.20
+
+   ==================================================================================================
+   (b) LA SOGLIA RICALCOLATA
+   ==================================================================================================
+   N usata                                             N    soglia   candidato      esito
+   ----------------------------------------------------------------------------------------
+   nominale, come al giro 79                       20.00     +2.19       +1.18   RESPINTO
+   **effettiva (Li & Ji sugli extra)**              6.00     +1.50       +1.18   RESPINTO
+   effettiva (Nyholt)                               9.10     +1.76       +1.18   RESPINTO
+   effettiva (partecipazione)                       1.68     +0.00       +1.18      PASSA
+
+   ==================================================================================================
+   (c) LA GRIGLIA IMPLICITA, con la stessa correzione
+   ==================================================================================================
+   fattore di riduzione misurato: N_eff/N = 0.300
+
+   griglia                                         N nom.   N eff.    soglia      esito
+   --------------------------------------------------------------------------------------
+   come scritta nella voce (5 skip x 12 cal. x 4 taglie)     240     72.0     +2.78   RESPINTO
+   difendibile (5 skip x 4 taglie x 3 frequenze)       60     18.0     +2.14   RESPINTO
+   la sola famiglia misurata                           20      6.0     +1.50   RESPINTO
+
+========================================================================================================
+   VERDETTO
+========================================================================================================
+   Predizione: N_eff fra 3 e 8; la soglia corretta scende a +1,5/+1,9 e il candidato RESTA RESPINTO;
+   con la griglia implicita la soglia RISALE SOPRA +2,0.
+   FALSIFICATA se la soglia corretta scende SOTTO +1,18, oppure se N_eff supera 15.
+
+   N_eff fra 3 e 8              : SI   (6.00)
+   soglia corretta in [1,5; 1,9]: NO   (+1.50)
+   il candidato resta respinto  : SI   (+1.18 contro +1.50)
+   griglia implicita sopra +2,0 : SI   (+2.78 come da voce, +2.14 con la griglia difendibile)
+
+   -> ipotesi O4 CONFERMATA
+      (confermata sul ramo che falsifica; clausole descrittive sbagliate: soglia)
+
+Tentativi cumulati a registro: 1459
