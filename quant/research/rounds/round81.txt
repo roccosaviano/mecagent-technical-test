@@ -1,0 +1,39 @@
+========================================================================================================
+O3 — le finestre sovrapposte non sono prove indipendenti
+========================================================================================================
+   Train 1969-2009. Finestre disgiunte: 1970-1979, 1980-1989, 1990-1999, 2000-2009.
+
+   ==================================================================================================
+   A1 — il candidato che ha passato i cancelli (motore giornaliero)
+   ==================================================================================================
+   schema                      n     quota   soglia 2/3       esito
+   ------------------------------------------------------------------
+   finestre MOBILI            29    93.1%       66.7%       PASSA
+   finestre DISGIUNTE          4    75.0%       66.7%       PASSA
+
+   i quattro decenni disgiunti: 1970-79 +4.81   1980-89 +0.22   1990-99 +4.42   2000-09 -3.39
+
+   ==================================================================================================
+   A2 — i dodici candidati del giro 72 (motore mensile, come allora)
+   ==================================================================================================
+   candidato                               mobili   disgiunte   mobili   disg.
+   ------------------------------------------------------------------------------
+   momentum 12-2 top-5 annuale             65.5%       75.0%       no   PASSA
+   momentum 12-2 top-10 annuale            62.1%       75.0%       no   PASSA
+   momentum 12-2 top-25 annuale            69.0%       50.0%    PASSA      no
+   momentum 6-2 top-10 annuale             86.2%      100.0%    PASSA   PASSA
+   low-vol 36m top-10 annuale              48.3%       25.0%       no      no
+   low-vol 36m top-25 annuale              62.1%       50.0%       no      no
+   punteggio misto top-10 annuale          51.7%       75.0%       no   PASSA
+   momentum 12-2 top-5 mensile             65.5%       50.0%       no      no
+   H5 momentum top-10 mensile              58.6%       50.0%       no      no
+   momentum 12-2 top-25 mensile            24.1%       50.0%       no      no
+   H4 low-vol 36m top-10 mensile           37.9%       25.0%       no      no
+   C1 punteggio misto top-10 mensile       17.2%       25.0%       no      no
+
+   candidati il cui verdetto G3 CAMBIA passando a finestre disgiunte: **4/12**
+   passano G3 con le mobili: 2/12   con le disgiunte: 4/12
+
+   ==================================================================================================
+   B — l'intervallo di confidenza della quota (400 ricampionamenti a blocchi di 120 mesi)
+   ==================================================================================================
