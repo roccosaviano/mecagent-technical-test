@@ -1,0 +1,44 @@
+========================================================================================================
+O8 — quanto costa che l'alfa sia volatile invece che costante
+========================================================================================================
+   Benchmark: equal-weight annuale, IRR 10.09%, aliquota 33%.
+   **Tracking error vero del 12-3 top-5 contro il benchmark: 12.64 punti annualizzati** (la voce diceva «circa 14»).
+   Griglia: rotazione 3.5x, alfa lordo 6 punti, volatilita' dell'alfa (0.0, 2.0, 5.0, 10.0, 15.0, 20.0), 200 estrazioni per cella.
+
+     vol alfa    mediana     media        p5       p95    perdita   alfa richiesto
+   -------------------------------------------------------------------------------
+           0      +1.55     +1.55     +1.55     +1.55      +0.00
+           2      +1.56     +1.56     +1.12     +1.99      +0.01
+           5      +1.56     +1.54     +0.58     +2.47      +0.00
+          10      +1.49     +1.54     -0.57     +3.68      -0.07
+          15      +1.22     +1.38     -1.75     +4.25      -0.33
+          20      +1.37     +1.40     -2.87     +5.76      -0.18
+
+   pendenza del margine rispetto all'alfa a 3.5x: **0.755 punti di margine per punto di alfa** (da +1.55 a 6 e +3.06 a 8)
+
+     vol alfa    perdita di margine    alfa in piu richiesto   tasso di cambio
+   ----------------------------------------------------------------------------
+           0                 +0.00                    -0.00              5.27
+           2                 +0.01                    -0.01              5.26
+           5                 +0.00                    -0.01              5.26
+          10                 -0.07                    +0.09              5.36
+          15                 -0.33                    +0.44              5.71
+          20                 -0.18                    +0.24              5.51
+
+   **Alla volatilita' vera del candidato (12.64 punti) la perdita interpolata e' -0.21 punti.**
+   (il giro 83 aveva stimato indirettamente ~0,8; la voce prevedeva fra 0,5 e 1,2)
+
+========================================================================================================
+   VERDETTO
+========================================================================================================
+   Predizione: la mediana SCENDE in modo monotono; alla volatilita' vera la perdita sta FRA 0,5 E 1,2.
+   FALSIFICATA se la mediana NON SCENDE, o scende di MENO DI 0,2 anche a 20, OPPURE se supera 2,5.
+
+   mediana monotona decrescente : NO
+   scende a vol 20              : SI   (-0.18)
+   perdita alla vol vera in [0,5; 1,2]: NO   (0.21)
+
+   -> ipotesi O8 FALSIFICATA
+      ramo 1: la volatilita' dell'alfa non spiega lo scarto del giro 83. La causa e' altrove.
+
+Tentativi cumulati a registro: 1524

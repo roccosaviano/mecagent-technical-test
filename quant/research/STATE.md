@@ -206,18 +206,19 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 83 | **O5 tasso di cambio** | confermata | **il salto alla soglia del 100% vale +2,01 punti di alfa richiesto**: da 2,38 a 0,9× a **4,39** a 1,1×. A 3,5× servono **5,27** |
 | 84 | **O6 statistiche di allarme** | confermata sul ramo, **predizione principale sbagliata** | **nessuna statistica in campione distingueva il candidato**: pendenza +0,40, rango **7/13**. L'unica che segnala ne segnala altri sei |
 | 85 | **O7 il fattore N_eff/N** | confermata sul ramo, **2 clausole su 3 sbagliate** | fattori **0,300 / 0,500 / 0,400 / 0,340**: non e' costante, ma `N_eff` vale **6,00 su tre famiglie di 12, 15 e 20 celle** |
+| 86 | **O8 volatilita' dell'alfa** | **falsificata** | la volatilita' costa **0,21** punti, non 0,8. **E gli 0,8 da spiegare non esistevano**: era una confusione fra alfa aritmetico e geometrico |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 62 voci eseguite nei giri 30-85:
-**43 confermate, 18 falsificate, 1 senza esito per dati (B3)**.
+(rotazione concentrata e sistema EMA, giri 50-51). 63 voci eseguite nei giri 30-86:
+**43 confermate, 19 falsificate, 1 senza esito per dati (B3)**.
 **Il progetto ha avuto una promozione e l'ha vista fallire fuori campione**: il
 momentum 12-3 top-5 mensile ha passato tutti e quattro i cancelli al giro 77 e ha
 perso **−0,95** sull'holdout al giro 78.
-In coda: **O8, O9, O10** — l'autopsia dei cancelli e del motore fiscale. Non ci
+In coda: **O9, O10, O11** — l'autopsia dei cancelli e del motore fiscale. Non ci
 sono piu' voci su strategie nuove, perche' non c'e' piu' un campione per
 validarle.
 
-Registro a **1.518 tentativi** cumulati.
+Registro a **1.524 tentativi** cumulati.
 Il report finale è **[`../reports/REPORT.md`](../reports/REPORT.md)**, riscritto
 al giro 75 (era fermo al giro 29).
 
@@ -1025,12 +1026,28 @@ passano.**
   consegnarne uno. Non e' il 52% a rendere il gioco duro: il gioco e' duro
   comunque, e la soglia lo rende proibitivo. E ruotare **senza alcun alfa** costa
   da −0,51 (0,2x) a −3,40 (6x): e' il prezzo del movimento in se'.
-- **La curva del tasso di cambio e' un LIMITE INFERIORE.** E' costruita su un alfa
-  costante ogni mese; il controllo col giro 80 mostra che il candidato reale
-  (6,50 di alfa a 3,28x) ha reso **+1,18** dove il sintetico darebbe ~**+1,9**.
-  Il sintetico e' ottimista di **circa 0,8 punti**, quasi certamente perche' un
-  alfa volatile realizzato con rotazione alta paga imposte nei momenti sbagliati.
-  Il tasso vero a 3,5x e' piu' vicino a **6,0-6,5** che a 5,27. E' la voce **O8**.
+- **La curva del tasso di cambio e' un limite inferiore, ma di poco** (giri 83 e
+  **86**). Il sintetico e' ottimista di **0,27 punti**, non degli 0,8 che avevo
+  scritto al giro 83, e la volatilita' dell'alfa ne spiega **0,21**. Il tasso vero
+  a 3,5x e' quindi **circa 5,5**, non 6,0-6,5.
+- **CORREZIONE AL GIRO 83, trovata al giro 86: alfa aritmetico contro alfa
+  geometrico.** Al giro 80 avevo misurato l'alfa del candidato come **differenza
+  di CAGR** (17,28 − 10,78 = **6,50**) e al giro 83 l'avevo confrontato col
+  parametro del sintetico, che e' un **moltiplicatore geometrico**
+  (1,1728/1,1078 − 1 = **5,87**). Il sintetico all'alfa giusto da' **+1,45** contro
+  il **+1,18** reale: scarto **0,27**, non 0,8. Avevo screditato una curva quasi
+  giusta sulla base di un confronto mal fatto.
+- **La volatilita' dell'alfa quasi non conta** (giro 86). Con alfa geometrico
+  imposto a 6 punti e rotazione 3,5x, portare la volatilita' dell'alfa da 0 a 20
+  punti fa scendere la mediana del margine di **0,18-0,33 punti**, in modo **non
+  monotono**, e con un errore standard Monte Carlo di **±0,16/±0,23**: l'effetto e'
+  dello stesso ordine del proprio rumore. Il tracking error vero del candidato e'
+  **12,64** punti (misurato, non assunto).
+- **La mediana non e' l'esperienza** (giro 86). A volatilita' dell'alfa 15 il
+  margine mediano e' **+1,22** ma il **quinto percentile e' −1,75** e il
+  novantacinquesimo **+4,25**: chi compra quel profilo compra una mediana appena
+  positiva e una coda sinistra che perde quasi due punti l'anno per vent'anni. E'
+  la lezione del giro 70 vista dal lato della dispersione invece che dei cashflow.
 - **Le celle di una famiglia valgono un terzo di quanto si contano** (giro 82).
   Sulle venti celle skip × taglia del giro 77 la correlazione media delle serie di
   **extra** è **0,750** (sui rendimenti grezzi sarebbe 0,908, ma è la misura
