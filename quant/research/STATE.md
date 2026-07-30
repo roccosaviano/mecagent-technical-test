@@ -205,18 +205,19 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 82 | **O4 N effettiva** | confermata | **`N_eff` = 6,00** su 20 celle (corr. media 0,750): soglia da +2,19 a **+1,495**, il candidato resta respinto. I due errori del giro 79 **si elidono a 0,05** |
 | 83 | **O5 tasso di cambio** | confermata | **il salto alla soglia del 100% vale +2,01 punti di alfa richiesto**: da 2,38 a 0,9× a **4,39** a 1,1×. A 3,5× servono **5,27** |
 | 84 | **O6 statistiche di allarme** | confermata sul ramo, **predizione principale sbagliata** | **nessuna statistica in campione distingueva il candidato**: pendenza +0,40, rango **7/13**. L'unica che segnala ne segnala altri sei |
+| 85 | **O7 il fattore N_eff/N** | confermata sul ramo, **2 clausole su 3 sbagliate** | fattori **0,300 / 0,500 / 0,400 / 0,340**: non e' costante, ma `N_eff` vale **6,00 su tre famiglie di 12, 15 e 20 celle** |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 61 voci eseguite nei giri 30-84:
-**42 confermate, 18 falsificate, 1 senza esito per dati (B3)**.
+(rotazione concentrata e sistema EMA, giri 50-51). 62 voci eseguite nei giri 30-85:
+**43 confermate, 18 falsificate, 1 senza esito per dati (B3)**.
 **Il progetto ha avuto una promozione e l'ha vista fallire fuori campione**: il
 momentum 12-3 top-5 mensile ha passato tutti e quattro i cancelli al giro 77 e ha
 perso **−0,95** sull'holdout al giro 78.
-In coda: **O7, O8, O9** — l'autopsia dei cancelli e del motore fiscale. Non ci
+In coda: **O8, O9, O10** — l'autopsia dei cancelli e del motore fiscale. Non ci
 sono piu' voci su strategie nuove, perche' non c'e' piu' un campione per
 validarle.
 
-Registro a **1.514 tentativi** cumulati.
+Registro a **1.518 tentativi** cumulati.
 Il report finale è **[`../reports/REPORT.md`](../reports/REPORT.md)**, riscritto
 al giro 75 (era fermo al giro 29).
 

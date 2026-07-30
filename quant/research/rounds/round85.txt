@@ -1,0 +1,37 @@
+========================================================================================================
+O7 — N_eff/N su quattro famiglie di eterogeneita' crescente
+========================================================================================================
+   Motore mensile per tutte, benchmark comune (equal-weight annuale di gennaio), rotazione vera.
+
+   famiglia                                  N   corr media   1° autov.    N_eff   N_eff/N   Nyholt  ratio N
+   ---------------------------------------------------------------------------------------------------------
+   1. skip × taglia (giro 77)               20        0.761      15.50     6.00     0.300     8.79    0.439
+   2. dodici candidati (giro 72)            12        0.412       5.83     6.00     0.500     9.04    0.753
+   3. posizioni × frequenza (giro 50)       15        0.654      10.29     6.00     0.400     8.65    0.576
+   [scartate 1 celle con extra identicamente nullo: EW m01 — coincidono col benchmark]
+   4. calendari × taglia (giro 68)          47        0.466      25.73    16.00     0.340    32.47    0.691
+
+   minimo  0.300  (1. skip × taglia (giro 77))
+   massimo 0.500  (2. dodici candidati (giro 72))
+   **rapporto massimo/minimo: 1.67×**   (previsto sopra 3)
+   ampiezza assoluta: 0.200   (falsifica se tutti entro ±0,05, cioe' ampiezza < 0,10)
+
+   CONTROLLO INCROCIATO sulla famiglia 1: motore mensile **0.300** contro giornaliero **0.300** (giro 82)   → scarto 0.000
+
+========================================================================================================
+   VERDETTO
+========================================================================================================
+   Predizione: il fattore NON e' costante; il minimo e' la famiglia dei CALENDARI sotto 0,15,
+   il massimo i DODICI CANDIDATI sopra 0,45, e il rapporto massimo/minimo e' sopra 3.
+   FALSIFICATA se tutti entro ±0,05, oppure se i CALENDARI risultano piu' indipendenti dei CANDIDATI.
+
+   calendari sotto 0,15          : NO   (0.340)
+   dodici candidati sopra 0,45   : SI   (0.500)
+   rapporto max/min sopra 3      : NO   (1.67×)
+   ordinamento invertito → fals. : no   (calendari 0.340 contro candidati 0.500)
+   tutti entro ±0,05 → fals.     : no   (ampiezza 0.200)
+
+   -> ipotesi O7 CONFERMATA
+      (confermata sul ramo che falsifica; clausole descrittive sbagliate: calendari <0,15, rapporto >3)
+
+Tentativi cumulati a registro: 1518
