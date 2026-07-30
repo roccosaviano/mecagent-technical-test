@@ -37,3 +37,32 @@ O3 — le finestre sovrapposte non sono prove indipendenti
    ==================================================================================================
    B — l'intervallo di confidenza della quota (400 ricampionamenti a blocchi di 120 mesi)
    ==================================================================================================
+   intervallo                                   basso      alto   larghezza
+   ------------------------------------------------------------------------
+   Wilson 95% sulla numerosita apparente n=29     78.0%     98.1%       20.1%
+   bootstrap a blocchi 95%                      71.0%    100.0%       29.0%
+
+   **rapporto fra le larghezze: 1.45×**   (previsto almeno 3)
+   mediana della quota nei ricampionamenti: 93.5%   (osservata 93.1%)
+
+   ==================================================================================================
+   C — quanto e' selettivo G3, sotto ipotesi nulla
+   ==================================================================================================
+   Una strategia che vince il 50% delle volte per puro caso, quante probabilita' ha di passare G3?
+   con 29 finestre MOBILI trattate come indipendenti       servono 20/29   →    3.07%
+   con 4 finestre DISGIUNTE (le prove vere)                servono  3/4    →   31.25%
+   rapporto fra i due tassi di falsi positivi: **10×**
+
+========================================================================================================
+   VERDETTO
+========================================================================================================
+   Predizione: con finestre disgiunte la quota del 12-3 top-5 SCENDE SOTTO i 2/3 (G3 sarebbe
+   fallito in campione), e l'intervallo di confidenza e' ALMENO TRE VOLTE piu' largo del Wilson.
+   FALSIFICATA se la quota disgiunta resta SOPRA i 2/3.
+
+   quota disgiunta sotto i 2/3 : NO   (75.0% contro 66.7%, 3/4)
+   intervallo almeno 3× piu' largo: NO   (1.45×)
+
+   -> ipotesi O3 FALSIFICATA
+
+Tentativi cumulati a registro: 1439

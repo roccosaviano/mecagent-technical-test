@@ -1425,3 +1425,16 @@ round,hypothesis,config,window,sharpe,irr,bh_irr,excess,n_obs,note
 80,O2 scomposizione train-holdout,zavorra candidato,1969-2009 vs 2010-2026,,,,2.2494656885613793,10223,scomposizione additiva
 80,O2 scomposizione train-holdout,zavorra benchmark,1969-2009 vs 2010-2026,,,,1.8172611049808296,10223,scomposizione additiva
 80,O2 scomposizione train-holdout,di cui rotazione,1969-2009 vs 2010-2026,,,,-0.11290665285852519,10223,scomposizione additiva
+81,O3 finestre disgiunte,momentum 12-2 top-5 annuale,1969-2009,,0.6551724137931034,0.75,0.09482758620689657,486,"mob=False,dis=True"
+81,O3 finestre disgiunte,momentum 12-2 top-10 annuale,1969-2009,,0.6206896551724138,0.75,0.1293103448275862,486,"mob=False,dis=True"
+81,O3 finestre disgiunte,momentum 12-2 top-25 annuale,1969-2009,,0.6896551724137931,0.5,-0.18965517241379315,486,"mob=True,dis=False"
+81,O3 finestre disgiunte,momentum 6-2 top-10 annuale,1969-2009,,0.8620689655172413,1.0,0.13793103448275867,486,"mob=True,dis=True"
+81,O3 finestre disgiunte,low-vol 36m top-10 annuale,1969-2009,,0.4827586206896552,0.25,-0.2327586206896552,486,"mob=False,dis=False"
+81,O3 finestre disgiunte,low-vol 36m top-25 annuale,1969-2009,,0.6206896551724138,0.5,-0.12068965517241381,486,"mob=False,dis=False"
+81,O3 finestre disgiunte,punteggio misto top-10 annuale,1969-2009,,0.5172413793103449,0.75,0.23275862068965514,486,"mob=False,dis=True"
+81,O3 finestre disgiunte,momentum 12-2 top-5 mensile,1969-2009,,0.6551724137931034,0.5,-0.15517241379310343,486,"mob=False,dis=False"
+81,O3 finestre disgiunte,H5 momentum top-10 mensile,1969-2009,,0.5862068965517241,0.5,-0.08620689655172409,486,"mob=False,dis=False"
+81,O3 finestre disgiunte,momentum 12-2 top-25 mensile,1969-2009,,0.2413793103448276,0.5,0.2586206896551724,486,"mob=False,dis=False"
+81,O3 finestre disgiunte,H4 low-vol 36m top-10 mensile,1969-2009,,0.3793103448275862,0.25,-0.1293103448275862,486,"mob=False,dis=False"
+81,O3 finestre disgiunte,C1 punteggio misto top-10 mensile,1969-2009,,0.1724137931034483,0.25,0.07758620689655171,486,"mob=False,dis=False"
+81,O3 finestre disgiunte,12-3 top-5 mensile (daily),1969-2009,,0.9310344827586207,0.75,-0.18103448275862066,10223,CI boot 0.290 vs Wilson 0.201

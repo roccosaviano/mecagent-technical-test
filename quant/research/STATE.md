@@ -201,18 +201,19 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 78 | **N1 APERTURA DELL'HOLDOUT** | confermata, **3 clausole su 3** | **il candidato perde −0,95 fuori campione, in 12 calendari su 12.** Holdout **bruciato** |
 | 79 | **O1 cancello sul margine** | confermata, **3 su 3** | soglia **+2,19** contro il +1,18 del candidato: **0 passanti su 32**. Il fallimento dell'holdout **è spiegato dalla selezione** |
 | 80 | **O2 scomposizione train-holdout** | confermata | **alfa lordo da +6,50 a +0,31**: −6,19, cioè il **291%** del divario. Rotazione aggiuntiva **−0,11** |
+| 81 | **O3 finestre disgiunte** | **falsificata**, 2 clausole su 2 | quota disgiunta **75,0%**: G3 passa anche su prove indipendenti. E il rimedio è **10× peggiore** (falsi positivi 3,07% → 31,25%) |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 57 voci eseguite nei giri 30-80:
-**39 confermate, 17 falsificate, 1 senza esito per dati (B3)**.
+(rotazione concentrata e sistema EMA, giri 50-51). 58 voci eseguite nei giri 30-81:
+**39 confermate, 18 falsificate, 1 senza esito per dati (B3)**.
 **Il progetto ha avuto una promozione e l'ha vista fallire fuori campione**: il
 momentum 12-3 top-5 mensile ha passato tutti e quattro i cancelli al giro 77 e ha
 perso **−0,95** sull'holdout al giro 78.
-In coda: **O3, O4, O5** — l'autopsia dei cancelli e del motore fiscale. Non ci
+In coda: **O4, O5, O6** — l'autopsia dei cancelli e del motore fiscale. Non ci
 sono piu' voci su strategie nuove, perche' non c'e' piu' un campione per
 validarle.
 
-Registro a **1.426 tentativi** cumulati.
+Registro a **1.439 tentativi** cumulati.
 Il report finale è **[`../reports/REPORT.md`](../reports/REPORT.md)**, riscritto
 al giro 75 (era fermo al giro 29).
 
@@ -960,6 +961,30 @@ passano.**
   e il cancello **discrimina ancora**: l'equal-weight contro il cap-weight (+1,50,
   non selezionato, N=1) passa. Non serve invocare un cambio di regime per spiegare
   il −0,95 fuori campione: **è la selezione**.
+- **La sovrapposizione delle finestre NON era il difetto di G3, e la correzione
+  ovvia è dieci volte peggiore del difetto** (giro 81). Con finestre decennali
+  **disgiunte** il candidato fa **75,0%** (3 decenni su 4) e **G3 passa lo
+  stesso**. Il bootstrap a blocchi dice che la sovrapposizione costa un fattore
+  **1,45×** sull'intervallo di confidenza, cioè **n_eff ≈ 14** su 29 finestre
+  nominali — metà dell'informazione apparente, non un ventisettesimo. E il rimedio
+  distrugge il test: con 4 finestre e soglia 2/3 servono 3/4, che il **caso passa
+  il 31,25% delle volte** contro il 3,07% delle mobili. Empiricamente si vede:
+  sui dodici candidati del giro 72 passano **2/12 con le mobili e 4/12 con le
+  disgiunte**.
+- **Il limite di G3 è di campione, non di schema.** Quarant'anni contengono
+  **quattro decenni indipendenti**, e nessuna scelta di finestre ne produce di
+  più. Un cancello di stabilità su finestre decennali dentro un campione
+  quarantennale è sottodimensionato in partenza: contarle come 29 le sopravvaluta
+  di un fattore 2, contarle come 4 azzera il potere del test.
+- **Il colpevole del fallimento dell'holdout è uno solo, ed è la selezione.** Il
+  giro 79 mostra che G1/G2 con la soglia giusta (+2,19 contro +1,18) avrebbero
+  respinto il candidato; il giro 81 assolve G3, che non lo avrebbe fermato in
+  nessuna versione. Le due cose insieme chiudono l'autopsia: **il candidato era il
+  massimo di una griglia troppo grande per il suo margine**, punto.
+- **Lo schema delle finestre è un grado di libertà mai dichiarato**, della stessa
+  famiglia del calendario (giro 68) e dello skip (giro 76): cambiarlo ribalta **4
+  verdetti G3 su 12**. La differenza è che questo non gonfia il margine — gonfia
+  il **verdetto di un cancello**.
 - **Nel train il candidato aveva 6,50 punti di alfa lordo e ne consegnava 1,18**
   (giro 80). Zavorra — tutto ciò che sta fra il CAGR lordo time-weighted e l'IRR
   netta money-weighted — **6,01 punti** contro **0,69** del benchmark:
