@@ -1,0 +1,65 @@
+========================================================================================================
+O1 — il cancello sul MARGINE contro il cancello sullo SHARPE
+========================================================================================================
+
+   famiglia del giro 77 (benchmark equal-weight annuale, calendario mediano)
+   margine per skip          k=1      k=2      k=3      k=4      k=6
+   top-3                   +1.51    -1.50    -0.06    +0.33    -2.28
+   top-5                   +0.65    -0.87    +1.18    -0.39    -2.76
+   top-10                  -0.23    -0.85    -0.93    -1.05    -2.02
+   top-25                  -1.22    -1.19    -1.70    -1.88    -1.92
+
+========================================================================================================
+   LE SOGLIE
+========================================================================================================
+   famiglia                     N    media    sigma  ampiezza  soglia H0  soglia su media
+   ------------------------------------------------------------------------------------------
+   A — 12 candidati (giro 72)  12    -0.59     0.71      2.31      +1.18            +0.59
+   B — 20 celle (giro 77)      20    -0.86     1.15      4.27      +2.19            +1.33
+
+========================================================================================================
+   IL CANDIDATO CHE HA FALLITO L'HOLDOUT
+========================================================================================================
+   momentum 12-3 top-5 mensile   margine in campione **+1.18**   esito sull'holdout **−0,95**
+
+   cancello                            osservato    soglia  soglia/oss.     esito
+   --------------------------------------------------------------------------------
+   G2 come scritto (Sharpe)               0.1755    0.0608         0.35     PASSA
+   G2 sul margine, H0 = 0                  +1.18     +2.19         1.86  RESPINTO
+   G2 sul margine, centrata su media       +1.18     +1.33         1.13  RESPINTO
+
+   rapporto fra le due esigenze (lettura dichiarata): **5.36×**   (previsto sopra 3)
+
+========================================================================================================
+   IL CANCELLO APPLICATO A TUTTI, non solo a chi ha fallito
+========================================================================================================
+   famiglia A (giro 72, N=12, soglia +1.18): **0/12 passano**   — il migliore e' momentum 12-2 top-5 mensile a +0.56
+   famiglia B (giro 77, N=20, soglia +2.19): **0/20 passano**   — il migliore e' 12-1 top-3 a +1.51
+
+========================================================================================================
+   IL CONTROLLO: il cancello discrimina ancora?
+========================================================================================================
+   Oggetto: **equal-weight annuale contro cap-weight**, +1.50 punti (giro 60).
+   E' l'effetto strutturale piu' pulito del progetto e **non e' stato selezionato**: un confronto singolo.
+
+   lettura                                        N    soglia       esito
+   ------------------------------------------------------------------------
+   N della selezione avvenuta (dichiarata prima)   1     +0.00       PASSA
+   sotto stress: stessa N e sigma del momentum   20     +2.19    RESPINTO
+
+========================================================================================================
+   VERDETTO
+========================================================================================================
+   Predizione: il cancello sul margine RESPINGE il 12-3 top-5, respinge anche tutti gli altri,
+   e il rapporto fra le due soglie e' sopra 3.
+   FALSIFICATA se il cancello LASCIA PASSARE il candidato, OPPURE se respinge anche l'equal-weight
+   contro il cap-weight.
+
+   respinge il candidato          : SI   (+1.18 contro +2.19)
+   respinge tutti gli altri       : SI   (0 passanti su 32)
+   rapporto sopra 3               : SI   (5.36×)
+   discrimina ancora (controllo)  : SI
+
+   -> ipotesi O1 CONFERMATA
+
+Tentativi cumulati a registro: 1422

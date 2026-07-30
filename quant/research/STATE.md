@@ -199,17 +199,18 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 76 | **L4 skip contro ritardo** | **falsificata** | ampiezza in k **3,94** punti: lo skip è un grado di libertà mai contato. E il 12-3 top-5 mensile passa **3 cancelli su 4** |
 | 77 | **M1 quattro cancelli** | **falsificata (ramo 1)** | **il candidato passa 4 su 4**: G1 +1,18 su 12 calendari, G2 0,9907, G3 **93,1%**, G4 per costruzione |
 | 78 | **N1 APERTURA DELL'HOLDOUT** | confermata, **3 clausole su 3** | **il candidato perde −0,95 fuori campione, in 12 calendari su 12.** Holdout **bruciato** |
+| 79 | **O1 cancello sul margine** | confermata, **3 su 3** | soglia **+2,19** contro il +1,18 del candidato: **0 passanti su 32**. Il fallimento dell'holdout **è spiegato dalla selezione** |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 55 voci eseguite nei giri 30-78:
-**37 confermate, 17 falsificate, 1 senza esito per dati (B3)**.
+(rotazione concentrata e sistema EMA, giri 50-51). 56 voci eseguite nei giri 30-79:
+**38 confermate, 17 falsificate, 1 senza esito per dati (B3)**.
 **Il progetto ha avuto una promozione e l'ha vista fallire fuori campione**: il
 momentum 12-3 top-5 mensile ha passato tutti e quattro i cancelli al giro 77 e ha
 perso **−0,95** sull'holdout al giro 78.
-In coda: **O1, O2, O3** — l'autopsia dei cancelli, nata al giro 78. Non ci sono
-piu' voci su strategie nuove, perche' non c'e' piu' un campione per validarle.
+In coda: **O2, O3, O4** — l'autopsia dei cancelli. Non ci sono piu' voci su
+strategie nuove, perche' non c'e' piu' un campione per validarle.
 
-Registro a **1.402 tentativi** cumulati.
+Registro a **1.422 tentativi** cumulati.
 Il report finale è **[`../reports/REPORT.md`](../reports/REPORT.md)**, riscritto
 al giro 75 (era fermo al giro 29).
 
@@ -793,6 +794,13 @@ passano.**
 > calendario su un top-5 (giro 68), **5,81-10,19** la finestra temporale (giro
 > 59). **Il candidato non è stato smentito da un evento raro: è rientrato nella
 > dispersione che il progetto aveva già misurato tre volte.**
+>
+> **E il giro 79 ha mostrato che era prevedibile senza l'holdout.** Deflatando sul
+> **margine** invece che sullo Sharpe — stessa formula di G2, applicata alla
+> grandezza su cui la selezione è davvero avvenuta — la soglia per una famiglia di
+> venti celle con σ 1,15 è **+2,19**, e il candidato ne aveva **+1,18**. Sarebbe
+> stato fermato prima di arrivare all'holdout, e con lui **tutti e 32** i
+> candidati mai registrati.
 
 > **AGGIORNAMENTO DEL GIRO 77 — la regola è stata passata.** Un tredicesimo
 > candidato, che al giro 72 non esisteva perché lo **skip** non era ancora un
@@ -941,6 +949,23 @@ passano.**
   cashflow. Non riscrivo G2 adesso — sarebbe il peccato che il progetto ha evitato
   per settantasette giri — ma il difetto vale indipendentemente da come andrà
   l'holdout.
+- **Il difetto di G2 è stato misurato, e spiega il fallimento dell'holdout**
+  (giro 79). La versione **margine** della statistica di Bailey-López de Prado —
+  stessa formula, applicata alla dispersione dei margini di IRR netta invece che
+  degli Sharpe — dà **+2,19** di soglia sulla famiglia di 20 celle (σ 1,15) contro
+  il **+1,18** del candidato: **respinto**, e con lui **0 passanti su 32** fra le
+  due famiglie. Il verdetto non dipende dalla centratura (anche +1,33 lo respinge)
+  e il cancello **discrimina ancora**: l'equal-weight contro il cap-weight (+1,50,
+  non selezionato, N=1) passa. Non serve invocare un cambio di regime per spiegare
+  il −0,95 fuori campione: **è la selezione**.
+- **G1 era tarato sulla cosa sbagliata, e G1 e G2 provavano a fare la stessa
+  cosa.** La soglia di +1,00 fu fissata al giro 72 sul **rumore di misura** (0,32
+  medio, 1,35 massimo, giro 63). Il riferimento giusto è la **dispersione che la
+  ricerca genera**, che cresce con quante celle si guardano: **+1,91** a 12 celle,
+  **+2,19** a 20, **+2,70** a 60, **+3,25** a 240 — e 240 è la griglia implicita
+  che il progetto ha davvero esplorato (5 skip × 12 calendari × 4 taglie). Il
+  cancello sul margine unifica G1 e G2 in uno solo, con la soglia funzione di *N*
+  invece che costante.
 - **Il candidato peggiora esattamente dove comincia l'holdout.** Le uniche due
   finestre decennali negative su ventinove sono **le ultime due**: 1999-2008 a
   **−1,23** e 2000-2009 a **−3,39**, dopo cinque finestre consecutive sopra +3.
