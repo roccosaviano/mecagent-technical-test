@@ -1,0 +1,48 @@
+================================================================================================================
+O6 — esiste una statistica in campione che avrebbe segnalato il candidato?
+================================================================================================================
+   Train 1969-2009, tredici candidati, cinque statistiche, soglie d'allarme dichiarate nel codice.
+
+   candidato                             (1) pend  (2) terzi  (3) quota  (4) t-stat  (5) mesi  allarmi
+   ---------------------------------------------------------------------------------------------------
+   12-3 top-5 mensile (il candidato)        0.40      -4.10*       80%        1.35      0.91         1
+   momentum 12-2 top-5 annuale             -3.59*     -7.36*       40%*       0.28      1.00         3
+   momentum 12-2 top-10 annuale            -0.25      -1.30*       40%*       0.57      1.07         2
+   momentum 12-2 top-25 annuale             0.53      -0.91        80%        0.62      1.19         0
+   momentum 6-2 top-10 annuale              2.55       0.18       100%        0.79      1.00         0
+   low-vol 36m top-10 annuale              -4.45*     -0.41         0%*      -1.58*     0.82*        4
+   low-vol 36m top-25 annuale              -1.34*     -0.09        20%*      -1.17*     0.79*        4
+   punteggio misto top-10 annuale          -1.83*     -0.62        10%*      -0.85*     1.11         3
+   momentum 12-2 top-5 mensile              2.81      -5.09*       80%        1.45      1.00         1
+   H5 momentum top-10 mensile               2.32      -3.92*       80%        1.23      0.92         1
+   momentum 12-2 top-25 mensile             1.23      -1.09*       50%*       1.20      0.68*        3
+   H4 low-vol 36m top-10 mensile           -4.51*     -1.63*        0%*      -1.17*     0.79*        5
+   C1 punteggio misto top-10 mensile        0.56       0.59        30%*       0.29      0.88*        2
+   (* = allarme.  soglie: pend < -1.0, terzi < -1.0, quota < 67%, t-stat <= 0.0, mesi < 0.9)
+
+================================================================================================================
+   QUANTE VOLTE OGNI STATISTICA ALZA LA MANO
+================================================================================================================
+   statistica          segnala il candidato   segnala altri   totale su 13   rango del cand.
+   -------------------------------------------------------------------------------------------
+   pendenza                              no               5              5            7 su 13
+   terzi                                 SI               6              7            3 su 13
+   quota                                 no               8              8            9 su 13
+   tstat                                 no               4              4           12 su 13
+   mesi                                  no               5              5            6 su 13
+
+================================================================================================================
+   VERDETTO
+================================================================================================================
+   Predizione: la PENDENZA segnala il candidato ed e' L'UNICA a farlo con specificita' (non piu' di
+   tre degli altri dodici). Le (3) e (5) sono troppo rumorose, la (4) non segnala.
+   FALSIFICATA se NESSUNA delle cinque segnala il candidato, OPPURE se PIU' DI TRE lo segnalano.
+
+   la pendenza segnala il candidato     : NO   (calo implicito +0.40 punti, rango 7/13)
+   e' specifica (<= 3 altri)            : NO   (5 altri)
+   la (4) non segnala                   : SI   (t-stat +1.35)
+   statistiche che segnalano il candidato: **1 su 5**
+
+   -> ipotesi O6 CONFERMATA
+
+Tentativi cumulati a registro: 1514

@@ -204,18 +204,19 @@ notturno ne esegue una per giro e aggiorna la tabella degli esiti.
 | 81 | **O3 finestre disgiunte** | **falsificata**, 2 clausole su 2 | quota disgiunta **75,0%**: G3 passa anche su prove indipendenti. E il rimedio è **10× peggiore** (falsi positivi 3,07% → 31,25%) |
 | 82 | **O4 N effettiva** | confermata | **`N_eff` = 6,00** su 20 celle (corr. media 0,750): soglia da +2,19 a **+1,495**, il candidato resta respinto. I due errori del giro 79 **si elidono a 0,05** |
 | 83 | **O5 tasso di cambio** | confermata | **il salto alla soglia del 100% vale +2,01 punti di alfa richiesto**: da 2,38 a 0,9× a **4,39** a 1,1×. A 3,5× servono **5,27** |
+| 84 | **O6 statistiche di allarme** | confermata sul ramo, **predizione principale sbagliata** | **nessuna statistica in campione distingueva il candidato**: pendenza +0,40, rango **7/13**. L'unica che segnala ne segnala altri sei |
 
 **La coda dichiarata è esaurita**, più i gruppi E (opzioni, giri 48-49 e 52) e F
-(rotazione concentrata e sistema EMA, giri 50-51). 60 voci eseguite nei giri 30-83:
-**41 confermate, 18 falsificate, 1 senza esito per dati (B3)**.
+(rotazione concentrata e sistema EMA, giri 50-51). 61 voci eseguite nei giri 30-84:
+**42 confermate, 18 falsificate, 1 senza esito per dati (B3)**.
 **Il progetto ha avuto una promozione e l'ha vista fallire fuori campione**: il
 momentum 12-3 top-5 mensile ha passato tutti e quattro i cancelli al giro 77 e ha
 perso **−0,95** sull'holdout al giro 78.
-In coda: **O6, O7, O8** — l'autopsia dei cancelli e del motore fiscale. Non ci
+In coda: **O7, O8, O9** — l'autopsia dei cancelli e del motore fiscale. Non ci
 sono piu' voci su strategie nuove, perche' non c'e' piu' un campione per
 validarle.
 
-Registro a **1.501 tentativi** cumulati.
+Registro a **1.514 tentativi** cumulati.
 Il report finale è **[`../reports/REPORT.md`](../reports/REPORT.md)**, riscritto
 al giro 75 (era fermo al giro 29).
 
@@ -987,6 +988,25 @@ passano.**
   famiglia del calendario (giro 68) e dello skip (giro 76): cambiarlo ribalta **4
   verdetti G3 su 12**. La differenza è che questo non gonfia il margine — gonfia
   il **verdetto di un cancello**.
+- **NESSUNA STATISTICA IN CAMPIONE DISTINGUEVA IL CANDIDATO** (giro 84), e con
+  questo l'autopsia si chiude. Su cinque indicatori di deterioramento
+  pre-dichiarati, applicati a tutti e tredici i candidati, il 12-3 top-5 ne fa
+  scattare **uno solo** — e quell'uno ne segnala **altri sei su dodici**. Sui
+  ranghi (che non dipendono da nessuna soglia) il candidato e' **settimo su
+  tredici** sulla pendenza e **dodicesimo su tredici** sul t-stat, cioe' quasi il
+  migliore. **Si puo' giudicare un candidato solo guardando la griglia da cui
+  viene, non il candidato**: il cancello sul margine del giro 79 non e' una difesa
+  fra tante, e' l'unica che avrebbe funzionato.
+- **Un errore mio, trovato testandolo** (giro 84). Al giro 77 avevo messo a
+  verbale, prima di conoscere l'holdout, che «le uniche due finestre decennali
+  negative sono le ultime due, il degrado punta verso l'holdout». Trasformata in
+  statistica, **la pendenza e' +0,40**: il profilo e' una **gobba** (+3,98 → +6,53
+  nel 1993 → −3,39) e una retta ci passa in salita. Avevo letto un trend nella coda
+  di una serie rumorosa — **lo stesso errore documentato quattro volte, in
+  immagine speculare**: il *minimo* di N celle preso per un presagio invece del
+  massimo preso per un risultato. Che l'holdout mi abbia poi dato ragione **non
+  rende l'osservazione corretta**: era giusta per caso. E' il motivo per cui i
+  dubbi si scrivono prima e poi si **testano**, invece di incassarli.
 - **IL TASSO DI CAMBIO FRA ALFA LORDO E MARGINE NETTO** (giro 83), che e' il
   numero piu' operativo del progetto. Quanti punti di alfa lordo servono per
   battere il benchmark di **un punto netto**, in funzione della rotazione:
