@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# cache dei download di mercato (rigenerabile: python3 market_data.py)
+data_cache/

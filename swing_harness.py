@@ -100,10 +100,17 @@ STRATS = {
 }
 
 # ---------------------------------------------------------------- valutazione
-def evaluate(df, pos):
+def evaluate(df, pos, rf=None, cgt=CGT):
+    """rf: rendimento giornaliero NETTO della liquidita' (opzionale, allineato a pos).
+    Senza rf i giorni fuori mercato rendono zero: penalizza le strategie che stanno
+    liquide, che nella realta' incassano il T-bill.
+    cgt: aliquota sul capital gain. Passare 0 per vedere il risultato ante-imposte e
+    capire se una strategia perde perche' non ha edge o perche' la tassa se lo mangia."""
     ret  = df.Close.pct_change().fillna(0)
     turn = pos.diff().abs().fillna(pos.abs())
     gross = pos*ret*LEVA - turn*COST_RT/2 - (LEVA-1)*FIN_ANN/252*pos
+    if rf is not None:
+        gross = gross + (1-pos).clip(lower=0)*rf.reindex(pos.index).fillna(0)
 
     # tassa: applicata al risultato di ogni trade chiuso in utile
     eq, entry_eq, taxes, trades = 1.0, None, 0.0, []
@@ -115,11 +122,11 @@ def evaluate(df, pos):
             pnl = eq/entry_eq - 1
             trades.append(pnl)
             if pnl > 0:
-                t_ = (eq-entry_eq)*CGT; taxes += t_; eq -= t_
+                t_ = (eq-entry_eq)*cgt; taxes += t_; eq -= t_
             entry_eq = None
         equity.append(eq)
     if entry_eq is not None and eq > entry_eq:
-        t_ = (eq-entry_eq)*CGT; taxes += t_; eq -= t_
+        t_ = (eq-entry_eq)*cgt; taxes += t_; eq -= t_
         equity[-1] = eq
 
     yrs = len(df)/252
@@ -141,12 +148,17 @@ def evaluate(df, pos):
         pf     = wins.sum()/abs(losses.sum()) if len(losses) and losses.sum()!=0 else np.inf,
         inmkt  = 100*(pos>0).mean(), taxes=taxes)
 
-def buyhold(df):
+def buyhold(df, cgt=CGT):
+    """Il buy&hold paga la tassa una volta sola alla fine: il differimento e' un
+    vantaggio strutturale, non una mia gentilezza verso il benchmark."""
     yrs = len(df)/252
+    ret = df.Close.pct_change().fillna(0)
     g = df.Close.iloc[-1]/df.Close.iloc[0]
-    net = 1 + (g-1)*(1-CGT)
+    net = 1 + (g-1)*(1-cgt)
     curve = df.Close/df.Close.iloc[0]
-    return dict(cagr=(net**(1/yrs)-1)*100, mdd=(curve/curve.cummax()-1).min()*100)
+    return dict(cagr=(net**(1/yrs)-1)*100, cagr_lordo=(g**(1/yrs)-1)*100,
+                mdd=(curve/curve.cummax()-1).min()*100,
+                sharpe=ret.mean()/ret.std()*np.sqrt(252) if ret.std()>0 else 0)
 
 # ---------------------------------------------------------------- main
 def main(path):
