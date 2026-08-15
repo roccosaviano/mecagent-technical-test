@@ -112,6 +112,41 @@ def sa_history(symbol, ttl_days=5):
     return out.dropna(subset=['Close'])
 
 
+# ------------------------------------------------------------------ oro e S&P mensile
+def gold_monthly():
+    """Prezzo dell'oro in dollari, mensile, dal 1833 (LBMA via datahub).
+
+    Serve per lo studio lungo: con il solo GLD (dal 2004) l'oro si giudica su un
+    ventennio che gli e' stato favorevole. Il tratto 1980-2000, in cui l'oro ha perso
+    due terzi del suo valore reale, e' la parte del campione che conta di piu'.
+    """
+    raw = _get('https://raw.githubusercontent.com/datasets/gold-prices/main/data/monthly.csv',
+               os.path.join(CACHE, 'gold_monthly.csv'), ttl_days=30)
+    df = pd.read_csv(io.BytesIO(raw))
+    s = pd.to_numeric(df.Price, errors='coerce')
+    s.index = pd.to_datetime(df.Date) + pd.offsets.MonthEnd(0)
+    return s.dropna().rename('GOLD')
+
+
+def shiller_monthly():
+    """S&P 500 mensile con dividendi (dataset Shiller via datahub): prezzo e cedola annua.
+
+    Ritorna DataFrame con PRICE e DIV (dividendo annualizzato dell'indice), da cui si
+    costruisce un indice total return mensile fino al 1871. Gli ultimi mesi hanno DIV
+    non ancora pubblicato: si riporta avanti l'ultimo yield noto.
+    """
+    raw = _get('https://raw.githubusercontent.com/datasets/s-and-p-500/main/data/data.csv',
+               os.path.join(CACHE, 'shiller_sp500.csv'), ttl_days=30)
+    df = pd.read_csv(io.BytesIO(raw))
+    out = pd.DataFrame(index=pd.to_datetime(df.Date) + pd.offsets.MonthEnd(0))
+    out['PRICE'] = pd.to_numeric(df.SP500, errors='coerce').to_numpy()
+    div = pd.to_numeric(df.Dividend, errors='coerce').to_numpy()
+    out['DIV'] = div
+    yld = out.DIV / out.PRICE
+    out['DIV'] = (yld.where(yld > 0).ffill() * out.PRICE)     # ricostruisce i mesi mancanti
+    return out.dropna(subset=['PRICE'])
+
+
 # ------------------------------------------------------------------ composizione indice
 def sp500_membership():
     """DataFrame date -> set di ticker membri in quella data (point-in-time, dal 1996)."""
