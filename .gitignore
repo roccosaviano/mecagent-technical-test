@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Output rigenerabile dello studio PAC
+out/pac_results.json
