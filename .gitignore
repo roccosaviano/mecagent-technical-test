@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# cache dei dati di mercato scaricati: si rigenerano con spxl/fetch_data.py
+spxl/data/*.csv
