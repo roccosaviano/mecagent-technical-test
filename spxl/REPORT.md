@@ -86,10 +86,20 @@ andrà allo Stato. Una strategia che ruota venti volte l'anno paga venti volte.
    strategia, basta la leva. Ogni candidata viene quindi anche riscalata perché
    la sua volatilità realizzata coincida con quella del benchmark, con fattore
    stimato **solo sul passato**.
+
+   Quanto pesa questa regola si vede togliendola: lo stesso walk-forward, con i
+   pesi grezzi, chiude a **+0.36 punti** sopra il benchmark — ma con un ribasso
+   massimo del 71.1% contro il 56.4%. È tutto qui il modo in cui un backtest
+   sembra vincere senza vincere.
 2. **Niente look-ahead.** Il segnale del giorno *t* usa solo dati chiusi al
    giorno *t*; la posizione parte il giorno dopo. Il ritardo è imposto dal
-   simulatore, non dalle strategie, così nessuna può dimenticarselo. Il
-   risultato è verificato anche con due e tre sedute di ritardo.
+   simulatore, non dalle strategie, così nessuna può dimenticarselo.
+
+   La prova del nove è ritardare ancora l'esecuzione: una strategia che vive di
+   look-ahead crolla appena le si toglie il giorno che stava rubando. Qui il
+   walk-forward completo, rifatto con uno, due e tre giorni di ritardo, dà un
+   divario dal benchmark di −1.81, −2.19 e −1.93 punti. Nessun gradino: perde in
+   modo stabile perché perde davvero, non per un artefatto.
 3. **Conteggio dei tentativi.** Provare centinaia di combinazioni garantisce di
    trovarne una bella anche nel rumore. Ogni tabella riporta quante ne sono
    state provate, e il deflated Sharpe ratio sconta quel numero.
@@ -283,6 +293,23 @@ rendimento passa sotto.
 
 Il vantaggio lordo del walk-forward veniva da lì. Non è un risultato, è la
 firma di chi ha cercato.
+
+### La conferma per un'altra strada
+
+C'è un modo di verificarlo che non passa dalle date di pubblicazione: rifare il
+walk-forward spostando in avanti l'inizio, così che il periodo *giudicato* cada
+sempre più fuori dai decenni in cui la stagionalità funzionava.
+
+| walk-forward avviato nel | periodo giudicato | strategia lorda | B&H lordo | divario |
+|---|---|---|---|---|
+| 1954 | 1964 – 2026 (62.6 anni) | **12.00%** | 10.69% | **+1.31** |
+| 1990 | 2000 – 2026 (26.6 anni) | 5.42% | 8.57% | −3.15 |
+| 1999 | 2009 – 2026 (17.6 anni) | 11.56% | 14.85% | −3.29 |
+
+L'unico che vince è quello il cui giudizio comincia nel 1964. I due il cui
+giudizio sta interamente dopo il 2000 perdono di tre punti l'anno, al lordo e
+al netto. Il metodo non ha imparato a battere il mercato: ha imparato a
+riconoscere un'anomalia che nel frattempo era sparita.
 
 ---
 

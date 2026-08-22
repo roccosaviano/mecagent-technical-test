@@ -1,0 +1,42 @@
+
+SENSITIVITA'   [1954+]   walk-forward ripetuto a ipotesi variabili
+  (ogni riga e' un walk-forward completo, con riselezione ogni 5 anni)
+
+ ALIQUOTA SULLE PLUSVALENZE  (dividendi fermi al 41%)
+  plusvalenze 0%                     strategia   8.40%  benchmark   9.49%  divario  -1.09   Sharpe 0.30 vs 0.36   MaxDD  -50.4 vs  -56.2
+  plusvalenze 10%                    strategia   8.10%  benchmark   9.28%  divario  -1.18   Sharpe 0.29 vs 0.36   MaxDD  -42.3 vs  -56.2
+  plusvalenze 20%                    strategia   7.88%  benchmark   9.05%  divario  -1.17   Sharpe 0.27 vs 0.35   MaxDD  -45.9 vs  -56.3
+  plusvalenze 26%                    strategia   7.43%  benchmark   8.90%  divario  -1.47   Sharpe 0.25 vs 0.35   MaxDD  -45.2 vs  -56.4
+  plusvalenze 33%                    strategia   6.67%  benchmark   8.70%  divario  -2.03   Sharpe 0.21 vs 0.35   MaxDD  -46.5 vs  -56.4
+  plusvalenze 41%                    strategia   6.55%  benchmark   8.46%  divario  -1.92   Sharpe 0.20 vs 0.35   MaxDD  -48.0 vs  -56.5
+  plusvalenze 50%                    strategia   5.69%  benchmark   8.16%  divario  -2.47   Sharpe 0.17 vs 0.34   MaxDD  -42.3 vs  -56.6
+
+ ALIQUOTA SUI DIVIDENDI  (plusvalenze ferme al 33%)
+  dividendi 0%                       strategia   7.77%  benchmark  10.10%  divario  -2.33   Sharpe 0.27 vs 0.43   MaxDD  -45.4 vs  -55.3
+  dividendi 15%                      strategia   7.61%  benchmark   9.59%  divario  -1.98   Sharpe 0.26 vs 0.40   MaxDD  -45.8 vs  -55.7
+  dividendi 26%                      strategia   7.32%  benchmark   9.22%  divario  -1.89   Sharpe 0.24 vs 0.38   MaxDD  -46.1 vs  -56.0
+  dividendi 33%                      strategia   7.10%  benchmark   8.98%  divario  -1.87   Sharpe 0.23 vs 0.36   MaxDD  -46.3 vs  -56.2
+  dividendi 41%                      strategia   6.67%  benchmark   8.70%  divario  -2.03   Sharpe 0.21 vs 0.35   MaxDD  -46.5 vs  -56.4
+  dividendi 52%                      strategia   6.28%  benchmark   8.33%  divario  -2.05   Sharpe 0.19 vs 0.33   MaxDD  -46.8 vs  -56.7
+
+ REGIMI REALI
+  NONE  (nessuna imposta)            strategia   9.69%  benchmark  10.69%  divario  -0.99   Sharpe 0.38 vs 0.43   MaxDD  -47.9 vs  -55.3
+  IT_26  (26%, minus da ETF non compensabili con) strategia   6.28%  benchmark   9.39%  divario  -3.11   Sharpe 0.19 vs 0.38   MaxDD  -45.8 vs  -56.0
+  IE_CGT  (CGT 33% su realizzo, minus compensabil) strategia   6.94%  benchmark   8.75%  divario  -1.81   Sharpe 0.23 vs 0.35   MaxDD  -46.4 vs  -56.4
+  IE_FUND  (exit tax 41%, perdite non compensabili) strategia   5.01%  benchmark   8.46%  divario  -3.45   Sharpe 0.12 vs 0.35   MaxDD  -46.2 vs  -56.5
+  US_ST  (37% + 3.8% NIIT su plus a breve termin) strategia   6.71%  benchmark   9.08%  divario  -2.37   Sharpe 0.21 vs 0.38   MaxDD  -47.5 vs  -56.0
+
+ RITARDO DI ESECUZIONE  (prova del nove sul look-ahead)
+  esegui dopo 1 sedute               strategia   6.94%  benchmark   8.75%  divario  -1.81   Sharpe 0.23 vs 0.35   MaxDD  -46.4 vs  -56.4
+  esegui dopo 2 sedute               strategia   6.56%  benchmark   8.75%  divario  -2.19   Sharpe 0.20 vs 0.35   MaxDD  -53.0 vs  -56.4
+  esegui dopo 3 sedute               strategia   6.81%  benchmark   8.74%  divario  -1.93   Sharpe 0.22 vs 0.35   MaxDD  -51.6 vs  -56.4
+
+ SENZA APPAIAMENTO DEL RISCHIO
+  pesi grezzi, rischio non appaiato  strategia   9.11%  benchmark   8.75%  divario  +0.36   Sharpe 0.30 vs 0.35   MaxDD  -71.1 vs  -56.4
+
+ SELEZIONE SUL PICCO INVECE CHE SULL'ALTOPIANO
+  sceglie il massimo in-sample       strategia   6.57%  benchmark   8.75%  divario  -2.19   Sharpe 0.21 vs 0.35   MaxDD  -51.4 vs  -56.4
+
+(2010.1s)
+
+[exited with code 0]
