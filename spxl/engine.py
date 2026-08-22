@@ -609,25 +609,44 @@ def metrics(res, cash_rate=None, bench_equity=None):
 
 
 # ---------------------------------------------------------------- statistica
-def deflated_sharpe(sr, n_obs, n_trials, skew=0.0, kurt=3.0):
+def deflated_sharpe(sr_ann, n_obs, n_trials, sd_trials_ann, skew=0.0, kurt=3.0):
     """
-    Deflated Sharpe Ratio (Bailey & Lopez de Prado 2014).
+    Deflated Sharpe Ratio (Bailey e Lopez de Prado, 2014).
 
-    Se provi 500 strategie, la migliore avra' uno Sharpe alto anche su dati
-    puramente casuali. Questa funzione stima quale Sharpe ti aspetteresti dal
-    solo caso dato il numero di tentativi, e chiede quanto la tua candidata lo
+    Se si provano N strategie, la migliore avra' uno Sharpe alto anche su dati
+    puramente casuali: e' il massimo di N estrazioni, non una scoperta. Il dSR
+    stima quale Sharpe ci si aspetterebbe dal solo caso, date N prove e data la
+    DISPERSIONE degli Sharpe fra quelle prove, e chiede quanto la candidata lo
     superi. Sotto 0.95 il risultato non e' distinguibile dalla fortuna.
+
+    Due dettagli che e' facile sbagliare e che cambiano completamente il numero:
+
+      1. La soglia attesa dal caso e' proporzionale alla deviazione standard
+         degli Sharpe fra i tentativi. Senza quel fattore la soglia risulta
+         enorme e ogni strategia sembra rumore.
+      2. Sharpe e numero di osservazioni devono stare nella stessa periodicita'.
+         Qui si passa lo Sharpe ANNUALIZZATO e il numero di GIORNI, quindi si
+         converte in giornaliero prima del confronto.
+
+    skew e kurt sono quelli dei rendimenti della strategia: code spesse e
+    asimmetria negativa rendono lo Sharpe stimato meno affidabile, e la formula
+    ne tiene conto allargando l'intervallo.
     """
-    from math import log, sqrt, erf, exp, pi
-    if n_trials < 2 or n_obs < 10:
+    from math import sqrt, erf, exp
+    if n_trials < 2 or n_obs < 30 or not np.isfinite(sd_trials_ann) or sd_trials_ann <= 0:
         return np.nan
-    eg = 0.5772156649
-    # Sharpe atteso del massimo di n_trials estrazioni indipendenti a media zero
+    eg = 0.5772156649                       # costante di Eulero-Mascheroni
+    sr = sr_ann / np.sqrt(TRADING_DAYS)     # Sharpe per giorno
+    sd = sd_trials_ann / np.sqrt(TRADING_DAYS)
+
     z1 = _norm_ppf(1 - 1.0 / n_trials)
     z2 = _norm_ppf(1 - 1.0 / (n_trials * exp(1)))
-    sr0 = (1 - eg) * z1 + eg * z2
-    denom = sqrt(max(1e-12, 1 - skew * sr + (kurt - 1) / 4.0 * sr ** 2))
-    stat = (sr - sr0) * sqrt(n_obs - 1) / denom
+    sr0 = sd * ((1 - eg) * z1 + eg * z2)    # Sharpe atteso del migliore di N
+
+    var = 1 - skew * sr + (kurt - 1) / 4.0 * sr ** 2
+    if var <= 0:
+        return np.nan
+    stat = (sr - sr0) * sqrt(n_obs - 1) / sqrt(var)
     return 0.5 * (1 + erf(stat / sqrt(2)))
 
 
@@ -675,3 +694,55 @@ def block_bootstrap_pvalue(r_strat, r_bench, block=63, n_iter=2000, seed=0):
     idx = starts[:, :, None] + np.arange(block)[None, None, :]
     sims = dc[idx].reshape(n_iter, -1).mean(axis=1)
     return float((sims >= obs).mean())
+
+
+# ==========================================================================
+# 7. PERCORSO VELOCE PER LA SELEZIONE
+# ==========================================================================
+def quick_stats(W, R, C, cash_rate, exec_lag=1, min_trade=0.002):
+    """
+    Statistiche al LORDO delle imposte, calcolate in forma vettoriale.
+
+    Il simulatore completo tiene la contabilita' fiscale giorno per giorno, e
+    per farlo deve scorrere il calendario in Python. Va benissimo per misurare
+    una candidata, ma nel walk-forward la stessa configurazione viene rivalutata
+    migliaia di volte solo per ORDINARLA rispetto alle altre, e li' il costo
+    diventa proibitivo.
+
+    Qui si separano i due mestieri: questa funzione ordina, il simulatore
+    misura. La separazione non e' solo di comodo, e' anche corretta come
+    criterio: si sceglie sul rapporto rendimento/rischio al lordo, cioe' sulla
+    qualita' del SEGNALE, e poi si misura quanto ne sopravvive al fisco. Se si
+    selezionasse direttamente sul netto, il freno fiscale diventerebbe un
+    ingrediente della scelta e non piu' un risultato da riportare.
+
+    Restituisce Sharpe, CAGR lordo, ribasso massimo e rotazione annua.
+    """
+    n = W.shape[0]
+    if exec_lag > 0:
+        P = np.vstack([np.zeros((exec_lag, W.shape[1])), W[:-exec_lag]])
+    else:
+        P = W
+    P = np.nan_to_num(P)
+
+    scambi = np.abs(np.diff(P, axis=0, prepend=np.zeros((1, W.shape[1]))))
+    # ribilanciamenti sotto soglia non si eseguono: senza questo filtro la
+    # rotazione stimata sarebbe molto piu' alta di quella che si pagherebbe
+    piccoli = scambi.sum(axis=1) <= min_trade
+    scambi[piccoli] = 0.0
+
+    liquido = 1.0 - P.sum(axis=1)
+    lordo = (P * np.nan_to_num(R)).sum(axis=1) + liquido * cash_rate / TRADING_DAYS
+    netto = lordo - scambi @ C
+
+    sd = netto.std()
+    ex = netto - cash_rate / TRADING_DAYS
+    sharpe = ex.mean() / sd * np.sqrt(TRADING_DAYS) if sd > 0 else 0.0
+
+    curva = np.cumprod(1.0 + netto)
+    anni = n / TRADING_DAYS
+    cagr = curva[-1] ** (1 / anni) - 1 if curva[-1] > 0 else -1.0
+    mdd = float((curva / np.maximum.accumulate(curva) - 1).min())
+    return dict(sharpe=float(sharpe), cagr=float(cagr) * 100, mdd=mdd * 100,
+                turn_yr=float(scambi.sum()) / anni,
+                expo=float(P.sum(axis=1).mean()) * 100)

@@ -410,3 +410,142 @@ def buy_hold_spxl(ctx, cols):
     mostra quanto costa la leva quando non la si gestisce.
     """
     return _weights(ctx, cols, {"SPXL": np.ones(ctx.n)})
+
+
+# ==========================================================================
+# OVERLAY DI RISCHIO
+# ==========================================================================
+def vol_overlay(W, R, target=0.19, lookback=60, cap=1.0, floor=0.0, step=0.10):
+    """
+    Riscala i pesi di una strategia perche' il portafoglio punti a una
+    volatilita' prefissata.
+
+    Serve a rendere CONFRONTABILI cose che altrimenti non lo sono. Una
+    strategia che rende il 9.7% l'anno con un ribasso massimo del 94% non sta
+    battendo un buy&hold che rende l'8.1% con un ribasso dell'85%: sta solo
+    prendendo piu' rischio, e chiunque puo' farlo prendendo a prestito. La
+    domanda sensata e': a PARITA' di rischio, chi rende di piu'?
+
+    Il calcolo e' causale. Al giorno t si conoscono i pesi decisi al giorno t e
+    i rendimenti fino al giorno t: la volatilita' attesa e' quella che il
+    portafoglio di oggi AVREBBE avuto sugli ultimi lookback giorni. Nessun dato
+    futuro entra nel fattore di scala.
+
+    W  (giorni x strumenti) pesi obiettivo
+    R  (giorni x strumenti) rendimenti giornalieri degli stessi strumenti
+    """
+    T, n = W.shape
+    out = np.zeros_like(W)
+    Rm = np.nan_to_num(R)
+    for t in range(T):
+        if t < lookback:
+            continue
+        w = W[t]
+        if not np.any(w):
+            continue
+        # rendimento che il portafoglio di oggi avrebbe avuto nella finestra
+        storia = Rm[t - lookback + 1:t + 1] @ w
+        sd = storia.std() * np.sqrt(TRADING_DAYS)
+        if sd <= 1e-8:
+            continue
+        k = np.clip(target / sd, floor, cap / max(w.sum(), 1e-9))
+        if step:
+            k = round(k / step) * step
+        out[t] = w * k
+    return out
+
+
+def match_risk_overlay(W, R, bench_r, min_giorni=504, step=0.05, cap_peso=1.0,
+                       max_k=4.0):
+    """
+    Riscala i pesi perche' la volatilita' REALIZZATA della strategia coincida con
+    quella del benchmark, usando solo il passato.
+
+    Perche' serve un secondo overlay oltre a vol_overlay: quello punta alla
+    volatilita' mentre si e' investiti, ma una strategia che sta in liquidita'
+    meta' del tempo finisce comunque sotto la volatilita' del benchmark sul
+    periodo intero. Confrontarne il rendimento col buy&hold la penalizza per un
+    rischio che non ha preso. Qui il fattore di scala al giorno t e' il rapporto
+    fra la volatilita' del benchmark e quella della strategia MISURATE ENTRAMBE
+    dai dati fino a t: nessuna informazione futura, e il rapporto si stabilizza
+    dopo pochi anni.
+
+    Nei primi min_giorni la stima non e' affidabile e si resta a scala 1.
+    """
+    T = W.shape[0]
+    Rm = np.nan_to_num(R)
+    p = np.einsum("ij,ij->i", W, Rm)            # rendimento della strategia non scalata
+    b = np.nan_to_num(np.asarray(bench_r, float))
+
+    # somme cumulate per ricavare la deviazione standard espansiva in un colpo solo
+    def _std_espansiva(x):
+        n = np.arange(1, T + 1)
+        s1 = np.cumsum(x)
+        s2 = np.cumsum(x * x)
+        var = s2 / n - (s1 / n) ** 2
+        return np.sqrt(np.maximum(var, 0.0))
+
+    sp, sb = _std_espansiva(p), _std_espansiva(b)
+    k = np.ones(T)
+    valido = (sp > 1e-9) & (np.arange(T) >= min_giorni)
+    k[valido] = np.clip(sb[valido] / sp[valido], 0.0, max_k)
+    if step:
+        k = np.round(k / step) * step
+    # il fattore del giorno t va applicato ai pesi del giorno t, ma stimato con i
+    # dati fino a t-1: lo shift di un giorno chiude anche questa fessura
+    k = np.concatenate([[1.0], k[:-1]])
+
+    out = W * k[:, None]
+    somma = out.sum(axis=1, keepdims=True)
+    troppo = somma[:, 0] > cap_peso
+    out[troppo] = out[troppo] / somma[troppo] * cap_peso
+    return out
+
+
+# ==========================================================================
+# F. STRUTTURE FISCALMENTE EFFICIENTI
+# ==========================================================================
+def core_satellite(ctx, cols, core=0.6, sat=0.4, base_fn=None, base_kw=None,
+                   core_asset="SPY"):
+    """
+    Un nucleo comprato una volta e mai piu' toccato, piu' un satellite tattico.
+
+    Nasce da un fatto contabile, non da un'intuizione di mercato. L'imposta si
+    paga sul REALIZZATO: la parte di portafoglio che non viene mai venduta
+    capitalizza per decenni anche sulla quota che un giorno andra' allo Stato,
+    mentre la parte che ruota la anticipa a ogni uscita. Se un segnale ha un
+    vantaggio ma ruota venti volte l'anno, applicarlo a tutto il patrimonio
+    significa pagare venti volte per un vantaggio che valeva una volta.
+
+    Applicarlo solo al satellite conserva la parte di vantaggio proporzionale
+    alla quota tattica e lascia il resto in differimento. Non e' un trucco: e'
+    la ragione per cui il buy&hold e' cosi' difficile da battere in un conto
+    tassabile, usata a proprio favore invece che subita.
+
+    core   quota permanente nell'indice non a leva
+    sat    quota massima gestita dal segnale, investita in SPXL
+    """
+    W = _weights(ctx, cols, {core_asset: np.full(ctx.n, core)})
+    if base_fn is not None:
+        W = W + base_fn(ctx, cols, **(base_kw or {})) * sat
+    return W
+
+
+def ladder(ctx, cols, base_fn=None, base_kw=None, gradini=4, w=1.0):
+    """
+    Trasforma un segnale acceso/spento in una scala a piu' gradini, mediando il
+    segnale sulle ultime gradini*5 sedute.
+
+    Anche questo e' fiscale prima che tecnico: uscire per intero realizza tutta
+    la plusvalenza in un colpo, uscire a quarti ne realizza un quarto per volta
+    e lascia il resto a capitalizzare. In piu' smussa i falsi segnali, che sono
+    la voce di costo principale di ogni filtro di trend.
+    """
+    sub = base_fn(ctx, cols, **(base_kw or {}))
+    sig = sub.sum(axis=1)
+    liscio = pd.Series(sig).rolling(gradini * 5, min_periods=1).mean().values
+    liscio = np.round(liscio * gradini) / gradini * w
+    fuori = np.zeros_like(sub)
+    j = cols.index("SPXL") if "SPXL" in cols else 0
+    fuori[:, j] = liscio
+    return fuori
