@@ -79,12 +79,22 @@ class World:
         return np.nonzero(m)[0]
 
 
-def build_world(verbose=True, letf_source="spliced"):
+def build_world(verbose=True, letf_source="spliced", penalita_letf=0.0):
     """
     letf_source
-      'spliced'  reale dal 2008-11, sintetico prima (predefinito)
-      'synth'    sempre sintetico, per isolare l'effetto della replica
+      'spliced'  reale dal primo giorno di quotazione, modello prima
+      'synth'    sempre modello, per isolare l'effetto della replica
       'real'     solo il periodo in cui il fondo esiste davvero
+
+    penalita_letf
+      punti percentuali ANNUI sottratti ai rendimenti dei fondi a leva.
+
+      Serve a rispondere all'obiezione piu' seria che si possa fare a questo
+      lavoro: novanta anni su cento la serie di SPXL non e' un dato, e' un
+      modello, e il modello sbaglia. La verifica fuori campione dice di quanto
+      puo' sbagliare. Se il vantaggio di una strategia sparisce applicando una
+      penalita' pari a quell'errore, allora il vantaggio non e' un fatto di
+      mercato: e' un artefatto del modello, e va detto.
     """
     raw = load_raw()
     for k in ("gspc",):
@@ -183,6 +193,11 @@ def build_world(verbose=True, letf_source="spliced"):
         first = rs.first_valid_index()
         r_spy = r_spy.where(dates < first, rs.fillna(r_spy))
         d_spy = d_spy.where(dates < first, ds.fillna(d_spy))
+
+    if penalita_letf:
+        giorno = penalita_letf / TRADING_DAYS
+        r_spxl = r_spxl - giorno
+        r_spxs = r_spxs - giorno
 
     instruments = [
         Instrument("SPXL", r_spxl.values, d_spxl.values),

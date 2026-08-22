@@ -415,7 +415,7 @@ class Instrument:
 
 
 def simulate(dates, instruments, weights, regime: TaxRegime, cash_rate=None,
-             exec_lag=1, capital=100_000.0, min_trade=0.002):
+             exec_lag=1, capital=100_000.0, min_trade=0.002, rebal_days=None):
     """
     Esegue la strategia giorno per giorno. Restituisce il patrimonio NETTO di
     costi di transazione, costo della leva (gia' dentro i rendimenti LETF) e
@@ -429,6 +429,12 @@ def simulate(dates, instruments, weights, regime: TaxRegime, cash_rate=None,
     min_trade ribilanciamenti sotto questa soglia (in frazione del patrimonio)
               vengono ignorati. Serve a non pagare costi per aggiustamenti da
               mezzo punto base che nella realta' nessuno esegue.
+    rebal_days maschera booleana dei giorni in cui e' permesso negoziare. Serve
+              a distinguere la frequenza di RIBILANCIAMENTO dalla frequenza del
+              SEGNALE: con pesi obiettivo costanti il portafoglio deriva ogni
+              giorno, e riportarlo all'obiettivo tutti i giorni o una volta
+              l'anno da' risultati diversi sia di rendimento sia di imposte.
+              None significa: ogni volta che la deriva supera min_trade.
 
     Contabilita' fiscale: costo medio ponderato per strumento. Su strategie che
     entrano ed escono per intero coincide con FIFO e LIFO; la differenza
@@ -475,7 +481,12 @@ def simulate(dates, instruments, weights, regime: TaxRegime, cash_rate=None,
         # ---- 2. ribilanciamento verso i pesi obiettivo
         target = W[t] * nav
         delta = target - pos
-        if np.abs(delta).sum() / max(nav, 1e-12) > min_trade:
+        permesso = True if rebal_days is None else bool(rebal_days[t])
+        # un cambio di segnale si esegue comunque: la maschera limita il
+        # ribilanciamento verso un obiettivo fermo, non l'obbedienza al segnale
+        if t > 0 and np.abs(W[t] - W[t - 1]).sum() > 1e-9:
+            permesso = True
+        if permesso and np.abs(delta).sum() / max(nav, 1e-12) > min_trade:
             for i in np.nonzero(delta < 0)[0]:
                 if pos[i] <= 1e-12:
                     continue
