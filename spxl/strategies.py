@@ -371,31 +371,6 @@ def trend_defensive(ctx, cols, n=200, w_lev=1.0, w_base=1.0):
 # ==========================================================================
 # E. COMBINAZIONI
 # ==========================================================================
-def ensemble(ctx, cols, parts, w=1.0, step=0.25, monthly=False):
-    """
-    Media di piu' segnali binari: l'esposizione diventa graduale invece che
-    tutto-o-niente.
-
-    Il motivo non e' estetico. Un segnale singolo sbaglia in blocco; tre
-    segnali scorrelati sbagliano a turno, e la media riduce la varianza delle
-    decisioni senza ridurne il valore atteso. La quantizzazione a step evita
-    che ogni minimo disaccordo generi un'operazione.
-
-    parts  lista di (funzione, kwargs) che restituiscono pesi su SPXL
-    """
-    acc = np.zeros(ctx.n)
-    for fn, kw in parts:
-        W = fn(ctx, ["SPXL"], **kw)
-        acc += W[:, 0]
-    acc /= max(1, len(parts))
-    if step:
-        acc = np.round(acc / step) * step
-    acc = np.clip(acc, 0, 1) * w
-    if monthly:
-        acc = _monthly(acc, ctx.month_end)
-    return _weights(ctx, cols, {"SPXL": acc})
-
-
 # ==========================================================================
 # RIFERIMENTI
 # ==========================================================================
@@ -549,3 +524,60 @@ def ladder(ctx, cols, base_fn=None, base_kw=None, gradini=4, w=1.0):
     j = cols.index("SPXL") if "SPXL" in cols else 0
     fuori[:, j] = liscio
     return fuori
+
+
+# ==========================================================================
+# G. FAMIGLIE A BASSISSIMA ROTAZIONE
+# ==========================================================================
+def stagionale(ctx, cols, dentro=(11, 12, 1, 2, 3, 4), w_dentro=1.0, w_fuori=0.0,
+               trend=None):
+    """
+    Effetto Halloween: esposizione piena da novembre ad aprile, ridotta da maggio
+    a ottobre.
+
+    E' l'anomalia con la documentazione piu' lunga e piu' contestata in
+    letteratura, e viene testata qui per un motivo che non ha a che fare con la
+    sua credibilita': fa DUE operazioni l'anno. Tutta l'analisi fiscale di questo
+    lavoro dice che il vincolo vero e' il numero di realizzi, quindi una regola
+    con rotazione quasi nulla parte con un vantaggio strutturale di parecchi
+    punti rispetto a qualunque segnale giornaliero, e merita di essere misurata
+    anche se l'idea sottostante e' debole.
+
+    trend  se indicato, la finestra favorevole vale solo sopra la media mobile a
+           quel numero di giorni: serve a non tenere la leva accesa dentro un
+           mercato orso solo perche' e' gennaio.
+    """
+    mese = pd.Series(ctx.dates.month, index=ctx.dates)
+    sig = np.where(mese.isin(dentro).values, w_dentro, w_fuori)
+    if trend:
+        sopra = (ctx.px > ctx.sma(trend)).fillna(False).values
+        sig = sig * sopra
+    return _weights(ctx, cols, {"SPXL": sig})
+
+
+def ensemble(ctx, cols, parts, w=1.0, step=0.25, monthly=False):
+    """
+    Media di piu' segnali: l'esposizione diventa graduale invece che
+    tutto-o-niente.
+
+    Il motivo non e' estetico. Un segnale singolo sbaglia in blocco; segnali
+    poco correlati sbagliano a turno, e la media riduce la varianza delle
+    decisioni senza ridurne il valore atteso. In piu' - e qui conta - una media
+    che si muove a gradini realizza a fette invece che tutto in una volta, e
+    quindi paga l'imposta a fette.
+
+    La quantizzazione a step evita che un disaccordo minimo fra i componenti
+    generi un'operazione.
+
+    parts  lista di (funzione, kwargs) che restituiscono pesi su SPXL
+    """
+    acc = np.zeros(ctx.n)
+    for fn, kw in parts:
+        acc += fn(ctx, ["SPXL"], **kw)[:, 0]
+    acc /= max(1, len(parts))
+    if step:
+        acc = np.round(acc / step) * step
+    acc = np.clip(acc, 0.0, 1.0) * w
+    if monthly:
+        acc = _monthly(acc, ctx.month_end)
+    return _weights(ctx, cols, {"SPXL": acc})

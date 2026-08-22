@@ -1,0 +1,29 @@
+
+Calendario  1928-01-03 -> 2026-08-21   24776 sedute, 98.3 anni
+Tasso a breve  da 1.00% a 3.71%, media 3.36%
+Dividend yield indice  media 3.59%, oggi 1.58%
+
+--- SPXL --------------------------------------------------------
+  modello        LETFModel(SPXL L=+3 alpha=+1.51%/anno beta=-2.17 [stimato])
+  base indice    prezzo   stima su 2513 sedute (2016-08-23 -> 2026-08-21)
+  beta stimato   -2.17   teorico -2.00
+  alpha          +1.51% annuo (expense ratio + spread sugli swap)
+  dentro campione  2016-08-23 -> 2026-08-21  corr 0.9985  tracking error 3.06%  scarto -0.00%/anno  CAGR +27.2% vs +27.8% reale
+  FUORI campione   2021-08-19 -> 2026-08-21  corr 0.9987  tracking error 2.60%  scarto +2.59%/anno  CAGR +23.2% vs +20.3% reale
+  AVVISO         storico reale senza dividendi: uso il modello su tutto il periodo
+
+--- SPXS --------------------------------------------------------
+  modello        LETFModel(SPXS L=-3 alpha=-0.67%/anno beta=+2.30 [stimato])
+  base indice    prezzo   stima su 1576 sedute (2020-05-08 -> 2026-08-21)
+  beta stimato   +2.30   teorico +4.00
+  alpha          -0.67% annuo (expense ratio + spread sugli swap)
+  dentro campione  2020-05-08 -> 2026-08-21  corr 0.9963  tracking error 4.37%  scarto +0.00%/anno  CAGR -44.7% vs -44.6% reale
+  FUORI campione   2023-07-03 -> 2026-08-21  corr 0.9968  tracking error 3.57%  scarto -3.41%/anno  CAGR -44.5% vs -42.5% reale
+  AVVISO         storico reale senza dividendi: uso il modello su tutto il periodo
+
+Strumenti negoziabili:
+   SPXL  vol  56.7%   costo andata 0.05%   distribuzioni 0.00%/anno
+   SPXS  vol  56.7%   costo andata 0.08%   distribuzioni 0.00%/anno
+   SPY   vol  18.9%   costo andata 0.02%   distribuzioni 3.59%/anno
+
+(0.3s)

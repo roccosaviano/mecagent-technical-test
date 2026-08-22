@@ -1,0 +1,837 @@
+<title>SPXL contro buy &amp; hold</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+
+<style>
+:root {
+  color-scheme: light;
+  --ground:      #EDF0F1;
+  --surface:     #FFFFFF;
+  --surface-2:   #F5F7F8;
+  --line:        #D3DADE;
+  --line-soft:   #E4E9EB;
+  --ink:         #131B21;
+  --ink-2:       #3D4C56;
+  --muted:       #64757F;
+  --s1:          #00897B;
+  --s2:          #C2571F;
+  --s3:          #3F51B5;
+  --neg:         #A32118;
+  --s1-wash:     #00897B1A;
+  --s2-wash:     #C2571F14;
+  --band:        #64757F1F;
+
+  --f-display: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --f-body:    "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 34rem;
+  --wide:    56rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ground:    #10161A;
+    --surface:   #182027;
+    --surface-2: #1E272E;
+    --line:      #2E3B44;
+    --line-soft: #232E35;
+    --ink:       #E6EDF1;
+    --ink-2:     #B6C4CC;
+    --muted:     #8B9CA6;
+    --s1:        #12A08F;
+    --s2:        #DB6A2A;
+    --s3:        #6C7FE0;
+    --neg:       #E0645A;
+    --s1-wash:   #12A08F26;
+    --s2-wash:   #DB6A2A1A;
+    --band:      #8B9CA629;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground:    #10161A;
+  --surface:   #182027;
+  --surface-2: #1E272E;
+  --line:      #2E3B44;
+  --line-soft: #232E35;
+  --ink:       #E6EDF1;
+  --ink-2:     #B6C4CC;
+  --muted:     #8B9CA6;
+  --s1:        #12A08F;
+  --s2:        #DB6A2A;
+  --s3:        #6C7FE0;
+  --neg:       #E0645A;
+  --s1-wash:   #12A08F26;
+  --s2-wash:   #DB6A2A1A;
+  --band:      #8B9CA629;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: 0 1.5rem 6rem;
+}
+
+/* ---------------------------------------------------- testata */
+.top {
+  border-bottom: 1px solid var(--line);
+  padding: 4.5rem 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.eyebrow {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+}
+h1 {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 5.5vw, 3.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin: 0;
+  max-width: 18ch;
+}
+.domanda {
+  max-width: var(--measure);
+  font-size: 1.06rem;
+  color: var(--ink-2);
+  margin: 0;
+}
+.verdetto {
+  display: flex;
+  gap: 0.9rem;
+  align-items: baseline;
+  padding: 1.15rem 1.35rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--s2);
+  max-width: var(--measure);
+}
+.verdetto b {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--s2);
+  white-space: nowrap;
+}
+.verdetto p { margin: 0; font-size: 0.97rem; color: var(--ink-2); }
+
+/* ---------------------------------------------------- tessere */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin: 2.5rem 0 0;
+}
+.tile { background: var(--surface); padding: 1.25rem 1.3rem; }
+.tile .k {
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.tile .v {
+  font-family: var(--f-display);
+  font-size: 2.05rem;
+  line-height: 1;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  display: block;
+}
+.tile .v.neg { color: var(--s2); }
+.tile .v.pos { color: var(--s1); }
+.tile .d { font-size: 0.86rem; color: var(--muted); margin: 0.55rem 0 0; }
+
+/* ---------------------------------------------------- sezioni */
+section { padding-top: 3.5rem; }
+h2 {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+  margin: 0 0 1rem;
+  max-width: 26ch;
+}
+h3 {
+  font-family: var(--f-body);
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin: 2.25rem 0 0.65rem;
+  max-width: var(--measure);
+}
+p { max-width: var(--measure); margin: 0 0 1rem; }
+p.lede { font-size: 1.03rem; color: var(--ink-2); }
+strong { font-weight: 600; }
+em { font-style: italic; color: var(--ink-2); }
+ul { max-width: var(--measure); padding-left: 1.1rem; margin: 0 0 1rem; }
+li { margin-bottom: 0.5rem; }
+
+.rule {
+  height: 1px;
+  background: var(--line);
+  border: 0;
+  margin: 0;
+}
+
+/* ---------------------------------------------------- protocollo, sequenza vera */
+.steps { display: flex; flex-direction: column; gap: 1px; background: var(--line);
+         border: 1px solid var(--line); margin: 1.5rem 0 0; }
+.step { background: var(--surface); padding: 1.15rem 1.35rem;
+        display: grid; grid-template-columns: 2.2rem 1fr; gap: 0 1rem; align-items: start; }
+.step .n { font-family: var(--f-mono); font-size: 0.9rem; font-weight: 600;
+           color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 0.1rem; }
+.step h4 { margin: 0 0 0.3rem; font-size: 0.98rem; font-weight: 600; }
+.step p { margin: 0; font-size: 0.92rem; color: var(--ink-2); max-width: 58ch; }
+.step .esito { grid-column: 2; margin-top: 0.7rem; font-family: var(--f-mono);
+               font-size: 0.78rem; letter-spacing: 0.02em; display: inline-flex;
+               align-items: center; gap: 0.5rem; }
+.pill { display: inline-block; padding: 0.16rem 0.5rem; font-family: var(--f-mono);
+        font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase;
+        border: 1px solid currentColor; }
+.pill.no { color: var(--s2); }
+.pill.si { color: var(--s1); }
+.pill.forse { color: var(--muted); }
+
+/* ---------------------------------------------------- tabelle */
+.tbl-wrap { overflow-x: auto; margin: 1.25rem 0 0.5rem; border: 1px solid var(--line);
+            background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 0.88rem; min-width: 30rem; }
+caption { caption-side: top; text-align: left; font-family: var(--f-mono);
+          font-size: 0.7rem; letter-spacing: 0.11em; text-transform: uppercase;
+          color: var(--muted); padding: 0.9rem 1rem 0.55rem; }
+th, td { padding: 0.5rem 1rem; text-align: right; border-bottom: 1px solid var(--line-soft); }
+th:first-child, td:first-child { text-align: left; }
+thead th { font-family: var(--f-mono); font-size: 0.7rem; letter-spacing: 0.06em;
+           text-transform: uppercase; color: var(--muted); font-weight: 500;
+           border-bottom: 1px solid var(--line); white-space: nowrap; }
+tbody td { font-variant-numeric: tabular-nums; font-family: var(--f-mono); font-size: 0.84rem; }
+tbody td:first-child { font-family: var(--f-body); font-size: 0.88rem; }
+tbody tr:last-child td { border-bottom: 0; }
+tr.bench td { background: var(--s1-wash); }
+tr.bench td:first-child { font-weight: 600; }
+td.win { color: var(--s1); font-weight: 500; }
+td.lose { color: var(--s2); }
+.nota { font-size: 0.83rem; color: var(--muted); max-width: var(--measure);
+        margin: 0.6rem 0 0; }
+
+/* ---------------------------------------------------- figure */
+figure { margin: 1.75rem 0 0; padding: 1.35rem 1.35rem 1.1rem;
+         background: var(--surface); border: 1px solid var(--line); }
+figcaption { font-family: var(--f-mono); font-size: 0.7rem; letter-spacing: 0.11em;
+             text-transform: uppercase; color: var(--muted); margin-bottom: 0.2rem; }
+.fig-title { font-family: var(--f-body); font-size: 0.98rem; font-weight: 600;
+             margin: 0 0 1rem; max-width: 48ch; }
+.legend { display: flex; flex-wrap: wrap; gap: 0.35rem 1.15rem; margin: 0.9rem 0 0;
+          font-size: 0.82rem; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: 0.42rem; }
+.swatch { width: 0.72rem; height: 0.72rem; flex: none; border-radius: 2px; }
+.chart { width: 100%; display: block; overflow: visible; }
+.chart text { font-family: var(--f-mono); font-size: 10px; fill: var(--muted); }
+.chart .axlabel { font-size: 10px; fill: var(--muted); }
+.grid line { stroke: var(--line-soft); stroke-width: 1; }
+.zero { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; }
+.hit { fill: transparent; cursor: crosshair; }
+
+.tip { position: fixed; z-index: 20; pointer-events: none; opacity: 0;
+       transition: opacity .1s; background: var(--surface); color: var(--ink);
+       border: 1px solid var(--line); padding: 0.5rem 0.7rem; font-size: 0.8rem;
+       font-family: var(--f-mono); box-shadow: 0 4px 14px rgba(0,0,0,.14);
+       white-space: nowrap; }
+.tip b { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+.tip i { font-style: normal; display: block; }
+
+/* ---------------------------------------------------- chiusura */
+.chiusura { margin-top: 3.5rem; padding: 1.6rem 1.6rem 1.3rem; background: var(--surface);
+            border: 1px solid var(--line); border-top: 3px solid var(--s1); }
+.chiusura h2 { margin-top: 0; }
+.foot { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--line);
+        font-size: 0.82rem; color: var(--muted); max-width: var(--measure); }
+.foot code { font-family: var(--f-mono); font-size: 0.78rem; background: var(--surface-2);
+             padding: 0.08rem 0.32rem; border: 1px solid var(--line-soft); }
+
+a { color: var(--s3); }
+:focus-visible { outline: 2px solid var(--s3); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (max-width: 640px) {
+  .step { grid-template-columns: 1fr; }
+  .step .n { padding-top: 0; }
+  .step .esito { grid-column: 1; }
+}
+</style>
+
+<div class="wrap">
+
+  <header class="top">
+    <div class="eyebrow">
+      <span>Ricerca quantitativa</span>
+      <span>S&amp;P 500 · 1928 – 2026</span>
+      <span>24.776 sedute</span>
+      <span>196 configurazioni</span>
+    </div>
+    <h1>Battere il buy &amp; hold con SPXL</h1>
+    <p class="domanda">Esiste una strategia sull&rsquo;ETF a leva 3x sull&rsquo;S&amp;P 500 &mdash; lunga,
+      corta o entrambe &mdash; che batta il semplice comprare e tenere l&rsquo;indice, al netto di
+      costi reali e imposte?</p>
+    <div class="verdetto">
+      <b>Verdetto</b>
+      <p>No, non in modo che regga a una verifica onesta. Una struttura ci arriva vicino,
+        ma il suo vantaggio &egrave; pi&ugrave; piccolo dell&rsquo;incertezza con cui viene misurato.</p>
+    </div>
+  </header>
+
+  <div class="tiles">
+    <div class="tile">
+      <span class="k">Pedaggio della leva</span>
+      <span class="v neg">&minus;3,8</span>
+      <p class="d">punti l&rsquo;anno per avere esposizione 1x tramite SPXL invece che tramite
+        l&rsquo;indice, prima di qualunque strategia</p>
+    </div>
+    <div class="tile">
+      <span class="k">Freno fiscale in pi&ugrave;</span>
+      <span class="v neg">&minus;1 / &minus;2,5</span>
+      <p class="d">punti l&rsquo;anno che una strategia attiva paga in pi&ugrave; del buy &amp; hold,
+        che realizza una volta sola</p>
+    </div>
+    <div class="tile">
+      <span class="k">Walk-forward, 62 anni</span>
+      <span class="v neg">&minus;2,0</span>
+      <p class="d">punti l&rsquo;anno di distacco scegliendo i parametri solo sul passato.
+        Perde anche al lordo</p>
+    </div>
+    <div class="tile">
+      <span class="k">Lato short</span>
+      <span class="v neg">monot&ograve;no</span>
+      <p class="d">ogni punto di esposizione corta toglie rendimento, Sharpe
+        e peggiora il ribasso</p>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <section>
+    <h2>Due fatti da conoscere prima di cercare una strategia</h2>
+    <p class="lede">Non sono conclusioni della ricerca: sono le condizioni al contorno
+      dentro cui qualunque segnale deve funzionare. Entrambe si misurano senza scrivere
+      una sola regola di trading.</p>
+
+    <h3>Il fondo a leva non &egrave; un moltiplicatore neutro</h3>
+    <p>Tenere il 33% del patrimonio in SPXL e il resto liquido d&agrave; la stessa esposizione
+      all&rsquo;indice di tenere il 100% in un ETF normale. Non d&agrave; lo stesso rendimento.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Stessa esposizione, rendimento diverso &mdash; 1954-2026, al netto di imposte</caption>
+        <thead><tr><th>portafoglio</th><th>esposizione</th><th>CAGR netto</th><th>ribasso massimo</th></tr></thead>
+        <tbody>
+          <tr class="bench"><td>100% indice</td><td>1,00x</td><td>9,41%</td><td>&minus;56,4%</td></tr>
+          <tr><td>33% SPXL + 67% liquidit&agrave;</td><td>1,00x</td><td class="lose">5,58%</td><td>&minus;59,2%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="nota">Il costo di finanziamento della leva si annulla quasi esattamente con
+      l&rsquo;interesse incassato sulla liquidit&agrave;. Ci&ograve; che resta &egrave; l&rsquo;erosione da varianza:
+      la leva &egrave; giornaliera, e comporre ogni giorno tre volte il rendimento erode circa
+      3&sigma;&sup2; l&rsquo;anno.</p>
+
+    <h3>Alzare la leva compra pochi punti e vende il portafoglio</h3>
+    <p>Da qui in poi il peso &egrave; tutto in SPXL, il resto liquido. Il rendimento sale
+      lentamente; il ribasso massimo collassa.</p>
+
+    <figure>
+      <figcaption>Figura 1</figcaption>
+      <p class="fig-title">Quota costante in SPXL: quello che si guadagna e quello che si
+        rischia, 1954-2026</p>
+      <div id="fig-leva"></div>
+      <p class="nota">Ribilanciamento mensile, al netto di costi e imposte. Sui periodi
+        recenti il massimo si sposta verso il 100%, ma con ribassi del 98,5% (1990+) e del
+        76,7% (2008+): numeri che nessuno attraversa restando investito.</p>
+    </figure>
+
+    <h3>Il lato short toglie valore, sempre</h3>
+    <p>Stessa identica regola di trend, quota short crescente. Il declino &egrave; monot&ograve;no
+      su ogni metrica.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Trend SMA200 con quota short crescente &mdash; 1954-2026, al netto</caption>
+        <thead><tr><th>regola</th><th>CAGR</th><th>Sharpe</th><th>ribasso max</th></tr></thead>
+        <tbody>
+          <tr><td>solo lungo, fuori sotto SMA200</td><td class="win">7,60%</td><td class="win">0,28</td><td>&minus;37,1%</td></tr>
+          <tr><td>short 25% sotto SMA200</td><td>7,23%</td><td>0,25</td><td>&minus;41,0%</td></tr>
+          <tr><td>short 50% sotto SMA200</td><td>6,38%</td><td>0,21</td><td>&minus;42,1%</td></tr>
+          <tr><td>short 100% sotto SMA200</td><td class="lose">4,81%</td><td class="lose">0,12</td><td>&minus;41,9%</td></tr>
+          <tr><td>short 50% solo se volatilit&agrave; &gt; 25%</td><td>6,53%</td><td>0,22</td><td>&minus;44,6%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="nota">Due ragioni, entrambe indipendenti dal segnale: l&rsquo;erosione da varianza
+      colpisce anche l&rsquo;inverso a leva, e i mercati sotto la media a 200 giorni sono i pi&ugrave;
+      volatili che esistano; e l&rsquo;indice ha una deriva positiva, contro cui si rema ogni
+      giorno anche quando si ha ragione sulla direzione.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <section>
+    <h2>Il protocollo, a severit&agrave; crescente</h2>
+    <p class="lede">Ogni livello elimina un modo di ingannarsi che il livello precedente
+      lasciava aperto. L&rsquo;ordine non &egrave; decorativo: &egrave; il motivo per cui alle prime tabelle
+      non si pu&ograve; credere.</p>
+
+    <div class="steps">
+      <div class="step">
+        <span class="n">1</span>
+        <div>
+          <h4>Parametri da manuale, zero ottimizzazione</h4>
+          <p>Diciotto famiglie documentate coi valori che stanno nei libri, su quattro
+            periodi, riscalate a parit&agrave; di volatilit&agrave; col benchmark. Niente selezione,
+            quindi niente da scontare.</p>
+        </div>
+        <div class="esito"><span class="pill no">nessuna vince</span>
+          <span>sul CAGR n&eacute; sullo Sharpe. Diverse migliorano il ribasso massimo.</span></div>
+      </div>
+      <div class="step">
+        <span class="n">2</span>
+        <div>
+          <h4>Griglia esplorativa, 196 configurazioni</h4>
+          <p>Serve a mappare il terreno, non a scegliere il vincitore: con centinaia di
+            tentativi la migliore ha un bell&rsquo;aspetto anche se sotto non c&rsquo;&egrave; niente.</p>
+        </div>
+        <div class="esito"><span class="pill forse">l&rsquo;edge esiste al lordo</span>
+          <span>16 su 155 battono lo Sharpe del benchmark. Al netto: 1 su 176.</span></div>
+      </div>
+      <div class="step">
+        <span class="n">3</span>
+        <div>
+          <h4>Walk-forward ancorato, 62 anni fuori campione</h4>
+          <p>Nessun parametro scelto guardando il periodo su cui viene giudicato.
+            Si allena da sempre fino a <em>T</em>, si giudica da <em>T</em> a <em>T</em>+3 anni,
+            si sposta <em>T</em>. Ventuno finestre.</p>
+        </div>
+        <div class="esito"><span class="pill no">perde</span>
+          <span>di due punti l&rsquo;anno al netto e di quasi uno al lordo.</span></div>
+      </div>
+      <div class="step">
+        <span class="n">4</span>
+        <div>
+          <h4>Sensitivit&agrave;: cosa dovrebbe essere vero</h4>
+          <p>Il walk-forward viene rifatto per intero muovendo un&rsquo;ipotesi alla volta:
+            aliquota sulle plusvalenze, aliquota sui dividendi, costi, ritardo di
+            esecuzione.</p>
+        </div>
+        <div class="esito"><span class="pill no">perde anche ad aliquota zero</span>
+          <span>&minus;1,09 punti. Le imposte peggiorano, ma il buco non lo aprono loro.</span></div>
+      </div>
+    </div>
+
+    <h3>Dove finisce il vantaggio che si vedeva nella griglia</h3>
+    <p>Le migliori configurazioni al lordo sono tutte mean reversion a breve: Sharpe 0,71
+      contro 0,51 del benchmark, e il deflated Sharpe ratio regge anche scontando 155
+      tentativi. Ruotano per&ograve; <strong>diciannove volte l&rsquo;anno</strong>.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Rotazione e freno fiscale &mdash; punti percentuali di CAGR l&rsquo;anno</caption>
+        <thead><tr><th>strategia</th><th>rotazione annua</th><th>freno fiscale</th></tr></thead>
+        <tbody>
+          <tr class="bench"><td>buy &amp; hold dell&rsquo;indice</td><td>0</td><td>1,9 &ndash; 2,8</td></tr>
+          <tr><td>trend following mensile</td><td>1,5</td><td>3,0 &ndash; 3,3</td></tr>
+          <tr><td>mean reversion a due giorni</td><td>15 &ndash; 21</td><td class="lose">4,3 &ndash; 5,3</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="nota">Il freno del buy &amp; hold &egrave; quasi tutto imposta sui <em>dividendi</em>.
+      Le plusvalenze le paga una volta sola, alla fine, e fino ad allora capitalizza anche
+      la quota che un giorno andr&agrave; allo Stato.</p>
+  </section>
+
+  <!-- ============================================================ -->
+  <section>
+    <h2>La strategia che ci arriva vicino</h2>
+    <p class="lede">Non cercata in una griglia: costruita mettendo insieme quello che le
+      misure hanno indicato, una cosa per volta. Solo lungo. Un nucleo che non si vende
+      mai, perch&eacute; il differimento dell&rsquo;imposta &egrave; il vantaggio strutturale del buy &amp;
+      hold e conviene tenerselo. Un satellite a leva acceso solo sopra la media a 200
+      giorni. Decisione mensile, ribilanciamento annuale.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Nucleo 80% indice (mai venduto) + 20% SPXL con filtro di trend</caption>
+        <thead><tr><th>periodo</th><th>CAGR strategia</th><th>CAGR buy &amp; hold</th>
+          <th>ribasso strategia</th><th>ribasso B&amp;H</th><th>Sharpe</th></tr></thead>
+        <tbody>
+          <tr><td>1954 &ndash; 2026</td><td class="win">9,60%</td><td>9,41%</td>
+            <td class="win">&minus;50,8%</td><td>&minus;56,4%</td><td class="lose">0,38 vs 0,41</td></tr>
+          <tr><td>1990 &ndash; 2026</td><td class="win">9,76%</td><td>9,00%</td>
+            <td class="win">&minus;50,7%</td><td>&minus;56,3%</td><td class="lose">0,46 vs 0,47</td></tr>
+          <tr><td>2008 &ndash; 2026</td><td class="win">13,39%</td><td>12,11%</td>
+            <td class="win">&minus;31,6%</td><td>&minus;33,8%</td><td class="lose">0,70 vs 0,73</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Batte il benchmark su rendimento <em>e</em> su ribasso massimo in tre periodi
+      indipendenti. &Egrave; il risultato migliore di tutto il lavoro. E non basta, per tre
+      ragioni.</p>
+    <ul>
+      <li><strong>Lo Sharpe &egrave; pi&ugrave; basso ovunque.</strong> La strategia prende circa il 15%
+        di volatilit&agrave; in pi&ugrave;. Guadagna di pi&ugrave; perch&eacute; rischia di pi&ugrave;, in un modo che
+        allunga la coda destra: desiderabile, ma non &egrave; &laquo;battere il benchmark&raquo;.</li>
+      <li><strong>Non &egrave; statisticamente significativo.</strong> Il bootstrap a blocchi sul
+        divario d&agrave; p fra 0,09 e 0,24. Su settantadue anni.</li>
+      <li><strong>Il vantaggio &egrave; pi&ugrave; piccolo dell&rsquo;errore dello strumento di misura.</strong>
+        &Egrave; la figura qui sotto.</li>
+    </ul>
+
+    <figure>
+      <figcaption>Figura 2 &mdash; il grafico che decide</figcaption>
+      <p class="fig-title">A quale penalit&agrave; annua sui fondi a leva il vantaggio si annulla,
+        e quanto pu&ograve; sbagliare il modello che genera la serie di SPXL</p>
+      <div id="fig-rottura"></div>
+      <div class="legend">
+        <span><i class="swatch" style="background:var(--s1)"></i>1954 &ndash; 2026</span>
+        <span><i class="swatch" style="background:var(--s2)"></i>1990 &ndash; 2026</span>
+        <span><i class="swatch" style="background:var(--s3)"></i>2008 &ndash; 2026</span>
+        <span><i class="swatch" style="background:var(--band)"></i>errore fuori campione del modello</span>
+      </div>
+      <p class="nota">SPXL esiste dal 2008 e i dati raggiungibili in questa sessione
+        partono dal 2016: novant&rsquo;anni su cento la serie usata non &egrave; un dato, &egrave; un modello
+        lineare stimato per regressione sul fondo vero. Verificato fuori campione, quel
+        modello pu&ograve; essere generoso con SPXL di <strong>2,59 punti l&rsquo;anno</strong>. Sul
+        periodo lungo il vantaggio della strategia sparisce gi&agrave; a 1,5.</p>
+    </figure>
+  </section>
+
+  <!-- ============================================================ -->
+  <section>
+    <h2>La trappola in cui la ricerca &egrave; caduta, e come se n&rsquo;&egrave; accorta</h2>
+    <p class="lede">L&rsquo;analisi fiscale dice che il vincolo &egrave; il numero di realizzi. Quindi
+      alla griglia &egrave; stata aggiunta una famiglia a rotazione quasi nulla: l&rsquo;effetto
+      stagionale, esposizione piena da novembre ad aprile, ridotta da maggio a ottobre.
+      Due operazioni l&rsquo;anno.</p>
+    <p>Con quella dentro il walk-forward cambia faccia: la sceglie in quindici finestre su
+      ventuno e, al lordo, batte il buy &amp; hold su tutto &mdash; CAGR 12,00% contro 10,69%,
+      Sharpe 0,49 contro 0,43, ribasso &minus;44,4% contro &minus;55,3%. Su 62 anni mai visti
+      in fase di scelta.</p>
+    <p><strong>Ed &egrave; qui che bisogna fermarsi invece di esultare.</strong> La disciplina del
+      walk-forward protegge dalla scelta dei <em>parametri</em>, non da quella delle
+      <em>famiglie</em>: quella l&rsquo;ha fatta chi scrive, dopo aver guardato tutto il campione.
+      C&rsquo;&egrave; per&ograve; una verifica possibile. L&rsquo;effetto Halloween viene pubblicato nel 2002 su
+      dati fino al 1998: tutto ci&ograve; che viene dopo &egrave; fuori campione rispetto alla
+      <em>scoperta</em>, non solo rispetto ai parametri.</p>
+
+    <figure>
+      <figcaption>Figura 3</figcaption>
+      <p class="fig-title">L&rsquo;effetto stagionale prima e dopo essere stato pubblicato
+        &mdash; CAGR netto annuo</p>
+      <div id="fig-stagione"></div>
+      <div class="legend">
+        <span><i class="swatch" style="background:var(--s1)"></i>buy &amp; hold dell&rsquo;indice</span>
+        <span><i class="swatch" style="background:var(--s2)"></i>stagionale 50% + filtro SMA200</span>
+        <span><i class="swatch" style="background:var(--s3)"></i>stagionale 0% + filtro SMA200</span>
+      </div>
+      <p class="nota">Funzionava prima di essere pubblicata e ha smesso dopo. Il vantaggio
+        lordo del walk-forward veniva da l&igrave;: non &egrave; un risultato, &egrave; la firma di chi ha
+        cercato.</p>
+    </figure>
+  </section>
+
+  <!-- ============================================================ -->
+  <section>
+    <div class="chiusura">
+      <h2>Risposta</h2>
+      <p><strong>Al lordo di tutto</strong> un vantaggio esiste, ma &egrave; piccolo e non
+        significativo: la mean reversion a breve ha uno Sharpe superiore al buy &amp; hold,
+        e il divario non si distingue dal caso su 36 anni.</p>
+      <p><strong>Al netto di costi e imposte</strong> quel vantaggio sparisce: ruota troppo,
+        e l&rsquo;imposta sul realizzato costa pi&ugrave; di quanto il segnale renda.</p>
+      <p><strong>In walk-forward onesto</strong> non resta niente, nemmeno al lordo.</p>
+      <p><strong>Sul lato short la risposta &egrave; netta e negativa.</strong></p>
+      <p>Il vincolo che decide non &egrave; la qualit&agrave; del segnale. Sono due fatti strutturali:
+        SPXL costa circa 3,8 punti l&rsquo;anno per ogni unit&agrave; di esposizione 1x prima di
+        qualunque strategia, e l&rsquo;imposta sul realizzato costa alle strategie attive 1&ndash;2,5
+        punti l&rsquo;anno pi&ugrave; che al buy &amp; hold &mdash; un vantaggio che il buy &amp; hold non
+        perde mai.</p>
+    </div>
+
+    <h3>Cosa cambierebbe la risposta</h3>
+    <ul>
+      <li><strong>Dati reali di SPXL dal 2008, corretti per le distribuzioni.</strong>
+        Ridurrebbero l&rsquo;incertezza del modello da 2,6 punti a qualche decimo e renderebbero
+        <em>decidibile</em> il risultato della Figura 2. In questa sessione la fonte ha
+        limitato per indirizzo IP; lo script di ripescaggio li recupera appena torna
+        disponibile e tutte le tabelle si rigenerano senza toccare il codice.</li>
+      <li><strong>Un conto esente da imposta sul realizzato.</strong> Elimina 1&ndash;2,5 punti
+        l&rsquo;anno di svantaggio. Da solo non basta: ad aliquota zero il walk-forward perde
+        ancora 1,09 punti.</li>
+      <li><strong>Un secondo attivo decorrelato.</strong> Tutta l&rsquo;analisi &egrave; vincolata a un
+        solo indice, come chiedeva la domanda. Il modo in cui la leva viene usata con
+        qualche successo in letteratura prevede di affiancarle un attivo che sale quando
+        l&rsquo;azionario scende; il 2022, quando sono scesi insieme, mostra il limite anche di
+        quello.</li>
+    </ul>
+
+    <p class="foot">Motore, strategie e tabulati completi in <code>spxl/</code>. I dati non
+      sono nel repository: si rigenerano con <code>fetch_data.py</code>, che &egrave; ripartibile.
+      Aggiungere una strategia significa scrivere una funzione che restituisce una matrice
+      di pesi e inserirla nella griglia: ritardo di esecuzione, costi e fisco li applica il
+      simulatore, non c&rsquo;&egrave; modo di dimenticarseli.</p>
+  </section>
+</div>
+
+<div class="tip" id="tip" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  "use strict";
+  const NS = "http://www.w3.org/2000/svg";
+  const tip = document.getElementById("tip");
+
+  function el(name, attrs, parent) {
+    const n = document.createElementNS(NS, name);
+    for (const k in attrs) n.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(n);
+    return n;
+  }
+  function fmt(v, d) { return v.toFixed(d).replace(".", ","); }
+  function showTip(evt, html) {
+    tip.innerHTML = html;
+    tip.style.opacity = "1";
+    const pad = 14, w = tip.offsetWidth, h = tip.offsetHeight;
+    let x = evt.clientX + pad, y = evt.clientY - h - pad;
+    if (x + w > innerWidth - 8) x = evt.clientX - w - pad;
+    if (y < 8) y = evt.clientY + pad;
+    tip.style.left = x + "px";
+    tip.style.top = y + "px";
+  }
+  function hideTip() { tip.style.opacity = "0"; }
+
+  // ---------------------------------------------------------------- figura 1
+  // Due pannelli sovrapposti che condividono l'asse orizzontale: rendimento e
+  // ribasso hanno scale incompatibili e su un asse solo si mentirebbe.
+  function figLeva(host) {
+    const dati = [
+      { x: 1.00, cagr: 5.58, dd: -59.2, et: "33%" },
+      { x: 1.20, cagr: 6.01, dd: -68.5, et: "40%" },
+      { x: 1.50, cagr: 6.54, dd: -79.4, et: "50%" },
+      { x: 1.80, cagr: 6.95, dd: -87.0, et: "60%" },
+      { x: 2.00, cagr: 7.14, dd: -90.7, et: "67%" },
+      { x: 2.40, cagr: 7.36, dd: -95.5, et: "80%" },
+      { x: 3.00, cagr: 7.92, dd: -98.5, et: "100%" }
+    ];
+    const BENCH = 9.41, BENCH_DD = -56.4;
+    const W = 700, H = 340, L = 46, R = 16, T = 18, GAP = 44;
+    const PH = (H - T - GAP - 30) / 2;
+    const svg = el("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`,
+                            role: "img", "aria-label":
+      "Rendimento netto e ribasso massimo al crescere dell'esposizione tramite SPXL" }, host);
+
+    const x = v => L + (v - 1) / 2 * (W - L - R);
+    const panels = [
+      { key: "cagr", y0: T, h: PH, lo: 5, hi: 10, ref: BENCH, lab: "CAGR netto %",
+        col: "var(--s2)", refLab: "indice 9,41", d: 2 },
+      { key: "dd", y0: T + PH + GAP, h: PH, lo: -100, hi: -50, ref: BENCH_DD,
+        lab: "ribasso max %", col: "var(--s2)", refLab: "indice −56,4", d: 1 }
+    ];
+
+    panels.forEach(p => {
+      const y = v => p.y0 + p.h - (v - p.lo) / (p.hi - p.lo) * p.h;
+      const g = el("g", { class: "grid" }, svg);
+      const ticks = p.key === "cagr" ? [5, 6, 7, 8, 9, 10] : [-100, -90, -80, -70, -60, -50];
+      ticks.forEach(t => {
+        el("line", { x1: L, x2: W - R, y1: y(t), y2: y(t) }, g);
+        const tx = el("text", { x: L - 8, y: y(t) + 3.5, "text-anchor": "end" }, svg);
+        tx.textContent = p.key === "cagr" ? t : "−" + Math.abs(t);
+      });
+      // riferimento: il buy & hold dell'indice
+      el("line", { x1: L, x2: W - R, y1: y(p.ref), y2: y(p.ref),
+                   stroke: "var(--s1)", "stroke-width": 2, "stroke-dasharray": "5 4" }, svg);
+      const rl = el("text", { x: W - R, y: y(p.ref) - 7, "text-anchor": "end",
+                              fill: "var(--s1)" }, svg);
+      rl.textContent = p.refLab;
+
+      const pts = dati.map(d => [x(d.x), y(d[p.key])]);
+      el("path", { d: "M" + pts.map(q => q.join(" ")).join(" L "), fill: "none",
+                   stroke: p.col, "stroke-width": 2, "stroke-linejoin": "round" }, svg);
+      dati.forEach((d, i) => {
+        el("circle", { cx: pts[i][0], cy: pts[i][1], r: 4.5, fill: p.col,
+                       stroke: "var(--surface)", "stroke-width": 2 }, svg);
+      });
+      const al = el("text", { x: L, y: p.y0 - 5, fill: "var(--muted)" }, svg);
+      al.textContent = p.lab;
+    });
+
+    // asse orizzontale condiviso
+    dati.forEach(d => {
+      const t = el("text", { x: x(d.x), y: H - 12, "text-anchor": "middle" }, svg);
+      t.textContent = fmt(d.x, 1) + "x";
+      const t2 = el("text", { x: x(d.x), y: H - 1, "text-anchor": "middle",
+                              "font-size": "9" }, svg);
+      t2.textContent = d.et;
+    });
+
+    // zona sensibile unica per colonna
+    dati.forEach(d => {
+      const hit = el("rect", { class: "hit", x: x(d.x) - 22, y: T,
+                               width: 44, height: H - T - 22 }, svg);
+      hit.addEventListener("mousemove", e => showTip(e,
+        `<b>esposizione ${fmt(d.x, 1)}x &middot; ${d.et} in SPXL</b>` +
+        `<i>CAGR netto ${fmt(d.cagr, 2)}% (indice 9,41%)</i>` +
+        `<i>ribasso max −${fmt(Math.abs(d.dd), 1)}% (indice −56,4%)</i>`));
+      hit.addEventListener("mouseleave", hideTip);
+    });
+  }
+
+  // ---------------------------------------------------------------- figura 2
+  function figRottura(host) {
+    const pen = [0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 4.0];
+    const serie = [
+      { nome: "1954 – 2026", col: "var(--s1)",
+        v: [0.19, 0.12, 0.06, -0.00, -0.07, -0.13, -0.20, -0.32] },
+      { nome: "1990 – 2026", col: "var(--s2)",
+        v: [0.76, 0.69, 0.62, 0.55, 0.48, 0.41, 0.34, 0.20] },
+      { nome: "2008 – 2026", col: "var(--s3)",
+        v: [1.28, 1.21, 1.13, 1.05, 0.97, 0.90, 0.82, 0.67] }
+    ];
+    const W = 700, H = 300, L = 46, R = 92, T = 26, B = 46;
+    const svg = el("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, role: "img",
+      "aria-label": "Divario di CAGR dal benchmark al crescere della penalita' sui fondi a leva" }, host);
+    const x = v => L + v / 4 * (W - L - R);
+    const y = v => T + (1.4 - v) / 1.8 * (H - T - B);
+
+    // banda dell'errore del modello: 0 - 2.59 punti
+    el("rect", { x: x(0), y: T, width: x(2.59) - x(0), height: H - T - B,
+                 fill: "var(--band)" }, svg);
+    const bl = el("text", { x: x(1.3), y: T + 13, "text-anchor": "middle",
+                            fill: "var(--muted)" }, svg);
+    bl.textContent = "errore del modello: fino a 2,59";
+
+    const g = el("g", { class: "grid" }, svg);
+    [-0.4, 0, 0.4, 0.8, 1.2].forEach(t => {
+      if (t !== 0) el("line", { x1: L, x2: W - R, y1: y(t), y2: y(t) }, g);
+      const tx = el("text", { x: L - 8, y: y(t) + 3.5, "text-anchor": "end" }, svg);
+      tx.textContent = (t > 0 ? "+" : t < 0 ? "−" : "") + fmt(Math.abs(t), 1);
+    });
+    el("line", { class: "zero", x1: L, x2: W - R, y1: y(0), y2: y(0) }, svg);
+
+    serie.forEach(s => {
+      const pts = pen.map((p, i) => [x(p), y(s.v[i])]);
+      el("path", { d: "M" + pts.map(q => q.join(" ")).join(" L "), fill: "none",
+                   stroke: s.col, "stroke-width": 2, "stroke-linejoin": "round" }, svg);
+      pts.forEach(q => el("circle", { cx: q[0], cy: q[1], r: 4, fill: s.col,
+                                      stroke: "var(--surface)", "stroke-width": 2 }, svg));
+      const lab = el("text", { x: W - R + 8, y: pts[pts.length - 1][1] + 3.5,
+                               fill: s.col, "font-weight": "500" }, svg);
+      lab.textContent = s.nome;
+    });
+
+    pen.forEach(p => {
+      const t = el("text", { x: x(p), y: H - B + 18, "text-anchor": "middle" }, svg);
+      t.textContent = fmt(p, 1) + "%";
+    });
+    const ax = el("text", { x: (L + W - R) / 2, y: H - 8, "text-anchor": "middle" }, svg);
+    ax.textContent = "penalità annua applicata ai fondi a leva";
+    const ay = el("text", { x: L, y: T - 12, fill: "var(--muted)" }, svg);
+    ay.textContent = "divario di CAGR dal buy & hold, punti/anno";
+
+    pen.forEach((p, i) => {
+      const hit = el("rect", { class: "hit", x: x(p) - 26, y: T, width: 52,
+                               height: H - T - B }, svg);
+      hit.addEventListener("mousemove", e => showTip(e,
+        `<b>penalità ${fmt(p, 1)}% l'anno</b>` +
+        serie.map(s => `<i>${s.nome}: ${s.v[i] >= 0 ? "+" : "−"}${fmt(Math.abs(s.v[i]), 2)}</i>`).join("")));
+      hit.addEventListener("mouseleave", hideTip);
+    });
+  }
+
+  // ---------------------------------------------------------------- figura 3
+  function figStagione(host) {
+    const gruppi = [
+      { nome: "1954 – 1998", sotto: "il campione della scoperta",
+        v: [10.43, 10.63, 11.50] },
+      { nome: "1999 – 2026", sotto: "dopo la pubblicazione",
+        v: [6.82, 6.57, 5.73] }
+    ];
+    const nomi = ["buy & hold dell'indice", "stagionale 50% + SMA200",
+                  "stagionale 0% + SMA200"];
+    const cols = ["var(--s1)", "var(--s2)", "var(--s3)"];
+    const W = 700, H = 280, L = 46, R = 16, T = 20, B = 52;
+    const svg = el("svg", { class: "chart", viewBox: `0 0 ${W} ${H}`, role: "img",
+      "aria-label": "CAGR netto della strategia stagionale prima e dopo la sua pubblicazione" }, host);
+    const y = v => T + (12 - v) / 12 * (H - T - B);
+    const gw = (W - L - R) / gruppi.length;
+    const bw = Math.min(46, (gw - 40) / 3);
+
+    const g = el("g", { class: "grid" }, svg);
+    [0, 3, 6, 9, 12].forEach(t => {
+      el("line", { x1: L, x2: W - R, y1: y(t), y2: y(t) }, g);
+      const tx = el("text", { x: L - 8, y: y(t) + 3.5, "text-anchor": "end" }, svg);
+      tx.textContent = t + "%";
+    });
+
+    gruppi.forEach((gr, gi) => {
+      const x0 = L + gi * gw + (gw - bw * 3 - 4) / 2;
+      gr.v.forEach((v, si) => {
+        const bx = x0 + si * (bw + 2);
+        const h = y(0) - y(v);
+        // estremita' arrotondate solo in cima, ancorate alla linea dello zero
+        const r = 4;
+        el("path", { d: `M${bx} ${y(0)} L${bx} ${y(v) + r} Q${bx} ${y(v)} ${bx + r} ${y(v)}` +
+                        ` L${bx + bw - r} ${y(v)} Q${bx + bw} ${y(v)} ${bx + bw} ${y(v) + r}` +
+                        ` L${bx + bw} ${y(0)} Z`,
+                     fill: cols[si], stroke: "var(--surface)", "stroke-width": 2 }, svg);
+        const lb = el("text", { x: bx + bw / 2, y: y(v) - 7, "text-anchor": "middle",
+                                fill: "var(--ink-2)", "font-weight": "500" }, svg);
+        lb.textContent = fmt(v, 2);
+        const hit = el("rect", { class: "hit", x: bx, y: T, width: bw, height: y(0) - T }, svg);
+        hit.addEventListener("mousemove", e => showTip(e,
+          `<b>${gr.nome}</b><i>${nomi[si]}</i><i>CAGR netto ${fmt(v, 2)}%</i>`));
+        hit.addEventListener("mouseleave", hideTip);
+      });
+      const t1 = el("text", { x: L + gi * gw + gw / 2, y: H - B + 22,
+                              "text-anchor": "middle", fill: "var(--ink-2)",
+                              "font-weight": "500", "font-size": "11" }, svg);
+      t1.textContent = gr.nome;
+      const t2 = el("text", { x: L + gi * gw + gw / 2, y: H - B + 37,
+                              "text-anchor": "middle" }, svg);
+      t2.textContent = gr.sotto;
+    });
+    el("line", { x1: L, x2: W - R, y1: y(0), y2: y(0), stroke: "var(--line)",
+                 "stroke-width": 1 }, svg);
+  }
+
+  figLeva(document.getElementById("fig-leva"));
+  figRottura(document.getElementById("fig-rottura"));
+  figStagione(document.getElementById("fig-stagione"));
+  addEventListener("scroll", hideTip, { passive: true });
+})();
+</script>

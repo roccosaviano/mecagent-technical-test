@@ -1,0 +1,40 @@
+
+L'EFFETTO STAGIONALE PRIMA E DOPO LA PUBBLICAZIONE
+    Bouman e Jacobsen documentano l'effetto Halloween nel 2002, su dati che
+    arrivano al 1998. Un'anomalia di calendario che funziona solo sui dati in cui
+    e' stata trovata non e' un'anomalia, e' la firma di chi l'ha cercata. Quindi
+    si spacca il campione in quel punto: prima e' il periodo della scoperta,
+    dopo e' l'unico pezzo di storia che non poteva essere guardato.
+
+    Il walk-forward di questo lavoro converge sulla stagionalita', e questa
+    tabella e' l'unica cosa che dice se fidarsene.
+
+
+  scoperta  1954-1998   1954-01-04 -> 1998-12-31
+================================================================================================================
+strategia                     CAGR     vol   MaxDD  Calmar  Sharpe   Ulcer   sotto    espo    turn   fisco
+----------------------------------------------------------------------------------------------------------------
+>> B&H S&P 500               10.43   13.7   -45.9   0.23   0.44   10.0   5.6  100   0.0  0.80
+----------------------------------------------------------------------------------------------------------------
+Stagionale f50% + SMA200     10.63   16.6   -26.6   0.40   0.37   12.5   3.0   36   3.8  5.16   VINCE
+Stagionale f0% + SMA200      11.50   17.2   -33.2   0.35   0.41   12.5   3.2   28   3.4  5.72   VINCE
+Stagionale f50% nuda          7.40   14.3   -50.0   0.15   0.19   13.2   6.9   34   1.3  3.80
+Nucleo 80% + stagionale      10.29   14.3   -45.0   0.23   0.39   11.1   3.3   91   1.4  4.25
+Trend SMA200 (controllo)      7.25   16.1   -50.5   0.14   0.18   18.8   8.3   35   1.4  3.59
+================================================================================================================
+
+
+  verifica  1999-2026   1999-01-04 -> 2026-08-21
+================================================================================================================
+strategia                     CAGR     vol   MaxDD  Calmar  Sharpe   Ulcer   sotto    espo    turn   fisco
+----------------------------------------------------------------------------------------------------------------
+>> B&H S&P 500                6.82   19.2   -56.2   0.12   0.39   16.5   6.2  100   0.0  1.15
+----------------------------------------------------------------------------------------------------------------
+Stagionale f50% + SMA200      6.57   18.8   -48.2   0.14   0.33   18.4   4.6   37   4.8  2.83
+Stagionale f0% + SMA200       5.73   19.4   -53.3   0.11   0.28   21.2   4.9   28   4.2  3.01
+Stagionale f50% nuda          5.42   21.1   -59.8   0.09   0.26   18.4   7.1   34   1.7  2.44
+Nucleo 80% + stagionale       6.80   18.6   -52.2   0.13   0.36   16.5   6.7   90   1.7  2.70
+Trend SMA200 (controllo)      5.91   17.7   -33.9   0.17   0.31   15.7   4.5   36   1.8  2.59
+================================================================================================================
+
+(6.4s)

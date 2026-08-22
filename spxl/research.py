@@ -59,6 +59,11 @@ PERIODI = {
     "1954+": ("1954-01-01", "da quando i tassi a breve sono dati veri e non stime"),
     "1990+": ("1990-01-01", "mercati moderni, esiste il VIX"),
     "2008+": ("2008-11-05", "da quando SPXL esiste davvero"),
+    # Bouman e Jacobsen pubblicano l'effetto Halloween nel 2002 usando dati fino
+    # al 1998. Tutto cio' che viene dopo e' fuori campione rispetto alla
+    # SCOPERTA, non solo rispetto alla scelta dei parametri: e' l'unica verifica
+    # che un'anomalia stagionale meriti di essere presa sul serio.
+    "1999+": ("1999-01-01", "dopo la pubblicazione dell'effetto stagionale"),
 }
 
 
@@ -332,6 +337,30 @@ def sweep_grid():
     for n in (100, 200, 300):
         g.append((f"Difensivo SMA{n}", "trend", S.trend_defensive, dict(n=n)))
 
+    # rotazione quasi nulla: due decisioni l'anno
+    for trend in (None, 200):
+        for wf in (0.0, 0.5):
+            eti = f"Stagionale f{wf:.0%}" + (f" +SMA{trend}" if trend else "")
+            g.append((eti, "stagione", S.stagionale, dict(w_fuori=wf, trend=trend)))
+
+    # combinazioni: segnali poco correlati sbagliano a turno, e la media
+    # realizza a fette invece che tutto in una volta
+    componenti = {
+        "trend": (S.sma_trend, dict(n=200, band=0.02)),
+        "trend300": (S.sma_trend, dict(n=300)),
+        "mom": (S.abs_momentum, dict(n=252)),
+        "vol": (S.vol_regime, dict(thr=0.22, lookback=20)),
+        "volT": (S.vol_target, dict(target=0.20, lookback=20)),
+        "stag": (S.stagionale, dict(w_fuori=0.5)),
+    }
+    for combo in (("trend", "mom"), ("trend", "vol"), ("trend", "mom", "vol"),
+                  ("trend", "mom", "stag"), ("trend300", "volT", "stag"),
+                  ("trend", "mom", "vol", "stag")):
+        parts = [componenti[k] for k in combo]
+        for monthly in (False, True):
+            g.append((f"Mix {'+'.join(combo)}{' mens' if monthly else ''}", "mix",
+                      S.ensemble, dict(parts=parts, monthly=monthly)))
+
     # strutture pensate per pagare meno imposte a parita' di segnale
     for core in (0.4, 0.6, 0.8):
         sat = 1.0 - core
@@ -341,6 +370,9 @@ def sweep_grid():
                                ("VolT20", S.vol_target, dict(target=0.20, lookback=20))):
             g.append((f"Nucleo{core:.0%}+{nome_b}", "nucleo", S.core_satellite,
                       dict(core=core, sat=sat, base_fn=fb, base_kw=kb)))
+        g.append((f"Nucleo{core:.0%}+Stag", "nucleo", S.core_satellite,
+                  dict(core=core, sat=sat, base_fn=S.stagionale,
+                       base_kw=dict(w_fuori=0.0, trend=200))))
     for gradini in (2, 4, 8):
         for nome_b, fb, kb in (("SMA200", S.sma_trend, dict(n=200)),
                                ("SMA300", S.sma_trend, dict(n=300)),
@@ -999,6 +1031,46 @@ def cmd_rottura(regime=REGIME_DEFAULT):
           "variante nucleo 80% + SPXL 20%")
 
 
+def cmd_stagione(w=None, regime=REGIME_DEFAULT):
+    """
+    L'effetto stagionale prima e dopo essere stato pubblicato.
+
+    Bouman e Jacobsen documentano l'effetto Halloween nel 2002, su dati che
+    arrivano al 1998. Un'anomalia di calendario che funziona solo sui dati in cui
+    e' stata trovata non e' un'anomalia, e' la firma di chi l'ha cercata. Quindi
+    si spacca il campione in quel punto: prima e' il periodo della scoperta,
+    dopo e' l'unico pezzo di storia che non poteva essere guardato.
+
+    Il walk-forward di questo lavoro converge sulla stagionalita', e questa
+    tabella e' l'unica cosa che dice se fidarsene.
+    """
+    w = w or build_world(verbose=False)
+    match = bench_returns_full(w)
+    prove = [
+        ("Stagionale f50% + SMA200", S.stagionale, dict(w_fuori=0.5, trend=200)),
+        ("Stagionale f0% + SMA200", S.stagionale, dict(w_fuori=0.0, trend=200)),
+        ("Stagionale f50% nuda", S.stagionale, dict(w_fuori=0.5, trend=None)),
+        ("Nucleo 80% + stagionale", S.core_satellite,
+         dict(core=0.8, sat=0.2, base_fn=S.stagionale,
+              base_kw=dict(w_fuori=0.0, trend=200))),
+        ("Trend SMA200 (controllo)", S.sma_trend, dict(n=200, band=0.02)),
+    ]
+    print("\nL'EFFETTO STAGIONALE PRIMA E DOPO LA PUBBLICAZIONE")
+    print(cmd_stagione.__doc__.split("\n\n", 1)[1].rstrip())
+    for etichetta, inizio, fine in (("scoperta  1954-1998", "1954-01-01", "1998-12-31"),
+                                    ("verifica  1999-2026", "1999-01-01", None)):
+        sl = w.slice(start=inizio, end=fine)
+        b_res = run_weights(w, strategy_weights(w, S.buy_hold_spy, {}), regime, sl)
+        b_m = metrics(b_res, cash_rate=w.cash_rate[sl])
+        righe = []
+        for nome, fn, p in prove:
+            m = evaluate(w, fn, p, regime, sl, None, b_res["equity"], 1, match=match)
+            righe.append((nome, m))
+        print_table(righe, f"\n  {etichetta}   "
+                           f"{w.dates[sl][0].date()} -> {w.dates[sl][-1].date()}", b_m)
+    return w
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "check"
     os.makedirs(RESULTS, exist_ok=True)
@@ -1031,6 +1103,8 @@ if __name__ == "__main__":
         cmd_sensitivity(periodo=(sys.argv[2] if len(sys.argv) > 2 else "1954+"))
     elif cmd == "ribilancio":
         cmd_ribilancio(periodo=(sys.argv[2] if len(sys.argv) > 2 else "1954+"))
+    elif cmd == "stagione":
+        cmd_stagione()
     elif cmd == "sintesi":
         cmd_sintesi()
     elif cmd == "rottura":
