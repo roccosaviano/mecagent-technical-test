@@ -6,8 +6,17 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "cadquery>=2.5.2",
+    "numpy>=1.24",
     "datasets>=3.6.0",
     "ipykernel>=6.29.5",
     "scipy>=1.15.3",
     "trimesh>=4.6.11",
+]
+
+[project.optional-dependencies]
+# Only needed to run the Prism benchmarks and test suite; the library itself
+# depends on nothing but numpy (and cupy, if you want it on a GPU).
+dev = [
+    "pytest>=8.0",
+    "scikit-learn>=1.4",
 ]
