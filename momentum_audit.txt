@@ -1,0 +1,103 @@
+Universo 101 titoli · 2010-01-04 -> 2026-09-18
+
+========================================================================================================
+1. L'EDGE DEL SEGNALE REGGE ALLE VERIFICHE? (e quanto ne resta dopo beta e costi)
+========================================================================================================
+  osservazioni 4183   media +9.8 bp   t-stat ingenuo (iid) +2.69
+  titoli distinti 101   il piu' frequente 400 volte (9.6% dei trade)
+  t-stat con errore standard clusterizzato per titolo: +3.55
+  block bootstrap (blocchi da 20 giorni, 5000 ripetizioni): IC95% [+3.1, +16.7] bp   P(media<=0) = 0.2%
+  togliendo TSLA, AMD, NFLX: 3195 trade, media +8.6 bp, t-stat iid +2.40
+
+  regressione sul mercato (SPY apertura->chiusura dello stesso giorno):
+    beta 1.04   alfa +7.4 bp/g   t(alfa) +2.17
+    dei +9.8 bp, +2.4 sono solo esposizione al mercato
+    anni con media positiva 15/17   prima meta' +11.9 bp   seconda meta' +7.8 bp
+
+  LETTURA: l'edge regge al clustering, al bootstrap e alla rimozione dei titoli
+  dominanti, ed e' stabile nel tempo. Il problema non e' la significativita'
+  statistica: e' che l'alfa netto di beta vale ~7 bp e l'andata-ritorno retail ne
+  costa ~8. L'intervallo di confidenza include valori sotto la soglia dei costi.
+
+========================================================================================================
+2. QUANTA PARTE DELLO SPAZIO DEI PARAMETRI NON E' DECIDIBILE CON BARRE DAILY
+========================================================================================================
+  % di giorni in cui il minimo tocca lo stop E il massimo tocca il target
+  (in quei giorni le barre giornaliere non sanno dire chi e' scattato prima)
+
+             SL 1.0%     SL 2.0%     SL 3.0%     SL 5.0%
+  TP  0.5%       34.6%       16.4%        8.0%        2.6%
+  TP  1.0%       21.7%        9.4%        4.6%        1.4%
+  TP  2.0%        9.7%        3.8%        2.0%        0.7%
+  TP  3.0%        4.7%        1.8%        0.8%        0.3%
+
+  Piu' la coppia e' stretta, piu' il risultato dipende da un'ipotesi non osservabile.
+  Le barre orarie coprono solo dal 2023-10 (limite yfinance 730g sull'intervallo 60m):
+  ottimizzare TP e SL su barre giornaliere significa, in buona parte, ottimizzare l'ipotesi.
+
+========================================================================================================
+3. IPOTESI DI ESECUZIONE — quanto reggono
+========================================================================================================
+  a) il limite sul take profit: quanto deve spingersi il massimo oltre il target
+     perche' l'ordine sia davvero eseguito (rischio di coda nel book)
+     serve superarlo di  0 bp -> CAGR   -63.48%   media  -17.7 bp/trade
+     serve superarlo di  5 bp -> CAGR   -65.76%   media  -18.9 bp/trade
+     serve superarlo di 10 bp -> CAGR   -68.81%   media  -20.8 bp/trade
+     serve superarlo di 25 bp -> CAGR   -74.25%   media  -24.6 bp/trade
+
+  b) slippage proporzionale alla volatilita' del titolo invece che piatto
+     (k = frazione dell'ATR pagata in ingresso; il titolo tipico ha ATR ~2%)
+     k=0.0   (~   0 bp su ATR 2%) -> CAGR   -63.48%   media  -17.7 bp/trade
+     k=0.02  (~   4 bp su ATR 2%) -> CAGR   -78.08%   media  -27.5 bp/trade
+     k=0.05  (~  10 bp su ATR 2%) -> CAGR   -90.71%   media  -44.0 bp/trade
+     k=0.1   (~  20 bp su ATR 2%) -> CAGR   -97.91%   media  -72.5 bp/trade
+
+  Il primo blocco e' il piu' insidioso: il backtest assume che un massimo che
+  sfiora il target riempia l'ordine. Se serve attraversarlo di 25 bp, il 51.5% di
+  uscite in TP si assottiglia e le giornate finiscono nel bucket peggiore.
+
+========================================================================================================
+4. IL CONTO SOPRAVVIVE? (il backtest compone all'infinito, un conto vero no)
+========================================================================================================
+  leva 1x: sotto il 50% del capitale iniziale il 2010-11-18
+  leva 1x: sotto il 10% del capitale iniziale il 2013-06-05
+          peggior giornata singola -3.1%   giorni con perdita > 5%: 0
+  leva 2x: sotto il 50% del capitale iniziale il 2010-05-04
+  leva 2x: sotto il 10% del capitale iniziale il 2011-08-10
+          peggior giornata singola -6.2%   giorni con perdita > 5%: 628
+
+  Con margine di mantenimento al 25% e leva 2x, la chiamata a margine scatta
+  quando il capitale scende del 33% rispetto al nozionale: il backtest continua
+  a comporre come se il broker non chiudesse mai nulla. Le equity finali a 0.000x
+  vanno lette come 'conto azzerato molto prima', non come un numero.
+
+========================================================================================================
+5. CAPIENZA E ATTRITI NON MODELLATI
+========================================================================================================
+  dollar volume medio a 20g del titolo scelto: p10 220M   mediana 829M   p90 5,922M
+  all'1% del volume giornaliero si muoverebbero ~8,289k$ per trade:
+  la capienza non e' il vincolo su questo universo. Lo sono i costi per unita' di edge.
+
+  Non modellati, tutti a sfavore:
+   - tasse: un trade al giorno e' reddito da negoziazione, non capital gain di lungo
+     periodo (il precedente swing_harness.py modellava un 33% irlandese, qui no)
+   - halt di volatilita': uno stop dentro un LULD halt non viene eseguito al prezzo
+   - il prezzo d'asta di apertura e' assunto ottenibile: il proprio ordine lo muove
+   - regola PDT: sotto i 25.000$ di conto, negli USA questa strategia non e' eseguibile
+
+========================================================================================================
+6. I DATI — fonte unica, prezzi rettificati a posteriori
+========================================================================================================
+  fonte: Yahoo Finance via yfinance, nessun riscontro incrociato
+  buchi: 6783 celle mancanti su 424503 (1.60%)
+  variazioni giornaliere oltre il 50% residue dopo la rettifica: 2 (spie di split non gestiti)
+  i prezzi rettificati vengono riscritti a ogni nuovo dividendo/split: un backtest
+  rifatto fra un anno sugli stessi giorni NON dara' esattamente gli stessi numeri.
+  DHR 2016-07-05 (+61%) e' lo scorporo di Fortive: Yahoo rettifica dividendi e
+  split, NON gli spin-off. Quel giorno il titolo risulta top performer per un
+  evento che non e' un rendimento. Trade la cui finestra contiene un salto >30%:
+  26 su 4183, media -54.3 bp contro +10.2 bp degli altri.
+  -> la contaminazione esiste ma e' piccola e in perdita: non e' lei a creare l'edge.
+  survivorship: l'universo e' la membership odierna. La direzione del bias e' nota
+  (gonfia una strategia che compra chi e' salito), l'entita' no: servirebbe la
+  composizione storica dell'indice, che Yahoo non fornisce.

@@ -5,6 +5,7 @@ e' la struttura di uscita, piu' la leva.**
 
 Codice: `momentum_fetch.py` (dati) · `momentum_backtest.py` (motore) · `momentum_chart.py` (grafico).
 Output completo: `momentum_report.txt` · grafico: `momentum_equity.png`.
+Falle del backtest e ottimizzazione dei parametri: **`MOMENTUM_OPTIMIZATION.md`**.
 
 ```
 python3 momentum_fetch.py daily    DATA  2010-01-01 2026-09-20

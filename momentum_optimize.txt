@@ -1,0 +1,147 @@
+Universo 101 titoli · 2010-01-04 -> 2026-09-18
+Ipotesi sui giorni ambigui: pessimista (stop per primo)
+Combinazioni valutate: 1500
+
+========================================================================================================
+A. WALK-FORWARD: scelgo sui 3 anni precedenti, verifico sull'anno dopo, scorro
+========================================================================================================
+
+  dettaglio per finestra
+  anno fuori campione        Sharpe IS  Sharpe OOS  bp/g OOS  configurazione scelta
+  2013-01-04 -> 2014-01-03        0.64       -1.11      -8.7  lb 5 · top3  · TP 1.5·ATR  · no SL       · vol bassa
+  2014-01-06 -> 2015-01-05        0.54       -0.82      -4.0  lb10 · top5  · TP 2·ATR    · no SL       · vol bassa
+  2015-01-06 -> 2016-01-05        0.47       -1.49      -9.4  lb10 · top5  · TP 2·ATR    · no SL       · sempre
+  2016-01-06 -> 2017-01-04        0.59        1.34      20.1  lb 5 · top1  · no TP       · no SL       · SPY>MA200
+  2017-01-05 -> 2018-01-04        1.04       -0.59      -6.0  lb 5 · top1  · no TP       · SL 0.5·ATR  · SPY>MA200
+  2018-01-05 -> 2019-01-07        0.81        0.06       0.8  lb 5 · top1  · no TP       · no SL       · SPY>MA200
+  2019-01-08 -> 2020-01-07        1.08        0.65       5.3  lb 5 · top1  · TP 2·ATR    · SL 0.5·ATR  · vol bassa
+  2020-01-08 -> 2021-01-06        0.94        0.31       2.5  lb 5 · top1  · TP 1.5·ATR  · no SL       · vol bassa
+  2021-01-07 -> 2022-01-05        1.12        1.25      12.2  lb 5 · top1  · TP 1.5·ATR  · no SL       · vol bassa
+  2022-01-06 -> 2023-01-06        1.35       -0.47      -0.4  lb10 · top1  · TP 1.5·ATR  · no SL       · vol bassa
+  2023-01-09 -> 2024-01-09        1.29        0.36       3.3  lb10 · top1  · TP 2·ATR    · no SL       · vol bassa
+  2024-01-10 -> 2025-01-10        0.88       -1.86     -25.3  lb 5 · top1  · TP 1·ATR    · no SL       · sempre
+  2025-01-13 -> 2026-01-13        0.51        1.51      15.8  lb20 · top1  · TP 0.5·ATR  · no SL       · sempre
+
+  Sharpe medio scelto in campione +0.87  ->  realizzato fuori campione -0.07   (degrado 0.93)
+  finestre fuori campione positive: 7 su 13
+
+  walk-forward ottimizzato          Sharpe   0.05   bp/g    +0.5   CAGR(leva 2x)    -9.28%   maxDD   -87.5%
+  regola originale TP1%/SL3% top1   Sharpe  -1.75   bp/g   -16.2   CAGR(leva 2x)   -60.42%   maxDD  -100.0%
+  configurazione a caso ogni anno   Sharpe  -1.28   bp/g    -8.8   CAGR(leva 2x)   -39.72%   maxDD   -99.9%
+  miglior combinazione in-sample*   Sharpe   0.25   bp/g    +2.8   CAGR(leva 2x)    -1.10%   maxDD   -91.9%
+    * lb 5 · top1  · no TP       · no SL       · vol bassa — e' il massimo di 1500 tentativi sullo
+      stesso campione su cui viene misurata: non e' un risultato utilizzabile.
+
+========================================================================================================
+B. SOLO CONFIGURAZIONI DECIDIBILI CON BARRE GIORNALIERE (giorni ambigui <= 5%)
+========================================================================================================
+  combinazioni ammesse: 1491 su 1500
+
+  dettaglio per finestra
+  anno fuori campione        Sharpe IS  Sharpe OOS  bp/g OOS  configurazione scelta
+  2013-01-04 -> 2014-01-03        0.64       -1.11      -8.7  lb 5 · top3  · TP 1.5·ATR  · no SL       · vol bassa
+  2014-01-06 -> 2015-01-05        0.54       -0.82      -4.0  lb10 · top5  · TP 2·ATR    · no SL       · vol bassa
+  2015-01-06 -> 2016-01-05        0.47       -1.49      -9.4  lb10 · top5  · TP 2·ATR    · no SL       · sempre
+  2016-01-06 -> 2017-01-04        0.59        1.34      20.1  lb 5 · top1  · no TP       · no SL       · SPY>MA200
+  2017-01-05 -> 2018-01-04        1.04       -0.59      -6.0  lb 5 · top1  · no TP       · SL 0.5·ATR  · SPY>MA200
+  2018-01-05 -> 2019-01-07        0.81        0.06       0.8  lb 5 · top1  · no TP       · no SL       · SPY>MA200
+  2019-01-08 -> 2020-01-07        1.08        0.65       5.3  lb 5 · top1  · TP 2·ATR    · SL 0.5·ATR  · vol bassa
+  2020-01-08 -> 2021-01-06        0.94        0.31       2.5  lb 5 · top1  · TP 1.5·ATR  · no SL       · vol bassa
+  2021-01-07 -> 2022-01-05        1.12        1.25      12.2  lb 5 · top1  · TP 1.5·ATR  · no SL       · vol bassa
+  2022-01-06 -> 2023-01-06        1.35       -0.47      -0.4  lb10 · top1  · TP 1.5·ATR  · no SL       · vol bassa
+  2023-01-09 -> 2024-01-09        1.29        0.36       3.3  lb10 · top1  · TP 2·ATR    · no SL       · vol bassa
+  2024-01-10 -> 2025-01-10        0.88       -1.86     -25.3  lb 5 · top1  · TP 1·ATR    · no SL       · sempre
+  2025-01-13 -> 2026-01-13        0.51        1.51      15.8  lb20 · top1  · TP 0.5·ATR  · no SL       · sempre
+
+  walk-forward, regione decidibile  Sharpe   0.05   bp/g    +0.5   CAGR(leva 2x)    -9.28%   maxDD   -87.5%
+
+========================================================================================================
+C. QUANTA PARTE DELLA GRIGLIA E' PROFITTEVOLE SU TUTTO IL CAMPIONE
+========================================================================================================
+  combinazioni con media > 0 bp/giorno: 35 su 1500 (2.3%)
+  con media > 4 bp/giorno (soglia dei costi retail a/r): 0 (0.0%)
+  Sharpe: mediana -0.82   massimo 0.20   minimo -3.82
+
+  Le migliori 12 su tutto il campione (in-sample, quindi da non usare):
+  configurazione                                                bp/g   Sharpe  ambigui%
+  lb 5 · top1  · no TP       · no SL       · vol bassa           2.2     0.20      0.0%
+  lb 5 · top1  · TP 2·ATR    · no SL       · vol bassa           2.1     0.20      0.0%
+  lb 5 · top1  · no TP       · SL 2·ATR    · vol bassa           2.0     0.19      0.0%
+  lb 5 · top1  · TP 2·ATR    · SL 2·ATR    · vol bassa           1.9     0.19      0.0%
+  lb 5 · top1  · TP 1.5·ATR  · no SL       · vol bassa           1.5     0.15      0.0%
+  lb 5 · top1  · no TP       · SL 1.5·ATR  · vol bassa           1.4     0.13      0.0%
+  lb 5 · top1  · TP 1.5·ATR  · SL 2·ATR    · vol bassa           1.4     0.13      0.0%
+  lb 5 · top1  · TP 2·ATR    · SL 1.5·ATR  · vol bassa           1.4     0.13      0.0%
+  lb 5 · top1  · no TP       · no SL       · sempre              1.8     0.12      0.0%
+  lb 5 · top1  · TP 1.5·ATR  · no SL       · sempre              1.6     0.11      0.0%
+  lb 5 · top1  · no TP       · SL 2·ATR    · sempre              1.6     0.11      0.0%
+  lb 5 · top1  · TP 2·ATR    · no SL       · sempre              1.4     0.10      0.0%
+
+========================================================================================================
+D. STABILITA' DEI PARAMETRI: cosa sceglie il walk-forward, anno per anno
+========================================================================================================
+  lookback        5×8  10×4  20×1
+  numero titoli   1×10  5×2  3×1
+  TP (xATR)       1.5×4  2.0×4  inf×3  1.0×1  0.5×1
+  SL (xATR)       inf×11  0.5×2
+  regime          vol bassa×7  sempre×3  SPY>MA200×3
+
+  Se il parametro scelto salta da un anno all'altro, non esiste un valore
+  'ottimale': la griglia sta inseguendo rumore.
+
+========================================================================================================
+E. LEVA: fissa 2x contro dimensionamento a volatilita' obiettivo
+========================================================================================================
+  target vol  10%  leva media 0.78x  CAGR    -2.35%   Sharpe -0.13
+  target vol  15%  leva media 0.98x  CAGR    -3.32%   Sharpe -0.11
+  target vol  25%  leva media 1.34x  CAGR    -6.58%   Sharpe -0.12
+  leva fissa 2x                        CAGR    -9.28%   Sharpe  0.05
+
+  Il dimensionamento a volatilita' riduce il drag, non crea rendimento: porta il
+  CAGR da -9.3% a -2.4% solo perche' riduce la leva media da 2x a 0.78x, e in questo
+  campione peggiora pure lo Sharpe (deleveraggia dopo le fasi agitate che precedono
+  i rimbalzi). Applicare una leva qualsiasi a uno Sharpe nullo non produce rendimento.
+
+========================================================================================================
+F. EFFETTO MARGINALE DI OGNI PARAMETRO  (media su tutte le altre combinazioni)
+========================================================================================================
+
+  periodo del segnale (giorni)
+    valore          bp/g medio  bp/g migliore  Sharpe medio
+    2 g                  -6.89          -0.69         -1.11
+    3 g                  -6.85          -1.51         -1.12
+    5 g                  -3.97           2.15         -0.74
+    10 g                 -4.68          -1.03         -0.75
+    20 g                 -4.02          -0.12         -0.66
+
+  numero di posizioni
+    valore          bp/g medio  bp/g migliore  Sharpe medio
+    top 1                -4.58           2.15         -0.40
+    top 3                -5.51          -0.90         -0.82
+    top 5                -5.61          -1.34         -1.03
+    top 10               -5.43          -2.20         -1.25
+
+  take profit (xATR)
+    valore          bp/g medio  bp/g migliore  Sharpe medio
+    0.5                  -7.09          -1.58         -1.30
+    1.0                  -5.26           0.80         -0.85
+    1.5                  -4.84           1.60         -0.77
+    2.0                  -4.58           2.09         -0.73
+    nessuno              -4.63           2.15         -0.73
+
+  stop loss (xATR)
+    valore          bp/g medio  bp/g migliore  Sharpe medio
+    0.5                  -7.37           0.70         -1.40
+    1.0                  -5.73           0.71         -0.91
+    1.5                  -4.84           1.44         -0.75
+    2.0                  -4.42           2.01         -0.69
+    nessuno              -4.04           2.15         -0.63
+
+  regime di mercato
+    valore          bp/g medio  bp/g migliore  Sharpe medio
+    SPY>MA200            -5.98           1.04         -1.00
+    sempre               -6.56           1.82         -0.89
+    vol bassa            -3.30           2.15         -0.74
+
+  Nessuna colonna 'bp/g migliore' supera i ~4 bp che costa l'andata e ritorno
+  retail: il massimo della griglia e' comunque sotto la soglia di pareggio.
