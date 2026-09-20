@@ -1,0 +1,130 @@
+Universo: 101 titoli   Periodo: 2010-01-04 -> 2026-09-18   (4203 sedute)
+Regola: lookback 5g · top 1 · leva 2.0x · TP +1% · SL -3% · hold 1g
+
+================================================================================================================
+CASO BASE  —  compro l'apertura del top performer a 5 giorni, long 2x, TP +1% / SL -3%
+================================================================================================================
+                                      equity      CAGR     maxDD  Sharpe     win%    avg bp     PF   trade
+strategia · SL-first (pessimista)     0.000x   -63.77%   -100.0%   -1.89    59.2%     -17.8   0.75    4176
+strategia · TP-first (ottimista)      0.429x    -4.97%    -76.3%    0.11    63.8%       0.9   1.02    4176
+SPY buy & hold (1x, no costi)         9.549x    14.56%    -33.7%    0.88
+
+esiti: tp=51.5%  close=33.9%  sl=10.0%  sl_amb=4.6%
+giornate ambigue (toccati sia TP che SL con barre daily): 4.6% dei trade  -> e' la forchetta fra le due righe sopra
+
+
+================================================================================================================
+AUTOTEST ANTI-LOOK-AHEAD  (top 1, nessun TP/SL, 1x, costi retail)
+================================================================================================================
+  segnale corretto, chiusure fino a t-1 :    +1.8 bp/g   CAGR     -2.33%
+  segnale che sbircia la chiusura di t  :  +121.2 bp/g   CAGR  +1797.22%
+  esito: OK — il segnale che sbircia deve staccare di ordini di grandezza
+
+================================================================================================================
+RISOLUZIONE DELL'AMBIGUITA' CON BARRE ORARIE VERE  (2023-10-21 -> 2026-09-18)
+================================================================================================================
+giorni ambigui nel periodo: 30   risolti con barre orarie: 23   ancora ambigui dentro l'ora: 7
+  -> TP per primo: 17/23 (74%)   SL per primo: 6/23 (26%)
+
+Stesso periodo, stessa regola, tre ipotesi di percorso:
+                                      equity      CAGR     maxDD  Sharpe     win%    avg bp     PF   trade
+daily · SL-first (pessimista)         0.069x   -60.27%    -95.5%   -1.66    61.7%     -15.9   0.78     728
+daily · TP-first (ottimista)          0.837x    -5.94%    -56.4%    0.08    65.8%       0.9   1.01     728
+orario · percorso reale               0.283x   -35.25%    -84.0%   -0.70    64.0%      -6.4   0.90     728
+SPY buy & hold (1x, no costi)         1.876x    24.21%    -18.8%    1.49
+
+================================================================================================================
+IL SEGNALE NUDO  —  apertura->chiusura, senza TP/SL, senza costi, senza leva
+================================================================================================================
+                                     bp/giorno   t-stat     annuo   vol g.   Sharpe
+top performer 5g                         +9.8     2.68     24.8%    2.37%     0.66
+bottom performer 5g                      -3.1    -0.87     -7.7%    2.29%    -0.21
+media dell universo                      +2.7     2.21      6.8%    0.79%     0.54
+
+escursione intraday media del titolo scelto: massimo +1.71%  minimo -1.59%   -> il TP a +1% sta DENTRO l'escursione tipica,
+lo stop a -3% sta fuori: il target tronca quasi ogni vincita, lo stop non tronca quasi nulla
+
+media bp/giorno per anno:
+  2010:+10  2011:+5  2012:+5  2013:+17  2014:+17  2015:+10  2016:+23  2017:+11  2018:+9  2019:+20  2020:-12  2021:+19  2022:+31  2023:+3  2024:-14  2025:+5  2026:+7
+
+================================================================================================================
+STRUTTURA DI USCITA  —  stesso segnale, stessa leva 2x, stessi costi. Cambia solo dove metto TP e SL
+================================================================================================================
+                                  CAGR pess.   CAGR ott.  equity pess.    win%  avg bp pess.  ambigui%
+nessun TP/SL (chiusura)              -17.02%     -17.02%        0.045x   49.3%           1.8       0.0
+TP +1% / SL -3%  (la regola)         -63.77%      -4.97%        0.000x   59.2%         -17.8       4.6
+TP +1% / SL -1%                      -75.18%     140.24%        0.000x   39.6%         -26.7      21.7
+TP +2% / SL -2%                      -46.12%      17.27%        0.000x   48.3%          -9.7       3.8
+TP +3% / SL -1%  (invertita)         -36.01%      65.59%        0.001x   36.5%          -6.9       4.7
+TP +3% / SL -3%                      -32.71%     -13.64%        0.001x   49.3%          -4.3       0.8
+solo TP +1%                          -17.23%     -17.23%        0.043x   63.9%          -1.3       0.0
+solo SL -3%                          -12.26%     -12.26%        0.114x   48.6%           2.1       0.0
+TP +1% / SL -10%                     -25.49%     -19.79%        0.008x   63.8%          -3.1       0.1
+
+'pess.' = nei giorni in cui daily tocca sia TP che SL assumo che sia scattato lo stop;
+'ott.' = assumo il target. Il vero valore sta in mezzo (vedi sezione barre orarie).
+
+================================================================================================================
+SENSIBILITA' AI COSTI  (path = SL-first; a leva 2x ogni bp di costo pesa doppio)
+================================================================================================================
+                                      equity      CAGR     maxDD  Sharpe     win%    avg bp     PF   trade
+costi zero (irrealistico)             0.000x   -48.62%   -100.0%   -1.20    60.5%     -11.0   0.83    4176
+istituzionale  (0.5/1/3 bp)           0.000x   -55.90%   -100.0%   -1.50    60.0%     -14.0   0.80    4176
+retail buono   (1/3/8 bp)             0.000x   -63.77%   -100.0%   -1.89    59.2%     -17.8   0.75    4176
+retail tipico  (2/8/20 bp)            0.000x   -77.98%   -100.0%   -2.82    56.9%     -27.5   0.65    4176
+mercato ostile (3/15/40 bp)           0.000x   -89.59%   -100.0%   -4.10    53.1%     -42.0   0.52    4176
+
+================================================================================================================
+CONTROLLI  —  il segnale 'top performer' aggiunge qualcosa rispetto al caso?
+================================================================================================================
+                                      equity      CAGR     maxDD  Sharpe     win%    avg bp     PF   trade
+top 5g (la strategia)                 0.000x   -63.77%   -100.0%   -1.89    59.2%     -17.8   0.75    4176
+bottom 5g (i peggiori)                0.000x   -77.46%   -100.0%   -2.90    54.7%     -27.2   0.64    4176
+ticker a caso                         0.014x   -22.58%    -99.3%   -0.55    54.9%      -3.8   0.92    4176
+
+Stesse regole di TP/SL/leva/costi: la sola differenza e' CHI si compra.
+
+================================================================================================================
+ROBUSTEZZA  —  finestra del segnale e numero di titoli
+================================================================================================================
+                                      equity      CAGR     maxDD  Sharpe     win%    avg bp     PF   trade
+lookback 3g · top 1                   0.000x   -72.79%   -100.0%   -2.47    57.4%     -23.5   0.68    4178
+lookback 3g · top 3                   0.000x   -60.96%   -100.0%   -2.97    56.4%     -17.7   0.73   12534
+lookback 3g · top 5                   0.000x   -55.27%   -100.0%   -3.05    55.7%     -15.3   0.75   20890
+lookback 3g · top 10                  0.000x   -46.68%   -100.0%   -2.86    54.9%     -12.0   0.79   41780
+lookback 5g · top 1                   0.000x   -63.77%   -100.0%   -1.89    59.2%     -17.8   0.75    4176
+lookback 5g · top 3                   0.000x   -55.54%   -100.0%   -2.56    57.0%     -15.2   0.76   12528
+lookback 5g · top 5                   0.000x   -50.03%   -100.0%   -2.62    56.2%     -13.1   0.78   20880
+lookback 5g · top 10                  0.000x   -42.01%   -100.0%   -2.47    55.5%     -10.4   0.81   41760
+lookback 10g · top 1                  0.000x   -74.32%   -100.0%   -2.59    56.2%     -24.6   0.67    4171
+lookback 10g · top 3                  0.000x   -55.71%   -100.0%   -2.61    56.7%     -15.3   0.76   12513
+lookback 10g · top 5                  0.000x   -48.87%   -100.0%   -2.54    56.3%     -12.7   0.79   20855
+lookback 10g · top 10                 0.000x   -40.80%   -100.0%   -2.39    55.3%     -10.0   0.82   41710
+lookback 20g · top 1                  0.000x   -72.81%   -100.0%   -2.48    57.0%     -23.5   0.68    4161
+lookback 20g · top 3                  0.000x   -57.13%   -100.0%   -2.70    56.1%     -15.9   0.75   12483
+lookback 20g · top 5                  0.000x   -47.50%   -100.0%   -2.46    55.9%     -12.2   0.79   20805
+lookback 20g · top 10                 0.000x   -39.63%   -100.0%   -2.30    55.3%      -9.6   0.82   41610
+
+================================================================================================================
+VARIANTE  —  tenere la posizione finche' non scatta TP o SL (gap overnight inclusi)
+================================================================================================================
+                                      equity      CAGR     maxDD  Sharpe     win%    avg bp     PF   trade
+hold max 1 giorno                     0.000x   -63.77%   -100.0%   -1.89    59.2%     -17.8   0.75    4176
+hold max 2 giorni                     0.000x   -59.13%   -100.0%   -1.34    65.9%     -14.7   0.81    4175
+hold max 3 giorni                     0.000x   -59.22%   -100.0%   -1.26    68.1%     -14.4   0.83    4174
+hold max 5 giorni                     0.000x   -55.78%   -100.0%   -1.07    71.0%     -12.6   0.85    4172
+hold max 10 giorni                    0.000x   -56.57%   -100.0%   -1.07    72.4%     -12.8   0.85    4167
+
+================================================================================================================
+PER PERIODO  (in-sample / out-of-sample: non c'e' nessun parametro ottimizzato,
+              ma se il segno cambia fra i due mezzi campioni non e' un edge stabile)
+================================================================================================================
+                                      equity      CAGR     maxDD  Sharpe     win%    avg bp     PF   trade
+2010-2017                             0.000x   -62.80%   -100.0%   -1.88    58.6%     -17.4   0.75    1987
+2018-2026                             0.000x   -64.67%   -100.0%   -1.90    59.8%     -18.3   0.75    2189
+2010-2015                             0.001x   -68.62%    -99.9%   -2.17    58.8%     -20.6   0.72    1484
+2016-2020                             0.003x   -68.37%    -99.7%   -2.16    57.3%     -20.5   0.71    1259
+2021-2026                             0.014x   -52.84%    -98.9%   -1.35    61.3%     -12.6   0.82    1433
+
+Per anno solare (rendimento equity, path SL-first):
+  2010: -75.9%  2011: -68.1%  2012: -73.1%  2013: -80.8%  2014: -25.7%  2015: -62.9%  2016: -38.8%  2017: -38.1%  2018: -70.8%  2019: -18.9%  2020: -96.4%  2021: -32.6%  2022: -29.0%  2023: -47.3%  2024: -53.0%  2025: -67.1%  2026: -64.7%
